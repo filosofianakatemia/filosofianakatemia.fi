@@ -37,9 +37,5 @@ Ale on Muutosvoima -valmennusohjelman valmentaja ja perustaja. H&auml;n on yhtei
 </div>
 {% endblock %}
 
-{% block personquote %}
-Ale on rohkea ja rehellinen ajattelija, jolla on uskomaton kyky tehd&auml; isoimmatkin ideat todeksi. H&auml;n uskoo t&auml;ysill&auml; ihmisiin joiden kanssa ty&ouml;skentelee eik&auml; p&auml;&auml;st&auml; heit&auml; my&ouml;sk&auml;&auml;n helpolla. Alen toiminnassa on aina mukana tunteet, sill&auml; h&auml;n tekee kaiken suurella syd&auml;mell&auml;&auml;n.
-{% endblock %}
-{% block personquoteauthor %}
-Joonas Pesonen
-{% endblock %}
+{% block personquote %}Ale on rohkea ja rehellinen ajattelija, jolla on uskomaton kyky tehd&auml; isoimmatkin ideat todeksi. H&auml;n uskoo t&auml;ysill&auml; ihmisiin joiden kanssa ty&ouml;skentelee eik&auml; p&auml;&auml;st&auml; heit&auml; my&ouml;sk&auml;&auml;n helpolla. Alen toiminnassa on aina mukana tunteet, sill&auml; h&auml;n tekee kaiken suurella syd&auml;mell&auml;&auml;n.{% endblock %}
+{% block personquoteauthor %}Joonas Pesonen{% endblock %}

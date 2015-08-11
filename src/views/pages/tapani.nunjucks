@@ -1,0 +1,41 @@
+{% extends "ihminen.nunjucks" %}
+{% set personName = 'Tapani Riekki' %}
+{% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block personname %}{{ personName }}{% endblock %}
+{% block persondescription %}
+Tapani Riekki on tutkijatohtori ja valmentaja, joka auttaa ihmisi&auml; oivaltamaan mielen toimintaa. Ajatteluun, p&auml;&auml;t&ouml;ksentekoon ja sosiaaliseen neurotieteeseen erikoistunut Tapani mittaa ja analysoi aivoja, koska haluaa auttaa ihmisi&auml; p&auml;rj&auml;&auml;m&auml;&auml;n paremmin el&auml;m&auml;ss&auml;. Tavoite on muuttaa sanonta &#x201c;&auml;l&auml; tee niin kuin min&auml; teen, vaan tee niin kuin sanon&#x201d; muotoon &#x201c;tee niin kuin min&auml; teen, koska tied&auml;n miksi teen niin kuin teen&#x201d;.
+{% endblock %}
+
+{% block personleft %}
+<h4>Erityisalueet:</h4>
+<p>
+  <ul class="list-plain">
+    <li>Ajattelunhallinta</li>
+    <li>Aikaansaaminen ja ty&ouml;stressi</li>
+    <li>Sosiaaliset aivot</li>
+  </ul>
+</p>
+<h4>Tutkimushankkeet:</h4>
+<p>
+  <ul class="list-plain">
+    <li>Sis&auml;isen motivaation mittaaminen</li>
+    <li><a href="http://blogs.helsinki.fi/everyday-thinking/" target="_blank">Yliopistotutkimusta arkip&auml;iv&auml;isen ajattelun tutkimusryhm&auml;ss&auml; Helsingin yliopistossa</a></li>
+  </ul>
+</p>
+<h4>Twitter:</h4>
+<p><a href="http://twitter.com/tjjriekki" target="_blank">@tjjriekki</a></p>
+{% endblock %}
+
+{% block personright %}
+<img src="/static/img/tapani-large.jpg"/>
+<div class="person-contact left-aligned">
+  <h4>Ota yhteytt&auml;:</h4>
+  <p>+358 44 0424 281<br/>
+    <a href="mailto:tapani.riekki@filosofianakatemia.fi">tapani.riekki@filosofianakatemia.fi</a>
+  </p>
+</div>
+{% endblock %}
+
+{% block personquote %}Analyyttisell&auml; Tapanilla on porukan kovimmat tieteelliset meriitit. H&auml;n tekee Filosofian Akatemiassa tieteellist&auml; laadunvalvontaa ja varmistaa, ett&auml; johtop&auml;&auml;t&ouml;ksille todella l&ouml;ytyy tutkimuksesta pohja.{% endblock %}
+{% block personquoteauthor %}Frank Martela{% endblock %}

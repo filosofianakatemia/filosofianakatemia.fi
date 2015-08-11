@@ -1,0 +1,36 @@
+{% extends "ihminen.nunjucks" %}
+{% set personName = 'Villiam Virkkunen' %}
+{% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block personname %}{{ personName }}{% endblock %}
+{% block persondescription %}
+Villiam Virkkunen (VTK ja kaup. yo) on Filosofian Akatemian valmentaja, joka on erikoistunut ajattelunhallinnan teemoihin. H&auml;n uskoo, ett&auml; ihmisten onnellisuus ja tyytyv&auml;isyys el&auml;m&auml;&auml;n on paljon kiinni siit&auml;, millainen ajattelu p&auml;&auml;ss&auml; jyll&auml;&auml;. Ja siihen ajatteluun ihmiset voivat itse tai porukalla yhdess&auml; vaikuttaa.
+{% endblock %}
+
+{% block personleft %}
+<h4>Erityisalueet:</h4>
+<p>
+  <ul class="list-plain">
+    <li>Ajattelunhallinta</li>
+    <li>Sis&auml;inen motivaatio</li>
+    <li>Yhteis&ouml;jen dynamiikka ja alakulttuurit</li>
+  </ul>
+</p>
+<h4>Tutkimushankkeet:</h4>
+<p>
+  <ul class="list-plain">
+    <li>Passion</li>
+  </ul>
+</p>
+<h4>Ota yhteytt&auml;:</h4>
+<p>+358 44 040 5450<br/>
+  <a href="mailto:villiam.virkkunen@filosofianakatemia.fi">villiam.virkkunen@filosofianakatemia.fi</a>
+</p>
+{% endblock %}
+
+{% block personright %}
+<img src="/static/img/villiam-large.jpg"/>
+{% endblock %}
+
+{% block personquote %}Villiam on tosi utelias ja laaja-alainen tyyppi, joka on kiinnostunut kaikesta ja kaikista. H&auml;n on todella nopea omaksumaan uusia asioita ja tieteellisesti pedantti ajattelija, joka kriittisesti reflektoi oppimaansa.{% endblock %}
+{% block personquoteauthor %}Reima Launonen{% endblock %}

@@ -49,6 +49,20 @@ app.use(route.get('/ihmiset', ihmiset));
 app.use(route.get('/tutkimus', tutkimus));
 
 app.use(route.get('/ihmiset/aleksej', aleksej));
+app.use(route.get('/ihmiset/emilia', emilia));
+app.use(route.get('/ihmiset/frank', frank));
+app.use(route.get('/ihmiset/joonas', joonas));
+app.use(route.get('/ihmiset/jp', jp));
+app.use(route.get('/ihmiset/karoliina', karoliina));
+app.use(route.get('/ihmiset/lauri', lauri));
+app.use(route.get('/ihmiset/maria', maria));
+app.use(route.get('/ihmiset/peter', peter));
+app.use(route.get('/ihmiset/reima', reima));
+app.use(route.get('/ihmiset/santeri', santeri));
+app.use(route.get('/ihmiset/sonja', sonja));
+app.use(route.get('/ihmiset/tapani', tapani));
+app.use(route.get('/ihmiset/timo', timo));
+app.use(route.get('/ihmiset/villiam', villiam));
 
 // routes
 
@@ -72,6 +86,62 @@ function *tutkimus() {
 function *aleksej() {
   console.log("GET /ihmiset/aleksej")
   this.body = yield this.render('pages/aleksej');
+}
+function *emilia() {
+  console.log("GET /ihmiset/emilia")
+  this.body = yield this.render('pages/emilia');
+}
+function *frank() {
+  console.log("GET /ihmiset/frank")
+  this.body = yield this.render('pages/frank');
+}
+function *joonas() {
+  console.log("GET /ihmiset/joonas")
+  this.body = yield this.render('pages/joonas');
+}
+function *jp() {
+  console.log("GET /ihmiset/jp")
+  this.body = yield this.render('pages/jp');
+}
+function *karoliina() {
+  console.log("GET /ihmiset/karoliina")
+  this.body = yield this.render('pages/karoliina');
+}
+function *lauri() {
+  console.log("GET /ihmiset/lauri")
+  this.body = yield this.render('pages/lauri');
+}
+function *maria() {
+  console.log("GET /ihmiset/maria")
+  this.body = yield this.render('pages/maria');
+}
+function *peter() {
+  console.log("GET /ihmiset/peter")
+  this.body = yield this.render('pages/peter');
+}
+function *reima() {
+  console.log("GET /ihmiset/reima")
+  this.body = yield this.render('pages/reima');
+}
+function *santeri() {
+  console.log("GET /ihmiset/santeri")
+  this.body = yield this.render('pages/santeri');
+}
+function *sonja() {
+  console.log("GET /ihmiset/sonja")
+  this.body = yield this.render('pages/sonja');
+}
+function *tapani() {
+  console.log("GET /ihmiset/tapani")
+  this.body = yield this.render('pages/tapani');
+}
+function *timo() {
+  console.log("GET /ihmiset/timo")
+  this.body = yield this.render('pages/timo');
+}
+function *villiam() {
+  console.log("GET /ihmiset/villiam")
+  this.body = yield this.render('pages/villiam');
 }
 
 // listen

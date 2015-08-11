@@ -1,0 +1,40 @@
+{% extends "ihminen.nunjucks" %}
+{% set personName = 'Peter Kenttä' %}
+{% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block personname %}{{ personName }}{% endblock %}
+{% block persondescription %}
+Peter Kentt&auml; on diplomi-insin&ouml;&ouml;ri, jonka valmennukset Filosofian Akatemiassa keskittyv&auml;t erityisesti yhteis&ouml;n vahvuuksien tukemiseen ja muutosjohtamiseen. H&auml;n valmistelee v&auml;it&ouml;skirjaa organisaatiokulttuurin ja hyvinvoinnin v&auml;lisest&auml; yhteydest&auml; Aalto-yliopistossa ja opettaa siell&auml; my&ouml;s johtamista. Peteri&auml; kiehtoo, miten ihmiset voivat organisaatioissa auttaa toisiaan olemaan yhdess&auml; vahvempia. Yhteisty&ouml; organisaatioissa ei ole nollasummapeli&auml;.
+{% endblock %}
+
+{% block personleft %}
+<h4>Erityisalueet:</h4>
+<p>
+  <ul class="list-plain">
+    <li>Vuorovaikutus</li>
+    <li>Organisaatiokulttuuri</li>
+    <li>Ty&ouml;hyvinvoinnin johtaminen</li>
+  </ul>
+</p>
+<h4>Tutkimushankkeet:</h4>
+<p>
+  <ul class="list-plain">
+    <li>Personal identity construction and organizational well-being</li>
+  </ul>
+</p>
+<h4>Twitter:</h4>
+<p><a href="http://twitter.com/pkentta" target="_blank">@pkentta</a></p>
+{% endblock %}
+
+{% block personright %}
+<img src="/static/img/peter-large.jpg"/>
+<div class="person-contact left-aligned">
+  <h4>Ota yhteytt&auml;:</h4>
+  <p>+358 44 560 8504<br/>
+    <a href="mailto:peter.kentta@filosofianakatamia.fi">peter.kentta@filosofianakatamia.fi</a>
+  </p>
+</div>
+{% endblock %}
+
+{% block personquote %}Peterill&auml; on uskomaton herkkyys kehitt&auml;&auml; valmennuksia asiakkaiden tarpeiden ja tavoitteiden mukaan. H&auml;n ei jyr&auml;&auml; omaa agendaansa, mutta kun h&auml;nen substanssialueelle sy&ouml;tt&auml;&auml; pallon, h&auml;n hoitaa sen suvereenisti maaliin.{% endblock %}
+{% block personquoteauthor %}Reima Launonen{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "ihminen.nunjucks" %}
+{% set personName = 'Sonja Strömsholm' %}
+{% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block personname %}{{ personName }}{% endblock %}
+{% block persondescription %}
+Sonja Str&ouml;msholm (KM) on Filosofian Akatemian asiakkuus- ja myyntijohtaja ja ihmisten innostaja. H&auml;n uskoo, ett&auml; sis&auml;isesti motivoituneet ihmiset ovat tehokkaampia ja saavat aikaan isoja asioita.
+{% endblock %}
+
+{% block personleft %}
+<h4>Erityisalueet:</h4>
+<p>
+  <ul class="list-plain">
+    <li>Ihmisten innostuksen johtaminen</li>
+    <li>Fasilitointi ja valmentaminen</li>
+    <li>Asiakassuhteet</li>
+  </ul>
+</p>
+<h4>Twitter:</h4>
+<p><a href="http://twitter.com/sonjastromsholm" target="_blank">@sonjastromsholm</a></p>
+<h4>Ota yhteytt&auml;:</h4>
+<p>+358 50 303 0894<br/>
+  <a href="mailto:sonja.stromsholm@filosofianakatemia.fi">sonja.stromsholm@filosofianakatemia.fi</a>
+</p>
+{% endblock %}
+
+{% block personright %}
+<img src="/static/img/sonja-large.jpg"/>
+{% endblock %}
+
+{% block personquote %}Sonja on mielet&ouml;n yhteis&ouml;n rakentaja. H&auml;nell&auml; on harvinainen kyky yhdist&auml;&auml; sek&auml; aikaansaaminen ett&auml; l&auml;sn&auml;olo. Sonjan kanssa t&ouml;it&auml; tehdess&auml; tulee aina hyv&auml; mieli.{% endblock %}
+{% block personquoteauthor %}Maria Ruotsalainen{% endblock %}
