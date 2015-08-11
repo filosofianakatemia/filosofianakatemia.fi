@@ -1,0 +1,17 @@
+<script>
+  $(document).ready(function(){
+      $('a[href^="#"]').on('click',function (e) {
+          // Animation does not work with smooth scrolling, so disable scroll by default for mobile and tablet
+          if (screen && screen.width > 1025){
+            e.preventDefault();
+
+            var target = this.hash;
+            $target = $(target);
+
+            $('body').stop().animate({
+                scrollTop:  parseInt($target.offset().top,10)
+            }, 900, 'swing');
+          }
+      });
+  });
+</script>

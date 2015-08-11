@@ -1,0 +1,206 @@
+{% extends "views/base.nunjucks" %}
+{% set pageName = 'etusivu' %}
+{% block title %}{{ super() }}{% endblock %}
+{% block description %}Filosofian Akatemia on tutkimus- ja valmennusyritys. Tarjoamme tieteeseen pohjautuvia ratkaisuja ty&ouml;hyvinvointiin ja tuottavuuteen.{% endblock %}
+{% block bodyattrs %}id="front"{% endblock %}
+
+{% block topbar %}
+<ul class="title-area">
+  <li class="name">
+    <div class="logo"><a href><span class="icon-logo-fill-name"></span></a></div>
+  </li>
+  <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+</ul>
+
+<section class="top-bar-section">
+  <ul class="right">
+    <li class="active"><a href="#">Etusivu</a></li>
+    <li><a href="ihmiset.html">Ihmiset</a></li>
+    <li><a href="palvelut.html">Palvelut</a></li>
+    <li><a href="tutkimus.html">Tutkimus</a></li>
+  </ul>
+</section>
+{% endblock %}
+
+{% block hero %}
+<div class="hero">
+  <div class="slogan">Innostutaanko teill&auml; <span class="font-bold font-italic">ty&ouml;st&auml;?</span></div>
+  <div class="ingress">Luova ongelmanratkaisukyky, ketteryys ja ennenkuulumattomat ratkaisut ovat menestyv&auml;n organisaation elinehtoja. Sellaisia syntyy ihmisilt&auml;, jotka kokevat ty&ouml;n imua ja sis&auml;ist&auml; motivaatiota. Me Filosofian Akatemiassa autamme organisaatioita johtamaan sis&auml;ist&auml; motivaatiota ja tekem&auml;&auml;n parempaa tulosta keskell&auml; vaikeitakin muutoksia.</div>
+  <a href="#contact" class="button btn-contact">OTA YHTEYTT&Auml;</a>
+  <a href="#front-top" class="scroll-down show-for-large-up">
+    <span class="text-scroll-down">VIERIT&Auml; ALAS</span></br><span class="icon-arrow-down"></span>
+  </a>
+</div>
+{% endblock %}
+
+{% block mainattrs %}id="front-top"{% endblock %}
+{% block main %}
+<div class="section row wrapper-embedded">
+  <div class="large-6 columns">
+    <div class="embedded">
+      <h2>Innostunut ihminen on 16% tuottavampi</h2>
+      <div class="row">
+        <div class="underline small-offset-5 small-2"></div>
+      </div>
+      <div class="description">
+        V&auml;ite perustuu akateemiseen huippututkimukseen, kuten koko Filosofian Akatemian toiminta. Tuotamme omaa kansainv&auml;lisen tason tutkimusta, jonka pohjalta kehit&auml;mme ty&ouml;kaluja organisaatioiden avuksi. 15 hengen tiimimme on viiden vuoden aikana valmentanut satoja yrityksi&auml; kasvuun. Olemme kirjoittaneet aiheesta hyllymetreitt&auml;in kirjoja ja raportteja. On tutkittu juttu, ett&auml; menestyviss&auml; yrityksiss&auml; johtamiskulttuuri rakennetaan ty&ouml;ntekij&ouml;iden sis&auml;ist&auml; motivaatiota tukevaksi.
+      </div>
+      <a href="tutkimus.html#projects" class="link-cta">Tutustu tutkimuksiin<span class="icon-arrow-right"></span></a>
+    </div>
+  </div>
+  <div class="large-6 columns">
+    <div class="embedded">
+      <h2>Mittaa yrityksesi<br/>sis&auml;inen motivaatio</h2>
+      <div class="row">
+        <div class="underline small-offset-5 small-2"></div>
+      </div>
+      <div class="description">
+        Ihmisten sis&auml;iseen motivaatioon ja innostukseen voi vaikuttaa. Filosofian Akatemian kehitt&auml;m&auml; Sis&auml;isen motivaation kehityspolku on maailman ensimm&auml;inen ty&ouml;kalu, jolla ihmisten sis&auml;ist&auml; motivaatiota voi systemaattisesti mitata ja johtaa. Motivoituneet, uutta luovat ihmiset ovat yritysten t&auml;rkein kilpailuvaltti tulevaisuudessa. Palveluidemme avulla saat vertailtavia tuloksia ja apua sis&auml;isen motivaation kasvattamiseen.
+      </div>
+      <a href="palvelut.html#smk-top" class="link-cta">Lue lis&auml;&auml;<span class="icon-arrow-right"></span></a>
+      <div class="show-for-large-up"><br/></div>
+    </div>
+  </div>
+</div>
+
+<div class="section wrapper-signup">
+  <h2 class="font-italic">Haluatko kuulla lis&auml;&auml; vankkaan tutkimukseen perustuvaa tietoa hyvinvoinnista ja tuloksen tekemisest&auml;?</h2>
+  <div>
+    <span class="font-strong">Tilaa kerran kuussa ilmestyv&auml; uutiskirjeemme.</span>
+  </div>
+  <div id="mc_embed_signup">
+    <form action="//filosofianakatemia.us2.list-manage.com/subscribe/post?u=0420b297ef54b54019c0e1c2a&amp;id=f14e889dea" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll" class="row collapse">
+        <div class="mc-field-group small-10 columns">
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="S&auml;hk&ouml;posti">
+        </div>
+        <div id="wrapper-signup-input"class="clear small-2 columns">
+          <input type="submit" value="&#xE601;" name="subscribe" id="mc-embedded-subscribe" class="button">
+        </div>
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;"><input type="text" name="b_0420b297ef54b54019c0e1c2a_f14e889dea" tabindex="-1" value=""></div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="some" class="section row wrapper-embedded show-for-large-up">
+  <div class="large-6 columns">
+    <div class="embedded">
+
+      <div id="fb-root"></div>
+      <script>if (screen && screen.width > 1025) {
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=417127978310555&version=v2.0";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));}</script>
+
+      <div class="fb-like-box" data-href="https://www.facebook.com/filosofianakatemia" data-colorscheme="light" data-show-faces="false" data-header="true" 
+      data-stream="true" data-show-border="true" data-width="100%"></div>
+    </div>
+  </div>
+  <div class="large-6 columns">
+    <div class="embedded">
+
+      <a class="twitter-timeline" href="https://twitter.com/filosofianakate" data-widget-id="567018310790041600">Tweets by @filosofianakate</a>
+      <script>if (screen && screen.width > 1025) {
+        !function(d,s,id){var 
+        js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      }</script>
+    </div>
+  </div>
+</div>
+
+<div id="contact" class="section">
+  <div id="contact-heading" class="row">
+    <div class="small-12 columns">
+      <h1>Ota yhteytt&auml;</h1>
+    </div>
+  </div>
+  <div id="contact-people" class="row">
+    <div class="large-4 columns">
+      <img src="sites/default/files/newfa/img/sonja-circle.png"/>
+      <h2>Sonja Str&ouml;msholm</h2>
+      <div>
+        Asiakkuudet ja myynti<br/>
+        +358 50 3030 894<br/>
+        <a href="mailto:sonja.stromsholm@filosofianakatemia.fi">sonja.stromsholm@filosofianakatemia.fi</a>
+      </div>
+    </div> 
+    <div class="large-4 columns">
+      <img src="sites/default/files/newfa/img/address-circle.png"/>
+      <h2>Filosofian Akatemia</h2>
+      <div>
+        Bulevardi 9 B 28<br/>
+        00120 Helsinki<br/>
+        <a href="mailto:info@filosofianakatemia.fi">info@filosofianakatemia.fi</a>
+      </div>
+    </div>
+    <div class="large-4 columns">
+      <img src="sites/default/files/newfa/img/karoliina-circle.png"/>
+      <h2>Karoliina Jarenko</h2>
+      <div>
+        Toimitusjohtaja<br/>
+        +358 50 5758 487<br/>
+        <a href="mailto:karoliina.jarenko@filosofianakatemia.fi">karoliina.jarenko@filosofianakatemia.fi</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="row hide-for-small-only">
+  <div class="medium-12 large-8 large-offset-2 end columns">
+    <ul class="icon-bar four-up">
+      <li class="item"><a href="#">Etusivu</a></li>
+      <li class="item"><a href="ihmiset.html">Ihmiset</a></li>
+      <li class="item"><a href="palvelut.html">Palvelut</a></li>
+      <li class="item"><a href="tutkimus.html">Tutkimus</a></li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 medium-4 medium-offset-4 columns">
+    <div class="address">
+      <span class="font-bold">Filosofian Akatemia Oy</span><br/>
+      <span>Bulevardi 9 B 28</span><br/>
+      <span>00120 Helsinki</span><br/>
+      <a href="mailto:info@filosofianakatemia.fi"><span class="font-bold">info@filosofianakatemia.fi</span></a><br/>
+      <span>+358 44 7430 020</span>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% include 'views/partials/scrolling.nunjucks' %}
+<!-- MailChimp validation javascript -->
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script type='text/javascript'>
+  (function($) {
+    window.fnames = new Array();
+    window.ftypes = new Array();
+    fnames[0]='EMAIL';
+    ftypes[0]='email';
+    fnames[1]='FNAME';
+    ftypes[1]='text';
+    fnames[2]='LNAME';
+    ftypes[2]='text'; /*
+   * Translated default messages for the $ validation plugin.
+   * Locale: FI
+   */
+    $.extend($.validator.messages, {
+      required: "T&auml;m&auml; kentt&auml; on pakollinen.",
+      email: "Sy&ouml;t&auml; oikea s&auml;hk&ouml;postiosoite."
+    });}(jQuery)
+  );
+  var $mcj = jQuery.noConflict(true);
+</script>
+{% endblock %}
