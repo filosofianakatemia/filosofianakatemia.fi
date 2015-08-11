@@ -4,6 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>fi.filosofianakatemia</groupId>
   <artifactId>site</artifactId>
+  <version>2.0</version>
   <packaging>pom</packaging>
   <name>Filosofian Akatemia Site</name>
   <description>Filosofian Akatemia Site</description>
@@ -87,7 +88,7 @@
                   <basedir>/usr/src/filosofianakatemia</basedir>
                   <descriptor>site-conf-assembly.xml</descriptor>
                 </assembly>
-                <cmd><shell>cp -R /usr/src/filosofianakatemia/confd/* /etc/confd && cp /usr/src/filosofianakatemia/nginx/*.conf /etc/nginx/sites-enabled</shell></cmd>
+                <cmd><shell>cp -R /usr/src/filosofianakatemia/confd/* /etc/confd &amp;&amp; cp /usr/src/filosofianakatemia/nginx/*.conf /etc/nginx/sites-enabled</shell></cmd>
               </build>
             </image>
             <image>

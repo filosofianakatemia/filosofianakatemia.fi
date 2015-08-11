@@ -1,4 +1,4 @@
-{% extends "views/base.nunjucks" %}
+{% extends "base.nunjucks" %}
 {% set pageName = 'etusivu' %}
 {% block title %}{{ super() }}{% endblock %}
 {% block description %}Filosofian Akatemia on tutkimus- ja valmennusyritys. Tarjoamme tieteeseen pohjautuvia ratkaisuja ty&ouml;hyvinvointiin ja tuottavuuteen.{% endblock %}
@@ -7,17 +7,17 @@
 {% block topbar %}
 <ul class="title-area">
   <li class="name">
-    <div class="logo"><a href><span class="icon-logo-fill-name"></span></a></div>
+    <div class="logo"><a href="/" onclick="return false;"><span class="icon-logo-fill-name"></span></a></div>
   </li>
-  <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+  <li class="toggle-topbar menu-icon"><a href="/" onclick="return false;"><span></span></a></li>
 </ul>
 
 <section class="top-bar-section">
   <ul class="right">
-    <li class="active"><a href="#">Etusivu</a></li>
-    <li><a href="ihmiset.html">Ihmiset</a></li>
-    <li><a href="palvelut.html">Palvelut</a></li>
-    <li><a href="tutkimus.html">Tutkimus</a></li>
+    <li class="active"><a href="/" onclick="return false;">Etusivu</a></li>
+    <li><a href="/ihmiset">Ihmiset</a></li>
+    <li><a href="/palvelut">Palvelut</a></li>
+    <li><a href="/tutkimus">Tutkimus</a></li>
   </ul>
 </section>
 {% endblock %}
@@ -101,7 +101,7 @@
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));}</script>
 
-      <div class="fb-like-box" data-href="https://www.facebook.com/filosofianakatemia" data-colorscheme="light" data-show-faces="false" data-header="true" 
+      <div class="fb-like-box" data-href="https://www.facebook.com/filosofianakatemia" data-colorscheme="light" data-show-faces="false" data-header="true"
       data-stream="true" data-show-border="true" data-width="100%"></div>
     </div>
   </div>
@@ -110,7 +110,7 @@
 
       <a class="twitter-timeline" href="https://twitter.com/filosofianakate" data-widget-id="567018310790041600">Tweets by @filosofianakate</a>
       <script>if (screen && screen.width > 1025) {
-        !function(d,s,id){var 
+        !function(d,s,id){var
         js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
       }</script>
     </div>
@@ -125,16 +125,16 @@
   </div>
   <div id="contact-people" class="row">
     <div class="large-4 columns">
-      <img src="sites/default/files/newfa/img/sonja-circle.png"/>
+      <img src="static/img/sonja-circle.png"/>
       <h2>Sonja Str&ouml;msholm</h2>
       <div>
         Asiakkuudet ja myynti<br/>
         +358 50 3030 894<br/>
         <a href="mailto:sonja.stromsholm@filosofianakatemia.fi">sonja.stromsholm@filosofianakatemia.fi</a>
       </div>
-    </div> 
+    </div>
     <div class="large-4 columns">
-      <img src="sites/default/files/newfa/img/address-circle.png"/>
+      <img src="static/img/address-circle.png"/>
       <h2>Filosofian Akatemia</h2>
       <div>
         Bulevardi 9 B 28<br/>
@@ -143,7 +143,7 @@
       </div>
     </div>
     <div class="large-4 columns">
-      <img src="sites/default/files/newfa/img/karoliina-circle.png"/>
+      <img src="static/img/karoliina-circle.png"/>
       <h2>Karoliina Jarenko</h2>
       <div>
         Toimitusjohtaja<br/>
@@ -159,28 +159,18 @@
 <div class="row hide-for-small-only">
   <div class="medium-12 large-8 large-offset-2 end columns">
     <ul class="icon-bar four-up">
-      <li class="item"><a href="#">Etusivu</a></li>
-      <li class="item"><a href="ihmiset.html">Ihmiset</a></li>
-      <li class="item"><a href="palvelut.html">Palvelut</a></li>
-      <li class="item"><a href="tutkimus.html">Tutkimus</a></li>
+      <li class="item active"><a href="/" onclick="return false;">Etusivu</a></li>
+      <li class="item"><a href="/ihmiset">Ihmiset</a></li>
+      <li class="item"><a href="/palvelut">Palvelut</a></li>
+      <li class="item"><a href="/tutkimus">Tutkimus</a></li>
     </ul>
   </div>
 </div>
-<div class="row">
-  <div class="small-12 medium-4 medium-offset-4 columns">
-    <div class="address">
-      <span class="font-bold">Filosofian Akatemia Oy</span><br/>
-      <span>Bulevardi 9 B 28</span><br/>
-      <span>00120 Helsinki</span><br/>
-      <a href="mailto:info@filosofianakatemia.fi"><span class="font-bold">info@filosofianakatemia.fi</span></a><br/>
-      <span>+358 44 7430 020</span>
-    </div>
-  </div>
-</div>
+{% include 'partials/address.nunjucks' %}
 {% endblock %}
 
 {% block scripts %}
-{% include 'views/partials/scrolling.nunjucks' %}
+{% include 'partials/scrolling.nunjucks' %}
 <!-- MailChimp validation javascript -->
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
 <script type='text/javascript'>

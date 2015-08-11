@@ -1,0 +1,9 @@
+# Ignore Maven builds
+target/
+
+# Ignore frontend site generated files
+src/node/
+src/node_modules/
+
+# Ignore OSX DS store
+.DS_Store

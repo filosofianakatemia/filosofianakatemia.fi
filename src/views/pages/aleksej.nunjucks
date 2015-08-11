@@ -1,0 +1,45 @@
+{% extends "ihminen.nunjucks" %}
+{% set personName = 'Aleksej Fedotov' %}
+{% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block personname %}{{ personName }}{% endblock %}
+{% block persondescription %}
+Ale on Muutosvoima -valmennusohjelman valmentaja ja perustaja. H&auml;n on yhteiskunnallinen vaikuttaja, rohkea edell&auml;k&auml;vij&auml; ja vision&auml;&auml;ri. Ale ty&ouml;skentelee palavasti sosiaalisesti oikeudenmukaisemman Suomen puolesta. Tavoitteena on yhteiskunta, jossa kaikkien osaaminen ja vahvuudet tunnistetaan ja tunnustetaan.
+{% endblock %}
+
+{% block personleft %}
+<h4>Erityisalueet:</h4>
+<p>
+  <ul class="list-plain">
+    <li>Tulevaisuuden ty&ouml;</li>
+    <li>Koulutus</li>
+    <li>Nuoriso</li>
+    <li>Yhteiskuntasuhteet</li>
+  </ul>
+</p>
+<h4>Hankkeet:</h4>
+<p>
+  <ul class="list-plain">
+    <li><a href="http://muutosvoima.fi" target="_blank">Muutosvoima</a></li>
+  </ul>
+</p>
+<h4>Twitter:</h4>
+<p><a href="http://twitter.com/afedoto" target="_blank">@afedoto</a></p>
+{% endblock %}
+
+{% block personright %}
+<img src="/static/img/aleksej-large.jpg"/>
+<div class="person-contact left-aligned">
+  <h4>Ota yhteytt&auml;:</h4>
+  <p>+358 40 961 8847<br/>
+    <a href="mailto:aleksej.fedotov@filosofianakatemia.fi">aleksej.fedotov@filosofianakatemia.fi</a>
+  </p>
+</div>
+{% endblock %}
+
+{% block personquote %}
+Ale on rohkea ja rehellinen ajattelija, jolla on uskomaton kyky tehd&auml; isoimmatkin ideat todeksi. H&auml;n uskoo t&auml;ysill&auml; ihmisiin joiden kanssa ty&ouml;skentelee eik&auml; p&auml;&auml;st&auml; heit&auml; my&ouml;sk&auml;&auml;n helpolla. Alen toiminnassa on aina mukana tunteet, sill&auml; h&auml;n tekee kaiken suurella syd&auml;mell&auml;&auml;n.
+{% endblock %}
+{% block personquoteauthor %}
+Joonas Pesonen
+{% endblock %}

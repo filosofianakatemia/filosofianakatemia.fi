@@ -1,0 +1,95 @@
+{% extends "base.nunjucks" %}
+{% set pageName = 'tutkimus' %}
+{% block title %}{{ super() }}  | Tutkimus{% endblock %}
+{% block description %}Filosofian Akatemian valmennukset pohjautuvat tekem&auml;&auml;mme akateemiseen huippututkimukseen.{% endblock %}
+{% block bodyattrs %}id="research"{% endblock %}
+
+{% block topbar %}
+<ul class="title-area">
+  <li class="name">
+    <div class="logo"><a href="/"><span class="icon-logo-fill-name"></span></a></div>
+  </li>
+  <li class="toggle-topbar menu-icon"><a href="/"><span></span></a></li>
+</ul>
+
+<section class="top-bar-section">
+  <ul class="right">
+    <li><a href="/">Etusivu</a></li>
+    <li><a href="/ihmiset">Ihmiset</a></li>
+    <li><a href="/palvelut">Palvelut</a></li>
+    <li class="active"><a href="/tutkimus" onclick="return false;">Tutkimus</a></li>
+  </ul>
+</section>
+{% endblock %}
+
+{% block hero %}
+<div class="hero">
+  <div class="slogan">Ihmismielt&auml; ymm&auml;rt&auml;&auml; vain tutkimalla</div>
+  <div class="ingress">Filosofian Akatemian tutkimushankkeet pureutuvat laaja-alaisesti el&auml;m&auml;n peruskysymyksiin: mit&auml; on hyv&auml; el&auml;m&auml;, ent&auml; mielek&auml;s ty&ouml;? Tutkimme ihmisten hyvinvointia ja kehit&auml;mme konkreettisia ratkaisuja ty&ouml;el&auml;m&auml;n tarpeisiin.</div>
+
+  <a href="#research-top" class="scroll-down show-for-large-up">
+    <span class="text-scroll-down">VIERIT&Auml; ALAS</span></br><span class="icon-arrow-down"></span>
+  </a>
+</div>
+{% endblock %}
+
+{% block main %}
+<div id="research-top" class="section separate">
+  <div class="row">
+    <div class="medium-10 medium-offset-1 end columns ingress">
+      <p>Akateemisesti meritoituneet tutkijamme kehitt&auml;v&auml;t tekem&auml;ns&auml; tutkimuksen pohjalta  johtamisen tueksi ty&ouml;kaluja, jotka lis&auml;&auml;v&auml;t ty&ouml;ntekij&ouml;iden sis&auml;ist&auml; motivaatiota eli vapautta, virtausta ja vastuuta. Tutkimusten mukaan n&auml;m&auml; ihmisen perustarpeet huomioiva ty&ouml;kulttuuri lis&auml;&auml; tuottavuutta.</p>
+      <p>Ty&ouml;el&auml;m&auml;n parantamiseen pyrkiv&auml;n tutkimuksen lis&auml;ksi teemme perustutkimusta, joka kumpuaa akateemisista intohimoistamme. Haluamme ymm&auml;rt&auml;&auml; paremmin ihmismielt&auml;. Tieteellisten julkaisujen lis&auml;ksi kirjoitamme kirjoja, joissa yleistajuistamme huippututkimusta ja sovellamme sit&auml; arjessa hy&ouml;dynnett&auml;viksi ty&ouml;kaluiksi.</p>
+    </div>
+  </div>
+</div>
+
+<div id="projects" class="section wrapper-embedded">
+  <div class="row">
+    <h1>Meneill&auml;&auml;n olevia tutkimushankkeita</h1>
+  </div>
+  <div class="row">
+    <div class="medium-10 medium-offset-1 end columns">
+      <div class="embedded">
+        <h2>Passion</h2>
+        <div class="description">Innostuneet ty&ouml;ntekij&auml;t tekev&auml;t parempaa tulosta, mutta miten heit&auml; johdetaan? Ent&auml; miten innostusta ruokkivia ty&ouml;kulttuureja luodaan? Tekesin rahoittamassa monitieteellisess&auml; hankkeessa perehdyt&auml;&auml;n nuorten ty&ouml;asenteisiin ja organisaatioiden innostuksen johtamiseen. Hankkeen tavoite on luoda ty&ouml;kalut suomalaisten yritysten kilpailukyvyn kohentamiseen.</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-10 medium-offset-1 end columns">
+      <div class="embedded">
+        <h2>Intuitiivinen ajattelu ja p&auml;&auml;t&ouml;ksenteko</h2>
+        <div class="description">Tutkimuksessa tarkastellaan tiedostamattoman ajattelun luonnetta ja erityisesti intuitiivisen ajattelun rakennetta. Tarkoituksena on my&ouml;skin tutkia intuitiivisen ajattelun sovelluksia erityisesti p&auml;&auml;t&ouml;ksenteossa. Tutkimuksen taustalla vaikuttavat muun muassa Jonathan Evansin kaksoisprosessointiteoria, Ap Djiksterhuisin tiedostamattoman ajattelun teoria ja Daniel Kahnemanin p&auml;&auml;t&ouml;ksenteon tutkimus.</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-10 medium-offset-1 end columns">
+      <div class="embedded">
+        <h2>Kohti kutsumuksellista puhtausalaa</h2>
+        <div class="description">Mist&auml; siivooja nauttii ty&ouml;st&auml;&auml;n? Mitk&auml; asiat h&auml;n kokee ty&ouml;ss&auml;&auml;n merkityksellisiksi? Kohti kutsumuksellista puhtausalaa -hankkeessa selvitet&auml;&auml;n, miten ihmisen psykologiset perustarpeet, kuten tarve itsen&auml;iseen toimintaan, itsens&auml; kehitt&auml;miseen ja aikaansaamiseen, toteutuvat siivoojien ja puhtausalan esimiesten ty&ouml;ss&auml;. Kehit&auml;mme yhdess&auml; ammattilaisten kanssa kutsumuksellista puhtausalaa. Hanketta toteutetaan yhteisty&ouml;ss&auml; SSTL Puhtausala ry:n ja 14 puhtausalan yrityksen kanssa.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+<div class="row hide-for-small-only">
+  <div class="medium-12 large-8 large-offset-2 end columns">
+    <ul class="icon-bar four-up">
+      <li class="item"><a href="/">Etusivu</a></li>
+      <li class="item"><a href="/ihmiset">Ihmiset</a></li>
+      <li class="item"><a href="/palvelut">Palvelut</a></li>
+      <li class="item active"><a href="/tutkimus" onclick="return false;">Tutkimus</a></li>
+    </ul>
+  </div>
+</div>
+{% include 'partials/address.nunjucks' %}
+{% endblock %}
+
+{% block scripts %}
+{% include 'partials/scrolling.nunjucks' %}
+{% endblock %}
+

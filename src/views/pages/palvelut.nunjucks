@@ -1,0 +1,217 @@
+{% extends "base.nunjucks" %}
+{% set pageName = 'palvelut' %}
+{% block title %}{{ super() }}  | Palvelut{% endblock %}
+{% block description %}Sis&auml;isen motivaation kehityspolku antaa ty&ouml;kaluja koko ty&ouml;yhteis&ouml;lle ty&ouml;hyvinvoinnin ja tuottavuuden parantamiseen.{% endblock %}
+{% block bodyattrs %}id="services"{% endblock %}
+
+{% block topbar %}
+<ul class="title-area">
+  <li class="name">
+    <div class="logo"><a href="/"><span class="icon-logo-fill-name"></span></a></div>
+  </li>
+  <li class="toggle-topbar menu-icon"><a href="/"><span></span></a></li>
+</ul>
+
+<section class="top-bar-section">
+  <ul class="right">
+    <li><a href="/">Etusivu</a></li>
+    <li><a href="/ihmiset">Ihmiset</a></li>
+    <li class="active"><a href="/palvelut" onclick="return false;">Palvelut</a></li>
+    <li><a href="/tutkimus">Tutkimus</a></li>
+  </ul>
+</section>
+{% endblock %}
+
+{% block hero %}
+<div class="hero">
+  <div class="slogan">Palveluillamme her&auml;t&auml;t ty&ouml;n imun</div>
+  <div class="ingress">Filosofian Akatemian palveluilla parannat organisaatiosi hyvinvointia ja tuottavuutta. K&auml;yt&auml;mme valmennuksissa menetelmi&auml;, jotka syntyv&auml;t tuottamastamme akateemisesta huippututkimuksesta.</div>
+
+  <a href="#smk-top" class="scroll-down show-for-large-up">
+    <span class="text-scroll-down">VIERIT&Auml; ALAS</span></br><span class="icon-arrow-down"></span>
+  </a>
+</div>
+{% endblock %}
+
+
+{% block main %}
+<div id="smk-top" class="section separate">
+  <div class="row">
+    <div class="medium-8 medium-offset-2 columns">
+      <h1>Sis&auml;isen motivaation kehityspolku</h1>
+      <div class="ingress">Motivoituneet ihmiset ovat yritysten t&auml;rkein menestystekij&auml; tulevaisuudessa. Sis&auml;isen motivaation kehityspolku on henkil&ouml;st&ouml;n kehitt&auml;mismenetelm&auml;, joka antaa konkreettisia v&auml;lineit&auml; sis&auml;isen motivaation mittaamiseen ja johtamiseen.</div>
+    </div>
+  </div>
+  <div class="row">
+    <div id="smk-quote" class="large-4 large-offset-1 columns">
+      <div class="show-for-large-up"><br/></div>
+      <span class="icon-smk-quote"></span>
+      <br/><br/>
+    </div>
+    <div class="large-offset-1 large-5 columns end left-aligned">
+      <h2>Intoa, eli sis&auml;ist&auml; motivaatiota, kannattaa ruokkia ja vaalia ty&ouml;ss&auml;.</h2>
+      <p>Sis&auml;isesti motivoitunut ihminen syttyy ty&ouml;st&auml; itsest&auml;&auml;n, ei vain ty&ouml;n tuottamista ulkoisista palkinnoista.</p>
+      <p>Perinteinen keppi- ja porkkana -johtaminen ei en&auml;&auml; toimi. Osaamiseen ja uusiutumiseen perustuva ty&ouml;el&auml;m&auml; vaatii ty&ouml;ntekij&ouml;iden sis&auml;ist&auml; motivaatiota tukevaa johtamista. Voittajia ovat ne yritykset, jotka onnistuvat ohjaamaan ty&ouml;ntekij&ouml;idens&auml; sis&auml;isen motivaation kohti organisaation yhteisi&auml; tavoitteita.</p>
+      <p>Motivoituneet ty&ouml;ntekij&auml;t ovat Harvard Business Review:ssa julkaistun tutkimuksen mukaan 16 prosenttia tuottavampia kuin ep&auml;motivoituneet. Rohkeimmat arviot kohoavat jopa sata- ja tuhatkertaiseen tuottavuuteen. Motivoituneet ty&ouml;ntekij&auml;t ovat my&ouml;s 32 prosenttia sitoutuneempia ty&ouml;paikkaansa kuin ty&ouml;ntekij&auml;t, jotka eiv&auml;t tunne paloa ty&ouml;t&auml;&auml;n kohtaan.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-offset-2 large-4 columns left-aligned">
+      <h2>Ty&ouml;hyvinvointi ja tuottavuus lis&auml;&auml;ntyv&auml;t</h2>
+      <p>Filosofian Akatemian kehitt&auml;m&auml; Sis&auml;isen motivaation kehityspolku on henkil&ouml;st&ouml;n kehitt&auml;mismenetelm&auml;, joka lis&auml;&auml; ty&ouml;yhteis&ouml;n ty&ouml;hyvinvointia ja tuottavuutta. Siin&auml; kehitet&auml;&auml;n ty&ouml;kaluja, joilla ty&ouml;yhteis&ouml; voi mitata, kehitt&auml;&auml; ja johtaa ihmisten sis&auml;ist&auml; motivaatiota.</p>
+      <p>Sis&auml;isen motivaation kehityspolku sopii ty&ouml;yhteis&ouml;ille, jotka ovat ylint&auml; johtoa my&ouml;ten sitoutuneita ja halukkaita kehitt&auml;m&auml;&auml;n omia ty&ouml;tapojaan. Se auttaa organisaation siirtym&auml;&auml;n vanhasta johtamiskulttuurista uuteen.</p>
+      <p>Menetelm&auml; perustuu tieteelliseen huippututkimukseen ja on kansainv&auml;lisesti ainutlaatuinen. Tulokset ovat yksik&ouml;iden ja yritysten v&auml;lill&auml; vertailtavia.</p>
+      <p>Sis&auml;isen motivaation ytimess&auml; on kolme psykologista perustarvetta: <span class="font-bold">vapaus, virtaus ja vastuu.</span></p>
+    </div>
+    <div id="vvv" class="large-5 end columns">
+      <div class="show-for-large-up"><br/></div>
+      <span class="icon-vvv"></span>
+      <br/><br/>
+    </div>
+  </div>
+</div>
+
+<div class="section row wrapper-embedded">
+  <div class="large-4 columns">
+    <div class="embedded">
+      <h3>Vapaus</h3>
+      <div class="description">
+        Ty&ouml;ntekij&auml;ll&auml; on omaehtoista valinnan ja toiminnan vapautta, joka vahvistuu, kun h&auml;nelle annetaan tilaa toteuttaa ty&ouml;t&auml; itsen&auml;isesti ilman turhaa kontrollia. 
+      </div>
+    </div>
+  </div>
+  <div class="large-4 columns">
+    <div class="embedded">
+      <h3>Virtaus</h3>
+      <div class="description">
+        Ty&ouml;ntekij&auml; tuntee itsens&auml; kyvykk&auml;&auml;ksi, kokee saavansa aikaan asioita ja oppivansa uutta.
+      </div>
+      <div class="show-for-large-only"><br/><br/><br/></div>
+      <div class="show-for-xlarge-up"><br/><br/></div>
+    </div>
+  </div>
+  <div class="large-4 columns">
+    <div class="embedded">
+      <h3>Vastuu</h3>
+      <div class="description">
+        Ty&ouml;ntekij&auml; pit&auml;&auml; ty&ouml;t&auml;&auml;n merkityksellisen&auml; ja tuntee olevansa osa v&auml;litt&auml;v&auml;&auml; yhteis&ouml;&auml; ja tekev&auml;ns&auml; ty&ouml;ll&auml;&auml;n hyv&auml;&auml; muille.
+       </div>
+      <div class="show-for-large-up"><br/></div>
+    </div>
+  </div>
+</div>
+
+<div id="smk-bottom" class="section separate">
+  <div class="row">
+    <div class="large-6 large-offset-3 end columns">
+      <h3>1. Alkuselvityksell&auml; paikannetaan kehityskohteet</h3>
+      <p>Kansainv&auml;liseen huippututkimukseen perustuva Sis&auml;isen motivaation kehityspolku alkaa IMQ-mittauksella, jossa ty&ouml;ntekij&auml;t vastaavat noin sataan ty&ouml;n arkea koskevaan kysymykseen. Sen tulokset analysoi psykologin johtama Filosofian Akatemian ty&ouml;ryhm&auml;. Lis&auml;ksi ty&ouml;ryhm&auml; perehtyy organisaation kehitt&auml;misstrategioihin ja henkil&ouml;st&ouml;tyytyv&auml;isyyskyselyihin.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-offset-5 small-2 end columns">
+      <div class="row separator">
+        <div class="underline small-12 large-4 large-offset-4 columns"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 large-offset-3 end columns">
+      <h3>2. Valmennuksissa ja ty&ouml;pajoissa p&auml;&auml;tet&auml;&auml;n, mit&auml; ja miten toimintatapoja muutetaan</h3>
+      <p>Kun IMQ-mittauksen j&auml;lkeen organisaation kehityskohteet ovat selvill&auml;, ty&ouml;ntekij&auml;t ja johto pohtivat yhdess&auml; Filosofian Akatemian asiantuntijoiden kanssa suunnitelluissa valmennuksissa ja ty&ouml;pajoissa, mit&auml; ty&ouml;n arjessa voisi tehd&auml; toisin, jotta vapaus, virtaus ja vastuu vahvistuvat. Ty&ouml;yhteis&ouml; pyrkii esimerkiksi kirkastamaan oman ty&ouml;ns&auml; merkityst&auml; (vastuu), omaksumaan tehokkaan ajattelun taitoja (virtaus) ja tuntemaan omia ja tiimin vahvuuksia (vapaus).</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-offset-5 small-2 end columns">
+      <div class="row separator">
+        <div class="underline small-12 large-4 large-offset-4 columns"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 large-offset-3 columns">
+      <h3>3. Uusista tavoista tulee osa ty&ouml;paikan kulttuuria, kun niihin sitoudutaan</h3>
+      <p>Ty&ouml;paikan kulttuuri muuttuu tapa kerrallaan. Muutettavat tavat voivat olla hyvin pieni&auml;, kuten tervehtimist&auml; aamulla tai tuotantohallin roskiksen uudelleen sijoittamista tai isoja, kuten l&auml;hiesimiesten p&auml;&auml;t&auml;nt&auml;vallan lis&auml;&auml;mist&auml; ja itseohjautuvuutta tukevien rakenteiden luomista. Jotta muutos olisi pysyv&auml;&auml;, pit&auml;&auml; koko ty&ouml;yhteis&ouml;n ylint&auml; johtoa my&ouml;ten sitoutua tavoitteisiin.</p>
+      <p>Osa muutoksen sis&auml;&auml;najoa on sen seuranta. Toiset tykk&auml;&auml;v&auml;t pit&auml;&auml; vuoron tai vaikka viikon lopuksi p&auml;iv&auml;kirjaa havainnoistaan, joillekin taas sopii kokemusten jakaminen yhteisess&auml; Facebook-ryhm&auml;ss&auml; tai intranetin ryhm&auml;ty&ouml;tilassa. Ajattelu- ja toimintatapojen muutosten seurannan v&auml;lineet ja ty&ouml;kalut valitaan yhdess&auml; Filosofian Akatemian asiantuntijoiden kanssa kullekin kohdeorganisaatiolle sopiviksi.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-offset-5 small-2 end columns">
+      <div class="row separator">
+        <div class="underline small-12 large-4 large-offset-4 columns"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 large-offset-3 end columns">
+      <h3>4. Loppumittaus paljastaa, mik&auml; on muuttunut ja mit&auml; tulee kehitt&auml;&auml; seuraavaksi</h3>
+      <p>Prosessi p&auml;&auml;ttyy uuteen IMQ-mittaukseen. Siihen osallistuvat kaikki kehitystoimien piiriss&auml; olleet. Toistomittauksen analyyseiss&auml; ja raportoinnissa kiinnitet&auml;&auml;n erityist&auml; huomiota niihin kohtiin, joissa alkumittauksessa todettiin puutteita.</p>
+      <p>Sis&auml;isen motivaation kehityspolun osallistujat oppivat sen my&ouml;t&auml; ottamaan enemm&auml;n vastuuta ja tuntemaan omistajuutta ty&ouml;t&auml;&auml;n kohtaa, kuuntelemaan asiakkaita herkemmin ja keksim&auml;&auml;n parempia ratkaisuja heid&auml;n tarpeisiinsa. Sis&auml;isen motivaation kehityspolku vahvistaa ty&ouml;yhteis&ouml;n uusiutumiskyky&auml; muuttuvassa toimintaymp&auml;rist&ouml;ss&auml; ja tukee organisaation menestyst&auml; pitk&auml;j&auml;nteisesti.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div id="smk" class="small-12 end columns">
+      <div class="show-for-large-up"><br/></div>
+      <span class="icon-smk-horizontal show-for-medium-up"></span>
+      <span class="icon-smk-vertical hide-for-medium-up"></span>
+      <br/><br/>
+    </div>
+  </div>
+
+  <div id="more" class="row">
+    <div class="small-12 columns">
+      <a href="etusivu.html#contact" class="button btn-contact">OTA YHTEYTT&Auml;</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="section row wrapper-embedded">
+  <div class="large-6 columns">
+    <div class="embedded">
+      <h2>Valmennukset</h2>
+      <div class="row">
+        <div class="underline small-offset-5 small-2"></div>
+      </div>
+      <div class="description">
+        Toteutamme eripituisia valmennuksia, joiden keski&ouml;ss&auml; on ihmisen psykologiset perustarpeet: vapaus eli toimintakyky, virtaus eli aikaansaaminen ja vastuu eli ty&ouml;n merkitykselliseksi kokeminen. Niiden oikeanlainen johtaminen on ihmisen ty&ouml;hyvinvoinnin ja tuottavuuden perusta. Olemme valmentaneet viimeisen kuuden vuoden aikana satoja yrityksi&auml;.
+      </div>
+      <a href="etusivu.html#contact" class="link-cta">Ota yhteytt&auml;<span class="icon-arrow-right"></a>
+    </div>
+  </div>
+  <div class="large-6 columns">
+    <div class="embedded">
+      <h2>Puheenvuorot</h2>
+      <div class="row">
+        <div class="underline small-offset-5 small-2"></div>
+      </div>
+      <div class="description">
+        Filosofian Akatemian tutkija&#x2013;valmentajat ovat pidettyj&auml; puhujia erilaisissa tilaisuuksissa. Vuoropuhelu yhteiskunnan kanssa on t&auml;rke&auml; osa toimintaamme. Filosofian Akatemian perustaja Lauri J&auml;rvilehto on pit&auml;nyt puheen muun muassa Valkoisessa Talossa.
+      </div>
+      <a href="etusivu.html#contact" class="link-cta">Ota yhteytt&auml;<span class="icon-arrow-right"></a>
+      <div class="show-for-large-up"><br/></div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+<div class="row hide-for-small-only">
+  <div class="medium-12 large-8 large-offset-2 end columns">
+    <ul class="icon-bar four-up">
+      <li class="item"><a href="/">Etusivu</a></li>
+      <li class="item"><a href="/ihmiset">Ihmiset</a></li>
+      <li class="item active"><a href="/palvelut" onclick="return false;">Palvelut</a></li>
+      <li class="item"><a href="/tutkimus">Tutkimus</a></li>
+    </ul>
+  </div>
+</div>
+{% include 'partials/address.nunjucks' %}
+{% endblock %}
+
+{% block scripts %}
+{% include 'partials/scrolling.nunjucks' %}
+{% endblock %}
+

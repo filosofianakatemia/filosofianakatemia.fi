@@ -1,0 +1,146 @@
+{% extends "base.nunjucks" %}
+{% set pageName = 'ihmiset' %}
+{% block title %}{{ super() }}  | Ihmiset{% endblock %}
+{% block description %}Me teemme t&ouml;it&auml; valtavalla innolla. Filosofian Akatemian huippututkijat ja valmentajat esitt&auml;ytyv&auml;t.{% endblock %}
+{% block bodyattrs %}id="people"{% endblock %}
+
+{% block topbar %}
+<ul class="title-area">
+  <li class="name">
+    <div class="logo"><a href="/"><span class="icon-logo-fill-name"></span></a></div>
+  </li>
+  <li class="toggle-topbar menu-icon"><a href="/"><span></span></a></li>
+</ul>
+
+<section class="top-bar-section">
+  <ul class="right">
+    <li><a href="/">Etusivu</a></li>
+    <li class="active"><a href="/ihmiset" onclick="return false;">Ihmiset</a></li>
+    <li><a href="/palvelut">Palvelut</a></li>
+    <li><a href="/tutkimus">Tutkimus</a></li>
+  </ul>
+</section>
+{% endblock %}
+
+{% block hero %}
+<div class="hero">
+  <div class="slogan">Me olemme Filosofian Akatemia</div>
+  <div class="ingress">Ihmisten pit&auml;&auml; el&auml;&auml; hyv&auml;&auml; el&auml;m&auml;&auml;. Iso osa siit&auml; kuluu t&ouml;iss&auml;. Parhaimmillaan ty&ouml;nteko on mielek&auml;st&auml;, palkitsevaa ja merkityksellist&auml;. Filosofian Akatemia perustettiin meille unelmien ty&ouml;paikaksi ja sellainen siit&auml; tuli. Nyt autamme muita saavuttamaan saman. Teemme akateemista tutkimusta, josta uutamme mullistavia ty&ouml;kaluja inhimillisen hyvinvoinnin vahvistamiseen ja urautuneen ajattelun murtamiseen yrityksiss&auml;. Teemme ty&ouml;t&auml; valtavalla innolla.</div>
+  <a href="#thumbnails" class="scroll-down show-for-large-up">
+    <span class="text-scroll-down">VIERIT&Auml; ALAS</span></br><span class="icon-arrow-down"></span>
+  </a>
+</div>
+{% endblock %}
+
+{% block mainattrs %}id="thumbnails"{% endblock %}
+{% block main %}
+<div class="section row">
+  <div id="karoliina" class="large-4 columns">
+    <div class="picture" onClick="location.href='ihmiset/karoliina'">
+      <h2 class="with-title">Karoliina Jarenko</h2>
+      <h4>Toimitusjohtaja</h4>
+    </div>
+  </div>
+  <div id="sonja" class="large-4 columns">
+    <div class="picture" onClick="location.href='ihmiset/sonja'">
+      <h2 class="with-title">Sonja Str&ouml;msholm</h2>
+      <h4>Asiakkuusjohtaja</h4>
+    </div>
+  </div>
+  <div id="timo" class="large-4 columns">
+    <div class="picture" onClick="location.href='ihmiset/timo'">
+      <h2 class="with-title">Timo Tiuraniemi</h2>
+      <h4>Teknologiajohtaja</h4>
+    </div>
+  </div>
+</div>
+
+<div class="section row">
+  <div id="frank" class="large-4 columns">
+    <div class="picture" onClick="location.href='ihmiset/frank'">
+      <h2>Frank Martela</h2>
+    </div>
+  </div>
+  <div id="lauri" class="large-4 columns">
+    <div class="picture" onClick="location.href='ihmiset/lauri'">
+      <h2>Lauri J&auml;rvilehto</h2>
+    </div>
+  </div>
+  <div id="tapani" class="large-4 columns">
+    <div class="picture" onClick="location.href='ihmiset/tapani'">
+      <h2>Tapani Riekki</h2>
+    </div>
+  </div>
+</div>
+
+<div class="section row">
+  <div id="reima" class="large-4 columns">
+    <div class="picture" onClick="location.href='ihmiset/reima'">
+      <h2>Reima Launonen</h2>
+    </div>
+  </div>
+  <div id="peter" class="large-4 columns">
+    <div class="picture" onClick="location.href='ihmiset/peter'">
+      <h2>Peter Kentt&auml;</h2>
+    </div>
+  </div>
+  <div id="joonas" class="large-4 columns">
+    <div class="picture" onClick="location.href='ihmiset/joonas'">
+      <h2>Joonas Pesonen</h2>
+    </div>
+  </div>
+</div>
+<div class="section row">
+  <div id="maria" class="large-4 columns">
+    <div class="picture" onClick="location.href='ihmiset/maria'">
+      <h2>Maria Ruotsalainen</h2>
+    </div>
+  </div>
+  <div id="villiam" class="large-4 columns">
+    <div class="picture" onClick="location.href='ihmiset/villiam'">
+      <h2>Villiam Virkkunen</h2>
+    </div>
+  </div>
+  <div id="jp" class="large-4 columns" onClick="location.href='ihmiset/jp'">
+    <div class="picture">
+      <h2>Jukka-Pekka Salo</h2>
+    </div>
+  </div>
+</div>
+<div class="section row">
+  <div id="emilia" class="large-4 columns" onClick="location.href='ihmiset/emilia'">
+    <div class="picture">
+      <h2>Emilia Lahti</h2>
+    </div>
+  </div>
+  <div id="aleksej" class="large-4 columns" onClick="location.href='ihmiset/aleksej'">
+    <div class="picture">
+      <h2>Aleksej Fedotov</h2>
+    </div>
+  </div>
+  <div id="santeri" class="large-4 columns">
+    <div class="picture" onClick="location.href='ihmiset/santeri'">
+      <h2>Santeri Lan&eacute;r</h2>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="row hide-for-small-only">
+  <div class="medium-12 large-8 large-offset-2 end columns">
+    <ul class="icon-bar four-up">
+      <li class="item"><a href="/">Etusivu</a></li>
+      <li class="item active"><a href="/ihmiset" onclick="return false;">Ihmiset</a></li>
+      <li class="item"><a href="/palvelut">Palvelut</a></li>
+      <li class="item"><a href="/tutkimus">Tutkimus</a></li>
+    </ul>
+  </div>
+</div>
+{% include 'partials/address.nunjucks' %}
+{% endblock %}
+
+{% block scripts %}
+{% include 'partials/scrolling.nunjucks' %}
+{% endblock %}
+

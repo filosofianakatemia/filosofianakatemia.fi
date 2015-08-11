@@ -13,22 +13,33 @@ if (process.argv.length > 2) {
  * Module dependencies.
  */
 
-var views = require('co-views');
 var koa = require('koa');
 var logger = require('koa-logger');
 var route = require('koa-route');
+var nunjucks = require('koa-nunjucks-2');
+var path = require('path');
 
-// main
+// setup koa
 
 var app = module.exports = koa();
-var render = views(__dirname + '/views', { ext: 'nunjucks' });
 
 // middleware
 
-app.use(logger());
+if (config.debug){
+  app.use(logger());
+}
 if (!config.externalStatic){
   app.use(require('koa-static-folder')('./static'));
 }
+
+app.context.render = nunjucks({
+  autoescape: true,
+  ext: 'nunjucks',
+  path: path.join(__dirname, 'views'),
+  noCache: config.debug,
+  watch: config.debug,
+  dev: config.debug
+});
 
 // route middleware
 
@@ -37,19 +48,30 @@ app.use(route.get('/palvelut', palvelut));
 app.use(route.get('/ihmiset', ihmiset));
 app.use(route.get('/tutkimus', tutkimus));
 
+app.use(route.get('/ihmiset/aleksej', aleksej));
+
 // routes
 
 function *index() {
-  this.body = yield render('pages/etusivu');
+  console.log("GET /")
+  this.body = yield this.render('pages/etusivu');
 }
 function *palvelut() {
-  this.body = yield render('pages/palvelut');
+  console.log("GET /palvelut")
+  this.body = yield this.render('pages/palvelut');
 }
 function *ihmiset() {
-  this.body = yield render('pages/ihmiset');
+  console.log("GET /ihmiset")
+  this.body = yield this.render('pages/ihmiset');
 }
 function *tutkimus() {
-  this.body = yield render('pages/tutkimus');
+  console.log("GET /tutkimus")
+  this.body = yield this.render('pages/tutkimus');
+}
+
+function *aleksej() {
+  console.log("GET /ihmiset/aleksej")
+  this.body = yield this.render('pages/aleksej');
 }
 
 // listen
