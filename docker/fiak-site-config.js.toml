@@ -1,5 +1,5 @@
 [template]
-src = "../templates/site/site-config.js.tmpl"
+src = "../templates/site/fiak-site-config.js.tmpl"
 dest = "/etc/extendedmind/site/filosofianakatemia-config.js"
 keys = [
     "/filosofianakatemia/backendcollective"

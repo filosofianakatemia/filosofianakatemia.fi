@@ -11,16 +11,16 @@
     </fileSet>
     <fileSet>
       <directory>${project.basedir}/docker</directory>
-      <outputDirectory>confd/conf.d/filosofianakatemia</outputDirectory>
+      <outputDirectory>confd/conf.d/site</outputDirectory>
       <includes>
-        <include>site-config.js.toml</include>
+        <include>fiak-site-config.js.toml</include>
       </includes>
     </fileSet>
     <fileSet>
       <directory>${project.basedir}/docker</directory>
-      <outputDirectory>confd/templates/filosofianakatemia</outputDirectory>
+      <outputDirectory>confd/templates/site</outputDirectory>
       <includes>
-        <include>site-config.js.tmpl</include>
+        <include>fiak-site-config.js.tmpl</include>
       </includes>
     </fileSet>
   </fileSets>
