@@ -124,6 +124,18 @@
     </div>
   </div>
 </div>
+<div class="section row">
+  <div id="iida" class="large-4 large-offset-2 columns" onClick="location.href='ihmiset/iida'">
+    <div class="picture">
+      <h2>Iida M&auml;kikallio</h2>
+    </div>
+  </div>
+  <div id="selina" class="large-4 end columns" onClick="location.href='ihmiset/selina'">
+    <div class="picture">
+      <h2>Selina Bakir</h2>
+    </div>
+  </div>
+</div>
 {% endblock %}
 
 {% block footer %}

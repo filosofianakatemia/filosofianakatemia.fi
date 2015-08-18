@@ -63,6 +63,8 @@ app.use(route.get('/ihmiset/sonja', sonja));
 app.use(route.get('/ihmiset/tapani', tapani));
 app.use(route.get('/ihmiset/timo', timo));
 app.use(route.get('/ihmiset/villiam', villiam));
+app.use(route.get('/ihmiset/iida', iida));
+app.use(route.get('/ihmiset/selina', selina));
 
 // routes
 
@@ -142,6 +144,14 @@ function *timo() {
 function *villiam() {
   console.log("GET /ihmiset/villiam")
   this.body = yield this.render('pages/villiam');
+}
+function *iida() {
+  console.log("GET /ihmiset/iida")
+  this.body = yield this.render('pages/iida');
+}
+function *selina() {
+  console.log("GET /ihmiset/selina")
+  this.body = yield this.render('pages/selina');
 }
 
 // listen

@@ -457,7 +457,7 @@ ul.list-link li a {
 
   #research .hero {
     background-image: url('../img/bg-research-large.png');
-  }  
+  }
 }
 
 /* RETINA OR REALLY WIDE AND NON-MOBILE */
@@ -472,7 +472,7 @@ ul.list-link li a {
 
   #research .hero {
     background-image: url('../img/bg-research-large@2x.png');
-  }  
+  }
 }
 
 .hero .slogan {
@@ -503,7 +503,7 @@ ul.list-link li a {
   right: 0;
   font-size: 13px;
   letter-spacing: 1px;
-  color: #FFFFFF;  
+  color: #FFFFFF;
 }
 
 .hero .scroll-down .text-scroll-down {
@@ -1060,6 +1060,12 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 }
 #thumbnails #santeri .picture {
   background-image: url('../img/santeri-small.jpg');
+}
+#thumbnails #iida .picture {
+  background-image: url('../img/iida-small.jpg');
+}
+#thumbnails #selina .picture {
+  background-image: url('../img/selina-small.jpg');
 }
 
 #thumbnails {

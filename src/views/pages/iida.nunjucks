@@ -1,0 +1,35 @@
+{% extends "ihminen.nunjucks" %}
+{% set personName = 'Iida Mäkikallio' %}
+{% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block personname %}{{ personName }}{% endblock %}
+{% block persondescription %}
+Iida M&auml;kikallion kuvaus
+{% endblock %}
+
+{% block personleft %}
+<h4>Erityisalueet:</h4>
+<p>
+  <ul class="list-plain">
+    <li>Erityisalue 1</li>
+    <li>Erityisalue 2</li>
+  </ul>
+</p>
+<h4>Tutkimushankkeet:</h4>
+<p>
+  <ul class="list-plain">
+    <li>Tutkimushanke 1</li>
+  </ul>
+</p>
+<h4>Ota yhteytt&auml;:</h4>
+<p>+358 XX XXX XXXX<br/>
+  <a href="mailto:iida.makikallio@filosofianakatemia.fi">iida.makikallio@filosofianakatemia.fi</a>
+</p>
+{% endblock %}
+
+{% block personright %}
+<img src="/static/img/iida-large.jpg"/>
+{% endblock %}
+
+{% block personquote %}Lainaus{% endblock %}
+{% block personquoteauthor %}Filosofian Akatemian ihminen{% endblock %}
