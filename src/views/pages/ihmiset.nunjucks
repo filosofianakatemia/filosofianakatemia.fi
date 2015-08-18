@@ -35,104 +35,119 @@
 {% block mainattrs %}id="thumbnails"{% endblock %}
 {% block main %}
 <div class="section row">
-  <div id="karoliina" class="large-4 columns">
-    <div class="picture" onClick="location.href='ihmiset/karoliina'">
-      <h2 class="with-title">Karoliina Jarenko</h2>
-      <h4>Toimitusjohtaja</h4>
+  <div id="aleksej" class="large-4 columns">
+    <div class="link-container" onClick="location.href='ihmiset/aleksej'">
+      <div class="picture"></div>
+      <h2><a>Aleksej Fedotov</a></h2>
     </div>
   </div>
-  <div id="sonja" class="large-4 columns">
-    <div class="picture" onClick="location.href='ihmiset/sonja'">
-      <h2 class="with-title">Sonja Str&ouml;msholm</h2>
-      <h4>Asiakkuusjohtaja</h4>
+  <div id="emilia" class="large-4 columns" onClick="location.href='ihmiset/emilia'">
+    <div class="link-container">
+      <div class="picture"></div>
+      <h2><a>Emilia Lahti</a></h2>
     </div>
   </div>
-  <div id="timo" class="large-4 columns">
-    <div class="picture" onClick="location.href='ihmiset/timo'">
-      <h2 class="with-title">Timo Tiuraniemi</h2>
-      <h4>Teknologiajohtaja</h4>
-    </div>
-  </div>
-</div>
-
-<div class="section row">
   <div id="frank" class="large-4 columns">
-    <div class="picture" onClick="location.href='ihmiset/frank'">
-      <h2>Frank Martela</h2>
-    </div>
-  </div>
-  <div id="lauri" class="large-4 columns">
-    <div class="picture" onClick="location.href='ihmiset/lauri'">
-      <h2>Lauri J&auml;rvilehto</h2>
-    </div>
-  </div>
-  <div id="tapani" class="large-4 columns">
-    <div class="picture" onClick="location.href='ihmiset/tapani'">
-      <h2>Tapani Riekki</h2>
+    <div class="link-container" onClick="location.href='ihmiset/frank'">
+      <div class="picture"></div>
+      <h2><a>Frank Martela</a></h2>
     </div>
   </div>
 </div>
-
 <div class="section row">
-  <div id="reima" class="large-4 columns">
-    <div class="picture" onClick="location.href='ihmiset/reima'">
-      <h2>Reima Launonen</h2>
-    </div>
-  </div>
-  <div id="peter" class="large-4 columns">
-    <div class="picture" onClick="location.href='ihmiset/peter'">
-      <h2>Peter Kentt&auml;</h2>
+  <div id="iida" class="large-4 columns">
+    <div class="link-container" onClick="location.href='ihmiset/iida'">
+      <div class="picture"></div>
+      <h2><a>Iida M&auml;kikallio</a></h2>
     </div>
   </div>
   <div id="joonas" class="large-4 columns">
-    <div class="picture" onClick="location.href='ihmiset/joonas'">
-      <h2>Joonas Pesonen</h2>
+    <div class="link-container" onClick="location.href='ihmiset/joonas'">
+      <div class="picture"></div>
+      <h2><a>Joonas Pesonen</a></h2>
+    </div>
+  </div>
+  <div id="jp" class="large-4 columns">
+    <div class="link-container" onClick="location.href='ihmiset/jp'">
+      <div class="picture"></div>
+      <h2><a>Jukka-Pekka Salo</a></h2>
     </div>
   </div>
 </div>
 <div class="section row">
+  <div id="karoliina" class="large-4 columns">
+    <div class="link-container" onClick="location.href='ihmiset/karoliina'">
+      <div class="picture"></div>
+      <h2><a>Karoliina Jarenko</a></h2>
+      <h4><a>Toimitusjohtaja</a></h4>
+    </div>
+  </div>
+  <div id="lauri" class="large-4 columns">
+    <div class="link-container" onClick="location.href='ihmiset/lauri'">
+      <div class="picture"></div>
+      <h2><a>Lauri J&auml;rvilehto</a></h2>
+    </div>
+  </div>
   <div id="maria" class="large-4 columns">
-    <div class="picture" onClick="location.href='ihmiset/maria'">
-      <h2>Maria Ruotsalainen</h2>
-    </div>
-  </div>
-  <div id="villiam" class="large-4 columns">
-    <div class="picture" onClick="location.href='ihmiset/villiam'">
-      <h2>Villiam Virkkunen</h2>
-    </div>
-  </div>
-  <div id="jp" class="large-4 columns" onClick="location.href='ihmiset/jp'">
-    <div class="picture">
-      <h2>Jukka-Pekka Salo</h2>
+    <div class="link-container" onClick="location.href='ihmiset/maria'">
+      <div class="picture"></div>
+      <h2><a>Maria Ruotsalainen</a></h2>
     </div>
   </div>
 </div>
 <div class="section row">
-  <div id="emilia" class="large-4 columns" onClick="location.href='ihmiset/emilia'">
-    <div class="picture">
-      <h2>Emilia Lahti</h2>
+  <div id="peter" class="large-4 columns">
+    <div class="link-container" onClick="location.href='ihmiset/peter'">
+      <div class="picture"></div>
+      <h2><a>Peter Kentt&auml;</a></h2>
     </div>
   </div>
-  <div id="aleksej" class="large-4 columns" onClick="location.href='ihmiset/aleksej'">
-    <div class="picture">
-      <h2>Aleksej Fedotov</h2>
+  <div id="reima" class="large-4 columns">
+    <div class="link-container" onClick="location.href='ihmiset/reima'">
+      <div class="picture"></div>
+      <h2><a>Reima Launonen</a></h2>
     </div>
   </div>
   <div id="santeri" class="large-4 columns">
-    <div class="picture" onClick="location.href='ihmiset/santeri'">
-      <h2>Santeri Lan&eacute;r</h2>
+    <div class="link-container" onClick="location.href='ihmiset/santeri'">
+      <div class="picture"></div>
+      <h2><a>Santeri Lan&eacute;r</a></h2>
     </div>
   </div>
 </div>
 <div class="section row">
-  <div id="iida" class="large-4 large-offset-2 columns" onClick="location.href='ihmiset/iida'">
-    <div class="picture">
-      <h2>Iida M&auml;kikallio</h2>
+  <div id="selina" class="large-4 columns">
+    <div class="link-container" onClick="location.href='ihmiset/selina'">
+      <div class="picture"></div>
+      <h2><a>Selina Bakir</a></h2>
     </div>
   </div>
-  <div id="selina" class="large-4 end columns" onClick="location.href='ihmiset/selina'">
-    <div class="picture">
-      <h2>Selina Bakir</h2>
+  <div id="sonja" class="large-4 columns">
+    <div class="link-container" onClick="location.href='ihmiset/sonja'">
+      <div class="picture"></div>
+      <h2><a>Sonja Str&ouml;msholm</a></h2>
+      <h4><a>Asiakkuusjohtaja</a></h4>
+    </div>
+  </div>
+  <div id="tapani" class="large-4 columns">
+    <div class="link-container" onClick="location.href='ihmiset/tapani'">
+      <div class="picture"></div>
+      <h2><a>Tapani Riekki</a></h2>
+    </div>
+  </div>
+</div>
+<div class="section row">
+  <div id="timo" class="large-4 large-offset-2 columns">
+    <div class="link-container" onClick="location.href='ihmiset/timo'">
+      <div class="picture"></div>
+      <h2><a>Timo Tiuraniemi</a></h2>
+      <h4><a>Teknologiajohtaja</a></h4>
+    </div>
+  </div>
+  <div id="villiam" class="large-4 end columns">
+    <div class="link-container" onClick="location.href='ihmiset/villiam'">
+      <div class="picture"></div>
+      <h2><a>Villiam Virkkunen</a></h2>
     </div>
   </div>
 </div>
