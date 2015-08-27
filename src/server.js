@@ -19,9 +19,24 @@ var route = require('koa-route');
 var nunjucks = require('koa-nunjucks-2');
 var path = require('path');
 
+var notes = require('./notes.json')
+
+var Remarkable = require('remarkable');
+var markdownParser = new Remarkable();
+
 // setup koa
 
 var app = module.exports = koa();
+
+function getPersonDescription(title) {
+  if (notes) {
+    for (var i = 0; i < notes.length; i++) {
+      if (notes[i].title === title) {
+        return markdownParser.render(notes[i].content);
+      }
+    }
+  }
+}
 
 // middleware
 
@@ -86,8 +101,11 @@ function *tutkimus() {
 }
 
 function *aleksej() {
-  console.log("GET /ihmiset/aleksej")
-  this.body = yield this.render('pages/aleksej');
+  console.log("GET /ihmiset/aleksej");
+  var context = {
+    personDescription: getPersonDescription("Aleksej Fedotov")
+  };
+  yield this.render('pages/aleksej', context);
 }
 function *emilia() {
   console.log("GET /ihmiset/emilia")

@@ -1147,7 +1147,11 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   padding-right: 10px;
 }
 
-.people-details .description, .person-quote .quote {
+/*.people-details .description,*/ .person-quote .quote {
+  font-size: 18px;
+}
+
+.people-details .section-person p:first-of-type {
   font-size: 18px;
 }
 
@@ -1202,6 +1206,9 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
     font-size: 100px;
   }
   .people-details .description, .person-quote .quote {
+    font-size: 25px;
+  }
+  .people-details .section-person p:first-of-type {
     font-size: 25px;
   }
 }
