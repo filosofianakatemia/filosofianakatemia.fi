@@ -7,3 +7,7 @@ src/node_modules/
 
 # Ignore OSX DS store
 .DS_Store
+
+# Ignore Sublime Text files
+*.sublime-workspace
+
