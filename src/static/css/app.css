@@ -246,6 +246,10 @@ a {
   color: #027180;
   transition: color 300ms ease-out;
 }
+a[href^=tel] {
+  color: inherit;
+}
+
 .link-cta {
   font-weight: 700;
 
@@ -267,9 +271,13 @@ ul.list-plain, ul.list-link {
   list-style-type: none;
   padding-left:0;
 }
+ul.list-plain {
+  margin-left: 15px;
+}
 ul.list-plain li:before {
   content: '-';
-  margin-right: 5px;
+  position: absolute;
+  left: 15px;
 }
 
 
@@ -1009,6 +1017,13 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   height: 300px;
 }
 
+@media only screen and (max-width: 64.063em){
+  #thumbnails #placeholder .picture {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
 #thumbnails #karoliina .picture {
   background-image: url('../img/karoliina-small.jpg');
 }
@@ -1065,6 +1080,9 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 }
 #thumbnails #selina .picture {
   background-image: url('../img/selina-small.jpg');
+}
+#thumbnails #placeholder .picture {
+  background-image: url('../img/placeholder-small.jpg');
 }
 
 #thumbnails {

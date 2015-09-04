@@ -28,6 +28,13 @@ var markdownParser = new Remarkable();
 
 var app = module.exports = koa();
 
+function getPersonContext() {
+  return {
+    personImage: true,
+    personQuote: true
+  }
+}
+
 function getPersonDescription(title) {
   if (notes) {
     for (var i = 0; i < notes.length; i++) {
@@ -80,6 +87,7 @@ app.use(route.get('/ihmiset/timo', timo));
 app.use(route.get('/ihmiset/villiam', villiam));
 app.use(route.get('/ihmiset/iida', iida));
 app.use(route.get('/ihmiset/selina', selina));
+app.use(route.get('/ihmiset/assistentti', assistentti));
 
 // routes
 
@@ -102,74 +110,77 @@ function *tutkimus() {
 
 function *aleksej() {
   console.log("GET /ihmiset/aleksej");
-  var context = {
-    personDescription: getPersonDescription("Aleksej Fedotov")
-  };
+  var context = getPersonContext();
+  context.personDescription = getPersonDescription("Aleksej Fedotov");
   yield this.render('pages/aleksej', context);
 }
 function *emilia() {
   console.log("GET /ihmiset/emilia")
-  this.body = yield this.render('pages/emilia');
+  this.body = yield this.render('pages/emilia', getPersonContext());
 }
 function *frank() {
   console.log("GET /ihmiset/frank")
-  this.body = yield this.render('pages/frank');
+  this.body = yield this.render('pages/frank', getPersonContext());
 }
 function *joonas() {
   console.log("GET /ihmiset/joonas")
-  this.body = yield this.render('pages/joonas');
+  this.body = yield this.render('pages/joonas', getPersonContext());
 }
 function *jp() {
   console.log("GET /ihmiset/jp")
-  this.body = yield this.render('pages/jp');
+  this.body = yield this.render('pages/jp', getPersonContext());
 }
 function *karoliina() {
   console.log("GET /ihmiset/karoliina")
-  this.body = yield this.render('pages/karoliina');
+  this.body = yield this.render('pages/karoliina', getPersonContext());
 }
 function *lauri() {
   console.log("GET /ihmiset/lauri")
-  this.body = yield this.render('pages/lauri');
+  this.body = yield this.render('pages/lauri', getPersonContext());
 }
 function *maria() {
   console.log("GET /ihmiset/maria")
-  this.body = yield this.render('pages/maria');
+  this.body = yield this.render('pages/maria', getPersonContext());
 }
 function *peter() {
   console.log("GET /ihmiset/peter")
-  this.body = yield this.render('pages/peter');
+  this.body = yield this.render('pages/peter', getPersonContext());
 }
 function *reima() {
   console.log("GET /ihmiset/reima")
-  this.body = yield this.render('pages/reima');
+  this.body = yield this.render('pages/reima', getPersonContext());
 }
 function *santeri() {
   console.log("GET /ihmiset/santeri")
-  this.body = yield this.render('pages/santeri');
+  this.body = yield this.render('pages/santeri', getPersonContext());
 }
 function *sonja() {
   console.log("GET /ihmiset/sonja")
-  this.body = yield this.render('pages/sonja');
+  this.body = yield this.render('pages/sonja', getPersonContext());
 }
 function *tapani() {
   console.log("GET /ihmiset/tapani")
-  this.body = yield this.render('pages/tapani');
+  this.body = yield this.render('pages/tapani', getPersonContext());
 }
 function *timo() {
   console.log("GET /ihmiset/timo")
-  this.body = yield this.render('pages/timo');
+  this.body = yield this.render('pages/timo', getPersonContext());
 }
 function *villiam() {
   console.log("GET /ihmiset/villiam")
-  this.body = yield this.render('pages/villiam');
+  this.body = yield this.render('pages/villiam', getPersonContext());
 }
 function *iida() {
   console.log("GET /ihmiset/iida")
-  this.body = yield this.render('pages/iida');
+  this.body = yield this.render('pages/iida', getPersonContext());
 }
 function *selina() {
   console.log("GET /ihmiset/selina")
-  this.body = yield this.render('pages/selina');
+  this.body = yield this.render('pages/selina', getPersonContext());
+}
+function *assistentti() {
+  console.log("GET /ihmiset/assistentti");
+  this.body = yield this.render('pages/assistentti');
 }
 
 // listen

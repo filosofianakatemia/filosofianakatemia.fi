@@ -27,6 +27,7 @@
   </div>
 </div>
 <div class="section section-person row">
+  {% if personImage %}
   <div class="large-5 large-offset-1 left-aligned columns">
     <h1>{% block personname %}{% endblock %}</h1>
     <div class="description">{% block persondescription %}{% endblock %}</div>
@@ -36,9 +37,21 @@
     <div class="show-for-large-up"><br/><br/></div>
     {% block personright %}{% endblock %}
   </div>
-
+  {% else %}
+  <div class="large-10 large-centered columns">
+    <div class="left-aligned">
+      <h1>{% block personname %}{% endblock %}</h1>
+      <div class="left-aligned description">{% block persondescription %}{% endblock %}</div>
+      {% block personleft %}{% endblock %}
+    </div>
+    <div class="person-details left-aligned">
+      {% block persondetails %}{% endblock %}
+    </div>
+  </div>
+  {% endif %}
 </div>
 
+{% if personQuote %}
 <div class="section wrapper-embedded row person-quote">
   <div class="small-3 medium-offset-1 right-aligned columns">
     <span class="icon-quote"></span>
@@ -52,6 +65,7 @@
   </div>
   </div>
 </div>
+{% endif %}
 {% endblock %}
 
 {% block footer %}

@@ -1,0 +1,81 @@
+{% extends "ihminen.nunjucks" %}
+{% set personName = 'Intohimoinen Assistentti' %}
+{% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block personname %}{{ personName }}{% endblock %}
+{% block persondescription %}
+<p>
+  Nyt haemme joukkoomme
+  <span class="font-bold">
+    intohimoista ja sis&auml;isesti motivoitunutta assistenttity&ouml;n ammattilaista vakituiseen ja osa-aikaiseen (50%) ty&ouml;suhteeseen.
+  </span>
+</p>
+{% endblock %}
+
+{% block persondetails %}
+<h4>Ty&ouml;si arki koostuu seuraavista avustavista teht&auml;vist&auml;:</h4>
+<p>
+  <ul class="list-plain">
+    <li>Toimistoteht&auml;vist&auml;: postitukset, printtaukset, skannaukset, materiaalien ja tarjoiluiden hankinnat</li>
+    <li>Henkil&ouml;st&ouml;hallinnollisista teht&auml;vist&auml;: ty&ouml;sopimukset, ty&ouml;terveyshuolto, Kela-korvaukset, vakuutukset, henkil&ouml;st&ouml;- ja ty&ouml;suhde-edut</li>
+    <li>Taloushallinnollisista teht&auml;vist&auml;: budjetin p&auml;ivitt&auml;minen, maksu- ja laskutusasiat, raportointi</li>
+    <li>Muista teht&auml;vist&auml;: kokousmuistioiden kirjoittaminen ja yleinen sis&auml;inen viestint&auml;, visuaalisten materiaalien tuottamisessa avustaminen, kalentereiden hallinta</li>
+    <li>Filosofian Akatemian hallinnallisten prosessien kokonaisvaltaisesta kehitt&auml;misest&auml;</li>
+  </ul>
+</p>
+<p>
+  Osana Filosofian Akatemian perhett&auml; p&auml;&auml;set osaksi nopeasti kehittyv&auml;&auml; ja kasvavaa porukkaa, jossa kaikki suhtautuvat ty&ouml;h&ouml;ns&auml; intohimoisesti. P&auml;&auml;set vaikuttamaan vahvasti omaan ty&ouml;si tekemisen tapaan ja tahtiin, sill&auml; emme usko ulkoiseen ohjailuun emmek&auml; pakottamiseen.
+</p>
+<h4>Edellyt&auml;mme innostuneelta assistentiltamme:</h4>
+<p>
+  <ul class="list-plain">
+    <li>Kokemusta monipuolisista toimistoteht&auml;vist&auml;</li>
+    <li>Kokemusta taloushallinnollisista teht&auml;vist&auml;</li>
+    <li>N&auml;ytt&ouml;&auml; kyvyst&auml; pit&auml;&auml; useat asiat hallussa samanaikaisesti</li>
+  </ul>
+  <ul class="list-plain">
+    <li>Sujuvaa suomen- ja englanninkielen taitoa</li>
+    <li>Alempaa korkeakoulututkintoa; esimerkiksi tradenomi (liiketalous, johdon assistenttity&ouml;), kauppatieteet (laskentatoimi, rahoitus)</li>
+    <li>Yritys- ja liike-el&auml;m&auml;n k&auml;yt&auml;nn&ouml;n tuntemusta</li>
+    <li>Nopeasti kasvavan ja kehittyv&auml;n yrityksen arjen haasteiden ymm&auml;rt&auml;mist&auml;</li>
+    <li>Kiinnostusta organisaatioiden hallinnollisten prosessien kehitt&auml;mist&auml; kohtaan</li>
+  </ul>
+  <ul class="list-plain">
+    <li>H&auml;mm&auml;stytt&auml;v&auml;&auml; teht&auml;v&auml;nhallintataitoa</li>
+    <li>Ty&ouml;lains&auml;&auml;d&auml;nn&ouml;llisten ja taloushallinnollisten asioiden tuntemusta</li>
+    <li>Microsoft Office ja OS X -ohjelmistojen sujuvaa hallintaa</li>
+    <li>Itseohjautuvuutta ja proaktiivisuutta</li>
+    <li>Nopeaa teht&auml;vien omaksumis- ja oppimiskyky&auml;</li>
+    <li>Intohimoa hallinnollisia teht&auml;vi&auml; kohtaan</li>
+  </ul>
+</p>
+<p>
+  Jos kiinnostuit, l&auml;het&auml; hakemuksesi ja CV:si
+  <span class="font-bold">tiistaihin 15.9. klo 23.59</span>
+  menness&auml; osoitteeseen
+  <a href="mailto:sonja.stromsholm@filosofianakatemia.fi">sonja.stromsholm@filosofianakatemia.fi</a>
+  Liit&auml; mukaan palkkatoiveesi ja tieto, milloin voisit aloittaa teht&auml;v&auml;ss&auml;.
+</p>
+<p class="font-bold">
+  Toivomme, ett&auml; haet t&auml;t&auml; ty&ouml;t&auml; vain, jos hallinnolliset teht&auml;v&auml;t ja niiss&auml; kehittyminen innostaa sinua my&ouml;s pitk&auml;ll&auml; t&auml;ht&auml;imell&auml;.
+</p>
+<p>
+  Lis&auml;tietoja teht&auml;v&auml;st&auml; antaa puhelimitse myynti- ja asiakkuusjohtaja Sonja Str&ouml;msholm, p.
+  <a href="tel:+358503030894">050 303 0894</a>
+  seuraavina aikoina:
+  <br>
+  <span>Pe 11.9. klo 14-16</span>
+  <br>
+  <span>Ma 14.9. klo 13-14</span>
+</p>
+<p>
+<p class="font-italic">
+  Filosofian Akatemia Oy on tutkimus- ja valmennusyritys. Autamme organisaatioita johtamaan ihmistens&auml; sis&auml;ist&auml; motivaatiota ja tekem&auml;&auml;n parempaa tulosta keskell&auml; vaikeitakin muutoksia. Rakennamme Suomeen mielekk&auml;&auml;mp&auml;&auml; ja sit&auml; kautta tuottavampaa ty&ouml;el&auml;m&auml;&auml;. Toimintamme koostuu kolmesta eri osa-alueesta: akateemisesta huippututkimuksesta, sen pohjalle rakennetuista valmennusinterventioista ja kehitt&auml;misprojekteista organisaatioasiakkaille sek&auml; yhteiskunnallisesta vaikuttamisesta. Filosofian Akatemia on perustettu vuonna 2009 ja t&auml;ll&auml; hetkell&auml; teemme t&ouml;it&auml; paremman ty&ouml;el&auml;m&auml;n ja johtamisen puolesta yhteens&auml; 18 asiantuntijan voimin.
+</p>
+<h4>Ota yhteytt&auml;:</h4>
+<p>
+  <a href="tel:+358503030894">+358 50 303 0894</a>
+  <br>
+  <a href="mailto:sonja.stromsholm@filosofianakatemia.fi">sonja.stromsholm@filosofianakatemia.fi</a>
+</p>
+{% endblock %}
