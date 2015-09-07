@@ -1024,62 +1024,56 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   }
 }
 
+#thumbnails #aleksej .picture {
+  background-image: url('../img/aleksej-small.jpg');
+}
+#thumbnails #emilia .picture {
+  background-image: url('../img/emilia-small.jpg');
+}
+#thumbnails #frank .picture {
+  background-image: url('../img/frank-small.jpg');
+}
+#thumbnails #iida .picture {
+  background-image: url('../img/iida-small.jpg');
+}
+#thumbnails #joonas .picture {
+  background-image: url('../img/joonas-small.jpg');
+}
+#thumbnails #jp .picture {
+  background-image: url('../img/jp-small.jpg');
+}
 #thumbnails #karoliina .picture {
   background-image: url('../img/karoliina-small.jpg');
 }
+#thumbnails #lauri .picture {
+  background-image: url('../img/lauri-small.jpg');
+}
+#thumbnails #maria .picture {
+  background-image: url('../img/maria-small.jpg');
+}
+#thumbnails #peter .picture {
+  background-image: url('../img/peter-small.jpg');
+}
+#thumbnails #reima .picture {
+  background-image: url('../img/reima-small.jpg');
+}
+#thumbnails #santeri .picture {
+  background-image: url('../img/santeri-small.jpg');
+}
+#thumbnails #selina .picture {
+  background-image: url('../img/selina-small.jpg');
+}
 #thumbnails #sonja .picture {
   background-image: url('../img/sonja-small.jpg');
+}
+#thumbnails #tapani .picture {
+  background-image: url('../img/tapani-small.jpg');
 }
 #thumbnails #timo .picture {
   background-image: url('../img/timo-small.jpg');
 }
 #thumbnails #villiam .picture {
   background-image: url('../img/villiam-small.jpg');
-}
-#thumbnails #villiam .picture h2 {
-  color: #000000;
-}
-#thumbnails #lauri .picture {
-  background-image: url('../img/lauri-small.jpg');
-}
-#thumbnails #tapani .picture {
-  background-image: url('../img/tapani-small.jpg');
-}
-#thumbnails #reima .picture {
-  background-image: url('../img/reima-small.jpg');
-}
-#thumbnails #peter .picture {
-  background-image: url('../img/peter-small.jpg');
-}
-#thumbnails #joonas .picture {
-  background-image: url('../img/joonas-small.jpg');
-}
-#thumbnails #maria .picture {
-  background-image: url('../img/maria-small.jpg');
-}
-#thumbnails #frank .picture {
-  background-image: url('../img/frank-small.jpg');
-}
-#thumbnails #jp .picture {
-  background-image: url('../img/jp-small.jpg');
-}
-#thumbnails #emilia .picture {
-  background-image: url('../img/emilia-small.jpg');
-}
-#thumbnails #aleksej .picture {
-  background-image: url('../img/aleksej-small.jpg');
-}
-#thumbnails #aleksej .picture h2 {
-  color: #000000;
-}
-#thumbnails #santeri .picture {
-  background-image: url('../img/santeri-small.jpg');
-}
-#thumbnails #iida .picture {
-  background-image: url('../img/iida-small.jpg');
-}
-#thumbnails #selina .picture {
-  background-image: url('../img/selina-small.jpg');
 }
 #thumbnails #placeholder .picture {
   background-image: url('../img/placeholder-small.jpg');

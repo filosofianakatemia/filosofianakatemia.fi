@@ -73,6 +73,7 @@ app.use(route.get('/tutkimus', tutkimus));
 app.use(route.get('/ihmiset/aleksej', aleksej));
 app.use(route.get('/ihmiset/emilia', emilia));
 app.use(route.get('/ihmiset/frank', frank));
+app.use(route.get('/ihmiset/iida', iida));
 app.use(route.get('/ihmiset/joonas', joonas));
 app.use(route.get('/ihmiset/jp', jp));
 app.use(route.get('/ihmiset/karoliina', karoliina));
@@ -81,13 +82,12 @@ app.use(route.get('/ihmiset/maria', maria));
 app.use(route.get('/ihmiset/peter', peter));
 app.use(route.get('/ihmiset/reima', reima));
 app.use(route.get('/ihmiset/santeri', santeri));
+app.use(route.get('/ihmiset/selina', selina));
 app.use(route.get('/ihmiset/sonja', sonja));
 app.use(route.get('/ihmiset/tapani', tapani));
 app.use(route.get('/ihmiset/timo', timo));
 app.use(route.get('/ihmiset/villiam', villiam));
-app.use(route.get('/ihmiset/iida', iida));
-app.use(route.get('/ihmiset/selina', selina));
-app.use(route.get('/ihmiset/assistentti', assistentti));
+app.use(route.get('/ihmiset/assistentti', assistant));
 
 // routes
 
@@ -122,6 +122,10 @@ function *frank() {
   console.log("GET /ihmiset/frank")
   this.body = yield this.render('pages/frank', getPersonContext());
 }
+function *iida() {
+  console.log("GET /ihmiset/iida")
+  this.body = yield this.render('pages/iida', getPersonContext());
+}
 function *joonas() {
   console.log("GET /ihmiset/joonas")
   this.body = yield this.render('pages/joonas', getPersonContext());
@@ -154,6 +158,10 @@ function *santeri() {
   console.log("GET /ihmiset/santeri")
   this.body = yield this.render('pages/santeri', getPersonContext());
 }
+function *selina() {
+  console.log("GET /ihmiset/selina")
+  this.body = yield this.render('pages/selina', getPersonContext());
+}
 function *sonja() {
   console.log("GET /ihmiset/sonja")
   this.body = yield this.render('pages/sonja', getPersonContext());
@@ -170,15 +178,7 @@ function *villiam() {
   console.log("GET /ihmiset/villiam")
   this.body = yield this.render('pages/villiam', getPersonContext());
 }
-function *iida() {
-  console.log("GET /ihmiset/iida")
-  this.body = yield this.render('pages/iida', getPersonContext());
-}
-function *selina() {
-  console.log("GET /ihmiset/selina")
-  this.body = yield this.render('pages/selina', getPersonContext());
-}
-function *assistentti() {
+function *assistant() {
   console.log("GET /ihmiset/assistentti");
   this.body = yield this.render('pages/assistentti');
 }
