@@ -35,6 +35,10 @@
     </developer>
   </developers>
 
+  <properties>
+    <docker.skip>true</docker.skip>
+  </properties>
+
   <profiles>
     <profile>
       <id>docker-activation</id>
