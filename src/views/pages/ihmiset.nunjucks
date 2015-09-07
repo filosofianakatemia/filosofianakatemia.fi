@@ -153,7 +153,8 @@
   <div id="placeholder" class="large-4 columns">
     <div class="link-container" onClick="location.href='ihmiset/assistentti'">
       <div class="picture"></div>
-      <h2><a>Intohimoinen Assistentti</a></h2>
+      <h2><a>Haemme:</a></h2>
+      <h4><a>Intohimoinen assistentti</a></h4>
     </div>
   </div>
 </div>

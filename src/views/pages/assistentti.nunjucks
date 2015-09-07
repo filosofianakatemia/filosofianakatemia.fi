@@ -5,7 +5,7 @@
 {% block personname %}{{ personName }}{% endblock %}
 {% block persondescription %}
 <p>
-  Nyt haemme joukkoomme
+  Haemme joukkoomme
   <span class="font-bold">
     intohimoista ja sis&auml;isesti motivoitunutta assistenttity&ouml;n ammattilaista vakituiseen ja osa-aikaiseen (50%) ty&ouml;suhteeseen.
   </span>
