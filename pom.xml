@@ -35,6 +35,20 @@
     </developer>
   </developers>
 
+  <profiles>
+    <profile>
+      <id>docker-activation</id>
+      <activation>
+        <property>
+          <name>env.DOCKER_HOST</name>
+        </property>
+      </activation>
+      <properties>
+        <docker.skip>false</docker.skip>
+      </properties>
+    </profile>
+  </profiles>
+
   <build>
     <plugins>
       <plugin>
