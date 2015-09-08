@@ -1,7 +1,7 @@
 {% extends "ihminen.nunjucks" %}
-{% set personName = 'Intohimoinen Assistentti' %}
+{% set personName = 'Haemme: Intohimoinen assistentti' %}
 {% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
-{% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block description %}Filosofian Akatemia hakee uutta työntekijää.{% endblock %}
 {% block personname %}{{ personName }}{% endblock %}
 {% block persondescription %}
 <p>
