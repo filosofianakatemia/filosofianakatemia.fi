@@ -8,6 +8,8 @@
       <includes>
         <include>package.json</include>
         <include>server.js</include>
+        <!-- TODO: Remove this when using actual backend -->
+        <include>notes.json</include>
       </includes>
     </fileSet>
     <fileSet>
