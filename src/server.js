@@ -18,6 +18,9 @@ var logger = require('koa-logger');
 var route = require('koa-route');
 var nunjucks = require('koa-nunjucks-2');
 var path = require('path');
+var nativeRequest = require('request');
+var thunkify = require('thunkify');
+var request = thunkify(nativeRequest);
 
 var notes = require('./notes.json')
 
@@ -88,6 +91,17 @@ app.use(route.get('/ihmiset/tapani', tapani));
 app.use(route.get('/ihmiset/timo', timo));
 app.use(route.get('/ihmiset/villiam', villiam));
 app.use(route.get('/ihmiset/assistentti', assistant));
+
+// backend link
+
+var backendApi, backendInfo;
+if (config.backend === true){
+  // True value means to use docker provided environment variable
+  backendApi = 'http://' + process.env.BACKEND_PORT_8081_TCP_ADDR + ':8081';
+}else if (config.backend){
+  // Backend API address can also be given with a string directly
+  backendApi = config.backend;
+}
 
 // routes
 
@@ -181,6 +195,29 @@ function *villiam() {
 function *assistant() {
   console.log("GET /ihmiset/assistentti");
   this.body = yield this.render('pages/assistentti');
+}
+
+// get backend /info path from backend on boot
+
+if (backendApi){
+  var requestInProgress;
+  var backendPollInterval = setInterval(function(){
+    if (!requestInProgress){
+      requestInProgress = true;
+      console.log('GET ' + backendApi + '/info')
+      nativeRequest(backendApi + '/info', function(error, response, body){
+        requestInProgress = false;
+        if (!error  && response.statusCode == 200){
+          backendInfo = JSON.parse(body);
+          console.log('backend info:');
+          console.log(JSON.stringify(backendInfo, null, 2));
+          clearInterval(backendPollInterval);
+        }else{
+          console.log('backend returned status code: ' + response.statusCode + ', retrying...');
+        }
+      });
+    }
+  }, 2000);
 }
 
 // listen
