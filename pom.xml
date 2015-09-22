@@ -37,6 +37,10 @@
 
   <properties>
     <docker.skip>true</docker.skip>
+    <e2e.urlOrigin>http://localhost:8008</e2e.urlOrigin>
+    <e2e.mailgunDomain>extendedmind.org</e2e.mailgunDomain>
+    <e2e.mailgunKey>TEST KEY</e2e.mailgunKey>
+    <e2e.emailFrom>extended mind &lt;info@extendedmind.org&gt;</e2e.emailFrom>
   </properties>
 
   <profiles>
@@ -104,11 +108,32 @@
           <sourceDirectory>docker</sourceDirectory>
           <images>
             <image>
+              <name>extendedmind/backend-conf</name>
+              <alias>backend-conf</alias>
+              <run>
+                <namingStrategy>alias</namingStrategy>
+              </run>
+            </image>
+            <image>
+              <name>extendedmind/nginx-conf</name>
+              <alias>nginx-conf</alias>
+              <run>
+                <namingStrategy>alias</namingStrategy>
+              </run>
+            </image>
+            <image>
+              <name>extendedmind/site-conf</name>
+              <alias>site-conf</alias>
+              <run>
+                <namingStrategy>alias</namingStrategy>
+              </run>
+            </image>
+            <image>
               <name>fiak/site-conf</name>
               <alias>fiak-site-conf</alias>
               <build>
                 <from>ubuntu:14.04</from>
-                <maintainer>timo.tiuraniemi@iki.fi</maintainer>
+                <maintainer>jukapeka@gmail.com</maintainer>
                 <tags>
                   <tag>latest</tag>
                 </tags>
@@ -119,13 +144,104 @@
                 </assembly>
                 <cmd><shell>cp -R /usr/src/filosofianakatemia/confd/* /etc/confd &amp;&amp; cp /usr/src/filosofianakatemia/nginx/nginx.filosofianakatemia.conf /etc/nginx/sites-enabled</shell></cmd>
               </build>
+              <run>
+                <namingStrategy>alias</namingStrategy>
+                <volumes>
+                  <from>
+                    <image>site-conf</image>
+                    <image>nginx-conf</image>
+                  </from>
+                </volumes>
+              </run>
+            </image>
+            <!-- Use a cleaner container that deletes the extendedmind nginx configuration, so that nginx starts in this test without errors -->
+            <image>
+              <name>fiak/test-site-conf-clean</name>
+              <alias>test-site-conf-clean</alias>
+              <build>
+                <from>ubuntu:14.04</from>
+                <maintainer>jukapeka@gmail.com</maintainer>
+                <tags>
+                  <tag>latest</tag>
+                </tags>
+                <cmd><shell>rm /etc/nginx/sites-enabled/nginx.extendedmind.conf</shell></cmd>
+              </build>
+              <run>
+                <namingStrategy>alias</namingStrategy>
+                <volumes>
+                  <from>
+                    <image>nginx-conf</image>
+                  </from>
+                </volumes>
+              </run>
+            </image>
+            <image>
+              <name>extendedmind/confd</name>
+              <alias>confd</alias>
+              <run>
+                <namingStrategy>alias</namingStrategy>
+                <env>
+                  <EXTENDEDMIND_BACKEND_TOKENSECRET>01234567890123456789012345678901</EXTENDEDMIND_BACKEND_TOKENSECRET>
+                  <EXTENDEDMIND_BACKEND_SIGNUPMODE>BETA</EXTENDEDMIND_BACKEND_SIGNUPMODE>
+                  <EXTENDEDMIND_URLORIGIN>${e2e.urlOrigin}</EXTENDEDMIND_URLORIGIN>
+                  <EXTENDEDMIND_BACKEND_MAILGUNDOMAIN>${e2e.mailgunDomain}</EXTENDEDMIND_BACKEND_MAILGUNDOMAIN>
+                  <EXTENDEDMIND_BACKEND_MAILGUNKEY>${e2e.mailgunKey}</EXTENDEDMIND_BACKEND_MAILGUNKEY>
+                  <EXTENDEDMIND_EMAILFROM>${e2e.emailFrom}</EXTENDEDMIND_EMAILFROM>
+                  <!-- test login admin:adminpwd for /evaluate -->
+                  <EXTENDEDMIND_EVALUATECREDENTIALS>admin:$apr1$iRuCzNe7$wGTyTAez42hHC9rGP6CHg.</EXTENDEDMIND_EVALUATECREDENTIALS>
+                  <EXTENDEDMIND_SITE_BACKENDCOLLECTIVE>11111111-1111-1111-1111-111111111111</EXTENDEDMIND_SITE_BACKENDCOLLECTIVE>
+                  <FILOSOFIANAKATEMIA_BACKENDCOLLECTIVE>11111111-1111-1111-1111-111111111111</FILOSOFIANAKATEMIA_BACKENDCOLLECTIVE>
+                </env>
+                <volumes>
+                  <from>
+                    <image>backend-conf</image>
+                    <image>nginx-conf</image>
+                    <image>site-conf</image>
+                    <image>test-site-conf-clean</image>
+                  </from>
+                </volumes>
+                <cmd>-backend=env</cmd>
+              </run>
+            </image>
+            <image>
+              <name>extendedmind/backend-data</name>
+              <alias>backend-data</alias>
+              <run>
+                <namingStrategy>alias</namingStrategy>
+              </run>
+            </image>
+            <image>
+              <name>extendedmind/backend</name>
+              <alias>backend</alias>
+              <run>
+                <namingStrategy>alias</namingStrategy>
+                <env>
+                  <JAVA_TOOL_OPTIONS>-Xmx512m</JAVA_TOOL_OPTIONS>
+                </env>
+                <volumes>
+                  <from>
+                    <image>backend-conf</image>
+                    <image>backend-data</image>
+                  </from>
+                </volumes>
+                <ports>
+                  <port>8007:8081</port>
+                </ports>
+              </run>
+            </image>
+            <image>
+              <name>extendedmind/frontend-data</name>
+              <alias>frontend-data</alias>
+              <run>
+                <namingStrategy>alias</namingStrategy>
+              </run>
             </image>
             <image>
               <name>fiak/site-static</name>
               <alias>fiak-site-static</alias>
               <build>
                 <from>ubuntu:14.04</from>
-                <maintainer>timo.tiuraniemi@iki.fi</maintainer>
+                <maintainer>jukapeka@gmail.com</maintainer>
                 <tags>
                   <tag>latest</tag>
                 </tags>
@@ -136,13 +252,21 @@
                 </assembly>
                 <cmd><shell>cp -R /usr/src/filosofianakatemia/* /var/www</shell></cmd>
               </build>
+              <run>
+                <namingStrategy>alias</namingStrategy>
+                <volumes>
+                  <from>
+                    <image>frontend-data</image>
+                  </from>
+                </volumes>
+              </run>
             </image>
             <image>
               <name>fiak/site</name>
               <alias>fiak-site</alias>
               <build>
                 <from>node:0.12</from>
-                <maintainer>timo.tiuraniemi@iki.fi</maintainer>
+                <maintainer>jukapeka@gmail.com</maintainer>
                 <tags>
                   <tag>latest</tag>
                 </tags>
@@ -159,6 +283,40 @@
                   <exec><arg>/usr/src/filosofianakatemia/site/site-run.pl</arg></exec>
                 </entryPoint>
               </build>
+              <run>
+                <namingStrategy>alias</namingStrategy>
+                <links>
+                  <link>backend:backend</link>
+                </links>
+                <volumes>
+                  <from>
+                    <image>fiak-site-conf</image>
+                  </from>
+                </volumes>
+              </run>
+            </image>
+            <image>
+              <name>extendedmind/nginx</name>
+            </image>
+            <image>
+              <name>extendedmind/nginx</name>
+              <alias>nginx</alias>
+              <run>
+                <namingStrategy>alias</namingStrategy>
+                <volumes>
+                  <from>
+                    <image>nginx-conf</image>
+                    <image>frontend-data</image>
+                  </from>
+                </volumes>
+                <links>
+                  <link>backend:backend</link>
+                  <link>fiak-site:site2</link>
+                </links>
+                <ports>
+                  <port>8009:8009</port>
+                </ports>
+              </run>
             </image>
           </images>
         </configuration>
@@ -168,6 +326,20 @@
              <phase>package</phase>
              <goals>
                <goal>build</goal>
+             </goals>
+          </execution>
+          <execution>
+             <id>start-docker</id>
+             <phase>pre-integration-test</phase>
+             <goals>
+               <goal>start</goal>
+             </goals>
+          </execution>
+          <execution>
+             <id>stop-docker</id>
+             <phase>post-integration-test</phase>
+             <goals>
+               <goal>stop</goal>
              </goals>
           </execution>
         </executions>
