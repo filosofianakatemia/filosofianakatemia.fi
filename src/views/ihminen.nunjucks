@@ -29,7 +29,9 @@
 <div class="section section-person row">
   {% if personImage %}
   <div class="large-5 large-offset-1 left-aligned columns">
+    {% if not personDescription %}
     <h1>{% block personname %}{% endblock %}</h1>
+    {% endif %}
     <div class="description">{% block persondescription %}{% endblock %}</div>
     {% block personleft %}{% endblock %}
   </div>
