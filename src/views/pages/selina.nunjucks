@@ -4,25 +4,19 @@
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
 {% block personname %}{{ personName }}{% endblock %}
 {% block persondescription %}
-Selina Bakirin kuvaus
+Selina on yhteiskuntatieteen maisteri, joka on kiinnostunut liike-el&auml;m&auml;n ja erityisesti myynnin kiemuroista. Myynti on Selinalle intohimo ja h&auml;n uskoo, ett&auml; oikeanlaisella myyntiotteella voi auttaa ja kehitt&auml;&auml; yhteiskuntaa valtavasti. Selina el&auml;&auml; onnellisista kohtaamisista ihmisten kanssa ja nauttii aidosti siit&auml;, ett&auml; l&ouml;yt&auml;&auml; ratkaisun asiakkaidensa haasteisiin. Sis&auml;isesti motivoituneena myyj&auml; on parhaimmillaan.
 {% endblock %}
 
 {% block personleft %}
 <h4>Erityisalueet:</h4>
 <p>
   <ul class="list-plain">
-    <li>Erityisalue 1</li>
-    <li>Erityisalue 2</li>
-  </ul>
-</p>
-<h4>Tutkimushankkeet:</h4>
-<p>
-  <ul class="list-plain">
-    <li>Tutkimushanke 1</li>
+    <li>myynti</li>
+    <li>asiakkuudenhallinta</li>
   </ul>
 </p>
 <h4>Ota yhteytt&auml;:</h4>
-<p>+358 XX XXX XXXX<br/>
+<p>+358 40 065 7912<br/>
   <a href="mailto:selina.bakir@filosofianakatemia.fi">selina.bakir@filosofianakatemia.fi</a>
 </p>
 {% endblock %}
@@ -31,5 +25,5 @@ Selina Bakirin kuvaus
 <img src="/static/img/selina-large.jpg"/>
 {% endblock %}
 
-{% block personquote %}Lainaus{% endblock %}
-{% block personquoteauthor %}Filosofian Akatemian ihminen{% endblock %}
+{% block personquote %}Selinassa yhdistyy uskomattomalla tavalla laaja-alainen ja ihmisl&auml;heinen bisnesymm&auml;rrys, asiakkaiden aidon auttamisen ja kuuntelemisen taito sek&auml; loputon positiivisen aikaansaamisen energia. Selina saa asioita tapahtumaan!{% endblock %}
+{% block personquoteauthor %}Sonja Str&ouml;msholm{% endblock %}
