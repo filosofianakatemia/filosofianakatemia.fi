@@ -90,7 +90,9 @@ app.use(route.get('/ihmiset/sonja', sonja));
 app.use(route.get('/ihmiset/tapani', tapani));
 app.use(route.get('/ihmiset/timo', timo));
 app.use(route.get('/ihmiset/villiam', villiam));
-app.use(route.get('/ihmiset/assistentti', assistant));
+
+// Discontinued, route to front page
+app.use(route.get('/ihmiset/assistentti', index));
 
 // backend link
 
@@ -191,10 +193,6 @@ function *timo() {
 function *villiam() {
   console.log("GET /ihmiset/villiam")
   this.body = yield this.render('pages/villiam', getPersonContext());
-}
-function *assistant() {
-  console.log("GET /ihmiset/assistentti");
-  this.body = yield this.render('pages/assistentti');
 }
 
 // get backend /info path from backend on boot
