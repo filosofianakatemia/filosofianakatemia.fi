@@ -8,8 +8,11 @@
       ],
       "folder_exclude_patterns":
       [
+        "docker",
         "target",
-        ".*"
+        ".*",
+        "src/etc",
+        "src/node"
       ],
       "path": "."
     }
