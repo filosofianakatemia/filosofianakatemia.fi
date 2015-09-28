@@ -3,22 +3,9 @@
 {% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
 {% block personname %}{{ personName }}{% endblock %}
-{% block persondescription %}
-Selina on yhteiskuntatieteen maisteri, joka on kiinnostunut liike-el&auml;m&auml;n ja erityisesti myynnin kiemuroista. Myynti on Selinalle intohimo ja h&auml;n uskoo, ett&auml; oikeanlaisella myyntiotteella voi auttaa ja kehitt&auml;&auml; yhteiskuntaa valtavasti. Selina el&auml;&auml; onnellisista kohtaamisista ihmisten kanssa ja nauttii aidosti siit&auml;, ett&auml; l&ouml;yt&auml;&auml; ratkaisun asiakkaidensa haasteisiin. Sis&auml;isesti motivoituneena myyj&auml; on parhaimmillaan.
-{% endblock %}
 
 {% block personleft %}
-<h4>Erityisalueet:</h4>
-<p>
-  <ul class="list-plain">
-    <li>myynti</li>
-    <li>asiakkuudenhallinta</li>
-  </ul>
-</p>
-<h4>Ota yhteytt&auml;:</h4>
-<p>+358 40 065 7912<br/>
-  <a href="mailto:selina.bakir@filosofianakatemia.fi">selina.bakir@filosofianakatemia.fi</a>
-</p>
+{{ personDescription | safe }}
 {% endblock %}
 
 {% block personright %}

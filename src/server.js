@@ -176,7 +176,9 @@ function *santeri() {
 }
 function *selina() {
   console.log("GET /ihmiset/selina")
-  this.body = yield this.render('pages/selina', getPersonContext());
+  var context = getPersonContext();
+  context.personDescription = getPersonDescription("Selina Bakir");
+  this.body = yield this.render('pages/selina', context);
 }
 function *sonja() {
   console.log("GET /ihmiset/sonja")
