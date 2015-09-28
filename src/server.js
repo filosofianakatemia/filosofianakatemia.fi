@@ -1,31 +1,34 @@
+/*jslint node: true */
+'use strict';
+
 /**
  * Load configuration file given as command line parameter
  */
-if (process.argv.length > 2) {
+ if (process.argv.length > 2) {
   console.log('loading configuration file: ' + process.argv[2]);
   var config = require(process.argv[2]);
 }else{
   console.error('no configuration file provided');
   process.exit();
-};
+}
 
 /**
  * Module dependencies.
  */
 
-var koa = require('koa');
-var logger = require('koa-logger');
-var route = require('koa-route');
-var nunjucks = require('koa-nunjucks-2');
-var path = require('path');
-var nativeRequest = require('request');
-var thunkify = require('thunkify');
-var request = thunkify(nativeRequest);
+ var koa = require('koa');
+ var logger = require('koa-logger');
+ var route = require('koa-route');
+ var nunjucks = require('koa-nunjucks-2');
+ var path = require('path');
+ var nativeRequest = require('request');
+ var thunkify = require('thunkify');
+ /*var request = */thunkify(nativeRequest);
 
-var notes = require('./notes.json')
+ var notes = require('./notes.json');
 
-var MarkdownIt = require('markdown-it');
-var markdownParser = new MarkdownIt();
+ var MarkdownIt = require('markdown-it');
+ var markdownParser = new MarkdownIt();
 
 // setup koa
 
@@ -35,7 +38,7 @@ function getPersonContext() {
   return {
     personImage: true,
     personQuote: true
-  }
+  };
 }
 
 function getPersonDescription(title) {
@@ -108,92 +111,113 @@ if (config.backend === true){
 // routes
 
 function *index() {
-  console.log("GET /")
+  /*jslint validthis: true */
+  console.log('GET /');
   this.body = yield this.render('pages/etusivu');
 }
 function *palvelut() {
-  console.log("GET /palvelut")
+  /*jslint validthis: true */
+  console.log('GET /palvelut');
   this.body = yield this.render('pages/palvelut');
 }
 function *ihmiset() {
-  console.log("GET /ihmiset")
+  /*jslint validthis: true */
+  console.log('GET /ihmiset');
   this.body = yield this.render('pages/ihmiset');
 }
 function *tutkimus() {
-  console.log("GET /tutkimus")
+  /*jslint validthis: true */
+  console.log('GET /tutkimus');
   this.body = yield this.render('pages/tutkimus');
 }
 
 function *aleksej() {
-  console.log("GET /ihmiset/aleksej");
+  /*jslint validthis: true */
+  console.log('GET /ihmiset/aleksej');
   var context = getPersonContext();
-  context.personDescription = getPersonDescription("Aleksej Fedotov");
+  context.personDescription = getPersonDescription('Aleksej Fedotov');
   yield this.render('pages/aleksej', context);
 }
 function *emilia() {
-  console.log("GET /ihmiset/emilia")
+  /*jslint validthis: true */
+  console.log('GET /ihmiset/emilia');
   this.body = yield this.render('pages/emilia', getPersonContext());
 }
 function *frank() {
-  console.log("GET /ihmiset/frank")
+  /*jslint validthis: true */
+  console.log('GET /ihmiset/frank');
   this.body = yield this.render('pages/frank', getPersonContext());
 }
 function *iida() {
-  console.log("GET /ihmiset/iida")
+  /*jslint validthis: true */
+  console.log('GET /ihmiset/iida');
   this.body = yield this.render('pages/iida', getPersonContext());
 }
 function *joonas() {
-  console.log("GET /ihmiset/joonas")
+  /*jslint validthis: true */
+  console.log('GET /ihmiset/joonas');
   this.body = yield this.render('pages/joonas', getPersonContext());
 }
 function *jp() {
-  console.log("GET /ihmiset/jp")
+  /*jslint validthis: true */
+  console.log('GET /ihmiset/jp');
   this.body = yield this.render('pages/jp', getPersonContext());
 }
 function *karoliina() {
-  console.log("GET /ihmiset/karoliina")
+  /*jslint validthis: true */
+  console.log('GET /ihmiset/karoliina');
   this.body = yield this.render('pages/karoliina', getPersonContext());
 }
 function *lauri() {
-  console.log("GET /ihmiset/lauri")
+  /*jslint validthis: true */
+  console.log('GET /ihmiset/lauri');
   this.body = yield this.render('pages/lauri', getPersonContext());
 }
 function *maria() {
-  console.log("GET /ihmiset/maria")
+  /*jslint validthis: true */
+  console.log('GET /ihmiset/maria');
   this.body = yield this.render('pages/maria', getPersonContext());
 }
 function *peter() {
-  console.log("GET /ihmiset/peter")
+  /*jslint validthis: true */
+  console.log('GET /ihmiset/peter');
   this.body = yield this.render('pages/peter', getPersonContext());
 }
 function *reima() {
-  console.log("GET /ihmiset/reima")
+  /*jslint validthis: true */
+  console.log('GET /ihmiset/reima');
   this.body = yield this.render('pages/reima', getPersonContext());
 }
 function *santeri() {
-  console.log("GET /ihmiset/santeri")
+  /*jslint validthis: true */
+  console.log('GET /ihmiset/santeri');
   this.body = yield this.render('pages/santeri', getPersonContext());
 }
 function *selina() {
-  console.log("GET /ihmiset/selina")
+  /*jslint validthis: true */
+  console.log('GET /ihmiset/selina');
   var context = getPersonContext();
-  context.personDescription = getPersonDescription("Selina Bakir");
+  context.personDescription = getPersonDescription('Selina Bakir');
   this.body = yield this.render('pages/selina', context);
 }
 function *sonja() {
-  console.log("GET /ihmiset/sonja")
+  /*jslint validthis: true */
+  console.log('GET /ihmiset/sonja');
   this.body = yield this.render('pages/sonja', getPersonContext());
 }
 function *tapani() {
-  console.log("GET /ihmiset/tapani")
+  /*jslint validthis: true */
+  console.log('GET /ihmiset/tapani');
   this.body = yield this.render('pages/tapani', getPersonContext());
 }
 function *timo() {
-  console.log("GET /ihmiset/timo")
+  /*jslint validthis: true */
+  console.log('GET /ihmiset/timo');
   this.body = yield this.render('pages/timo', getPersonContext());
 }
 function *villiam() {
-  console.log("GET /ihmiset/villiam")
+  /*jslint validthis: true */
+  console.log('GET /ihmiset/villiam');
   this.body = yield this.render('pages/villiam', getPersonContext());
 }
 
@@ -204,7 +228,7 @@ if (backendApi){
   var backendPollInterval = setInterval(function(){
     if (!requestInProgress){
       requestInProgress = true;
-      console.log('GET ' + backendApi + '/info')
+      console.log('GET ' + backendApi + '/info');
       nativeRequest(backendApi + '/info', function(error, response, body){
         requestInProgress = false;
         if (!error  && response.statusCode == 200){
