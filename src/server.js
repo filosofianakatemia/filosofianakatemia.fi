@@ -24,8 +24,8 @@ var request = thunkify(nativeRequest);
 
 var notes = require('./notes.json')
 
-var Remarkable = require('remarkable');
-var markdownParser = new Remarkable();
+var MarkdownIt = require('markdown-it');
+var markdownParser = new MarkdownIt();
 
 // setup koa
 
