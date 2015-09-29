@@ -194,6 +194,7 @@ h3 {
   line-height: 24px;
 }
 
+.section-person h2,
 h4 {
   font-size: 18px;
   line-height: 20px;
@@ -213,6 +214,7 @@ h4 {
     font-size: 28px;
     line-height: 31px;
   }
+  .section-person h2,
   h4 {
     font-size: 23px;
     line-height: 25px;
@@ -235,6 +237,7 @@ h4 {
     line-height: 38px;
   }
 
+  .section-person h2,
   h4 {
     font-size: 30px;
     line-height: 33px;
