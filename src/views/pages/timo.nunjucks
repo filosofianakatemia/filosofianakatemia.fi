@@ -1,6 +1,11 @@
 {% extends "ihminen.nunjucks" %}
 {% set personName = 'Timo Tiuraniemi' %}
 {% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block ogtitle %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block ogimages %}
+<meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/timo-small.jpg" />
+<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/timo-small.jpg" />
+{% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
 {% block personname %}{{ personName }}{% endblock %}
 {% block persondescription %}

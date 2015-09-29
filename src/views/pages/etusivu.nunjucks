@@ -1,6 +1,8 @@
 {% extends "base.nunjucks" %}
 {% set pageName = 'etusivu' %}
 {% block title %}{{ super() }}{% endblock %}
+{% block ogtype %}{{ super() }}{% endblock %}
+{% block ogtitle %}{{ super() }}{% endblock %}
 {% block description %}Filosofian Akatemia on tutkimus- ja valmennusyritys. Tarjoamme tieteeseen pohjautuvia ratkaisuja ty&ouml;hyvinvointiin ja tuottavuuteen.{% endblock %}
 {% block bodyattrs %}id="front"{% endblock %}
 

@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}Filosofian Akatemia{% endblock %}</title>
   <meta name="description" content="{% block description %}{% endblock %}">
-  <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/logo-ilman-tekstia.png" />
-  <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/logo-ilman-tekstia-taytolla.png" />
-  <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/logo-ja-nimi.png" />
-  <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/logo-taytto-ja-nimi.png" />
+
+  <meta property="og:title" content="{% block ogtitle %}Filosofian Akatemia{% endblock %}" />
+  <meta property="og:type" content="{% block ogtype %}website{% endblock %}" />
+  {% block ogimages %}{% endblock %}
+  <meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/logo-without-text.png" />
+  <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/logo-without-text.png" />
+  <meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/logo-without-text-fill.png" />
+  <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/logo-without-text-fill.png" />
+  <meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/logo-and-name.png" />
+  <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/logo-and-name.png" />
+  <meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/logo-fill-and-name.png" />
+  <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/logo-fill-and-name.png" />
+
   <link rel="stylesheet" href="/static/css/normalize.css">
   <link rel="stylesheet" href="/static/css/foundation.min.css">
   <link rel="stylesheet" href="/static/css/app.css">

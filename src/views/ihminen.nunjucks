@@ -1,5 +1,6 @@
 {% extends "base.nunjucks" %}
 {% set pageName = 'ihminen' %}
+{% block ogtype %}{{ super() }}{% endblock %}
 {% block bodyattrs %}class="people-details"{% endblock %}
 {% block topbar %}
 <ul class="title-area">
