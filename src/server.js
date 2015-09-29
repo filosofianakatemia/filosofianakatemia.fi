@@ -27,8 +27,29 @@
 
  var notes = require('./notes.json');
 
- var MarkdownIt = require('markdown-it');
- var markdownParser = new MarkdownIt();
+ var markdownParser = require('markdown-it')();
+ var markdownParserContainer = require('markdown-it-container');
+ markdownParser.use(markdownParserContainer, 'left-align', {render: leftContainerRender});
+ markdownParser.use(markdownParserContainer, 'right-align', {render: rightContainerRender});
+ function leftContainerRender(tokens, idx) {
+  if (tokens[idx].nesting === 1) {
+      // opening tag
+      return '<div class="large-5 large-offset-1 left-aligned columns">\n';
+    } else {
+      // closing tag
+      return '</div>\n';
+    }
+  }
+  function rightContainerRender(tokens, idx) {
+    if (tokens[idx].nesting === 1) {
+      // opening tag
+      return '<div class="large-5 columns end person-details">' +
+      '<div class="show-for-large-up"><br/><br/></div>\n';
+    } else {
+      // closing tag
+      return '</div>\n';
+    }
+  }
 
 // setup koa
 
@@ -36,7 +57,6 @@ var app = module.exports = koa();
 
 function getPersonContext() {
   return {
-    personImage: true,
     personQuote: true
   };
 }
@@ -171,7 +191,9 @@ function *karoliina() {
 function *lauri() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/lauri');
-  this.body = yield this.render('pages/lauri', getPersonContext());
+  var context = getPersonContext();
+  context.personDescription = getPersonDescription('Lauri Järvilehto');
+  this.body = yield this.render('pages/lauri', context);
 }
 function *maria() {
   /*jslint validthis: true */

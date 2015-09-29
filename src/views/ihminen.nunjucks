@@ -21,54 +21,45 @@
 {% endblock %}
 
 {% block main %}
-<div class="row breadcrumbs">
-  <div class="left-aligned large-10 large-offset-1 end columns">
-    <a href="/ihmiset#thumbnails">Ihmiset<span class="icon-arrow-right"></span></a>
-    <span class="font-bold">{% block personname %}{% endblock %}</span>
-  </div>
-</div>
-<div class="section section-person row">
-  {% if personImage %}
-  <div class="large-5 large-offset-1 left-aligned columns">
-    {% if not personDescription %}
-    <h1>{% block personname %}{% endblock %}</h1>
-    {% endif %}
-    <div class="description">{% block persondescription %}{% endblock %}</div>
-    {% block personleft %}{% endblock %}
-  </div>
-  <div class="large-5 columns end person-details">
-    <div class="show-for-large-up"><br/><br/></div>
-    {% block personright %}{% endblock %}
-  </div>
-  {% else %}
-  <div class="large-10 large-centered columns">
-    <div class="left-aligned">
-      <h1>{% block personname %}{% endblock %}</h1>
-      <div class="left-aligned description">{% block persondescription %}{% endblock %}</div>
-      {% block personleft %}{% endblock %}
-    </div>
-    <div class="person-details left-aligned">
-      {% block persondetails %}{% endblock %}
+  <div class="row breadcrumbs">
+    <div class="left-aligned large-10 large-offset-1 end columns">
+      <a href="/ihmiset#thumbnails">Ihmiset<span class="icon-arrow-right"></span></a>
+      <span class="font-bold">{% block personname %}{% endblock %}</span>
     </div>
   </div>
-  {% endif %}
-</div>
 
-{% if personQuote %}
-<div class="section wrapper-embedded row person-quote">
-  <div class="small-3 medium-offset-1 right-aligned columns">
-    <span class="icon-quote"></span>
-  </div>
-  <div class="small-9 medium-4 end left-aligned columns">
-    <p class="quote">&#x201c;{% block personquote %}{% endblock %}&#x201d;</p>
-    <div class="row separator">
-      <div class="underline small-3 medium-2 large-1 end columns"></div>
+  {% if personDescription %}
+    <div class="section section-person row">
+      {% block persondescription %}{% endblock %}
     </div>
-    <div class="quote-author">{% block personquoteauthor %}{% endblock %}</div>
-  </div>
-  </div>
-</div>
-{% endif %}
+  {% else %}
+    <div class="section section-person row">
+      <div class="large-5 large-offset-1 left-aligned columns">
+        <h1>{% block personname %}{% endblock %}</h1>
+        <div class="description">{% block persondescription %}{% endblock %}</div>
+        {% block personleft %}{% endblock %}
+      </div>
+      <div class="large-5 columns end person-details">
+        <div class="show-for-large-up"><br/><br/></div>
+        {% block personright %}{% endblock %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if personQuote %}
+    <div class="section wrapper-embedded row person-quote">
+      <div class="small-3 medium-offset-1 right-aligned columns">
+        <span class="icon-quote"></span>
+      </div>
+      <div class="small-9 medium-4 end left-aligned columns">
+        <p class="quote">&#x201c;{% block personquote %}{% endblock %}&#x201d;</p>
+        <div class="row separator">
+          <div class="underline small-3 medium-2 large-1 end columns"></div>
+        </div>
+        <div class="quote-author">{% block personquoteauthor %}{% endblock %}</div>
+      </div>
+    </div>
+  {% endif %}
 {% endblock %}
 
 {% block footer %}

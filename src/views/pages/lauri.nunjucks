@@ -8,44 +8,9 @@
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
 {% block personname %}{{ personName }}{% endblock %}
+
 {% block persondescription %}
-Lauri J&auml;rvilehto (FT) on Filosofian Akatemian perustaja ja hallituksen puheenjohtaja. Laurista mielek&auml;s el&auml;m&auml; on fundamentaalinen ihmisoikeus. Siihen kuuluu mielek&auml;s ty&ouml;, oppiminen ja innostus. Lauri on tuottelias kirjailija, joka konsultoi yritysjohtoa ja k&auml;y luennoimassa huippuyliopistoissa ymp&auml;ri maailmaa.
-{% endblock %}
-
-{% block personleft %}
-<h4>Erityisalueet:</h4>
-<p>
-  <ul class="list-plain">
-    <li>Flow</li>
-    <li>Intuitio</li>
-    <li>Oppiminen</li>
-  </ul>
-</p>
-<h4>Tutkimushankkeet:</h4>
-<p>
-  <ul class="list-plain">
-    <li>Intuition in the making</li>
-  </ul>
-</p>
-<h4>Blogit:</h4>
-<p>
-  <ul class="list-link">
-    <li><a href="http://funlearning.com" target="_blank">funlearning.com</a></li>
-    <li><a href="http://ajattelunammattilainen.fi" target="_blank">ajattelunammattilainen.fi</a></li>
-  </ul>
-</p>
-<h4>Twitter:</h4>
-<p><a href="http://twitter.com/laurijarvilehto" target="_blank">@laurijarvilehto</a></p>
-{% endblock %}
-
-{% block personright %}
-<img src="/static/img/lauri-large.jpg"/>
-<div class="person-contact left-aligned">
-  <h4>Ota yhteytt&auml;:</h4>
-  <p>+358 40 770 9771<br/>
-    <a href="mailto:lauri.jarvilehto@filosofianakatemia.fi">lauri.jarvilehto@filosofianakatemia.fi</a>
-  </p>
-</div>
+  {{ personDescription | safe }}
 {% endblock %}
 
 {% block personquote %}Lauri on rohkea vision&auml;&auml;ri, joka perustaa uutta ja tekee isoja, yhteiskunnallisia juttuja. Todellinen verkostoituja, jota kutsutaan puhumaan Valkoiseen Taloon ja Nasaan. Lauri on tarpeeksi h&ouml;lm&ouml;, ett&auml; ei ota eit&auml; vastaukseksi, mutta tarpeeksi innostava, ett&auml; ei k&auml;&auml;ntyy kyll&auml;ksi.{% endblock %}

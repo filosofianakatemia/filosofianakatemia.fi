@@ -11,6 +11,7 @@
     "koa-route": "^2.4.2",
     "koa-static-folder": "^0.1.5",
     "markdown-it": "^4.4.0",
+    "markdown-it-container": "^1.0.0",
     "path": "^0.11.14",
     "request": "^2.61.0",
     "thunkify": "^2.1.2"

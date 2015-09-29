@@ -9,12 +9,8 @@
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
 {% block personname %}{{ personName }}{% endblock %}
 
-{% block personleft %}
-{{ personDescription | safe }}
-{% endblock %}
-
-{% block personright %}
-<img src="/static/img/aleksej-large.jpg"/>
+{% block persondescription %}
+  {{ personDescription | safe }}
 {% endblock %}
 
 {% block personquote %}Ale on rohkea ja rehellinen ajattelija, jolla on uskomaton kyky tehd&auml; isoimmatkin ideat todeksi. H&auml;n uskoo t&auml;ysill&auml; ihmisiin joiden kanssa ty&ouml;skentelee eik&auml; p&auml;&auml;st&auml; heit&auml; my&ouml;sk&auml;&auml;n helpolla. Alen toiminnassa on aina mukana tunteet, sill&auml; h&auml;n tekee kaiken suurella syd&auml;mell&auml;&auml;n.{% endblock %}

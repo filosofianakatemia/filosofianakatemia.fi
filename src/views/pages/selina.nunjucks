@@ -9,12 +9,8 @@
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
 {% block personname %}{{ personName }}{% endblock %}
 
-{% block personleft %}
+{% block persondescription %}
 {{ personDescription | safe }}
-{% endblock %}
-
-{% block personright %}
-<img src="/static/img/selina-large.jpg"/>
 {% endblock %}
 
 {% block personquote %}Selinassa yhdistyy uskomattomalla tavalla laaja-alainen ja ihmisl&auml;heinen bisnesymm&auml;rrys, asiakkaiden aidon auttamisen ja kuuntelemisen taito sek&auml; loputon positiivisen aikaansaamisen energia. Selina saa asioita tapahtumaan!{% endblock %}
