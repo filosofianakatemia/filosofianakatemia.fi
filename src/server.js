@@ -27,7 +27,7 @@
 
  var notes = require('./notes.json');
 
- var markdownParser = require('markdown-it')();
+ var markdownParser = require('markdown-it')({breaks: true});
  var markdownParserContainer = require('markdown-it-container');
  markdownParser.use(markdownParserContainer, 'left-align', {render: leftContainerRender});
  markdownParser.use(markdownParserContainer, 'right-align', {render: rightContainerRender});

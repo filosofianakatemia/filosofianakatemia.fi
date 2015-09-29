@@ -267,6 +267,44 @@ a:hover, a:focus, .link-cta:hover, .link-cta:focus{
   color: #000000;
 }
 
+.section-person ul:not(.list-plain):not(.list-link) {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 15px;
+}
+.section-person ul:not(.list-plain):not(.list-link) li:before {
+  content: '-';
+  position: absolute;
+  left: 15px;
+}
+.section-person ul:not(.list-plain):not(.list-link) li a {
+  color: #636363;
+  margin-left: -15px;
+}
+
+.section-person ul:not(.list-plain):not(.list-link) li a:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e604";
+
+  position:relative;
+  font-size: 0.5em;
+  bottom: 2px;
+
+  width: 10px;
+  display: inline-block;
+  background-color: white;
+}
+
 ul.list-plain, ul.list-link {
   list-style-type: none;
   padding-left:0;
@@ -1163,7 +1201,7 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   font-size: 18px;
 }
 
-.people-details .section-person p:first-of-type {
+.people-details .section-person >:first-child p:first-of-type {
   font-size: 18px;
 }
 
@@ -1224,7 +1262,7 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   .people-details .description, .person-quote .quote {
     font-size: 25px;
   }
-  .people-details .section-person p:first-of-type {
+  .people-details .section-person >:first-child p:first-of-type {
     font-size: 25px;
   }
 }
