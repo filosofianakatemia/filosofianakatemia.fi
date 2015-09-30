@@ -27,7 +27,7 @@ var path = require('path');
 var request = require('superagent');
 var thunkify = require('thunkify');
 var get = thunkify(request.get);
-var markdownParser = new require('markdown-it')();
+var markdownParser = require('markdown-it')({breaks: true});
 
 // TODO: Remove this when using live backend
 var notes = require('./notes.json');
