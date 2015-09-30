@@ -7,6 +7,9 @@
  if (process.argv.length > 2) {
   console.log('loading configuration file: ' + process.argv[2]);
   var config = require(process.argv[2]);
+  if (process.argv.length > 3){
+    config.backend = process.argv[3];
+  }
 }else{
   console.error('no configuration file provided');
   process.exit();
@@ -16,18 +19,18 @@
  * Module dependencies.
  */
 
- var koa = require('koa');
- var logger = require('koa-logger');
- var route = require('koa-route');
- var nunjucks = require('koa-nunjucks-2');
- var path = require('path');
- var nativeRequest = require('request');
- var thunkify = require('thunkify');
- /*var request = */thunkify(nativeRequest);
+var koa = require('koa');
+var logger = require('koa-logger');
+var route = require('koa-route');
+var nunjucks = require('koa-nunjucks-2');
+var path = require('path');
+var request = require('superagent');
+var thunkify = require('thunkify');
+var get = thunkify(request.get);
+var markdownParser = new require('markdown-it')();
 
- var notes = require('./notes.json');
-
- var markdownParser = require('markdown-it')({breaks: true});
+// TODO: Remove this when using live backend
+var notes = require('./notes.json');
 
 // Open links to new tab.
 // https://github.com/markdown-it/markdown-it/blob/master/docs/architecture.md#renderer
@@ -279,18 +282,21 @@ if (backendApi){
   var backendPollInterval = setInterval(function(){
     if (!requestInProgress){
       requestInProgress = true;
-      console.log('GET ' + backendApi + '/info');
-      nativeRequest(backendApi + '/info', function(error, response, body){
-        requestInProgress = false;
-        if (!error  && response.statusCode == 200){
-          backendInfo = JSON.parse(body);
-          console.log('backend info:');
-          console.log(JSON.stringify(backendInfo, null, 2));
-          clearInterval(backendPollInterval);
-        }else{
-          console.log('backend returned status code: ' + (response ? response.statusCode : 'unknown') + ', retrying...');
-        }
-      });
+      console.log('GET ' + backendApi + '/info')
+      request
+        .get(backendApi + '/info')
+        .set('Accept', 'application/json')
+        .end(function(error, response){
+          requestInProgress = false;
+          if (response && response.ok){
+            backendInfo = response.body;
+            console.log('backend info:');
+            console.log(JSON.stringify(backendInfo, null, 2));
+            clearInterval(backendPollInterval);
+          }else{
+            console.log('backend returned status code: ' + (error ? error.code : 'unknown') + ', retrying...');
+          }
+        });
     }
   }, 2000);
 }
