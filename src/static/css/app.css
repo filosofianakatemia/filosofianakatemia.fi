@@ -1270,6 +1270,13 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   }
 }
 
+/* EXTRA LARGE */
+@media only screen and (min-width: 90.063em) {
+  .section-person ul:not(.list-plain):not(.list-link) li a {
+    margin-left: -20px;
+  }
+}
+
 /**********/
 /* FOOTER */
 /**********/
