@@ -28,10 +28,37 @@
  var notes = require('./notes.json');
 
  var markdownParser = require('markdown-it')({breaks: true});
- var markdownParserContainer = require('markdown-it-container');
- markdownParser.use(markdownParserContainer, 'left-align', {render: leftContainerRender});
- markdownParser.use(markdownParserContainer, 'right-align', {render: rightContainerRender});
- function leftContainerRender(tokens, idx) {
+
+// Open links to new tab.
+// https://github.com/markdown-it/markdown-it/blob/master/docs/architecture.md#renderer
+
+// Remember old renderer, if overriden, or proxy to default renderer
+var defaultRender = markdownParser.renderer.rules.link_open || function(tokens, idx, options, env, self) {
+  return self.renderToken(tokens, idx, options);
+};
+
+markdownParser.renderer.rules.link_open = function (tokens, idx, options, env, self) {
+  // If you are sure other plugins can't add `target` - drop check below
+  var aIndex = tokens[idx].attrIndex('target');
+  var hrefIndex = tokens[idx].attrIndex('href');
+  var hrefString = tokens[idx].attrs[hrefIndex][1];
+
+  if (!hrefString.startsWith('tel:') && !hrefString.startsWith('mailto:')) {
+    if (aIndex < 0) {
+      tokens[idx].attrPush(['target', '_blank']); // add new attribute
+    } else {
+      tokens[idx].attrs[aIndex][1] = '_blank';    // replace value of existing attr
+    }
+  }
+
+  // pass token to default renderer.
+  return defaultRender(tokens, idx, options, env, self);
+};
+
+var markdownParserContainer = require('markdown-it-container');
+markdownParser.use(markdownParserContainer, 'left-align', {render: leftContainerRender});
+markdownParser.use(markdownParserContainer, 'right-align', {render: rightContainerRender});
+function leftContainerRender(tokens, idx) {
   if (tokens[idx].nesting === 1) {
       // opening tag
       return '<div class="large-5 large-offset-1 left-aligned columns">\n';
