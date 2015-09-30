@@ -203,7 +203,9 @@ function *iida() {
 function *joonas() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/joonas');
-  this.body = yield this.render('pages/joonas', getPersonContext());
+  var context = getPersonContext();
+  context.personDescription = getPersonDescription('Joonas Pesonen');
+  this.body = yield this.render('pages/joonas', context);
 }
 function *jp() {
   /*jslint validthis: true */
