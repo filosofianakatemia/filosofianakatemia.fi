@@ -18,7 +18,7 @@
   <ul class="right">
     <li><a href="/">Etusivu</a></li>
     <li><a href="/ihmiset">Ihmiset</a></li>
-    <li class="active"><a href="/palvelut" onclick="return false;">Palvelut</a></li>
+    <li class="active"><a onclick="app.menuActiveFeatureClicked()">Palvelut</a></li>
     <li><a href="/tutkimus">Tutkimus</a></li>
   </ul>
 </section>
@@ -78,7 +78,7 @@
     <div class="embedded">
       <h3>Vapaus</h3>
       <div class="description">
-        Ty&ouml;ntekij&auml;ll&auml; on omaehtoista valinnan ja toiminnan vapautta, joka vahvistuu, kun h&auml;nelle annetaan tilaa toteuttaa ty&ouml;t&auml; itsen&auml;isesti ilman turhaa kontrollia. 
+        Ty&ouml;ntekij&auml;ll&auml; on omaehtoista valinnan ja toiminnan vapautta, joka vahvistuu, kun h&auml;nelle annetaan tilaa toteuttaa ty&ouml;t&auml; itsen&auml;isesti ilman turhaa kontrollia.
       </div>
     </div>
   </div>

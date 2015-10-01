@@ -19,7 +19,7 @@
     <li><a href="/">Etusivu</a></li>
     <li><a href="/ihmiset">Ihmiset</a></li>
     <li><a href="/palvelut">Palvelut</a></li>
-    <li class="active"><a href="/tutkimus" onclick="return false;">Tutkimus</a></li>
+    <li class="active"><a onclick="app.menuActiveFeatureClicked()">Tutkimus</a></li>
   </ul>
 </section>
 {% endblock %}
