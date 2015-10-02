@@ -29,9 +29,6 @@ var thunkify = require('thunkify');
 var get = thunkify(request.get);
 var markdownParser = require('markdown-it')({breaks: true});
 
-// TODO: Remove this when using live backend
-var notes = require('./notes.json');
-
 // Open links to new tab.
 // https://github.com/markdown-it/markdown-it/blob/master/docs/architecture.md#renderer
 
@@ -91,10 +88,10 @@ function getPersonContext() {
   };
 }
 
-function getPersonDescription(title) {
+function getPersonDescription(notes, path) {
   if (notes) {
     for (var i = 0; i < notes.length; i++) {
-      if (notes[i].title === title) {
+      if (notes[i].visibility && notes[i].visibility.path === path) {
         return markdownParser.render(notes[i].content);
       }
     }
@@ -103,8 +100,13 @@ function getPersonDescription(title) {
 
 // middleware
 
+var latestInfo;
 if (config.debug){
   app.use(logger());
+  console.log('use mock items');
+  latestInfo = require('./public.json');
+} else {
+  latestInfo = 'https://ext.md/api/public/filosofian-akatemia';
 }
 if (!config.externalStatic){
   app.use(require('koa-static-folder')('./static'));
@@ -118,6 +120,9 @@ app.context.render = nunjucks({
   watch: config.debug,
   dev: config.debug
 });
+
+var Data = require('./data.js');
+var data = new Data();
 
 // route middleware
 
@@ -185,7 +190,8 @@ function *aleksej() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/aleksej');
   var context = getPersonContext();
-  context.personDescription = getPersonDescription('Aleksej Fedotov');
+  var notes = yield data.getLatest(latestInfo);
+  context.personDescription = getPersonDescription(notes, 'aleksej-fedotov');
   yield this.render('pages/aleksej', context);
 }
 function *emilia() {
@@ -207,7 +213,8 @@ function *joonas() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/joonas');
   var context = getPersonContext();
-  context.personDescription = getPersonDescription('Joonas Pesonen');
+  var notes = yield data.getLatest(latestInfo);
+  context.personDescription = getPersonDescription(notes, 'joonas-pesonen');
   this.body = yield this.render('pages/joonas', context);
 }
 function *jp() {
@@ -224,7 +231,8 @@ function *lauri() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/lauri');
   var context = getPersonContext();
-  context.personDescription = getPersonDescription('Lauri Järvilehto');
+  var notes = yield data.getLatest(latestInfo);
+  context.personDescription = getPersonDescription(notes, 'lauri-jarvilehto');
   this.body = yield this.render('pages/lauri', context);
 }
 function *maria() {
@@ -251,7 +259,8 @@ function *selina() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/selina');
   var context = getPersonContext();
-  context.personDescription = getPersonDescription('Selina Bakir');
+  var notes = yield data.getLatest(latestInfo);
+  context.personDescription = getPersonDescription(notes, 'selina-bakir');
   this.body = yield this.render('pages/selina', context);
 }
 function *sonja() {
@@ -282,7 +291,7 @@ if (backendApi){
   var backendPollInterval = setInterval(function(){
     if (!requestInProgress){
       requestInProgress = true;
-      console.log('GET ' + backendApi + '/info')
+      console.log('GET ' + backendApi + '/info');
       request
         .get(backendApi + '/info')
         .set('Accept', 'application/json')
