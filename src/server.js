@@ -121,7 +121,7 @@ app.context.render = nunjucks({
   dev: config.debug
 });
 
-var Data = require('./data.js');
+var Data = require('./js/data.js');
 var data = new Data();
 
 // route middleware
