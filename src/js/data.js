@@ -63,7 +63,6 @@ function mergeCachedItemsWithModifiedItems(items, modifiedItems) {
     items.modified = modifiedItems.modified;
   }
   if (modifiedItems.notes) {
-    console.log('merge notes');
     items.notes = mergeItemLikeArray(items.notes, modifiedItems.notes);
   }
   if (modifiedItems.tags) {
@@ -87,7 +86,6 @@ Data.prototype.getLatest = function *(info) {
     } else {
       latestModified = findLatestModifiedTimeStamp(items);
       console.log('get modified items, merge cached items with modified items ' + latestModified);
-      console.log(info + '?modified=' + latestModified);
       let res = yield get(info + '?modified=' + latestModified);
       items = mergeCachedItemsWithModifiedItems(items, res.body);
     }
