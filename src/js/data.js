@@ -13,8 +13,7 @@ function findLatestModifiedTimeStamp(items) {
   var modified = items.modified;
 
   function findAndReturnLatestModifiedFromArray(modified, itemLikeArray) {
-    for (let i = 0; i < itemLikeArray; i++) {
-      console.log(i);
+    for (var i = 0; i < itemLikeArray.length; i++) {
       if (modified < itemLikeArray[i].modified) {
         modified = itemLikeArray[i].modified;
       }
