@@ -41,6 +41,7 @@
     <e2e.mailgunDomain>extendedmind.org</e2e.mailgunDomain>
     <e2e.mailgunKey>TEST KEY</e2e.mailgunKey>
     <e2e.emailFrom>extended mind &lt;info@extendedmind.org&gt;</e2e.emailFrom>
+    <e2e.backend>true</e2e.backend>
   </properties>
 
   <profiles>
@@ -190,6 +191,7 @@
                   <!-- test login admin:adminpwd for /evaluate -->
                   <EXTENDEDMIND_EVALUATECREDENTIALS>admin:$apr1$iRuCzNe7$wGTyTAez42hHC9rGP6CHg.</EXTENDEDMIND_EVALUATECREDENTIALS>
                   <EXTENDEDMIND_SITE_BACKENDCOLLECTIVE>11111111-1111-1111-1111-111111111111</EXTENDEDMIND_SITE_BACKENDCOLLECTIVE>
+                  <FILOSOFIANAKATEMIA_BACKEND>${e2e.backend}</FILOSOFIANAKATEMIA_BACKEND>
                   <FILOSOFIANAKATEMIA_BACKENDCOLLECTIVE>11111111-1111-1111-1111-111111111111</FILOSOFIANAKATEMIA_BACKENDCOLLECTIVE>
                 </env>
                 <volumes>
@@ -294,9 +296,6 @@
                   </from>
                 </volumes>
               </run>
-            </image>
-            <image>
-              <name>extendedmind/nginx</name>
             </image>
             <image>
               <name>extendedmind/nginx</name>

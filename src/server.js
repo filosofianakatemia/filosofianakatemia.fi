@@ -100,13 +100,8 @@ function getPersonDescription(notes, path) {
 
 // middleware
 
-var latestInfo;
 if (config.debug){
   app.use(logger());
-  console.log('use mock items');
-  latestInfo = require('./public.json');
-} else {
-  latestInfo = 'https://ext.md/api/public/filosofian-akatemia';
 }
 if (!config.externalStatic){
   app.use(require('koa-static-folder')('./static'));
@@ -161,6 +156,19 @@ if (config.backend === true){
 }else if (config.backend){
   // Backend API address can also be given with a string directly
   backendApi = config.backend;
+  console.log('set backend api: ' + backendApi);
+}
+
+var latestInfo;
+if (backendApi){
+  latestInfo = backendApi + '/public/filosofian-akatemia';
+} else {
+  console.log('use mock items');
+  latestInfo = require('./public.json');
+}
+
+if (!config.externalStatic){
+  app.use(require('koa-static-folder')('./static'));
 }
 
 // routes
