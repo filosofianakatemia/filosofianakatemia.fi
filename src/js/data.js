@@ -37,7 +37,7 @@ function mergeCachedItemsWithModifiedItems(items, modifiedItems) {
       // No existing items, get the whole modified item array.
       cachedItemLikeArray = modifiedItemLikeArray;
     } else {
-      for (var i = 0; i < modifiedItemLikeArray; i++) {
+      for (var i = 0; i < modifiedItemLikeArray.length; i++) {
         var itemLikeIndex = findIndexByUuid(modifiedItemLikeArray[i].uuid, cachedItemLikeArray);
         if (itemLikeIndex === undefined) {
           // Item is new.
@@ -52,7 +52,7 @@ function mergeCachedItemsWithModifiedItems(items, modifiedItems) {
   }
 
   function findIndexByUuid(uuid, itemLikeArray) {
-    for (var i = 0; i < itemLikeArray; i++) {
+    for (var i = 0; i < itemLikeArray.length; i++) {
       if (itemLikeArray[i].uuid === uuid) {
         return i;
       }
