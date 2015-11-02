@@ -7,7 +7,8 @@ var request = require('superagent');
 var thunkify = require('thunkify');
 var get = thunkify(request.get);
 
-var items, latestModified;
+var items, latestModified, sinceLastItemsSynchronized;
+var SYNC_TIME_THRESHOLD = 60000; // sync user if there has been a minute of non-syncing
 
 function findLatestModifiedTimeStamp(items) {
   var modified = items.modified;
@@ -83,11 +84,13 @@ Data.prototype.getLatest = function *(info) {
       console.log('no cached notes, get all public items');
       let res = yield get(info);
       items = res.body;
-    } else {
+      sinceLastItemsSynchronized = Date.now();
+    } else if (Date.now() - sinceLastItemsSynchronized > SYNC_TIME_THRESHOLD) {
       latestModified = findLatestModifiedTimeStamp(items);
       console.log('get modified items, merge cached items with modified items ' + latestModified);
       let res = yield get(info + '?modified=' + latestModified);
       items = mergeCachedItemsWithModifiedItems(items, res.body);
+      sinceLastItemsSynchronized = Date.now();
     }
     return items.notes;
   }
