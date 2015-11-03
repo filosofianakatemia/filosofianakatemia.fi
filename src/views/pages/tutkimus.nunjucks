@@ -20,6 +20,7 @@
     <li><a href="/ihmiset">Ihmiset</a></li>
     <li><a href="/palvelut">Palvelut</a></li>
     <li class="active"><a onclick="app.menuActiveFeatureClicked()">Tutkimus</a></li>
+    <li><a href="/blogi">Blogi</a></li>
   </ul>
 </section>
 {% endblock %}
@@ -85,11 +86,12 @@
 {% block footer %}
 <div class="row hide-for-small-only">
   <div class="medium-12 large-8 large-offset-2 end columns">
-    <ul class="icon-bar four-up">
+    <ul class="icon-bar five-up">
       <li class="item"><a href="/">Etusivu</a></li>
       <li class="item"><a href="/ihmiset">Ihmiset</a></li>
       <li class="item"><a href="/palvelut">Palvelut</a></li>
       <li class="item active"><a href="/tutkimus" onclick="return false;">Tutkimus</a></li>
+      <li class="item"><a href="/blogi">Blogi</a></li>
     </ul>
   </div>
 </div>

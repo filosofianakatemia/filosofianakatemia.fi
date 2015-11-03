@@ -125,6 +125,7 @@ app.use(route.get('/', index));
 app.use(route.get('/palvelut', palvelut));
 app.use(route.get('/ihmiset', ihmiset));
 app.use(route.get('/tutkimus', tutkimus));
+app.use(route.get('/blogi', blogi));
 
 app.use(route.get('/ihmiset/aleksej', aleksej));
 app.use(route.get('/ihmiset/emilia', emilia));
@@ -192,6 +193,11 @@ function *tutkimus() {
   /*jslint validthis: true */
   console.log('GET /tutkimus');
   this.body = yield this.render('pages/tutkimus');
+}
+function *blogi() {
+  /*jslint validthis: true */
+  console.log('GET /blogi');
+  this.body = yield this.render('pages/blogi');
 }
 
 function *aleksej() {

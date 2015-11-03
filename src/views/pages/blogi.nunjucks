@@ -1,0 +1,52 @@
+{% extends "base.nunjucks" %}
+{% set pageName = 'tutkimus' %}
+{% block title %}{{ super() }}  | Tutkimus{% endblock %}
+{% block ogtype %}{{ super() }}{% endblock %}
+{% block ogtitle %}{{ super() }} | Tutkimus{% endblock %}
+{% block description %}Filosofian Akatemian valmennukset pohjautuvat tekem&auml;&auml;mme akateemiseen huippututkimukseen.{% endblock %}
+{% block bodyattrs %}id="research"{% endblock %}
+
+{% block topbar %}
+<ul class="title-area">
+  <li class="name">
+    <div class="logo"><a href="/"><span class="icon-logo-fill-name"></span></a></div>
+  </li>
+  <li class="toggle-topbar menu-icon"><a href="/"><span></span></a></li>
+</ul>
+
+<section class="top-bar-section">
+  <ul class="right">
+    <li><a href="/">Etusivu</a></li>
+    <li><a href="/ihmiset">Ihmiset</a></li>
+    <li><a href="/palvelut">Palvelut</a></li>
+    <li><a href="/tutkimus">Tutkimus</a></li>
+    <li class="active"><a onclick="app.menuActiveFeatureClicked()">Blogi</a></li>
+  </ul>
+</section>
+{% endblock %}
+
+{% block hero %}
+<div class="hero">
+  <div class="slogan">Blogi</div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="row hide-for-small-only">
+  <div class="medium-12 large-8 large-offset-2 end columns">
+    <ul class="icon-bar five-up">
+      <li class="item"><a href="/">Etusivu</a></li>
+      <li class="item"><a href="/ihmiset">Ihmiset</a></li>
+      <li class="item"><a href="/palvelut">Palvelut</a></li>
+      <li class="item"><a href="/tutkimus">Tutkimus</a></li>
+      <li class="item active"><a href="/blogi" onclick="return false;">Blogi</a></li>
+    </ul>
+  </div>
+</div>
+{% include 'partials/address.nunjucks' %}
+{% endblock %}
+
+{% block scripts %}
+{% include 'partials/scrolling.nunjucks' %}
+{% endblock %}
+
