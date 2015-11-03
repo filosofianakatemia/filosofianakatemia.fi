@@ -31,6 +31,13 @@
 </div>
 {% endblock %}
 
+{% block main %}
+  {% for blog in blogs %}
+    <h1>{{ blog.title }}</h1>
+    {{ blog.content | safe }}
+  {% endfor %}
+{% endblock %}
+
 {% block footer %}
 <div class="row hide-for-small-only">
   <div class="medium-12 large-8 large-offset-2 end columns">

@@ -74,14 +74,11 @@ function mergeCachedItemsWithModifiedItems(items, modifiedItems) {
 }
 
 Data.prototype.getLatest = function *(info) {
-  console.log('return latest');
-  if (info && info.notes) {
-    // Return the same JSON
-    return info.notes;
-  } else {
+  console.log('returning latest');
+  if (typeof info === 'string') {
     if (!items) {
-      // No cached notes.
-      console.log('no cached notes, get all public items');
+      // No cached items.
+      console.log('no cached items, get all public items');
       let res = yield get(info);
       items = res.body;
       sinceLastItemsSynchronized = Date.now();
@@ -92,7 +89,58 @@ Data.prototype.getLatest = function *(info) {
       items = mergeCachedItemsWithModifiedItems(items, res.body);
       sinceLastItemsSynchronized = Date.now();
     }
-    return items.notes;
+    return items;
+  } else if (info) {
+    // Return the same JSON
+    return info;
+  }
+};
+
+Data.prototype.getItemByTitle = function(items, title) {
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].title === title) {
+      return items[i];
+    }
+  }
+};
+
+Data.prototype.getItemsByTagUUID = function(items, tagUUID) {
+  var itemsWithTag = [];
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].relationships && items[i].relationships.tags &&
+        items[i].relationships.tags.indexOf(tagUUID) !== -1)
+    {
+      itemsWithTag.push(items[i]);
+    }
+  }
+  return itemsWithTag;
+};
+
+Data.prototype.orderItemsByObjectProperty = function(items, objectName, propertyName) {
+  var orderedItems = [];
+  function insertToOrdered(item) {
+    var insertToIndex;
+    for (var i = 0; i < orderedItems.length; i++) {
+      if (orderedItems[i][objectName][propertyName] > item[objectName][propertyName]) {
+        insertToIndex = i;
+        break;
+      } else if (orderedItems[i][objectName][propertyName] < item[objectName][propertyName]) {
+        insertToIndex = i + 1;
+        break;
+      }
+    }
+    if (insertToIndex === undefined) {
+      orderedItems.unshift(item);
+    } else if (insertToIndex > orderedItems.length) {
+      orderedItems.push(item);
+    } else {
+      orderedItems.splice(insertToIndex, item, 0);
+    }
+  }
+  for (var i = 0; i < items.length; i++) {
+    if (items[i][objectName] && items[i][objectName][propertyName]) {
+      insertToOrdered(items[i]);
+    }
   }
 };
 

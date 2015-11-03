@@ -197,14 +197,31 @@ function *tutkimus() {
 function *blogi() {
   /*jslint validthis: true */
   console.log('GET /blogi');
-  this.body = yield this.render('pages/blogi');
+  var context = {};
+  var latestData = yield data.getLatest(latestInfo);
+  if (latestData && latestData.tags) {
+    var blogTag = data.getItemByTitle(latestData.tags, 'blogi');
+    if (blogTag !== undefined && latestData.notes) {
+      console.log('getting blogs');
+      var blogs = data.getItemsByTagUUID(latestData.notes, blogTag.uuid);
+      for (var i = 0; i < blogs.length; i++) {
+        blogs[i].content = markdownParser.render(blogs[i].content);
+      }
+      context.blogs = blogs;
+    }
+  }
+  this.body = yield this.render('pages/blogi', context);
 }
 
 function *aleksej() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/aleksej');
   var context = getPersonContext();
-  var notes = yield data.getLatest(latestInfo);
+  var items = yield data.getLatest(latestInfo);
+  var notes;
+  if (items) {
+    notes = items.notes;
+  }
   context.personDescription = getPersonDescription(notes, 'aleksej-fedotov');
   yield this.render('pages/aleksej', context);
 }
@@ -212,7 +229,11 @@ function *emilia() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/emilia');
   var context = getPersonContext();
-  var notes = yield data.getLatest(latestInfo);
+  var items = yield data.getLatest(latestInfo);
+  var notes;
+  if (items) {
+    notes = items.notes;
+  }
   context.personDescription = getPersonDescription(notes, 'emilia-lahti');
   yield this.render('pages/emilia', context);
 }
@@ -220,7 +241,11 @@ function *frank() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/frank');
   var context = getPersonContext();
-  var notes = yield data.getLatest(latestInfo);
+  var items = yield data.getLatest(latestInfo);
+  var notes;
+  if (items) {
+    notes = items.notes;
+  }
   context.personDescription = getPersonDescription(notes, 'frank-martela');
   yield this.render('pages/frank', context);
 }
@@ -228,7 +253,11 @@ function *iida() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/iida');
   var context = getPersonContext();
-  var notes = yield data.getLatest(latestInfo);
+  var items = yield data.getLatest(latestInfo);
+  var notes;
+  if (items) {
+    notes = items.notes;
+  }
   context.personDescription = getPersonDescription(notes, 'iida-makikallio');
   yield this.render('pages/iida', context);
 }
@@ -236,7 +265,11 @@ function *joonas() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/joonas');
   var context = getPersonContext();
-  var notes = yield data.getLatest(latestInfo);
+  var items = yield data.getLatest(latestInfo);
+  var notes;
+  if (items) {
+    notes = items.notes;
+  }
   context.personDescription = getPersonDescription(notes, 'joonas-pesonen');
   yield this.render('pages/joonas', context);
 }
@@ -244,7 +277,11 @@ function *jp() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/jp');
   var context = getPersonContext();
-  var notes = yield data.getLatest(latestInfo);
+  var items = yield data.getLatest(latestInfo);
+  var notes;
+  if (items) {
+    notes = items.notes;
+  }
   context.personDescription = getPersonDescription(notes, 'jukka-pekka-salo');
   yield this.render('pages/jp', context);
 }
@@ -252,7 +289,11 @@ function *karoliina() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/karoliina');
   var context = getPersonContext();
-  var notes = yield data.getLatest(latestInfo);
+  var items = yield data.getLatest(latestInfo);
+  var notes;
+  if (items) {
+    notes = items.notes;
+  }
   context.personDescription = getPersonDescription(notes, 'karoliina-jarenko');
   yield this.render('pages/karoliina', context);
 }
@@ -260,7 +301,11 @@ function *lauri() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/lauri');
   var context = getPersonContext();
-  var notes = yield data.getLatest(latestInfo);
+  var items = yield data.getLatest(latestInfo);
+  var notes;
+  if (items) {
+    notes = items.notes;
+  }
   context.personDescription = getPersonDescription(notes, 'lauri-jarvilehto');
   this.body = yield this.render('pages/lauri', context);
 }
@@ -268,7 +313,11 @@ function *maria() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/maria');
   var context = getPersonContext();
-  var notes = yield data.getLatest(latestInfo);
+  var items = yield data.getLatest(latestInfo);
+  var notes;
+  if (items) {
+    notes = items.notes;
+  }
   context.personDescription = getPersonDescription(notes, 'maria-ruotsalainen');
   yield this.render('pages/maria', context);
 }
@@ -276,7 +325,11 @@ function *peter() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/peter');
   var context = getPersonContext();
-  var notes = yield data.getLatest(latestInfo);
+  var items = yield data.getLatest(latestInfo);
+  var notes;
+  if (items) {
+    notes = items.notes;
+  }
   context.personDescription = getPersonDescription(notes, 'peter-kentta');
   yield this.render('pages/peter', context);
 }
@@ -284,7 +337,11 @@ function *reima() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/reima');
   var context = getPersonContext();
-  var notes = yield data.getLatest(latestInfo);
+  var items = yield data.getLatest(latestInfo);
+  var notes;
+  if (items) {
+    notes = items.notes;
+  }
   context.personDescription = getPersonDescription(notes, 'reima-launonen');
   yield this.render('pages/reima', context);
 }
@@ -292,7 +349,11 @@ function *santeri() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/santeri');
   var context = getPersonContext();
-  var notes = yield data.getLatest(latestInfo);
+  var items = yield data.getLatest(latestInfo);
+  var notes;
+  if (items) {
+    notes = items.notes;
+  }
   context.personDescription = getPersonDescription(notes, 'santeri-laner');
   yield this.render('pages/santeri', context);
 }
@@ -300,7 +361,11 @@ function *selina() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/selina');
   var context = getPersonContext();
-  var notes = yield data.getLatest(latestInfo);
+  var items = yield data.getLatest(latestInfo);
+  var notes;
+  if (items) {
+    notes = items.notes;
+  }
   context.personDescription = getPersonDescription(notes, 'selina-bakir');
   this.body = yield this.render('pages/selina', context);
 }
@@ -308,7 +373,11 @@ function *sonja() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/sonja');
   var context = getPersonContext();
-  var notes = yield data.getLatest(latestInfo);
+  var items = yield data.getLatest(latestInfo);
+  var notes;
+  if (items) {
+    notes = items.notes;
+  }
   context.personDescription = getPersonDescription(notes, 'sonja-stromsholm');
   yield this.render('pages/sonja', context);
 }
@@ -316,7 +385,11 @@ function *tapani() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/tapani');
   var context = getPersonContext();
-  var notes = yield data.getLatest(latestInfo);
+  var items = yield data.getLatest(latestInfo);
+  var notes;
+  if (items) {
+    notes = items.notes;
+  }
   context.personDescription = getPersonDescription(notes, 'tapani-riekki');
   yield this.render('pages/tapani', context);
 }
@@ -324,7 +397,11 @@ function *timo() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/timo');
   var context = getPersonContext();
-  var notes = yield data.getLatest(latestInfo);
+  var items = yield data.getLatest(latestInfo);
+  var notes;
+  if (items) {
+    notes = items.notes;
+  }
   context.personDescription = getPersonDescription(notes, 'timo-tiuraniemi');
   yield this.render('pages/timo', context);
 }
@@ -332,7 +409,11 @@ function *villiam() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/villiam');
   var context = getPersonContext();
-  var notes = yield data.getLatest(latestInfo);
+  var items = yield data.getLatest(latestInfo);
+  var notes;
+  if (items) {
+    notes = items.notes;
+  }
   context.personDescription = getPersonDescription(notes, 'villiam-virkkunen');
   yield this.render('pages/villiam', context);
 }
