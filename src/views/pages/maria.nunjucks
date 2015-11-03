@@ -8,43 +8,9 @@
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
 {% block personname %}{{ personName }}{% endblock %}
+
 {% block persondescription %}
-Maria Ruotsalainen (FM) on leikillist&auml;misen asiantuntija, jota kiinnostaa leikin mahdollisuudet johtamisessa ja organisaatiokulttuurin kehitt&auml;misess&auml;. H&auml;n on mukana Leading Passion -hankkeessa, jossa tehd&auml;&auml;n monitieteellist&auml; tutkimusta innostumisen johtamisesta. Maria on my&ouml;s yksi Sis&auml;isen motivaation kehityspolun analyytikoista.
-{% endblock %}
-
-{% block personleft %}
-<h4>Erityisalueet:</h4>
-<p>
-  <ul class="list-plain">
-    <li>Digitaalinen pelaaminen</li>
-    <li>Leikillist&auml;minen oppimisessa ja johtamisessa</li>
-  </ul>
-</p>
-<h4>Tutkimushankkeet:</h4>
-<p>
-  <ul class="list-plain">
-    <li>Passion</li>
-    <li>The Role of Playfulness in Post-industrial Organizational Cultures</li>
-  </ul>
-</p>
-<h4>Blogi:</h4>
-<p>
-  <ul class="list-link">
-    <li><a href="https://mariaruotsalainen.wordpress.com" target="_blank">Maria Ruotsalainen</a></li>
-  </ul>
-</p>
-<h4>Twitter:</h4>
-<p><a href="http://twitter.com/maria_ruotsalai" target="_blank">@maria_ruotsalai</a></p>
-{% endblock %}
-
-{% block personright %}
-<img src="/static/img/maria-large.jpg"/>
-<div class="person-contact left-aligned">
-  <h4>Ota yhteytt&auml;:</h4>
-  <p>+358 40 646 9488<br/>
-    <a href="mailto:maria.ruotsalainen@filosofianakatemia.fi">maria.ruotsalainen@filosofianakatemia.fi</a>
-  </p>
-</div>
+  {{ personDescription | safe }}
 {% endblock %}
 
 {% block personquote %}Maria on todella aikaansaava tyyppi. H&auml;n on taidokas sovittamaan ja yhdistelem&auml;&auml;n erilaisia n&auml;k&ouml;kulmia ja parantamaan ihmisten v&auml;list&auml; yhteistoimintaa.{% endblock %}

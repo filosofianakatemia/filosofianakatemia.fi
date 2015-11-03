@@ -8,47 +8,9 @@
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
 {% block personname %}{{ personName }}{% endblock %}
+
 {% block persondescription %}
-Frank Martela (FT) on Filosofian Akatemian tutkija&#x2013;valmentaja ja rohkea keskustelija, joka tutkii my&ouml;t&auml;tuntoa ja hyv&auml;&auml; el&auml;m&auml;&auml;. Kun moni etsii ty&ouml;kavereiden hyv&auml;ksynt&auml;&auml;, rahaa tai muita ulkoisia palkkioita, Frank valmentaa ihmisi&auml; tunnistamaan sis&auml;isen motivaationsa, toteuttamaan itse&auml;&auml;n paremmin ja el&auml;m&auml;&auml;n hyv&auml;&auml; el&auml;m&auml;&auml;.
-{% endblock %}
-
-{% block personleft %}
-<h4>Erityisalueet:</h4>
-<p>
-  <ul class="list-plain">
-    <li>Sis&auml;inen motivaatio</li>
-    <li>El&auml;m&auml;n tarkoitus</li>
-    <li>Onnellisuus ja my&ouml;t&auml;tunto</li>
-  </ul>
-</p>
-<h4>Tutkimushankkeet:</h4>
-<p>
-  <ul class="list-plain">
-    <li>Prosocial Dimension of Human Motivation</li>
-    <li>Intrinsic Motivation and Meaningful Work</li>
-    <li>Caring Connections</li>
-    <li>My&ouml;t&auml;tunnon mullistava voima</li>
-  </ul>
-</p>
-<h4>Blogit:</h4>
-<p>
-  <ul class="list-link">
-    <li><a href="http://frankmartela.fi" target="_blank">frankmartela.fi</a></li>
-    <li><a href="http://tahdonvoimankayttoohje.fi" target="_blank">tahdonvoimankayttoohje.fi</a></li>
-  </ul>
-</p>
-<h4>Twitter:</h4>
-<p><a href="http://twitter.com/f_martela" target="_blank">@f_martela</a></p>
-{% endblock %}
-
-{% block personright %}
-<img src="/static/img/frank-large.jpg"/>
-<div class="person-contact left-aligned">
-  <h4>Ota yhteytt&auml;:</h4>
-  <p>+358 50 5707 916<br/>
-    <a href="mailto:frank.martela@filosofianakatemia.fi">frank.martela@filosofianakatemia.fi</a>
-  </p>
-</div>
+  {{ personDescription | safe }}
 {% endblock %}
 
 {% block personquote %}Frank on tutkija, joka osaa ja uskaltaa ottaa osaa yhteiskunnalliseen keskusteluun kommentoimalla ajankohtaisia aiheita. Se on harvinaista. H&auml;n osaa taitavasti konkretisoida teoriaa yleistajuisesti.{% endblock %}

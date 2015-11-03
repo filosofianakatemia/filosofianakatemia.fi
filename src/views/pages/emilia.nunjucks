@@ -8,40 +8,9 @@
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
 {% block personname %}{{ personName }}{% endblock %}
+
 {% block persondescription %}
-Emilia Lahti (YTM ja soveltavan positiivisen psykologian maisteri, MAPP) on Filosofian Akatemian virallinen &#x201c;sisustaja&#x201d;, eli maailman johtava sisu-tutkija. H&auml;n valmistelee v&auml;it&ouml;skirjaa sisusta psykologisena voimavarana Aalto-yliopistossa. Emilian intohimona ovat ihmiset ja yhteis&ouml;t, jotka vahvistuvat vastoink&auml;ymisten seurauksena. Kun ymm&auml;rr&auml;mme paremmin sisua, luomme edellytyksi&auml; kehitykselle ja kukoistukselle.
-{% endblock %}
-
-{% block personleft %}
-<h4>Erityisalueet:</h4>
-<p>
-  <ul class="list-plain">
-    <li>Sisu psykologisena voimavarana</li>
-    <li>Kokeilemalla kehitt&auml;minen</li>
-  </ul>
-</p>
-<h4>Tutkimushankkeet:</h4>
-<p>
-  <ul class="list-plain">
-    <li>The Land of Sisu: An Inquiry into Antifragile Humans and Systems</li>
-  </ul>
-</p>
-<h4>Blogit:</h4>
-<p>
-  <ul class="list-link">
-    <li><a href="http://www.emilialahti.com" target="_blank">www.emilialahti.com</a></li>
-  </ul>
-</p>
-<h4>Twitter:</h4>
-<p><a href="http://twitter.com/emilialahti" target="_blank">@emilialahti</a></p>
-{% endblock %}
-
-{% block personright %}
-<img src="/static/img/emilia-large.jpg"/>
-<div class="person-contact left-aligned">
-  <h4>Ota yhteytt&auml;:</h4>
-  <p><a href="mailto:emilia.lahti@filosofianakatemia.fi">emilia.lahti@filosofianakatemia.fi</a></p>
-</div>
+  {{ personDescription | safe }}
 {% endblock %}
 
 {% block personquote %}Forbesissa ja Business Insiderissa lainattu tutkija, jolla on kaikki mahdollisuudet nousta kansainv&auml;lisen populaaritieteen huipulle. Emilia on innostava ja inspiroiva ihminen, joka saa muut loistamaan.{% endblock %}

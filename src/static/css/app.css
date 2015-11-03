@@ -270,20 +270,6 @@ a:hover, a:focus, .link-cta:hover, .link-cta:focus{
   color: #000000;
 }
 
-ul.list-plain, ul.list-link {
-  list-style-type: none;
-  padding-left:0;
-}
-ul.list-plain {
-  margin-left: 15px;
-}
-ul.list-plain li:before {
-  content: '-';
-  position: absolute;
-  left: 15px;
-}
-
-
 ul.list-link li:before {
   font-family: 'icomoon';
   speak: none;
@@ -1219,22 +1205,21 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   padding-bottom: 20px;
 }
 
-/* Overrides for .list-plain and .list-link */
-.section-person ul:not(.list-plain):not(.list-link) {
+.section-person ul {
   list-style-type: none;
   padding-left: 0;
   margin-left: 15px;
 }
-.section-person ul:not(.list-plain):not(.list-link) li:before {
+.section-person ul li:before {
   content: '-';
   position: absolute;
   left: 15px;
 }
-.section-person ul:not(.list-plain):not(.list-link) li a {
+.section-person ul li a {
   color: #636363;
   margin-left: -15px;
 }
-.section-person ul:not(.list-plain):not(.list-link) li a:before {
+.section-person ul li a:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -1272,7 +1257,7 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 
 /* EXTRA LARGE */
 @media only screen and (min-width: 90.063em) {
-  .section-person ul:not(.list-plain):not(.list-link) li a {
+  .section-person ul li a {
     margin-left: -20px;
   }
 }

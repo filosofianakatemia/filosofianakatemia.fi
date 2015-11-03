@@ -8,29 +8,9 @@
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
 {% block personname %}{{ personName }}{% endblock %}
+
 {% block persondescription %}
-Iida on valovoimainen valmentaja ja esiintyj&auml;. H&auml;n liikkuu suvereenisti positiivisen psykologian ja psykoneuroimmunologian v&auml;limaastossa ja soveltaa tieteellist&auml; osaamistaan eloisasti arkip&auml;iv&auml;n kysymyksiin. Iida on kiinnostunut laajasti henkil&ouml;kohtaisesta kasvusta ja hyvinvoinnista, motivaatiosta, rohkeudesta ja itsens&auml; ylitt&auml;misest&auml;. H&auml;n haluaa auttaa ihmisi&auml; matkalla kohti merkityksellist&auml; el&auml;m&auml;&auml; ja luoda maailmaa, jossa ihmiset rakastavat sit&auml; mit&auml; tekev&auml;t. Iidan puheessa kaikuvat vuodet kilpaurheilijana ja vuosien kokemus urheiluvalmentajana. Iidalla on my&ouml;s Flow-jooga opettajan koulutus.
-{% endblock %}
-
-{% block personleft %}
-<h4>Erityisalueet:</h4>
-<p>
-  <ul class="list-plain">
-    <li>sis&auml;inen motivaatio</li>
-    <li>henkil&ouml;kohtainen kasvu</li>
-    <li>mielen toiminta</li>
-    <li>innostuksen johtaminen</li>
-    <li>hyvinvointi</li>
-  </ul>
-</p>
-<h4>Ota yhteytt&auml;:</h4>
-<p>+358 44 058 9772<br/>
-  <a href="mailto:iida.makikallio@filosofianakatemia.fi">iida.makikallio@filosofianakatemia.fi</a>
-</p>
-{% endblock %}
-
-{% block personright %}
-<img src="/static/img/iida-large.jpg"/>
+  {{ personDescription | safe }}
 {% endblock %}
 
 {% block personquote %}Iidalla on uskomaton kyky puhua samassa lauseessa aivojen toiminnasta, hormoneista ja arkip&auml;iv&auml;n sosiaalisista haasteista &ndash; ja viel&auml;p&auml; sellaisella tavalla, ett&auml; ymm&auml;rt&auml;&auml; mist&auml; h&auml;n puhuu ja innostuu siit&auml;. Iida on ihanan valoisa. H&auml;nen tapaamisensa j&auml;lkeen aurinko tuntuu aina paistavan v&auml;h&auml;n enemm&auml;n.{% endblock %}

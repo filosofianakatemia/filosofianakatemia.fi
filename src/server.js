@@ -205,17 +205,26 @@ function *aleksej() {
 function *emilia() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/emilia');
-  this.body = yield this.render('pages/emilia', getPersonContext());
+  var context = getPersonContext();
+  var notes = yield data.getLatest(latestInfo);
+  context.personDescription = getPersonDescription(notes, 'emilia-lahti');
+  yield this.render('pages/emilia', context);
 }
 function *frank() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/frank');
-  this.body = yield this.render('pages/frank', getPersonContext());
+  var context = getPersonContext();
+  var notes = yield data.getLatest(latestInfo);
+  context.personDescription = getPersonDescription(notes, 'frank-martela');
+  yield this.render('pages/frank', context);
 }
 function *iida() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/iida');
-  this.body = yield this.render('pages/iida', getPersonContext());
+  var context = getPersonContext();
+  var notes = yield data.getLatest(latestInfo);
+  context.personDescription = getPersonDescription(notes, 'iida-makikallio');
+  yield this.render('pages/iida', context);
 }
 function *joonas() {
   /*jslint validthis: true */
@@ -223,17 +232,23 @@ function *joonas() {
   var context = getPersonContext();
   var notes = yield data.getLatest(latestInfo);
   context.personDescription = getPersonDescription(notes, 'joonas-pesonen');
-  this.body = yield this.render('pages/joonas', context);
+  yield this.render('pages/joonas', context);
 }
 function *jp() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/jp');
-  this.body = yield this.render('pages/jp', getPersonContext());
+  var context = getPersonContext();
+  var notes = yield data.getLatest(latestInfo);
+  context.personDescription = getPersonDescription(notes, 'jukka-pekka-salo');
+  yield this.render('pages/jp', context);
 }
 function *karoliina() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/karoliina');
-  this.body = yield this.render('pages/karoliina', getPersonContext());
+  var context = getPersonContext();
+  var notes = yield data.getLatest(latestInfo);
+  context.personDescription = getPersonDescription(notes, 'karoliina-jarenko');
+  yield this.render('pages/karoliina', context);
 }
 function *lauri() {
   /*jslint validthis: true */
@@ -246,22 +261,34 @@ function *lauri() {
 function *maria() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/maria');
-  this.body = yield this.render('pages/maria', getPersonContext());
+  var context = getPersonContext();
+  var notes = yield data.getLatest(latestInfo);
+  context.personDescription = getPersonDescription(notes, 'maria-ruotsalainen');
+  yield this.render('pages/maria', context);
 }
 function *peter() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/peter');
-  this.body = yield this.render('pages/peter', getPersonContext());
+  var context = getPersonContext();
+  var notes = yield data.getLatest(latestInfo);
+  context.personDescription = getPersonDescription(notes, 'peter-kentta');
+  yield this.render('pages/peter', context);
 }
 function *reima() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/reima');
-  this.body = yield this.render('pages/reima', getPersonContext());
+  var context = getPersonContext();
+  var notes = yield data.getLatest(latestInfo);
+  context.personDescription = getPersonDescription(notes, 'reima-launonen');
+  yield this.render('pages/reima', context);
 }
 function *santeri() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/santeri');
-  this.body = yield this.render('pages/santeri', getPersonContext());
+  var context = getPersonContext();
+  var notes = yield data.getLatest(latestInfo);
+  context.personDescription = getPersonDescription(notes, 'santeri-laner');
+  yield this.render('pages/santeri', context);
 }
 function *selina() {
   /*jslint validthis: true */
@@ -274,22 +301,34 @@ function *selina() {
 function *sonja() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/sonja');
-  this.body = yield this.render('pages/sonja', getPersonContext());
+  var context = getPersonContext();
+  var notes = yield data.getLatest(latestInfo);
+  context.personDescription = getPersonDescription(notes, 'sonja-stromsholm');
+  yield this.render('pages/sonja', context);
 }
 function *tapani() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/tapani');
-  this.body = yield this.render('pages/tapani', getPersonContext());
+  var context = getPersonContext();
+  var notes = yield data.getLatest(latestInfo);
+  context.personDescription = getPersonDescription(notes, 'tapani-riekki');
+  yield this.render('pages/tapani', context);
 }
 function *timo() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/timo');
-  this.body = yield this.render('pages/timo', getPersonContext());
+  var context = getPersonContext();
+  var notes = yield data.getLatest(latestInfo);
+  context.personDescription = getPersonDescription(notes, 'timo-tiuraniemi');
+  yield this.render('pages/timo', context);
 }
 function *villiam() {
   /*jslint validthis: true */
   console.log('GET /ihmiset/villiam');
-  this.body = yield this.render('pages/villiam', getPersonContext());
+  var context = getPersonContext();
+  var notes = yield data.getLatest(latestInfo);
+  context.personDescription = getPersonDescription(notes, 'villiam-virkkunen');
+  yield this.render('pages/villiam', context);
 }
 
 // get backend /info path from backend on boot

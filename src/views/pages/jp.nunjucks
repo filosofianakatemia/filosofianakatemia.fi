@@ -8,30 +8,9 @@
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
 {% block personname %}{{ personName }}{% endblock %}
+
 {% block persondescription %}
-Jukka-Pekka Salo kehitt&auml;&auml; Filosofian Akatemiassa <a href="http://ext.md" target="_blank">Extended Mind</a> -teht&auml;v&auml;nhallintaohjelmaa, joka poistaa stressi&auml; ja vapauttaa k&auml;ytt&auml;j&auml;n mielt&auml; silpusta t&auml;rkeisiin asioihin. Ohjelmistokehitt&auml;misen lis&auml;ksi opintoihin kuuluu sivuaineena kognitiotieteit&auml;. Koodatessa t&auml;ytyy Jukka-Pekan mukaan muistaa kokea sympatiaa k&auml;ytt&auml;j&auml;&auml; kohtaan, sill&auml; onnistunut ohjelma edist&auml;&auml; ihmisten ty&ouml;hyvinvointia.
-{% endblock %}
-
-{% block personleft %}
-<h4>Erityisalueet:</h4>
-<p>
-  <ul class="list-plain">
-    <li>Ohjelmistokehitt&auml;minen</li>
-    <li>K&auml;ytt&ouml;liittym&auml;suunnittelu</li>
-  </ul>
-</p>
-<h4>Tutkimushankkeet:</h4>
-<p>
-  <ul class="list-plain">
-    <li><a href="http://ext.md" target="_blank">The Extended Mind</a></li>
-  </ul>
-</p>
-<h4>Ota yhteytt&auml;:</h4>
-<p><a href="mailto:jp@ext.md">jp@ext.md</a></p>
-{% endblock %}
-
-{% block personright %}
-<img src="/static/img/jp-large.jpg"/>
+  {{ personDescription | safe }}
 {% endblock %}
 
 {% block personquote %}Jukka-Pekka on koodaaja, jonka mahdollistaa kaiken mahdottomaltakin tuntuvan. H&auml;n on s&auml;rm&auml; kaveri, jonka kanssa on tosi kiva tehd&auml; t&ouml;it&auml;.{% endblock %}

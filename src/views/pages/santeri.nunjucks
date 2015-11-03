@@ -8,33 +8,9 @@
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
 {% block personname %}{{ personName }}{% endblock %}
+
 {% block persondescription %}
-Santeri Lan&eacute;r (VTM) ty&ouml;skentelee Filosofian Akatemiassa tutkija&#x2013;valmentajana erityisalueenaan organisaatiokulttuurin kehitt&auml;minen. H&auml;n kirjoittaa aiheesta my&ouml;s kirjaa. Santeri haluaa antaa ty&ouml;yhteis&ouml;ille niit&auml; ajattelun ty&ouml;kaluja, joilla he voivat itse toteuttaa kaivatun muutoksen. Santeri asuu Polvij&auml;rvell&auml; l&auml;hell&auml; Joensuuta ja hoitaa erityisesti It&auml;-Suomen asiakkuuksia.
-{% endblock %}
-
-{% block personleft %}
-<h4>Erityisalueet:</h4>
-<p>
-  <ul class="list-plain">
-    <li>Organisaatiokulttuurin kehitt&auml;minen</li>
-    <li>Autenttinen ty&ouml;yhteis&ouml; ja vuorovaikutus</li>
-    <li>Ratkaisukeskeisyys</li>
-  </ul>
-</p>
-<h4>Tutkimushankkeet:</h4>
-<p>
-  <ul class="list-plain">
-    <li>Tietoinen organisaatiokulttuurin kehitt&auml;minen -kirja</li>
-  </ul>
-</p>
-<h4>Ota yhteytt&auml;:</h4>
-<p>+358 45 673 2793<br/>
-  <a href="mailto:santeri.laner@filosofianakatemia.fi">santeri.laner@filosofianakatemia.fi</a>
-</p>
-{% endblock %}
-
-{% block personright %}
-<img src="/static/img/santeri-large.jpg"/>
+  {{ personDescription | safe }}
 {% endblock %}
 
 {% block personquote %}Santerilla on loistava kehitt&auml;misasenne kaikkeen. Voitaisko tehd&auml; n&auml;in tai n&auml;in, h&auml;n aina ehdottaa arjen pulmatilanteissa. Santerin vahvuus on se, ett&auml; h&auml;n pystyy pit&auml;m&auml;&auml;n mielen avoimena uusille ideoille joka tilanteessa ja hahmottaa todella hyvin kokonaisuuksia.{% endblock %}
