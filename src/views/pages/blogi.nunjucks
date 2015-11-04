@@ -3,7 +3,7 @@
 {% block title %}{{ super() }}  | Blogi{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogtitle %}{{ super() }} | Blogi{% endblock %}
-{% block bodyattrs %}id="research"{% endblock %}
+{% block bodyattrs %}id="blog"{% endblock %}
 
 {% block topbar %}
 <ul class="title-area">
