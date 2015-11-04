@@ -98,6 +98,17 @@ function getPersonDescription(notes, path) {
   }
 }
 
+function isAuthorTag(tag) {
+  return tag.title === 'frank';
+}
+
+function getAuthorName(tag) {
+  switch (tag.title) {
+    case 'frank':
+    return 'Frank Martela';
+  }
+}
+
 // middleware
 
 if (config.debug){
@@ -114,6 +125,14 @@ app.context.render = nunjucks({
   noCache: config.debug,
   watch: config.debug,
   dev: config.debug
+});
+
+var nunjucksEnv = app.context.render.env;
+nunjucksEnv.addFilter('d.M.yyyy', function(timestamp) {
+  // http://stackoverflow.com/a/3552493
+  // https://docs.angularjs.org/api/ng/filter/date
+  var date = new Date(timestamp);
+  return date.getDate() + '.' + (1 + date.getMonth()) + '.' + date.getFullYear();
 });
 
 var Data = require('./js/data.js');
@@ -204,10 +223,24 @@ function *blogi() {
     if (blogTag !== undefined && latestData.notes) {
       console.log('getting blogs');
       var blogs = data.getItemsByTagUUID(latestData.notes, blogTag.uuid);
+      context.blogs = [];
       for (var i = 0; i < blogs.length; i++) {
-        blogs[i].content = markdownParser.render(blogs[i].content);
+        var blog = {title: blogs[i].title};
+        blog.content = markdownParser.render(blogs[i].content);
+        if (blogs[i].relationships && blogs[i].relationships.tags) {
+          for (var j = 0; j < blogs[i].relationships.tags.length; j++) {
+            if (blogs[i].relationships.tags[j] !== blogTag.uuid) {
+              var tag = data.getItemByUUID(latestData.tags, blogs[i].relationships.tags[j]);
+              if (isAuthorTag(tag)) {
+                blog.author = getAuthorName(tag);
+                break;
+              }
+            }
+          }
+        }
+        blog.published = blogs[i].visibility.published;
+        context.blogs.push(blog);
       }
-      context.blogs = blogs;
     }
   }
   this.body = yield this.render('pages/blogi', context);

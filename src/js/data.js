@@ -96,12 +96,20 @@ Data.prototype.getLatest = function *(info) {
   }
 };
 
-Data.prototype.getItemByTitle = function(items, title) {
+function getItemByPropertyValue(items, propertyName, propertyValue) {
   for (var i = 0; i < items.length; i++) {
-    if (items[i].title === title) {
+    if (items[i][propertyName] === propertyValue) {
       return items[i];
     }
   }
+}
+
+Data.prototype.getItemByTitle = function(items, title) {
+  return getItemByPropertyValue(items, 'title', title);
+};
+
+Data.prototype.getItemByUUID = function(items, uuid) {
+  return getItemByPropertyValue(items, 'uuid', uuid);
 };
 
 Data.prototype.getItemsByTagUUID = function(items, tagUUID) {

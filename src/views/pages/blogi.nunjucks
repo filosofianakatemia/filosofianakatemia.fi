@@ -33,6 +33,8 @@
 
 {% block main %}
   {% for blog in blogs %}
+    {{ blog.published | d.M.yyyy }}
+    {{ blog.author }}
     <h1>{{ blog.title }}</h1>
     {{ blog.content | safe }}
   {% endfor %}
