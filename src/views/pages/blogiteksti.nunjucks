@@ -1,9 +1,8 @@
 {% extends "base.nunjucks" %}
-{% set pageName = 'blogi' %}
-{% block title %}{{ super() }}  | Blogi{% endblock %}
+{% block title %}{{ super() }}  | Blogi | {{ true}}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
-{% block ogtitle %}{{ super() }} | Blogi{% endblock %}
-{% block bodyattrs %}id="blog"{% endblock %}
+{% block ogtitle %}{{ super() }} | Blogi | {{ true}}{% endblock %}
+{% block bodyattrs %}class="blog-text"{% endblock %}
 
 {% block topbar %}
 <ul class="title-area">
@@ -19,24 +18,16 @@
     <li><a href="/ihmiset">Ihmiset</a></li>
     <li><a href="/palvelut">Palvelut</a></li>
     <li><a href="/tutkimus">Tutkimus</a></li>
-    <li class="active"><a onclick="app.menuActiveFeatureClicked()">Blogi</a></li>
+    <li class="active"><a href="/blogi">Blogi</a></li>
   </ul>
 </section>
 {% endblock %}
 
-{% block hero %}
-<div class="hero">
-  <div class="slogan">Blogi</div>
-</div>
-{% endblock %}
-
 {% block main %}
-  {% for blog in blogs %}
-    <span>{{ blog.published | d.M.yyyy }}</span>
-    <span>{{ blog.author }}</span>
-    <h1><a href="/blogi/{{ blog.path }}">{{ blog.title }}</a></h1>
-    {{ blog.content | safe }}
-  {% endfor %}
+  <span>{{ blog.published | d.M.yyyy }}</span>
+  <span>{{ blog.author }}</span>
+  <h1><a href="/blogi/{{ blog.path }}">{{ blog.title }}</a></h1>
+  {{ blog.content | safe }}
 {% endblock %}
 
 {% block footer %}
@@ -47,7 +38,7 @@
       <li class="item"><a href="/ihmiset">Ihmiset</a></li>
       <li class="item"><a href="/palvelut">Palvelut</a></li>
       <li class="item"><a href="/tutkimus">Tutkimus</a></li>
-      <li class="item active"><a href="/blogi" onclick="return false;">Blogi</a></li>
+      <li class="item"><a href="/blogi">Blogi</a></li>
     </ul>
   </div>
 </div>

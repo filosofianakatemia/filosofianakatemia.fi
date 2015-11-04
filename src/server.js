@@ -145,6 +145,7 @@ app.use(route.get('/palvelut', palvelut));
 app.use(route.get('/ihmiset', ihmiset));
 app.use(route.get('/tutkimus', tutkimus));
 app.use(route.get('/blogi', blogi));
+app.use(route.get('/blogi/:path', blogText));
 
 app.use(route.get('/ihmiset/aleksej', aleksej));
 app.use(route.get('/ihmiset/emilia', emilia));
@@ -184,7 +185,8 @@ if (backendApi){
   latestInfo = backendApi + '/public/filosofian-akatemia';
 } else {
   console.log('use mock items');
-  latestInfo = require('./public.json');
+  latestInfo = 'https://ext.md/api/public/filosofian-akatemia';
+  // latestInfo = require('./public.json');
 }
 
 if (!config.externalStatic){
@@ -213,6 +215,24 @@ function *tutkimus() {
   console.log('GET /tutkimus');
   this.body = yield this.render('pages/tutkimus');
 }
+
+function renderBlog(blogData, tags) {
+  var blog = {title: blogData.title};
+  blog.content = markdownParser.render(blogData.content);
+  if (blogData.relationships && blogData.relationships.tags) {
+    for (var j = 0; j < blogData.relationships.tags.length; j++) {
+      var tag = data.getItemByUUID(tags, blogData.relationships.tags[j]);
+      if (isAuthorTag(tag)) {
+        blog.author = getAuthorName(tag);
+        break;
+      }
+    }
+  }
+  blog.published = blogData.visibility.published;
+  blog.path = blogData.visibility.path;
+  return blog;
+}
+
 function *blogi() {
   /*jslint validthis: true */
   console.log('GET /blogi');
@@ -225,25 +245,24 @@ function *blogi() {
       var blogs = data.getItemsByTagUUID(latestData.notes, blogTag.uuid);
       context.blogs = [];
       for (var i = 0; i < blogs.length; i++) {
-        var blog = {title: blogs[i].title};
-        blog.content = markdownParser.render(blogs[i].content);
-        if (blogs[i].relationships && blogs[i].relationships.tags) {
-          for (var j = 0; j < blogs[i].relationships.tags.length; j++) {
-            if (blogs[i].relationships.tags[j] !== blogTag.uuid) {
-              var tag = data.getItemByUUID(latestData.tags, blogs[i].relationships.tags[j]);
-              if (isAuthorTag(tag)) {
-                blog.author = getAuthorName(tag);
-                break;
-              }
-            }
-          }
-        }
-        blog.published = blogs[i].visibility.published;
+        var blog = renderBlog(blogs[i], latestData.tags);
         context.blogs.push(blog);
       }
     }
   }
   this.body = yield this.render('pages/blogi', context);
+}
+
+function *blogText(path) {
+  /*jslint validthis: true */
+  console.log('GET /blogi/' + path);
+  var context = {};
+  var latestData = yield data.getLatest(latestInfo);
+  if (latestData && latestData.notes && latestData.tags) {
+    var blog = data.getItemByPath(latestData.notes, path);
+    context.blog = renderBlog(blog, latestData.tags);
+  }
+  this.body = yield this.render('pages/blogiteksti', context);
 }
 
 function *aleksej() {

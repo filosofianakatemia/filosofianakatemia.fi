@@ -124,6 +124,14 @@ Data.prototype.getItemsByTagUUID = function(items, tagUUID) {
   return itemsWithTag;
 };
 
+Data.prototype.getItemByPath = function(items, path) {
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].visibility && items[i].visibility.path === path) {
+      return items[i];
+    }
+  }
+};
+
 Data.prototype.orderItemsByObjectProperty = function(items, objectName, propertyName) {
   var orderedItems = [];
   function insertToOrdered(item) {

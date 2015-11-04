@@ -1126,19 +1126,23 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   }
 }
 
+.blog-text .top-bar,
 .people-details .top-bar {
   position: relative;
   background-color: #1C7986;
 }
 
+.blog-text .top-bar.expanded .title-area,
 .people-details .top-bar.expanded .title-area {
   background-color: #1C7986;
 }
 
+.blog-text .top-bar .icon-logo-fill-name:before,
 .people-details .top-bar .icon-logo-fill-name:before{
   color: #FFFFFF;
 }
 
+.blog-text .top-bar .toggle-topbar.menu-icon > a > span:after,
 .people-details .top-bar .toggle-topbar.menu-icon > a > span:after{
   box-shadow: 0 0 0 1px #FFFFFF, 0 7px 0 1px #FFFFFF, 0 14px 0 1px #FFFFFF;
 }
