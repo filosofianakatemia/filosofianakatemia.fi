@@ -1,9 +1,8 @@
 {% extends "base.nunjucks" %}
-{% set pageName = 'tutkimus' %}
-{% block title %}{{ super() }}  | Tutkimus{% endblock %}
+{% set pageName = 'blogi' %}
+{% block title %}{{ super() }}  | Blogi{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
-{% block ogtitle %}{{ super() }} | Tutkimus{% endblock %}
-{% block description %}Filosofian Akatemian valmennukset pohjautuvat tekem&auml;&auml;mme akateemiseen huippututkimukseen.{% endblock %}
+{% block ogtitle %}{{ super() }} | Blogi{% endblock %}
 {% block bodyattrs %}id="research"{% endblock %}
 
 {% block topbar %}
