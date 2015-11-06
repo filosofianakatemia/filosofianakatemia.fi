@@ -874,14 +874,16 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 */
 
  /* This element holds injected scripts inside iframes that in some cases may stretch layouts. So, we're just hiding it. */
-#fb-root {
+#some #fb-root {
   display: none;
 }
 
 /* To fill the container and nothing else */
-.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+#some .fb_iframe_widget,
+#some .fb_iframe_widget span,
+#some .fb_iframe_widget span iframe[style] {
   width: 100% !important;
-  max-width: 520px !important;
+  max-width: 500px !important;
 }
 
 /* SERVICES */
