@@ -702,6 +702,10 @@ ul.list-link li a {
   padding-bottom: 30px;
 }
 
+.blog-post {
+  border-bottom: 1px solid #c2c2c2;
+}
+
 /* LARGE */
 @media only screen and (min-width: 64.063em){
   .embedded {
@@ -1016,6 +1020,12 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 
 /**********/
 /* PEOPLE */
+
+/* http://stackoverflow.com/a/15779764 */
+.head-shot {
+  height: 500px;
+  overflow: hidden;
+}
 
 #thumbnails .picture {
   background-repeat: no-repeat

@@ -109,6 +109,13 @@ function getAuthorName(tag) {
   }
 }
 
+function getAuthorPicturePath(tag) {
+  switch (tag.title) {
+    case 'frank':
+    return 'https://filosofianakatemia.fi/static/img/frank-large.jpg';
+  }
+}
+
 // middleware
 
 if (config.debug){
@@ -224,6 +231,7 @@ function renderBlog(blogData, tags) {
       var tag = data.getItemByUUID(tags, blogData.relationships.tags[j]);
       if (isAuthorTag(tag)) {
         blog.author = getAuthorName(tag);
+        blog.picture = getAuthorPicturePath(tag);
         break;
       }
     }

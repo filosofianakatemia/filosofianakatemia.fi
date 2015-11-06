@@ -1,6 +1,6 @@
 {% extends "base.nunjucks" %}
 {% set pageName = 'blogi' %}
-{% block title %}{{ super() }}  | Blogi{% endblock %}
+{% block title %}{{ super() }} | Blogi{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogtitle %}{{ super() }} | Blogi{% endblock %}
 {% block bodyattrs %}id="blog"{% endblock %}
@@ -31,12 +31,24 @@
 {% endblock %}
 
 {% block main %}
-  {% for blog in blogs %}
-    <span>{{ blog.published | d.M.yyyy }}</span>
-    <span>{{ blog.author }}</span>
-    <h1><a href="/blogi/{{ blog.path }}">{{ blog.title }}</a></h1>
-    {{ blog.content | safe }}
-  {% endfor %}
+  <div class="section separate">
+    {% for blog in blogs %}
+    <div class="left-aligned medium-8 medium-offset-2 blog-post">
+      <div>{{ blog.published | d.M.yyyy }} | {{ blog.author }}</div>
+      <h1><a href="/blogi/{{ blog.path }}">{{ blog.title }}</a></h1>
+      <div class="head-shot">
+        <img src="{{ blog.picture }}"/>
+      </div>
+      {{ blog.content | safe }}
+      <div class="right-aligned">
+        <button onclick="app.fbShareBlog('{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
+          Facebook
+        </button>
+        <button onclick="app.twitterShareBlog('{{ blog.path }}', '{{ blog.title }}')">Twitter</button>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 {% endblock %}
 
 {% block footer %}
