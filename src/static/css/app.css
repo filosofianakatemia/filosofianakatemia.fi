@@ -1328,3 +1328,30 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   padding-left: 0;
   font-size: 14px;
 }
+
+.blog-content > p:first-of-type {
+  border-left: 6px solid #027180;
+  padding-left: 20px;
+  font-size: 25px;
+}
+
+blockquote:first-of-type {
+  float: right;
+  width: 50%;
+  background-color: #027180;
+  color: #FFFFFF;
+  padding: 40px;
+  margin-top: 0;
+  margin-right: 0;
+}
+
+blockquote:first-of-type > p {
+  font-style: italic;
+  font-size: 25px;
+  margin: 0;
+}
+
+blockquote:first-of-type > .icon-quote {
+  float: right;
+  font-size: 40px;
+}

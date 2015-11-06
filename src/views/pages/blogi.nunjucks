@@ -39,7 +39,9 @@
       <div class="head-shot">
         <img src="{{ blog.picture }}"/>
       </div>
-      {{ blog.content | safe }}
+      <div class="blog-content">
+        {{ blog.content | safe }}
+      </div>
       <div class="right-aligned">
         <button onclick="app.fbShareBlog('{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
           Facebook

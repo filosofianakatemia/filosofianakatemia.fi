@@ -37,6 +37,10 @@ var defaultRender = markdownParser.renderer.rules.link_open || function(tokens, 
   return self.renderToken(tokens, idx, options);
 };
 
+markdownParser.renderer.rules.blockquote_close  = function() {
+  return '<span class="icon-quote"><span></blockquote>';
+};
+
 markdownParser.renderer.rules.link_open = function (tokens, idx, options, env, self) {
   // If you are sure other plugins can't add `target` - drop check below
   var aIndex = tokens[idx].attrIndex('target');
