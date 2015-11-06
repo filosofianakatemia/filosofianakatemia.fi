@@ -485,6 +485,11 @@ ul.list-link li a {
   line-height: 45px;
 }
 
+#blog .hero .slogan {
+  padding-top: 175px;
+  padding-bottom: 125px;
+}
+
 .hero .ingress {
   font-size: 28px;
   font-weight: 100;
@@ -551,6 +556,10 @@ ul.list-link li a {
   .hero .scroll-down {
     display: none !important;
   }
+  #blog .hero .slogan {
+    padding-top: 160px;
+    padding-bottom: 105px;
+  }
 }
 
 /* NON-MOBILE MEDIUM HEIGHT */
@@ -558,8 +567,15 @@ ul.list-link li a {
   .hero {
     height: 95vh;
   }
+  #blog .hero {
+    height: auto;
+  }
   .hero .slogan {
     padding-top: 31vh;
+  }
+  #blog .hero .slogan {
+    padding-top: 160px;
+    padding-bottom: 105px;
   }
 }
 
@@ -1262,6 +1278,10 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   }
   .people-details .section-person >:first-child p:first-of-type {
     font-size: 25px;
+  }
+  #blog .hero .slogan {
+    padding-top: 160px;
+    padding-bottom: 105px;
   }
 }
 
