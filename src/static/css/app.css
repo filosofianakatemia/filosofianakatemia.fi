@@ -64,11 +64,12 @@ button:hover, button:focus, .button:hover, .button:focus, .top-bar-section ul > 
 
 @font-face {
   font-family: 'icomoon';
-  src:url('../fonts/icomoon.eot?-q3wmq5');
-  src:url('../fonts/icomoon.eot?#iefix-q3wmq5') format('embedded-opentype'),
-    url('../fonts/icomoon.woff?-q3wmq5') format('woff'),
-    url('../fonts/icomoon.ttf?-q3wmq5') format('truetype'),
-    url('../fonts/icomoon.svg?-q3wmq5#icomoon') format('svg');
+  src:url('../fonts/icomoon.eot?6x8yx9');
+  src:url('../fonts/icomoon.eot?6x8yx9#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.woff2?6x8yx9') format('woff2'),
+    url('../fonts/icomoon.ttf?6x8yx9') format('truetype'),
+    url('../fonts/icomoon.woff?6x8yx9') format('woff'),
+    url('../fonts/icomoon.svg?6x8yx9#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -85,6 +86,14 @@ button:hover, button:focus, .button:hover, .button:focus, .top-bar-section ul > 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+  content: "\e900";
+}
+
+.icon-twitter:before {
+  content: "\e901";
 }
 
 .icon-quote:before {
