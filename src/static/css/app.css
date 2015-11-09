@@ -711,10 +711,6 @@ ul.list-link li a {
   padding-bottom: 30px;
 }
 
-.blog-post {
-  border-bottom: 1px solid #c2c2c2;
-}
-
 /* LARGE */
 @media only screen and (min-width: 64.063em){
   .embedded {
@@ -1298,10 +1294,6 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   .people-details .section-person >:first-child p:first-of-type {
     font-size: 25px;
   }
-  #blog .hero .slogan {
-    padding-top: 160px;
-    padding-bottom: 105px;
-  }
 }
 
 /* EXTRA LARGE */
@@ -1338,29 +1330,90 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   font-size: 14px;
 }
 
+/**********/
+/* BLOG */
+
+.blog-post {
+  border-bottom: 1px solid #c2c2c2;
+}
+
 .blog-content > p:first-of-type {
   border-left: 6px solid #027180;
   padding-left: 20px;
-  font-size: 25px;
+  font-size: 18px;
 }
 
 blockquote:first-of-type {
-  float: right;
-  width: 50%;
   background-color: #027180;
   color: #FFFFFF;
   padding: 40px;
-  margin-top: 0;
+  margin-left: 0;
   margin-right: 0;
 }
 
 blockquote:first-of-type > p {
   font-style: italic;
-  font-size: 25px;
+  font-size: 18px;
   margin: 0;
 }
 
 blockquote:first-of-type > .icon-quote {
-  float: right;
+  display: block;
+  text-align: right;
   font-size: 40px;
+}
+
+.some-share {
+  margin-bottom: 15px;
+}
+
+.some-share > div {
+  display: inline-block;
+  height: 40px;
+  box-sizing: content-box;
+}
+
+.some-share .icon-facebook {
+  font-size: 40px;
+}
+
+.some-share .icon-twitter:before,
+.some-share .icon-facebook:before {
+  font-size: 40px;
+}
+
+.some-share > div:not(:last-child) {
+  border-right: 1px solid #037a80;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 25px;
+}
+
+.some-share > div:last-child {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* MEDIUM */
+@media only screen and (min-width: 40.063em) {
+  #blog .hero .slogan {
+    padding-top: 160px;
+    padding-bottom: 105px;
+  }
+  .blog-content > p:first-of-type,
+  blockquote:first-of-type > p {
+    font-size: 25px;
+  }
+}
+
+/* LARGE */
+@media only screen and (min-width: 64.063em) {
+  blockquote:first-of-type {
+    float: right;
+    width: 50%;
+    margin-top: 0;
+    margin-right: 0;
+  }
 }

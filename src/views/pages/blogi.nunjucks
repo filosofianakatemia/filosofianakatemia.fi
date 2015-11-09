@@ -42,11 +42,17 @@
       <div class="blog-content">
         {{ blog.content | safe }}
       </div>
-      <div class="right-aligned">
-        <button onclick="app.fbShareBlog('{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
-          Facebook
-        </button>
-        <button onclick="app.twitterShareBlog('{{ blog.path }}', '{{ blog.title }}')">Twitter</button>
+      <div class="right-aligned some-share">
+        <div>
+          <a href onclick="app.fbShareBlog('{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
+            <span class="icon-facebook"></span>
+          </a>
+        </div>
+        <div>
+          <a href onclick="app.twitterShareBlog('{{ blog.path }}', '{{ blog.title }}')">
+            <span class="icon-twitter"></span>
+          </a>
+        </div>
       </div>
     </div>
     {% endfor %}
