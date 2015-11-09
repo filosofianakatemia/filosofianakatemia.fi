@@ -9,7 +9,7 @@
     if (typeof Foundation !== undefined) Foundation.libs.topbar.toggle();
   };
 
-  app.fbShareBlog = function(path, title, picture) {
+  app.facebookShareBlog = function(path, title, picture) {
     FB.ui(
     {
       method: 'share',

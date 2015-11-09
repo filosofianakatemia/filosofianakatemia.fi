@@ -44,7 +44,7 @@
       </div>
       <div class="right-aligned some-share">
         <div>
-          <a href onclick="app.fbShareBlog('{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
+          <a href onclick="app.facebookShareBlog('{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
             <span class="icon-facebook"></span>
           </a>
         </div>
