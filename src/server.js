@@ -27,7 +27,7 @@ var path = require('path');
 var request = require('superagent');
 var thunkify = require('thunkify');
 var get = thunkify(request.get);
-var markdownParser = require('markdown-it')({breaks: true});
+var markdownParser = require('markdown-it')({breaks: true, linkify: true});
 
 // Open links to new tab.
 // https://github.com/markdown-it/markdown-it/blob/master/docs/architecture.md#renderer
