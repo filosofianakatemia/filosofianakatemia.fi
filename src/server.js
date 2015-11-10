@@ -157,7 +157,7 @@ app.use(route.get('/palvelut', palvelut));
 app.use(route.get('/ihmiset', ihmiset));
 app.use(route.get('/tutkimus', tutkimus));
 app.use(route.get('/blogi', blogi));
-app.use(route.get('/blogi/:path', blogText));
+app.use(route.get('/blogi/:path', blogiTeksti));
 
 app.use(route.get('/ihmiset/aleksej', aleksej));
 app.use(route.get('/ihmiset/emilia', emilia));
@@ -281,7 +281,7 @@ function *blogi() {
   this.body = yield this.render('pages/blogi', context);
 }
 
-function *blogText(path) {
+function *blogiTeksti(path) {
   /*jslint validthis: true */
   console.log('GET /blogi/' + path);
   var context = {};
