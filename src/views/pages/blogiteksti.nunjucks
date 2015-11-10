@@ -1,7 +1,7 @@
 {% extends "base.nunjucks" %}
-{% block title %}{{ super() }}  | Blogi | {{ true}}{% endblock %}
+{% block title %}{{ super() }}  | Blogi | {{ blog.title }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
-{% block ogtitle %}{{ super() }} | Blogi | {{ true}}{% endblock %}
+{% block ogtitle %}{{ super() }} | Blogi | {{ blog.title }}{% endblock %}
 {% block bodyattrs %}class="blog-text"{% endblock %}
 
 {% block topbar %}
