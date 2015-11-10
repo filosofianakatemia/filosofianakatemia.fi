@@ -40,11 +40,12 @@
         <img src="{{ blog.picture }}"/>
       </div>
       <div class="blog-content">
+        <p>{{ blog.ingress }}</p>
         {{ blog.content | safe }}
       </div>
       <div class="right-aligned some-share">
         <div>
-          <a href onclick="app.facebookShareBlog('{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
+          <a href onclick="app.facebookShareBlog('{{ blog.ingress }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
             <span class="icon-facebook"></span>
           </a>
         </div>

@@ -28,6 +28,7 @@ var request = require('superagent');
 var thunkify = require('thunkify');
 var get = thunkify(request.get);
 var markdownParser = require('markdown-it')({breaks: true, linkify: true});
+var jsdom = require('jsdom').jsdom;
 
 // Open links to new tab.
 // https://github.com/markdown-it/markdown-it/blob/master/docs/architecture.md#renderer
@@ -229,7 +230,10 @@ function *tutkimus() {
 
 function renderBlog(blogData, tags) {
   var blog = {title: blogData.title};
-  blog.content = markdownParser.render(blogData.content);
+  var content = markdownParser.render(blogData.content);
+  var spliceResult = spliceIngressFromContent(content);
+  blog.content = spliceResult.content;
+  blog.ingress = spliceResult.description;
   if (blogData.relationships && blogData.relationships.tags) {
     for (var j = 0; j < blogData.relationships.tags.length; j++) {
       var tag = data.getItemByUUID(tags, blogData.relationships.tags[j]);
@@ -243,6 +247,18 @@ function renderBlog(blogData, tags) {
   blog.published = blogData.visibility.published;
   blog.path = blogData.visibility.path;
   return blog;
+}
+
+function spliceIngressFromContent(htmlText) {
+  // Create DOM from HTML string.
+  var contentDocument = jsdom(htmlText);
+  var bodyElement = contentDocument.getElementsByTagName('body')[0];
+  var ingressNode = bodyElement.firstChild;
+  bodyElement.removeChild(ingressNode);
+  return {
+    content: bodyElement.innerHTML,
+    description: ingressNode.innerHTML
+  };
 }
 
 function *blogi() {

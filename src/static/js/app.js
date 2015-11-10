@@ -9,14 +9,15 @@
     if (typeof Foundation !== undefined) Foundation.libs.topbar.toggle();
   };
 
-  app.facebookShareBlog = function(path, title, picture) {
+  app.facebookShareBlog = function(ingress, path, title, pictureUrl) {
+    event.preventDefault();
     FB.ui(
     {
       method: 'share',
       href: 'https://filosofianakatemia.fi/blogi' + path,
-      picture: picture,
+      picture: pictureUrl,
       title: title,
-      description: 'TODO: ingress'
+      description: ingress
     },
     function(/*response*/) {
       return null;
