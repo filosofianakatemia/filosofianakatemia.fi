@@ -24,11 +24,9 @@
 {% endblock %}
 
 {% block main %}
-  <span>{{ blog.published | d.M.yyyy }}</span>
-  <span>{{ blog.author }}</span>
-  <h1>{{ blog.title }}</h1>
-  <img src="{{ blog.picture }}"/>
-  {{ blog.content | safe }}
+<div class="section separate">
+  {% include 'partials/blogpost.nunjucks' %}
+</div>
 {% endblock %}
 
 {% block footer %}

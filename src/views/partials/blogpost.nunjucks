@@ -1,0 +1,23 @@
+<div class="left-aligned medium-8 medium-offset-2 blog-post">
+  <div>{{ blog.published | d.M.yyyy }} | {{ blog.author }}</div>
+  <h1><a href="/blogi/{{ blog.path }}">{{ blog.title }}</a></h1>
+  <div class="head-shot">
+    <img src="{{ blog.picture }}"/>
+  </div>
+  <div class="blog-content">
+    <p>{{ blog.ingress }}</p>
+    {{ blog.content | safe }}
+  </div>
+  <div class="right-aligned some-share">
+    <div>
+      <a href onclick="app.facebookShareBlog('{{ blog.ingress }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
+        <span class="icon-facebook"></span>
+      </a>
+    </div>
+    <div>
+      <a href onclick="app.twitterShareBlog('{{ blog.path }}', '{{ blog.title }}')">
+        <span class="icon-twitter"></span>
+      </a>
+    </div>
+  </div>
+</div>
