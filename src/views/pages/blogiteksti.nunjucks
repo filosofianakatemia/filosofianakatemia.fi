@@ -1,7 +1,13 @@
 {% extends "base.nunjucks" %}
-{% block title %}{{ super() }}  | Blogi | {{ blog.title }}{% endblock %}
-{% block ogtype %}{{ super() }}{% endblock %}
+{% block title %}{{ super() }} | Blogi | {{ blog.title }}{% endblock %}
 {% block ogtitle %}{{ super() }} | Blogi | {{ blog.title }}{% endblock %}
+{% block ogtype %}article{% endblock %}
+{% block ogdescription %}{{ blog.ingress }}{% endblock %}
+{% block ogurl %}https://filosofianakatemia.fi/blogi/{{ blog.path }}{% endblock %}
+{% block ogimages %}
+<meta property="og:image:url" content="{{ blog.picture }}" />
+<meta property="og:image:secure_url" content="{{ blog.picture }}" />
+{% endblock %}
 {% block bodyattrs %}class="blog-text"{% endblock %}
 
 {% block topbar %}
