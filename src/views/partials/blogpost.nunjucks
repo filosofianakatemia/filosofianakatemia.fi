@@ -1,6 +1,13 @@
 <div class="left-aligned medium-8 medium-offset-2 blog-post">
   <div>{{ blog.published | d.M.yyyy }} | {{ blog.author }}</div>
-  <h1><a href="/blogi/{{ blog.path }}">{{ blog.title }}</a></h1>
+  <h1>
+  {% if listView %}
+    {# Add link to the single blog page #}
+    <a href="/blogi/{{ blog.path }}">{{ blog.title }}</a>
+  {% else %}
+    {{ blog.title }}
+  {% endif %}
+  </h1>
   <div class="head-shot">
     <img src="{{ blog.picture }}"/>
   </div>

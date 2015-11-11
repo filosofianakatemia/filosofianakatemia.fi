@@ -33,6 +33,7 @@
 {% block main %}
 <div class="section separate">
   {% for blog in blogs %}
+    {% set listView = true %}
     {% include 'partials/blogpost.nunjucks' %}
   {% endfor %}
 </div>
