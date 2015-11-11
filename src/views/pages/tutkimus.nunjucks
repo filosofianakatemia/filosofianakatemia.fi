@@ -1,6 +1,6 @@
 {% extends "base.nunjucks" %}
 {% set pageName = 'tutkimus' %}
-{% block title %}{{ super() }}  | Tutkimus{% endblock %}
+{% block title %}{{ super() }} | Tutkimus{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogtitle %}{{ super() }} | Tutkimus{% endblock %}
 {% block description %}Filosofian Akatemian valmennukset pohjautuvat tekem&auml;&auml;mme akateemiseen huippututkimukseen.{% endblock %}

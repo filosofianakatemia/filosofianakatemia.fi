@@ -1,6 +1,6 @@
 {% extends "base.nunjucks" %}
 {% set pageName = 'palvelut' %}
-{% block title %}{{ super() }}  | Palvelut{% endblock %}
+{% block title %}{{ super() }} | Palvelut{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogtitle %}{{ super() }} | Palvelut{% endblock %}
 {% block description %}Sis&auml;isen motivaation kehityspolku antaa ty&ouml;kaluja koko ty&ouml;yhteis&ouml;lle ty&ouml;hyvinvoinnin ja tuottavuuden parantamiseen.{% endblock %}
