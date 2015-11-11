@@ -32,6 +32,7 @@
 {% block main %}
 <div class="section separate">
   {% include 'partials/blogpost.nunjucks' %}
+  <div class="fb-comments" data-href="https://filosofianakatemia.fi/blogi/{{ blog.path }}" data-numposts="5"></div>
 </div>
 {% endblock %}
 
