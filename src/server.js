@@ -158,6 +158,7 @@ app.use(route.get('/ihmiset', ihmiset));
 app.use(route.get('/tutkimus', tutkimus));
 app.use(route.get('/blogi', blogi));
 app.use(route.get('/blogi/:path', blogiTeksti));
+app.use(route.get('/blogi/sivu/:number', blogiSivu));
 
 app.use(route.get('/ihmiset/aleksej', aleksej));
 app.use(route.get('/ihmiset/emilia', emilia));
@@ -261,24 +262,67 @@ function spliceIngressFromContent(htmlText) {
   };
 }
 
-function *blogi() {
-  /*jslint validthis: true */
-  console.log('GET /blogi');
-  var context = {};
+function *getBlogs() {
+  var blogs = [];
   var latestData = yield data.getLatest(latestInfo);
   if (latestData && latestData.tags) {
     var blogTag = data.getItemByTitle(latestData.tags, 'blogi');
     if (blogTag !== undefined && latestData.notes) {
       console.log('getting blogs');
-      var blogs = data.getItemsByTagUUID(latestData.notes, blogTag.uuid);
-      context.blogs = [];
-      for (var i = 0; i < blogs.length; i++) {
-        var blog = renderBlog(blogs[i], latestData.tags);
-        context.blogs.push(blog);
+      var unrenderedBlogs = data.getItemsByTagUUID(latestData.notes, blogTag.uuid);
+      for (var i = 0; i < unrenderedBlogs.length; i++) {
+        var blog = renderBlog(unrenderedBlogs[i], latestData.tags);
+        blogs.push(blog);
       }
     }
   }
+  return blogs;
+}
+
+function *blogi() {
+  /*jslint validthis: true */
+  console.log('GET /blogi');
+  var blogs = yield getBlogs();
+  var context = {
+    blogs: blogs.slice(0, 5),
+    firstPage: true
+  };
+  if (context.blogs.length <= 5) {
+    context.lastPage = true;
+  } else {
+    context.nextPageNumber = 2;
+  }
   this.body = yield this.render('pages/blogi', context);
+}
+
+function *blogiSivu(number) {
+  /*jslint validthis: true */
+  console.log('GET /blogi');
+  if (number && !isNaN(number)) {
+    number = parseInt(number);
+    if (number === 0 || number === 1) {
+      // Redirect to the first page.
+      this.redirect('/blogi');
+    } else {
+      // Pages #2...#n.
+      var blogs = yield getBlogs();
+      var sliceStartIndex = --number * 5;  // Adjust start position.
+      var sliceEndIndex = sliceStartIndex + 5;
+      if (sliceStartIndex <= blogs.length) {
+        // There are blog posts left for the given page number.
+        var context = {
+          blogs: blogs.slice(sliceStartIndex, sliceEndIndex),
+          previousPageNumber: number - 1
+        };
+        if (sliceEndIndex >= context.blogs.length) {
+          context.lastPage = true;
+        } else {
+          context.nextPageNumber = number + 1;
+        }
+        this.body = yield this.render('pages/blogi', context);
+      }
+    }
+  }
 }
 
 function *blogiTeksti(path) {
