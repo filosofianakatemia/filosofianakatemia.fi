@@ -102,6 +102,23 @@
         </configuration>
       </plugin>
       <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.4.0</version>        
+        <executions>
+          <execution>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <executable>curl</executable>
+          <commandlineArgs>https://ext.md/api/public/filosofian-akatemia -o ${basedir}/src/data-devel.json</commandlineArgs>
+        </configuration>
+      </plugin>
+      <plugin>
         <groupId>org.jolokia</groupId>
         <artifactId>docker-maven-plugin</artifactId>
         <version>0.13.3</version>
@@ -357,24 +374,14 @@
             <fileset>
               <directory>${basedir}/src/node_modules</directory>
             </fileset>
+            <fileset>
+              <directory>${basedir}/src</directory>
+              <includes>
+                <include>data-devel.json</include>
+              </includes>
+            </fileset>
           </filesets>
         </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>exec-maven-plugin</artifactId>
-        <groupId>org.codehaus.mojo</groupId>
-        <executions>
-          <execution>
-            <id>prepare-test-resources</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>exec</goal>
-            </goals>
-            <configuration>
-              <executable>${basedir}/src/prepare-test-resources.sh</executable>
-            </configuration>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>

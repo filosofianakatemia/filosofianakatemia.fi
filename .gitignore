@@ -11,3 +11,4 @@ src/node_modules/
 # Ignore Sublime Text files
 *.sublime-workspace
 
+src/data-devel.json
