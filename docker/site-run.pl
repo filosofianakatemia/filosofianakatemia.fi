@@ -4,4 +4,4 @@
 $SIG{TERM} = sub {
   die "exiting site...\n"
 };
-system "/usr/local/bin/node server.js /etc/extendedmind/site/filosofianakatemia-config.js";
+system "/usr/local/bin/node index.js /etc/extendedmind/site/filosofianakatemia-config.js";

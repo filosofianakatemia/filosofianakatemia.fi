@@ -2,6 +2,6 @@
 src = "../templates/site/fiak-site-config.js.tmpl"
 dest = "/etc/extendedmind/site/filosofianakatemia-config.js"
 keys = [
-    "/filosofianakatemia/backend",
+    "/extendedmind/site/backendsearch",
     "/filosofianakatemia/backendcollective"
 ]

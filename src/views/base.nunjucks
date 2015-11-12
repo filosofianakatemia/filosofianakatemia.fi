@@ -21,9 +21,12 @@
   <meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/logo-fill-and-name.png" />
   <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/logo-fill-and-name.png" />
 
-  <link rel="stylesheet" href="/static/css/normalize.css">
-  <link rel="stylesheet" href="/static/css/foundation.min.css">
-  <link rel="stylesheet" href="/static/css/app.css">
+  {% if development %}
+  <link rel="stylesheet/less" href="/static/less/site.less"/>
+  <script src="/static/js/less.js"></script>
+  {% else %}
+  <link rel="stylesheet" href="/static/css/site.min.css" >
+  {% endif %}
 
   <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">

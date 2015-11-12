@@ -3,7 +3,6 @@
 
 const siteutils = require('../node_modules/extendedmind-siteutils/transpile/index.js');
 const route = siteutils.koaRoute;
-const nunjucks = siteutils.koaNunjucks;
 const path = require('path');
 const request = require('superagent-promise')(require('superagent'), Promise);
 const markdownParser = require('markdown-it')({breaks: true, linkify: true});
@@ -13,25 +12,82 @@ module.exports = (config, app, backendApi) => {
 
   const backendClient = siteutils.extendedmind(backendApi);
 
-  const render = nunjucks({
+  // CONFIGURE NUNJUCKS
+
+  const nunjucks = siteutils.koaNunjucks({
     autoescape: true,
     ext: 'nunjucks',
     path: path.join(__dirname, '../views'),
     noCache: config.debug,
     watch: config.debug,
     dev: config.debug
-  },
-  [{name: 'development', value: config.debug}]);
-
-  const nunjucksEnv = render.env;
-  nunjucksEnv.addFilter('d.M.yyyy', function(timestamp) {
+  });
+  nunjucks.env.addGlobal('development', config.debug);
+  nunjucks.env.addFilter('d.M.yyyy', function(timestamp) {
     // http://stackoverflow.com/a/3552493
     // https://docs.angularjs.org/api/ng/filter/date
     let date = new Date(timestamp);
     return date.getDate() + '.' + (1 + date.getMonth()) + '.' + date.getFullYear();
   });
+  const render = nunjucks.render;
 
-  // route middleware
+  // CONFIGURE MARKDOWN
+
+  // Open links to new tab.
+  // https://github.com/markdown-it/markdown-it/blob/master/docs/architecture.md#renderer
+
+  // Remember old renderer, if overriden, or proxy to default renderer
+  var defaultRender = markdownParser.renderer.rules.link_open || function(tokens, idx, options, env, self) {
+    return self.renderToken(tokens, idx, options);
+  };
+
+  markdownParser.renderer.rules.blockquote_close  = function() {
+    return '<span class="icon-quote"><span></blockquote>';
+  };
+
+  markdownParser.renderer.rules.link_open = function (tokens, idx, options, env, self) {
+    // If you are sure other plugins can't add `target` - drop check below
+    var aIndex = tokens[idx].attrIndex('target');
+    var hrefIndex = tokens[idx].attrIndex('href');
+    var hrefString = tokens[idx].attrs[hrefIndex][1];
+
+    if (!hrefString.startsWith('tel:') && !hrefString.startsWith('mailto:')) {
+      if (aIndex < 0) {
+        tokens[idx].attrPush(['target', '_blank']); // add new attribute
+      } else {
+        tokens[idx].attrs[aIndex][1] = '_blank';    // replace value of existing attr
+      }
+    }
+
+    // pass token to default renderer.
+    return defaultRender(tokens, idx, options, env, self);
+  };
+
+  var markdownParserContainer = require('markdown-it-container');
+  markdownParser.use(markdownParserContainer, 'left-align', {render: leftContainerRender});
+  markdownParser.use(markdownParserContainer, 'right-align', {render: rightContainerRender});
+  function leftContainerRender(tokens, idx) {
+    if (tokens[idx].nesting === 1) {
+        // opening tag
+        return '<div class="large-5 large-offset-1 left-aligned columns">\n';
+      } else {
+        // closing tag
+        return '</div>\n';
+      }
+    }
+    function rightContainerRender(tokens, idx) {
+      if (tokens[idx].nesting === 1) {
+        // opening tag
+        return '<div class="large-5 columns end person-details">' +
+        '<div class="show-for-large-up"><br/><br/></div>\n';
+      } else {
+        // closing tag
+        return '</div>\n';
+      }
+    }
+
+
+  // ROUTE MIDDLEWARE
 
   app.use(route.get('/', index));
   app.use(route.get('/palvelut', palvelut));
@@ -81,335 +137,230 @@ module.exports = (config, app, backendApi) => {
 
   async function blogi(ctx) {
     console.log('GET /blogi');
-    var blogs = yield getBlogs();
+    let unrenderedBlogs = await getUnrenderedBlogs();
+    let renderedBlogs = renderBlogs(unrenderedBlogs.slice(0, 5));
     var context = {
-      blogs: blogs.slice(0, 5),
+      blogs: renderedBlogs,
       firstPage: true
     };
-    if (context.blogs.length <= 5) {
+    if (unrenderedBlogs.length <= 5) {
       context.lastPage = true;
     } else {
       context.nextPageNumber = 2;
     }
-    this.body = yield this.render('pages/blogi', context);
+    ctx.body = render('pages/blogi', context);
   }
 
-
-
-
-
-
-
-SEURAAVAKSI:
-1. PITÄÄ MUOKATA EXTMD-DATA.JSÄ NIIN ETTÄ PARENT TAGIT MENEVÄT MYÖS OSAKSI KEYWORDS-TAULUKKOA
-2. SEN JÄLKEEN LISÄTÄ FILTTEREIHIN "KEYWORD"-TYYPPI, JOSSA VOI KÄYTTÄÄ #BLOGI KEYWORDIA
-3. SITTEN VOI KORAVAT GETBLOGS-METODIN KOKONAAN UUDELLA BACKENDILLÄ
-
-
-
-
-
-
-
-
-  function *blogiSivu(number) {
-    /*jslint validthis: true */
+  async function blogiSivu(ctx, number) {
     console.log('GET /blogi/sivu/' + number);
     if (number && !isNaN(number)) {
       number = parseInt(number);
       if (number === 0 || number === 1) {
         // Redirect to the first page.
-        this.redirect('/blogi');
+        ctx.redirect('/blogi');
       } else {
         // Pages #2...#n.
-        var blogs = yield getBlogs();
-        var sliceStartIndex = --number * 5;  // Adjust start position.
-        var sliceEndIndex = sliceStartIndex + 5;
-        if (sliceStartIndex <= blogs.length) {
+        let unrenderedBlogs = await getUnrenderedBlogs();
+        const sliceStartIndex = 5 * (number-1);
+        if (sliceStartIndex < unrenderedBlogs.length) {
           // There are blog posts left for the given page number.
+          let renderedBlogs = renderBlogs(unrenderedBlogs.slice(sliceStartIndex, 5));
           var context = {
-            blogs: blogs.slice(sliceStartIndex, sliceEndIndex),
+            blogs: renderedBlogs,
             previousPageNumber: number - 1
           };
-          if (sliceEndIndex >= context.blogs.length) {
-            context.lastPage = true;
-          } else {
+          if (sliceStartIndex + 5 < unrenderedBlogs.length){
+            // There is also a next page
             context.nextPageNumber = number + 1;
+          }else{
+            context.lastPage = true;
           }
-          this.body = yield this.render('pages/blogi', context);
+          ctx.body = render('pages/blogi', context);
         }
       }
     }
   }
 
-  function *blogiTeksti(path) {
-    /*jslint validthis: true */
+  async function blogiTeksti(ctx, path) {
     console.log('GET /blogi/' + path);
-    var context = {};
-    var latestData = yield data.getLatest(latestInfo);
-    if (latestData && latestData.notes && latestData.tags) {
-      var blog = data.getItemByPath(latestData.notes, path);
-      context.blog = renderBlog(blog, latestData.tags);
+    let faPublicItems = await backendClient.getPublicItems('filosofian-akatemia');
+    let publicNote = faPublicItems.getNote(path);
+    if (publicNote){
+      // Make sure the note contains the blogi keyword
+      if (publicNote.keywords){
+        for (let i=0; i<publicNote.keywords.length; i++){
+          if (publicNote.keywords[i].title === 'blogi'){
+            let context = {
+              blog: renderBlogPost(publicNote)
+            };
+            ctx.body = render('pages/blogiteksti', context);
+            break;
+          }
+        }
+      }
     }
-    this.body = yield this.render('pages/blogiteksti', context);
   }
 
-  function *aleksej() {
-    /*jslint validthis: true */
+  async function aleksej(ctx) {
     console.log('GET /ihmiset/aleksej');
-    var context = getPersonContext();
-    var items = yield data.getLatest(latestInfo);
-    var notes;
-    if (items) {
-      notes = items.notes;
-    }
-    context.personDescription = getPersonDescription(notes, 'aleksej-fedotov');
-    yield this.render('pages/aleksej', context);
+    const personContext = await getPersonContext('aleksej-fedotov');
+    ctx.body = render('pages/aleksej', personContext);
   }
-  function *emilia() {
-    /*jslint validthis: true */
+  async function emilia(ctx) {
     console.log('GET /ihmiset/emilia');
-    var context = getPersonContext();
-    var items = yield data.getLatest(latestInfo);
-    var notes;
-    if (items) {
-      notes = items.notes;
-    }
-    context.personDescription = getPersonDescription(notes, 'emilia-lahti');
-    yield this.render('pages/emilia', context);
+    const personContext = await getPersonContext('emilia-lahti');
+    ctx.body = render('pages/emilia', personContext);
   }
-  function *frank() {
-    /*jslint validthis: true */
+  async function frank(ctx) {
     console.log('GET /ihmiset/frank');
-    var context = getPersonContext();
-    var items = yield data.getLatest(latestInfo);
-    var notes;
-    if (items) {
-      notes = items.notes;
-    }
-    context.personDescription = getPersonDescription(notes, 'frank-martela');
-    yield this.render('pages/frank', context);
+    const personContext = await getPersonContext('frank-martela');
+    ctx.body = render('pages/frank', personContext);
   }
-  function *iida() {
-    /*jslint validthis: true */
+  async function iida(ctx) {
     console.log('GET /ihmiset/iida');
-    var context = getPersonContext();
-    var items = yield data.getLatest(latestInfo);
-    var notes;
-    if (items) {
-      notes = items.notes;
-    }
-    context.personDescription = getPersonDescription(notes, 'iida-makikallio');
-    yield this.render('pages/iida', context);
+    const personContext = await getPersonContext('iida-makikallio');
+    ctx.body = render('pages/iida', personContext);
   }
-  function *joonas() {
-    /*jslint validthis: true */
+  async function joonas(ctx) {
     console.log('GET /ihmiset/joonas');
-    var context = getPersonContext();
-    var items = yield data.getLatest(latestInfo);
-    var notes;
-    if (items) {
-      notes = items.notes;
-    }
-    context.personDescription = getPersonDescription(notes, 'joonas-pesonen');
-    yield this.render('pages/joonas', context);
+    const personContext = await getPersonContext('joonas-pesonen');
+    ctx.body = render('pages/joonas', personContext);
   }
-  function *jp() {
-    /*jslint validthis: true */
+  async function jp(ctx) {
     console.log('GET /ihmiset/jp');
-    var context = getPersonContext();
-    var items = yield data.getLatest(latestInfo);
-    var notes;
-    if (items) {
-      notes = items.notes;
-    }
-    context.personDescription = getPersonDescription(notes, 'jukka-pekka-salo');
-    yield this.render('pages/jp', context);
+    const personContext = await getPersonContext('jukka-pekka-salo');
+    ctx.body = render('pages/jp', personContext);
   }
-  function *karoliina() {
-    /*jslint validthis: true */
+  async function karoliina(ctx) {
     console.log('GET /ihmiset/karoliina');
-    var context = getPersonContext();
-    var items = yield data.getLatest(latestInfo);
-    var notes;
-    if (items) {
-      notes = items.notes;
-    }
-    context.personDescription = getPersonDescription(notes, 'karoliina-jarenko');
-    yield this.render('pages/karoliina', context);
+    const personContext = await getPersonContext('karoliina-jarenko');
+    ctx.body = render('pages/karoliina', personContext);
   }
-  function *lauri() {
-    /*jslint validthis: true */
+  async function lauri(ctx) {
     console.log('GET /ihmiset/lauri');
-    var context = getPersonContext();
-    var items = yield data.getLatest(latestInfo);
-    var notes;
-    if (items) {
-      notes = items.notes;
-    }
-    context.personDescription = getPersonDescription(notes, 'lauri-jarvilehto');
-    this.body = yield this.render('pages/lauri', context);
+    const personContext = await getPersonContext('lauri-jarvilehto');
+    ctx.body = render('pages/lauri', personContext);
   }
-  function *maria() {
-    /*jslint validthis: true */
+  async function maria(ctx) {
     console.log('GET /ihmiset/maria');
-    var context = getPersonContext();
-    var items = yield data.getLatest(latestInfo);
-    var notes;
-    if (items) {
-      notes = items.notes;
-    }
-    context.personDescription = getPersonDescription(notes, 'maria-ruotsalainen');
-    yield this.render('pages/maria', context);
+    const personContext = await getPersonContext('maria-ruotsalainen');
+    ctx.body = render('pages/maria', personContext);
   }
-  function *peter() {
-    /*jslint validthis: true */
+  async function peter(ctx) {
     console.log('GET /ihmiset/peter');
-    var context = getPersonContext();
-    var items = yield data.getLatest(latestInfo);
-    var notes;
-    if (items) {
-      notes = items.notes;
-    }
-    context.personDescription = getPersonDescription(notes, 'peter-kentta');
-    yield this.render('pages/peter', context);
+    const personContext = await getPersonContext('peter-kentta');
+    ctx.body = render('pages/peter', personContext);
   }
-  function *reima() {
-    /*jslint validthis: true */
+  async function reima(ctx) {
     console.log('GET /ihmiset/reima');
-    var context = getPersonContext();
-    var items = yield data.getLatest(latestInfo);
-    var notes;
-    if (items) {
-      notes = items.notes;
-    }
-    context.personDescription = getPersonDescription(notes, 'reima-launonen');
-    yield this.render('pages/reima', context);
+    const personContext = await getPersonContext('reima-launonen');
+    ctx.body = render('pages/reima', personContext);
   }
-  function *santeri() {
-    /*jslint validthis: true */
+  async function santeri(ctx) {
     console.log('GET /ihmiset/santeri');
-    var context = getPersonContext();
-    var items = yield data.getLatest(latestInfo);
-    var notes;
-    if (items) {
-      notes = items.notes;
-    }
-    context.personDescription = getPersonDescription(notes, 'santeri-laner');
-    yield this.render('pages/santeri', context);
+    const personContext = await getPersonContext('santeri-laner');
+    ctx.body = render('pages/santeri', personContext);
   }
-  function *selina() {
-    /*jslint validthis: true */
+  async function selina(ctx) {
     console.log('GET /ihmiset/selina');
-    var context = getPersonContext();
-    var items = yield data.getLatest(latestInfo);
-    var notes;
-    if (items) {
-      notes = items.notes;
-    }
-    context.personDescription = getPersonDescription(notes, 'selina-bakir');
-    this.body = yield this.render('pages/selina', context);
+    const personContext = await getPersonContext('selina-bakir');
+    ctx.body = render('pages/selina', personContext);
   }
-  function *sonja() {
-    /*jslint validthis: true */
+  async function sonja(ctx) {
     console.log('GET /ihmiset/sonja');
-    var context = getPersonContext();
-    var items = yield data.getLatest(latestInfo);
-    var notes;
-    if (items) {
-      notes = items.notes;
-    }
-    context.personDescription = getPersonDescription(notes, 'sonja-stromsholm');
-    yield this.render('pages/sonja', context);
+    const personContext = await getPersonContext('sonja-stromsholm');
+    ctx.body = render('pages/sonja', personContext);
   }
-  function *tapani() {
-    /*jslint validthis: true */
+  async function tapani(ctx) {
     console.log('GET /ihmiset/tapani');
-    var context = getPersonContext();
-    var items = yield data.getLatest(latestInfo);
-    var notes;
-    if (items) {
-      notes = items.notes;
-    }
-    context.personDescription = getPersonDescription(notes, 'tapani-riekki');
-    yield this.render('pages/tapani', context);
+    const personContext = await getPersonContext('tapani-riekki');
+    ctx.body = render('pages/tapani', personContext);
   }
-  function *timo() {
-    /*jslint validthis: true */
+  async function timo(ctx) {
     console.log('GET /ihmiset/timo');
-    var context = getPersonContext();
-    var items = yield data.getLatest(latestInfo);
-    var notes;
-    if (items) {
-      notes = items.notes;
-    }
-    context.personDescription = getPersonDescription(notes, 'timo-tiuraniemi');
-    yield this.render('pages/timo', context);
+    const personContext = await getPersonContext('timo-tiuraniemi');
+    ctx.body = render('pages/timo', personContext);
   }
-  function *villiam() {
-    /*jslint validthis: true */
+  async function villiam(ctx) {
     console.log('GET /ihmiset/villiam');
-    var context = getPersonContext();
-    var items = yield data.getLatest(latestInfo);
-    var notes;
-    if (items) {
-      notes = items.notes;
-    }
-    context.personDescription = getPersonDescription(notes, 'villiam-virkkunen');
-    yield this.render('pages/villiam', context);
+    const personContext = await getPersonContext('villiam-virkkunen');
+    ctx.body = render('pages/villiam', personContext);
   }
-
 
   // Helper functions
 
-  function renderBlog(blogData, tags) {
-    var blog = {title: blogData.title};
-    var content = markdownParser.render(blogData.content);
-    var spliceResult = spliceIngressFromContent(content);
-    blog.content = spliceResult.content;
-    blog.ingress = spliceResult.description;
-    if (blogData.relationships && blogData.relationships.tags) {
-      for (var j = 0; j < blogData.relationships.tags.length; j++) {
-        var tag = data.getItemByUUID(tags, blogData.relationships.tags[j]);
-        if (isAuthorTag(tag)) {
-          blog.author = getAuthorName(tag);
-          blog.picture = getAuthorPicturePath(tag);
+  async function getUnrenderedBlogs(){
+    let faPublicItems = await backendClient.getPublicItems('filosofian-akatemia');
+    return faPublicItems.getNotes([{type: "keyword", include: "blogi"}]);
+  }
+
+  function renderBlogs(unrenderedBlogs) {
+    let blogs = [];
+    for (let i=0; i<unrenderedBlogs.length; i++) {
+      blogs.push(renderBlogPost(unrenderedBlogs[i]));
+    }
+    return blogs;
+  }
+
+  function renderBlogPost(publicNote) {
+    let blog = {title: publicNote.title};
+    let noteHtml = markdownParser.render(publicNote.content);
+    let extractResult = extractIngressAndContentFromHtml(noteHtml);
+    blog.content = extractResult.content;
+    blog.ingress = extractResult.ingress;
+    if (publicNote.keywords && publicNote.keywords.length) {
+      for (let i=0; i<publicNote.keywords.length; i++) {
+        if (isAuthorTag(publicNote.keywords[i])) {
+          blog.author = getAuthorName(publicNote.keywords[i]);
+          blog.picture = getAuthorPicturePath(publicNote.keywords[i]);
           break;
         }
       }
     }
-    blog.published = blogData.visibility.published;
-    blog.path = blogData.visibility.path;
+    blog.published = publicNote.visibility.published;
+    blog.path = publicNote.visibility.path;
     return blog;
   }
 
-  function spliceIngressFromContent(htmlText) {
+  function extractIngressAndContentFromHtml(htmlText) {
     // Create DOM from HTML string.
-    var contentDocument = jsdom(htmlText);
-    var bodyElement = contentDocument.getElementsByTagName('body')[0];
-    var ingressNode = bodyElement.firstChild;
+    let contentDocument = jsdom(htmlText);
+    let bodyElement = contentDocument.getElementsByTagName('body')[0];
+    let ingressNode = bodyElement.firstChild;
     bodyElement.removeChild(ingressNode);
     return {
-      content: bodyElement.innerHTML,
-      description: ingressNode.innerHTML
+      ingress: ingressNode.innerHTML,
+      content: bodyElement.innerHTML
     };
   }
 
-  function *getBlogs() {
-    var blogs = [];
-    var latestData = yield data.getLatest(latestInfo);
-    if (latestData && latestData.tags) {
-      var blogTag = data.getItemByTitle(latestData.tags, 'blogi');
-      if (blogTag !== undefined && latestData.notes) {
-        console.log('getting blogs');
-        var unrenderedBlogs = data.getItemsByTagUUID(latestData.notes, blogTag.uuid);
-        for (var i = 0; i < unrenderedBlogs.length; i++) {
-          var blog = renderBlog(unrenderedBlogs[i], latestData.tags);
-          blogs.push(blog);
-        }
-      }
+  async function getPersonContext(personPath) {
+    let faPublicItems = await backendClient.getPublicItems('filosofian-akatemia');
+    let personNote = faPublicItems.getNote(personPath);
+    if (personNote){
+      return {
+        personQuote: true,
+        personDescription: markdownParser.render(personNote.content)
+      };
     }
-    return blogs;
+  }
+
+  function isAuthorTag(tag) {
+    return tag.title === 'frank';
+  }
+
+  function getAuthorName(tag) {
+    switch (tag.title) {
+      case 'frank':
+      return 'Frank Martela';
+    }
+  }
+
+  function getAuthorPicturePath(tag) {
+    switch (tag.title) {
+      case 'frank':
+      return 'https://filosofianakatemia.fi/static/img/frank-large.jpg';
+    }
   }
 
 }

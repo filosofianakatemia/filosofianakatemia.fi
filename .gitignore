@@ -4,6 +4,9 @@ target/
 # Ignore frontend site generated files
 src/node/
 src/node_modules/
+src/js/
+src/static/css/
+src/static/js/less.js
 
 # Ignore OSX DS store
 .DS_Store

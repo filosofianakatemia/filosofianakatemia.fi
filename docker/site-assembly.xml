@@ -7,9 +7,7 @@
       <outputDirectory>.</outputDirectory>
       <includes>
         <include>package.json</include>
-        <include>server.js</include>
-        <!-- TODO: Remove this when using actual backend -->
-        <include>notes.json</include>
+        <include>index.js</include>
       </includes>
     </fileSet>
     <fileSet>
