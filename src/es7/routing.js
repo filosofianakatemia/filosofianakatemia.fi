@@ -181,22 +181,30 @@ module.exports = (config, app, backendApi) => {
     }
   }
 
-  async function blogiTeksti(ctx, path) {
+  async function blogiTeksti(ctx, path) { // jshint ignore:line
     console.log('GET /blogi/' + path);
-    let faPublicItems = await backendClient.getPublicItems('filosofian-akatemia');
+    let faPublicItems = await backendClient.getPublicItems('filosofian-akatemia');  // jshint ignore:line
     let publicNote = faPublicItems.getNote(path);
-    if (publicNote){
-      // Make sure the note contains the blogi keyword
-      if (publicNote.keywords){
-        for (let i=0; i<publicNote.keywords.length; i++){
-          if (publicNote.keywords[i].title === 'blogi'){
-            let context = {
-              blog: renderBlogPost(publicNote)
-            };
-            ctx.body = render('pages/blogiteksti', context);
+
+    if (publicNote.keywords && publicNote.keywords.length) {
+      let keywordFound = false;
+      for (let i = 0; i < publicNote.keywords.length; i++) {
+        if (publicNote.keywords[i].title === 'blogi') {
+          keywordFound = true;
+          break;
+        } else if (publicNote.keywords[i].parent) {
+          let parentTag = faPublicItems._getTagByUUID(publicNote.keywords[i].parent);
+          if (parentTag && parentTag.title === 'blogi') {
+            keywordFound = true;
             break;
           }
         }
+      }
+      if (keywordFound) {
+        let context = {
+          blog: renderBlogPost(publicNote)
+        };
+        ctx.body = render('pages/blogiteksti', context);
       }
     }
   }
