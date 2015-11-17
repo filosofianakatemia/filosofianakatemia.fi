@@ -1,5 +1,5 @@
 <div class="left-aligned medium-8 medium-offset-2 blog-post">
-  <div>{{ blog.published | d.M.yyyy }} | {{ blog.author }}</div>
+  <div>{{ blog.published | d.M.yyyy }} | {{ blog.author if blog.author else "vieraskynä" }}</div>
   <h1>
   {% if listView %}
     {# Add link to the single blog page #}
@@ -8,11 +8,13 @@
     {{ blog.title }}
   {% endif %}
   </h1>
+  {% if blog.picture %}
   <div class="head-shot">
     <img src="{{ blog.picture }}"/>
   </div>
+  {% endif %}
   <div class="blog-content">
-    <p>{{ blog.ingress }}</p>
+    <p>{{ blog.ingress | safe }}</p>
     {{ blog.content | safe }}
   </div>
   <div class="right-aligned some-share">
