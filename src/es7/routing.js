@@ -164,7 +164,7 @@ module.exports = (config, app, backendApi) => {
         const sliceStartIndex = 5 * (number-1);
         if (sliceStartIndex < unrenderedBlogs.length) {
           // There are blog posts left for the given page number.
-          let renderedBlogs = renderBlogs(unrenderedBlogs.slice(sliceStartIndex, 5));
+          let renderedBlogs = renderBlogs(unrenderedBlogs.slice(sliceStartIndex, sliceStartIndex+5));
           var context = {
             blogs: renderedBlogs,
             previousPageNumber: number - 1
