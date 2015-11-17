@@ -354,20 +354,65 @@ module.exports = (config, app, backendApi) => {
   }
 
   function isAuthorTag(tag) {
-    return tag.title === 'frank';
+    if (tag.title === 'aleksej' || tag.title === 'frank' || tag.title === 'iida' || tag.title === 'joonas' ||
+        tag.title === 'karoliina' || tag.title === 'lauri' || tag.title === 'maria' ||
+        tag.title === 'santeri' || tag.title === 'selina' || tag.title === 'sonja' || tag.title === 'tapani')
+    {
+      return true;
+    }
   }
 
   function getAuthorName(tag) {
     switch (tag.title) {
+      case 'aleksej':
+      return 'Aleksej Fedotov';
       case 'frank':
       return 'Frank Martela';
+      case 'iida':
+      return 'Iida Mäkikallio';
+      case 'joonas':
+      return 'Joonas pesonen';
+      case 'karoliina':
+      return 'Karoliina Jarenko';
+      case 'lauri':
+      return 'Lauri Järvilehto';
+      case 'maria':
+      return 'Maria Ruotsalainen';
+      case 'santeri':
+      return 'Santer Lanér';
+      case 'selina':
+      return 'Selina Bakir';
+      case 'sonja':
+      return 'Sonja Strömsholm';
+      case 'tapani':
+      return 'Tapani Riekki';
     }
   }
 
   function getAuthorPicturePath(tag) {
     switch (tag.title) {
+      case 'aleksej':
+      return 'https://filosofianakatemia.fi/static/img/aleksej-large.jpg';
       case 'frank':
       return 'https://filosofianakatemia.fi/static/img/frank-large.jpg';
+      case 'iida':
+      return 'https://filosofianakatemia.fi/static/img/iida-large.jpg';
+      case 'joonas':
+      return 'https://filosofianakatemia.fi/static/img/joonas-large.jpg';
+      case 'karoliina':
+      return 'https://filosofianakatemia.fi/static/img/karoliina-large.jpg';
+      case 'lauri':
+      return 'https://filosofianakatemia.fi/static/img/lauri-large.jpg';
+      case 'maria':
+      return 'https://filosofianakatemia.fi/static/img/maria-large.jpg';
+      case 'santeri':
+      return 'https://filosofianakatemia.fi/static/img/santeri-large.jpg';
+      case 'selina':
+      return 'https://filosofianakatemia.fi/static/img/selina-large.jpg';
+      case 'sonja':
+      return 'https://filosofianakatemia.fi/static/img/sonja-large.jpg';
+      case 'tapani':
+      return 'https://filosofianakatemia.fi/static/img/tapani-large.jpg';
     }
   }
 
