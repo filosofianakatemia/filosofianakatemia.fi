@@ -1,53 +1,51 @@
 <div class="medium-10 small-centered blog-post column">
   <div class="row left-aligned blog-content">
-    <div class="column">
-      <div class="row byline">
-        <div class="column">
-          <span>{{ blog.published | d.M.yyyy }} | {{ blog.author if blog.author else "vieraskynä" }}</span>
-        </div>
+    <div class="row byline">
+      <div class="column">
+        <span>{{ blog.published | d.M.yyyy }} | {{ blog.author if blog.author else "vieraskynä" }}</span>
       </div>
-      <h1>
-      {% if listView %}
-        {# Add link to the single blog page #}
-        <a href="/blogi/{{ blog.path }}">{{ blog.title }}</a>
-      {% else %}
-        {{ blog.title }}
-      {% endif %}
-      </h1>
-      {% if blog.picture %}
-      <div class="head-shot">
-        <img src="{{ blog.picture }}"/>
-      </div>
-      {% endif %}
-      <div class="blog-content">
-        <p>{{ blog.ingress | safe }}</p>
-        {{ blog.content | safe }}
-      </div>
-      <div class="row some-row">
-        <div class="column">
-          {% if listView %}
-            <a href="/blogi/{{ blog.path }}#some-comment" class="some-involve font-bold">Osallistu keskusteluun<span class="icon-arrow-right"></span></a>
-          {% endif %}
-          <div class="{{ "right" if listView}} some-share">
-            <div>
-              <a href onclick="app.facebookShareBlog('{{ blog.ingress }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
-                <span class="icon-facebook"></span>
-              </a>
-            </div>
-            <div>
-              <a href onclick="app.twitterShareBlog('{{ blog.path }}', '{{ blog.title }}')">
-                <span class="icon-twitter"></span>
-              </a>
-            </div>
+    </div>
+    <h1>
+    {% if listView %}
+      {# Add link to the single blog page #}
+      <a href="/blogi/{{ blog.path }}">{{ blog.title }}</a>
+    {% else %}
+      {{ blog.title }}
+    {% endif %}
+    </h1>
+    {% if blog.picture %}
+    <div class="head-shot">
+      <img src="{{ blog.picture }}"/>
+    </div>
+    {% endif %}
+    <div class="blog-content">
+      <p>{{ blog.ingress | safe }}</p>
+      {{ blog.content | safe }}
+    </div>
+    <div class="row some-row">
+      <div class="column">
+        {% if listView %}
+          <a href="/blogi/{{ blog.path }}#some-comment" class="some-involve font-bold">Osallistu keskusteluun<span class="icon-arrow-right"></span></a>
+        {% endif %}
+        <div class="{{ "right" if listView}} some-share">
+          <div>
+            <a href onclick="app.facebookShareBlog('{{ blog.ingress }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
+              <span class="icon-facebook"></span>
+            </a>
+          </div>
+          <div>
+            <a href onclick="app.twitterShareBlog('{{ blog.path }}', '{{ blog.title }}')">
+              <span class="icon-twitter"></span>
+            </a>
           </div>
         </div>
       </div>
-      <div class="divider"></div>
-      {% if not listView %}
-        <div id="some-comment">
-          <div class="fb-comments" data-href="https://filosofianakatemia.fi/blogi/{{ blog.path }}" data-width="100%" data-numposts="5"></div>
-        </div>
-      {% endif %}
     </div>
+    <div class="divider"></div>
+    {% if not listView %}
+      <div id="some-comment">
+        <div class="fb-comments" data-href="https://filosofianakatemia.fi/blogi/{{ blog.path }}" data-width="100%" data-numposts="5"></div>
+      </div>
+    {% endif %}
   </div>
 </div>
