@@ -23,21 +23,30 @@
         <p>{{ blog.ingress | safe }}</p>
         {{ blog.content | safe }}
       </div>
-      <div class="{{ "right-aligned" if listView}} some-share">
-        <div>
-          <a href onclick="app.facebookShareBlog('{{ blog.ingress }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
-            <span class="icon-facebook"></span>
-          </a>
-        </div>
-        <div>
-          <a href onclick="app.twitterShareBlog('{{ blog.path }}', '{{ blog.title }}')">
-            <span class="icon-twitter"></span>
-          </a>
+      <div class="row some-row">
+        <div class="column">
+          {% if listView %}
+            <a href="/blogi/{{ blog.path }}#some-comment" class="some-involve font-bold">Osallistu keskusteluun<span class="icon-arrow-right"></span></a>
+          {% endif %}
+          <div class="{{ "right" if listView}} some-share">
+            <div>
+              <a href onclick="app.facebookShareBlog('{{ blog.ingress }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
+                <span class="icon-facebook"></span>
+              </a>
+            </div>
+            <div>
+              <a href onclick="app.twitterShareBlog('{{ blog.path }}', '{{ blog.title }}')">
+                <span class="icon-twitter"></span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="divider"></div>
       {% if not listView %}
-        <div class="fb-comments" data-href="https://filosofianakatemia.fi/blogi/{{ blog.path }}" data-width="100%" data-numposts="5"></div>
+        <div id="some-comment">
+          <div class="fb-comments" data-href="https://filosofianakatemia.fi/blogi/{{ blog.path }}" data-width="100%" data-numposts="5"></div>
+        </div>
       {% endif %}
     </div>
   </div>

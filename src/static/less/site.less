@@ -1354,11 +1354,13 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   h1 {
     line-height: 1;
   }
+  .byline,
+  #some-comment {
+    padding-top: 40px;
+    padding-top: 40px;
+  }
   .divider {
     border-bottom: 1px solid #c2c2c2;
-  }
-  .byline {
-    padding-top: 40px;
   }
 }
 
@@ -1388,39 +1390,52 @@ blockquote:first-of-type > .icon-quote {
   font-size: 40px;
 }
 
-.some-share {
-  margin-bottom: 15px;
+.some-row {
   padding-top: 15px;
   padding-bottom: 15px;
+  & > div {
+    margin-bottom: 15px;
+  }
+  .some-involve {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 }
 
-.some-share > div {
-  display: inline-block;
-  height: 40px;
-  box-sizing: content-box;
-}
-
-.some-share .icon-facebook {
-  font-size: 40px;
-}
-
-.some-share .icon-twitter:before,
-.some-share .icon-facebook:before {
-  font-size: 40px;
-}
-
-.some-share > div:not(:last-child) {
-  border-right: 1px solid #037a80;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 25px;
-}
-
-.some-share > div:last-child {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
+.some-share {
+  & > div {
+    display: inline-block;
+    height: 40px;
+    box-sizing: content-box;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    &:first-child {
+      padding-left: 20px;
+    }
+    &:not(:last-child) {
+      border-right: 1px solid #037a80;
+      padding-right: 25px;
+    }
+  }
+  &.right > div {
+    &:not(:last-child) {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 20px;
+    }
+  }
+  & .icon-facebook {
+    font-size: 40px;
+  }
+  & .icon-twitter:before,
+  .some-share .icon-facebook:before {
+    font-size: 40px;
+  }
 }
 
 /* MEDIUM */
