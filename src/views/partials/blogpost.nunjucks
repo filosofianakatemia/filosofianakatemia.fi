@@ -17,7 +17,7 @@
     <p>{{ blog.ingress | safe }}</p>
     {{ blog.content | safe }}
   </div>
-  <div class="right-aligned some-share">
+  <div class="{{ "right-aligned" if listView }} some-share">
     <div>
       <a href onclick="app.facebookShareBlog('{{ blog.ingress }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
         <span class="icon-facebook"></span>
