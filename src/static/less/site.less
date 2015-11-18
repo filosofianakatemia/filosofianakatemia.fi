@@ -1361,6 +1361,7 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   }
   .divider {
     border-bottom: 1px solid #c2c2c2;
+    margin-top: 15px;
   }
 }
 
@@ -1393,15 +1394,15 @@ blockquote:first-of-type > .icon-quote {
 .some-row {
   padding-top: 15px;
   padding-bottom: 15px;
-  & > div {
-    margin-bottom: 15px;
-  }
+  // http://codepen.io/CucuIonel/pen/espDH
   .some-involve {
-    display: inline-block;
-    height: 40px;
+    min-height: 40px;
     line-height: 40px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    & > span {
+      display: inline-block;
+      line-height: 20px;
+      vertical-align: middle;
+    }
   }
 }
 
@@ -1410,8 +1411,6 @@ blockquote:first-of-type > .icon-quote {
     display: inline-block;
     height: 40px;
     box-sizing: content-box;
-    padding-top: 5px;
-    padding-bottom: 5px;
     padding-left: 20px;
     &:first-child {
       padding-left: 20px;

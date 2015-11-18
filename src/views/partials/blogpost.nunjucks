@@ -23,21 +23,23 @@
       {{ blog.content | safe }}
     </div>
     <div class="row some-row">
-      <div class="column">
-        {% if listView %}
-          <a href="/blogi/{{ blog.path }}#some-comment" class="some-involve font-bold">Osallistu keskusteluun<span class="icon-arrow-right"></span></a>
-        {% endif %}
-        <div class="{{ "right" if listView}} some-share">
-          <div>
-            <a href onclick="app.facebookShareBlog('{{ blog.ingress }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
-              <span class="icon-facebook"></span>
-            </a>
-          </div>
-          <div>
-            <a href onclick="app.twitterShareBlog('{{ blog.path }}', '{{ blog.title }}')">
-              <span class="icon-twitter"></span>
-            </a>
-          </div>
+      {% if listView %}
+        <div class="small-6 column">
+          <a href="/blogi/{{ blog.path }}#some-comment" class="some-involve font-bold">
+            <span>Osallistu keskusteluun<span class="icon-arrow-right"></span></span>
+          </a>
+        </div>
+      {% endif %}
+      <div class="{{ "right" if listView}} some-share">
+        <div>
+          <a href onclick="app.facebookShareBlog('{{ blog.ingress }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
+            <span class="icon-facebook"></span>
+          </a>
+        </div>
+        <div>
+          <a href onclick="app.twitterShareBlog('{{ blog.path }}', '{{ blog.title }}')">
+            <span class="icon-twitter"></span>
+          </a>
         </div>
       </div>
     </div>
