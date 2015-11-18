@@ -36,8 +36,14 @@
     {% set listView = true %}
     {% include 'partials/blogpost.nunjucks' %}
   {% endfor %}
-  {% if not firstPage %}<a href="/blogi/sivu/{{ previousPageNumber }}" class="column">uudemmat</a>{% endif %}
-  {% if not lastPage %}<a href="/blogi/sivu/{{ nextPageNumber }}" class="column">vanhemmat</a>{% endif %}
+  <div class="column posts-navigation">
+    {% if not firstPage %}
+      <a href="/blogi/sivu/{{ previousPageNumber }}" class="posts-navigation-link">uudemmat</a>
+    {% endif %}
+    {% if not lastPage %}
+      <a href="/blogi/sivu/{{ nextPageNumber }}" class="posts-navigation-link">vanhemmat</a>
+    {% endif %}
+  </div>
 </div>
 {% endblock %}
 
