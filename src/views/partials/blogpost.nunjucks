@@ -32,10 +32,12 @@
       {% endif %}
       <div class="medium-8 large-8 columns">
         <div class="{{ "medium-right" if listView}} some-share">
-          <div class="total-shares">
-            <span class="total-shares_count">0</span>
-            <span class="total-shares_text">jakoa</span>
-          </div>
+          {% if not listView %}
+            <div class="total-shares">
+              <span id="total-shares_count" class="total-shares_count"></span>
+              <span class="total-shares_text">jakoa</span>
+            </div>
+          {% endif %}
           <a href class="some-share_link" onclick="app.facebookShareBlog('{{ blog.ingress }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
             <span  class="icon-facebook"></span>
           </a>

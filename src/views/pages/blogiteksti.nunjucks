@@ -53,5 +53,8 @@
 {% endblock %}
 
 {% block scripts %}
+<script>
+  app.getShareCount('{{ blog.path }}');
+</script>
 {% include 'partials/mailchimp.nunjucks' %}
 {% endblock %}
