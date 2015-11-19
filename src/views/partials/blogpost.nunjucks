@@ -42,7 +42,7 @@
           <a href class="some-share_link" onclick="app.twitterShareBlog('{{ blog.path }}', '{{ blog.title }}')">
             <span class="icon-twitter"></span>
           </a>
-          <a href class="some-share_link" onclick="">
+          <a href class="some-share_link" onclick="app.linkedInShareBlog('{{ blog.ingress }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
             <span class="icon-linkedin"></span>
           </a>
         </div>
