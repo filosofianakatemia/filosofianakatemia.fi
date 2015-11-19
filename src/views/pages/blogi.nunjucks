@@ -45,6 +45,8 @@
     {% endif %}
   </div>
 </div>
+{% import 'partials/newsletter.nunjucks' as newsletter %}
+{{ newsletter.initialize() }}
 {% endblock %}
 
 {% block footer %}
@@ -60,4 +62,8 @@
   </div>
 </div>
 {% include 'partials/address.nunjucks' %}
+{% endblock %}
+
+{% block scripts %}
+{% include 'partials/mailchimp.nunjucks' %}
 {% endblock %}

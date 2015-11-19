@@ -32,6 +32,9 @@
 {% block main %}
 <div class="section row">
   {% include 'partials/blogpost.nunjucks' %}
+</div>
+{% import 'partials/newsletter.nunjucks' as newsletter %}
+{{ newsletter.initialize('Haluatko kuulla lisää vankkaan tutkimukseen perustuvaa tietoa hyvinvoinnista ja tuloksen tekemisestä?') }}
 {% endblock %}
 
 {% block footer %}
@@ -47,4 +50,8 @@
   </div>
 </div>
 {% include 'partials/address.nunjucks' %}
+{% endblock %}
+
+{% block scripts %}
+{% include 'partials/mailchimp.nunjucks' %}
 {% endblock %}
