@@ -68,12 +68,12 @@ button:hover, button:focus, .button:hover, .button:focus, .top-bar-section ul > 
 
 @font-face {
   font-family: 'icomoon';
-  src:url('../fonts/icomoon.eot?6x8yx9');
-  src:url('../fonts/icomoon.eot?6x8yx9#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.woff2?6x8yx9') format('woff2'),
-    url('../fonts/icomoon.ttf?6x8yx9') format('truetype'),
-    url('../fonts/icomoon.woff?6x8yx9') format('woff'),
-    url('../fonts/icomoon.svg?6x8yx9#icomoon') format('svg');
+  src:url('../fonts/icomoon.eot??37f4tn');
+  src:url('../fonts/icomoon.eot??37f4tn#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.woff2??37f4tn') format('woff2'),
+    url('../fonts/icomoon.ttf??37f4tn') format('truetype'),
+    url('../fonts/icomoon.woff??37f4tn') format('woff'),
+    url('../fonts/icomoon.svg??37f4tn#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -90,6 +90,10 @@ button:hover, button:focus, .button:hover, .button:focus, .top-bar-section ul > 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-linkedin:before {
+  content: "\e902";
 }
 
 .icon-facebook:before {
@@ -1397,6 +1401,9 @@ blockquote:first-of-type > .icon-quote {
   padding-top: 15px;
   padding-bottom: 15px;
   // http://codepen.io/CucuIonel/pen/espDH
+  >:first-child {
+    padding-bottom: 15px;
+  }
   .some-involve {
     min-height: 40px;
     line-height: 40px;
@@ -1409,33 +1416,42 @@ blockquote:first-of-type > .icon-quote {
 }
 
 .some-share {
-  & > div {
-    display: inline-block;
+  height: 40px;
+  & > * {
     height: 40px;
-    box-sizing: content-box;
-    padding-left: 20px;
-    &:first-child {
-      padding-left: 20px;
+    display: inline-block;
+    &:not(:first-child) {
+      padding-left: 15px;
     }
     &:not(:last-child) {
       border-right: 1px solid #037a80;
-      padding-right: 25px;
-    }
-  }
-  &.right > div {
-    &:not(:last-child) {
-      padding-left: 0;
-    }
-    &:last-child {
       padding-right: 20px;
     }
   }
-  & .icon-facebook {
-    font-size: 40px;
+  .total-shares {
+    text-align: center;
+    vertical-align: bottom;
+    line-height: 1.2;
+    .total-shares_count,
+    .total-shares_text {
+      display: block;
+    }
+    .total-shares_count {
+      font-size: 22px;
+    }
+    .total-shares_text {
+      font-size: 12px;
+    }
   }
-  & .icon-twitter:before,
-  .some-share .icon-facebook:before {
-    font-size: 40px;
+  .some-share_link {
+    display: inline-block;
+    .icon-facebook:before,
+    .icon-linkedin:before,
+    .icon-twitter:before {
+      height: 40px;
+      line-height: 40px;
+      font-size: 30px;
+    }
   }
 }
 
@@ -1456,6 +1472,77 @@ blockquote:first-of-type > .icon-quote {
   padding-right: 15px;
 }
 
+@media only screen and (min-width: 40.063em) {
+  .medium-right {
+    float: right;
+    padding-left: 0;
+  }
+  .some-row >:first-child {
+    padding-bottom: 0;
+  }
+  .some-share {
+    height: 45px;
+    & > * {
+      height: 45px;
+      &:not(:first-child) {
+        padding-left: 20px;
+      }
+      &:not(:last-child) {
+        padding-right: 25px;
+      }
+    }
+    .some-share_link {
+      .icon-facebook:before,
+      .icon-linkedin:before,
+      .icon-twitter:before {
+        height: 45px;
+        line-height: 45px;
+        font-size: 35px;
+      }
+    }
+    .total-shares {
+      .total-shares_count {
+        font-size: 25px;
+      }
+      .total-shares_text {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+/* LARGE */
+@media only screen and (min-width: 64.063em) {
+  .some-share {
+    height: 50px;
+    & > * {
+      height: 50px;
+      &:not(:first-child) {
+        padding-left: 25px;
+      }
+      &:not(:last-child) {
+        padding-right: 30px;
+      }
+    }
+    .some-share_link {
+      & .icon-facebook:before,
+      .icon-linkedin:before,
+      .icon-twitter:before {
+        height: 50px;
+        line-height: 50px;
+        font-size: 40px;
+      }
+    }
+    .total-shares {
+      .total-shares_count {
+        font-size: 28px;
+      }
+      .total-shares_text {
+        font-size: 16px;
+      }
+    }
+  }
+}
 
 /* MEDIUM */
 @media only screen and (min-width: 40.063em) {
