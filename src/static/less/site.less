@@ -211,7 +211,6 @@ h3 {
   line-height: 24px;
 }
 
-.section-person h2,
 h4 {
   font-size: 18px;
   line-height: 20px;
@@ -231,7 +230,6 @@ h4 {
     font-size: 28px;
     line-height: 31px;
   }
-  .section-person h2,
   h4 {
     font-size: 23px;
     line-height: 25px;
@@ -254,7 +252,6 @@ h4 {
     line-height: 38px;
   }
 
-  .section-person h2,
   h4 {
     font-size: 30px;
     line-height: 33px;
@@ -1262,6 +1259,11 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   padding-bottom: 20px;
 }
 
+.section-person h2 {
+  font-size: 18px;
+  line-height: 20px;
+}
+
 .section-person ul {
   list-style-type: none;
   padding-left: 0;
@@ -1312,10 +1314,24 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   }
 }
 
+/* LARGE */
+@media only screen and (min-width: 64.063em){
+  .section-person h2 {
+    font-size: 23px;
+    line-height: 25px;
+  }
+}
+
 /* EXTRA LARGE */
 @media only screen and (min-width: 90.063em) {
-  .section-person ul li a {
-    margin-left: -20px;
+  .section-person {
+    h2 {
+      font-size: 30px;
+      line-height: 33px;
+    }
+    ul li a {
+      margin-left: -20px;
+    }
   }
 }
 
