@@ -1,10 +1,21 @@
 <div class="medium-10 small-centered blog-post column">
   <div class="row left-aligned blog-content">
+
+    {% if not listView %}
+    <div class="row breadcrumbs">
+      <div class="column">
+        <a href="/blogi">Blogi<span class="icon-arrow-right"></span></a>
+        <span class="font-bold">{{ blog.title }}</span>
+      </div>
+    </div>
+    {% endif %}
+
     <div class="row byline">
       <div class="column">
         <span>{{ blog.published | d.M.yyyy }} | {{ blog.author if blog.author else "vieraskynä" }}</span>
       </div>
     </div>
+
     <h1>
     {% if listView %}
       {# Add link to the single blog page #}
@@ -13,11 +24,13 @@
       {{ blog.title }}
     {% endif %}
     </h1>
+
     {% if blog.picture %}
     <div class="head-shot">
       <img src="{{ blog.picture }}"/>
     </div>
     {% endif %}
+
     <div class="blog-content">
       <p>{{ blog.ingress | safe }}</p>
       {{ blog.content | safe }}
