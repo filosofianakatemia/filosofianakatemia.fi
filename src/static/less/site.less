@@ -61,10 +61,9 @@ button:hover, button:focus,
 
 .icon-bar {
   background: transparent;
-}
-
-.icon-bar .item a {
-  color: #FFFFFF;
+  .item a {
+    color: #FFFFFF;
+  }
 }
 
 /************************/
@@ -267,14 +266,13 @@ a {
   text-decoration: none;
   color: #027180;
   transition: color 300ms ease-out;
-}
-a[href^=tel] {
-  color: inherit;
+  &[href^=tel] {
+    color: inherit;
+  }
 }
 
 .link-cta {
   font-weight: 700;
-
 }
 
 .icon-arrow-right:before {
@@ -317,10 +315,9 @@ ul.list-link li a {
 .breadcrumbs {
   padding-top: 40px;
   color: #027180;
-}
-
-.breadcrumbs .icon-arrow-right {
-  padding-right: 10px;
+  .icon-arrow-right {
+    padding-right: 10px;
+  }
 }
 
 /******************/
@@ -551,12 +548,13 @@ ul.list-link li a {
   color: #FFFFFF;
 }
 
-.hero .scroll-down .text-scroll-down {
-  margin-bottom: 10px;
-}
-
-.hero .scroll-down .icon-arrow-down:before {
-  font-size: 8px;
+.hero .scroll-down {
+  .text-scroll-down {
+    margin-bottom: 10px;
+  }
+  .icon-arrow-down:before {
+    font-size: 8px;
+  }
 }
 
 /* LARGE */
@@ -889,10 +887,9 @@ ul.list-link li a {
 #contact-people .columns {
   padding-top: 30px;
   padding-bottom: 20px;
-}
-
-#contact-people .columns:first-child {
-  padding-top: 0px;
+  &:first-child {
+    padding-top: 0px;
+  }
 }
 
 #contact-people h2 {
@@ -948,12 +945,11 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 
 #smk-quote {
   padding-bottom: 30px;
-}
-
-#smk-quote .icon-smk-quote:before {
-  position: relative;
-  color: #027180;
-  font-size: 150px;
+  .icon-smk-quote:before {
+    position: relative;
+    color: #027180;
+    font-size: 150px;
+  }
 }
 
 #vvv .icon-vvv:before {
@@ -1143,26 +1139,21 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   margin-bottom: 40px;
   margin-left: 10px;
   margin-right: 10px;
-}
-
-#thumbnails h2,
-#thumbnails h4{
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 0.5em;
-  cursor: pointer;
-}
-
-#thumbnails h2 > a {
-  display: block;
-}
-
-#thumbnails .link-container {
-  cursor: pointer;
-}
-
-#thumbnails .picture {
-  cursor:pointer;
+  h2, h4 {
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 0.5em;
+    cursor: pointer;
+  }
+  h2 > a {
+    display: block;
+  }
+  .link-container {
+    cursor: pointer;
+  }
+  .picture {
+    cursor:pointer;
+  }
 }
 
 /* LARGE */
@@ -1170,20 +1161,16 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   #thumbnails {
     margin-left: 40px;
     margin-right: 40px;
+    .picture {
+      height: 400px;
+    }
+    .section .columns .picture {
+      margin-right: 20px;
+    }
+    .section .columns:last-child .picture {
+      margin-right: 0;
+    }
   }
-
-  #thumbnails .picture {
-    height: 400px;
-  }
-
-  #thumbnails .section .columns .picture {
-    margin-right: 20px;
-  }
-
-  #thumbnails .section .columns:last-child .picture {
-    margin-right: 0;
-  }
-
 }
 
 /* EXTRA LARGE */
@@ -1235,32 +1222,27 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 40px;
-}
-
-.person-quote .icon-quote:before{
-  position: relative;
-  top: 20px;
-  font-size: 40px;
-  color: #027180;
-}
-
-.person-quote .quote {
-  font-size: 18px;
-  font-style: italic;
-  color: #027180;
-}
-
-.person-quote .separator {
-  margin-left: 5px;
-}
-
-.person-quote .quote-author:before {
-  content: "\2013";
-  margin-right: 5px;
-}
-
-.person-quote .quote-author {
-  font-size: 16px;
+  .icon-quote:before{
+    position: relative;
+    top: 20px;
+    font-size: 40px;
+    color: #027180;
+  }
+  .quote {
+    font-size: 18px;
+    font-style: italic;
+    color: #027180;
+  }
+  .separator {
+    margin-left: 5px;
+  }
+  .quote-author:before {
+    content: "\2013";
+    margin-right: 5px;
+  }
+  .quote-author {
+    font-size: 16px;
+  }
 }
 
 .section-person {
@@ -1358,21 +1340,18 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   color: #FFFFFF;
   font-size: 14px;
   padding-bottom: 40px;
-}
-
-.footer .address {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.footer .address a {
-  color: #FFFFFF;
-}
-
-.footer .icon-bar {
-  padding-top: 40px;
-  padding-left: 0;
-  font-size: 14px;
+  .address {
+    text-align: center;
+    margin-top: 40px;
+    a {
+      color: #FFFFFF;
+    }
+  }
+  .icon-bar {
+    padding-top: 40px;
+    padding-left: 0;
+    font-size: 14px;
+  }
 }
 
 /**********/
@@ -1412,18 +1391,16 @@ blockquote:first-of-type {
   padding: 40px;
   margin-left: 0;
   margin-right: 0;
-}
-
-blockquote:first-of-type > p {
-  font-style: italic;
-  font-size: 18px;
-  margin: 0;
-}
-
-blockquote:first-of-type > .icon-quote {
-  display: block;
-  text-align: right;
-  font-size: 40px;
+  & > p {
+    font-style: italic;
+    font-size: 18px;
+    margin: 0;
+  }
+  & > .icon-quote {
+    display: block;
+    text-align: right;
+    font-size: 40px;
+  }
 }
 
 .some-row {
