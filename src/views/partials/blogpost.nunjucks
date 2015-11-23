@@ -1,4 +1,5 @@
 <div class="medium-10 small-centered blog-post column">
+  {% set readMode = readMode or (firstPage and loop.first) %}
   <div class="row left-aligned blog-post__wrapper {{ "list-view" if listView }} {{ "read-mode" if readMode }}">
 
     {% if not listView %}
