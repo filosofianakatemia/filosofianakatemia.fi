@@ -38,10 +38,10 @@
   {% endfor %}
   <div class="column posts-navigation">
     {% if not lastPage %}
-      <a href="/blogi/sivu/{{ nextPageNumber }}" class="posts-navigation-link">vanhemmat</a>
+      <a href="/blogi{{ "/lukutila" if readMode }}/sivu/{{ nextPageNumber }}" class="posts-navigation-link">vanhemmat</a>
     {% endif %}
     {% if not firstPage %}
-      <a href="/blogi/sivu/{{ previousPageNumber }}" class="posts-navigation-link">uudemmat</a>
+      <a href="/blogi{{ "/lukutila" if readMode }}/sivu/{{ previousPageNumber }}" class="posts-navigation-link">uudemmat</a>
     {% endif %}
   </div>
 </div>

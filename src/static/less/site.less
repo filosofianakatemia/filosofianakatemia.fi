@@ -196,6 +196,10 @@ button:hover, button:focus,
   text-align: right;
 }
 
+.center-aligned {
+  text-align: center;
+}
+
 h1, h2, h3, h4 {
   color: #027180;
   font-weight: 100;
@@ -1358,13 +1362,19 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 /* BLOG */
 
 .blog-post {
-  > .blog-content {
+  > .blog-post__wrapper {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
   }
   h1 {
     line-height: 1;
+    .title-underline {
+      margin-top: inherit;
+      .underline {
+        font-size: initial;
+      }
+    }
   }
   .byline {
     padding-top: 40px;
@@ -1379,10 +1389,16 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   }
 }
 
-.blog-content > p:first-of-type {
-  border-left: 6px solid #027180;
-  padding-left: 20px;
-  font-size: 18px;
+.blog-content {
+  & > .ingress {
+    border-left: 6px solid #027180;
+    padding-left: 20px;
+    padding-bottom: 0;
+    font-size: 18px;
+  }
+  & > p:first-child:not(.ingress) {
+    margin-top: 0;
+  }
 }
 
 blockquote:first-of-type {
@@ -1478,7 +1494,22 @@ blockquote:first-of-type {
   padding-right: 15px;
 }
 
+@media only screen and (max-width: 40em) {
+  .blog-post > .blog-post__wrapper.list-view:not(.read-mode) {
+    .center-aligned();
+    .blog-content > p:first-child:not(.ingress),
+    .some-involve {
+      font-size: 18px;
+    }
+  }
+}
+
 @media only screen and (min-width: 40.063em) {
+  .blog-post {
+    > .blog-post__wrapper {
+      text-align: left;
+    }
+  }
   .medium-right {
     float: right;
     padding-left: 0;
@@ -1487,9 +1518,9 @@ blockquote:first-of-type {
     padding-bottom: 0;
   }
   .some-share {
-    height: 45px;
+    height: 44px;
     & > * {
-      height: 45px;
+      height: 44px;
       &:not(:first-child) {
         padding-left: 20px;
       }
@@ -1501,9 +1532,9 @@ blockquote:first-of-type {
       .icon-facebook:before,
       .icon-linkedin:before,
       .icon-twitter:before {
-        height: 45px;
-        line-height: 45px;
-        font-size: 35px;
+        height: 44px;
+        line-height: 44px;
+        font-size: 34px;
       }
     }
     .total-shares {
@@ -1556,7 +1587,7 @@ blockquote:first-of-type {
     padding-top: 160px;
     padding-bottom: 105px;
   }
-  .blog-content > p:first-of-type,
+  .blog-content > .ingress,
   blockquote:first-of-type > p {
     font-size: 25px;
   }

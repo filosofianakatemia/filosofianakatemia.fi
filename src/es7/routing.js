@@ -96,6 +96,7 @@ module.exports = (config, app, backendApi) => {
   app.use(route.get('/blogi', blogi));
   app.use(route.get('/blogi/:path', blogiTeksti));
   app.use(route.get('/blogi/sivu/:number', blogiSivu));
+  app.use(route.get('/blogi/lukutila/sivu/:number', blogiLukutila));
   app.use(route.get('/ihmiset/aleksej', aleksej));
   app.use(route.get('/ihmiset/emilia', emilia));
   app.use(route.get('/ihmiset/frank', frank));
@@ -135,11 +136,10 @@ module.exports = (config, app, backendApi) => {
     ctx.body = render('pages/tutkimus');
   }
 
-  async function blogi(ctx) {
-    console.log('GET /blogi');
-    let unrenderedBlogs = await getUnrenderedBlogs();
+  async function generateBlogsContext() { // jshint ignore:line
+    let unrenderedBlogs = await getUnrenderedBlogs(); // jshint ignore:line
     let renderedBlogs = renderBlogs(unrenderedBlogs.slice(0, 5));
-    var context = {
+    let context = {
       blogs: renderedBlogs,
       firstPage: true
     };
@@ -148,10 +148,39 @@ module.exports = (config, app, backendApi) => {
     } else {
       context.nextPageNumber = 2;
     }
-    ctx.body = render('pages/blogi', context);
+    return context;
   }
 
-  async function blogiSivu(ctx, number) {
+  async function blogi(ctx) { // jshint ignore:line
+    console.log('GET /blogi');
+    let context = await generateBlogsContext(); // jshint ignore:line
+    if (context) {
+      ctx.body = render('pages/blogi', context);
+    }
+  }
+
+  async function generateBlogsArchivePageContext(number) {  // jshint ignore:line
+    // Pages #2...#n.
+    let unrenderedBlogs = await getUnrenderedBlogs(); // jshint ignore:line
+    const sliceStartIndex = 5 * (number-1);
+    if (sliceStartIndex < unrenderedBlogs.length) {
+      // There are blog posts left for the given page number.
+      let renderedBlogs = renderBlogs(unrenderedBlogs.slice(sliceStartIndex, sliceStartIndex+5));
+      let context = {
+        blogs: renderedBlogs,
+        previousPageNumber: number - 1
+      };
+      if (sliceStartIndex + 5 < unrenderedBlogs.length){
+        // There is also a next page
+        context.nextPageNumber = number + 1;
+      }else{
+        context.lastPage = true;
+      }
+      return context;
+    }
+  }
+
+  async function blogiSivu(ctx, number) { // jshint ignore:line
     console.log('GET /blogi/sivu/' + number);
     if (number && !isNaN(number)) {
       number = parseInt(number);
@@ -159,24 +188,31 @@ module.exports = (config, app, backendApi) => {
         // Redirect to the first page.
         ctx.redirect('/blogi');
       } else {
-        // Pages #2...#n.
-        let unrenderedBlogs = await getUnrenderedBlogs();
-        const sliceStartIndex = 5 * (number-1);
-        if (sliceStartIndex < unrenderedBlogs.length) {
-          // There are blog posts left for the given page number.
-          let renderedBlogs = renderBlogs(unrenderedBlogs.slice(sliceStartIndex, sliceStartIndex+5));
-          var context = {
-            blogs: renderedBlogs,
-            previousPageNumber: number - 1
-          };
-          if (sliceStartIndex + 5 < unrenderedBlogs.length){
-            // There is also a next page
-            context.nextPageNumber = number + 1;
-          }else{
-            context.lastPage = true;
-          }
+        let context = await generateBlogsArchivePageContext(number);  // jshint ignore:line
+        if (context) {
           ctx.body = render('pages/blogi', context);
         }
+      }
+    }
+  }
+
+  async function blogiLukutila(ctx, number) { // jshint ignore:line
+    console.log('GET /blogi/lukutila/sivu/' + number);
+    if (number && !isNaN(number)) {
+      let context;
+      number = parseInt(number);
+      if (number === 0) {
+        // Redirect to the first page.
+        ctx.redirect('/blogi/lukutila/sivu/1');
+      } else if (number === 1) {
+        // Render the first page.
+        context = await generateBlogsContext(); // jshint ignore:line
+      } else {
+        context = await generateBlogsArchivePageContext(number);  // jshint ignore:line
+      }
+      if (context) {
+        context.readMode = true;
+        ctx.body = render('pages/blogi', context);
       }
     }
   }
@@ -186,7 +222,7 @@ module.exports = (config, app, backendApi) => {
     let faPublicItems = await backendClient.getPublicItems('filosofian-akatemia');  // jshint ignore:line
     let publicNote = faPublicItems.getNote(path);
 
-    if (publicNote.keywords && publicNote.keywords.length) {
+    if (publicNote && publicNote.keywords && publicNote.keywords.length) {
       let keywordFound = false;
       for (let i = 0; i < publicNote.keywords.length; i++) {
         if (publicNote.keywords[i].title === 'blogi') {
