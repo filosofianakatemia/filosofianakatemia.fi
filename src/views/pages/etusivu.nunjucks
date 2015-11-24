@@ -69,35 +69,7 @@
 {% import 'partials/newsletter.nunjucks' as newsletter %}
 {{ newsletter.initialize() }}
 
-<div id="some" class="section row wrapper-embedded show-for-large-up">
-  <div class="large-6 columns">
-    <div class="embedded">
-
-      <div id="fb-root"></div>
-      <script>if (screen && screen.width > 1025) {
-        (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));}</script>
-
-      <div class="fb-page" data-href="https://www.facebook.com/filosofianakatemia" data-width="500" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/filosofianakatemia"><a href="https://www.facebook.com/filosofianakatemia">Filosofian Akatemia</a></blockquote></div></div>
-
-    </div>
-  </div>
-  <div class="large-6 columns">
-    <div class="embedded">
-
-      <a class="twitter-timeline" href="https://twitter.com/filosofianakate" data-widget-id="567018310790041600" width="500" height="500">Tweets by @filosofianakate</a>
-      <script>if (screen && screen.width > 1025) {
-        !function(d,s,id){var
-        js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-      }</script>
-    </div>
-  </div>
-</div>
+{% include 'partials/social.nunjucks' %}
 
 <div id="contact" class="section">
   <div id="contact-heading" class="row">
