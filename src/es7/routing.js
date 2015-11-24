@@ -349,14 +349,23 @@ module.exports = (config, app, backendApi) => {
   function renderBlogPost(publicNote) {
     let blog = {title: publicNote.title};
     let noteHtml = markdownParser.render(publicNote.content);
-    let extractResult = extractIngressAndContentFromHtml(noteHtml);
+    let extractResult = extractLeadAndPictureAndContentFromHtml(noteHtml);
     blog.content = extractResult.content;
     blog.ingress = extractResult.ingress;
+
+    if (extractResult.pictureData) {
+      blog.pictureData = extractResult.pictureData;
+    }
+
     if (publicNote.keywords && publicNote.keywords.length) {
       for (let i=0; i<publicNote.keywords.length; i++) {
         if (isAuthorTag(publicNote.keywords[i])) {
           blog.author = getAuthorName(publicNote.keywords[i]);
-          blog.picture = getAuthorPicturePath(publicNote.keywords[i]);
+          if (!blog.pictureData) {
+            blog.pictureData = {
+              source: getAuthorPicturePath(publicNote.keywords[i])
+            }
+          }
           break;
         }
       }
@@ -366,16 +375,37 @@ module.exports = (config, app, backendApi) => {
     return blog;
   }
 
-  function extractIngressAndContentFromHtml(htmlText) {
+  function extractLeadAndPictureAndContentFromHtml(htmlText) {
+    let extractedHTML = {};
     // Create DOM from HTML string.
     let contentDocument = jsdom(htmlText);
     let bodyElement = contentDocument.getElementsByTagName('body')[0];
-    let ingressNode = bodyElement.firstChild;
-    bodyElement.removeChild(ingressNode);
-    return {
-      ingress: ingressNode.innerHTML,
-      content: bodyElement.innerHTML
-    };
+    let firstChildElement = bodyElement.firstElementChild;
+    // Elements are wrapped into paragraphs (<p> tags), check the content of the first child node.
+    let firstGrandChildElement = firstChildElement.firstElementChild;
+
+    if (firstGrandChildElement && firstGrandChildElement.nodeName === 'IMG') {
+      // First child node contains a picture.
+      extractedHTML.pictureData = {
+        picture: firstChildElement.innerHTML,
+        source: firstGrandChildElement.src
+      };
+      if (firstGrandChildElement.title) {
+        // Get the caption stored into the title attribute of the element.
+        extractedHTML.pictureData.caption = firstGrandChildElement.title;
+      }
+      let secondChildElement = bodyElement.children[1];  // Get the second child element.
+      extractedHTML.ingress = secondChildElement.innerHTML;
+
+      bodyElement.removeChild(firstChildElement);
+      bodyElement.removeChild(secondChildElement);
+    } else {
+      bodyElement.removeChild(firstChildElement);
+      extractedHTML.ingress = firstChildElement.innerHTML;
+    }
+    extractedHTML.content = bodyElement.innerHTML
+
+    return extractedHTML;
   }
 
   async function getPersonContext(personPath) {

@@ -11,12 +11,14 @@
     </div>
     {% endif %}
 
-    <div class="{{ "show-for-medium-up" if listView }} row byline">
+    {# Date & Author #}
+    <div class="{{ "show-for-medium-up" if listView and not readMode }} row byline">
       <div class="column">
         <span>{{ blog.published | d.M.yyyy }} | {{ blog.author if blog.author else "vieraskynä" }}</span>
       </div>
     </div>
 
+    {# Title #}
     <h1>
       {% if listView %}
         {# Add link to the single blog page #}
@@ -34,13 +36,26 @@
     <div class="row">
 
       {# Picture #}
-      {% if blog.picture %}
-      <div class="{{ "show-for-medium-up medium-4 columns" if listView and not readMode else "column" }} head-shot">
-        <img src="{{ blog.picture }}"/>
-      </div>
+      {% if blog.pictureData %}
+        {% if blog.pictureData.caption %}
+        <div class="column">
+          <div class="row">
+            <div class="{{ "show-for-medium-up medium-4 columns" if listView and not readMode else "column" }} head-shot">
+              {{ blog.pictureData.picture | safe }}
+            </div>
+            <div class="column">
+              <span class="caption font-small">{{ blog.pictureData.caption }}</span>
+            </div>
+          </div>
+        </div>
+        {% else %}
+        <div class="{{ "show-for-medium-up medium-4 columns" if listView and not readMode else "column" }} head-shot">
+          <img src="{{ blog.pictureData.source }}"/>
+        </div>
+        {% endif %}
       {% endif %}
 
-      <div class="blog-content {{ "medium-8 columns" if ((listView and not readMode) and blog.picture) else "column" }}">
+      <div class="blog-content {{ "medium-8 columns" if ((listView and not readMode) and blog.pictureData) else "column" }}">
         {# Ingress #}
         <p class="{{ "ingress" if (not listView or readMode) }}">
           {{ blog.ingress | safe }}
@@ -71,13 +86,13 @@
                   <span class="total-shares_text">jakoa</span>
                 </div>
               {% endif %}
-              <a href class="some-share_link" onclick="app.facebookShareBlog('{{ blog.ingress }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
+              <a href class="some-share_link" onclick="app.facebookShareBlog('{{ blog.ingress }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.pictureData.source }}')">
                 <span  class="icon-facebook"></span>
               </a>
               <a href class="some-share_link" onclick="app.twitterShareBlog('{{ blog.path }}', '{{ blog.title }}')">
                 <span class="icon-twitter"></span>
               </a>
-              <a href class="some-share_link" onclick="app.linkedInShareBlog('{{ blog.ingress }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.picture }}')">
+              <a href class="some-share_link" onclick="app.linkedInShareBlog('{{ blog.ingress }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.pictureData.source }}')">
                 <span class="icon-linkedin"></span>
               </a>
             </div>
