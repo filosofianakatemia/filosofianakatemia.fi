@@ -9,7 +9,7 @@
     if (typeof Foundation !== undefined) Foundation.libs.topbar.toggle();
   };
 
-  app.facebookShareBlog = function(ingress, path, title, pictureUrl) {
+  app.facebookShareBlog = function(lead, path, title, pictureUrl) {
     event.preventDefault();
     FB.ui(
     {
@@ -17,7 +17,7 @@
       href: 'https://filosofianakatemia.fi/blogi/' + path,
       picture: pictureUrl,
       title: title,
-      description: ingress
+      description: lead
     },
     function(/*response*/) {
       return null;
@@ -33,11 +33,11 @@
     window.open(url, '_blank', 'height=420, width=550');
   };
 
-  app.linkedInShareBlog = function(ingress, path, title) {
+  app.linkedInShareBlog = function(lead, path, title) {
     event.preventDefault();
     var sharelUrl = 'https://filosofianakatemia.fi/blogi/' + path;
     var url = 'https://www.linkedin.com/shareArticle?mini=true&url=' + sharelUrl + '&title=' + title +
-    '&summary=' + ingress + '&source=Filosofian%20Akatemia';
+    '&summary=' + lead + '&source=Filosofian%20Akatemia';
     window.open(url, '_blank', 'height=420, width=550');
   };
 

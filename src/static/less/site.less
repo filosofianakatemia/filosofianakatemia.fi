@@ -1405,13 +1405,13 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 }
 
 .blog-content {
-  & > .ingress {
+  & > .lead {
     border-left: 6px solid #027180;
     padding-left: 20px;
     padding-bottom: 0;
     font-size: 18px;
   }
-  & > p:first-child:not(.ingress) {
+  & > p:first-child:not(.lead) {
     margin-top: 0;
   }
 }
@@ -1512,7 +1512,7 @@ blockquote:first-of-type {
 @media only screen and (max-width: 40em) {
   .blog-post > .blog-post__wrapper.list-view:not(.read-mode) {
     .center-aligned();
-    .blog-content > p:first-child:not(.ingress),
+    .blog-content > p:first-child:not(.lead),
     .some-involve {
       font-size: 18px;
     }
@@ -1602,7 +1602,7 @@ blockquote:first-of-type {
     padding-top: 160px;
     padding-bottom: 105px;
   }
-  .blog-content > .ingress,
+  .blog-content > .lead,
   blockquote:first-of-type > p {
     font-size: 25px;
   }

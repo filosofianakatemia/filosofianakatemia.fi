@@ -351,7 +351,7 @@ module.exports = (config, app, backendApi) => {
     let noteHtml = markdownParser.render(publicNote.content);
     let extractResult = extractLeadAndPictureAndContentFromHtml(noteHtml);
     blog.content = extractResult.content;
-    blog.ingress = extractResult.ingress;
+    blog.lead = extractResult.lead;
 
     if (extractResult.pictureData) {
       blog.pictureData = extractResult.pictureData;
@@ -395,13 +395,13 @@ module.exports = (config, app, backendApi) => {
         extractedHTML.pictureData.caption = firstGrandChildElement.title;
       }
       let secondChildElement = bodyElement.children[1];  // Get the second child element.
-      extractedHTML.ingress = secondChildElement.innerHTML;
+      extractedHTML.lead = secondChildElement.innerHTML;
 
       bodyElement.removeChild(firstChildElement);
       bodyElement.removeChild(secondChildElement);
     } else {
       bodyElement.removeChild(firstChildElement);
-      extractedHTML.ingress = firstChildElement.innerHTML;
+      extractedHTML.lead = firstChildElement.innerHTML;
     }
     extractedHTML.content = bodyElement.innerHTML
 

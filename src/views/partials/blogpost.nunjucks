@@ -56,9 +56,9 @@
       {% endif %}
 
       <div class="blog-content {{ "medium-8 columns" if ((listView and not readMode) and blog.pictureData) else "column" }}">
-        {# Ingress #}
-        <p class="{{ "ingress" if (not listView or readMode) }}">
-          {{ blog.ingress | safe }}
+        {# Lead #}
+        <p class="{{ "lead" if (not listView or readMode) }}">
+          {{ blog.lead | safe }}
         </p>
         {# Content #}
         {% if not (listView and not readMode) %}
@@ -86,13 +86,13 @@
                   <span class="total-shares_text">jakoa</span>
                 </div>
               {% endif %}
-              <a href class="some-share_link" onclick="app.facebookShareBlog('{{ blog.ingress }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.pictureData.source }}')">
+              <a href class="some-share_link" onclick="app.facebookShareBlog('{{ blog.lead }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.pictureData.source }}')">
                 <span  class="icon-facebook"></span>
               </a>
               <a href class="some-share_link" onclick="app.twitterShareBlog('{{ blog.path }}', '{{ blog.title }}')">
                 <span class="icon-twitter"></span>
               </a>
-              <a href class="some-share_link" onclick="app.linkedInShareBlog('{{ blog.ingress }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.pictureData.source }}')">
+              <a href class="some-share_link" onclick="app.linkedInShareBlog('{{ blog.lead }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.pictureData.source }}')">
                 <span class="icon-linkedin"></span>
               </a>
             </div>
