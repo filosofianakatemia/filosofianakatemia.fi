@@ -2,21 +2,22 @@
   {% set readMode = readMode or (firstPage and loop.first) %}
   <div class="row left-aligned blog-post__wrapper {{ "list-view" if listView }} {{ "read-mode" if readMode }}">
 
-    {% if not listView %}
-    <div class="row breadcrumbs">
-      <div class="column">
-        <a href="/blogi">Blogi<span class="icon-arrow-right"></span></a>
-        <span class="font-bold">{{ blog.title }}</span>
+    {% if listView %}
+      {# Byline (date & author) #}
+      <div class="{{ "show-for-medium-up" if listView and not readMode }} row byline">
+        <div class="column">
+          <span>{{ blog.published | d.M.yyyy }} | {{ blog.author if blog.author else "vieraskynä" }}</span>
+        </div>
       </div>
-    </div>
+    {% else %}
+      {# Breadcrumbs #}
+      <div class="row breadcrumbs">
+        <div class="column">
+          <a href="/blogi">Blogi<span class="icon-arrow-right"></span></a>
+          <span>{{ blog.published | d.M.yyyy }} | {{ blog.author if blog.author else "vieraskynä" }}</span>
+        </div>
+      </div>
     {% endif %}
-
-    {# Date & Author #}
-    <div class="{{ "show-for-medium-up" if listView and not readMode }} row byline">
-      <div class="column">
-        <span>{{ blog.published | d.M.yyyy }} | {{ blog.author if blog.author else "vieraskynä" }}</span>
-      </div>
-    </div>
 
     {# Title #}
     <h1>
