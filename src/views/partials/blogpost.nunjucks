@@ -38,7 +38,7 @@
 
       {# Picture #}
       {% if blog.pictureData %}
-        {% if blog.pictureData.caption %}
+        {% if blog.pictureData.caption and (not listView or readMode) %}
         <div class="column">
           <div class="row">
             <div class="{{ "show-for-medium-up medium-4 columns" if listView and not readMode else "column" }} head-shot">
