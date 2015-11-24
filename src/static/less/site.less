@@ -1,6 +1,7 @@
 @import "normalize.less";
 @import "foundation.less";
 
+@color-text: #3D3D3D;
 
 /************************/
 /* FOUNDATION OVERRIDES */
@@ -28,7 +29,7 @@ body {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   font-size: 15px;
-  color: #636363;
+  color: @color-text;
 }
 
 /* LARGE */
@@ -323,7 +324,7 @@ ul.list-link li:before {
 }
 
 ul.list-link li a {
-  color: #636363;
+  color: @color-text;
 }
 
 .breadcrumbs {
@@ -1283,7 +1284,7 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   left: 15px;
 }
 .section-person ul li a {
-  color: #636363;
+  color: @color-text;
   margin-left: -15px;
 }
 .section-person ul li a:before {
