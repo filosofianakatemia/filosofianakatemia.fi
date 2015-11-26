@@ -1,7 +1,40 @@
 @import "normalize.less";
 @import "foundation.less";
 
-@color-text: #3D3D3D;
+@color-text: #636363;
+
+// Default text
+@size-text-small: 11px;
+@size-text: 15px;
+@size-text-large: 19px;
+@size-text-extra-large: 20px;
+
+@size-text-small__screen-large: 12px;
+@size-text__screen-large: 16px;
+@size-text-extra-large__screen-large: 22px;
+
+@size-text-small__screen-extra-large: 16px;
+@size-text__screen-extra-large: 20px;
+@size-text-extra-large__screen-extra-large: 28px;
+
+// Heading
+@size-heading-extra-small: 18px;
+@size-heading-small: 20px;
+@size-heading: 25px;
+@size-heading-large: 40px;
+@size-heading-extra-large: 40px;
+
+@size-heading-extra-small__screen-large: 23px;
+@size-heading-small__screen-large: 28px;
+@size-heading__screen-large: 32px;
+@size-heading-large__screen-large: 52px;
+@size-heading-extra-large__screen-large: 52px;
+
+@size-heading-extra-small__screen-extra-large: 30px;
+@size-heading-small__screen-extra-large: 34px;
+@size-heading__screen-extra-large: 40px;
+@size-heading-large__screen-extra-large: 65px;
+@size-heading-extra-large__screen-extra-large: 75px;
 
 /************************/
 /* FOUNDATION OVERRIDES */
@@ -28,7 +61,8 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  font-size: 15px;
+  font-size: @size-text;
+  font-weight: 300;
   color: @color-text;
 }
 
@@ -39,14 +73,14 @@ body {
     overflow-y: initial;
   }
   body {
-    font-size: 16px;
+    font-size: @size-text__screen-large;
   }
 }
 
 /* EXTRA LARGE */
 @media only screen and (min-width: 90.063em){
   body {
-    font-size: 20px;
+    font-size: @size-text__screen-extra-large;
   }
 }
 
@@ -190,7 +224,7 @@ button:hover, button:focus,
 }
 
 .font-small {
-  font-size: 11px;
+  font-size: @size-text-small;
 }
 
 .left-aligned {
@@ -211,69 +245,69 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: @size-heading-large;
 }
 
 h2 {
-  font-size: 25px;
+  font-size: @size-heading;
   line-height: 28px;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: @size-heading-small;
   line-height: 24px;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: @size-heading-extra-small;
   line-height: 20px;
 }
 
 /* LARGE */
 @media only screen and (min-width: 64.063em){
   h1 {
-    font-size: 52px;
+    font-size: @size-heading-large__screen-large;
   }
 
   h2 {
-    font-size: 32px;
+    font-size: @size-heading__screen-large;
     line-height: 38px;
   }
   h3 {
-    font-size: 28px;
+    font-size: @size-heading-small__screen-large;
     line-height: 31px;
   }
   h4 {
-    font-size: 23px;
+    font-size: @size-heading-extra-small__screen-large;
     line-height: 25px;
   }
   .font-small {
-    font-size: 12px;
+    font-size: @size-text-small__screen-large;
   }
 }
 
 /* EXTRA LARGE */
 @media only screen and (min-width: 90.063em){
   h1 {
-    font-size: 65px;
+    font-size: @size-heading-large__screen-extra-large;
   }
 
   h2 {
-    font-size: 40px;
+    font-size: @size-heading__screen-extra-large;
     line-height: 46px;
   }
 
   h3 {
-    font-size: 34px;
+    font-size: @size-heading-small__screen-extra-large;
     line-height: 38px;
   }
 
   h4 {
-    font-size: 30px;
+    font-size: @size-heading-extra-small__screen-extra-large;
     line-height: 33px;
   }
   .font-small {
-    font-size: 16px;
+    font-size: @size-text-small__screen-extra-large;
   }
 }
 
@@ -527,10 +561,10 @@ ul.list-link li a {
 }
 
 .hero .slogan {
-  font-weight: 100;
   padding-top: 25vh;
   display: block;
   letter-spacing: -2px;
+  font-weight: 100;
   font-size: 45px;
   line-height: 45px;
 }
@@ -541,15 +575,14 @@ ul.list-link li a {
 }
 
 .hero .ingress {
-  font-size: 28px;
   font-weight: 100;
+  font-size: @size-text-extra-large;
   margin-top: 40px;
   padding-bottom: 30px;
   line-height: 30px;
   margin-left: auto;
   margin-right: auto;
   letter-spacing: 0px;
-  font-size: 20px;
 }
 
 .hero .scroll-down {
@@ -557,6 +590,7 @@ ul.list-link li a {
   bottom: 6vh;
   left: 0;
   right: 0;
+  font-weight: 100;
   font-size: 13px;
   letter-spacing: 1px;
   color: #FFFFFF;
@@ -574,11 +608,11 @@ ul.list-link li a {
 /* LARGE */
 @media only screen and (min-width: 64.063em){
   .hero .slogan {
-    font-size: 52px;
+    font-size: @size-heading-extra-large__screen-large;
     line-height: 55px;
   }
   .hero .ingress {
-    font-size: 22px;
+    font-size: @size-text-extra-large__screen-large;
     max-width: 800px;
     margin-bottom: 80px;
   }
@@ -587,11 +621,11 @@ ul.list-link li a {
 /* EXTRA LARGE */
 @media only screen and (min-width: 90.063em){
   .hero .slogan {
-    font-size: 75px;
+    font-size: @size-heading-extra-large__screen-extra-large;
     line-height: 80px;
   }
   .hero .ingress {
-    font-size: 28px;
+    font-size: @size-text-extra-large__screen-extra-large;
     max-width: 1000px;
   }
 }
@@ -718,6 +752,7 @@ ul.list-link li a {
 }
 
 .section .ingress {
+  font-weight: 100;
   font-size: 19px;
   padding-bottom: 20px;
 }
@@ -836,7 +871,7 @@ ul.list-link li a {
 #mc_embed_signup div.mce_inline_error {
   background-color: #1C7988 !important;
   color: #FFFFFF !important;
-  font-size: 15px;
+  font-size: @size-text;
   max-width: 300px;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -1215,15 +1250,12 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   box-shadow: 0 0 0 1px #FFFFFF, 0 7px 0 1px #FFFFFF, 0 14px 0 1px #FFFFFF;
 }
 
-.person-quote .quote {
-  font-size: 18px;
-}
-
 .people-details .breadcrumbs {
   color: #027180;
 }
 
 .people-details .section-person >:first-child p:first-of-type {
+  font-weight: 100;
   font-size: 18px;
 }
 
@@ -1247,6 +1279,7 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
     color: #027180;
   }
   .quote {
+    font-weight: 100;
     font-size: 18px;
     font-style: italic;
     color: #027180;
@@ -1272,7 +1305,7 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 }
 
 .section-person h2 {
-  font-size: 18px;
+  font-size: @size-heading-extra-small;
   line-height: 20px;
 }
 
@@ -1330,7 +1363,7 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 /* LARGE */
 @media only screen and (min-width: 64.063em){
   .section-person h2 {
-    font-size: 23px;
+    font-size: @size-heading-extra-small__screen-large;
     line-height: 25px;
   }
 }
@@ -1339,7 +1372,7 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 @media only screen and (min-width: 90.063em) {
   .section-person {
     h2 {
-      font-size: 30px;
+      font-size: @size-heading-extra-small__screen-extra-large;
       line-height: 33px;
     }
     ul li a {
@@ -1356,6 +1389,7 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   background-color: #042C38;
   min-height: 200px;
   color: #FFFFFF;
+  font-weight: 100;
   font-size: 14px;
   padding-bottom: 40px;
   .address {
@@ -1413,6 +1447,7 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
     border-left: 6px solid #027180;
     padding-left: 20px;
     padding-bottom: 0;
+    font-weight: 100;
     font-size: 18px;
   }
   & > p:first-child:not(.lead) {
@@ -1428,6 +1463,7 @@ blockquote:first-of-type {
   margin-right: 0;
   & > p {
     font-style: italic;
+    font-weight: 100;
     font-size: 18px;
     margin: 0;
   }
@@ -1473,6 +1509,7 @@ blockquote:first-of-type {
     text-align: center;
     vertical-align: bottom;
     line-height: 1.2;
+    font-weight: 100;
     .total-shares_count,
     .total-shares_text {
       display: block;
