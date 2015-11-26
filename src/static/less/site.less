@@ -1410,7 +1410,7 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 /* BLOG */
 
 .blog-post {
-  > .blog-post__wrapper {
+  > .section-blog-post {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -1551,18 +1551,22 @@ blockquote:first-of-type {
 }
 
 @media only screen and (max-width: 40em) {
-  .blog-post > .blog-post__wrapper.list-view:not(.read-mode) {
-    .center-aligned();
-    .blog-content > p:first-child:not(.lead),
-    .some-involve {
-      font-size: 18px;
+  .blog-post > .section-blog-post {
+    padding-left: 10px;
+    padding-right: 10px;
+    &.list-view:not(.read-mode) {
+      .center-aligned();
+      .blog-content > p:first-child:not(.lead),
+      .some-involve {
+        font-size: 18px;
+      }
     }
   }
 }
 
 @media only screen and (min-width: 40.063em) {
   .blog-post {
-    > .blog-post__wrapper {
+    > .section-blog-post {
       text-align: left;
     }
   }

@@ -1,6 +1,6 @@
 <div class="medium-10 small-centered blog-post column">
   {% set readMode = readMode or (firstPage and loop.first) %}
-  <div class="row left-aligned blog-post__wrapper {{ "list-view" if listView }} {{ "read-mode" if readMode }}">
+  <div class="row left-aligned section-blog-post {{ "list-view" if listView }} {{ "read-mode" if readMode }}">
 
     {% if listView %}
       {# Byline (date & author) #}
