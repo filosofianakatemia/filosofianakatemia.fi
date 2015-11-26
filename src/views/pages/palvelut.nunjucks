@@ -164,7 +164,7 @@
 
   <div id="more" class="row">
     <div class="small-12 columns">
-      <a href="etusivu.html#contact" class="button btn-contact">OTA YHTEYTT&Auml;</a>
+      <a href="/#contact" class="button btn-contact">OTA YHTEYTT&Auml;</a>
     </div>
   </div>
 
@@ -180,7 +180,7 @@
       <div class="description">
         Toteutamme eripituisia valmennuksia, joiden keski&ouml;ss&auml; on ihmisen psykologiset perustarpeet: vapaus eli toimintakyky, virtaus eli aikaansaaminen ja vastuu eli ty&ouml;n merkitykselliseksi kokeminen. Niiden oikeanlainen johtaminen on ihmisen ty&ouml;hyvinvoinnin ja tuottavuuden perusta. Olemme valmentaneet viimeisen kuuden vuoden aikana satoja yrityksi&auml;.
       </div>
-      <a href="etusivu.html#contact" class="link-cta">Ota yhteytt&auml;<span class="icon-arrow-right"></a>
+      <a href="/#contact" class="link-cta">Ota yhteytt&auml;<span class="icon-arrow-right"></a>
     </div>
   </div>
   <div class="large-6 columns">
@@ -192,7 +192,7 @@
       <div class="description">
         Filosofian Akatemian tutkija&#x2013;valmentajat ovat pidettyj&auml; puhujia erilaisissa tilaisuuksissa. Vuoropuhelu yhteiskunnan kanssa on t&auml;rke&auml; osa toimintaamme. Filosofian Akatemian perustaja Lauri J&auml;rvilehto on pit&auml;nyt puheen muun muassa Valkoisessa Talossa.
       </div>
-      <a href="etusivu.html#contact" class="link-cta">Ota yhteytt&auml;<span class="icon-arrow-right"></a>
+      <a href="/#contact" class="link-cta">Ota yhteytt&auml;<span class="icon-arrow-right"></a>
       <div class="show-for-large-up"><br/></div>
     </div>
   </div>
