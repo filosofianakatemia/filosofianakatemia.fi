@@ -5,8 +5,20 @@
   'use strict';
   /*global FB, Foundation*/
 
-  app.menuActiveFeatureClicked = function() {
-    if (typeof Foundation !== undefined) Foundation.libs.topbar.toggle();
+  app.menuActiveFeatureClicked = function(activeFeature) {
+    /*
+    http://stackoverflow.com/a/6944834
+    https://css-tricks.com/snippets/javascript/get-url-and-url-parts-in-javascript/
+    */
+    var pathArray = window.location.pathname.split('/');
+    var lastLevelLocation = pathArray[pathArray.length - 1];
+    if (lastLevelLocation !== activeFeature && lastLevelLocation !== '') {
+      // We are in a subpage, redirect to main page of the active feature.
+      window.location.href = '/' + activeFeature;
+    }
+    if (typeof Foundation !== undefined) {
+      Foundation.libs.topbar.toggle();
+    }
   };
 
   app.facebookShareBlog = function(lead, path, title, pictureUrl) {

@@ -16,7 +16,7 @@
 
 <section class="top-bar-section">
   <ul class="right">
-    <li class="active"><a onclick="app.menuActiveFeatureClicked()">Etusivu</a></li>
+    <li class="active"><a onclick="app.menuActiveFeatureClicked('etusivu')">Etusivu</a></li>
     <li><a href="/ihmiset">Ihmiset</a></li>
     <li><a href="/palvelut">Palvelut</a></li>
     <li><a href="/tutkimus">Tutkimus</a></li>
