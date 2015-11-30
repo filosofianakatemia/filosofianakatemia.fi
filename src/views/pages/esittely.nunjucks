@@ -1,0 +1,106 @@
+{% extends "base.nunjucks" %}
+{% set pageName = 'ihminen' %}
+{% block ogtype %}{{ super() }}{% endblock %}
+{% block bodyattrs %}class="people-details"{% endblock %}
+{% block topbar %}
+<ul class="title-area">
+  <li class="name">
+    <div class="logo"><a href="/"><span class="icon-logo-fill-name"></span></a></div>
+  </li>
+  <li class="toggle-topbar menu-icon"><a href="/"><span></span></a></li>
+</ul>
+
+<section class="top-bar-section">
+  <ul class="right">
+    <li><a href="/">Etusivu</a></li>
+    <li class="active"><a href="/ihmiset">Ihmiset</a></li>
+    <li><a href="/palvelut">Palvelut</a></li>
+    <li><a href="/tutkimus">Tutkimus</a></li>
+    <li><a href="/blogi">Blogi</a></li>
+  </ul>
+</section>
+{% endblock %}
+
+{% block main %}
+  <div class="row breadcrumbs">
+    <div class="left-aligned large-10 large-offset-1 end columns">
+      <a href="/ihmiset#thumbnails">Ihmiset<span class="icon-arrow-right"></span></a>
+      <a href="/ihmiset/santeri">Santeri Lanér<span class="icon-arrow-right"></span></a>
+      <span class="font-bold">Esittely</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="medium-8 medium-centered columns">
+      <h1 class="">Filosofian Akatemian esittely</h1>
+      <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+        <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+          <div class="wistia_embed wistia_async_86hlr0lo95 videoFoam=true" style="height:100%;width:100%">&nbsp;</div>
+        </div>
+      </div>
+      <p>
+        Mit&auml; Filosofian Akatemia tekee ja miksi? Kerromme my&ouml;s miten voit luoda tuottavamman ja innostuneemman ty&ouml;yhteis&ouml;n sek&auml; mik&auml; on sis&auml;isen motivaation merkitys tulevaisuuden ty&ouml;el&auml;m&auml;ss&auml;.
+        Tarjoamme mielell&auml;mme juuri teid&auml;n haasteisiinne innostavat ja tehokkaat ratkaisut. Ota yhteytt&auml;!
+      </p>
+      <p>
+        Santeri Lanér<br>
+        Tutkija, valmentaja / It&auml;-Suomi<br>
+        <a href="mailto:santeri.laner@filosofianakatemia.fi">santeri.laner@filosofianakatemia.fi</a><br>
+        <a href="tel:0456732793">045 673 2793</a>
+      </p>
+    </div>
+  </div>
+
+  <div id="projects" class="section wrapper-embedded">
+  <div class="row">
+    <h1>Esimerkkej&auml; palveluistamme</h1>
+  </div>
+
+  <div class="section row wrapper-embedded">
+    <div class="large-6 columns">
+      <div class="embedded">
+        <h3>Johtoryhmille ja esimiehille</h3>
+        <div class="description">
+          <p>
+            Sis&auml;isen motivaation johtamisen valmennusprosessi
+          </p>
+          <p>Lataa esite t&auml;st&auml;:
+            <a href="/tiedostot/sisaisen-motivaation-johtamisen-valmennusprosessi-esite.pdf" target="_blank">PDF</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="large-6 columns">
+      <div class="embedded">
+        <h3>Tiimeille tai koko organisaatiolle</h3>
+        <div class="description">
+          <p>Sis&auml;isen motivaation kehityspolku</p>
+          <p>Lataa esite t&auml;st&auml;:
+            <a href="/tiedostot/sisaisen-motivaation-kehityspolku-esite.pdf" target="_blank">PDF</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+<div class="row hide-for-small-only">
+  <div class="medium-12 large-8 large-offset-2 end columns">
+    <ul class="icon-bar five-up">
+      <li class="item"><a href="/">Etusivu</a></li>
+      <li class="item active"><a href="/ihmiset">Ihmiset</a></li>
+      <li class="item"><a href="/palvelut">Palvelut</a></li>
+      <li class="item"><a href="/tutkimus">Tutkimus</a></li>
+      <li class="item"><a href="/blogi">Blogi</a></li>
+    </ul>
+  </div>
+</div>
+{% include 'partials/address.nunjucks' %}
+{% endblock %}
+
+{% block scripts %}
+  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+{% endblock %}

@@ -116,6 +116,7 @@ module.exports = (config, app, backendApi) => {
   app.use(route.get('/ihmiset/villiam', villiam));
   // Discontinued, route to front page
   app.use(route.get('/ihmiset/assistentti', index));
+  app.use(route.get('/ihmiset/santeri/esittely', santeriEsittely));
 
   // routes
 
@@ -329,6 +330,10 @@ module.exports = (config, app, backendApi) => {
     console.log('GET /ihmiset/villiam');
     const personContext = await getPersonContext('villiam-virkkunen');
     ctx.body = render('pages/villiam', personContext);
+  }
+  async function santeriEsittely(ctx) {
+    console.log('GET /ihmiset/santeri/esittely');
+    ctx.body = render('pages/esittely');
   }
 
   // Helper functions
