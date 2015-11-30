@@ -60,7 +60,7 @@
       <li class="item"><a href="/ihmiset">Ihmiset</a></li>
       <li class="item"><a href="/palvelut">Palvelut</a></li>
       <li class="item"><a href="/tutkimus">Tutkimus</a></li>
-      <li class="item active"><a href="/blogi" onclick="return false;">Blogi</a></li>
+      <li class="item active"><a href="/blogi" onclick="app.menuActiveFeatureClicked('blogi')">Blogi</a></li>
     </ul>
   </div>
 </div>
