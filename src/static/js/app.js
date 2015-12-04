@@ -79,8 +79,9 @@
       }
     }
 
-    var twitterUrl = 'http://cdn.api.twitter.com/1/urls/count.json?url=' + sharelUrl;
-    httpGetAsync(twitterUrl, twitterCount);
+    var twitterUrl = 'https://cdn.api.twitter.com/1/urls/count.json?url=' + sharelUrl;
+    // Remove this for now because of No 'Access-Control-Allow-Origin' header
+    //httpGetAsync(twitterUrl, twitterCount);
     function twitterCount(response) {
       totalCount += JSON.parse(response).count;
       if (totalCountElement) {
@@ -88,8 +89,9 @@
       }
     }
 
-    var linkedInUrl = 'http://www.linkedin.com/countserv/count/share?url=' + sharelUrl + '&format=json';
-    httpGetAsync(linkedInUrl, linkedInCount);
+    var linkedInUrl = 'https://www.linkedin.com/countserv/count/share?url=' + sharelUrl + '&format=json';
+    // Remove this for now because of No 'Access-Control-Allow-Origin' header
+    //httpGetAsync(linkedInUrl, linkedInCount);
     function linkedInCount(response) {
       totalCount += JSON.parse(response).count;
       if (totalCountElement) {
