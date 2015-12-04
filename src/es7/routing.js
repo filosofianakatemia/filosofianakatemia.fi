@@ -10,7 +10,8 @@ const jsdom = require('jsdom').jsdom;
 
 module.exports = (config, app, backendApi) => {
 
-  const backendClient = siteutils.extendedmind(backendApi);
+  var settings = config.debug ? {syncTimeTreshold: 0} : undefined;
+  const backendClient = siteutils.extendedmind(backendApi, settings);
 
   // CONFIGURE NUNJUCKS
 
@@ -88,37 +89,6 @@ module.exports = (config, app, backendApi) => {
 
 
   // ROUTE MIDDLEWARE
-
-  app.use(route.get('/', index));
-  app.use(route.get('/palvelut', palvelut));
-  app.use(route.get('/ihmiset', ihmiset));
-  app.use(route.get('/tutkimus', tutkimus));
-  app.use(route.get('/blogi', blogi));
-  app.use(route.get('/blogi/:path', blogiTeksti));
-  app.use(route.get('/blogi/sivu/:number', blogiSivu));
-  app.use(route.get('/blogi/lukutila/sivu/:number', blogiLukutila));
-  app.use(route.get('/ihmiset/aleksej', aleksej));
-  app.use(route.get('/ihmiset/emilia', emilia));
-  app.use(route.get('/ihmiset/frank', frank));
-  app.use(route.get('/ihmiset/iida', iida));
-  app.use(route.get('/ihmiset/joonas', joonas));
-  app.use(route.get('/ihmiset/jp', jp));
-  app.use(route.get('/ihmiset/karoliina', karoliina));
-  app.use(route.get('/ihmiset/lauri', lauri));
-  app.use(route.get('/ihmiset/maria', maria));
-  app.use(route.get('/ihmiset/peter', peter));
-  app.use(route.get('/ihmiset/reima', reima));
-  app.use(route.get('/ihmiset/santeri', santeri));
-  app.use(route.get('/ihmiset/selina', selina));
-  app.use(route.get('/ihmiset/sonja', sonja));
-  app.use(route.get('/ihmiset/tapani', tapani));
-  app.use(route.get('/ihmiset/timo', timo));
-  app.use(route.get('/ihmiset/villiam', villiam));
-  // Discontinued, route to front page
-  app.use(route.get('/ihmiset/assistentti', index));
-  app.use(route.get('/ihmiset/santeri/esittely', santeriEsittely));
-
-  // routes
 
   function index(ctx) {
     console.log('GET /');
@@ -335,6 +305,35 @@ module.exports = (config, app, backendApi) => {
     console.log('GET /ihmiset/santeri/esittely');
     ctx.body = render('pages/esittely');
   }
+
+  app.use(route.get('/', index));
+  app.use(route.get('/palvelut', palvelut));
+  app.use(route.get('/ihmiset', ihmiset));
+  app.use(route.get('/tutkimus', tutkimus));
+  app.use(route.get('/blogi', blogi));
+  app.use(route.get('/blogi/:path', blogiTeksti));
+  app.use(route.get('/blogi/sivu/:number', blogiSivu));
+  app.use(route.get('/blogi/lukutila/sivu/:number', blogiLukutila));
+  app.use(route.get('/ihmiset/aleksej', aleksej));
+  app.use(route.get('/ihmiset/emilia', emilia));
+  app.use(route.get('/ihmiset/frank', frank));
+  app.use(route.get('/ihmiset/iida', iida));
+  app.use(route.get('/ihmiset/joonas', joonas));
+  app.use(route.get('/ihmiset/jp', jp));
+  app.use(route.get('/ihmiset/karoliina', karoliina));
+  app.use(route.get('/ihmiset/lauri', lauri));
+  app.use(route.get('/ihmiset/maria', maria));
+  app.use(route.get('/ihmiset/peter', peter));
+  app.use(route.get('/ihmiset/reima', reima));
+  app.use(route.get('/ihmiset/santeri', santeri));
+  app.use(route.get('/ihmiset/selina', selina));
+  app.use(route.get('/ihmiset/sonja', sonja));
+  app.use(route.get('/ihmiset/tapani', tapani));
+  app.use(route.get('/ihmiset/timo', timo));
+  app.use(route.get('/ihmiset/villiam', villiam));
+  // Discontinued, route to front page
+  app.use(route.get('/ihmiset/assistentti', index));
+  app.use(route.get('/ihmiset/santeri/esittely', santeriEsittely));
 
   // Helper functions
 

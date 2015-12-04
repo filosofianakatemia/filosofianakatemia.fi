@@ -6,7 +6,7 @@
   "main": "index.js",
   "dependencies": {
     "etag": "^1.7.0",
-    "extendedmind-siteutils": "^1.0.5",
+    "extendedmind-siteutils": "^1.0.6",
     "fs-promise": "^0.3.1",
     "jsdom": "^6.5.1",
     "koa": "^2.0.0-alpha.3",
@@ -23,11 +23,11 @@
     "superagent-promise": "^1.0.3"
   },
   "devDependencies": {
-    "babel-cli": "^6.1.1",
-    "babel-core": "^6.0.20",
-    "babel-plugin-syntax-async-functions": "^6.0.14",
-    "babel-plugin-syntax-async-generators": "^6.0.15",
-    "babel-preset-stage-0": "^6.0.15",
+    "babel-cli": "^6.3.13",
+    "babel-core": "^6.3.13",
+    "babel-plugin-syntax-async-functions": "^6.3.13",
+    "babel-plugin-syntax-async-generators": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
     "less": "^2.5.3",
     "less-plugin-clean-css": "^1.5.1",
     "protractor": "^2.2.0"
@@ -53,5 +53,5 @@
   "bugs": {
     "url": "https://github.com/filosofianakatemia/filosofianakatemia.fi/issues"
   },
-  "homepage": "https://filosofianakatemia.f"
+  "homepage": "https://filosofianakatemia.fi"
 }
