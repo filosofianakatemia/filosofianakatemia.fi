@@ -10,8 +10,7 @@
       [
         "target",
         ".*",
-        "src/etc",
-        "src/node"
+        "src/etc"
       ],
       "path": "."
     }
