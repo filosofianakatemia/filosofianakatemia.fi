@@ -441,7 +441,7 @@ module.exports = (config, app, backendApi) => {
       case 'iida':
       return 'Iida Mäkikallio';
       case 'joonas':
-      return 'Joonas pesonen';
+      return 'Joonas Pesonen';
       case 'karoliina':
       return 'Karoliina Jarenko';
       case 'lauri':
@@ -449,7 +449,7 @@ module.exports = (config, app, backendApi) => {
       case 'maria':
       return 'Maria Ruotsalainen';
       case 'santeri':
-      return 'Santer Lanér';
+      return 'Santeri Lanér';
       case 'selina':
       return 'Selina Bakir';
       case 'sonja':
