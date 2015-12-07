@@ -4,10 +4,12 @@
 {% block ogtype %}article{% endblock %}
 {% block ogdescription %}{{ blog.lead }}{% endblock %}
 {% block ogurl %}https://filosofianakatemia.fi/blogi/{{ blog.path }}{% endblock %}
-{% block ogimages %}
-<meta property="og:image:url" content="{{ blog.picture }}" />
-<meta property="og:image:secure_url" content="{{ blog.picture }}" />
-{% endblock %}
+{% if blog.pictureData %}
+  {% block ogimages %}
+  <meta property="og:image:url" content="{{ blog.pictureData.source }}" />
+  <meta property="og:image:secure_url" content="{{ blog.pictureData.source }}" />
+  {% endblock %}
+{% endif %}
 {% block bodyattrs %}class="blog-text"{% endblock %}
 
 {% block topbar %}
