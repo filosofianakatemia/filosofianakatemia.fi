@@ -424,9 +424,11 @@ module.exports = (config, app, backendApi) => {
   }
 
   function isAuthorTag(tag) {
-    if (tag.title === 'aleksej' || tag.title === 'frank' || tag.title === 'iida' || tag.title === 'joonas' ||
-        tag.title === 'karoliina' || tag.title === 'lauri' || tag.title === 'maria' ||
-        tag.title === 'santeri' || tag.title === 'selina' || tag.title === 'sonja' || tag.title === 'tapani')
+    if (tag.title === 'aleksej' || tag.title === 'emilia' || tag.title === 'frank' || tag.title === 'iida' ||
+        tag.title === 'joonas' || tag.title === 'jp' || tag.title === 'karoliina' || tag.title === 'lauri' ||
+        tag.title === 'maria' || tag.title === 'peter' || tag.title === 'reima' || tag.title === 'santeri' ||
+        tag.title === 'selina' || tag.title === 'sonja' || tag.title === 'tapani' || tag.title === 'timo' ||
+        tag.title === 'villiam')
     {
       return true;
     }
@@ -436,18 +438,26 @@ module.exports = (config, app, backendApi) => {
     switch (tag.title) {
       case 'aleksej':
       return 'Aleksej Fedotov';
+      case 'emilia':
+      return 'Emilia Lahti';
       case 'frank':
       return 'Frank Martela';
       case 'iida':
       return 'Iida Mäkikallio';
       case 'joonas':
       return 'Joonas Pesonen';
+      case 'jp':
+      return 'Jukka-Pekka Salo';
       case 'karoliina':
       return 'Karoliina Jarenko';
       case 'lauri':
       return 'Lauri Järvilehto';
       case 'maria':
       return 'Maria Ruotsalainen';
+      case 'peter':
+      return 'Peter Kenttä';
+      case 'reima':
+      return 'Reima Launonen';
       case 'santeri':
       return 'Santeri Lanér';
       case 'selina':
@@ -456,6 +466,10 @@ module.exports = (config, app, backendApi) => {
       return 'Sonja Strömsholm';
       case 'tapani':
       return 'Tapani Riekki';
+      case 'timo':
+      return 'Timo Tiuraniemi';
+      case 'villiam':
+      return 'Villiam Virkkunen';
     }
   }
 
@@ -463,18 +477,26 @@ module.exports = (config, app, backendApi) => {
     switch (tag.title) {
       case 'aleksej':
       return 'https://filosofianakatemia.fi/static/img/aleksej-large.jpg';
+      case 'emilia':
+      return 'https://filosofianakatemia.fi/static/img/emilia-large.jpg';
       case 'frank':
       return 'https://filosofianakatemia.fi/static/img/frank-large.jpg';
       case 'iida':
       return 'https://filosofianakatemia.fi/static/img/iida-large.jpg';
       case 'joonas':
       return 'https://filosofianakatemia.fi/static/img/joonas-large.jpg';
+      case 'jp':
+      return 'https://filosofianakatemia.fi/static/img/jp-large.jpg';
       case 'karoliina':
       return 'https://filosofianakatemia.fi/static/img/karoliina-large.jpg';
       case 'lauri':
       return 'https://filosofianakatemia.fi/static/img/lauri-large.jpg';
       case 'maria':
       return 'https://filosofianakatemia.fi/static/img/maria-large.jpg';
+      case 'peter':
+      return 'https://filosofianakatemia.fi/static/img/peter-large.jpg';
+      case 'reima':
+      return 'https://filosofianakatemia.fi/static/img/reima-large.jpg';
       case 'santeri':
       return 'https://filosofianakatemia.fi/static/img/santeri-large.jpg';
       case 'selina':
@@ -483,6 +505,10 @@ module.exports = (config, app, backendApi) => {
       return 'https://filosofianakatemia.fi/static/img/sonja-large.jpg';
       case 'tapani':
       return 'https://filosofianakatemia.fi/static/img/tapani-large.jpg';
+      case 'timo':
+      return 'https://filosofianakatemia.fi/static/img/timo-large.jpg';
+      case 'villiam':
+      return 'https://filosofianakatemia.fi/static/img/villiam-large.jpg';
     }
   }
 
