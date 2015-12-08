@@ -331,9 +331,9 @@ module.exports = (config, app, backendApi) => {
   app.use(route.get('/ihmiset/tapani', tapani));
   app.use(route.get('/ihmiset/timo', timo));
   app.use(route.get('/ihmiset/villiam', villiam));
+  app.use(route.get('/ihmiset/santeri/esittely', santeriEsittely));
   // Discontinued, route to front page
   app.use(route.get('/ihmiset/assistentti', index));
-  app.use(route.get('/ihmiset/santeri/esittely', santeriEsittely));
 
   // Helper functions
 
