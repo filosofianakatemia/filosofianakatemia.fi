@@ -6,7 +6,9 @@
       {# Byline (date & author) #}
       <div class="{{ "show-for-medium-up" if listView and not readMode }} row byline">
         <div class="column">
-          <span>{{ blog.published | d.M.yyyy }} | {{ blog.author if blog.author else "vieraskynä" }}</span>
+          <span>
+            {{ blog.published | d.M.yyyy }} | {{ blog.author.name if blog.author and blog.author.name else "vieraskynä" }}
+          </span>
         </div>
       </div>
     {% else %}
@@ -14,7 +16,9 @@
       <div class="row breadcrumbs">
         <div class="column">
           <a href="/blogi">Blogi<span class="icon-arrow-right"></span></a>
-          <span>{{ blog.published | d.M.yyyy }} | {{ blog.author if blog.author else "vieraskynä" }}</span>
+          <span>
+            {{ blog.published | d.M.yyyy }} | {{ blog.author.name if blog.author.name else "vieraskynä" }}
+          </span>
         </div>
       </div>
     {% endif %}
@@ -64,6 +68,17 @@
         {# Content #}
         {% if not (listView and not readMode) %}
           {{ blog.content | safe }}
+        {% endif %}
+
+        {# Author introduction #}
+        {% if not listView and blog.author %}
+          <div class="clearfix author-introduction">
+            <img src="{{ blog.author.pictureSource }}" class="left author-introduction__picture"/>
+            <div class="author-introduction__text font-small">
+              <h4>{{ blog.author.name }}</h4>
+              {{ blog.author.description | safe }}
+            </div>
+          </div>
         {% endif %}
 
         <div class="row some-row">

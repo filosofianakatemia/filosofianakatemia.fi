@@ -208,8 +208,24 @@ module.exports = (config, app, backendApi) => {
         }
       }
       if (keywordFound) {
+        let blog = renderBlogPost(publicNote);
+        for (let i=0; i<publicNote.keywords.length; i++) {
+          if (isAuthorTag(publicNote.keywords[i])) {
+            // Get the introduction of the author.
+            let personDescriptionPath = getAuthorDescriptionPath(publicNote.keywords[i].title);
+            let personDescriptionNote = faPublicItems.getNote(personDescriptionPath);
+            if (personDescriptionNote){
+              if (!blog.author) {
+                blog.author = {};
+              }
+              blog.author.description = markdownParser.render(personDescriptionNote.content);
+              blog.author.pictureSource = getAuthorThumbnailPath(publicNote.keywords[i].title);
+            }
+            break;
+          }
+        }
         let context = {
-          blog: renderBlogPost(publicNote)
+          blog: blog
         };
         ctx.body = render('pages/blogiteksti', context);
       }
@@ -371,8 +387,11 @@ module.exports = (config, app, backendApi) => {
     if (publicNote.keywords && publicNote.keywords.length) {
       for (let i=0; i<publicNote.keywords.length; i++) {
         if (isAuthorTag(publicNote.keywords[i])) {
-          blog.author = getAuthorName(publicNote.keywords[i]);
+          blog.author = {
+            name: getAuthorName(publicNote.keywords[i])
+          };
           if (!blog.pictureData) {
+            // Get the picture of the author, when the blog post has no picture set.
             blog.pictureData = {
               source: getAuthorPicturePath(publicNote.keywords[i])
             }
@@ -518,5 +537,175 @@ module.exports = (config, app, backendApi) => {
       return 'https://filosofianakatemia.fi/static/img/villiam-large.jpg';
     }
   }
+
+  function getAuthorDescriptionPath(authorId) {
+    for (let i = 0; i < people.length; i++) {
+      if (people[i].id === authorId) {
+        return people[i].paths.description;
+      }
+    }
+  }
+
+  function getAuthorThumbnailPath(authorId) {
+    for (let i = 0; i < people.length; i++) {
+      if (people[i].id === authorId) {
+        return people[i].pictures.thumbnail;
+      }
+    }
+  }
+
+  const people = [{
+    id: 'aleksej',
+    pictures: {
+      thumbnail: '/static/img/aleksej-thumbnail.png'
+    },
+    paths: {
+      description: 'aleksej-fedotov-kuvaus'
+    }
+  },
+  {
+    id: 'emilia',
+    pictures: {
+      thumbnail: '/static/img/emilia-thumbnail.png'
+    },
+    paths: {
+      description: 'emilia-lahti-kuvaus'
+    }
+  },
+  {
+    id: 'frank',
+    pictures: {
+      thumbnail: '/static/img/frank-thumbnail.png'
+    },
+    paths: {
+      description: 'frank-martela-kuvaus'
+    }
+  },
+  {
+    id: 'iida',
+    pictures: {
+      thumbnail: '/static/img/iida-thumbnail.png'
+    },
+    paths: {
+      description: 'iida-makikallio-kuvaus'
+    }
+  },
+  {
+    id: 'joonas',
+    pictures: {
+      thumbnail: '/static/img/joonas-thumbnail.png'
+    },
+    paths: {
+      description: 'joonas-pesonen-kuvaus'
+    }
+  },
+  {
+    id: 'jp',
+    pictures: {
+      thumbnail: '/static/img/jp-thumbnail.png'
+    },
+    paths: {
+      description: 'jp-salo-kuvaus'
+    }
+  },
+  {
+    id: 'karoliina',
+    pictures: {
+      thumbnail: '/static/img/karoliina-thumbnail.png'
+    },
+    paths: {
+      description: 'karoliina-jarenko-kuvaus'
+    }
+  },
+  {
+    id: 'lauri',
+    pictures: {
+      thumbnail: '/static/img/lauri-thumbnail.png'
+    },
+    paths: {
+      description: 'lauri-jarvilehto-kuvaus'
+    }
+  },
+  {
+    id: 'maria',
+    pictures: {
+      thumbnail: '/static/img/maria-thumbnail.png'
+    },
+    paths: {
+      description: 'maria-ruotsalainen-kuvaus'
+    }
+  },
+  {
+    id: 'peter',
+    pictures: {
+      thumbnail: '/static/img/peter-thumbnail.png'
+    },
+    paths: {
+      description: 'peter-kentta-kuvaus'
+    }
+  },
+  {
+    id: 'reima',
+    pictures: {
+      thumbnail: '/static/img/reima-thumbnail.png'
+    },
+    paths: {
+      description: 'reima-launonen-kuvaus'
+    }
+  },
+  {
+    id: 'santeri',
+    pictures: {
+      thumbnail: '/static/img/santeri-thumbnail.png'
+    },
+    paths: {
+      description: 'santeri-laner-kuvaus'
+    }
+  },
+  {
+    id: 'selina',
+    pictures: {
+      thumbnail: '/static/img/selina-thumbnail.png'
+    },
+    paths: {
+      description: 'selina-bakir-kuvaus'
+    }
+  },
+  {
+    id: 'sonja',
+    pictures: {
+      thumbnail: '/static/img/sonja-thumbnail.png'
+    },
+    paths: {
+      description: 'sonja-stromsholm-kuvaus'
+    }
+  },
+  {
+    id: 'tapani',
+    pictures: {
+      thumbnail: '/static/img/tapani-thumbnail.png'
+    },
+    paths: {
+      description: 'tapani-riekki-kuvaus'
+    }
+  },
+  {
+    id: 'timo',
+    pictures: {
+      thumbnail: '/static/img/timo-thumbnail.png'
+    },
+    paths: {
+      description: 'timo-tiuraniemi-kuvaus'
+    }
+  },
+  {
+    id: 'villiam',
+    pictures: {
+      thumbnail: '/static/img/villiam-thumbnail.png'
+    },
+    paths: {
+      description: 'villiam-virkkunen-kuvaus'
+    }
+  }];
 
 }

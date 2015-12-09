@@ -1733,3 +1733,20 @@ blockquote:first-of-type {
     margin-left: 25px;
   }
 }
+
+.author-introduction {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  .author-introduction__picture {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
+  .author-introduction__text {
+    & > h4,
+    & > p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
