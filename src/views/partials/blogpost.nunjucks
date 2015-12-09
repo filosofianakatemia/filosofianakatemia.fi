@@ -72,8 +72,8 @@
 
         {# Author introduction #}
         {% if not listView and blog.author %}
-          <div class="row clearfix author-introduction">
-            <div class="medium-8 large-8 columns">
+          <div class="row clearfix">
+            <div class="medium-8 large-8 columns author-introduction">
               <img src="{{ blog.author.pictureSource }}" class="left author-introduction__picture"/>
               <div class="author-introduction__text font-small">
                 <h4>{{ blog.author.name }}</h4>
