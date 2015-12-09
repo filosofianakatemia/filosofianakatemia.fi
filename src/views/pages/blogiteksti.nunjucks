@@ -1,6 +1,6 @@
 {% extends "base.nunjucks" %}
 {% block title %}{{ super() }} | Blogi | {{ blog.title }}{% endblock %}
-{% block ogtitle %}{{ super() }} | Blogi | {{ blog.title }}{% endblock %}
+{% block ogtitle %}{{ blog.title }}{% endblock %}
 {% block ogtype %}article{% endblock %}
 {% block ogdescription %}{{ blog.lead }}{% endblock %}
 {% block ogurl %}https://filosofianakatemia.fi/blogi/{{ blog.path }}{% endblock %}
