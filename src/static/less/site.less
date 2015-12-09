@@ -1735,6 +1735,7 @@ blockquote:first-of-type {
   }
 }
 
+// 1. Prevent “leak” out the bottom. http://stackoverflow.com/a/6442607
 .author-introduction {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -1744,6 +1745,7 @@ blockquote:first-of-type {
     margin-right: 10px;
   }
   .author-introduction__text {
+    overflow: hidden; // [1]
     & > h4,
     & > p {
       margin-top: 0;
