@@ -1617,7 +1617,7 @@ blockquote:first-of-type {
   padding-right: 15px;
 }
 
-@media only screen and (max-width: 40em) {
+@media only screen {
   .blog-post > .section-blog-post {
     padding-left: 10px;
     padding-right: 10px;
@@ -1632,9 +1632,16 @@ blockquote:first-of-type {
 }
 
 @media only screen and (min-width: 40.063em) {
-  .blog-post {
-    > .section-blog-post {
+  .blog-post > .section-blog-post {
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+    &.list-view:not(.read-mode) {
       text-align: left;
+      .blog-content > p:first-child:not(.lead),
+      .some-involve {
+        font-size: @size-text;
+      }
     }
   }
   .medium-right {
