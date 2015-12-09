@@ -29,8 +29,8 @@
         {# Add link to the single blog page #}
         <a href="/blogi/{{ blog.path }}">{{ blog.title }}</a>
         {% if not readMode %}
-        <div class="row title-underline">
-          <div class="hide-for-medium-up small-1 small-centered column underline"></div>
+        <div class="row hide-for-medium-up title-underline">
+          <div class="small-1 small-centered column underline"></div>
         </div>
         {% endif %}
       {% else %}
