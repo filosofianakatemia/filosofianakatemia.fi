@@ -1746,7 +1746,10 @@ blockquote:first-of-type {
   }
   .author-introduction__text {
     overflow: hidden; // [1]
-    & > h4,
+    & > h4 {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
     & > p {
       margin-top: 0;
       margin-bottom: 0;
