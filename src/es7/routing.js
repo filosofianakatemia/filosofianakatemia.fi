@@ -388,6 +388,7 @@ module.exports = (config, app, backendApi) => {
       for (let i=0; i<publicNote.keywords.length; i++) {
         if (isAuthorTag(publicNote.keywords[i])) {
           blog.author = {
+            id: publicNote.keywords[i].title,
             name: getAuthorName(publicNote.keywords[i])
           };
           if (!blog.pictureData) {

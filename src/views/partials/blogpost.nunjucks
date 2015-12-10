@@ -1,3 +1,14 @@
+{% macro byline() %}
+{% if blog.author %}
+  <span>{{ blog.published | d.M.yyyy }} | </span>
+  <a href="/ihmiset/{{ blog.author.id }}" class="link-downplayed">
+    <span>{{ blog.author.name }}</span>
+  </a>
+{% else %}
+  <span>{{ blog.published | d.M.yyyy }} | vieraskyn&auml;</span>
+{% endif %}
+{% endmacro %}
+
 <div class="medium-10 small-centered blog-post column">
   {% set readMode = readMode or (firstPage and loop.first) %}
   <div class="row left-aligned section-blog-post {{ "list-view" if listView }} {{ "read-mode" if readMode }}">
@@ -6,9 +17,7 @@
       {# Byline (date & author) #}
       <div class="{{ "show-for-medium-up" if listView and not readMode }} row byline">
         <div class="column">
-          <span>
-            {{ blog.published | d.M.yyyy }} | {{ blog.author.name if blog.author and blog.author.name else "vieraskynä" }}
-          </span>
+          {{ byline() }}
         </div>
       </div>
     {% else %}
@@ -16,9 +25,7 @@
       <div class="row breadcrumbs">
         <div class="column">
           <a href="/blogi">Blogi<span class="icon-arrow-right"></span></a>
-          <span>
-            {{ blog.published | d.M.yyyy }} | {{ blog.author.name if blog.author.name else "vieraskynä" }}
-          </span>
+          {{ byline() }}
         </div>
       </div>
     {% endif %}
@@ -74,9 +81,13 @@
         {% if not listView and blog.author %}
           <div class="row clearfix">
             <div class="medium-8 large-8 columns author-introduction">
-              <img src="{{ blog.author.pictureSource }}" class="left author-introduction__picture"/>
+              <a href="/ihmiset/{{ blog.author.id }}" class="left author-introduction__picture">
+                <img src="{{ blog.author.pictureSource }}"/>
+              </a>
               <div class="author-introduction__text font-small">
-                <h4>{{ blog.author.name }}</h4>
+                <h4>
+                  <a href="/ihmiset/{{ blog.author.id }}">{{ blog.author.name }}</a>
+                </h4>
                 {{ blog.author.description | safe }}
               </div>
             </div>
