@@ -1516,15 +1516,15 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   }
 }
 
-.blog-content {
-  & > .lead {
+.blog-content .lead {
+  &.emphasize {
     border-left: 6px solid #027180;
     padding-left: 20px;
     padding-bottom: 0;
     font-weight: 100;
     font-size: 18px;
   }
-  & > p:first-child:not(.lead) {
+  &:not(.emphasize) {
     margin-top: 0;
   }
 }
@@ -1627,7 +1627,7 @@ blockquote:first-of-type {
     padding-right: 10px;
     &.list-view:not(.read-mode) {
       .center-aligned();
-      .blog-content > p:first-child:not(.lead),
+      .blog-content .lead:not(.emphasize),
       .some-involve {
         font-size: 18px;
       }
@@ -1642,7 +1642,7 @@ blockquote:first-of-type {
     padding-right: 0;
     &.list-view:not(.read-mode) {
       text-align: left;
-      .blog-content > p:first-child:not(.lead),
+      .blog-content .lead:not(.emphasize),
       .some-involve {
         font-size: @size-text;
       }
@@ -1722,7 +1722,7 @@ blockquote:first-of-type {
     padding-top: 160px;
     padding-bottom: 105px;
   }
-  .blog-content > .lead,
+  .blog-content .lead.emphasize,
   blockquote:first-of-type > p {
     font-size: 25px;
   }

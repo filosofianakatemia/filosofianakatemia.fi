@@ -62,16 +62,31 @@
         </div>
         {% else %}
         <div class="{{ "show-for-medium-up medium-4 columns" if listView and not readMode else "column" }} head-shot">
-          <img src="{{ blog.pictureData.source }}"/>
+          {% if listView and not readMode %}
+            <a href="/blogi/{{ blog.path }}">
+              <img src="{{ blog.pictureData.source }}"/>
+            </a>
+          {% else %}
+            <img src="{{ blog.pictureData.source }}"/>
+          {% endif %}
         </div>
         {% endif %}
       {% endif %}
 
       <div class="blog-content {{ "medium-8 columns" if ((listView and not readMode) and blog.pictureData) else "column" }}">
         {# Lead #}
-        <p class="{{ "lead" if (not listView or readMode) }}">
-          {{ blog.lead | safe }}
-        </p>
+        {% if listView and not readMode %}
+          <a href="/blogi/{{ blog.path }}" class="link-downplayed">
+            <p class="lead">
+              {{ blog.lead | safe }}
+            </p>
+          </a>
+        {% else %}
+          <p class="lead {{ "emphasize" if (not listView or readMode) }}">
+            {{ blog.lead | safe }}
+          </p>
+        {% endif %}
+
         {# Content #}
         {% if not (listView and not readMode) %}
           {{ blog.content | safe }}
