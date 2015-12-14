@@ -89,7 +89,9 @@
 
         {# Content #}
         {% if not (listView and not readMode) %}
-          {{ blog.content | safe }}
+          <div class="body-text">
+            {{ blog.content | safe }}
+          </div>
         {% endif %}
 
         {# Author introduction #}

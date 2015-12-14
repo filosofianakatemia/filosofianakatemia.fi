@@ -1516,16 +1516,23 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   }
 }
 
-.blog-content .lead {
-  &.emphasize {
-    border-left: 6px solid #027180;
-    padding-left: 20px;
-    padding-bottom: 0;
-    font-weight: 100;
-    font-size: 18px;
+.blog-content {
+  .body-text > p {
+    color: black !important;
+    margin-top: 1.7em;
+    margin-bottom: 1.7em;
   }
-  &:not(.emphasize) {
-    margin-top: 0;
+  .lead {
+    &.emphasize {
+      border-left: 6px solid #027180;
+      padding-left: 20px;
+      padding-bottom: 0;
+      font-weight: 100;
+      font-size: 18px;
+    }
+    &:not(.emphasize) {
+      margin-top: 0;
+    }
   }
 }
 
