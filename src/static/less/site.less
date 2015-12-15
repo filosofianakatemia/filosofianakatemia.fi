@@ -1516,9 +1516,14 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 }
 
 .blog-content {
-  .body-text > p {
-    margin-top: 1.7em;
-    margin-bottom: 1.7em;
+  .body-text {
+    & > p {
+      margin-top: 1.7em;
+      margin-bottom: 1.7em;
+    }
+    &.excerpt-mode >:nth-child(n+3) {
+      display: none;
+    }
   }
   .lead {
     &.emphasize {
