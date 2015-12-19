@@ -12,7 +12,7 @@
 <div class="medium-10 small-centered blog-post column">
   {% set excerptMode = firstPage and loop.first and not readMode %}
   {% set readMode = readMode or (firstPage and loop.first) %}
-  <div class="row left-aligned section-blog-post {{ "list-view" if listView }} {{ "read-mode" if readMode }}">
+  <div class="row left-aligned section-blog-post {{ "list-view" if listView }} {{ "read-mode" if readMode }} {{ "excerpt-mode" if excerptMode }}">
 
     {% if listView %}
       {# Byline (date & author) #}
@@ -51,7 +51,7 @@
       {# Picture #}
       {% if blog.pictureData %}
         {% if blog.pictureData.caption and (not listView or readMode) %}
-        <div class="column">
+        <div class="column blog-picture"  {{ "onClick=location.href='blogi/" + blog.path + "';return false;" if excerptMode }}>
           <div class="row">
             <div class="{{ "show-for-medium-up medium-4 columns" if listView and not readMode else "column" }} head-shot">
               {{ blog.pictureData.picture | safe }}
@@ -77,20 +77,18 @@
       <div class="blog-content {{ "medium-8 columns" if ((listView and not readMode) and blog.pictureData) else "column" }}">
         {# Lead #}
         {% if listView and not readMode %}
-          <a href="/blogi/{{ blog.path }}" class="link-downplayed">
-            <p class="lead">
-              {{ blog.lead | safe }}
-            </p>
-          </a>
+          <p class="lead" onclick="location.href='blogi/{{ blog.path }}';return false;">
+            {{ blog.lead | safe }}
+          </p>
         {% else %}
-          <p class="lead {{ "emphasize" if (not listView or readMode) }}">
+          <p class="lead {{ "emphasize" if (not listView or readMode) }}" {{ "onClick=location.href='blogi/" + blog.path + "';return false;" if excerptMode }}>
             {{ blog.lead | safe }}
           </p>
         {% endif %}
 
         {# Content #}
         {% if not (listView and not readMode) %}
-          <div class="body-text {{ "excerpt-mode" if excerptMode }}">
+          <div class="body-text" {{ "onClick=location.href='blogi/" + blog.path + "';return false;" if excerptMode }}>
             {{ blog.content | safe }}
           </div>
         {% endif %}
@@ -116,10 +114,10 @@
 
           {% if listView %}
             <div class="medium-4 large-4 columns">
-              <a href="/blogi/{{ blog.path }}{{ "#some-comment" if readMode }}" class="some-involve font-bold">
+              <a href="/blogi/{{ blog.path }}" class="some-involve font-bold">
                 <span>
                   {% if excerptMode %}
-                    Jatka lukemista...
+                    Jatka lukemista&#133;
                   {% else %}
                     Lue kokonaan<span class="icon-arrow-right"></span>
                   {% endif %}
@@ -128,27 +126,26 @@
             </div>
           {% endif %}
 
-          {# Social media #}
-          <div class="{{ "show-for-medium-up" if listView }} medium-8 large-8 columns">
-            <div class="{{ "medium-right" if listView}} some-share">
-              {% if not listView %}
+          {# Social media, hide buttons in list view, because facebook sharing did not work #}
+          {% if not listView %}
+            <div class="medium-8 large-8 columns">
+              <div class="{{ "medium-right" if listView}} some-share">
                 <div class="total-shares">
                   <span id="total-shares_count" class="total-shares_count"></span>
                   <span class="total-shares_text">jakoa</span>
                 </div>
-              {% endif %}
-              <a href class="some-share_link" onclick="app.facebookShareBlog('{{ blog.lead }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.pictureData.source }}')">
-                <span  class="icon-facebook"></span>
-              </a>
-              <a href class="some-share_link" onclick="app.twitterShareBlog('{{ blog.path }}', '{{ blog.title }}')">
-                <span class="icon-twitter"></span>
-              </a>
-              <a href class="some-share_link" onclick="app.linkedInShareBlog('{{ blog.lead }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.pictureData.source }}')">
-                <span class="icon-linkedin"></span>
-              </a>
+                <a href class="some-share_link" onclick="app.facebookShareBlog('{{ blog.lead }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.pictureData.source }}');return false;">
+                  <span  class="icon-facebook"></span>
+                </a>
+                <a href class="some-share_link" onclick="app.twitterShareBlog('{{ blog.path }}', '{{ blog.title }}');return false;">
+                  <span class="icon-twitter"></span>
+                </a>
+                <a href class="some-share_link" onclick="app.linkedInShareBlog('{{ blog.lead }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.pictureData.source }}');return false;">
+                  <span class="icon-linkedin"></span>
+                </a>
+              </div>
             </div>
-          </div>
-
+          {% endif %}
         </div>
       </div>
 
