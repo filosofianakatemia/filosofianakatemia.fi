@@ -126,26 +126,26 @@
             </div>
           {% endif %}
 
-          {# Social media, hide buttons in list view, because facebook sharing did not work #}
-          {% if not listView %}
-            <div class="medium-8 large-8 columns">
-              <div class="{{ "medium-right" if listView}} some-share">
+          {# Social media #}
+          <div class="{{ "show-for-medium-up" if listView }} medium-8 large-8 columns">
+            <div class="{{ "medium-right" if listView}} some-share">
+              {% if not listView %}
                 <div class="total-shares">
                   <span id="total-shares_count" class="total-shares_count"></span>
                   <span class="total-shares_text">jakoa</span>
                 </div>
-                <a href class="some-share_link" onclick="app.facebookShareBlog('{{ blog.lead }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.pictureData.source }}');return false;">
-                  <span  class="icon-facebook"></span>
-                </a>
-                <a href class="some-share_link" onclick="app.twitterShareBlog('{{ blog.path }}', '{{ blog.title }}');return false;">
-                  <span class="icon-twitter"></span>
-                </a>
-                <a href class="some-share_link" onclick="app.linkedInShareBlog('{{ blog.lead }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.pictureData.source }}');return false;">
-                  <span class="icon-linkedin"></span>
-                </a>
-              </div>
+              {% endif %}
+              <a href class="some-share_link" onclick="app.facebookShareBlog('{{ blog.lead }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.pictureData.source }}');return false;">
+                <span  class="icon-facebook"></span>
+              </a>
+              <a href class="some-share_link" onclick="app.twitterShareBlog('{{ blog.path }}', '{{ blog.title }}');return false;">
+                <span class="icon-twitter"></span>
+              </a>
+              <a href class="some-share_link" onclick="app.linkedInShareBlog('{{ blog.lead }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.pictureData.source }}');return false;">
+                <span class="icon-linkedin"></span>
+              </a>
             </div>
-          {% endif %}
+          </div>
         </div>
       </div>
 
