@@ -21,7 +21,7 @@
     }
   };
 
-  app.facebookShareBlog = function(lead, path, title, pictureUrl) {
+  app.facebookShareBlog = function(event, lead, path, title, pictureUrl) {
     event.preventDefault();
     FB.ui(
     {
@@ -36,7 +36,7 @@
     });
   };
 
-  app.twitterShareBlog = function(path, title) {
+  app.twitterShareBlog = function(event, path, title) {
     event.preventDefault();
     // http://gpiot.com/blog/elegant-twitter-share-button-and-dialog-with-jquery/
     var sharelUrl = 'https://filosofianakatemia.fi/blogi/' + path;
@@ -45,7 +45,7 @@
     window.open(url, '_blank', 'height=420, width=550');
   };
 
-  app.linkedInShareBlog = function(lead, path, title) {
+  app.linkedInShareBlog = function(event, lead, path, title) {
     event.preventDefault();
     var sharelUrl = 'https://filosofianakatemia.fi/blogi/' + path;
     var url = 'https://www.linkedin.com/shareArticle?mini=true&url=' + sharelUrl + '&title=' + title +

@@ -135,13 +135,13 @@
                   <span class="total-shares_text">jakoa</span>
                 </div>
               {% endif %}
-              <a href class="some-share_link" onclick="app.facebookShareBlog('{{ blog.lead }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.pictureData.source }}');return false;">
+              <a href class="some-share_link" onclick="app.facebookShareBlog(event, '{{ blog.lead }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.pictureData.source }}');return false;">
                 <span  class="icon-facebook"></span>
               </a>
-              <a href class="some-share_link" onclick="app.twitterShareBlog('{{ blog.path }}', '{{ blog.title }}');return false;">
+              <a href class="some-share_link" onclick="app.twitterShareBlog(event, '{{ blog.path }}', '{{ blog.title }}');return false;">
                 <span class="icon-twitter"></span>
               </a>
-              <a href class="some-share_link" onclick="app.linkedInShareBlog('{{ blog.lead }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.pictureData.source }}');return false;">
+              <a href class="some-share_link" onclick="app.linkedInShareBlog(event, '{{ blog.lead }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.pictureData.source }}');return false;">
                 <span class="icon-linkedin"></span>
               </a>
             </div>
