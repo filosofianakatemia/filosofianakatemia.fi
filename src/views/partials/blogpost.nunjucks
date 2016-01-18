@@ -1,18 +1,22 @@
 {% macro byline() %}
 {% if blog.author %}
-  <span>{{ blog.published | d.M.yyyy }} | </span>
-  <a href="/ihmiset/{{ blog.author.id }}" class="link-downplayed">
-    <span>{{ blog.author.name }}</span>
-  </a>
+  {% if blog.author.id == "fa" %}
+    <span>{{ blog.published | d.M.yyyy }} | Filosofian Akatemia</span>
+  {% else %}
+    <span>{{ blog.published | d.M.yyyy }} | </span>
+    <a href="/ihmiset/{{ blog.author.id }}" class="link-downplayed">
+      <span>{{ blog.author.name }}</span>
+    </a>
+  {% endif %}
 {% else %}
-  <span>{{ blog.published | d.M.yyyy }} | vieraskyn&auml;</span>
+  <span>{{ blog.published | d.M.yyyy }} | Vieraskyn&auml;</span>
 {% endif %}
 {% endmacro %}
 
 <div class="medium-10 small-centered blog-post column">
   {% set excerptMode = firstPage and loop.first and not readMode %}
   {% set readMode = readMode or (firstPage and loop.first) %}
-  <div class="row left-aligned section-blog-post {{ "list-view" if listView }} {{ "read-mode" if readMode }} {{ "excerpt-mode" if excerptMode }}">
+  <div class="row left-aligned section-blog-post {{ "list-view" if listView }} {{ "read-mode" if f }} {{ "excerpt-mode" if excerptMode }}">
 
     {% if listView %}
       {# Byline (date & author) #}
@@ -74,7 +78,7 @@
         {% endif %}
       {% endif %}
 
-      <div class="blog-content {{ "medium-8 columns" if ((listView and not readMode) and blog.pictureData) else "column" }}">
+      <div class="blog-content {{ "medium-8 columns" if ((listView and not readMode) and blog.pictureData) else "column" }} {{ "ingress-only" if excerptMode and blog.lessThanFourParagraphs }}">
         {# Lead #}
         {% if listView and not readMode %}
           <p class="lead" onclick="location.href='blogi/{{ blog.path }}';return false;">
@@ -94,7 +98,7 @@
         {% endif %}
 
         {# Author introduction #}
-        {% if not listView and blog.author %}
+        {% if not listView and blog.author and not blog.author.id == "fa" %}
           <div class="row clearfix">
             <div class="medium-8 large-8 columns author-introduction">
               <a href="/ihmiset/{{ blog.author.id }}" class="left author-introduction__picture">
@@ -118,6 +122,8 @@
                 <span>
                   {% if excerptMode %}
                     Jatka lukemista&#133;
+                  {% elif readMode %}
+                    Osallistu keskusteluun<span class="icon-arrow-right"></span>
                   {% else %}
                     Lue kokonaan<span class="icon-arrow-right"></span>
                   {% endif %}
