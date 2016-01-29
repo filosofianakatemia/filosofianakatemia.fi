@@ -2,7 +2,7 @@
 'use strict';
 
 const siteutils = require('../node_modules/extendedmind-siteutils/transpile/index.js');
-const route = siteutils.koaRoute;
+const route = require('koa-route');
 const path = require('path');
 const request = require('superagent-promise')(require('superagent'), Promise);
 const markdownParser = require('markdown-it')({breaks: true, linkify: true});
