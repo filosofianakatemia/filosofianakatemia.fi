@@ -452,6 +452,10 @@ module.exports = (config, app, backendApi) => {
     console.log('GET /ihmiset/santeri/esittely');
     ctx.body = render('pages/esittely');
   }
+  async function santeriSisainenMotivaatio(ctx) {
+    console.log('GET /ihmiset/santeri/sisainen-motivaatio');
+    ctx.body = render('pages/sisainenmotivaatio');
+  }
   async function robots(ctx) {
     console.log('GET /robots.txt');
     let robotsTxt = 'User-agent: *\n' +
@@ -485,6 +489,7 @@ module.exports = (config, app, backendApi) => {
   app.use(route.get('/ihmiset/timo', timo));
   app.use(route.get('/ihmiset/villiam', villiam));
   app.use(route.get('/ihmiset/santeri/esittely', santeriEsittely));
+  app.use(route.get('/ihmiset/santeri/sisainen-motivaatio', santeriSisainenMotivaatio));
   app.use(route.get('/robots.txt', robots));
   // Discontinued, route to front page
   app.use(route.get('/ihmiset/assistentti', index));

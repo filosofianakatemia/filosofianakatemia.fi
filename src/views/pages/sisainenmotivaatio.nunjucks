@@ -1,5 +1,5 @@
 {% extends "base.nunjucks" %}
-{% set pageName = 'Filosofian Akatemian esittely' %}
+{% set pageName = 'Sis&auml;isen motivaation esittely' %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block bodyattrs %}id="introduction"{% endblock %}
 {% block topbar %}
@@ -33,15 +33,38 @@
             <span class="font-bold">Filosofian Akatemian esittely</span>
           </div>
         </div>
-        <h1 class="">Filosofian Akatemian esittely</h1>
+        <p>&nbsp;</p>
         <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
           <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
             <div class="wistia_embed wistia_async_86hlr0lo95 videoFoam=true" style="height:100%;width:100%">&nbsp;</div>
           </div>
         </div>
+        <p>&nbsp;</p>
         <p>
           Mit&auml; Filosofian Akatemia tekee ja miksi? Kerromme my&ouml;s miten voit luoda tuottavamman ja innostuneemman ty&ouml;yhteis&ouml;n sek&auml; mik&auml; on sis&auml;isen motivaation merkitys tulevaisuuden ty&ouml;el&auml;m&auml;ss&auml;.
           Tarjoamme mielell&auml;mme juuri teid&auml;n haasteisiinne innostavat ja tehokkaat ratkaisut. Ota yhteytt&auml;!
+        </p>
+        <p>
+          <div id="wufoo-mhh3erb1b3p79">
+          Haluatko tiet&auml;&auml; lis&auml;&auml;? Tilaa eduskunnalle laadittu raportti ”SISÄINEN MOTIVAATIO &ndash; Tulevaisuuden ty&ouml;ss&auml; tuottavuus ja innostus kohtaavat”.
+          </div>
+          <div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;"></div>
+          <script type="text/javascript">var mhh3erb1b3p7n9;(function(d, t) {
+          var s = d.createElement(t), options = {
+          'userName':'fafc',
+          'formHash':'mhh3erb1b3p7n9',
+          'autoResize':true,
+          'height':'392',
+          'async':true,
+          'host':'wufoo.com',
+          'header':'hide',
+          'ssl':true};
+          s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+          s.onload = s.onreadystatechange = function() {
+          var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+          try { mhh3erb1b3p7n9 = new WufooForm();mhh3erb1b3p7n9.initialize(options);mhh3erb1b3p7n9.display(); } catch (e) {}};
+          var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+          })(document, 'script');</script>
         </p>
         <p>
           Santeri Lanér<br>
@@ -49,36 +72,7 @@
           <a href="mailto:santeri.laner@filosofianakatemia.fi">santeri.laner@filosofianakatemia.fi</a><br>
           <a href="tel:0456732793">045 673 2793</a>
         </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section wrapper-embedded">
-    <div class="row">
-      <h1>Esimerkkej&auml; palveluistamme</h1>
-    </div>
-    <div class="row">
-      <div class="large-6 columns">
-        <div class="embedded">
-          <h2>Johtoryhmille ja esimiehille</h2>
-          <div class="description">
-            <p>
-              Sis&auml;isen motivaation johtamisen valmennusprosessi
-            </p>
-            <p>Lataa esite t&auml;st&auml;:</p>
-            <a href="/tiedostot/sisaisen-motivaation-johtamisen-valmennusprosessi-esite.pdf" target="_blank"><span class="icon-pdf"></span></a>
-          </div>
-        </div>
-      </div>
-      <div class="large-6 columns">
-        <div class="embedded">
-          <h2>Tiimeille tai koko organisaatiolle</h2>
-          <div class="description">
-            <p>Sis&auml;isen motivaation kehityspolku</p>
-            <p>Lataa esite t&auml;st&auml;:</p>
-            <a href="/tiedostot/sisaisen-motivaation-kehityspolku-esite.pdf" target="_blank"><span class="icon-pdf"></span></a>
-          </div>
-        </div>
+        <p>&nbsp;</p>
       </div>
     </div>
   </div>
