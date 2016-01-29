@@ -363,11 +363,6 @@ module.exports = (config, app, backendApi) => {
     }
   }
 
-  async function aleksej(ctx) {
-    console.log('GET /ihmiset/aleksej');
-    const personContext = await getPersonContext('aleksej-fedotov');
-    ctx.body = render('pages/aleksej', personContext);
-  }
   async function emilia(ctx) {
     console.log('GET /ihmiset/emilia');
     const personContext = await getPersonContext('emilia-lahti');
@@ -418,6 +413,11 @@ module.exports = (config, app, backendApi) => {
     const personContext = await getPersonContext('reima-launonen');
     ctx.body = render('pages/reima', personContext);
   }
+  async function sami(ctx) {
+    console.log('GET /ihmiset/sami');
+    const personContext = await getPersonContext('sami-paju');
+    ctx.body = render('pages/sami', personContext);
+  }
   async function santeri(ctx) {
     console.log('GET /ihmiset/santeri');
     const personContext = await getPersonContext('santeri-laner');
@@ -467,7 +467,6 @@ module.exports = (config, app, backendApi) => {
   app.use(route.get('/blogi/:path', blogiTeksti));
   app.use(route.get('/blogi/sivu/:number', blogiSivu));
   app.use(route.get('/blogi/lukutila/sivu/:number', blogiLukutila));
-  app.use(route.get('/ihmiset/aleksej', aleksej));
   app.use(route.get('/ihmiset/emilia', emilia));
   app.use(route.get('/ihmiset/frank', frank));
   app.use(route.get('/ihmiset/iida', iida));
@@ -478,6 +477,7 @@ module.exports = (config, app, backendApi) => {
   app.use(route.get('/ihmiset/maria', maria));
   app.use(route.get('/ihmiset/peter', peter));
   app.use(route.get('/ihmiset/reima', reima));
+  app.use(route.get('/ihmiset/sami', sami));
   app.use(route.get('/ihmiset/santeri', santeri));
   app.use(route.get('/ihmiset/selina', selina));
   app.use(route.get('/ihmiset/sonja', sonja));
@@ -602,8 +602,6 @@ module.exports = (config, app, backendApi) => {
 
   function getAuthorName(tag) {
     switch (tag.title) {
-      case 'aleksej':
-      return 'Aleksej Fedotov';
       case 'emilia':
       return 'Emilia Lahti';
       case 'frank':
@@ -624,6 +622,8 @@ module.exports = (config, app, backendApi) => {
       return 'Peter Kenttä';
       case 'reima':
       return 'Reima Launonen';
+      case 'sami':
+      return 'Sami Paju';
       case 'santeri':
       return 'Santeri Lanér';
       case 'selina':
@@ -643,8 +643,6 @@ module.exports = (config, app, backendApi) => {
 
   function getAuthorPicturePath(tag) {
     switch (tag.title) {
-      case 'aleksej':
-      return 'https://filosofianakatemia.fi/static/img/aleksej-large.jpg';
       case 'emilia':
       return 'https://filosofianakatemia.fi/static/img/emilia-large.jpg';
       case 'frank':
@@ -665,6 +663,8 @@ module.exports = (config, app, backendApi) => {
       return 'https://filosofianakatemia.fi/static/img/peter-large.jpg';
       case 'reima':
       return 'https://filosofianakatemia.fi/static/img/reima-large.jpg';
+      case 'sami':
+      return 'https://filosofianakatemia.fi/static/img/sami-large.jpg';
       case 'santeri':
       return 'https://filosofianakatemia.fi/static/img/santeri-large.jpg';
       case 'selina':
@@ -699,15 +699,6 @@ module.exports = (config, app, backendApi) => {
   }
 
   const people = [{
-    id: 'aleksej',
-    pictures: {
-      thumbnail: '/static/img/aleksej-thumbnail.png'
-    },
-    paths: {
-      description: 'aleksej-fedotov-kuvaus'
-    }
-  },
-  {
     id: 'emilia',
     pictures: {
       thumbnail: '/static/img/emilia-thumbnail.png'
@@ -795,6 +786,15 @@ module.exports = (config, app, backendApi) => {
     },
     paths: {
       description: 'reima-launonen-kuvaus'
+    }
+  },
+  {
+    id: 'sami',
+    pictures: {
+      thumbnail: '/static/img/sami-thumbnail.png'
+    },
+    paths: {
+      description: 'sami-paju-kuvaus'
     }
   },
   {
