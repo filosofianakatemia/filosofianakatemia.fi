@@ -98,7 +98,7 @@
         {% endif %}
 
         {# Author introduction #}
-        {% if not listView and blog.author and not blog.author.id == "fa" %}
+        {% if not listView and blog.author and blog.author.id != "fa" %}
           <div class="row clearfix">
             <div class="medium-8 large-8 columns author-introduction">
               <a href="/ihmiset/{{ blog.author.id }}" class="left author-introduction__picture">
