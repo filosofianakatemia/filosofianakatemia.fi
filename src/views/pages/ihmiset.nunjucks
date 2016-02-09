@@ -144,7 +144,7 @@
     <div class="link-container" onClick="location.href='ihmiset/timo'">
       <div class="picture"></div>
       <h2><a>Timo Tiuraniemi</a></h2>
-      <h4><a>Teknologiajohtaja</a></h4>
+      <h4><a>Tietojohtaja</a></h4>
     </div>
   </div>
   <div id="villiam" class="large-4 end columns">
