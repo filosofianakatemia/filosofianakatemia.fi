@@ -46,7 +46,7 @@
         </div>
         {% endif %}
       {% else %}
-        {{ blog.title }}
+        {{ blog.title | safe }}
       {% endif %}
     </h1>
 
