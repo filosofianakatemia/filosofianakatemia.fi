@@ -39,14 +39,14 @@
     <h1>
       {% if listView %}
         {# Add link to the single blog page #}
-        <a href="/blogi/{{ blog.path }}">{{ blog.title | safe }}</a>
+        <a href="/blogi/{{ blog.path }}">{{ blog.safeTitle | safe }}</a>
         {% if not readMode %}
         <div class="row hide-for-medium-up title-underline">
           <div class="small-1 small-centered column underline"></div>
         </div>
         {% endif %}
       {% else %}
-        {{ blog.title | safe }}
+        {{ blog.safeTitle | safe }}
       {% endif %}
     </h1>
 
