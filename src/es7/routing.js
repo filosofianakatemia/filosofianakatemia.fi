@@ -10,7 +10,7 @@ const jsdom = require('jsdom').jsdom;
 
 module.exports = (config, app, backendApi) => {
 
-  var settings = config.debug ? {syncTimeTreshold: 0} : undefined;
+  var settings = config.debug ? {syncTimeTreshold: 5000} : undefined;
   const backendClient = siteutils.extendedmind(backendApi, settings);
 
   // CONFIGURE NUNJUCKS
