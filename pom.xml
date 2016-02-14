@@ -63,7 +63,7 @@
       <plugin>
         <groupId>com.github.eirslett</groupId>
         <artifactId>frontend-maven-plugin</artifactId>
-        <version>0.0.26</version>
+        <version>0.0.27</version>
         <executions>
           <execution>
             <id>install node and npm</id>
@@ -71,8 +71,8 @@
               <goal>install-node-and-npm</goal>
             </goals>
             <configuration>
-              <nodeVersion>v5.0.0</nodeVersion>
-              <npmVersion>3.3.3</npmVersion>
+              <nodeVersion>v5.6.0</nodeVersion>
+              <npmVersion>3.7.3</npmVersion>
               <nodeDownloadRoot>https://nodejs.org/dist/</nodeDownloadRoot>
             </configuration>
           </execution>
@@ -177,7 +177,7 @@
       <plugin>
         <groupId>org.jolokia</groupId>
         <artifactId>docker-maven-plugin</artifactId>
-        <version>0.13.3</version>
+        <version>0.13.8</version>
         <configuration>
           <sourceDirectory>docker</sourceDirectory>
           <images>
@@ -339,7 +339,7 @@
               <name>fiak/site</name>
               <alias>fiak-site</alias>
               <build>
-                <from>node:4</from>
+                <from>node:5</from>
                 <maintainer>jukapeka@gmail.com</maintainer>
                 <tags>
                   <tag>latest</tag>
