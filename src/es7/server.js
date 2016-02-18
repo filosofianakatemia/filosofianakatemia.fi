@@ -20,7 +20,7 @@ module.exports = (config) => {
   // debugging setup
 
   if (config.debug){
-    app.use(convert(logger()));
+    app.use(logger());
   }
   if (!config.externalStatic){
     app.use(convert(require('koa-static-folder')('./static')));
