@@ -41,7 +41,7 @@
     // http://gpiot.com/blog/elegant-twitter-share-button-and-dialog-with-jquery/
     var sharelUrl = 'https://filosofianakatemia.fi/blogi/' + path;
     var shareVia = 'filosofianakate';
-    var url = 'https://twitter.com/share?via=' + shareVia + '&amp;url=' + encodeURIComponent(sharelUrl) + '&amp;text=' + encodeURIComponent(title);
+    var url = 'https://twitter.com/intent/tweet?via=' + shareVia + '&url=' + encodeURIComponent(sharelUrl) + '&text=' + encodeURIComponent(title);
     window.open(url, '_blank', 'height=420, width=550');
   };
 
