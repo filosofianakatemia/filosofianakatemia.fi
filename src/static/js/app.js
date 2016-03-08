@@ -41,15 +41,15 @@
     // http://gpiot.com/blog/elegant-twitter-share-button-and-dialog-with-jquery/
     var sharelUrl = 'https://filosofianakatemia.fi/blogi/' + path;
     var shareVia = 'filosofianakate';
-    var url = 'https://twitter.com/share?via=' + shareVia + '&amp;url=' + sharelUrl + '&amp;text=' + title;
+    var url = 'https://twitter.com/share?via=' + shareVia + '&amp;url=' + encodeURIComponent(sharelUrl) + '&amp;text=' + encodeURIComponent(title);
     window.open(url, '_blank', 'height=420, width=550');
   };
 
   app.linkedInShareBlog = function(event, lead, path, title) {
     event.preventDefault();
     var sharelUrl = 'https://filosofianakatemia.fi/blogi/' + path;
-    var url = 'https://www.linkedin.com/shareArticle?mini=true&url=' + sharelUrl + '&title=' + title +
-    '&summary=' + lead + '&source=Filosofian%20Akatemia';
+    var url = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(sharelUrl) + '&title=' + encodeURIComponent(title) +
+    '&summary=' + encodeURIComponent(lead) + '&source=Filosofian%20Akatemia';
     window.open(url, '_blank', 'height=420, width=550');
   };
 
