@@ -249,7 +249,7 @@ module.exports = (config, app, backendApi) => {
 
   async function generateBlogsContext() { // jshint ignore:line
     let unrenderedBlogs = await getUnrenderedBlogs(); // jshint ignore:line
-    let renderedBlogs = renderBlogs(unrenderedBlogs.slice(0, 5));
+    let renderedBlogs = generateBlogs(unrenderedBlogs.slice(0, 5));
     let context = {
       blogs: renderedBlogs,
       firstPage: true
@@ -276,7 +276,7 @@ module.exports = (config, app, backendApi) => {
     const sliceStartIndex = 5 * (number-1);
     if (sliceStartIndex < unrenderedBlogs.length) {
       // There are blog posts left for the given page number.
-      let renderedBlogs = renderBlogs(unrenderedBlogs.slice(sliceStartIndex, sliceStartIndex+5));
+      let renderedBlogs = generateBlogs(unrenderedBlogs.slice(sliceStartIndex, sliceStartIndex+5));
       let context = {
         blogs: renderedBlogs,
         previousPageNumber: number - 1
@@ -340,26 +340,24 @@ module.exports = (config, app, backendApi) => {
       }
     }
     if (blogPost) {
-      let blog = renderBlogPost(blogPost);
-      for (let i=0; i<blogPost.keywords.length; i++) {
-        if (isAuthorTag(blogPost.keywords[i])) {
-          // Get the introduction of the author.
-          let personDescriptionPath = getAuthorDescriptionPath(blogPost.keywords[i].title);
-          let personDescriptionNote = faPublicItems.getNote(personDescriptionPath);
-          if (personDescriptionNote){
-            if (!blog.author) {
-              blog.author = {};
-            }
-            blog.author.description = markdownParser.render(personDescriptionNote.content);
-            blog.author.pictureSource = getAuthorThumbnailPath(blogPost.keywords[i].title);
-          }
+      renderBlogPost(ctx, faPublicItems, blogPost);
+    }
+  }
+
+  async function esikatselu(ctx, ownerUUID, itemUUID, previewCode) {
+    console.log('GET /esikatselu/' + ownerUUID + '/' + itemUUID + '/' + previewCode);
+    let previewResponse = await backendClient.getPreviewItem(ownerUUID, itemUUID, previewCode);
+    var note = previewResponse.note;
+    // Render page based on preview note keywords
+    let faPublicItems = await backendClient.getPublicItems('filosofian-akatemia');
+    faPublicItems.addKeywordsToExternalNote(note);
+    if (note.keywords && note.keywords.length){
+      for (let i=0; i<note.keywords.length; i++){
+        if (note.keywords[i].title === 'blogi'){
+          renderBlogPost(ctx, faPublicItems, note);
           break;
         }
       }
-      let context = {
-        blog: blog
-      };
-      ctx.body = render('pages/blogiteksti', context);
     }
   }
 
@@ -471,6 +469,7 @@ module.exports = (config, app, backendApi) => {
   app.use(route.get('/blogi/:path', blogiTeksti));
   app.use(route.get('/blogi/sivu/:number', blogiSivu));
   app.use(route.get('/blogi/lukutila/sivu/:number', blogiLukutila));
+  app.use(route.get('/esikatselu/:ownerUUID/:itemUUID/:code', esikatselu));
   app.use(route.get('/ihmiset/emilia', emilia));
   app.use(route.get('/ihmiset/frank', frank));
   app.use(route.get('/ihmiset/iida', iida));
@@ -511,15 +510,38 @@ module.exports = (config, app, backendApi) => {
     }
   }
 
-  function renderBlogs(unrenderedBlogs) {
+  function renderBlogPost(ctx, faPublicItems, blogPost) {
+    let blog = generateBlogPost(blogPost);
+    for (let i=0; i<blogPost.keywords.length; i++) {
+      if (isAuthorTag(blogPost.keywords[i])) {
+        // Get the introduction of the author.
+        let personDescriptionPath = getAuthorDescriptionPath(blogPost.keywords[i].title);
+        let personDescriptionNote = faPublicItems.getNote(personDescriptionPath);
+        if (personDescriptionNote){
+          if (!blog.author) {
+            blog.author = {};
+          }
+          blog.author.description = markdownParser.render(personDescriptionNote.content);
+          blog.author.pictureSource = getAuthorThumbnailPath(blogPost.keywords[i].title);
+        }
+        break;
+      }
+    }
+    let context = {
+      blog: blog
+    };
+    ctx.body = render('pages/blogiteksti', context);
+  }
+
+  function generateBlogs(unrenderedBlogs) {
     let blogs = [];
     for (let i=0; i<unrenderedBlogs.length; i++) {
-      blogs.push(renderBlogPost(unrenderedBlogs[i]));
+      blogs.push(generateBlogPost(unrenderedBlogs[i]));
     }
     return blogs;
   }
 
-  function renderBlogPost(publicNote) {
+  function generateBlogPost(publicNote) {
     let blog = {safeTitle: publicNote.title, title: publicNote.title.replace("&shy;", "")};
     let noteHtml = markdownParser.render(publicNote.content);
     let extractResult = extractLeadAndPictureAndContentFromHtml(noteHtml);

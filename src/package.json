@@ -6,7 +6,7 @@
   "main": "index.js",
   "dependencies": {
     "etag": "^1.7.0",
-    "extendedmind-siteutils": "^1.0.7",
+    "extendedmind-siteutils": "1.0.11",
     "fs-promise": "^0.3.1",
     "jsdom": "^6.5.1",
     "koa": "^2.0.0-alpha.3",
