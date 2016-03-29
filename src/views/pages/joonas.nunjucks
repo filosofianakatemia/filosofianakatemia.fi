@@ -7,11 +7,5 @@
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/joonas-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
-{% block personname %}{{ personName }}{% endblock %}
-
-{% block persondescription %}
-  {{ personDescription | safe }}
-{% endblock %}
-
 {% block personquote %}Joonas on loistava energisoimaan porukkaa ja olemaan l&auml;sn&auml;. H&auml;n ajattelee aina ihailtavalla tavalla, ett&auml; eteen tuleviin asioihin voi vaikuttaa ja muuttaa niit&auml; &ndash; ja sitten h&auml;n onnistuu siin&auml;.{% endblock %}
 {% block personquoteauthor %}Villiam Virkkunen{% endblock %}

@@ -7,11 +7,5 @@
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/timo-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
-{% block personname %}{{ personName }}{% endblock %}
-
-{% block persondescription %}
-  {{ personDescription | safe }}
-{% endblock %}
-
 {% block personquote %}Timossa yhdistyy insin&ouml;&ouml;rin ja filosofin parhaat puolet. H&auml;n kykenee nopeasti hahmottamaan laajoja kokonaisuuksia ja olemaan samalla todella t&auml;sm&auml;llinen.{% endblock %}
 {% block personquoteauthor %}Jukka-Pekka Salo{% endblock %}

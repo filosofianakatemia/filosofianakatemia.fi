@@ -7,11 +7,5 @@
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/villiam-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
-{% block personname %}{{ personName }}{% endblock %}
-
-{% block persondescription %}
-  {{ personDescription | safe }}
-{% endblock %}
-
 {% block personquote %}Villiam on tosi utelias ja laaja-alainen tyyppi, joka on kiinnostunut kaikesta ja kaikista. H&auml;n on todella nopea omaksumaan uusia asioita ja tieteellisesti pedantti ajattelija, joka kriittisesti reflektoi oppimaansa.{% endblock %}
 {% block personquoteauthor %}Reima Launonen{% endblock %}

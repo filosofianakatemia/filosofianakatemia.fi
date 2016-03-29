@@ -7,11 +7,5 @@
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/iida-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
-{% block personname %}{{ personName }}{% endblock %}
-
-{% block persondescription %}
-  {{ personDescription | safe }}
-{% endblock %}
-
 {% block personquote %}Iidalla on uskomaton kyky puhua samassa lauseessa aivojen toiminnasta, hormoneista ja arkip&auml;iv&auml;n sosiaalisista haasteista &ndash; ja viel&auml;p&auml; sellaisella tavalla, ett&auml; ymm&auml;rt&auml;&auml; mist&auml; h&auml;n puhuu ja innostuu siit&auml;. Iida on ihanan valoisa. H&auml;nen tapaamisensa j&auml;lkeen aurinko tuntuu aina paistavan v&auml;h&auml;n enemm&auml;n.{% endblock %}
 {% block personquoteauthor %}Karoliina Jarenko{% endblock %}

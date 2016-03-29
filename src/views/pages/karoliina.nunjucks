@@ -7,11 +7,5 @@
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/karoliina-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
-{% block personname %}{{ personName }}{% endblock %}
-
-{% block persondescription %}
-  {{ personDescription | safe }}
-{% endblock %}
-
 {% block personquote %}Karoliinalla on ilmi&ouml;m&auml;inen kyky saada yhteys ihmisiin. H&auml;n n&auml;kee heti ihmisten vahvuudet, mit&auml; he tarvitsevat ja mik&auml; heit&auml; innostaa.{% endblock %}
 {% block personquoteauthor %}Timo Tiuraniemi{% endblock %}

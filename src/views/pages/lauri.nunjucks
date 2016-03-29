@@ -7,11 +7,5 @@
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/lauri-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
-{% block personname %}{{ personName }}{% endblock %}
-
-{% block persondescription %}
-  {{ personDescription | safe }}
-{% endblock %}
-
 {% block personquote %}Lauri on rohkea vision&auml;&auml;ri, joka perustaa uutta ja tekee isoja, yhteiskunnallisia juttuja. Todellinen verkostoituja, jota kutsutaan puhumaan Valkoiseen Taloon ja Nasaan. Lauri on tarpeeksi h&ouml;lm&ouml;, ett&auml; ei ota eit&auml; vastaukseksi, mutta tarpeeksi innostava, ett&auml; ei k&auml;&auml;ntyy kyll&auml;ksi.{% endblock %}
 {% block personquoteauthor %}Tapani Riekki{% endblock %}

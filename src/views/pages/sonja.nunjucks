@@ -7,11 +7,5 @@
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/sonja-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
-{% block personname %}{{ personName }}{% endblock %}
-
-{% block persondescription %}
-  {{ personDescription | safe }}
-{% endblock %}
-
 {% block personquote %}Sonja on mielet&ouml;n yhteis&ouml;n rakentaja. H&auml;nell&auml; on harvinainen kyky yhdist&auml;&auml; sek&auml; aikaansaaminen ett&auml; l&auml;sn&auml;olo. Sonjan kanssa t&ouml;it&auml; tehdess&auml; tulee aina hyv&auml; mieli.{% endblock %}
 {% block personquoteauthor %}Maria Ruotsalainen{% endblock %}

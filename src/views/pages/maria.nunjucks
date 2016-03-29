@@ -7,11 +7,5 @@
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/maria-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
-{% block personname %}{{ personName }}{% endblock %}
-
-{% block persondescription %}
-  {{ personDescription | safe }}
-{% endblock %}
-
 {% block personquote %}Maria on todella aikaansaava tyyppi. H&auml;n on taidokas sovittamaan ja yhdistelem&auml;&auml;n erilaisia n&auml;k&ouml;kulmia ja parantamaan ihmisten v&auml;list&auml; yhteistoimintaa.{% endblock %}
 {% block personquoteauthor %}Reima Launonen{% endblock %}

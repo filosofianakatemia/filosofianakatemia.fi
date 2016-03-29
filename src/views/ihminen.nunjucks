@@ -25,19 +25,19 @@
   <div class="row breadcrumbs">
     <div class="left-aligned large-10 large-offset-1 end columns">
       <a href="/ihmiset#thumbnails">Ihmiset<span class="icon-arrow-right"></span></a>
-      <span class="font-bold">{% block personname %}{% endblock %}</span>
+      <span class="font-bold">{{ personName }}</span>
     </div>
   </div>
 
   {% if personDescription %}
     <div class="section section-person row">
-      {% block persondescription %}{% endblock %}
+      {{ personDescription | safe }}
     </div>
   {% else %}
     <div class="section section-person row">
       <div class="large-5 large-offset-1 left-aligned columns">
-        <h1>{% block personname %}{% endblock %}</h1>
-        <div class="description">{% block persondescription %}{% endblock %}</div>
+        <h1>{{ personName }}</h1>
+        <div class="description">{{ personDescription | safe }}</div>
         {% block personleft %}{% endblock %}
       </div>
       <div class="large-5 columns end person-details">

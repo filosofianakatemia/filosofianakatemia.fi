@@ -7,11 +7,5 @@
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/peter-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
-{% block personname %}{{ personName }}{% endblock %}
-
-{% block persondescription %}
-  {{ personDescription | safe }}
-{% endblock %}
-
 {% block personquote %}Peterill&auml; on uskomaton herkkyys kehitt&auml;&auml; valmennuksia asiakkaiden tarpeiden ja tavoitteiden mukaan. H&auml;n ei jyr&auml;&auml; omaa agendaansa, mutta kun h&auml;nen substanssialueelle sy&ouml;tt&auml;&auml; pallon, h&auml;n hoitaa sen suvereenisti maaliin.{% endblock %}
 {% block personquoteauthor %}Reima Launonen{% endblock %}

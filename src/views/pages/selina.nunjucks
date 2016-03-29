@@ -7,11 +7,5 @@
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/selina-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
-{% block personname %}{{ personName }}{% endblock %}
-
-{% block persondescription %}
-{{ personDescription | safe }}
-{% endblock %}
-
 {% block personquote %}Selinassa yhdistyy uskomattomalla tavalla laaja-alainen ja ihmisl&auml;heinen bisnesymm&auml;rrys, asiakkaiden aidon auttamisen ja kuuntelemisen taito sek&auml; loputon positiivisen aikaansaamisen energia. Selina saa asioita tapahtumaan!{% endblock %}
 {% block personquoteauthor %}Sonja Str&ouml;msholm{% endblock %}

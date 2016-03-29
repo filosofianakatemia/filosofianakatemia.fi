@@ -7,11 +7,5 @@
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/tapani-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
-{% block personname %}{{ personName }}{% endblock %}
-
-{% block persondescription %}
-  {{ personDescription | safe }}
-{% endblock %}
-
 {% block personquote %}Analyyttisell&auml; Tapanilla on porukan kovimmat tieteelliset meriitit. H&auml;n tekee Filosofian Akatemiassa tieteellist&auml; laadunvalvontaa ja varmistaa, ett&auml; johtop&auml;&auml;t&ouml;ksille todella l&ouml;ytyy tutkimuksesta pohja.{% endblock %}
 {% block personquoteauthor %}Frank Martela{% endblock %}
