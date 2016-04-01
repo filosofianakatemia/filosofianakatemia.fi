@@ -127,5 +127,4 @@
 {% block scripts %}
 {% include 'partials/scrolling.nunjucks' %}
 {% include 'partials/mailchimp.nunjucks' %}
-{% include 'partials/giosg.nunjucks' %}
 {% endblock %}

@@ -217,6 +217,5 @@
 
 {% block scripts %}
 {% include 'partials/scrolling.nunjucks' %}
-{% include 'partials/giosg.nunjucks' %}
 {% endblock %}
 
