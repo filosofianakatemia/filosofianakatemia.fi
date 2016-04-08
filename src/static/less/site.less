@@ -1,7 +1,9 @@
 @import "normalize.less";
 @import "foundation.less";
+@import "swiper.less";
 
 @color-text: #636363;
+@color-highlighted: #027180;
 
 // Default text
 @size-text-small: 11px;
@@ -240,8 +242,71 @@ button:hover, button:focus,
   text-align: right;
 }
 
-.center-aligned {
+.center-aligned, .center-aligned-small {
   text-align: center;
+}
+
+.button-swiper-prev,
+.button-swiper-next {
+  position: absolute;
+  top: 50%;
+  width: 27px;
+  height: 44px;
+  margin-top: -22px;
+  z-index: 10;
+  cursor: pointer;
+}
+.button-swiper-prev.swiper-button-disabled,
+.button-swiper-next.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: auto;
+  pointer-events: none;
+}
+.button-swiper-prev {
+  left: 0px;
+  right: auto;
+  .icon-arrow-hand-left {
+    font-size: 15px;
+    color: @color-highlighted;
+  }
+}
+.button-swiper-next {
+  right: 0px;
+  left: auto;
+  .icon-arrow-hand-right {
+    font-size: 15px;
+    color: @color-highlighted;
+  }
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin: 0 9px;
+}
+
+.swiper-pagination-bullet-active {
+  background: @color-highlighted;
+}
+
+/* MEDIUM */
+
+@media only screen and (min-width: 40.063em){
+  .center-aligned-small {
+    .left-aligned();
+  }
+  .button-swiper-prev {
+    left: 10px;
+    .icon-arrow-hand-left {
+      font-size: 30px;
+    }
+  }
+  .button-swiper-next {
+    right: 15px;
+    .icon-arrow-hand-right {
+      font-size: 30px;
+    }
+  }
 }
 
 /*
@@ -268,7 +333,7 @@ source: http://kenneth.io/blog/2012/03/04/word-wrapping-hypernation-using-css/
 }
 
 h1, h2, h3, h4 {
-  color: #027180;
+  color: @color-highlighted;
   font-weight: 100;
 }
 
@@ -342,7 +407,7 @@ h4 {
 
 a {
   text-decoration: none;
-  color: #027180;
+  color: @color-highlighted;
   transition: color 300ms ease-out;
   &[href^=tel] {
     color: inherit;
@@ -423,11 +488,11 @@ ul.list-link li a {
 }
 
 .top-bar .toggle-topbar.menu-icon > a > span:after {
-  box-shadow: 0 0 0 1px #027180, 0 7px 0 1px #027180, 0 14px 0 1px #027180;
+  box-shadow: 0 0 0 1px @color-highlighted, 0 7px 0 1px @color-highlighted, 0 14px 0 1px @color-highlighted;
 }
 
 .top-bar .logo a{
-  color: #027180;
+  color: @color-highlighted;
 }
 
 .top-bar .logo {
@@ -732,7 +797,7 @@ ul.list-link li a {
 
 .btn-contact {
   background-color: #FFFFFF;
-  color: #027180;
+  color: @color-highlighted;
   border: none;
   cursor:pointer;
   overflow: hidden;
@@ -820,7 +885,7 @@ ul.list-link li a {
 }
 
 .underline {
-  border-bottom: 4px solid #027180;
+  border-bottom: 4px solid @color-highlighted;
 }
 
 .separator {
@@ -855,6 +920,42 @@ ul.list-link li a {
     padding-right: 80px;
   }
 }
+
+/* REFERENCES */
+
+
+#references {
+  img.author {
+    padding-top: 15px;
+    width: 200px;
+  }
+  img.logo {
+    width: 100px;
+  }
+  img.logo.large {
+    width: 120px;
+  }
+
+  .reference-author{
+    color: @color-highlighted;
+  }
+  .reference-author-wrapper {
+    padding-bottom: 15px;
+  }
+}
+
+/* MEDIUM */
+@media only screen and (min-width: 40.063em){
+  #references {
+    img.author {
+      width: 150px;
+    }
+    img.logo.large {
+      width: 200px;
+    }
+  }
+}
+
 
 /* SIGN UP */
 
@@ -1036,7 +1137,7 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   padding-bottom: 30px;
   .icon-smk-quote:before {
     position: relative;
-    color: #027180;
+    color: @color-highlighted;
     font-size: 150px;
   }
 }
@@ -1295,7 +1396,7 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 }
 
 .people-details .breadcrumbs {
-  color: #027180;
+  color: @color-highlighted;
 }
 
 .people-details .section-person >:first-child p:first-of-type {
@@ -1320,13 +1421,13 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
     position: relative;
     top: 20px;
     font-size: 40px;
-    color: #027180;
+    color: @color-highlighted;
   }
   .quote {
     font-weight: 100;
     font-size: 18px;
     font-style: italic;
-    color: #027180;
+    color: @color-highlighted;
   }
   .separator {
     margin-left: 5px;
@@ -1564,7 +1665,7 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   }
   .lead {
     &.emphasize {
-      border-left: 6px solid #027180;
+      border-left: 6px solid @color-highlighted;
       padding-left: 20px;
       padding-bottom: 0;
       font-weight: 100;
@@ -1585,7 +1686,7 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 }
 
 blockquote:first-of-type {
-  background-color: #027180;
+  background-color: @color-highlighted;
   color: #FFFFFF;
   padding: 40px;
   margin-left: 0;

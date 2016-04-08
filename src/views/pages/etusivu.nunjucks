@@ -38,30 +38,116 @@
 
 {% block mainattrs %}id="front-top"{% endblock %}
 {% block main %}
-<div class="section row wrapper-embedded">
-  <div class="large-6 columns">
-    <div class="embedded">
-      <h2>Innostunut ihminen on 16% tuottavampi</h2>
-      <div class="row">
-        <div class="underline small-offset-5 small-2"></div>
+<div class="section wrapper-embedded">
+  <div id="references" class="row">
+    <div class="medium-12 columns">
+      <div class="embedded swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="row center-aligned-small">
+              <div class="show-for-medium-up medium-3 medium-offset-2 large-offset-1 right-aligned columns">
+                <img class="author" src="static/img/ref/varma-jyri.png"/>
+              </div>
+              <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
+                <p>&#x201c;Hyv&auml;lt&auml; yhteisty&ouml;kumppanilta odottaa uusia ideoita, osaamista, yhdess&auml; tekemisen taitoa, luotettavuutta. Parhaimmat kumppanit ylitt&auml;v&auml;t odotukset. Kaiken t&auml;m&auml;n onnistumisen j&auml;lkeen miettii, miten arvokasta on ollut saada kohdata yhteisty&ouml;kumppani, joka innostaa, kannustaa, jakaa positiivisuutta, tekee ty&ouml;t&auml; syd&auml;mell&auml;&auml;n. Onneksi siit&auml; voi siirt&auml;&auml; osan itseen voimavaraksi kuin kivaksi kaveriksi k&auml;sipuoleen.  T&auml;llainen on mielest&auml;mme yhteisty&ouml;kumppani Filosofian Akatemia.&#x201d;</p>
+                <div class="row reference-author-wrapper">
+                  <div class="small-12 medium-6 columns">
+                    <span class="reference-author">Jyri Juusti</span>
+                    <br/>Kehitysp&auml;&auml;llikk&ouml;,
+                    <br/>Varma</div>
+                  <div class="small-6 show-for-medium-up right-aligned columns"><img class="logo large" src="static/img/ref/varma-logo.png"/></div>
+                </div>
+                <div class="row show-for-small-only">
+                  <div class="columns"><img class="logo" src="static/img/ref/varma-logo.png"/></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="row center-aligned-small">
+              <div class="show-for-medium-up medium-3 medium-offset-2 large-offset-1 right-aligned columns">
+                <img class="author" src="static/img/ref/fondia-pirta.png"/>
+              </div>
+              <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
+                <p>&#x201c;Filosofian Akatemialla on raikas ja monipuolinen l&auml;hestymistapa johtamisen, organisaatiokulttuurin ja yritysten toimintatapojen kehitt&auml;miseen. Vapaus-virtaus-vastuu –viitekehyksen avulla on helppo l&auml;hte&auml; kehitt&auml;m&auml;&auml;n ty&ouml;yhteis&ouml;n toimintatapoja ja viritt&auml;&auml; keskusteluja organisaatioissa. Heid&auml;n tavassaan toimia yhdistyy sopivalla tavalla rento ote ja tieteellinen uskottavuus. Minulla on ollut ilo ty&ouml;skennell&auml; Filosofian Akatemian mahtavien tyyppien kanssa muutamassakin eri projektissa ja se on aina ollut antoisaa ja ajattelua uudistavaa.&#x201d;</p>
+                <div class="row reference-author-wrapper">
+                  <div class="small-12 medium-6 columns"><span class="reference-author">Pirta Karlsson</span><br/>Head of HR,<br/>Fondia Oy</div>
+                  <div class="small-6 show-for-medium-up right-aligned columns"><img class="logo large" src="static/img/ref/fondia-logo.jpg"/></div>
+                </div>
+                <div class="row show-for-small-only">
+                  <div class="columns"><img class="logo" src="static/img/ref/fondia-logo.jpg"/><br/>&nbsp;</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="row center-aligned-small">
+              <div class="show-for-medium-up medium-3 medium-offset-2 large-offset-1 right-aligned columns">
+                <img class="author" src="static/img/ref/ttl-jari.png"/>
+              </div>
+              <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
+                <p>&#x201c;Idealismi ja pragmatismi, tutkimus ja k&auml;yt&auml;nt&ouml;, innostus ja aikaansaapuus! – Filosofian Akatemian loistoporukan ajattelussa ja toiminnassa kaikki n&auml;m&auml; ovat ihailtavassa liitossa. Mahtavaa ajatella, ett&auml; n&auml;ill&auml; leijonamielill&auml; on viel&auml; vuosikymmeni&auml; aikaa muuttaa maailma paremmaksi!&#x201d;</p>
+                <div class="row reference-author-wrapper">
+                  <div class="small-12 medium-6 columns"><span class="reference-author">Jari Hakanen</span><br/>Tutkimusprofessori,<br/>Ty&ouml;terveyslaitos</div>
+                  <div class="small-6 show-for-medium-up right-aligned columns"><img class="logo large" src="static/img/ref/ttl-logo.png"/></div>
+                </div>
+                <div class="row show-for-small-only">
+                  <div class="columns"><img class="logo large" src="static/img/ref/ttl-logo.png"/></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="row center-aligned-small">
+              <div class="show-for-medium-up medium-3 medium-offset-2 large-offset-1 right-aligned columns">
+                <img class="author" src="static/img/ref/slush-julia.png"/>
+              </div>
+              <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
+                <p>&#x201c;Filosofian Akatemian k&auml;yt&auml;nn&ouml;nl&auml;heinen, innostava ja yhteiseen pohditaan kannustava valmennustyyli toimi Slush-organisaatiossa hyvin. Valmennuskokonaisuuden seurauksena koko Slushin inhimillisen kohtaamisen laatu, kokonaisvaltainen innostus ja vapaaehtoisorganisaation johtaminen saatiin nostettua uudelle tasolle. T&auml;m&auml;n vuoksi jatkamme laajaa valmennusyhteisty&ouml;t&auml;mme my&ouml;s vuonna 2016.&#x201d;</p>
+                <div class="row reference-author-wrapper">
+                  <div class="small-12 medium-6 columns"><span class="reference-author">Julia H&auml;m&auml;l&auml;inen</span><br/>People Operations,<br/>Slush</div>
+                  <div class="small-6 show-for-medium-up right-aligned columns"><img class="logo large" src="static/img/ref/slush-logo.png"/></div>
+                </div>
+                <div class="row show-for-small-only">
+                  <div class="columns"><img class="logo large" src="static/img/ref/slush-logo.png"/></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="button-swiper-next"><span class="icon-arrow-hand-right"></span></div>
+        <div class="button-swiper-prev"><span class="icon-arrow-hand-left"></span></div>
       </div>
-      <div class="description">
-        V&auml;ite perustuu akateemiseen huippututkimukseen, kuten koko Filosofian Akatemian toiminta. Tuotamme omaa kansainv&auml;lisen tason tutkimusta, jonka pohjalta kehit&auml;mme ty&ouml;kaluja organisaatioiden avuksi. 15 hengen tiimimme on viiden vuoden aikana valmentanut satoja yrityksi&auml; kasvuun. Olemme kirjoittaneet aiheesta hyllymetreitt&auml;in kirjoja ja raportteja. On tutkittu juttu, ett&auml; menestyviss&auml; yrityksiss&auml; johtamiskulttuuri rakennetaan ty&ouml;ntekij&ouml;iden sis&auml;ist&auml; motivaatiota tukevaksi.
-      </div>
-      <a href="tutkimus.html#projects" class="link-cta">Tutustu tutkimuksiin<span class="icon-arrow-right"></span></a>
     </div>
   </div>
-  <div class="large-6 columns">
-    <div class="embedded">
-      <h2>Mittaa yrityksesi<br/>sis&auml;inen motivaatio</h2>
-      <div class="row">
-        <div class="underline small-offset-5 small-2"></div>
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="embedded">
+        <h2>Innostunut ihminen on 16% tuottavampi</h2>
+        <div class="row">
+          <div class="underline small-offset-5 small-2"></div>
+        </div>
+        <div class="description">
+          V&auml;ite perustuu akateemiseen huippututkimukseen, kuten koko Filosofian Akatemian toiminta. Tuotamme omaa kansainv&auml;lisen tason tutkimusta, jonka pohjalta kehit&auml;mme ty&ouml;kaluja organisaatioiden avuksi. 15 hengen tiimimme on viiden vuoden aikana valmentanut satoja yrityksi&auml; kasvuun. Olemme kirjoittaneet aiheesta hyllymetreitt&auml;in kirjoja ja raportteja. On tutkittu juttu, ett&auml; menestyviss&auml; yrityksiss&auml; johtamiskulttuuri rakennetaan ty&ouml;ntekij&ouml;iden sis&auml;ist&auml; motivaatiota tukevaksi.
+        </div>
+        <a href="tutkimus.html#projects" class="link-cta">Tutustu tutkimuksiin<span class="icon-arrow-right"></span></a>
       </div>
-      <div class="description">
-        Ihmisten sis&auml;iseen motivaatioon ja innostukseen voi vaikuttaa. Filosofian Akatemian kehitt&auml;m&auml; Sis&auml;isen motivaation kehityspolku on maailman ensimm&auml;inen ty&ouml;kalu, jolla ihmisten sis&auml;ist&auml; motivaatiota voi systemaattisesti mitata ja johtaa. Motivoituneet, uutta luovat ihmiset ovat yritysten t&auml;rkein kilpailuvaltti tulevaisuudessa. Palveluidemme avulla saat vertailtavia tuloksia ja apua sis&auml;isen motivaation kasvattamiseen.
+    </div>
+    <div class="large-6 columns">
+      <div class="embedded">
+        <h2>Mittaa yrityksesi<br/>sis&auml;inen motivaatio</h2>
+        <div class="row">
+          <div class="underline small-offset-5 small-2"></div>
+        </div>
+        <div class="description">
+          Ihmisten sis&auml;iseen motivaatioon ja innostukseen voi vaikuttaa. Filosofian Akatemian kehitt&auml;m&auml; Sis&auml;isen motivaation kehityspolku on maailman ensimm&auml;inen ty&ouml;kalu, jolla ihmisten sis&auml;ist&auml; motivaatiota voi systemaattisesti mitata ja johtaa. Motivoituneet, uutta luovat ihmiset ovat yritysten t&auml;rkein kilpailuvaltti tulevaisuudessa. Palveluidemme avulla saat vertailtavia tuloksia ja apua sis&auml;isen motivaation kasvattamiseen.
+        </div>
+        <a href="palvelut.html#smk-top" class="link-cta">Lue lis&auml;&auml;<span class="icon-arrow-right"></span></a>
+        <div class="show-for-large-up"><br/></div>
       </div>
-      <a href="palvelut.html#smk-top" class="link-cta">Lue lis&auml;&auml;<span class="icon-arrow-right"></span></a>
-      <div class="show-for-large-up"><br/></div>
     </div>
   </div>
 </div>
@@ -127,4 +213,5 @@
 {% block scripts %}
 {% include 'partials/scrolling.nunjucks' %}
 {% include 'partials/mailchimp.nunjucks' %}
+{% include 'partials/swiper.nunjucks' %}
 {% endblock %}

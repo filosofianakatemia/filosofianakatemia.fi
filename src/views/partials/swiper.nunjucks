@@ -1,0 +1,13 @@
+<script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    nextButton: '.button-swiper-next',
+    prevButton: '.button-swiper-prev',
+    spaceBetween: 30,
+    autoplay: 6000,
+    autoplayDisableOnInteraction: true
+});
+</script>
