@@ -41,7 +41,7 @@
     <e2e.mailgunDomain>extendedmind.org</e2e.mailgunDomain>
     <e2e.mailgunKey>TEST KEY</e2e.mailgunKey>
     <e2e.emailFrom>extended mind &lt;info@extendedmind.org&gt;</e2e.emailFrom>
-    <e2e.backend>true</e2e.backend>
+    <e2e.backend>'https://ext.md/api'</e2e.backend>
   </properties>
 
   <profiles>
@@ -182,13 +182,6 @@
           <sourceDirectory>docker</sourceDirectory>
           <images>
             <image>
-              <name>extendedmind/backend-conf</name>
-              <alias>backend-conf</alias>
-              <run>
-                <namingStrategy>alias</namingStrategy>
-              </run>
-            </image>
-            <image>
               <name>extendedmind/nginx-conf</name>
               <alias>nginx-conf</alias>
               <run>
@@ -255,12 +248,6 @@
               <run>
                 <namingStrategy>alias</namingStrategy>
                 <env>
-                  <EXTENDEDMIND_BACKEND_TOKENSECRET>01234567890123456789012345678901</EXTENDEDMIND_BACKEND_TOKENSECRET>
-                  <EXTENDEDMIND_BACKEND_SIGNUPMODE>BETA</EXTENDEDMIND_BACKEND_SIGNUPMODE>
-                  <EXTENDEDMIND_URLORIGIN>${e2e.urlOrigin}</EXTENDEDMIND_URLORIGIN>
-                  <EXTENDEDMIND_BACKEND_MAILGUNDOMAIN>${e2e.mailgunDomain}</EXTENDEDMIND_BACKEND_MAILGUNDOMAIN>
-                  <EXTENDEDMIND_BACKEND_MAILGUNKEY>${e2e.mailgunKey}</EXTENDEDMIND_BACKEND_MAILGUNKEY>
-                  <EXTENDEDMIND_EMAILFROM>${e2e.emailFrom}</EXTENDEDMIND_EMAILFROM>
                   <!-- test login admin:adminpwd for /evaluate -->
                   <EXTENDEDMIND_EVALUATECREDENTIALS>admin:$apr1$iRuCzNe7$wGTyTAez42hHC9rGP6CHg.</EXTENDEDMIND_EVALUATECREDENTIALS>
                   <EXTENDEDMIND_SITE_BACKENDSEARCH>${e2e.backend}</EXTENDEDMIND_SITE_BACKENDSEARCH>
@@ -268,39 +255,12 @@
                 </env>
                 <volumes>
                   <from>
-                    <image>backend-conf</image>
                     <image>nginx-conf</image>
                     <image>site-conf</image>
                     <image>test-site-conf-clean</image>
                   </from>
                 </volumes>
                 <cmd>-backend=env</cmd>
-              </run>
-            </image>
-            <image>
-              <name>extendedmind/backend-data</name>
-              <alias>backend-data</alias>
-              <run>
-                <namingStrategy>alias</namingStrategy>
-              </run>
-            </image>
-            <image>
-              <name>extendedmind/backend</name>
-              <alias>backend</alias>
-              <run>
-                <namingStrategy>alias</namingStrategy>
-                <env>
-                  <JAVA_TOOL_OPTIONS>-Xmx512m</JAVA_TOOL_OPTIONS>
-                </env>
-                <volumes>
-                  <from>
-                    <image>backend-conf</image>
-                    <image>backend-data</image>
-                  </from>
-                </volumes>
-                <ports>
-                  <port>8007:8081</port>
-                </ports>
               </run>
             </image>
             <image>
@@ -359,9 +319,6 @@
               </build>
               <run>
                 <namingStrategy>alias</namingStrategy>
-                <links>
-                  <link>backend:backend</link>
-                </links>
                 <volumes>
                   <from>
                     <image>fiak-site-conf</image>
@@ -381,7 +338,6 @@
                   </from>
                 </volumes>
                 <links>
-                  <link>backend:backend</link>
                   <link>fiak-site:site2</link>
                 </links>
                 <ports>

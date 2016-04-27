@@ -48,7 +48,9 @@
 {% import 'partials/newsletter.nunjucks' as newsletter %}
 {{ newsletter.initialize() }}
 {% if firstPage %}
-  {% include 'partials/social.nunjucks' %}
+<div class="section row wrapper-embedded show-for-large-up">
+{% include 'partials/social.nunjucks' %}
+</div>
 {% endif %}
 {% endblock %}
 

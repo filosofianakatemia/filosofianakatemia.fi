@@ -155,7 +155,170 @@
 {% import 'partials/newsletter.nunjucks' as newsletter %}
 {{ newsletter.initialize() }}
 
-{% include 'partials/social.nunjucks' %}
+<div class="section wrapper-embedded">
+  <div class="row show-for-large-up">
+    {% include 'partials/social.nunjucks' %}
+  </div>
+  <div id="books" class="row">
+    <div class="medium-12 columns">
+      <div class="embedded bottom swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="row center-aligned-small">
+              <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
+                <a href="https://www.talentumshop.fi/draivi.html" target="_blank"><img class="cover" src="static/img/books/draivi.jpg"/></a>
+              </div>
+              <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
+                <p><strong>Draivi – Voiko sis&auml;ist&auml; motivaatiota johtaa?</strong></p>
+                <p><a href="/ihmiset/karoliina">Karoliina Jarenko</a> ja <a href="/ihmiset/frank">Frank Martela</a><br/>Talentum Pro 2015</p>
+                <p class="book-description">Tulevaisuuden ty&ouml; vaatii luovuutta, yhteisty&ouml;kyky&auml; ja kyky&auml; kohdata asiakas. Siksi tarvitaan sis&auml;ist&auml; motivaatiota eli sit&auml;, ett&auml; ty&ouml;ntekij&auml;t aidosti syttyv&auml;t teht&auml;vist&auml;&auml;n ja haluavat itse tehd&auml; parhaansa niiden eteen. Tietyt ty&ouml;ymp&auml;rist&ouml;t mahdollistavat t&auml;m&auml;nkaltaisen draivin, toiset tuhoavat innostuksen. Jotta oma organisaatiosi olisi innostusta synnytt&auml;v&auml;, sinun on ymm&auml;rrett&auml;v&auml;, mit&auml; on sis&auml;inen motivaatio ja kuinka sit&auml; voi vahvistaa omassa organisaatiossasi.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="row center-aligned-small">
+              <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
+                <a href="https://www.talentumshop.fi/kehita-kokeillen.html" target="_blank"><img class="cover" src="static/img/books/kehita-kokeillen.jpg"/></a>
+              </div>
+              <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
+                <p><strong>Kehit&auml; kokeillen – Organisaation k&auml;sikirja</strong></p>
+                <p>Lotta Hassi, <a href="/ihmiset/sami">Sami Paju</a>, Reetta Maila<br/>Talentum Pro 2015</p>
+                <p class="book-description">Voiko perinteisesti toimivaan yritykseen saada uuden, innovatiivisen otteen? Voi, kun aletaan tehd&auml; ja kehitt&auml;&auml; kokeilemalla. Kirja antaa k&auml;yt&auml;nn&ouml;llisi&auml; neuvoja ja esimerkkej&auml; siit&auml;, miten orastavista ideoista kehitet&auml;&auml;n systemaattisesti uusia tuotteita ja palveluja, miten kokeiluista opitaan ja miten kokeilemiseen perustuvia projekteja johdetaan. Lopputuloksena on elinvoimainen organisaatio, joka kykenee nopeasti viem&auml;&auml;n uusia kehitysideoita eteenp&auml;in. Kirja on ensimm&auml;inen suomenkielinen k&auml;yt&auml;nn&ouml;nl&auml;heinen opas kokeilemiseen, joka on innovoinnin ja oppivan organisaation keski&ouml;ss&auml;.</p>
+              </div>
+            </div>
+          </div>
+          <!--div class="swiper-slide">
+            <div class="row center-aligned-small">
+              <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
+                <a href="https://www.ps-kustannus.fi/Sonja-Str%C3%B6msholm/Sisu-Tarinoita-itsens%C3%A4-ylitt%C3%A4misest%C3%A4-ja-hyv%C3%A4n-tekemisest%C3%A4.html" target="_blank"><img class="cover small" src="static/img/books/sisu.jpg"/></a>
+              </div>
+              <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
+                <p><strong>Sisu – Tarinoita itsens&auml; ylitt&auml;misest&auml; ja hyv&auml;n tekemisest&auml;</strong></p>
+                <p><a href="/ihmiset/sonja">Sonja Str&ouml;msholm</a>, <a href="/ihmiset/emilia">Emilia Lahti</a>, <a href="/ihmiset/lauri">Lauri J&auml;rvilehto</a>, Meeri Koutaniemi<br/>PS-kustannus 2015</p>
+                <p class="book-description">Nykyajan sisu on voimavara, jossa itsens&auml; ylitt&auml;minen, hyv&auml;n tekeminen ja yhteis&ouml;llisyys kulkevat k&auml;si k&auml;dess&auml;. Kirjan inspiroivien tarinoiden avulla l&ouml;yd&auml;t oman sisusi ja rohkaistut k&auml;ytt&auml;m&auml;&auml;n sit&auml; entist&auml; monipuolisemmin! Sisu alkaa sielt&auml;, miss&auml; sinnikkyys loppuu.</p>
+                <p class="book-description">"Mihin voisimmekaan viel&auml; p&auml;&auml;st&auml;? Kun aivot ja syd&auml;n ovat linjassa jonkin asian saavuttamiseksi, ihmist&auml; on aika vaikea pys&auml;ytt&auml;&auml;."<br/>– Kimmo Kedonp&auml;&auml;</p>
+              </div>
+            </div>
+          </div-->
+          <div class="swiper-slide">
+            <div class="row center-aligned-small">
+              <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
+                <a href="http://www.gummerus.fi/fi/kirja/9789512099634/valonoorit/" target="_blank"><img class="cover" src="static/img/books/valonoorit.jpg"/></a>
+              </div>
+              <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
+                <p><strong>Valon&ouml;&ouml;rit – Sis&auml;isen motivaation k&auml;sikirja</strong></p>
+                <p><a href="/ihmiset/frank">Frank Martela</a><br/>Gummerus 2015</p>
+                <p class="book-description">Voimme olla enemm&auml;n tai v&auml;hemm&auml;n aktiivinen voima omassa el&auml;m&auml;ss&auml;mme. Voimme el&auml;&auml; tavoitellen muiden m&auml;&auml;ritt&auml;mi&auml; p&auml;&auml;m&auml;&auml;ri&auml;. Tai voimme valita itse. Omaehtoiset valinnat eiv&auml;t kuitenkaan synny tyhj&auml;st&auml;.  Ne vaativat sek&auml; aikaa ett&auml; oikeita ty&ouml;kaluja jotka rohkeasti haastavat ajattelunrakenteitasi. T&auml;m&auml; kirja tarjoaa sinulle ty&ouml;kaluja matkalla kohti itse&auml;si toteuttamista ja saa sinut ajattelemaan uudella tavalla niit&auml; valintoja, joita p&auml;ivitt&auml;in teet.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="row center-aligned-small">
+              <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
+                <a href="https://www.ps-kustannus.fi/pospsy_kirja.html" target="_blank"><img class="cover" src="static/img/books/positiivisen-psykologian-voima.jpg"/></a>
+              </div>
+              <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
+                <p><strong>Positiivisen psykologian voima</strong></p>
+                <p>toim. Lotta Uusitalo-Malmivaara. Mm. <a href="/ihmiset/emilia">Emilia Lahti</a>, <a href="/ihmiset/frank">Frank Martela</a>, <a href="/ihmiset/lauri">Lauri J&auml;rvilehto</a><br/>PS-kustannus 2015</p>
+                <p class="book-description">Positiivisen psykologian voima on ensimm&auml;inen suomenkielinen kokoomateos, joka kertoo tieteen n&auml;k&ouml;kulman positiivisuuteen. Positiivisen psykologian ideana on diagnosoida hyv&auml;&auml; ja l&ouml;yt&auml;&auml; jokaisesta ihmisest&auml; vahvuudet, joiden avulla sek&auml; oma ett&auml; yhteis&ouml;jen vointi paranee. Kirja neuvoo, miten voi rakentaa el&auml;m&auml;ns&auml; omille vahvuuksilleen, ja kuinka tukea muita samassa teht&auml;v&auml;ss&auml;. Siin&auml; pohditaan my&ouml;s, ovatko positiivisuus- ja onnellisuusohjeet naiiveja.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="row center-aligned-small">
+              <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
+                <a href="http://www.springer.com/gp/book/9783319181752" target="_blank"><img class="cover" src="static/img/books/intuitive-thought.jpg"/></a>
+              </div>
+              <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
+                <p><strong>The Nature and Function of Intuitive Thought and Decision Making</strong></p>
+                <p><a href="/ihmiset/lauri">Lauri J&auml;rvilehto</a><br/>Springer 2015</p>
+                <p class="book-description">This book focuses on the very nature and function of intuitive thought. It presents an up-to-date scientific model on how the non-conscious and intuitive thought processes work in human beings. The model is based on mainstream theorizing on intuition, as well as qualitative meta-analysis of the empirical data available in the research literature. It combines recent work in the fields of philosophy of mind, cognitive psychology and positive psychology.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="row center-aligned-small">
+              <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
+                <a href="https://tahdonvoimankayttoohje.fi/" target="_blank"><img class="cover" src="static/img/books/tahdonvoiman-kayttoohje.jpg"/></a>
+              </div>
+              <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
+                <p><strong>Tahdonvoiman k&auml;ytt&ouml;ohje</strong></p>
+                <p><a href="/ihmiset/frank">Frank Martela</a><br/>Tammi 2014</p>
+                <p class="book-description">Tahdonvoima on yksi t&auml;rkeimmist&auml; asioista, joka selitt&auml;&auml; ihmisen fyysist&auml; terveytt&auml;, rahallista turvaa, ihmissuhteiden laatua ja menestymist&auml; ty&ouml;el&auml;m&auml;ss&auml;. Mihin tahansa pyrit el&auml;m&auml;ss&auml;si, tahdonvoima on yksi t&auml;rkeimmist&auml; resursseistasi. T&auml;m&auml; kirja on tarkoitettu niille, jotka ovat koskaan kamppailleet viivyttelemisen, riippuvuuden tai motivaation puutteen kanssa- eli meille kaikille. Tahdonvoiman k&auml;ytt&ouml;ohje tarjoaa kaksikymment&auml; motivaatiotutkimukseen perustuvaa konkreettista ty&ouml;kalua tahdonvoiman kehitt&auml;miseen ja tavoitteiden saavuttamiseen.</p>
+              </div>
+            </div>
+          </div>
+          <!--div class="swiper-slide">
+            <div class="row center-aligned-small">
+              <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
+                <a href="https://www.ps-kustannus.fi/Lauri-J%C3%A4rvilehto/Hauskan-oppimisen-vallankumous.html" target="_blank"><img class="cover small" src="static/img/books/hauskan-oppimisen-vallankumous.jpg"/></a>
+              </div>
+              <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
+                <p><strong>Hauskan oppimisen vallankumous</strong></p>
+                <p><a href="/ihmiset/lauri">Lauri J&auml;rvilehto</a><br/>PS-kustannus 2014</p>
+                <p class="book-description">Kiinnostunut ihminen oppii aina uutta. Hauskuus ja leikki tekev&auml;t oppimisesta tehokasta. Motivaatiopsykologiaan, positiivisen psykologiaan ja aivotutkimukseen nojaava teos avaa syit&auml; sille miksi, innostus, sis&auml;inen motivaatio ja flow ovat avaintekij&ouml;it&auml; oppimisessa.. Teoksessa k&auml;sitell&auml;&auml;n laajalti oppimista ja pelioppimista valottavia tutkimustuloksia sek&auml; tarkastellaan oppimisen tulevaisuutta. Se avaa niin vanhemmille kuin opetus- ja kasvatusalan ammattilaisille mielenkiintoisella tavalla sen, miksi tulevaisuuden oppiminen on ennen kaikkea hauskaa!</p>
+              </div>
+            </div>
+          </div-->
+          <div class="swiper-slide">
+            <div class="row center-aligned-small">
+              <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
+                <a href="http://www.adlibris.com/fi/kirja/monenkirjavia-kuvitelmia-9789513178239" target="_blank"><img class="cover" src="static/img/books/monenkirjavia-kuvitelmia.jpg"/></a>
+              </div>
+              <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
+                <p><strong>Monenkirjavia kuvitelmia</strong></p>
+                <p><a href="/ihmiset/lauri">Lauri J&auml;rvilehto</a><br/>Tammi 2014</p>
+                <p class="book-description">Maailmaa voi muuttaa kahdella tavalla:muuttamalla asioita tai muuttamalla ajattelua. Todellisuus on se taustakangas, jolle maalaamme monenkirjavat kuvitelmamme. Lauri J&auml;rvilehto pohtii kirjassaan filosofiaan ja tieteelliseen tutkimukseen nojaten, miten tulkitsemme maailmaa ja kokemusta Kirja k&auml;sittelee todellisuuden ja tarinan rajapintoja, uskonnon ja tieteen kamppailua ja maailman tulevaisuuden n&auml;kymi&auml;.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="row center-aligned-small">
+              <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
+                <a href="https://upeaatyota.fi/" target="_blank"><img class="cover" src="static/img/books/upeaa-tyota.jpg"/></a>
+              </div>
+              <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
+                <p><strong>Upeaa ty&ouml;t&auml; – N&auml;in teet itsellesi unelmiesi ty&ouml;paikan</strong></p>
+                <p><a href="/ihmiset/lauri">Lauri J&auml;rvilehto</a><br/>Tammi 2013</p>
+                <p class="book-description">Kutsumuksesi on siell&auml;, miss&auml; intohimosi kohtaa mailman tarpeet. Upeaa ty&ouml;t&auml;, tarjoaa konkreettisia neuvoja ja harjoitteita oman kutsumusty&ouml;n l&ouml;yt&auml;miseksi. Konkreettiset k&auml;yt&auml;n&ouml;nnohjeet auttavat sinua toimimaan aktiivisesti kohti uusia koulutus- tai uramahdollisuuksia.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="row center-aligned-small">
+              <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
+                <a href="http://intokustannus.fi/kirja/kuningasjako/" target="_blank"><img class="cover" src="static/img/books/kuningasjako.jpg"/></a>
+              </div>
+              <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
+                <p><strong>Kuningasjako – Miksi verotus on oikein</strong></p>
+                <p><a href="/ihmiset/reima">Reima Launonen</a><br/>Into Kustannus 2013</p>
+                <p class="book-description">Millainen yhteiskunnallisen tulonjaon tulisi olla, ett&auml; se edist&auml;isi kaikkien ihmisten mahdollisuuksia toimia yhteiskunnassa? Mitk&auml; ovat yksil&ouml;iden omistusoikeuden rajat, tasa-arvon ja vapauden vaatimukset ja julkisen sektorin tarkoitus ja p&auml;&auml;m&auml;&auml;r&auml;t? Kirjassaan oikeudenmukaisuuteen erikoistunut tutkija Launonen pohtii miten verotus tulisi j&auml;rjest&auml;&auml;, jotta kansalaiset voisivat aidosti olla vapaita ja tasa-arvoisia. Kuningasjako valottaa eettisi&auml; perusteita verotuksen takana ja sen merkityst&auml; yhteiskunnassa.</p>
+              </div>
+            </div>
+          </div>
+          <!--div class="swiper-slide">
+            <div class="row center-aligned-small">
+              <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
+                <a href="http://www.adlibris.com/fi/kirja/tee-itsestasi-mestariajattelija-9789513164843" target="_blank"><img class="cover small" src="static/img/books/tee-itsestasi-mestariajattelija.jpg"/></a>
+              </div>
+              <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
+                <p><strong>Tee itsest&auml;si mestariajattelija</strong></p>
+                <p><a href="/ihmiset/lauri">Lauri J&auml;rvilehto</a><br/>Tammi 2012</p>
+                <p class="book-description">Miten mielemme toimii? Kuinka voit kehitt&auml; ajatteluasi ja luovuuttasi? Kirja avaa helposti ymm&auml;rrett&auml;v&auml;ll&auml; tavalla mielen toimintaa ja auttaa sinua hallitsemaan mielt&auml;si.  Konkreettisten menetelmien avulla v&auml;henn&auml;t ty&ouml;per&auml;ist&auml; stressi&auml;, lis&auml;&auml;t aikaansaamista ja edist&auml;t luovaa ajattelua.</p>
+              </div>
+            </div>
+          </div-->
+        </div>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="button-swiper-next"><span class="icon-arrow-hand-right"></span></div>
+        <div class="button-swiper-prev"><span class="icon-arrow-hand-left"></span></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div id="contact" class="section">
   <div id="contact-heading" class="row">
