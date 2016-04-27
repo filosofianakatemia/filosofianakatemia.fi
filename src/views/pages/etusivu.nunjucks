@@ -187,19 +187,18 @@
               </div>
             </div>
           </div>
-          <!--div class="swiper-slide">
+          <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
-                <a href="https://www.ps-kustannus.fi/Sonja-Str%C3%B6msholm/Sisu-Tarinoita-itsens%C3%A4-ylitt%C3%A4misest%C3%A4-ja-hyv%C3%A4n-tekemisest%C3%A4.html" target="_blank"><img class="cover small" src="static/img/books/sisu.jpg"/></a>
+                <a href="https://www.ps-kustannus.fi/Sonja-Str%C3%B6msholm/Sisu-Tarinoita-itsens%C3%A4-ylitt%C3%A4misest%C3%A4-ja-hyv%C3%A4n-tekemisest%C3%A4.html" target="_blank"><img class="cover" src="static/img/books/sisu.jpg"/></a>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p><strong>Sisu – Tarinoita itsens&auml; ylitt&auml;misest&auml; ja hyv&auml;n tekemisest&auml;</strong></p>
                 <p><a href="/ihmiset/sonja">Sonja Str&ouml;msholm</a>, <a href="/ihmiset/emilia">Emilia Lahti</a>, <a href="/ihmiset/lauri">Lauri J&auml;rvilehto</a>, Meeri Koutaniemi<br/>PS-kustannus 2015</p>
-                <p class="book-description">Nykyajan sisu on voimavara, jossa itsens&auml; ylitt&auml;minen, hyv&auml;n tekeminen ja yhteis&ouml;llisyys kulkevat k&auml;si k&auml;dess&auml;. Kirjan inspiroivien tarinoiden avulla l&ouml;yd&auml;t oman sisusi ja rohkaistut k&auml;ytt&auml;m&auml;&auml;n sit&auml; entist&auml; monipuolisemmin! Sisu alkaa sielt&auml;, miss&auml; sinnikkyys loppuu.</p>
-                <p class="book-description">"Mihin voisimmekaan viel&auml; p&auml;&auml;st&auml;? Kun aivot ja syd&auml;n ovat linjassa jonkin asian saavuttamiseksi, ihmist&auml; on aika vaikea pys&auml;ytt&auml;&auml;."<br/>– Kimmo Kedonp&auml;&auml;</p>
+                <p class="book-description">“Sisu – Tarinoita itsens&auml; ylitt&auml;misest&auml; ja hyv&auml;n tekemisest&auml;” on Filosofian Akatemian luotsaaman, Sisun juhlavuosi 2015 -projektin p&auml;&auml;teos. Kirjan 14 sisukasta p&auml;&auml;henkil&ouml;&auml; kertovat kirjassa sisutarinansa ja avaavat, miten ovat ylitt&auml;neet mahdottomiltakin tuntuvia esteit&auml; ja l&ouml;yt&auml;neet kutsumuksen, jonka toteuttaminen vaatii my&ouml;s sisua. Nykyajan sisu on voimavara, jossa itsens&auml; ylitt&auml;minen, hyv&auml;n tekeminen ja yhteis&ouml;llisyys kulkevat k&auml;si k&auml;dess&auml;. Kirjan inspiroivien tarinoiden avulla l&ouml;yd&auml;t oman sisusi ja rohkaistut k&auml;ytt&auml;m&auml;&auml;n sit&auml; entist&auml; monipuolisemmin! Sisu alkaa sielt&auml;, miss&auml; sinnikkyys loppuu.</p>
               </div>
             </div>
-          </div-->
+          </div>
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
@@ -224,7 +223,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
+          <!--div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
                 <a href="http://www.springer.com/gp/book/9783319181752" target="_blank"><img class="cover" src="static/img/books/intuitive-thought.jpg"/></a>
@@ -235,7 +234,7 @@
                 <p class="book-description">This book focuses on the very nature and function of intuitive thought. It presents an up-to-date scientific model on how the non-conscious and intuitive thought processes work in human beings. The model is based on mainstream theorizing on intuition, as well as qualitative meta-analysis of the empirical data available in the research literature. It combines recent work in the fields of philosophy of mind, cognitive psychology and positive psychology.</p>
               </div>
             </div>
-          </div>
+          </div-->
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
