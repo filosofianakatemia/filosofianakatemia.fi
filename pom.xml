@@ -299,7 +299,7 @@
               <name>fiak/site</name>
               <alias>fiak-site</alias>
               <build>
-                <from>node:5</from>
+                <from>node:6</from>
                 <maintainer>jukapeka@gmail.com</maintainer>
                 <tags>
                   <tag>latest</tag>
