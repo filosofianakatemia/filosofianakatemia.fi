@@ -83,7 +83,7 @@
       <div class="blog-content {{ "medium-8 columns" if ((listView and not readMode) and blog.pictureData) else "column" }} {{ "ingress-only" if excerptMode and blog.lessThanFourParagraphs }}">
         {# Lead #}
         {% if listView and not readMode %}
-          <p class="lead" onclick="location.href='blogi/{{ blog.path }}';return false;">
+          <p class="lead" onclick="location.href='/blogi/{{ blog.path }}';return false;">
             {{ blog.lead | safe }}
           </p>
         {% else %}
