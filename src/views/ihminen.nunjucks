@@ -33,6 +33,12 @@
     <div class="section section-person row">
       {{ personDescription | safe }}
     </div>
+  {% elif singleColumnPerson %}
+    <div class="section section-person row">
+      <div class="large-7 large-offset-1 left-aligned columns">
+        {% block personmiddle %}{% endblock %}
+      </div>
+    </div>
   {% else %}
     <div class="section section-person row">
       <div class="large-5 large-offset-1 left-aligned columns">

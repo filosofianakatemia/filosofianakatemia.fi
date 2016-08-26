@@ -140,7 +140,7 @@
   </div>
 </div>
 <div class="section row">
-  <div id="timo" class="large-4 large-offset-2 columns">
+  <div id="timo" class="large-4 columns">
     <div class="link-container" onClick="location.href='ihmiset/timo'">
       <div class="picture"></div>
       <h2><a>Timo Tiuraniemi</a></h2>
@@ -151,6 +151,12 @@
     <div class="link-container" onClick="location.href='ihmiset/villiam'">
       <div class="picture"></div>
       <h2><a>Villiam Virkkunen</a></h2>
+    </div>
+  </div>
+  <div id="placeholder" class="large-4 end columns">
+    <div class="link-container" onClick="location.href='ihmiset/myyntijohtaja'">
+      <div class="picture"></div>
+      <h2><a>Haemme: myyntijohtaja</a></h2>
     </div>
   </div>
 </div>

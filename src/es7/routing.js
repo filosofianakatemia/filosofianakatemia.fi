@@ -460,6 +460,10 @@ module.exports = (config, app, backendApi) => {
                     'Disallow: /ihmiset/santeri/esittely';
     ctx.body = robotsTxt;
   }
+  async function myyntijohtaja(ctx) {
+    console.log('GET /ihmiset/myyntijohtaja');
+    ctx.body = render('pages/myyntijohtaja');
+  }
 
   app.use(route.get('/', index));
   app.use(route.get('/palvelut', palvelut));
@@ -490,8 +494,7 @@ module.exports = (config, app, backendApi) => {
   app.use(route.get('/ihmiset/santeri/esittely', santeriEsittely));
   app.use(route.get('/ihmiset/santeri/sisainen-motivaatio', santeriSisainenMotivaatio));
   app.use(route.get('/robots.txt', robots));
-  // Discontinued, route to front page
-  app.use(route.get('/ihmiset/assistentti', index));
+  app.use(route.get('/ihmiset/myyntijohtaja', myyntijohtaja));
 
   // Helper functions
 
