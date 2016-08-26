@@ -69,11 +69,10 @@
     var totalCount = 0;
     var totalCountElement = document.getElementById('total-shares_count');
     var sharelUrl = 'https://filosofianakatemia.fi/blogi/' + path;
-
-    var facebookUrl = 'https://api.facebook.com/method/links.getStats?urls=' + sharelUrl + '&format=json';
+    var facebookUrl = 'https://graph.facebook.com?id=' + sharelUrl;
     httpGetAsync(facebookUrl, facebookCount);
     function facebookCount(response) {
-      totalCount += JSON.parse(response)[0].share_count;
+      totalCount += JSON.parse(response).share.share_count;
       if (totalCountElement) {
         totalCountElement.innerHTML = totalCount;
       }
