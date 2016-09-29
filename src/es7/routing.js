@@ -238,6 +238,14 @@ module.exports = (config, app, backendApi) => {
     console.log('GET /palvelut');
     ctx.body = render('pages/palvelut');
   }
+  function sisaisenMotivaationJohtaminen(ctx) {
+    console.log('GET /palvelut/sisaisen-motivaation-johtaminen');
+    ctx.body = render('pages/sisaisenmotivaationjohtaminen');
+  }
+  function mielensavalottajat(ctx) {
+    console.log('GET /palvelut/mielensavalottajat');
+    ctx.body = render('pages/mielensavalottajat');
+  }
   function ihmiset(ctx) {
     console.log('GET /ihmiset');
     ctx.body = render('pages/ihmiset');
@@ -460,13 +468,11 @@ module.exports = (config, app, backendApi) => {
                     'Disallow: /ihmiset/santeri/esittely';
     ctx.body = robotsTxt;
   }
-  async function myyntijohtaja(ctx) {
-    console.log('GET /ihmiset/myyntijohtaja');
-    ctx.body = render('pages/myyntijohtaja');
-  }
 
   app.use(route.get('/', index));
   app.use(route.get('/palvelut', palvelut));
+  app.use(route.get('/palvelut/sisaisen-motivaation-johtaminen', sisaisenMotivaationJohtaminen));
+  app.use(route.get('/palvelut/mielensavalottajat', mielensavalottajat));
   app.use(route.get('/ihmiset', ihmiset));
   app.use(route.get('/tutkimus', tutkimus));
   app.use(route.get('/blogi', blogi));
@@ -494,7 +500,6 @@ module.exports = (config, app, backendApi) => {
   app.use(route.get('/ihmiset/santeri/esittely', santeriEsittely));
   app.use(route.get('/ihmiset/santeri/sisainen-motivaatio', santeriSisainenMotivaatio));
   app.use(route.get('/robots.txt', robots));
-  app.use(route.get('/ihmiset/myyntijohtaja', myyntijohtaja));
 
   // Helper functions
 
