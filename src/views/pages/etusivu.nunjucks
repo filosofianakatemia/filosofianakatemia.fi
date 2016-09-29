@@ -327,12 +327,12 @@
   </div>
   <div id="contact-people" class="row">
     <div class="large-4 columns">
-      <img src="static/img/sonja-circle.png"/>
-      <h2>Sonja Str&ouml;msholm</h2>
+      <img src="static/img/karoliina-circle.png"/>
+      <h2>Karoliina Jarenko</h2>
       <div>
-        Asiakkuudet ja myynti<br/>
-        +358 50 3030 894<br/>
-        <a href="mailto:sonja.stromsholm@filosofianakatemia.fi">sonja.stromsholm@filosofianakatemia.fi</a>
+        Toimitusjohtaja<br/>
+        +358 50 5758 487<br/>
+        <a href="mailto:karoliina.jarenko@filosofianakatemia.fi">karoliina.jarenko@filosofianakatemia.fi</a>
       </div>
     </div>
     <div class="large-4 columns">
@@ -345,12 +345,12 @@
       </div>
     </div>
     <div class="large-4 columns">
-      <img src="static/img/karoliina-circle.png"/>
-      <h2>Karoliina Jarenko</h2>
+      <img src="static/img/timo-circle.png"/>
+      <h2>Timo Tiuraniemi</h2>
       <div>
-        Toimitusjohtaja<br/>
-        +358 50 5758 487<br/>
-        <a href="mailto:karoliina.jarenko@filosofianakatemia.fi">karoliina.jarenko@filosofianakatemia.fi</a>
+        Tietojohtaja<br/>
+        +358 40 823 2355<br/>
+        <a href="mailto:timo.tiuraniemi@filosofianakatemia.fi">timo.tiuraniemi@filosofianakatemia.fi</a>
       </div>
     </div>
   </div>
