@@ -434,11 +434,6 @@ module.exports = (config, app, backendApi) => {
     const personContext = await getPersonContext('selina-bakir');
     ctx.body = render('pages/selina', personContext);
   }
-  async function sonja(ctx) {
-    console.log('GET /ihmiset/sonja');
-    const personContext = await getPersonContext('sonja-stromsholm');
-    ctx.body = render('pages/sonja', personContext);
-  }
   async function tapani(ctx) {
     console.log('GET /ihmiset/tapani');
     const personContext = await getPersonContext('tapani-riekki');
@@ -493,7 +488,6 @@ module.exports = (config, app, backendApi) => {
   app.use(route.get('/ihmiset/sami', sami));
   app.use(route.get('/ihmiset/santeri', santeri));
   app.use(route.get('/ihmiset/selina', selina));
-  app.use(route.get('/ihmiset/sonja', sonja));
   app.use(route.get('/ihmiset/tapani', tapani));
   app.use(route.get('/ihmiset/timo', timo));
   app.use(route.get('/ihmiset/villiam', villiam));
@@ -663,8 +657,6 @@ module.exports = (config, app, backendApi) => {
       return 'Santeri Lanér';
       case 'selina':
       return 'Selina Bakir';
-      case 'sonja':
-      return 'Sonja Strömsholm';
       case 'tapani':
       return 'Tapani Riekki';
       case 'timo':
@@ -704,8 +696,6 @@ module.exports = (config, app, backendApi) => {
       return 'https://filosofianakatemia.fi/static/img/santeri-large.jpg';
       case 'selina':
       return 'https://filosofianakatemia.fi/static/img/selina-large.jpg';
-      case 'sonja':
-      return 'https://filosofianakatemia.fi/static/img/sonja-large.jpg';
       case 'tapani':
       return 'https://filosofianakatemia.fi/static/img/tapani-large.jpg';
       case 'timo':
@@ -848,15 +838,6 @@ module.exports = (config, app, backendApi) => {
     },
     paths: {
       description: 'selina-bakir-kuvaus'
-    }
-  },
-  {
-    id: 'sonja',
-    pictures: {
-      thumbnail: '/static/img/sonja-thumbnail.png'
-    },
-    paths: {
-      description: 'sonja-stromsholm-kuvaus'
     }
   },
   {
