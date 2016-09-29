@@ -246,6 +246,10 @@ module.exports = (config, app, backendApi) => {
     console.log('GET /palvelut/mielensavalottajat');
     ctx.body = render('pages/mielensavalottajat');
   }
+  function ajattelunhallinta(ctx) {
+    console.log('GET /palvelut/ajattelunhallinta');
+    ctx.body = render('pages/ajattelunhallinta');
+  }
   function ihmiset(ctx) {
     console.log('GET /ihmiset');
     ctx.body = render('pages/ihmiset');
@@ -468,6 +472,7 @@ module.exports = (config, app, backendApi) => {
   app.use(route.get('/palvelut', palvelut));
   app.use(route.get('/palvelut/sisaisen-motivaation-johtaminen', sisaisenMotivaationJohtaminen));
   app.use(route.get('/palvelut/mielensavalottajat', mielensavalottajat));
+  app.use(route.get('/palvelut/ajattelunhallinta', ajattelunhallinta));
   app.use(route.get('/ihmiset', ihmiset));
   app.use(route.get('/tutkimus', tutkimus));
   app.use(route.get('/blogi', blogi));
