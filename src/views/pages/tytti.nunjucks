@@ -1,0 +1,12 @@
+{% extends "ihminen.nunjucks" %}
+{% set personName = 'Tytti Kokko' %}
+{% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block ogtitle %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block ogimages %}
+<meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/tytti-small.jpg" />
+<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/tytti-small.jpg" />
+{% endblock %}
+{% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block personquote %}Tytin kanssa on äärimmäisen miellyttävää tehdä yhteistyötä, koska hän antaa positiivisen persoonansa paistaa läpi ja hänen työskentelynsä on luotettavaa.
+Tytissä vankka myyntiosaaminen yhdistyy lämpimään luonteeseen &ndash; tuloksena on timanttinen kompetenssi, johon harvoin törmää yritysmaailmassa.{% endblock %}
+{% block personquoteauthor %}Villiam Virkkunen{% endblock %}
