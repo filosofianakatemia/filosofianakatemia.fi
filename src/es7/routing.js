@@ -413,6 +413,11 @@ module.exports = (config, app, backendApi) => {
     const personContext = await getPersonContext('maria-ruotsalainen');
     ctx.body = render('pages/maria', personContext);
   }
+  async function miia(ctx) {
+    console.log('GET /ihmiset/miia');
+    const personContext = await getPersonContext('miia-maijala');
+    ctx.body = render('pages/miia', personContext);
+  }
   async function peter(ctx) {
     console.log('GET /ihmiset/peter');
     const personContext = await getPersonContext('peter-kentta');
@@ -493,6 +498,7 @@ module.exports = (config, app, backendApi) => {
   app.use(route.get('/ihmiset/karoliina', karoliina));
   app.use(route.get('/ihmiset/lauri', lauri));
   app.use(route.get('/ihmiset/maria', maria));
+  app.use(route.get('/ihmiset/miia', miia));
   app.use(route.get('/ihmiset/peter', peter));
   app.use(route.get('/ihmiset/reima', reima));
   app.use(route.get('/ihmiset/sami', sami));
@@ -658,6 +664,8 @@ module.exports = (config, app, backendApi) => {
       return 'Lauri Järvilehto';
       case 'maria':
       return 'Maria Ruotsalainen';
+      case 'miia':
+      return 'Miia Maijala';
       case 'peter':
       return 'Peter Kenttä';
       case 'reima':
@@ -699,6 +707,8 @@ module.exports = (config, app, backendApi) => {
       return 'https://filosofianakatemia.fi/static/img/lauri-large.jpg';
       case 'maria':
       return 'https://filosofianakatemia.fi/static/img/maria-large.jpg';
+      case 'miia':
+      return 'https://filosofianakatemia.fi/static/img/miia-large.jpg';
       case 'peter':
       return 'https://filosofianakatemia.fi/static/img/peter-large.jpg';
       case 'reima':
@@ -808,6 +818,15 @@ module.exports = (config, app, backendApi) => {
     },
     paths: {
       description: 'maria-ruotsalainen-kuvaus'
+    }
+  },
+  {
+    id: 'miia',
+    pictures: {
+      thumbnail: '/static/img/miia-thumbnail.png'
+    },
+    paths: {
+      description: 'miia-maijala-kuvaus'
     }
   },
   {
