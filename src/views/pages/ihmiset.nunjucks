@@ -3,7 +3,7 @@
 {% block title %}{{ super() }} | Ihmiset{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogtitle %}{{ super() }} | Ihmiset{% endblock %}
-{% block description %}Me teemme t&ouml;it&auml; valtavalla innolla. Filosofian Akatemian huippututkijat ja valmentajat esitt&auml;ytyv&auml;t.{% endblock %}
+{% block description %}Me teemme t&ouml;it&auml; valtavalla innolla. Filosofian Akatemian ihmiset esitt&auml;ytyv&auml;t.{% endblock %}
 {% block bodyattrs %}id="people"{% endblock %}
 
 {% block topbar %}
@@ -28,7 +28,7 @@
 {% block hero %}
 <div class="hero">
   <div class="slogan">Me olemme Filosofian Akatemia</div>
-  <div class="ingress">Ihmisten pit&auml;&auml; el&auml;&auml; hyv&auml;&auml; el&auml;m&auml;&auml;. Iso osa siit&auml; kuluu t&ouml;iss&auml;. Parhaimmillaan ty&ouml;nteko on mielek&auml;st&auml;, palkitsevaa ja merkityksellist&auml;. Filosofian Akatemia perustettiin meille unelmien ty&ouml;paikaksi ja sellainen siit&auml; tuli. Nyt autamme muita saavuttamaan saman. Teemme akateemista tutkimusta, josta uutamme mullistavia ty&ouml;kaluja inhimillisen hyvinvoinnin vahvistamiseen ja urautuneen ajattelun murtamiseen yrityksiss&auml;. Teemme ty&ouml;t&auml; valtavalla innolla.</div>
+  <div class="ingress">Ihmisten pit&auml;&auml; el&auml;&auml; hyv&auml;&auml; el&auml;m&auml;&auml;. Iso osa siit&auml; kuluu t&ouml;iss&auml;. Parhaimmillaan ty&ouml;nteko on mielek&auml;st&auml;, palkitsevaa ja merkityksellist&auml;. Filosofian Akatemia perustettiin meille unelmien työpaikaksi ja sitä tavoittelemme yhä joka päivä. Perehdymme jatkuvasti uusimpaan akateemiseen tutkimukseen ja edistämme sitä myös itse. Uutamme tutkimuksesta mullistavia ty&ouml;kaluja inhimillisen hyvinvoinnin vahvistamiseen ja urautuneen ajattelun murtamiseen. Teemme ty&ouml;t&auml; valtavalla innolla.</div>
   <a href="#thumbnails" class="scroll-down show-for-large-up">
     <span class="text-scroll-down">VIERIT&Auml; ALAS</span></br><span class="icon-arrow-down"></span>
   </a>
@@ -38,36 +38,16 @@
 {% block mainattrs %}id="thumbnails"{% endblock %}
 {% block main %}
 <div class="section row">
-  <div id="emilia" class="large-4 columns" onClick="location.href='ihmiset/emilia'">
-    <div class="link-container">
-      <div class="picture"></div>
-      <h2><a>Emilia Lahti</a></h2>
-    </div>
-  </div>
   <div id="frank" class="large-4 columns">
     <div class="link-container" onClick="location.href='ihmiset/frank'">
       <div class="picture"></div>
       <h2><a>Frank Martela</a></h2>
     </div>
   </div>
-  <div id="iida" class="large-4 columns end">
+  <div id="iida" class="large-4 columns">
     <div class="link-container" onClick="location.href='ihmiset/iida'">
       <div class="picture"></div>
       <h2><a>Iida M&auml;kikallio</a></h2>
-    </div>
-  </div>
-</div>
-<div class="section row">
-  <div id="joonas" class="large-4 columns">
-    <div class="link-container" onClick="location.href='ihmiset/joonas'">
-      <div class="picture"></div>
-      <h2><a>Joonas Pesonen</a></h2>
-    </div>
-  </div>
-  <div id="jp" class="large-4 columns">
-    <div class="link-container" onClick="location.href='ihmiset/jp'">
-      <div class="picture"></div>
-      <h2><a>Jukka-Pekka Salo</a></h2>
     </div>
   </div>
   <div id="karoliina" class="large-4 columns end">
@@ -125,28 +105,22 @@
       <h2><a>Santeri Lan&eacute;r</a></h2>
     </div>
   </div>
-  <div id="selina" class="large-4 columns">
-    <div class="link-container" onClick="location.href='ihmiset/selina'">
-      <div class="picture"></div>
-      <h2><a>Selina Bakir</a></h2>
-    </div>
-  </div>
-  <div id="tapani" class="large-4 columns end">
+  <div id="tapani" class="large-4 columns">
     <div class="link-container" onClick="location.href='ihmiset/tapani'">
       <div class="picture"></div>
       <h2><a>Tapani Riekki</a></h2>
     </div>
   </div>
-</div>
-<div class="section row">
-  <div id="timo" class="large-4 columns">
+  <div id="timo" class="large-4 columns end">
     <div class="link-container" onClick="location.href='ihmiset/timo'">
       <div class="picture"></div>
       <h2><a>Timo Tiuraniemi</a></h2>
       <h4><a>Tietojohtaja</a></h4>
     </div>
   </div>
-  <div id="tytti" class="large-4 columns">
+</div>
+<div class="section row">
+  <div id="tytti" class="large-offset-2 large-4 columns">
     <div class="link-container" onClick="location.href='ihmiset/tytti'">
       <div class="picture"></div>
       <h2><a>Tytti Kokko</a></h2>
@@ -159,6 +133,30 @@
     </div>
   </div>
 </div>
+<div class="section row">
+  <h1>Seikkailemassa</h1>
+</div>
+<div class="section row">
+  <div id="joonas" class="large-4 columns">
+    <div class="link-container" onClick="location.href='ihmiset/joonas'">
+      <div class="picture"></div>
+      <h2><a>Joonas Pesonen</a></h2>
+    </div>
+  </div>
+  <div id="jp" class="large-4 columns">
+    <div class="link-container" onClick="location.href='ihmiset/jp'">
+      <div class="picture"></div>
+      <h2><a>Jukka-Pekka Salo</a></h2>
+    </div>
+  </div>
+  <div id="selina" class="large-4 columns end">
+    <div class="link-container" onClick="location.href='ihmiset/selina'">
+      <div class="picture"></div>
+      <h2><a>Selina Bakir</a></h2>
+    </div>
+  </div>
+</div>
+
 {% endblock %}
 
 {% block footer %}
