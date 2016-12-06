@@ -433,11 +433,6 @@ module.exports = (config, app, backendApi) => {
     const personContext = await getPersonContext('sami-paju');
     ctx.body = render('pages/sami', personContext);
   }
-  async function santeri(ctx) {
-    console.log('GET /ihmiset/santeri');
-    const personContext = await getPersonContext('santeri-laner');
-    ctx.body = render('pages/santeri', personContext);
-  }
   async function selina(ctx) {
     console.log('GET /ihmiset/selina');
     const personContext = await getPersonContext('selina-bakir');
@@ -462,14 +457,6 @@ module.exports = (config, app, backendApi) => {
     console.log('GET /ihmiset/villiam');
     const personContext = await getPersonContext('villiam-virkkunen');
     ctx.body = render('pages/villiam', personContext);
-  }
-  async function santeriEsittely(ctx) {
-    console.log('GET /ihmiset/santeri/esittely');
-    ctx.body = render('pages/esittely');
-  }
-  async function santeriSisainenMotivaatio(ctx) {
-    console.log('GET /ihmiset/santeri/sisainen-motivaatio');
-    ctx.body = render('pages/sisainenmotivaatio');
   }
   async function robots(ctx) {
     console.log('GET /robots.txt');
@@ -502,14 +489,11 @@ module.exports = (config, app, backendApi) => {
   app.use(route.get('/ihmiset/peter', peter));
   app.use(route.get('/ihmiset/reima', reima));
   app.use(route.get('/ihmiset/sami', sami));
-  app.use(route.get('/ihmiset/santeri', santeri));
   app.use(route.get('/ihmiset/selina', selina));
   app.use(route.get('/ihmiset/tapani', tapani));
   app.use(route.get('/ihmiset/timo', timo));
   app.use(route.get('/ihmiset/tytti', tytti));
   app.use(route.get('/ihmiset/villiam', villiam));
-  app.use(route.get('/ihmiset/santeri/esittely', santeriEsittely));
-  app.use(route.get('/ihmiset/santeri/sisainen-motivaatio', santeriSisainenMotivaatio));
   app.use(route.get('/robots.txt', robots));
 
   // Helper functions
@@ -672,8 +656,6 @@ module.exports = (config, app, backendApi) => {
       return 'Reima Launonen';
       case 'sami':
       return 'Sami Paju';
-      case 'santeri':
-      return 'Santeri Lanér';
       case 'selina':
       return 'Selina Bakir';
       case 'tapani':
@@ -715,8 +697,6 @@ module.exports = (config, app, backendApi) => {
       return 'https://filosofianakatemia.fi/static/img/reima-large.jpg';
       case 'sami':
       return 'https://filosofianakatemia.fi/static/img/sami-large.jpg';
-      case 'santeri':
-      return 'https://filosofianakatemia.fi/static/img/santeri-large.jpg';
       case 'selina':
       return 'https://filosofianakatemia.fi/static/img/selina-large.jpg';
       case 'tapani':
@@ -854,15 +834,6 @@ module.exports = (config, app, backendApi) => {
     },
     paths: {
       description: 'sami-paju-kuvaus'
-    }
-  },
-  {
-    id: 'santeri',
-    pictures: {
-      thumbnail: '/static/img/santeri-thumbnail.png'
-    },
-    paths: {
-      description: 'santeri-laner-kuvaus'
     }
   },
   {
