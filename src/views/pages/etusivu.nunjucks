@@ -3,7 +3,7 @@
 {% block title %}{{ super() }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogtitle %}{{ super() }}{% endblock %}
-{% block description %}Filosofian Akatemia on tutkimus- ja valmennusyritys. Tarjoamme tieteeseen pohjautuvia ratkaisuja ty&ouml;hyvinvointiin ja tuottavuuteen.{% endblock %}
+{% block description %}Filosofian Akatemia on tutkimus-, valmennus- ja konsultointiyritys. Tarjoamme tieteeseen pohjautuvia ratkaisuja ty&ouml;hyvinvointiin ja tuottavuuteen.{% endblock %}
 {% block bodyattrs %}id="front"{% endblock %}
 
 {% block topbar %}
@@ -16,7 +16,7 @@
 
 <section class="top-bar-section">
   <ul class="right">
-    <li class="active"><a onclick="app.menuActiveFeatureClicked('etusivu')">Etusivu</a></li>
+    <li class="active show-for-small-only"><a onclick="app.menuActiveFeatureClicked('etusivu')">Etusivu</a></li>
     <li><a href="/ihmiset">Ihmiset</a></li>
     <li><a href="/palvelut">Palvelut</a></li>
     <li><a href="/tutkimus">Tutkimus</a></li>
@@ -27,8 +27,10 @@
 
 {% block hero %}
 <div class="hero">
-  <div class="slogan">Innostutaanko teill&auml; <span class="font-bold font-italic">ty&ouml;st&auml;?</span></div>
-  <div class="ingress">Luova ongelmanratkaisukyky, ketteryys ja ennenkuulumattomat ratkaisut ovat menestyv&auml;n organisaation elinehtoja. Sellaisia syntyy ihmisilt&auml;, jotka kokevat ty&ouml;n imua ja sis&auml;ist&auml; motivaatiota. Me Filosofian Akatemiassa autamme organisaatioita johtamaan sis&auml;ist&auml; motivaatiota ja tekem&auml;&auml;n parempaa tulosta keskell&auml; vaikeitakin muutoksia.</div>
+  <div class="slogan"><span class="font-bold">Uusiutumiskyky</span> syntyy kaaoksen reunalla</span></div>
+  <div class="ingress">Huomisen voittajaorganisaatiot toimivat kevyin rakentein, jalostavat jatkuvasti toimintaansa ja johtavat
+yhdessä luotuja tavoitteita kohti. Ketteryys ja uusiutuminen perustuvat itseohjautuviin, omaa työtään kehittäviin, sisäisesti motivoituneisiin ihmisiin.<br/><br/>
+Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
   <a href="#contact" class="button btn-contact">OTA YHTEYTT&Auml;</a>
   <a href="#front-top" class="scroll-down show-for-large-up">
     <span class="text-scroll-down">VIERIT&Auml; ALAS</span></br><span class="icon-arrow-down"></span>

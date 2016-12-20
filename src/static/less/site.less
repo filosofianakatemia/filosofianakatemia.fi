@@ -553,6 +553,17 @@ ul.list-link li a {
   }
 }
 
+
+/* MEDIUM */
+@media only screen and (min-width: 40.063em) {
+  .top-bar ul.right {
+    padding-top: 4px;
+  }
+  .top-bar > .top-bar-section li a {
+    font-size: 18px;
+  }
+}
+
 /* MEDIUM ONLY */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
   .top-bar > .top-bar-section li a {
@@ -564,7 +575,7 @@ ul.list-link li a {
 /* LARGE */
 @media only screen and (min-width: 64.063em){
   .top-bar{
-    padding-top: 55px;
+    padding-top: 45px;
   }
   .top-bar .logo span:before {
     font-size: 43px;
@@ -592,7 +603,7 @@ ul.list-link li a {
 /*********/
 
 .hero {
-  background-image: url('../img/bg-front-small.png');
+  background-image: url('../img/bg-front-small.jpg');
   background-repeat: no-repeat;
   background-attachment: center;
   background-position: center;
@@ -624,7 +635,7 @@ ul.list-link li a {
 /* RETINA MOBILE */
 @media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi){
   .hero {
-    background-image: url('../img/bg-front-small@2x.png');
+    background-image: url('../img/bg-front-small@2x.jpg');
   }
 
   #services .hero {
@@ -640,7 +651,7 @@ ul.list-link li a {
 /* NON-RETINA NON-MOBILE */
 @media only screen and (min-width: 40.063em) {
   .hero {
-    background-image: url('../img/bg-front-large.png');
+    background-image: url('../img/bg-front-large.jpg');
   }
 
   #services .hero {
@@ -656,7 +667,7 @@ ul.list-link li a {
 /* RETINA OR REALLY WIDE AND NON-MOBILE */
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (min-width: 64.063em), only screen and (min-width: 1400px) {
   .hero {
-    background-image: url('../img/bg-front-large@2x.png');
+    background-image: url('../img/bg-front-large@2x.jpg');
   }
 
   #services .hero {
@@ -669,12 +680,19 @@ ul.list-link li a {
   }
 }
 
+/* RETINA EXTRA WIDE */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 64.063em), only screen and (min-aspect-ratio: 17/9) {
+  .hero {
+    background-image: url('../img/bg-front-large-wide@2x.jpg');
+  }
+}
+
 .hero .slogan {
   padding-top: 25vh;
   display: block;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
   font-weight: 100;
-  font-size: 45px;
+  font-size: 40px;
   line-height: 45px;
 }
 
@@ -684,7 +702,7 @@ ul.list-link li a {
 }
 
 .hero .ingress {
-  font-weight: 100;
+  font-weight: 300;
   font-size: @size-text-extra-large;
   margin-top: 40px;
   padding-bottom: 30px;
@@ -711,6 +729,13 @@ ul.list-link li a {
   }
   .icon-arrow-down:before {
     font-size: 8px;
+  }
+}
+
+/* SLIGHTLY LARGER MOBILE, iPhone 6 */
+@media (min-width: 375px){
+  .hero .slogan {
+    font-size: 48px;
   }
 }
 
@@ -776,7 +801,7 @@ ul.list-link li a {
 /* FRONT PAGE SPECIFIC, DIFFERENT HEIGHT */
 
 /* MEDIUM BUT SMALL HEIGHT */
-@media only screen and (max-height: 750px) and (min-width: 40.063em) {
+@media only screen and (max-height: 850px) and (min-width: 40.063em) {
   #front .hero {
     height: auto;
   }
@@ -790,7 +815,7 @@ ul.list-link li a {
 }
 
 /* NON-MOBILE MEDIUM HEIGHT */
-@media only screen and (min-height: 750px) and (min-width: 64.063em) {
+@media only screen and (min-height: 850px) and (min-width: 64.063em) {
   #front .hero {
     height: 95vh;
   }
