@@ -408,6 +408,11 @@ module.exports = (config, app, backendApi) => {
     const personContext = await getPersonContext('lauri-jarvilehto');
     ctx.body = render('pages/lauri', personContext);
   }
+  async function maija(ctx) {
+    console.log('GET /ihmiset/maija');
+    const personContext = await getPersonContext('maija-tiitinen');
+    ctx.body = render('pages/maija', personContext);
+  }
   async function maria(ctx) {
     console.log('GET /ihmiset/maria');
     const personContext = await getPersonContext('maria-ruotsalainen');
@@ -484,6 +489,7 @@ module.exports = (config, app, backendApi) => {
   app.use(route.get('/ihmiset/jp', jp));
   app.use(route.get('/ihmiset/karoliina', karoliina));
   app.use(route.get('/ihmiset/lauri', lauri));
+  app.use(route.get('/ihmiset/maija', maija));
   app.use(route.get('/ihmiset/maria', maria));
   app.use(route.get('/ihmiset/miia', miia));
   app.use(route.get('/ihmiset/peter', peter));
@@ -646,6 +652,8 @@ module.exports = (config, app, backendApi) => {
       return 'Karoliina Jarenko';
       case 'lauri':
       return 'Lauri Järvilehto';
+      case 'maija':
+      return 'Maija Tiitinen';
       case 'maria':
       return 'Maria Ruotsalainen';
       case 'miia':
@@ -687,6 +695,8 @@ module.exports = (config, app, backendApi) => {
       return 'https://filosofianakatemia.fi/static/img/karoliina-large.jpg';
       case 'lauri':
       return 'https://filosofianakatemia.fi/static/img/lauri-large.jpg';
+      case 'maija':
+      return 'https://filosofianakatemia.fi/static/img/maija-large.jpg';
       case 'maria':
       return 'https://filosofianakatemia.fi/static/img/maria-large.jpg';
       case 'miia':
@@ -789,6 +799,15 @@ module.exports = (config, app, backendApi) => {
     },
     paths: {
       description: 'lauri-jarvilehto-kuvaus'
+    }
+  },
+  {
+    id: 'maija',
+    pictures: {
+      thumbnail: '/static/img/maija-thumbnail.png'
+    },
+    paths: {
+      description: 'maija-tiitinen-kuvaus'
     }
   },
   {

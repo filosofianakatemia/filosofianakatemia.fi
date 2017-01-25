@@ -1,5 +1,6 @@
 {% extends "base.nunjucks" %}
 {% set pageName = 'etusivu' %}
+{% set salesName = ['tytti', 'maija'] | random %}
 {% block title %}{{ super() }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogtitle %}{{ super() }}{% endblock %}
@@ -328,15 +329,28 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
     </div>
   </div>
   <div id="contact-people" class="row">
+
+    {% if salesName == 'tytti' %}
     <div class="large-4 columns">
-      <img src="static/img/karoliina-circle.png"/>
-      <h2>Karoliina Jarenko</h2>
+      <img src="static/img/tytti-circle.png"/>
+      <h2>Tytti Kokko</h2>
       <div>
-        Toimitusjohtaja<br/>
-        +358 50 5758 487<br/>
-        <a href="mailto:karoliina.jarenko@filosofianakatemia.fi">karoliina.jarenko@filosofianakatemia.fi</a>
+        Myyntipäällikkö<br/>
+        <a href="tel:+358505752441">+358 50 575 2441</a><br/>
+        <a href="mailto:tytti.kokko@filosofianakatemia.fi">tytti.kokko@filosofianakatemia.fi</a>
       </div>
     </div>
+    {% elif salesName == 'maija' %}
+    <div class="large-4 columns">
+      <img src="static/img/maija-circle.png"/>
+      <h2>Maija Tiitinen</h2>
+      <div>
+        Myyntipäällikkö<br/>
+        <a href="tel:+358505769230">+358 50 576 9230</a><br/>
+        <a href="mailto:maija.tiitinen@filosofianakatemia.fi">maija.tiitinen@filosofianakatemia.fi</a>
+      </div>
+    </div>
+    {% endif %}
     <div class="large-4 columns">
       <img src="static/img/address-circle.png"/>
       <h2>Filosofian Akatemia</h2>
@@ -346,13 +360,13 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
         <a href="mailto:info@filosofianakatemia.fi">info@filosofianakatemia.fi</a>
       </div>
     </div>
-    <div class="large-4 columns">
-      <img src="static/img/timo-circle.png"/>
-      <h2>Timo Tiuraniemi</h2>
+     <div class="large-4 columns">
+      <img src="static/img/karoliina-circle.png"/>
+      <h2>Karoliina Jarenko</h2>
       <div>
-        Tietojohtaja<br/>
-        +358 40 823 2355<br/>
-        <a href="mailto:timo.tiuraniemi@filosofianakatemia.fi">timo.tiuraniemi@filosofianakatemia.fi</a>
+        Toimitusjohtaja<br/>
+        <a href="tel:+358505758487">+358 50 575 8487</a><br/>
+        <a href="mailto:karoliina.jarenko@filosofianakatemia.fi">karoliina.jarenko@filosofianakatemia.fi</a>
       </div>
     </div>
   </div>

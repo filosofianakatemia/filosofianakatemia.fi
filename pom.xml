@@ -1,6 +1,5 @@
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>fi.filosofianakatemia</groupId>
   <artifactId>site</artifactId>
@@ -34,7 +33,6 @@
       <email>jukapeka@gmail.com</email>
     </developer>
   </developers>
-
   <properties>
     <docker.skip>true</docker.skip>
     <e2e.urlOrigin>http://localhost:8008</e2e.urlOrigin>
@@ -43,7 +41,6 @@
     <e2e.emailFrom>extended mind &lt;info@extendedmind.org&gt;</e2e.emailFrom>
     <e2e.backend>'https://ext.md/api'</e2e.backend>
   </properties>
-
   <profiles>
     <profile>
       <id>docker-activation</id>
@@ -57,7 +54,6 @@
       </properties>
     </profile>
   </profiles>
-
   <build>
     <plugins>
       <plugin>
@@ -209,7 +205,9 @@
                   <basedir>/usr/src/filosofianakatemia</basedir>
                   <descriptor>site-conf-assembly.xml</descriptor>
                 </assembly>
-                <cmd><shell>cp -R /usr/src/filosofianakatemia/confd/* /etc/confd &amp;&amp; cp /usr/src/filosofianakatemia/nginx/nginx.filosofianakatemia.conf /etc/nginx/sites-enabled</shell></cmd>
+                <cmd>
+                  <shell>cp -R /usr/src/filosofianakatemia/confd/* /etc/confd &amp;&amp; cp /usr/src/filosofianakatemia/nginx/nginx.filosofianakatemia.conf /etc/nginx/sites-enabled</shell>
+                </cmd>
               </build>
               <run>
                 <namingStrategy>alias</namingStrategy>
@@ -231,7 +229,9 @@
                 <tags>
                   <tag>latest</tag>
                 </tags>
-                <cmd><shell>rm /etc/nginx/sites-enabled/nginx.extendedmind.conf</shell></cmd>
+                <cmd>
+                  <shell>rm /etc/nginx/sites-enabled/nginx.extendedmind.conf</shell>
+                </cmd>
               </build>
               <run>
                 <namingStrategy>alias</namingStrategy>
@@ -285,7 +285,9 @@
                   <basedir>/usr/src/filosofianakatemia</basedir>
                   <descriptor>site-static-assembly.xml</descriptor>
                 </assembly>
-                <cmd><shell>cp -R /usr/src/filosofianakatemia/* /var/www</shell></cmd>
+                <cmd>
+                  <shell>cp -R /usr/src/filosofianakatemia/* /var/www</shell>
+                </cmd>
               </build>
               <run>
                 <namingStrategy>alias</namingStrategy>
@@ -315,7 +317,9 @@
                 </assembly>
                 <workdir>/usr/src/filosofianakatemia/site</workdir>
                 <entryPoint>
-                  <exec><arg>/usr/src/filosofianakatemia/site/site-run.pl</arg></exec>
+                  <exec>
+                    <arg>/usr/src/filosofianakatemia/site/site-run.pl</arg>
+                  </exec>
                 </entryPoint>
               </build>
               <run>
@@ -350,25 +354,25 @@
         </configuration>
         <executions>
           <execution>
-             <id>build</id>
-             <phase>package</phase>
-             <goals>
-               <goal>build</goal>
-             </goals>
+            <id>build</id>
+            <phase>package</phase>
+            <goals>
+              <goal>build</goal>
+            </goals>
           </execution>
           <execution>
-             <id>start-docker</id>
-             <phase>pre-integration-test</phase>
-             <goals>
-               <goal>start</goal>
-             </goals>
+            <id>start-docker</id>
+            <phase>pre-integration-test</phase>
+            <goals>
+              <goal>start</goal>
+            </goals>
           </execution>
           <execution>
-             <id>stop-docker</id>
-             <phase>post-integration-test</phase>
-             <goals>
-               <goal>stop</goal>
-             </goals>
+            <id>stop-docker</id>
+            <phase>post-integration-test</phase>
+            <goals>
+              <goal>stop</goal>
+            </goals>
           </execution>
         </executions>
       </plugin>
