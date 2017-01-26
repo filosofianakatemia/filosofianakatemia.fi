@@ -2,6 +2,7 @@
 {% set personName = 'Tytti Kokko' %}
 {% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
 {% block ogtitle %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block ogurl %}{{ super() }}/ihmiset/tytti{% endblock %}
 {% block ogimages %}
 <meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/tytti-small.jpg" />
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/tytti-small.jpg" />

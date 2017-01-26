@@ -2,6 +2,7 @@
 {% set personName = 'Timo Tiuraniemi' %}
 {% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
 {% block ogtitle %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block ogurl %}{{ super() }}/ihmiset/timo{% endblock %}
 {% block ogimages %}
 <meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/timo-small.jpg" />
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/timo-small.jpg" />

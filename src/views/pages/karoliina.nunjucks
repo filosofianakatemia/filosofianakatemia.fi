@@ -2,6 +2,7 @@
 {% set personName = 'Karoliina Jarenko' %}
 {% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
 {% block ogtitle %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block ogurl %}{{ super() }}/ihmiset/karoliina{% endblock %}
 {% block ogimages %}
 <meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/karoliina-small.jpg" />
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/karoliina-small.jpg" />

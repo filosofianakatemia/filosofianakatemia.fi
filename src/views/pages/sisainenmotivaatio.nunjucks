@@ -1,6 +1,7 @@
 {% extends "base.nunjucks" %}
 {% set pageName = 'Sis&auml;isen motivaation esittely' %}
 {% block ogtype %}{{ super() }}{% endblock %}
+{% block ogurl %}{{ super() }}/ihmiset/santeri/esittely{% endblock %}
 {% block bodyattrs %}id="introduction"{% endblock %}
 {% block topbar %}
 <ul class="title-area">

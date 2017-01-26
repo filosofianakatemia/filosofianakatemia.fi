@@ -2,6 +2,7 @@
 {% set personName = 'Iida Mäkikallio' %}
 {% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
 {% block ogtitle %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block ogurl %}{{ super() }}/ihmiset/iida{% endblock %}
 {% block ogimages %}
 <meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/iida-small.jpg" />
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/iida-small.jpg" />

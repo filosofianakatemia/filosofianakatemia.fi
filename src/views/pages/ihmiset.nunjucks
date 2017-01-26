@@ -3,6 +3,7 @@
 {% block title %}{{ super() }} | Ihmiset{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogtitle %}{{ super() }} | Ihmiset{% endblock %}
+{% block ogurl %}{{ super() }}/ihmiset{% endblock %}
 {% block description %}Me teemme t&ouml;it&auml; valtavalla innolla. Filosofian Akatemian ihmiset esitt&auml;ytyv&auml;t.{% endblock %}
 {% block bodyattrs %}id="people"{% endblock %}
 
@@ -120,7 +121,13 @@
   </div>
 </div>
 <div class="section row">
-  <div id="tytti" class="large-offset-2 large-4 columns">
+  <div id="tuukka" class="large-4 columns">
+    <div class="link-container" onClick="location.href='ihmiset/tuukka'">
+      <div class="picture"></div>
+      <h2><a>Tuukka Kostamo</a></h2>
+    </div>
+  </div>
+   <div id="tytti" class="large-4 columns">
     <div class="link-container" onClick="location.href='ihmiset/tytti'">
       <div class="picture"></div>
       <h2><a>Tytti Kokko</a></h2>

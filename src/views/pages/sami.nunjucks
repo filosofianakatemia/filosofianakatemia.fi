@@ -2,6 +2,7 @@
 {% set personName = 'Sami Paju' %}
 {% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
 {% block ogtitle %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block ogurl %}{{ super() }}/ihmiset/sami{% endblock %}
 {% block ogimages %}
 <meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/sami-small.jpg" />
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/sami-small.jpg" />

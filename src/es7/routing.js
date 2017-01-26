@@ -453,6 +453,11 @@ module.exports = (config, app, backendApi) => {
     const personContext = await getPersonContext('timo-tiuraniemi');
     ctx.body = render('pages/timo', personContext);
   }
+  async function tuukka(ctx) {
+    console.log('GET /ihmiset/tuukka');
+    const personContext = await getPersonContext('tuukka-kostamo');
+    ctx.body = render('pages/tuukka', personContext);
+  }
   async function tytti(ctx) {
     console.log('GET /ihmiset/tytti');
     const personContext = await getPersonContext('tytti-kokko');
@@ -498,6 +503,7 @@ module.exports = (config, app, backendApi) => {
   app.use(route.get('/ihmiset/selina', selina));
   app.use(route.get('/ihmiset/tapani', tapani));
   app.use(route.get('/ihmiset/timo', timo));
+  app.use(route.get('/ihmiset/tuukka', tuukka));
   app.use(route.get('/ihmiset/tytti', tytti));
   app.use(route.get('/ihmiset/villiam', villiam));
   app.use(route.get('/robots.txt', robots));
@@ -670,6 +676,8 @@ module.exports = (config, app, backendApi) => {
       return 'Tapani Riekki';
       case 'timo':
       return 'Timo Tiuraniemi';
+      case 'tuukka':
+      return 'Tuukka Kostamo';
       case 'tytti':
       return 'Tytti Kokko';
       case 'villiam':
@@ -713,6 +721,8 @@ module.exports = (config, app, backendApi) => {
       return 'https://filosofianakatemia.fi/static/img/tapani-large.jpg';
       case 'timo':
       return 'https://filosofianakatemia.fi/static/img/timo-large.jpg';
+      case 'tuukka':
+      return 'https://filosofianakatemia.fi/static/img/tuukka-large.jpg';
       case 'tytti':
       return '/static/img/tytti-large.jpg';
       case 'villiam':
@@ -880,6 +890,15 @@ module.exports = (config, app, backendApi) => {
     },
     paths: {
       description: 'timo-tiuraniemi-kuvaus'
+    }
+  },
+  {
+    id: 'tuukka',
+    pictures: {
+      thumbnail: '/static/img/tuukka-thumbnail.png'
+    },
+    paths: {
+      description: 'tuukka-kostamo-kuvaus'
     }
   },
   {

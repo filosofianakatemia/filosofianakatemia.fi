@@ -1,0 +1,14 @@
+{% extends "ihminen.nunjucks" %}
+{% set personName = 'Tuukka Kostamo' %}
+{% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block ogtitle %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block ogurl %}{{ super() }}/ihmiset/tuukka{% endblock %}
+{% block ogimages %}
+<meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/tuukka-small.jpg" />
+<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/tuukka-small.jpg" />
+{% endblock %}
+{% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block personquote %}
+Tuukka on sekä vastuunottaja että sen kantaja. Silloin kun tarvitset apua ja tukea, Tuukka on ihminen joka jää rinnallesi. Mutta se mikä tekee Tuukasta rakastettavan, on se että kaiken tämän hän tekee karjalaisella huumorilla höystettynä, nauraen ja hymyillen. Tuukka elää kuten saarnaa: johtajuudessa on kyse yhdessä toimimisesta.
+{% endblock %}
+{% block personquoteauthor %}Reima Launonen{% endblock %}

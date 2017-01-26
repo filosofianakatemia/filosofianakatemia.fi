@@ -2,6 +2,7 @@
 {% set personName = 'Maria Ruotsalainen' %}
 {% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
 {% block ogtitle %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block ogurl %}{{ super() }}/ihmiset/maria{% endblock %}
 {% block ogimages %}
 <meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/maria-small.jpg" />
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/maria-small.jpg" />

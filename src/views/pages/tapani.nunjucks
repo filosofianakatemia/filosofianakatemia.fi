@@ -2,6 +2,7 @@
 {% set personName = 'Tapani Riekki' %}
 {% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
 {% block ogtitle %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block ogurl %}{{ super() }}/ihmiset/tapani{% endblock %}
 {% block ogimages %}
 <meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/tapani-small.jpg" />
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/tapani-small.jpg" />

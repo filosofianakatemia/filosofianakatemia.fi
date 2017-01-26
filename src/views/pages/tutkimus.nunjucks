@@ -3,6 +3,7 @@
 {% block title %}{{ super() }} | Tutkimus{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogtitle %}{{ super() }} | Tutkimus{% endblock %}
+{% block ogurl %}{{ super() }}/tutkimus{% endblock %}
 {% block description %}Filosofian Akatemian valmennukset pohjautuvat tekem&auml;&auml;mme akateemiseen huippututkimukseen.{% endblock %}
 {% block bodyattrs %}id="research"{% endblock %}
 

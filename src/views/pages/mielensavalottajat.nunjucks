@@ -1,6 +1,7 @@
 {% extends "base.nunjucks" %}
 {% set pageName = 'Mielens&auml;valottajat' %}
 {% block ogtype %}{{ super() }}{% endblock %}
+{% block ogurl %}{{ super() }}/palvelut/mielensavalottajat{% endblock %}
 {% block bodyattrs %}id="introduction"{% endblock %}
 {% block topbar %}
 <ul class="title-area">

@@ -3,6 +3,7 @@
 {% block title %}{{ super() }} | Palvelut{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogtitle %}{{ super() }} | Palvelut{% endblock %}
+{% block ogurl %}{{ super() }}/palvelut{% endblock %}
 {% block description %}Sis&auml;isen motivaation kehityspolku antaa ty&ouml;kaluja koko ty&ouml;yhteis&ouml;lle ty&ouml;hyvinvoinnin ja tuottavuuden parantamiseen.{% endblock %}
 {% block bodyattrs %}id="services"{% endblock %}
 

@@ -2,6 +2,7 @@
 {% set pageName = 'blogi' %}
 {% block title %}{{ super() }} | Blogi{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
+{% block ogurl %}{{ super() }}/blogi{% endblock %}
 {% block ogtitle %}{{ super() }} | Blogi{% endblock %}
 {% block bodyattrs %}id="blog"{% endblock %}
 
