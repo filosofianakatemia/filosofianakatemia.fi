@@ -557,7 +557,7 @@ module.exports = (config, app, backendApi) => {
   }
 
   function generateBlogPost(publicNote) {
-    let blog = {safeTitle: publicNote.title, title: publicNote.title.replace("&shy;", "")};
+    let blog = {safeTitle: publicNote.title, title: publicNote.title.replace(/&shy;/g,"")};
     let noteHtml = markdownParser.render(publicNote.content);
     let extractResult = extractLeadAndPictureAndContentFromHtml(noteHtml);
     blog.content = extractResult.content;
