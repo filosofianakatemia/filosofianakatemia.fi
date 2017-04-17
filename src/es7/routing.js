@@ -258,6 +258,16 @@ module.exports = (config, app, backendApi) => {
     console.log('GET /tutkimus');
     ctx.body = render('pages/tutkimus');
   }
+  function motivoivinEsimies(ctx) {
+    console.log('GET /kyselyt/motivoivin-esimies');
+    const questionnaire1Url = "https://filosofianakatemia.typeform.com/to/ooHe2y";
+    const questionnaire2Url = "https://filosofianakatemia.typeform.com/to/bYzgd1";
+    if (Math.random() >= 0.5){
+      ctx.redirect(questionnaire1Url);
+    }else {
+      ctx.redirect(questionnaire2Url);
+    }
+  }
 
   async function generateBlogsContext() { // jshint ignore:line
     let unrenderedBlogs = await getUnrenderedBlogs(); // jshint ignore:line
@@ -507,6 +517,7 @@ module.exports = (config, app, backendApi) => {
   app.use(route.get('/ihmiset/tytti', tytti));
   app.use(route.get('/ihmiset/villiam', villiam));
   app.use(route.get('/robots.txt', robots));
+  app.use(route.get('/kyselyt/motivoivin-esimies', motivoivinEsimies));
 
   // Helper functions
 
