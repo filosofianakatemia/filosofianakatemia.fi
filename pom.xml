@@ -152,7 +152,7 @@
             </goals>
             <configuration>
               <target name="create-docker-dirs">
-                <mkdir dir="target/docker-dirs/fiak-site-dynamic/tiedostot" />
+                <mkdir dir="target/docker-dirs/fiak-site-dynamic/tiedostot/test" />
                 <mkdir dir="target/docker-dirs/fiak-site-data" />
               </target>
             </configuration>
@@ -264,7 +264,7 @@
             </image>
             <image>
               <name>quay.io/extmd/sync-folder</name>
-              <alias>sync-folder</alias>
+              <alias>fiak-sync-folder</alias>
               <run>
                 <namingStrategy>alias</namingStrategy>
                 <volumes>
@@ -274,7 +274,7 @@
                   </bind>
                 </volumes>
                 <!-- To test, rsync all static files to /tiedostot/test -->
-                <cmd>/app/fiak-site-data/static /app/fiak-site-dynamic/tiedostot/test</cmd>
+                <cmd>/app/fiak-site-data/static /app/fiak-site-dynamic/tiedostot/test gsutil</cmd>
               </run>
             </image>
           </images>

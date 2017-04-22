@@ -5,7 +5,7 @@
   <fileSets>
     <fileSet>
       <directory>${project.basedir}/src/static</directory>
-      <outputDirectory>filosofianakatemia/static</outputDirectory>
+      <outputDirectory>./static</outputDirectory>
     </fileSet>
   </fileSets>
 </assembly>
