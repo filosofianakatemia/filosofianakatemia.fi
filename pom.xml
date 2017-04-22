@@ -35,11 +35,7 @@
   </developers>
   <properties>
     <docker.skip>true</docker.skip>
-    <e2e.urlOrigin>http://localhost:8008</e2e.urlOrigin>
-    <e2e.mailgunDomain>extendedmind.org</e2e.mailgunDomain>
-    <e2e.mailgunKey>TEST KEY</e2e.mailgunKey>
-    <e2e.emailFrom>extended mind &lt;info@extendedmind.org&gt;</e2e.emailFrom>
-    <e2e.backend>'https://ext.md/api'</e2e.backend>
+    <extendedmind.api.url>https://ext.md/api</extendedmind.api.url>
   </properties>
   <profiles>
     <profile>
@@ -59,7 +55,7 @@
       <plugin>
         <groupId>com.github.eirslett</groupId>
         <artifactId>frontend-maven-plugin</artifactId>
-        <version>0.0.27</version>
+        <version>1.0</version>
         <executions>
           <execution>
             <id>install node and npm</id>
@@ -67,8 +63,8 @@
               <goal>install-node-and-npm</goal>
             </goals>
             <configuration>
-              <nodeVersion>v6.2.1</nodeVersion>
-              <npmVersion>3.9.3</npmVersion>
+              <nodeVersion>v7.9.0</nodeVersion>
+              <npmVersion>4.4.4</npmVersion>
               <nodeDownloadRoot>https://nodejs.org/dist/</nodeDownloadRoot>
             </configuration>
           </execution>
@@ -112,36 +108,9 @@
               <arguments>install</arguments>
             </configuration>
           </execution>
-          <execution>
-            <id>npm test</id>
-            <goals>
-              <goal>npm</goal>
-            </goals>
-            <phase>integration-test</phase>
-            <configuration>
-              <arguments>test</arguments>
-            </configuration>
-          </execution>
         </executions>
         <configuration>
           <workingDirectory>src</workingDirectory>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <version>1.4.0</version>
-        <executions>
-          <execution>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>exec</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <executable>curl</executable>
-          <commandlineArgs>https://ext.md/api/public/filosofian-akatemia -o ${basedir}/src/data-devel.json</commandlineArgs>
         </configuration>
       </plugin>
       <plugin>
@@ -171,183 +140,141 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>org.jolokia</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+          <execution>
+            <!-- This is needed sot that Docker doesn't make the dirs root:root -->
+            <id>create-target-dirs</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <target name="create-docker-dirs">
+                <mkdir dir="target/docker-dirs/fiak-site-dynamic/tiedostot" />
+                <mkdir dir="target/docker-dirs/fiak-site-data" />
+              </target>
+            </configuration>
+          </execution>
+       </executions>
+      </plugin>
+      <plugin>
+        <groupId>io.fabric8</groupId>
         <artifactId>docker-maven-plugin</artifactId>
-        <version>0.13.8</version>
+        <version>0.20.0</version>
         <configuration>
           <sourceDirectory>docker</sourceDirectory>
           <images>
             <image>
-              <name>extendedmind/nginx-conf</name>
-              <alias>nginx-conf</alias>
-              <run>
-                <namingStrategy>alias</namingStrategy>
-              </run>
-            </image>
-            <image>
-              <name>extendedmind/site-conf</name>
-              <alias>site-conf</alias>
-              <run>
-                <namingStrategy>alias</namingStrategy>
-              </run>
-            </image>
-            <image>
-              <name>fiak/site-conf</name>
-              <alias>fiak-site-conf</alias>
-              <build>
-                <from>ubuntu:14.04</from>
-                <maintainer>jukapeka@gmail.com</maintainer>
-                <tags>
-                  <tag>latest</tag>
-                </tags>
-                <assembly>
-                  <mode>dir</mode>
-                  <basedir>/usr/src/filosofianakatemia</basedir>
-                  <descriptor>site-conf-assembly.xml</descriptor>
-                </assembly>
-                <cmd>
-                  <shell>cp -R /usr/src/filosofianakatemia/confd/* /etc/confd &amp;&amp; cp /usr/src/filosofianakatemia/nginx/nginx.filosofianakatemia.conf /etc/nginx/sites-enabled</shell>
-                </cmd>
-              </build>
-              <run>
-                <namingStrategy>alias</namingStrategy>
-                <volumes>
-                  <from>
-                    <image>site-conf</image>
-                    <image>nginx-conf</image>
-                  </from>
-                </volumes>
-              </run>
-            </image>
-            <!-- Use a cleaner container that deletes the extendedmind nginx configuration, so that nginx starts in this test without errors -->
-            <image>
-              <name>fiak/test-site-conf-clean</name>
-              <alias>test-site-conf-clean</alias>
-              <build>
-                <from>ubuntu:14.04</from>
-                <maintainer>jukapeka@gmail.com</maintainer>
-                <tags>
-                  <tag>latest</tag>
-                </tags>
-                <cmd>
-                  <shell>rm /etc/nginx/sites-enabled/nginx.extendedmind.conf</shell>
-                </cmd>
-              </build>
-              <run>
-                <namingStrategy>alias</namingStrategy>
-                <volumes>
-                  <from>
-                    <image>nginx-conf</image>
-                  </from>
-                </volumes>
-              </run>
-            </image>
-            <image>
-              <name>extendedmind/confd</name>
-              <alias>confd</alias>
-              <run>
-                <namingStrategy>alias</namingStrategy>
-                <env>
-                  <!-- test login admin:adminpwd for /evaluate -->
-                  <EXTENDEDMIND_EVALUATECREDENTIALS>admin:$apr1$iRuCzNe7$wGTyTAez42hHC9rGP6CHg.</EXTENDEDMIND_EVALUATECREDENTIALS>
-                  <EXTENDEDMIND_SITE_BACKENDSEARCH>${e2e.backend}</EXTENDEDMIND_SITE_BACKENDSEARCH>
-                  <FILOSOFIANAKATEMIA_BACKENDCOLLECTIVE>11111111-1111-1111-1111-111111111111</FILOSOFIANAKATEMIA_BACKENDCOLLECTIVE>
-                  <FILOSOFIANAKATEMIA_DBPASSWORD>mariadbpwd</FILOSOFIANAKATEMIA_DBPASSWORD>
-                </env>
-                <volumes>
-                  <from>
-                    <image>nginx-conf</image>
-                    <image>site-conf</image>
-                    <image>test-site-conf-clean</image>
-                  </from>
-                </volumes>
-                <cmd>-backend=env</cmd>
-              </run>
-            </image>
-            <image>
-              <name>extendedmind/frontend-data</name>
-              <alias>frontend-data</alias>
-              <run>
-                <namingStrategy>alias</namingStrategy>
-              </run>
-            </image>
-            <image>
-              <name>fiak/site-static</name>
+              <name>quay.io/fiak/site-static</name>
               <alias>fiak-site-static</alias>
               <build>
-                <from>ubuntu:14.04</from>
-                <maintainer>jukapeka@gmail.com</maintainer>
+                <from>quay.io/extendedmind/data-volume:dv-3.5-1</from>
+                <maintainer>timo.tiuraniemi@iki.fi</maintainer>
                 <tags>
                   <tag>latest</tag>
+                  <tag>${project.version}</tag>
                 </tags>
                 <assembly>
                   <mode>dir</mode>
-                  <basedir>/usr/src/filosofianakatemia</basedir>
-                  <descriptor>site-static-assembly.xml</descriptor>
+                  <basedir>/app/fiak-site-static</basedir>
+                  <descriptor>fiak-site-static-assembly.xml</descriptor>
                 </assembly>
-                <cmd>
-                  <shell>cp -R /usr/src/filosofianakatemia/* /var/www</shell>
-                </cmd>
-              </build>
-              <run>
-                <namingStrategy>alias</namingStrategy>
-                <volumes>
-                  <from>
-                    <image>frontend-data</image>
-                  </from>
-                </volumes>
-              </run>
-            </image>
-            <image>
-              <name>fiak/site</name>
-              <alias>fiak-site</alias>
-              <build>
-                <from>node:6</from>
-                <maintainer>jukapeka@gmail.com</maintainer>
-                <tags>
-                  <tag>latest</tag>
-                </tags>
-                <ports>
-                  <port>3001</port>
-                </ports>
-                <assembly>
-                  <mode>dir</mode>
-                  <basedir>/usr/src/filosofianakatemia/site</basedir>
-                  <descriptor>site-assembly.xml</descriptor>
-                </assembly>
-                <workdir>/usr/src/filosofianakatemia/site</workdir>
                 <entryPoint>
                   <exec>
-                    <arg>/usr/src/filosofianakatemia/site/site-run.pl</arg>
+                    <arg>/bin/cp</arg>
+                    <arg>-R</arg>
+                    <arg>/app/fiak-site-static/.</arg>
+                    <arg>/app/fiak-site-data</arg>
                   </exec>
                 </entryPoint>
               </build>
               <run>
                 <namingStrategy>alias</namingStrategy>
                 <volumes>
-                  <from>
-                    <image>fiak-site-conf</image>
-                  </from>
+                  <bind>
+                    <volume>${project.build.directory}/docker-dirs/fiak-site-data:/app/fiak-site-data</volume>
+                  </bind>
                 </volumes>
               </run>
             </image>
             <image>
-              <name>extendedmind/nginx</name>
+              <name>quay.io/fiak/site</name>
+              <alias>fiak-site</alias>
+              <build>
+                <from>quay.io/extendedmind/node:node-7.5.0-1</from>
+                <maintainer>timo.tiuraniemi@iki.fi</maintainer>
+                <tags>
+                  <tag>latest</tag>
+                  <tag>${project.version}</tag>
+                </tags>
+                <ports>
+                  <port>3001</port>
+                </ports>
+                <volumes>
+                  <volume>/etc/nginx/sites-enabled</volume>
+                </volumes>
+                <assembly>
+                  <mode>dir</mode>
+                  <basedir>/</basedir>
+                  <descriptor>fiak-site-assembly.xml</descriptor>
+                </assembly>
+                <workdir>/app/fiak-site</workdir>
+                <entryPoint>
+                  <exec>
+                    <arg>pm2-docker</arg>
+                    <arg>fiak-site-pm2.json</arg>
+                  </exec>
+                </entryPoint>
+              </build>
+              <run>
+                <namingStrategy>alias</namingStrategy>
+                <volumes>
+                  <bind>
+                    <volume>${project.build.directory}/docker-dirs/fiak-site-dynamic:/app/fiak-site-dynamic</volume>
+                  </bind>
+                </volumes>
+                <env>
+                  <EXTENDEDMIND_API_URL>${extendedmind.api.url}</EXTENDEDMIND_API_URL>
+                </env>
+              </run>
+            </image>
+            <image>
+              <name>quay.io/extendedmind/nginx:nginx-1.11.9-1</name>
               <alias>nginx</alias>
               <run>
                 <namingStrategy>alias</namingStrategy>
                 <volumes>
                   <from>
-                    <image>nginx-conf</image>
-                    <image>frontend-data</image>
+                    <image>fiak-site</image>
                   </from>
+                  <bind>
+                    <volume>${project.build.directory}/docker-dirs/fiak-site-data:/app/fiak-site-data:ro</volume>
+                    <volume>${project.build.directory}/docker-dirs/fiak-site-dynamic:/app/fiak-site-dynamic:ro</volume>
+                  </bind>
                 </volumes>
                 <links>
-                  <link>fiak-site:site2</link>
+                  <link>fiak-site:fiak-site</link>
                 </links>
                 <ports>
                   <port>8009:8009</port>
                 </ports>
+              </run>
+            </image>
+            <image>
+              <name>quay.io/extmd/sync-folder</name>
+              <alias>sync-folder</alias>
+              <run>
+                <namingStrategy>alias</namingStrategy>
+                <volumes>
+                  <bind>
+                    <volume>${project.build.directory}/docker-dirs/fiak-site-data:/app/fiak-site-data:ro</volume>
+                    <volume>${project.build.directory}/docker-dirs/fiak-site-dynamic:/app/fiak-site-dynamic</volume>
+                  </bind>
+                </volumes>
+                <!-- To test, rsync all static files to /tiedostot/test -->
+                <cmd>/app/fiak-site-data/static /app/fiak-site-dynamic/tiedostot/test</cmd>
               </run>
             </image>
           </images>
@@ -400,12 +327,6 @@
               <directory>${basedir}/src/static/js</directory>
               <includes>
                 <include>less.js</include>
-              </includes>
-            </fileset>
-            <fileset>
-              <directory>${basedir}/src</directory>
-              <includes>
-                <include>data-devel.json</include>
               </includes>
             </fileset>
           </filesets>

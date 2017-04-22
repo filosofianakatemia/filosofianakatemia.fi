@@ -29,11 +29,8 @@ module.exports = (config) => {
   // backend link
 
   let backendApi, backendInfo;
-  if (config.backend === true){
-    // True value means to use docker provided environment variable
-    backendApi = 'http://' + process.env.BACKEND_PORT_8081_TCP_ADDR + ':8081';
-  }else if (config.backend){
-    // Backend API address can also be given with a string directly
+  if (config.backend) {
+    // Backend API address is  given with a string
     backendApi = config.backend;
   }
 

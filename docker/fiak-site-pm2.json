@@ -1,0 +1,11 @@
+{
+  "apps" : [{
+    "name"        : "fiak-site",
+    "cwd"         : "/app/fiak-site",
+    "script"      : "./index.js",
+    "args"        : "./fiak-site-config.json",
+    "env": {
+      "NODE_ENV"  : "production"
+    }
+  }]
+}

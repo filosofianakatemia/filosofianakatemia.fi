@@ -29,17 +29,14 @@
     "babel-plugin-syntax-async-generators": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
     "less": "^2.7.0",
-    "less-plugin-clean-css": "^1.5.1",
-    "protractor": "^2.2.0"
+    "less-plugin-clean-css": "^1.5.1"
   },
   "scripts": {
     "transpile:modules": "babel --presets stage-0 --plugins syntax-async-functions,syntax-async-generators node_modules/extendedmind-siteutils --out-dir node_modules/extendedmind-siteutils/transpile",
     "transpile:sources": "babel --presets stage-0 --plugins syntax-async-functions,syntax-async-generators es7 --out-dir js",
     "transpile": "npm run transpile:modules && npm run transpile:sources",
     "build:less": "lessc --strict-imports --verbose --clean-css=\"--s1\" static/less/site.less static/css/site.min.css",
-    "build": "npm run transpile && npm run build:less",
-    "test": "protractor test/protractor.config.js",
-    "postinstall": "./node_modules/protractor/bin/webdriver-manager update"
+    "build": "npm run transpile && npm run build:less"
   },
   "repository": {
     "type": "git",

@@ -10,3 +10,6 @@ node/
 
 # Ignore Sublime Text files
 *.sublime-workspace
+
+# Ignore generated sources
+src/js/
