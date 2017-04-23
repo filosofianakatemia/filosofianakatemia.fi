@@ -152,8 +152,8 @@
             </goals>
             <configuration>
               <target name="create-docker-dirs">
-                <mkdir dir="target/docker-dirs/fiak-site-dynamic/tiedostot/test" />
-                <mkdir dir="target/docker-dirs/fiak-site-data" />
+                <mkdir dir="target/docker-dirs/fiak-site-public/tiedostot/test" />
+                <mkdir dir="target/docker-dirs/fiak-site-public/assets" />
               </target>
             </configuration>
           </execution>
@@ -186,7 +186,7 @@
                     <arg>/bin/cp</arg>
                     <arg>-R</arg>
                     <arg>/app/fiak-site-static/.</arg>
-                    <arg>/app/fiak-site-data</arg>
+                    <arg>/app/fiak-site-public/assets</arg>
                   </exec>
                 </entryPoint>
               </build>
@@ -194,7 +194,7 @@
                 <namingStrategy>alias</namingStrategy>
                 <volumes>
                   <bind>
-                    <volume>${project.build.directory}/docker-dirs/fiak-site-data:/app/fiak-site-data</volume>
+                    <volume>${project.build.directory}/docker-dirs/fiak-site-public:/app/fiak-site-public</volume>
                   </bind>
                 </volumes>
               </run>
@@ -230,11 +230,6 @@
               </build>
               <run>
                 <namingStrategy>alias</namingStrategy>
-                <volumes>
-                  <bind>
-                    <volume>${project.build.directory}/docker-dirs/fiak-site-dynamic:/app/fiak-site-dynamic</volume>
-                  </bind>
-                </volumes>
                 <env>
                   <EXTENDEDMIND_API_URL>${extendedmind.api.url}</EXTENDEDMIND_API_URL>
                 </env>
@@ -250,8 +245,7 @@
                     <image>fiak-site</image>
                   </from>
                   <bind>
-                    <volume>${project.build.directory}/docker-dirs/fiak-site-data:/app/fiak-site-data:ro</volume>
-                    <volume>${project.build.directory}/docker-dirs/fiak-site-dynamic:/app/fiak-site-dynamic:ro</volume>
+                    <volume>${project.build.directory}/docker-dirs/fiak-site-public:/app/fiak-site-public:ro</volume>
                   </bind>
                 </volumes>
                 <links>
@@ -269,12 +263,11 @@
                 <namingStrategy>alias</namingStrategy>
                 <volumes>
                   <bind>
-                    <volume>${project.build.directory}/docker-dirs/fiak-site-data:/app/fiak-site-data:ro</volume>
-                    <volume>${project.build.directory}/docker-dirs/fiak-site-dynamic:/app/fiak-site-dynamic</volume>
+                    <volume>${project.build.directory}/docker-dirs/fiak-site-public:/app/fiak-site-public</volume>
                   </bind>
                 </volumes>
                 <!-- To test, rsync all static files to /tiedostot/test -->
-                <cmd>/app/fiak-site-data/static /app/fiak-site-dynamic/tiedostot/test gsutil</cmd>
+                <cmd>/app/fiak-site-public/assets/static /app/fiak-site-public/tiedostot/test gsutil</cmd>
               </run>
             </image>
           </images>
