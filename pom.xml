@@ -119,6 +119,27 @@
         <version>2.7</version>
         <executions>
           <execution>
+            <id>copy-config</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.basedir}/src</outputDirectory>
+              <overwrite>true</overwrite>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/templates</directory>
+                  <includes>
+                    <include>config-devel.json</include>
+                    <include>package.json</include>
+                  </includes>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+          <execution>
             <id>copy-less-compiler</id>
             <phase>process-resources</phase>
             <goals>
@@ -320,6 +341,13 @@
               <directory>${basedir}/src/static/js</directory>
               <includes>
                 <include>less.js</include>
+              </includes>
+            </fileset>
+            <fileset>
+              <directory>${basedir}/src</directory>
+              <includes>
+                <include>config-devel.json</include>
+                <include>package.json</include>
               </includes>
             </fileset>
           </filesets>

@@ -1,0 +1,465 @@
+@import 'constants';
+
+/*********************/
+/* MAIN CONTENT AREA */
+/*********************/
+
+.main {
+  text-align: center;
+  height: auto;
+}
+
+.section {
+  text-align: center;
+}
+.section.separate {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.section.separate h1 {
+  margin-top: 0;
+}
+
+.section.wrapper-embedded {
+  background:url('../img/bg-gray.png') repeat;
+}
+
+.section .ingress {
+  font-weight: 100;
+  font-size: 19px;
+  padding-bottom: 20px;
+}
+
+.embedded .description {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.embedded h2 {
+  display: block;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.embedded {
+  margin: 20px 5px 0px 5px;
+  background: #FFFFFF;
+  padding: 20px 10px 40px 10px;
+}
+
+.wrapper-embedded .columns:last-child .embedded {
+  margin-bottom: 20px;
+}
+
+.underline {
+  border-bottom: 4px solid $color-highlighted;
+}
+
+.separator {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+/* LARGE */
+@media only screen and (min-width: 64.063em){
+  .embedded {
+    padding: 70px 60px 70px 60px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+  .wrapper-embedded .columns:last-child .embedded {
+    margin-bottom: 70px;
+  }
+
+  /* For middle rows inside the same embedded wrapper, don't set extra top margin */
+  .wrapper-embedded .row:not(:first-child) .columns .embedded {
+    margin-top: 0px;
+  }
+
+  .columns:first-child .embedded {
+    margin-left: 4.5vw;
+    margin-right: 10px;
+  }
+  .columns:last-child .embedded {
+    margin-right: 4.5vw;
+  }
+  .section .ingress {
+    font-size: 28px;
+  }
+}
+
+/* EXTRA LARGE */
+@media only screen and (min-width: 90.063em){
+  .section .ingress {
+    font-size: 36px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+/* REFERENCES */
+
+#references {
+  img.author {
+    padding-top: 15px;
+    width: 200px;
+  }
+  img.logo {
+    width: 100px;
+  }
+  img.logo.large {
+    width: 120px;
+  }
+
+  .reference-author{
+    color: $color-highlighted;
+  }
+  .reference-author-wrapper {
+    padding-bottom: 15px;
+  }
+}
+
+/* MEDIUM */
+@media only screen and (min-width: 40.063em){
+  #references {
+    img.author {
+      width: 150px;
+    }
+    img.logo.large {
+      width: 200px;
+    }
+  }
+}
+
+/* BOOKS */
+
+#books {
+  img.cover {
+    padding-top: 25px;
+    width: 200px;
+  }
+  img.cover.small {
+    width: 100px;
+  }
+  img.shop {
+    width: 50px;
+  }
+  p.book-description.long {
+    font-size: $size-text - 2px;
+  }
+}
+
+/* LARGE */
+@media only screen and (min-width: 64.063em){
+  #books {
+    p.book-description.long {
+      font-size: $size-text-large - 3px;
+    }
+  }
+}
+
+/* EXTRA LARGE */
+@media only screen and (min-width: 90.063em){
+  #books {
+    p.book-description.long {
+      font-size: $size-text-extra-large - 3px;
+    }
+  }
+}
+
+
+/* SIGN UP */
+
+.section.wrapper-signup {
+  background-color: #1C7988;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-image: url('../img/bg-front-small.png');
+  background-repeat: no-repeat;
+  background-attachment: center;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: url('../img/bg-newsletter-small.jpg');
+}
+
+.section.wrapper-signup h2,
+.wrapper-signup span {
+  color: #FFFFFF;
+}
+
+.section.wrapper-signup h2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* LARGE */
+@media only screen and (min-width: 64.063em){
+  .section.wrapper-signup {
+    background-image: url('../img/bg-newsletter-large.jpg');
+  }
+  .section.wrapper-signup h2 {
+    max-width: 800px;
+  }
+}
+
+/* EXTRA LARGE */
+@media only screen and (min-width: 90.063em){
+  .section.wrapper-signup h2 {
+    max-width: 1000px;
+  }
+}
+
+#mc_embed_signup {
+  margin-top: 40px;
+}
+
+#mc_embed_signup div.mce_inline_error {
+  background-color: #1C7988 !important;
+  color: #FFFFFF !important;
+  font-size: $size-text;
+  max-width: 300px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+#mce-responses {
+  display: inline-block;
+}
+
+#mce-success-response,
+#mce-error-response {
+  color: #FFFFFF !important;
+}
+
+#mc_embed_signup div.mce_inline_error:before,
+#mce-error-response:before {
+  content: '!';
+  margin-right: 10px;
+  color: #EF3D47;
+}
+
+#mc_embed_signup_scroll {
+  max-width: 500px;
+  width: 100%;
+}
+
+#mc_embed_signup .mc-field-group #mce-EMAIL {
+  padding: 0px 20px 0px 20px;
+  border: 0;
+  height: 52px;
+  font-size: 16px; /* 16px is the treshold for iPhone zoom */
+}
+
+#wrapper-signup-input input{
+  width: 100%;
+  margin: 0;
+  height: 52px;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #FFFFFF;
+  color: #137989;
+  font-size: 32px;
+  padding-top: 12px;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* BOOKS */
+
+
+
+
+/* CONTACT */
+
+#contact img {
+  width: 250px;
+}
+
+#contact-people .columns {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  &:first-child {
+    padding-top: 0px;
+  }
+}
+
+#contact-people h2 {
+  margin-bottom: 0;
+}
+
+#contact-people {
+  margin-bottom: 40px;
+}
+
+/* NON-MOBILE */
+@media only screen and (min-width: 64.063em) {
+  #contact h1 {
+    margin-top: 60px;
+  }
+  #contact-people .columns, #contact-people .columns:first-child {
+    padding-top: 50px;
+    border-right: 1px solid #40929F;
+  }
+  #contact-people .columns:last-child {
+    border-right: none;
+  }
+  #contact-people {
+    margin-bottom: 100px;
+  }
+}
+
+/* SOCIAL MEDIA */
+
+#some .embedded {
+  min-height: 565px;
+}
+
+/*
+Make the Facebook Like box responsive (fluid width)
+https://developers.facebook.com/docs/reference/plugins/like-box/
+*/
+
+ /* This element holds injected scripts inside iframes that in some cases may stretch layouts. So, we're just hiding it. */
+#some #fb-root {
+  display: none;
+}
+
+/* To fill the container and nothing else */
+#some .fb_iframe_widget,
+#some .fb_iframe_widget span,
+#some .fb_iframe_widget span iframe[style] {
+  width: 100% !important;
+  max-width: 500px !important;
+}
+
+/* SERVICES */
+
+#smk-quote {
+  padding-bottom: 30px;
+  .icon-smk-quote:before {
+    position: relative;
+    color: $color-highlighted;
+    font-size: 150px;
+  }
+}
+
+#vvv .icon-vvv:before {
+  position: relative;
+  color: #0C7C8B;
+  top: 30px;
+  font-size: 250px;
+}
+
+#smk .icon-smk-vertical:before{
+  position: relative;
+  color: #0C7C8B;
+  top: 30px;
+  font-size: 650px;
+}
+
+#smk .icon-smk-horizontal:before{
+  position: relative;
+  color: #0C7C8B;
+  top: 30px;
+  font-size: 250px;
+}
+
+/* LARGE */
+@media only screen and (min-width: 64.063em){
+  #smk-quote .icon-smk-quote:before {
+    top: 30px;
+    font-size: 23vw;
+  }
+  #vvv .icon-vvv:before {
+    font-size: 450px;
+  }
+}
+
+/* EXTRA LARGE */
+@media only screen and (min-width: 90.063em){
+  #smk-quote .icon-smk-quote:before {
+    top: 40px;
+    font-size: 360px;
+  }
+
+  #vvv .icon-vvv:before {
+    top: 40px;
+    font-size: 550px;
+  }
+}
+
+#smk-bottom .row .columns h3 {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#smk-bottom .btn-contact {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+#smk-bottom #more {
+  margin-top: 40px;
+}
+
+/* RESEARCH */
+
+#projects h1 {
+  margin-bottom: 0;
+}
+
+#projects .embedded {
+  margin-bottom: 0;
+  margin-top: 25px;
+}
+
+#projects .row:last-child .columns .embedded {
+  margin-bottom: 50px;
+}
+
+#projects h1 {
+  font-size: 36px;
+}
+
+/* LARGE */
+@media only screen and (min-width: 64.063em){
+  #projects h1 {
+    font-size: 52px;
+  }
+
+  #projects .row:last-child .columns .embedded {
+    margin-bottom: 100px;
+  }
+}
+
+/* EXTRA LARGE */
+@media only screen and (min-width: 90.063em){
+  #projects h1 {
+    font-size: 65px;
+  }
+  #projects .row:last-child .columns .embedded {
+    margin-bottom: 150px;
+  }
+}
+

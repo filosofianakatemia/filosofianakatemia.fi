@@ -13,3 +13,8 @@ node/
 
 # Ignore generated sources
 src/js/
+src/dist/
+src/public/
+src/typings/
+src/config-devel.json
+src/package.json

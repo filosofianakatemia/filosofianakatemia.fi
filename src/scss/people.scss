@@ -1,0 +1,356 @@
+@import 'constants';
+
+/**********/
+/* PEOPLE */
+
+/* http://stackoverflow.com/a/15779764 */
+.head-shot {
+  max-height: 500px;
+  overflow: hidden;
+}
+
+#thumbnails .picture {
+  background-repeat: no-repeat;
+  background-attachment: center;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 300px;
+}
+
+@media only screen and (max-width: 64.063em){
+  #thumbnails #placeholder .picture {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+#thumbnails #emilia .picture {
+  background-image: url('../img/emilia-small.jpg');
+}
+#thumbnails #frank .picture {
+  background-image: url('../img/frank-small.jpg');
+}
+#thumbnails #iida .picture {
+  background-image: url('../img/iida-small.jpg');
+}
+#thumbnails #joonas .picture {
+  background-image: url('../img/joonas-small.jpg');
+}
+#thumbnails #jp .picture {
+  background-image: url('../img/jp-small.jpg');
+}
+#thumbnails #karoliina .picture {
+  background-image: url('../img/karoliina-small.jpg');
+}
+#thumbnails #lauri .picture {
+  background-image: url('../img/lauri-small.jpg');
+}
+#thumbnails #maija .picture {
+  background-image: url('../img/maija-small.jpg');
+}
+#thumbnails #maria .picture {
+  background-image: url('../img/maria-small.jpg');
+}
+#thumbnails #miia .picture {
+  background-image: url('../img/miia-small.jpg');
+}
+#thumbnails #peter .picture {
+  background-image: url('../img/peter-small.jpg');
+}
+#thumbnails #reima .picture {
+  background-image: url('../img/reima-small.jpg');
+}
+#thumbnails #sami .picture {
+  background-image: url('../img/sami-small.jpg');
+}
+#thumbnails #selina .picture {
+  background-image: url('../img/selina-small.jpg');
+}
+#thumbnails #sonja .picture {
+  background-image: url('../img/sonja-small.jpg');
+}
+#thumbnails #tapani .picture {
+  background-image: url('../img/tapani-small.jpg');
+}
+#thumbnails #timo .picture {
+  background-image: url('../img/timo-small.jpg');
+}
+#thumbnails #tuukka .picture {
+  background-image: url('../img/tuukka-small.jpg');
+}
+#thumbnails #tytti .picture {
+  background-image: url('../img/tytti-small.jpg');
+}
+#thumbnails #villiam .picture {
+  background-image: url('../img/villiam-small.jpg');
+}
+#thumbnails #placeholder .picture {
+  background-image: url('../img/placeholder-small.jpg');
+}
+
+#thumbnails {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  h2, h4 {
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 0.5em;
+    cursor: pointer;
+  }
+  h2 > a {
+    display: block;
+  }
+  .link-container {
+    cursor: pointer;
+  }
+  .picture {
+    cursor:pointer;
+  }
+}
+
+/* LARGE */
+@media only screen and (min-width: 64.063em){
+  #thumbnails {
+    margin-left: 40px;
+    margin-right: 40px;
+    .picture {
+      height: 400px;
+    }
+    .section .columns .picture {
+      margin-right: 20px;
+    }
+    .section .columns:last-child .picture {
+      margin-right: 0;
+    }
+  }
+}
+
+/* EXTRA LARGE */
+@media only screen and (min-width: 90.063em){
+  #thumbnails .picture {
+    height: 550px;
+  }
+}
+
+#introduction .top-bar,
+.blog-text .top-bar,
+.people-details .top-bar {
+  position: relative;
+  background-color: #1C7986;
+}
+
+#introduction .top-bar.expanded .title-area,
+.blog-text .top-bar.expanded .title-area,
+.people-details .top-bar.expanded .title-area {
+  background-color: #1C7986;
+}
+
+#introduction .top-bar .icon-logo-fill-name:before,
+.blog-text .top-bar .icon-logo-fill-name:before,
+.people-details .top-bar .icon-logo-fill-name:before{
+  color: #FFFFFF;
+}
+
+#introduction .top-bar .toggle-topbar.menu-icon > a > span:after,
+.blog-text .top-bar .toggle-topbar.menu-icon > a > span:after,
+.people-details .top-bar .toggle-topbar.menu-icon > a > span:after{
+  box-shadow: 0 0 0 1px #FFFFFF, 0 7px 0 1px #FFFFFF, 0 14px 0 1px #FFFFFF;
+}
+
+.people-details .breadcrumbs {
+  color: $color-highlighted;
+}
+
+.people-details .section-person >:first-child p:first-of-type {
+  font-weight: 100;
+  font-size: 18px;
+}
+
+.person-details img {
+  max-width: 100%;
+}
+
+.person-details:not(img) {
+  text-align: left;
+}
+
+.person-quote {
+  padding-top: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 40px;
+  .icon-quote:before{
+    position: relative;
+    top: 20px;
+    font-size: 40px;
+    color: $color-highlighted;
+  }
+  .quote {
+    font-weight: 100;
+    font-size: 18px;
+    font-style: italic;
+    color: $color-highlighted;
+  }
+  .separator {
+    margin-left: 5px;
+  }
+  .quote-author:before {
+    content: "\2013";
+    margin-right: 5px;
+  }
+  .quote-author {
+    font-size: 16px;
+  }
+}
+
+.section-person {
+  padding-bottom: 40px;
+}
+
+.section-person .columns:first-child {
+  padding-bottom: 20px;
+}
+
+.section-person h2 {
+  font-size: $size-heading-extra-small;
+  line-height: 20px;
+}
+
+.section-person ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 15px;
+}
+.section-person ul li:before {
+  content: '-';
+  position: absolute;
+  left: 15px;
+}
+.section-person ul li a {
+  color: $color-text;
+  margin-left: -15px;
+}
+.section-person ul li a:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e604";
+
+  position:relative;
+  font-size: 0.5em;
+  bottom: 2px;
+
+  width: 10px;
+  display: inline-block;
+  background-color: white;
+}
+
+/* MEDIUM */
+@media only screen and (min-width: 40.063em){
+  .person-quote .icon-quote:before{
+    font-size: 100px;
+  }
+  .people-details .description,
+  .person-quote .quote {
+    font-size: 25px;
+  }
+  .people-details .section-person >:first-child p:first-of-type {
+    font-size: 25px;
+  }
+}
+
+/* LARGE */
+@media only screen and (min-width: 64.063em){
+  .section-person h2 {
+    font-size: $size-heading-extra-small__screen-large;
+    line-height: 25px;
+  }
+}
+
+/* EXTRA LARGE */
+@media only screen and (min-width: 90.063em) {
+  .section-person {
+    h2 {
+      font-size: $size-heading-extra-small__screen-extra-large;
+      line-height: 33px;
+    }
+    ul li a {
+      margin-left: -20px;
+    }
+  }
+}
+
+/* INTRODUCTION */
+
+.section-introduction {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#introduction {
+  .wrapper-embedded {
+    .row {
+      &:first-child h1 {
+        margin-bottom: 0;
+      }
+      &:last-child .columns:last-child .embedded {
+        margin-bottom: 50px;
+      }
+    }
+  }
+  .embedded {
+    margin-bottom: 0;
+    margin-top: 25px;
+    .icon-pdf:before {
+      font-size: 30px;
+    }
+  }
+}
+
+@media only screen and (min-width: 40.063em) {
+  #introduction .embedded .icon-pdf:before {
+    font-size: 34px;
+  }
+}
+
+/* LARGE */
+@media only screen and (min-width: 64.063em){
+  #introduction .wrapper-embedded .row {
+    &:first-child h1 {
+      font-style: 52px;
+    }
+    &:last-child .columns:last-child .embedded {
+      margin-bottom: 100px;
+    }
+    .embedded .icon-pdf:before {
+      font-size: 40px;
+    }
+  }
+}
+
+/* EXTRA LARGE */
+@media only screen and (min-width: 90.063em){
+  #introduction .wrapper-embedded .row {
+    &:first-child h1 {
+      font-size: 65px;
+    }
+    &:last-child .columns:last-child .embedded {
+      margin-bottom: 150px;
+    }
+  }
+}
+

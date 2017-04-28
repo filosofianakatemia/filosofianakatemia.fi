@@ -1,0 +1,257 @@
+@import 'constants';
+
+/**********/
+/* COMMON */
+/**********/
+
+.font-strong {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+.font-small {
+  font-size: $size-text-small;
+}
+
+.left-aligned {
+  text-align: left;
+}
+
+.right-aligned {
+  text-align: right;
+}
+
+.center-aligned, .center-aligned-small {
+  text-align: center;
+}
+
+.button-swiper-prev,
+.button-swiper-next {
+  position: absolute;
+  top: 50%;
+  width: 27px;
+  height: 44px;
+  margin-top: -22px;
+  z-index: 10;
+  cursor: pointer;
+}
+.button-swiper-prev.swiper-button-disabled,
+.button-swiper-next.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: auto;
+  pointer-events: none;
+}
+.button-swiper-prev {
+  left: 0px;
+  right: auto;
+  .icon-arrow-hand-left {
+    font-size: 15px;
+    color: $color-highlighted;
+  }
+}
+.button-swiper-next {
+  right: 0px;
+  left: auto;
+  .icon-arrow-hand-right {
+    font-size: 15px;
+    color: $color-highlighted;
+  }
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin: 0 9px;
+}
+
+.swiper-pagination-bullet-active {
+  background: $color-highlighted;
+}
+
+/* MEDIUM */
+
+@media only screen and (min-width: 40.063em){
+  .center-aligned-small {
+    text-align: left;
+  }
+  .button-swiper-prev {
+    left: 10px;
+    .icon-arrow-hand-left {
+      font-size: 30px;
+    }
+  }
+  .button-swiper-next {
+    right: 15px;
+    .icon-arrow-hand-right {
+      font-size: 30px;
+    }
+  }
+  .right-aligned-medium-up {
+    text-align: right;
+  }
+}
+
+/*
+`.break-words()` sets word braking on
+source: http://kenneth.io/blog/2012/03/04/word-wrapping-hypernation-using-css/
+
+```markup
+
+```
+*/
+.break-words {
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+
+  /* Non standard for webkit */
+  word-break: break-word;
+
+  // For Firefox to hyphenate correctly
+  // we would need LANG to be set by the user
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+h1, h2, h3, h4 {
+  color: $color-highlighted;
+  font-weight: 100;
+}
+
+h1 {
+  font-size: $size-heading-large;
+  @extend .break-words;
+}
+
+h2 {
+  font-size: $size-heading;
+  line-height: 28px;
+}
+
+h3 {
+  font-size: $size-heading-small;
+  line-height: 24px;
+}
+
+h4 {
+  font-size: $size-heading-extra-small;
+  line-height: 20px;
+}
+
+/* LARGE */
+@media only screen and (min-width: 64.063em){
+  h1 {
+    font-size: $size-heading-large__screen-large;
+  }
+
+  h2 {
+    font-size: $size-heading__screen-large;
+    line-height: 38px;
+  }
+  h3 {
+    font-size: $size-heading-small__screen-large;
+    line-height: 31px;
+  }
+  h4 {
+    font-size: $size-heading-extra-small__screen-large;
+    line-height: 25px;
+  }
+  .font-small {
+    font-size: $size-text-small__screen-large;
+  }
+}
+
+/* EXTRA LARGE */
+@media only screen and (min-width: 90.063em){
+  h1 {
+    font-size: $size-heading-large__screen-extra-large;
+  }
+
+  h2 {
+    font-size: $size-heading__screen-extra-large;
+    line-height: 46px;
+  }
+
+  h3 {
+    font-size: $size-heading-small__screen-extra-large;
+    line-height: 38px;
+  }
+
+  h4 {
+    font-size: $size-heading-extra-small__screen-extra-large;
+    line-height: 33px;
+  }
+  .font-small {
+    font-size: $size-text-small__screen-extra-large;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $color-highlighted;
+  transition: color 300ms ease-out;
+  &[href^=tel] {
+    color: inherit;
+  }
+}
+
+.link-cta {
+  font-weight: 700;
+}
+
+.icon-arrow-right:before {
+  font-size: 0.5em;
+  vertical-align: baseline;
+  position: relative;
+  top: -1px;
+  margin-left: 8px;
+}
+
+a:hover, a:focus,
+.link-cta:hover, .link-cta:focus{
+  color: #000000;
+}
+
+.link-downplayed {
+  color: $color-text;
+}
+
+ul.list-link li:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e604";
+
+  position:relative;
+  font-size: 0.5em;
+  margin-right: 5px;
+  bottom: 2px;
+}
+
+ul.list-link li a {
+  color: $color-text;
+}
+
+.breadcrumbs {
+  padding-top: 40px;
+  .icon-arrow-right {
+    padding-right: 10px;
+  }
+}
+

@@ -1,0 +1,26 @@
+@import 'constants';
+
+/**********/
+/* FOOTER */
+/**********/
+
+.footer {
+  background-color: #042C38;
+  min-height: 200px;
+  color: #FFFFFF;
+  font-weight: 100;
+  font-size: 14px;
+  padding-bottom: 40px;
+  .address {
+    text-align: center;
+    margin-top: 40px;
+    a {
+      color: #FFFFFF;
+    }
+  }
+  .icon-bar {
+    padding-top: 40px;
+    padding-left: 0;
+    font-size: 14px;
+  }
+}

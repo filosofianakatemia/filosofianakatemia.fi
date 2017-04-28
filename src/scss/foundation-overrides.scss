@@ -1,0 +1,58 @@
+@import 'constants';
+
+/************************/
+/* FOUNDATION OVERRIDES */
+/************************/
+
+body {
+  height: 100%;
+}
+
+html {
+  /* Disable overflow-y in mobile to get momentum scrolling to work */
+  overflow-y: hidden;
+}
+
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  font-size: $size-text;
+  font-weight: 300;
+  color: $color-text;
+}
+
+/* LARGE */
+@media only screen and (min-width: 64.063em){
+  html {
+    /* Set overflow-y to initial to get animated scroll to work in desktop */
+    overflow-y: initial;
+  }
+  body {
+    font-size: $size-text__screen-large;
+  }
+}
+
+/* EXTRA LARGE */
+@media only screen and (min-width: 90.063em){
+  body {
+    font-size: $size-text__screen-extra-large;
+  }
+}
+
+.row {
+  max-width: none;
+}
+
+button:hover, button:focus,
+.button:hover, .button:focus,
+.top-bar-section ul > li.active > a {
+  background-color: #1F5B65;
+}
+
+.icon-bar {
+  background: transparent;
+  .item a {
+    color: #FFFFFF;
+  }
+}

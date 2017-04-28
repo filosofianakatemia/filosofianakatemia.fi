@@ -1,0 +1,33 @@
+@import 'constants';
+
+/////////////////////////
+// Foundation
+
+/* These are located at node_modules/foundation-sites/scss */
+
+// Override Foundation font everywhere, and color to our text color
+$body-font-family: "museo-sans", "Museo Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !default;
+$body-font-color: $color-text !default;
+$body-font-weight: $weight-text !default;
+
+@import 'foundation';
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
+@include foundation-visibility-classes;
+
+// Other overrides to foundation files
+@import 'foundation-overrides';
+
+/////////////////////////
+// Site files
+
+@import 'icons';
+@import 'common';
+@import 'navigation';
+@import 'hero';
+@import 'content';
+@import 'people';
+@import 'footer';
+@import 'blog';
+

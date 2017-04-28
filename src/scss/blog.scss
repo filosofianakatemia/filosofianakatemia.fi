@@ -1,0 +1,328 @@
+@import 'constants';
+@import 'common';
+
+/**********/
+/* BLOG */
+
+.blog-post {
+  > .section-blog-post {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &.excerpt-mode{
+      .blog-picture, .blog-content .body-text{
+        cursor:pointer;
+      }
+    }
+    &.list-view .blog-content .lead{
+      cursor:pointer;
+    }
+  }
+  h1 {
+    line-height: 1;
+    .title-underline {
+      margin-top: inherit;
+      .underline {
+        font-size: initial;
+      }
+    }
+  }
+  .byline {
+    padding-top: 40px;
+  }
+  .caption {
+    display: block;
+    @extend .right-aligned;
+    @extend .font-italic;
+  }
+  #some-comment {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .divider {
+    border-bottom: 1px solid #c2c2c2;
+  }
+}
+
+.blog-content {
+  .body-text {
+    & > p {
+      margin-top: 1.7em;
+      margin-bottom: 1.7em;
+    }
+  }
+  .lead {
+    &.emphasize {
+      border-left: 6px solid $color-highlighted;
+      padding-left: 20px;
+      padding-bottom: 0;
+      font-weight: 100;
+      font-size: 18px;
+    }
+    &:not(.emphasize) {
+      margin-top: 0;
+    }
+  }
+}
+
+.excerpt-mode .blog-content:not(.ingress-only) .body-text>:nth-child(n+3) {
+  display: none;
+}
+
+.excerpt-mode .blog-content.ingress-only .body-text>:nth-child(n+1) {
+  display: none;
+}
+
+blockquote:first-of-type {
+  background-color: $color-highlighted;
+  color: #FFFFFF;
+  padding: 40px;
+  margin-left: 0;
+  margin-right: 0;
+  & > p {
+    font-style: italic;
+    font-weight: 100;
+    font-size: 18px;
+    margin: 0;
+  }
+  & > .icon-quote {
+    display: block;
+    text-align: right;
+    font-size: 40px;
+  }
+}
+
+.some-row {
+  padding-top: 15px;
+  // http://codepen.io/CucuIonel/pen/espDH
+  .some-involve {
+    min-height: 40px;
+    line-height: 40px;
+    & > span {
+      display: inline-block;
+      line-height: 20px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.some-share {
+  height: 40px;
+  & > * {
+    height: 40px;
+    display: inline-block;
+    &:not(:first-child) {
+      padding-left: 15px;
+    }
+    &:not(:last-child) {
+      border-right: 1px solid #037a80;
+      padding-right: 20px;
+    }
+  }
+  .total-shares {
+    text-align: center;
+    vertical-align: bottom;
+    line-height: 1.2;
+    font-weight: 100;
+    .total-shares_count,
+    .total-shares_text {
+      display: block;
+    }
+    .total-shares_count {
+      font-size: 22px;
+    }
+    .total-shares_text {
+      font-size: 12px;
+    }
+  }
+  .some-share_link {
+    display: inline-block;
+    .icon-facebook:before,
+    .icon-linkedin:before,
+    .icon-twitter:before {
+      height: 40px;
+      line-height: 40px;
+      font-size: 30px;
+    }
+  }
+}
+
+.posts-navigation {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.posts-navigation-link {
+  background-color: #1C7986;
+  border-radius: 18px;
+  color: white;
+  font-size: 0.8em;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media only screen {
+  .blog-post > .section-blog-post {
+    padding-left: 10px;
+    padding-right: 10px;
+    &.list-view:not(.read-mode) {
+      text-align: center;
+      .blog-content .lead:not(.emphasize),
+      .some-involve {
+        font-size: 18px;
+      }
+    }
+    .divider {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media only screen and (min-width: 40.063em) {
+  .blog-post > .section-blog-post {
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+    &.list-view:not(.read-mode) {
+      text-align: left;
+      .blog-content .lead:not(.emphasize),
+      .some-involve {
+        font-size: $size-text;
+      }
+    }
+    .divider {
+      margin-top: 40px;
+    }
+  }
+  .medium-right {
+    float: right;
+    padding-left: 0;
+  }
+  .some-share {
+    height: 44px;
+    & > * {
+      height: 44px;
+      &:not(:first-child) {
+        padding-left: 20px;
+      }
+      &:not(:last-child) {
+        padding-right: 25px;
+      }
+    }
+    .some-share_link {
+      .icon-facebook:before,
+      .icon-linkedin:before,
+      .icon-twitter:before {
+        height: 44px;
+        line-height: 44px;
+        font-size: 34px;
+      }
+    }
+    .total-shares {
+      .total-shares_count {
+        font-size: 25px;
+      }
+      .total-shares_text {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+/* LARGE */
+@media only screen and (min-width: 64.063em) {
+  .some-share {
+    height: 50px;
+    & > * {
+      height: 50px;
+      &:not(:first-child) {
+        padding-left: 25px;
+      }
+      &:not(:last-child) {
+        padding-right: 30px;
+      }
+    }
+    .some-share_link {
+      & .icon-facebook:before,
+      .icon-linkedin:before,
+      .icon-twitter:before {
+        height: 50px;
+        line-height: 50px;
+        font-size: 40px;
+      }
+    }
+    .total-shares {
+      .total-shares_count {
+        font-size: 28px;
+      }
+      .total-shares_text {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+/* MEDIUM */
+@media only screen and (min-width: 40.063em) {
+  #blog .hero .slogan {
+    padding-top: 160px;
+    padding-bottom: 105px;
+  }
+  .blog-content .lead.emphasize,
+  blockquote:first-of-type > p {
+    font-size: 25px;
+  }
+}
+
+/* LARGE */
+@media only screen and (min-width: 64.063em) {
+  blockquote:first-of-type {
+    float: right;
+    width: 50%;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 25px;
+  }
+}
+
+// 1. Prevent “leak” out the bottom. http://stackoverflow.com/a/6442607
+.author-introduction {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  .author-introduction__picture {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
+  .author-introduction__text {
+    overflow: hidden; // [1]
+    & > h4 {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+    & > p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+// VIDEO
+.embed-responsive-16by9 {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.embed-responsive-16by9 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
