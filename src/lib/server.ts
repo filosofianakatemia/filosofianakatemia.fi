@@ -3,6 +3,7 @@ import * as logger from "koa-logger";
 import * as serve from "koa-static";
 import * as Router from "koa-router";
 import * as path from "path";
+import { Render } from "./rendering";
 import { Utils, Info } from "extendedmind-siteutils";
 
 export interface Config {
@@ -58,12 +59,8 @@ export class Server {
       this.app.use(serve("./public"));
     }
 
-const backendInfo:any = {};
-const thisServer = this;
-thisServer.startListening(backendInfo);
-
     // get backend /info path from backend on boot
-/*
+
     let requestInProgress;
     let backendPollInterval = setInterval(() => {
       if (!requestInProgress) {
@@ -80,31 +77,20 @@ thisServer.startListening(backendInfo);
             console.info("backend returned status code: " + (error ? error.code : "unknown") + ", retrying...");
           });
       }
-    }, 2000);*/
+    }, 2000);
   }
 
   private startListening(backendInfo: Info){
-    /*
 
     console.info("backend info:");
     console.info(JSON.stringify(backendInfo, null, 2));
 
     // setup rendering
     const viewsPath = path.join(__dirname, "../views");
-
-    let powered: boolean = true;
-    if (backendInfo.ui) {
-      const ui = JSON.parse(backendInfo.ui);
-      if (ui.powered === false) powered = false;
-    }
-    const render = new Render("nunjucks", backendInfo.commonCollective[1],
-                              viewsPath, this.version, this.debug, powered, this.urlOrigin,
-                              this.ownersPath, this.headersPath);
-
-    const visualization = new Visualization(this.generatedFilesPath);
+    const render = new Render("nunjucks", viewsPath, this.version, this.debug, this.urlOrigin);
 
     // setup routing
-
+    /*
     const routing = new Routing(this.utils, backendInfo, this.headersPath, this.ownersPath, this.extraRoutingModule);
 
     // setup context for all routes
@@ -112,9 +98,7 @@ thisServer.startListening(backendInfo);
     this.app.use((ctx, next) => {
       ctx.state.backendClient = this.utils;
       ctx.state.render = render;
-      ctx.state.visualization = visualization;
       ctx.state.urlOrigin = this.urlOrigin;
-      ctx.state.ownersPath = this.ownersPath;
       routing.getHelperMethods().forEach(helperInfo => {
         ctx.state[helperInfo[0]] = helperInfo[1];
       });
@@ -123,7 +107,7 @@ thisServer.startListening(backendInfo);
 
     // add routes
     this.app.use(routing.getRoutes());
- */
+     */
     // start listening
     this.app.listen(this.port);
     console.info("listening on port " + this.port);
