@@ -4,6 +4,7 @@ import * as serve from "koa-static";
 import * as Router from "koa-router";
 import * as path from "path";
 import { Render } from "./rendering";
+import { Routing } from "./routing";
 import { Utils, Info } from "extendedmind-siteutils";
 
 export interface Config {
@@ -90,8 +91,7 @@ export class Server {
     const render = new Render("nunjucks", viewsPath, this.version, this.debug, this.urlOrigin);
 
     // setup routing
-    /*
-    const routing = new Routing(this.utils, backendInfo, this.headersPath, this.ownersPath, this.extraRoutingModule);
+    const routing = new Routing(this.utils, backendInfo);
 
     // setup context for all routes
 
@@ -99,6 +99,7 @@ export class Server {
       ctx.state.backendClient = this.utils;
       ctx.state.render = render;
       ctx.state.urlOrigin = this.urlOrigin;
+      ctx.state.debug = this.debug;
       routing.getHelperMethods().forEach(helperInfo => {
         ctx.state[helperInfo[0]] = helperInfo[1];
       });
@@ -107,7 +108,7 @@ export class Server {
 
     // add routes
     this.app.use(routing.getRoutes());
-     */
+
     // start listening
     this.app.listen(this.port);
     console.info("listening on port " + this.port);
