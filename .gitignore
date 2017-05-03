@@ -12,6 +12,7 @@ node/
 *.sublime-workspace
 
 # Ignore generated sources
+src/data-devel.json
 src/js/
 src/dist/
 src/public/

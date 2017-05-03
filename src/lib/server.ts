@@ -57,6 +57,7 @@ export class Server {
       this.app.use(logger());
     }
     if (!this.externalStatic) {
+      console.log("SERVING public");
       this.app.use(serve("./public"));
     }
 

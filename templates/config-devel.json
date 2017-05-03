@@ -3,5 +3,5 @@
   "port": 3001,
   "externalStatic": false,
   "debug": true,
-  "backend": false
+  "backend": "http://localhost:3004"
 }
