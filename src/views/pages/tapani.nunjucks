@@ -4,8 +4,8 @@
 {% block ogtitle %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
 {% block ogurl %}{{ super() }}/ihmiset/tapani{% endblock %}
 {% block ogimages %}
-<meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/tapani-small.jpg" />
-<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/tapani-small.jpg" />
+<meta property="og:image:url" content="https://filosofianakatemia.fi/static/{{ version }}/img/tapani-small.jpg" />
+<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/tapani-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
 {% block personquote %}Analyyttisell&auml; Tapanilla on porukan kovimmat tieteelliset meriitit. H&auml;n tekee Filosofian Akatemiassa tieteellist&auml; laadunvalvontaa ja varmistaa, ett&auml; johtop&auml;&auml;t&ouml;ksille todella l&ouml;ytyy tutkimuksesta pohja.{% endblock %}

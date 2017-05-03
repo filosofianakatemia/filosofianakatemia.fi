@@ -4,8 +4,8 @@
 {% block ogtitle %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
 {% block ogurl %}{{ super() }}/ihmiset/miia{% endblock %}
 {% block ogimages %}
-<meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/miia-small.jpg" />
-<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/miia-small.jpg" />
+<meta property="og:image:url" content="https://filosofianakatemia.fi/static/{{ version }}/img/miia-small.jpg" />
+<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/miia-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
 {% block personquote %}Miia on niitä ihmisiä, joiden tapaamisen jälkeen tuntuu koko kroppa kuplivan ilosta. Mikään ei ole liian suurta tai liian vaikeaa. Hänen valtavan laaja ja visionäärinen ymmärryksensä suurista linjoista konkretisoitu salamannopeasti pikkutarkoiksi ja ammattimaisiksi suunnitelmiksi. Se on kerrassaan hämmästyttävää.{% endblock %}

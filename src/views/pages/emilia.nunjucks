@@ -4,8 +4,8 @@
 {% block ogtitle %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
 {% block ogurl %}{{ super() }}/ihmiset/emilia{% endblock %}
 {% block ogimages %}
-<meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/emilia-small.jpg" />
-<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/emilia-small.jpg" />
+<meta property="og:image:url" content="https://filosofianakatemia.fi/static/{{ version }}/img/emilia-small.jpg" />
+<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/emilia-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
 {% block personquote %}Forbesissa ja Business Insiderissa lainattu tutkija, jolla on kaikki mahdollisuudet nousta kansainv&auml;lisen populaaritieteen huipulle. Emilia on innostava ja inspiroiva ihminen, joka saa muut loistamaan.{% endblock %}

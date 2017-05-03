@@ -4,8 +4,8 @@
 {% block ogtitle %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
 {% block ogurl %}{{ super() }}/ihmiset/sami{% endblock %}
 {% block ogimages %}
-<meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/sami-small.jpg" />
-<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/sami-small.jpg" />
+<meta property="og:image:url" content="https://filosofianakatemia.fi/static/{{ version }}/img/sami-small.jpg" />
+<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/sami-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
 {% block personquote %}Sami on systeemi&auml;lykk&ouml;, ihmisl&auml;ht&ouml;inen prosessinero, ekonomi filosofin syd&auml;mell&auml;. Keskustelussa h&auml;n maalaa el&auml;v&auml;n kuvan organisaatiosta ja osoittaa, miten sen k&auml;yt&auml;nt&ouml;j&auml; ja rakenteita kannattaa muuttaa tavoitetilan saavuttamiseksi. Se on kertakaikkiaan &auml;llistytt&auml;v&auml;&auml;, mukaansatempaavaa ja inspiroivaa.{% endblock %}

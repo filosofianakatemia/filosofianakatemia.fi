@@ -4,8 +4,8 @@
 {% block ogtitle %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
 {% block ogurl %}{{ super() }}/ihmiset/frank{% endblock %}
 {% block ogimages %}
-<meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/frank-small.jpg" />
-<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/frank-small.jpg" />
+<meta property="og:image:url" content="https://filosofianakatemia.fi/static/{{ version }}/img/frank-small.jpg" />
+<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/frank-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
 {% block personquote %}Frank on tutkija, joka osaa ja uskaltaa ottaa osaa yhteiskunnalliseen keskusteluun kommentoimalla ajankohtaisia aiheita. Se on harvinaista. H&auml;n osaa taitavasti konkretisoida teoriaa yleistajuisesti.{% endblock %}

@@ -4,8 +4,8 @@
 {% block ogtitle %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
 {% block ogurl %}{{ super() }}/ihmiset/maija{% endblock %}
 {% block ogimages %}
-<meta property="og:image:url" content="https://filosofianakatemia.fi/static/img/maija-small.jpg" />
-<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/img/maija-small.jpg" />
+<meta property="og:image:url" content="https://filosofianakatemia.fi/static/{{ version }}/img/maija-small.jpg" />
+<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/maija-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
 {% block personquote %}Maija on sitä ihmistyyppiä, joka tarttuu tuumasta toimeen ja saa asiat tapahtumaan. Hänessä yhdistyvät harvinaisella tavalla kyky keskustella ja tarkastella asioita monesta näkökulmasta sekä insinöörimäinen taito löytää ongelmiin ratkaisut. Hersyvällä naurulla varustettu tehopakkaus!{% endblock %}
