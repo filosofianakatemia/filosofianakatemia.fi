@@ -78,7 +78,6 @@
   <script type='text/javascript' src='/static/{{ version }}/js/foundation.min.js'></script>
   <script type='text/javascript' src='/static/{{ version }}/js/app.js'></script>
   <script>
-    Foundation.global.namespace = '';
     $(document).foundation();
   </script>
 
