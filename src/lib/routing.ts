@@ -3,9 +3,7 @@ import * as Router from "koa-router";
 
 interface BlogContext {
   blogs: any;
-  firstPage?: boolean;
-  lastPage?: boolean;
-  nextPageNumber?: number;
+  remaining?: number;
 }
 
 export class Routing {
@@ -60,10 +58,7 @@ export class Routing {
       ["getSliceOfArrayWithRemaining", (array, queryParamRemaining) => {
         return getSliceOfArrayWithRemaining(this.POSTS_PER_PAGE, array, queryParamRemaining);
       }],
-      /*["getUnrenderedBlogs", this.getUnrenderedBlogs],
-      ["filterBlogsFromPublicItems", this.filterBlogsFromPublicItems],
       ["generateBlogsContext", this.generateBlogsContext],
-      ["generateBlogPost", this.generateBlogPost]*/
     ];
   }
 
@@ -103,31 +98,27 @@ export class Routing {
       ctx.redirect(questionnaire2Url);
     }
   }
-    /*
+
   private async blogi(ctx: Router.IRouterContext, next: () => Promise<any>): Promise<any> {
     console.info("GET /blogi");
-    const context = await ctx.state.generateBlogsContext();
-    if (context) {
-      ctx.body = ctx.state.render.template("pages/blogi", context);
+    const faPublicItems = await ctx.state.backendClient.getPublicItems("filosofian-akatemia");
+    const faBlogs = faPublicItems.getNotes([{type: "keyword", include: "blogi"}]);
+    const blogsContext = await ctx.state.generateBlogsContext(faBlogs);
+    if (blogsContext) {
+      ctx.body = ctx.state.render.template("pages/blogi", blogsContext);
     }
   }
 
   // HELPER METHODS
 
-  private async generateBlogsContext(ctx: Router.IRouterContext, next: () => Promise<any>): Promise<any> {
-    const unrenderedBlogs = await ctx.state.getUnrenderedBlogs(ctx);
-    const renderedBlogs = ctx.state.generateBlogs(ctx, unrenderedBlogs.slice(0, 5));
+  private generateBlogsContext(faBlogs: any): BlogContext {
     const context: BlogContext = {
-      blogs: renderedBlogs,
-      firstPage: true
+      blogs: undefined,
     };
-    if (unrenderedBlogs.length <= 5) {
-      context.lastPage = true;
-    } else {
-      context.nextPageNumber = 2;
-    }
     return context;
   }
+
+    /*
 
   private async getUnrenderedBlogs(ctx: Router.IRouterContext) {
     const faPublicItems = await ctx.state.backendClient.getPublicItems("filosofian-akatemia");

@@ -46,6 +46,7 @@ export class Render {
     pathToView += "." + this.extension;
     return this.nunjucksEnvironment.render(pathToView, context);
   }
+
   // Simple markdown processor
   public markdown(content: string): string {
     return this.contentMarkdownParser.render(content);
