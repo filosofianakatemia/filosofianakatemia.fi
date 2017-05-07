@@ -1,8 +1,8 @@
-import * as nunjucks from "nunjucks";
-import * as MarkdownIt from "markdown-it";
-import * as MarkdownItLinks from "markdown-it-link-attributes";
-import * as MarkdownItContainer from "markdown-it-container";
 import * as excerpt from "excerpt-html";
+import * as MarkdownIt from "markdown-it";
+import * as MarkdownItContainer from "markdown-it-container";
+import * as MarkdownItLinks from "markdown-it-link-attributes";
+import * as nunjucks from "nunjucks";
 
 export class Render {
   private nunjucksEnvironment: nunjucks.Environment;
@@ -19,17 +19,17 @@ export class Render {
   // PUBLIC INTERFACE
 
   // Simple Nunjucks processor
-  public template(pathToView:string, context?:any): string{
+  public template(pathToView: string, context?: any): string {
     pathToView += "." + this.extension;
     return this.nunjucksEnvironment.render(pathToView, context);
-  };
+  }
   // Simple markdown processor
   public markdown(content: string): string {
     return this.contentMarkdownParser.render(content);
-  };
+  }
   // Process entire note into a usable object
   public processNote(note: any): any {
-    let processedNote: any = {
+    const processedNote: any = {
       uuid: note.uuid,
       modified: note.modified,
       title: note.title,
@@ -53,16 +53,16 @@ export class Render {
       if (note.visibility.shortId) processedNote.shortId = note.visibility.shortId;
     }
     return processedNote;
-  };
+  }
 
   // NUNJUCKS
 
-  private initializeNunjucs(viewsDirectory: string, version:string,
-                            debug: boolean, urlOrigin: string): nunjucks.Environment{
-    let nj: nunjucks.Environment = nunjucks.configure(viewsDirectory, {
+  private initializeNunjucs(viewsDirectory: string, version: string,
+                            debug: boolean, urlOrigin: string): nunjucks.Environment {
+    const  nj: nunjucks.Environment = nunjucks.configure(viewsDirectory, {
       autoescape: true,
       noCache: debug,
-      watch: debug
+      watch: debug,
     });
 
     nj.addGlobal("version", version);
@@ -74,11 +74,11 @@ export class Render {
     nj.addFilter("d.M.yyyy", this.ddmmyyyy);
 
     let domain;
-    if (urlOrigin && urlOrigin.startsWith("https://")){
+    if (urlOrigin && urlOrigin.startsWith("https://")) {
       domain = urlOrigin.substr(8);
-    }else if (urlOrigin && urlOrigin.startsWith("http://")){
+    } else if (urlOrigin && urlOrigin.startsWith("http://")) {
       domain = urlOrigin.substr(7);
-    }else{
+    } else {
       // Fail if urlOrigin is invalid
       throw new Error("FATAL: urlOrigin invalid or not set, exiting");
     }
@@ -89,11 +89,13 @@ export class Render {
   // MARKDOWN-IT
 
   private initializeFullMarkdown(): MarkdownIt.MarkdownIt {
-    let mp: MarkdownIt.MarkdownIt =
+    const mp: MarkdownIt.MarkdownIt =
       new MarkdownIt("default", { linkify: true, typographer: true});
+    // tslint:disable-next-line
     mp.renderer.rules["blockquote_close"] = this.blockquote_close;
-    mp.use(MarkdownItContainer, 'left-align', {render: this.leftContainerRender});
-    mp.use(MarkdownItContainer, 'right-align', {render: this.rightContainerRender});
+    mp.use(MarkdownItContainer, "left-align", {render: this.leftContainerRender});
+    mp.use(MarkdownItContainer, "right-align", {render: this.rightContainerRender});
+    // tslint:disable-next-line
     mp.renderer.rules["video"] = this.tokenize_video(mp);
     mp.inline.ruler.before("emphasis", "video", this.video_embed(mp));
     mp.use(MarkdownItLinks, {
@@ -105,42 +107,42 @@ export class Render {
 
   private blockquote_close() {
     return '<span class="icon-quote"><span></blockquote>';
-  };
+  }
 
   private leftContainerRender(tokens, idx) {
     if (tokens[idx].nesting === 1) {
       // opening tag
-      return '<div class="large-5 large-offset-1 left-aligned columns">\n';
+      return "<div class=\"large-5 large-offset-1 left-aligned columns\">\n";
     } else {
       // closing tag
-      return '</div>\n';
+      return "</div>\n";
     }
   }
 
   private rightContainerRender(tokens, idx) {
     if (tokens[idx].nesting === 1) {
       // opening tag
-      return '<div class="large-5 columns end person-details">' +
-      '<div class="show-for-large-up"><br/><br/></div>\n';
+      return "<div class=\"large-5 columns end person-details\">" +
+      "<div class=\"show-for-large-up\"><br/><br/></div>\n";
     } else {
       // closing tag
-      return '</div>\n';
+      return "</div>\n";
     }
   }
 
   private tokenize_video(md) {
     function tokenize_return(tokens, idx, options, env, self) {
-        var videoID = md.utils.escapeHtml(tokens[idx].videoID);
-        var service = md.utils.escapeHtml(tokens[idx].service);
-        if (videoID === "") {
-            return "";
-        }
+      const videoID = md.utils.escapeHtml(tokens[idx].videoID);
+      const service = md.utils.escapeHtml(tokens[idx].service);
+      if (videoID === "") {
+          return "";
+      }
 
       if (service.toLowerCase() === "youtube") {
         return this.tokenize_youtube(videoID);
       } else if (service.toLowerCase() === "vimeo") {
           return this.tokenize_vimeo(videoID);
-      } else{
+      } else {
         return("");
       }
     }
@@ -148,19 +150,26 @@ export class Render {
   }
 
   private tokenize_youtube(videoID) {
-    var embedStart = '<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" id="ytplayer" type="text/html" width="640" height="390" src="//www.youtube.com/embed/';
-    var embedEnd = '" frameborder="0"></iframe></div>';
+    const embedStart =
+      '<div class="embed-responsive embed-responsive-16by9">' +
+      '<iframe class="embed-responsive-item" id="ytplayer" type="text/html" ' +
+      'width="640" height="390" src="//www.youtube.com/embed/';
+    const embedEnd = '" frameborder="0"></iframe></div>';
     return embedStart + videoID + embedEnd;
   }
 
   private tokenize_vimeo(videoID) {
-    var embedStart = '<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" id="vimeoplayer" width="500" height="281" src="//player.vimeo.com/video/';
-    var embedEnd = '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>';
+    const embedStart =
+      '<div class="embed-responsive embed-responsive-16by9">' +
+      '<iframe class="embed-responsive-item" id="vimeoplayer" ' +
+      'width="500" height="281" src="//player.vimeo.com/video/';
+    const embedEnd = '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>';
     return embedStart + videoID + embedEnd;
   }
 
-  private video_embed(md:MarkdownIt.MarkdownIt) {
+  private video_embed(md: MarkdownIt.MarkdownIt) {
     function video_return(state) {
+      // tslint:disable
       var code,
           serviceEnd,
           serviceStart,
@@ -172,10 +181,10 @@ export class Render {
           start,
           oldPos = state.pos,
           max = state.posMax;
+      // tslint:enable
 
       // When we add more services, (youtube) might be (youtube|vimeo|vine), for example
-      var EMBED_REGEX = /@\[(youtube|vimeo)\]\([\s]*(.*?)[\s]*[\)]/im;
-
+      const EMBED_REGEX = /@\[(youtube|vimeo)\]\([\s]*(.*?)[\s]*[\)]/im;
 
       if (state.src.charCodeAt(state.pos) !== 0x40/* @ */) {
         return false;
@@ -184,22 +193,22 @@ export class Render {
         return false;
       }
 
-      var match = EMBED_REGEX.exec(state.src);
+      const match = EMBED_REGEX.exec(state.src);
 
-      if(!match){
+      if (!match) {
         return false;
       }
 
-      if (match.length < 3){
+      if (match.length < 3) {
         return false;
       }
 
-
-      var service = match[1];
+      const service = match[1];
+      // tslint:disable-next-line
       var videoID = match[2];
-      if (service.toLowerCase() == "youtube") {
+      if (service.toLowerCase() === "youtube") {
         videoID = this.youtube_parser(videoID);
-      } else if (service.toLowerCase() == "vimeo") {
+      } else if (service.toLowerCase() === "vimeo") {
         videoID = this.vimeo_parser(videoID);
       }
 
@@ -218,11 +227,11 @@ export class Render {
       state.pos = serviceStart;
       state.posMax = serviceEnd;
       state.service = state.src.slice(serviceStart, serviceEnd);
-      var newState = new state.md.inline.State(
+      const newState = new state.md.inline.State(
         service,
         state.md,
         state.env,
-        tokens = []
+        tokens = [],
       );
       newState.md.inline.tokenize(newState);
 
@@ -242,23 +251,24 @@ export class Render {
   // Youtube (and non-tested Vimeo)
 
   // The youtube_parser is from http://stackoverflow.com/a/8260383
-  private youtube_parser(url){
-    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
-    var match = url.match(regExp);
-    if (match&&match[7].length==11){
+  private youtube_parser(url) {
+    const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+    const match = url.match(regExp);
+    if (match && match[7].length === 11) {
       return match[7];
-    } else{
+    } else {
       return url;
     }
   }
 
   // The vimeo_parser is from http://stackoverflow.com/a/13286930
-  private vimeo_parser(url){
-    var regExp = /https?:\/\/(?:www\.|player\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/([^\/]*)\/videos\/|album\/(\d+)\/video\/|)(\d+)(?:$|\/|\?)/;
-    var match = url.match(regExp);
-    if (match){
+  private vimeo_parser(url) {
+    // tslint:disable-line:max-line-length
+    const regExp = /https?:\/\/(?:www\.|player\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/([^\/]*)\/videos\/|album\/(\d+)\/video\/|)(\d+)(?:$|\/|\?)/;
+    const match = url.match(regExp);
+    if (match) {
       return match[3];
-    } else{
+    } else {
       return url;
     }
   }
@@ -272,8 +282,8 @@ export class Render {
   private ddmmyyyy(timestamp: number): string {
     // http://stackoverflow.com/a/3552493
     // https://docs.angularjs.org/api/ng/filter/date
-    let date = new Date(timestamp);
-    return date.getDate() + '.' + (1 + date.getMonth()) + '.' + date.getFullYear();
-  };
+    const date = new Date(timestamp);
+    return date.getDate() + "." + (1 + date.getMonth()) + "." + date.getFullYear();
+  }
 
 }

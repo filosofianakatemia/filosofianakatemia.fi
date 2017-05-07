@@ -1,16 +1,15 @@
-@import 'constants';
-
 /////////////////////////
-// Foundation
+// Dependencies
 
+@import 'normalize';
 @import 'foundation';
-
-// Other overrides to foundation files
-@import 'foundation-overrides';
+@import 'swiper';
 
 /////////////////////////
 // Site files
 
+@import 'constants';
+@import 'foundation-overrides';
 @import 'icons';
 @import 'common';
 @import 'navigation';
@@ -19,4 +18,3 @@
 @import 'people';
 @import 'footer';
 @import 'blog';
-

@@ -1,5 +1,12 @@
+import { ArraySlice, getSliceOfArrayWithRemaining, Info, Utils } from "extendedmind-siteutils";
 import * as Router from "koa-router";
-import { Info, Utils } from "extendedmind-siteutils";
+
+interface BlogContext {
+  blogs: any;
+  firstPage?: boolean;
+  lastPage?: boolean;
+  nextPageNumber?: number;
+}
 
 export class Routing {
   private router = new Router();
@@ -7,39 +14,38 @@ export class Routing {
   constructor(private backendClient: Utils,
               private backendInfo: Info) {
     // SETUP router
-    this.router.get('/', this.index);
-    /*    this.router.get('/palvelut', this.palvelut);
-    this.router.get('/palvelut/sisaisen-motivaation-johtaminen', this.sisaisenMotivaationJohtaminen);
-    this.router.get('/palvelut/mielensavalottajat', this.mielensavalottajat);
-    this.router.get('/palvelut/ajattelunhallinta', this.ajattelunhallinta);
-    this.router.get('/ihmiset', this.ihmiset);
-    this.router.get('/tutkimus', this.tutkimus);
-    this.router.get('/blogi', this.blogi);
-    this.router.get('/blogi/:path', this.blogiTeksti);
-    this.router.get('/blogi/sivu/:number', this.blogiSivu);
-    this.router.get('/blogi/lukutila/sivu/:number', this.blogiLukutila);
-    this.router.get('/esikatselu/:ownerUUID/:itemUUID/:code', this.esikatselu;
-    this.router.get('/ihmiset/emilia', this.emilia));
-    this.router.get('/ihmiset/frank', this.frank);
-    this.router.get('/ihmiset/iida', this.iida);
-    this.router.get('/ihmiset/joonas', this.joonas);
-    this.router.get('/ihmiset/jp', this.jp);
-    this.router.get('/ihmiset/karoliina', this.karoliina);
-    this.router.get('/ihmiset/lauri', this.lauri);
-    this.router.get('/ihmiset/maija', this.maija);
-    this.router.get('/ihmiset/maria', this.maria);
-    this.router.get('/ihmiset/miia', this.miia);
-    this.router.get('/ihmiset/peter', this.peter);
-    this.router.get('/ihmiset/reima', this.reima);
-    this.router.get('/ihmiset/sami', this.sami);
-    this.router.get('/ihmiset/selina', this.selina);
-    this.router.get('/ihmiset/tapani', this.tapani);
-    this.router.get('/ihmiset/timo', this.timo);
-    this.router.get('/ihmiset/tuukka', this.tuukka);
-    this.router.get('/ihmiset/tytti', this.tytti);
-    this.router.get('/ihmiset/villiam', this.villiam);
-    this.router.get('/robots.txt', this.robots);
-    this.router.get('/kyselyt/motivoivin-esimies', this.motivoivinEsimies);*/
+    this.router.get("/", this.index);
+    this.router.get("/palvelut", this.palvelut);
+    this.router.get("/palvelut/sisaisen-motivaation-johtaminen", this.sisaisenMotivaationJohtaminen);
+    this.router.get("/palvelut/ajattelunhallinta", this.ajattelunhallinta);
+    this.router.get("/ihmiset", this.ihmiset);
+    this.router.get("/tutkimus", this.tutkimus);
+    this.router.get("/kyselyt/motivoivin-esimies", this.motivoivinEsimies);
+    /*this.router.get("/blogi", this.blogi);
+    this.router.get("/blogi/:path", this.blogiTeksti);
+    this.router.get("/blogi/sivu/:number", this.blogiSivu);
+    this.router.get("/blogi/lukutila/sivu/:number", this.blogiLukutila);
+    this.router.get("/esikatselu/:ownerUUID/:itemUUID/:code", this.esikatselu;
+    this.router.get("/ihmiset/emilia", this.emilia));
+    this.router.get("/ihmiset/frank", this.frank);
+    this.router.get("/ihmiset/iida", this.iida);
+    this.router.get("/ihmiset/joonas", this.joonas);
+    this.router.get("/ihmiset/jp", this.jp);
+    this.router.get("/ihmiset/karoliina", this.karoliina);
+    this.router.get("/ihmiset/lauri", this.lauri);
+    this.router.get("/ihmiset/maija", this.maija);
+    this.router.get("/ihmiset/maria", this.maria);
+    this.router.get("/ihmiset/miia", this.miia);
+    this.router.get("/ihmiset/peter", this.peter);
+    this.router.get("/ihmiset/reima", this.reima);
+    this.router.get("/ihmiset/sami", this.sami);
+    this.router.get("/ihmiset/selina", this.selina);
+    this.router.get("/ihmiset/tapani", this.tapani);
+    this.router.get("/ihmiset/timo", this.timo);
+    this.router.get("/ihmiset/tuukka", this.tuukka);
+    this.router.get("/ihmiset/tytti", this.tytti);
+    this.router.get("/ihmiset/villiam", this.villiam);
+    this.router.get("/robots.txt", this.robots);*/
   }
 
   // PUBLIC
@@ -49,40 +55,130 @@ export class Routing {
   }
 
   public getHelperMethods(): Array<[string, any]> {
-
-    function filterBlogsFromPublicItems(faPublicItems: any): any{
-      return faPublicItems.getNotes([{type: "keyword", include: "blogi"}]);
-    }
-
     return [
-      ["getSliceOfArrayWithRemaining", function(array, queryParamRemaining): any {
-        const HEADERS_PER_PAGE: number = 10;
-        // How many items were indicated as being not shown previously. If first query, everything is remaining
-        const previousRemaining: number = queryParamRemaining === undefined ? array.length : queryParamRemaining;
-        // Because new headers might be added to the top of the array, we use remaining to count the index from
-        // the end.
-        const firstHeaderIndex = array.length - previousRemaining;
-        const arraySlice = array.slice(firstHeaderIndex, firstHeaderIndex + HEADERS_PER_PAGE);
-        const remaining: number = array.length - (firstHeaderIndex + HEADERS_PER_PAGE) < 0
-          ? 0 : array.length - (firstHeaderIndex + HEADERS_PER_PAGE);
-        return {
-          arraySlice: arraySlice,
-          remaining: remaining,
-        };
-      }],
-      ["getUnrenderedBlogs", async function(ctx: Router.IRouterContext): Promise<any> {
-        let faPublicItems = await ctx.state.backendClient.getPublicItems('filosofian-akatemia');
-        return filterBlogsFromPublicItems(faPublicItems);
-      }]
+      ["getSliceOfArrayWithRemaining", getSliceOfArrayWithRemaining],
+      /*["getUnrenderedBlogs", this.getUnrenderedBlogs],
+      ["filterBlogsFromPublicItems", this.filterBlogsFromPublicItems],
+      ["generateBlogsContext", this.generateBlogsContext],
+      ["generateBlogPost", this.generateBlogPost]*/
     ];
-  };
+  }
 
   // ROUTES
 
   private index(ctx: Router.IRouterContext): void {
-    console.log('GET /');
-    ctx.body = ctx.state.render.template('pages/etusivu');
+    console.info("GET /");
+    ctx.body = ctx.state.render.template("pages/etusivu");
   }
+  private palvelut(ctx: Router.IRouterContext): void {
+    console.info("GET /palvelut");
+    ctx.body = ctx.state.render.template("pages/palvelut");
+  }
+  private sisaisenMotivaationJohtaminen(ctx: Router.IRouterContext): void {
+    console.info("GET /palvelut/sisaisen-motivaation-johtaminen");
+    ctx.body = ctx.state.render.template("pages/sisaisenmotivaationjohtaminen");
+  }
+  private ajattelunhallinta(ctx: Router.IRouterContext): void {
+    console.info("GET /palvelut/ajattelunhallinta");
+    ctx.body = ctx.state.render.template("pages/ajattelunhallinta");
+  }
+  private ihmiset(ctx: Router.IRouterContext): void {
+    console.info("GET /palvelut/ihmiset");
+    ctx.body = ctx.state.render.template("pages/ihmiset");
+  }
+  private tutkimus(ctx: Router.IRouterContext): void {
+    console.info("GET /palvelut/tutkimus");
+    ctx.body = ctx.state.render.template("pages/tutkimus");
+  }
+  private motivoivinEsimies(ctx: Router.IRouterContext): void {
+    console.info("GET /kyselyt/motivoivin-esimies");
+    const questionnaire1Url = "https://filosofianakatemia.typeform.com/to/ooHe2y";
+    const questionnaire2Url = "https://filosofianakatemia.typeform.com/to/bYzgd1";
+    if (Math.random() >= 0.5) {
+      ctx.redirect(questionnaire1Url);
+    } else {
+      ctx.redirect(questionnaire2Url);
+    }
+  }
+    /*
+  private async blogi(ctx: Router.IRouterContext, next: () => Promise<any>): Promise<any> {
+    console.info("GET /blogi");
+    const context = await ctx.state.generateBlogsContext();
+    if (context) {
+      ctx.body = ctx.state.render.template("pages/blogi", context);
+    }
+  }
+
+  // HELPER METHODS
+
+  private async generateBlogsContext(ctx: Router.IRouterContext, next: () => Promise<any>): Promise<any> {
+    const unrenderedBlogs = await ctx.state.getUnrenderedBlogs(ctx);
+    const renderedBlogs = ctx.state.generateBlogs(ctx, unrenderedBlogs.slice(0, 5));
+    const context: BlogContext = {
+      blogs: renderedBlogs,
+      firstPage: true
+    };
+    if (unrenderedBlogs.length <= 5) {
+      context.lastPage = true;
+    } else {
+      context.nextPageNumber = 2;
+    }
+    return context;
+  }
+
+  private async getUnrenderedBlogs(ctx: Router.IRouterContext) {
+    const faPublicItems = await ctx.state.backendClient.getPublicItems("filosofian-akatemia");
+    return ctx.state.filterBlogsFromPublicItems(faPublicItems);
+  }
+
+  private generateBlogs(ctx: Router.IRouterContext, unrenderedBlogs: any): any {
+    const blogs = [];
+    for (const unrenderedBlog of unrenderedBlogs) {
+      blogs.push(ctx.state.generateBlogPost(ctx, unrenderedBlog));
+    }
+    return blogs;
+  }
+
+  private filterBlogsFromPublicItems(ctx: Router.IRouterContext, faPublicItems: any): any {
+    return faPublicItems.getNotes([{type: "keyword", include: "blogi"}]);
+  }
+
+  private generateBlogPost(ctx: Router.IRouterContext, publicNote) {
+    const blog = {safeTitle: publicNote.title, title: publicNote.title.replace(/&shy;/g,"")};
+    const noteHtml = markdownParser.render(publicNote.content);
+    const extractResult = extractLeadAndPictureAndContentFromHtml(noteHtml);
+    blog.content = extractResult.content;
+    if ((blog.content.match(/<p>/g) || []).length < 4) {
+      blog.lessThanFourParagraphs = true;
+    }
+    blog.lead = extractResult.lead;
+
+    if (extractResult.pictureData) {
+      blog.pictureData = extractResult.pictureData;
+    }
+
+    if (publicNote.keywords && publicNote.keywords.length) {
+      for (keyword of publicNote.keywords.length) {
+        if (isAuthorTag(keyword)) {
+          blog.author = {
+            id: keyword.title,
+            name: getAuthorName(keyword)
+          };
+          if (!blog.pictureData) {
+            // Get the picture of the author, when the blog post has no picture set.
+            blog.pictureData = {
+              source: getAuthorPicturePath(keyword)
+            }
+          }
+          break;
+        }
+      }
+    }
+    blog.published = publicNote.visibility.published;
+    blog.path = publicNote.visibility.path;
+    return blog;
+  }
+  */
 
     /*
 
