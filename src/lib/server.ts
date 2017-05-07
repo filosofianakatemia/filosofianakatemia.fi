@@ -1,11 +1,11 @@
+import { Info, Utils } from "extendedmind-siteutils";
 import * as Koa from "koa";
 import * as logger from "koa-logger";
-import * as serve from "koa-static";
 import * as Router from "koa-router";
+import * as serve from "koa-static";
 import * as path from "path";
 import { Render } from "./rendering";
 import { Routing } from "./routing";
-import { Utils, Info } from "extendedmind-siteutils";
 
 export interface Config {
   version: string;
@@ -48,7 +48,7 @@ export class Server {
       throw new Error("FATAL: config.backend must be set to either true or specific address");
     }
     const utilsConfig = config.syncTimeTreshold !== undefined ?
-      {"syncTimeTreshold": config.syncTimeTreshold} : undefined;
+      {syncTimeTreshold: config.syncTimeTreshold} : undefined;
     this.utils = new Utils(this.backendApiAddress, utilsConfig);
   }
 
@@ -57,24 +57,23 @@ export class Server {
       this.app.use(logger());
     }
     if (!this.externalStatic) {
-      console.log("SERVING public");
       this.app.use(serve("./public"));
     }
 
     // get backend /info path from backend on boot
 
     let requestInProgress;
-    let backendPollInterval = setInterval(() => {
+    const backendPollInterval = setInterval(() => {
       if (!requestInProgress) {
         requestInProgress = true;
         console.info("GET " + this.backendApiAddress + "/v2/info");
         const thisServer = this;
-        this.utils.getInfo().then(function(backendInfo){
+        this.utils.getInfo().then( (backendInfo) => {
             requestInProgress = false;
             clearInterval(backendPollInterval);
             thisServer.startListening(backendInfo);
           },
-          function(error){
+          (error) => {
             requestInProgress = false;
             console.info("backend returned status code: " + (error ? error.code : "unknown") + ", retrying...");
           });
@@ -82,7 +81,7 @@ export class Server {
     }, 2000);
   }
 
-  private startListening(backendInfo: Info){
+  private startListening(backendInfo: Info) {
 
     console.info("backend info:");
     console.info(JSON.stringify(backendInfo, null, 2));
@@ -101,7 +100,7 @@ export class Server {
       ctx.state.render = render;
       ctx.state.urlOrigin = this.urlOrigin;
       ctx.state.debug = this.debug;
-      routing.getHelperMethods().forEach(helperInfo => {
+      routing.getHelperMethods().forEach( (helperInfo) => {
         ctx.state[helperInfo[0]] = helperInfo[1];
       });
       return next();

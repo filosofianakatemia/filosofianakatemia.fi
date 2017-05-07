@@ -20,8 +20,8 @@ export class Routing {
     this.router.get("/ihmiset", this.ihmiset);
     this.router.get("/tutkimus", this.tutkimus);
     this.router.get("/kyselyt/motivoivin-esimies", this.motivoivinEsimies);
-    /*this.router.get("/blogi", this.blogi);
-    this.router.get("/blogi/:path", this.blogiTeksti);
+    this.router.get("/blogi", this.blogi);
+    /*this.router.get("/blogi/:path", this.blogiTeksti);
     this.router.get("/blogi/sivu/:number", this.blogiSivu);
     this.router.get("/blogi/lukutila/sivu/:number", this.blogiLukutila);
     this.router.get("/esikatselu/:ownerUUID/:itemUUID/:code", this.esikatselu;
@@ -58,7 +58,6 @@ export class Routing {
       ["getSliceOfArrayWithRemaining", (array, queryParamRemaining) => {
         return getSliceOfArrayWithRemaining(this.POSTS_PER_PAGE, array, queryParamRemaining);
       }],
-      ["generateBlogsContext", this.generateBlogsContext],
     ];
   }
 
@@ -103,20 +102,18 @@ export class Routing {
     console.info("GET /blogi");
     const faPublicItems = await ctx.state.backendClient.getPublicItems("filosofian-akatemia");
     const faBlogs = faPublicItems.getNotes([{type: "keyword", include: "blogi"}]);
-    const blogsContext = await ctx.state.generateBlogsContext(faBlogs);
-    if (blogsContext) {
-      ctx.body = ctx.state.render.template("pages/blogi", blogsContext);
-    }
+    const arrayInfo = ctx.state.getSliceOfArrayWithRemaining(faBlogs, ctx.query.remaining);
+    const blogsContext = arrayInfo.arraySlice.map( (faBlogNote) => {
+      return ctx.state.render.processBlogPost(faBlogNote);
+    });
+    const renderContext: any = {
+      blogs: blogsContext,
+      remaining: arrayInfo.remaining,
+    };
+    ctx.body = ctx.state.render.template("pages/blogi", renderContext);
   }
 
   // HELPER METHODS
-
-  private generateBlogsContext(faBlogs: any): BlogContext {
-    const context: BlogContext = {
-      blogs: undefined,
-    };
-    return context;
-  }
 
     /*
 

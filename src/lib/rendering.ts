@@ -1,5 +1,5 @@
 import * as excerpt from "excerpt-html";
-import { jsdom } from "jsdom";
+import * as jsdom from "jsdom";
 import * as MarkdownIt from "markdown-it";
 import * as MarkdownItContainer from "markdown-it-container";
 import * as MarkdownItLinks from "markdown-it-link-attributes";
@@ -29,6 +29,7 @@ export class Render {
   private nunjucksEnvironment: nunjucks.Environment;
   private contentMarkdownParser: MarkdownIt.MarkdownIt;
   private people: People;
+  private JSDOM: any;
 
   constructor(private extension: string, viewsDirectory: string, version: string,
               debug: boolean, urlOrigin: string) {
@@ -37,6 +38,7 @@ export class Render {
         viewsDirectory, version, debug, urlOrigin);
     this.contentMarkdownParser = this.initializeFullMarkdown();
     this.people = new People(version);
+    this.JSDOM = jsdom.JSDOM;
   }
 
   // PUBLIC INTERFACE
@@ -71,7 +73,7 @@ export class Render {
     }
 
     if (publicNote.keywords && publicNote.keywords.length) {
-      for (const keyword of publicNote.keywords.length) {
+      for (const keyword of publicNote.keywords) {
         if (this.people.isAuthorTag(keyword)) {
           blog.author = {
             id: keyword.title,
@@ -97,7 +99,7 @@ export class Render {
   private extractLeadAndPictureAndContentFromHtml(htmlText: string): ContentExtract {
     const extractedHTML: ContentExtract = {};
     // Create DOM from HTML string.
-    const contentDocument = jsdom(htmlText);
+    const contentDocument = new this.JSDOM(htmlText).window.document;
     const bodyElement = contentDocument.getElementsByTagName("body")[0];
     const firstChildElement = bodyElement.firstElementChild;
     // Elements are wrapped into paragraphs (<p> tags), check the content of the first child node.
