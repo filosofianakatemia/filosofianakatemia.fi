@@ -4,7 +4,7 @@ import * as MarkdownIt from "markdown-it";
 import * as MarkdownItContainer from "markdown-it-container";
 import * as MarkdownItLinks from "markdown-it-link-attributes";
 import * as nunjucks from "nunjucks";
-import { getAuthorName, getAuthorPicturePath, isAuthorTag } from "./people";
+import { People, Person } from "./people";
 
 interface ContentExtract {
   content?: string;
@@ -28,6 +28,7 @@ interface BlogPost {
 export class Render {
   private nunjucksEnvironment: nunjucks.Environment;
   private contentMarkdownParser: MarkdownIt.MarkdownIt;
+  private people: People;
 
   constructor(private extension: string, viewsDirectory: string, version: string,
               debug: boolean, urlOrigin: string) {
@@ -35,6 +36,7 @@ export class Render {
       this.initializeNunjucs(
         viewsDirectory, version, debug, urlOrigin);
     this.contentMarkdownParser = this.initializeFullMarkdown();
+    this.people = new People(version);
   }
 
   // PUBLIC INTERFACE
@@ -69,15 +71,15 @@ export class Render {
 
     if (publicNote.keywords && publicNote.keywords.length) {
       for (const keyword of publicNote.keywords.length) {
-        if (isAuthorTag(keyword)) {
+        if (this.people.isAuthorTag(keyword)) {
           blog.author = {
             id: keyword.title,
-            name: getAuthorName(keyword),
+            name: this.people.getAuthorName(keyword),
           };
           if (!blog.pictureData) {
             // Get the picture of the author, when the blog post has no picture set.
             blog.pictureData = {
-              source: getAuthorPicturePath(keyword),
+              source: this.people.getAuthorPicturePath(keyword),
             };
           }
           break;
