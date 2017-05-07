@@ -10,6 +10,7 @@ interface BlogContext {
 
 export class Routing {
   private router = new Router();
+  private POSTS_PER_PAGE: number = 7;
 
   constructor(private backendClient: Utils,
               private backendInfo: Info) {
@@ -56,7 +57,9 @@ export class Routing {
 
   public getHelperMethods(): Array<[string, any]> {
     return [
-      ["getSliceOfArrayWithRemaining", getSliceOfArrayWithRemaining],
+      ["getSliceOfArrayWithRemaining", (array, queryParamRemaining) => {
+        return getSliceOfArrayWithRemaining(this.POSTS_PER_PAGE, array, queryParamRemaining);
+      }],
       /*["getUnrenderedBlogs", this.getUnrenderedBlogs],
       ["filterBlogsFromPublicItems", this.filterBlogsFromPublicItems],
       ["generateBlogsContext", this.generateBlogsContext],

@@ -5,6 +5,7 @@
   "private": true,
   "main": "dist/index.js",
   "dependencies": {
+    "@types/jsdom": "^2.0.30",
     "@types/koa": "^2.0.33",
     "@types/koa-logger": "^2.0.1",
     "@types/koa-router": "^7.0.21",
@@ -12,8 +13,9 @@
     "@types/nunjucks": "0.0.32",
     "clipboard": "^1.5.15",
     "excerpt-html": "^1.2.0",
-    "extendedmind-siteutils": "file:///Users/ttiurani/devel/em/extendedmind-siteutils",
+    "extendedmind-siteutils": "^2.0.9",
     "jquery": "^3.1.1",
+    "jsdom": "^10.1.0",
     "koa": "^2.0.0",
     "koa-logger": "^2.0.0",
     "koa-router": "^7.0.1",

@@ -1,8 +1,29 @@
 import * as excerpt from "excerpt-html";
+import { jsdom } from "jsdom";
 import * as MarkdownIt from "markdown-it";
 import * as MarkdownItContainer from "markdown-it-container";
 import * as MarkdownItLinks from "markdown-it-link-attributes";
 import * as nunjucks from "nunjucks";
+import { getAuthorName, getAuthorPicturePath, isAuthorTag } from "./people";
+
+interface ContentExtract {
+  content?: string;
+  pictureData?: any;
+  lead?: string;
+  source?: string;
+}
+
+interface BlogPost {
+  safeTitle: string;
+  title: string;
+  content?: string;
+  lessThanFourParagraphs: boolean;
+  lead?: string;
+  author?: any;
+  pictureData?: any;
+  published?: string;
+  path?: string;
+}
 
 export class Render {
   private nunjucksEnvironment: nunjucks.Environment;
@@ -27,32 +48,83 @@ export class Render {
   public markdown(content: string): string {
     return this.contentMarkdownParser.render(content);
   }
+
   // Process entire note into a usable object
-  public processNote(note: any): any {
-    const processedNote: any = {
-      uuid: note.uuid,
-      modified: note.modified,
-      title: note.title,
+  public processBlogPost(publicNote: any): BlogPost {
+    const blog: BlogPost = {
+      safeTitle: publicNote.title as string, title: publicNote.title.replace(/&shy;/g, "") as string,
+      lessThanFourParagraphs: false,
     };
-    if (note.content) {
-      processedNote.content = this.contentMarkdownParser.render(note.content);
-      processedNote.excerpt = excerpt(processedNote.content);
+    const noteHtml = this.contentMarkdownParser.render(publicNote.content);
+    const extractResult = this.extractLeadAndPictureAndContentFromHtml(noteHtml);
+    blog.content = extractResult.content;
+    if ((blog.content.match(/<p>/g) || []).length < 4) {
+      blog.lessThanFourParagraphs = true;
     }
-    if (note.keywords) {
-      processedNote.keywords = note.keywords;
+    blog.lead = extractResult.lead;
+
+    if (extractResult.pictureData) {
+      blog.pictureData = extractResult.pictureData;
     }
-    if (note.assignee) {
-      processedNote.assignee = note.assignee;
+
+    if (publicNote.keywords && publicNote.keywords.length) {
+      for (const keyword of publicNote.keywords.length) {
+        if (isAuthorTag(keyword)) {
+          blog.author = {
+            id: keyword.title,
+            name: getAuthorName(keyword),
+          };
+          if (!blog.pictureData) {
+            // Get the picture of the author, when the blog post has no picture set.
+            blog.pictureData = {
+              source: getAuthorPicturePath(keyword),
+            };
+          }
+          break;
+        }
+      }
     }
-    if (note.ui) {
-      processedNote.ui = note.ui;
+    blog.published = publicNote.visibility.published;
+    blog.path = publicNote.visibility.path;
+    return blog;
+  }
+
+  // HELPERS
+
+  private extractLeadAndPictureAndContentFromHtml(htmlText: string): ContentExtract {
+    const extractedHTML: ContentExtract = {};
+    // Create DOM from HTML string.
+    const contentDocument = jsdom(htmlText);
+    const bodyElement = contentDocument.getElementsByTagName("body")[0];
+    const firstChildElement = bodyElement.firstElementChild;
+    // Elements are wrapped into paragraphs (<p> tags), check the content of the first child node.
+    const firstGrandChildElement = firstChildElement.firstElementChild;
+
+    if (firstGrandChildElement && firstGrandChildElement.nodeName === "IMG") {
+      // First child node contains a picture.
+      extractedHTML.pictureData = {
+        picture: firstChildElement.innerHTML,
+        // tslint:disable-next-line
+        source: firstGrandChildElement["src"],
+      };
+      // tslint:disable-next-line
+      if (firstGrandChildElement["title"]) {
+        // Get the caption stored into the title attribute of the element.
+        // tslint:disable-next-line
+        extractedHTML.pictureData.caption = firstGrandChildElement["title"];
+      }
+      const secondChildElement = bodyElement.children[1];  // Get the second child element.
+      extractedHTML.lead = secondChildElement.innerHTML;
+
+      bodyElement.removeChild(firstChildElement);
+      bodyElement.removeChild(secondChildElement);
+    } else {
+      bodyElement.removeChild(firstChildElement);
+      extractedHTML.lead = firstChildElement.innerHTML;
     }
-    if (note.visibility) {
-      if (note.visibility.path) processedNote.path = note.visibility.path;
-      if (note.visibility.published) processedNote.published = note.visibility.published;
-      if (note.visibility.shortId) processedNote.shortId = note.visibility.shortId;
-    }
-    return processedNote;
+    extractedHTML.content = bodyElement.innerHTML;
+
+    return extractedHTML;
   }
 
   // NUNJUCKS
