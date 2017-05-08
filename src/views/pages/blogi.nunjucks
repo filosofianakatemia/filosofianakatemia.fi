@@ -32,19 +32,25 @@
 {% endblock %}
 
 {% block main %}
+
 <div class="row">
+  {% if remaining > 0 %}
+  <div class="infinite-container">
+  {% endif %}
+
   {% for blog in blogs %}
     {% set listView = true %}
     {% include 'partials/blogpost.nunjucks' %}
   {% endfor %}
+
+  {% if remaining > 0 %}
+  </div>
+  <div class="row">
+    <a class="infinite-more-link small-12 columns text-center" href="?remaining={{ remaining }}">lisää</a>
+  </div>
+  {% endif %}
 </div>
-{% import 'partials/newsletter.nunjucks' as newsletter %}
-{{ newsletter.initialize() }}
-{% if firstPage %}
-<div class="section row wrapper-embedded show-for-large-up">
-{% include 'partials/social.nunjucks' %}
-</div>
-{% endif %}
+
 {% endblock %}
 
 {% block footer %}
@@ -63,5 +69,8 @@
 {% endblock %}
 
 {% block scripts %}
-{% include 'partials/mailchimp.nunjucks' %}
+{% if remaining > 0 %}
+{{ super() }}
+{% include 'partials/infinite.nunjucks' %}
+{% endif %}
 {% endblock %}

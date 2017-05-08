@@ -208,7 +208,8 @@ export class Render {
   }
 
   private tokenize_video(md) {
-    function tokenize_return(tokens, idx, options, env, self) {
+    const self = this;
+    function tokenize_return(tokens, idx, options, env) {
       const videoID = md.utils.escapeHtml(tokens[idx].videoID);
       const service = md.utils.escapeHtml(tokens[idx].service);
       if (videoID === "") {
@@ -216,9 +217,9 @@ export class Render {
       }
 
       if (service.toLowerCase() === "youtube") {
-        return this.tokenize_youtube(videoID);
+        return self.tokenize_youtube(videoID);
       } else if (service.toLowerCase() === "vimeo") {
-          return this.tokenize_vimeo(videoID);
+        return self.tokenize_vimeo(videoID);
       } else {
         return("");
       }
@@ -245,6 +246,7 @@ export class Render {
   }
 
   private video_embed(md: MarkdownIt.MarkdownIt) {
+    const self = this;
     function video_return(state) {
       // tslint:disable
       var code,
@@ -284,9 +286,9 @@ export class Render {
       // tslint:disable-next-line
       var videoID = match[2];
       if (service.toLowerCase() === "youtube") {
-        videoID = this.youtube_parser(videoID);
+        videoID = self.youtube_parser(videoID);
       } else if (service.toLowerCase() === "vimeo") {
-        videoID = this.vimeo_parser(videoID);
+        videoID = self.vimeo_parser(videoID);
       }
 
       // If the videoID field is empty, regex currently make it the close parenthesis.

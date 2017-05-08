@@ -102,6 +102,9 @@ export class Routing {
     console.info("GET /blogi");
     const faPublicItems = await ctx.state.backendClient.getPublicItems("filosofian-akatemia");
     const faBlogs = faPublicItems.getNotes([{type: "keyword", include: "blogi"}]);
+
+    const firstFetch: boolean = ctx.query.remaining === undefined;
+
     const arrayInfo = ctx.state.getSliceOfArrayWithRemaining(faBlogs, ctx.query.remaining);
     const blogsContext = arrayInfo.arraySlice.map( (faBlogNote) => {
       return ctx.state.render.processBlogPost(faBlogNote);
@@ -109,6 +112,7 @@ export class Routing {
     const renderContext: any = {
       blogs: blogsContext,
       remaining: arrayInfo.remaining,
+      firstFetch,
     };
     ctx.body = ctx.state.render.template("pages/blogi", renderContext);
   }

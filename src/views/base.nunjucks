@@ -82,7 +82,9 @@
   <script type='text/javascript' src='/static/{{ version }}/js/app.js'></script>
   <script>
     Foundation.global.namespace = '';
-    $(document).foundation();
+    $(document).on('ready page:load', function () {
+      $(function(){ $(document).foundation(); });
+    });
   </script>
 
   <script>
