@@ -21,8 +21,8 @@ export class Routing {
     this.router.get("/tutkimus", this.tutkimus);
     this.router.get("/kyselyt/motivoivin-esimies", this.motivoivinEsimies);
     this.router.get("/blogi", this.blogi);
-    /*this.router.get("/blogi/:path", this.blogiTeksti);
-    this.router.get("/blogi/sivu/:number", this.blogiSivu);
+    this.router.get("/blogi/:blogPath", this.blogiTeksti);
+    /*this.router.get("/blogi/sivu/:number", this.blogiSivu);
     this.router.get("/blogi/lukutila/sivu/:number", this.blogiLukutila);
     this.router.get("/esikatselu/:ownerUUID/:itemUUID/:code", this.esikatselu;
     this.router.get("/ihmiset/emilia", this.emilia));
@@ -64,31 +64,31 @@ export class Routing {
   // ROUTES
 
   private index(ctx: Router.IRouterContext): void {
-    console.info("GET /");
+    console.info("GET ", ctx.path);
     ctx.body = ctx.state.render.template("pages/etusivu");
   }
   private palvelut(ctx: Router.IRouterContext): void {
-    console.info("GET /palvelut");
+    console.info("GET ", ctx.path);
     ctx.body = ctx.state.render.template("pages/palvelut");
   }
   private sisaisenMotivaationJohtaminen(ctx: Router.IRouterContext): void {
-    console.info("GET /palvelut/sisaisen-motivaation-johtaminen");
+    console.info("GET ", ctx.path);
     ctx.body = ctx.state.render.template("pages/sisaisenmotivaationjohtaminen");
   }
   private ajattelunhallinta(ctx: Router.IRouterContext): void {
-    console.info("GET /palvelut/ajattelunhallinta");
+    console.info("GET ", ctx.path);
     ctx.body = ctx.state.render.template("pages/ajattelunhallinta");
   }
   private ihmiset(ctx: Router.IRouterContext): void {
-    console.info("GET /palvelut/ihmiset");
+    console.info("GET ", ctx.path);
     ctx.body = ctx.state.render.template("pages/ihmiset");
   }
   private tutkimus(ctx: Router.IRouterContext): void {
-    console.info("GET /palvelut/tutkimus");
+    console.info("GET ", ctx.path);
     ctx.body = ctx.state.render.template("pages/tutkimus");
   }
   private motivoivinEsimies(ctx: Router.IRouterContext): void {
-    console.info("GET /kyselyt/motivoivin-esimies");
+    console.info("GET ", ctx.path);
     const questionnaire1Url = "https://filosofianakatemia.typeform.com/to/ooHe2y";
     const questionnaire2Url = "https://filosofianakatemia.typeform.com/to/bYzgd1";
     if (Math.random() >= 0.5) {
@@ -99,12 +99,9 @@ export class Routing {
   }
 
   private async blogi(ctx: Router.IRouterContext, next: () => Promise<any>): Promise<any> {
-    console.info("GET /blogi");
+    console.info("GET ", ctx.path);
     const faPublicItems = await ctx.state.backendClient.getPublicItems("filosofian-akatemia");
     const faBlogs = faPublicItems.getNotes([{type: "keyword", include: "blogi"}]);
-
-    const firstFetch: boolean = ctx.query.remaining === undefined;
-
     const arrayInfo = ctx.state.getSliceOfArrayWithRemaining(faBlogs, ctx.query.remaining);
     const blogsContext = arrayInfo.arraySlice.map( (faBlogNote) => {
       return ctx.state.render.processBlogPost(faBlogNote);
@@ -112,9 +109,21 @@ export class Routing {
     const renderContext: any = {
       blogs: blogsContext,
       remaining: arrayInfo.remaining,
-      firstFetch,
     };
     ctx.body = ctx.state.render.template("pages/blogi", renderContext);
+  }
+
+  private async blogiTeksti(ctx: Router.IRouterContext, next: () => Promise<any>) {
+    console.info("GET ", ctx.path);
+    const faPublicItems = await ctx.state.backendClient.getPublicItems("filosofian-akatemia");
+    const faBlogs = faPublicItems.getNotes([{type: "keyword", include: "blogi"}]);
+    const faBlogNote = faBlogs.find( (note) => {
+      return note.visibility && note.visibility.path === ctx.params.blogPath;
+    });
+    if (faBlogNote) {
+      ctx.body = ctx.state.render.template("pages/blogiteksti",
+          ctx.state.render.getBlogPostContext(faPublicItems, faBlogNote));
+    }
   }
 
   // HELPER METHODS

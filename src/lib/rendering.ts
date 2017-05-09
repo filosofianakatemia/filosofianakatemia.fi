@@ -94,6 +94,28 @@ export class Render {
     return blog;
   }
 
+  public getBlogPostContext(faPublicItems, blogPost) {
+    const blog = this.processBlogPost(blogPost);
+    for (const keyword of blogPost.keywords) {
+      if (this.people.isAuthorTag(keyword)) {
+        // Get the introduction of the author.
+        const personDescriptionPath = this.people.getAuthorDescriptionPath(keyword.title);
+        const personDescriptionNote = faPublicItems.getNote(personDescriptionPath);
+        if (personDescriptionNote) {
+          if (!blog.author) {
+            blog.author = {};
+          }
+          blog.author.description = this.contentMarkdownParser.render(personDescriptionNote.content);
+          blog.author.pictureSource = this.people.getAuthorThumbnailPath(keyword.title);
+        }
+        break;
+      }
+    }
+    return {
+      blog,
+    };
+  }
+
   // HELPERS
 
   private extractLeadAndPictureAndContentFromHtml(htmlText: string): ContentExtract {
