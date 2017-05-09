@@ -8,7 +8,7 @@ interface BlogContext {
 
 export class Routing {
   private router = new Router();
-  private POSTS_PER_PAGE: number = 7;
+  private POSTS_PER_PAGE: number = 5;
 
   constructor(private backendClient: Utils,
               private backendInfo: Info) {

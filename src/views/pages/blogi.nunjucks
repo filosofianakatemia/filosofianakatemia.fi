@@ -45,8 +45,11 @@
 
   {% if remaining > 0 %}
   </div>
+
   <div class="row">
-    <a class="infinite-more-link small-12 columns text-center" href="?remaining={{ remaining }}">lisää</a>
+    <div class="column posts-navigation">
+      <a class="posts-navigation-link infinite-more-link" href="?remaining={{ remaining }}">lataa lisää</a>
+    </div>
   </div>
   {% endif %}
 </div>

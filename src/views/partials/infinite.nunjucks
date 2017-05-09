@@ -2,7 +2,9 @@
 <script src="/static/{{ version }}/js/infinite.min.js"></script>
 <script>
 var infinite = new Waypoint.Infinite({
-  element: $('.infinite-container')[0],
-  offset: 2
+  element: $(".infinite-container")[0],
+  offset: function () {
+    return this.context.innerHeight() - this.adapter.outerHeight() + 200;
+  }
 });
 </script>
