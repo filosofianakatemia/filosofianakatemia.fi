@@ -39,11 +39,14 @@ export class Routing {
     this.router.get("/ihmiset/sami", this.sami);
     this.router.get("/ihmiset/selina", this.selina);
     this.router.get("/ihmiset/tapani", this.tapani);
+       */
     this.router.get("/ihmiset/timo", this.timo);
+    /*
     this.router.get("/ihmiset/tuukka", this.tuukka);
     this.router.get("/ihmiset/tytti", this.tytti);
     this.router.get("/ihmiset/villiam", this.villiam);
     this.router.get("/robots.txt", this.robots);*/
+
   }
 
   // PUBLIC
@@ -143,6 +146,19 @@ export class Routing {
         }
       }
     }
+  }
+
+  // People routes
+
+  private async timo(ctx: Router.IRouterContext, next: () => Promise<any>) {
+    console.info("GET ", ctx.path);
+    const faPublicItems = await ctx.state.backendClient.getPublicItems("filosofian-akatemia");
+    const personContext = {
+      personQuote: true,
+      personDescription: ctx.state.render.markdownWithImgVersion(
+          faPublicItems.getNote("timo-tiuraniemi").content),
+    };
+    ctx.body = ctx.state.render.template("pages/timo", personContext);
   }
 
   // HELPER METHODS

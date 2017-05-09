@@ -31,7 +31,7 @@ export class Render {
   private people: People;
   private JSDOM: any;
 
-  constructor(private extension: string, viewsDirectory: string, version: string,
+  constructor(private extension: string, viewsDirectory: string, private version: string,
               debug: boolean, urlOrigin: string) {
     this.nunjucksEnvironment =
       this.initializeNunjucs(
@@ -52,6 +52,12 @@ export class Render {
   // Simple markdown processor
   public markdown(content: string): string {
     return this.contentMarkdownParser.render(content);
+  }
+
+  // Cache-busted img mardowning
+  public markdownWithImgVersion(content: string): string {
+    const cacheBustedContent = content.split("/static/img/").join("/static/" + this.version + "/img/");
+    return this.contentMarkdownParser.render(cacheBustedContent);
   }
 
   // Process entire note into a usable object
