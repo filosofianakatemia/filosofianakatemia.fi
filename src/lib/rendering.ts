@@ -124,6 +124,15 @@ export class Render {
     };
   }
 
+  public getPersonContext(faPublicItems, personId) {
+    const personDescription = this.markdownWithImgVersion(
+        faPublicItems.getNote(this.people.getAuthorPagePath(personId)).content);
+    return {
+      personQuote: true,
+      personDescription,
+    };
+  }
+
   // HELPERS
 
   private extractLeadAndPictureAndContentFromHtml(htmlText: string): ContentExtract {

@@ -4,6 +4,7 @@ export interface PersonPictures {
 }
 
 export interface PersonPaths {
+  page: string;
   description: string;
 }
 
@@ -51,6 +52,14 @@ export class People {
     }
   }
 
+  public getAuthorPagePath(authorId: string): string {
+    for (const person of this.people) {
+      if (person.id === authorId) {
+        return person.paths.page;
+      }
+    }
+  }
+
   public getAuthorThumbnailPath(authorId: string): string {
     for (const person of this.people) {
       if (person.id === authorId) {
@@ -79,6 +88,7 @@ export class People {
           thumbnail: this.imagePathPrefix + "emilia-thumbnail.png",
         },
         paths: {
+          page: "emilia-lahti",
           description: "emilia-lahti-kuvaus",
         },
       },
@@ -90,6 +100,7 @@ export class People {
           thumbnail: this.imagePathPrefix + "frank-thumbnail.png",
         },
         paths: {
+          page: "frank-martela",
           description: "frank-martela-kuvaus",
         },
       },
@@ -101,6 +112,7 @@ export class People {
           thumbnail: this.imagePathPrefix + "iida-thumbnail.png",
         },
         paths: {
+          page: "iida-makikallio",
           description: "iida-makikallio-kuvaus",
         },
       },
@@ -112,6 +124,7 @@ export class People {
           thumbnail: this.imagePathPrefix + "joonas-thumbnail.png",
         },
         paths: {
+          page: "joonas-pesonen",
           description: "joonas-pesonen-kuvaus",
         },
       },
@@ -123,7 +136,8 @@ export class People {
           thumbnail: this.imagePathPrefix + "jp-thumbnail.png",
         },
         paths: {
-          description: "jp-salo-kuvaus",
+          page: "jukka-pekka-salo",
+          description: "jukka-pekka-salo-kuvaus",
         },
       },
       {
@@ -134,6 +148,7 @@ export class People {
           thumbnail: this.imagePathPrefix + "karoliina-thumbnail.png",
         },
         paths: {
+          page: "karoliina-jarenko",
           description: "karoliina-jarenko-kuvaus",
         },
       },
@@ -145,6 +160,7 @@ export class People {
           thumbnail: this.imagePathPrefix + "lauri-thumbnail.png",
         },
         paths: {
+          page: "lauri-jarvilehto",
           description: "lauri-jarvilehto-kuvaus",
         },
       },
@@ -156,6 +172,7 @@ export class People {
           thumbnail: this.imagePathPrefix + "maija-thumbnail.png",
         },
         paths: {
+          page: "maija-tiitinen",
           description: "maija-tiitinen-kuvaus",
         },
       },
@@ -167,6 +184,7 @@ export class People {
           thumbnail: this.imagePathPrefix + "maria-thumbnail.png",
         },
         paths: {
+          page: "maria-ruotsalainen",
           description: "maria-ruotsalainen-kuvaus",
         },
       },
@@ -178,6 +196,7 @@ export class People {
           thumbnail: this.imagePathPrefix + "miia-thumbnail.png",
         },
         paths: {
+          page: "miia-maijala",
           description: "miia-maijala-kuvaus",
         },
       },
@@ -189,6 +208,7 @@ export class People {
           thumbnail: this.imagePathPrefix + "peter-thumbnail.png",
         },
         paths: {
+          page: "peter-kentta",
           description: "peter-kentta-kuvaus",
         },
       },
@@ -200,6 +220,7 @@ export class People {
           thumbnail: this.imagePathPrefix + "reima-thumbnail.png",
         },
         paths: {
+          page: "reima-launonen",
           description: "reima-launonen-kuvaus",
         },
       },
@@ -211,6 +232,7 @@ export class People {
           thumbnail: this.imagePathPrefix + "sami-thumbnail.png",
         },
         paths: {
+          page: "sami-paju",
           description: "sami-paju-kuvaus",
         },
       },
@@ -222,6 +244,7 @@ export class People {
           thumbnail: this.imagePathPrefix + "selina-thumbnail.png",
         },
         paths: {
+          page: "selina-bakir",
           description: "selina-bakir-kuvaus",
         },
       },
@@ -233,6 +256,7 @@ export class People {
           thumbnail: this.imagePathPrefix + "tapani-thumbnail.png",
         },
         paths: {
+          page: "tapani-riekki",
           description: "tapani-riekki-kuvaus",
         },
       },
@@ -244,6 +268,7 @@ export class People {
           thumbnail: this.imagePathPrefix + "timo-thumbnail.png",
         },
         paths: {
+          page: "timo-tiuraniemi",
           description: "timo-tiuraniemi-kuvaus",
         },
       },
@@ -255,6 +280,7 @@ export class People {
           thumbnail: this.imagePathPrefix + "tuukka-thumbnail.png",
         },
         paths: {
+          page: "tuukka-kostamo",
           description: "tuukka-kostamo-kuvaus",
         },
       },
@@ -266,6 +292,7 @@ export class People {
           thumbnail: this.imagePathPrefix + "tytti-thumbnail.png",
         },
         paths: {
+          page: "tytti-kokko",
           description: "tytti-kokko-kuvaus",
         },
       },
@@ -277,6 +304,7 @@ export class People {
           thumbnail: this.imagePathPrefix + "villiam-thumbnail.png",
         },
         paths: {
+          page: "villiam-virkkunen",
           description: "villiam-virkkunen-kuvaus",
         },
       },
