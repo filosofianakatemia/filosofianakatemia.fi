@@ -82,13 +82,6 @@
   }
 }
 
-/* RETINA EXTRA WIDE */
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 64.063em), only screen and (min-aspect-ratio: 17/9) {
-  .hero {
-    background-image: url('../img/bg-front-large-wide@2x.jpg');
-  }
-}
-
 .hero .slogan {
   padding-top: 25vh;
   display: block;
