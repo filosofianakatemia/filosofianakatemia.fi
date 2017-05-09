@@ -33,10 +33,13 @@
       <email>jukapeka@gmail.com</email>
     </developer>
   </developers>
+
   <properties>
+    <node.version>v7.10.0</node.version>
     <docker.skip>true</docker.skip>
     <extendedmind.api.url>https://ext.md/api</extendedmind.api.url>
   </properties>
+
   <profiles>
     <profile>
       <id>docker-activation</id>
@@ -55,7 +58,7 @@
       <plugin>
         <groupId>com.github.eirslett</groupId>
         <artifactId>frontend-maven-plugin</artifactId>
-        <version>1.0</version>
+        <version>1.4</version>
         <executions>
           <execution>
             <id>install node and npm</id>
@@ -63,9 +66,7 @@
               <goal>install-node-and-npm</goal>
             </goals>
             <configuration>
-              <nodeVersion>v7.9.0</nodeVersion>
-              <npmVersion>4.4.4</npmVersion>
-              <nodeDownloadRoot>https://nodejs.org/dist/</nodeDownloadRoot>
+              <nodeVersion>${node.version}</nodeVersion>
             </configuration>
           </execution>
           <execution>
@@ -241,7 +242,7 @@
               <name>quay.io/fiak/site</name>
               <alias>fiak-site</alias>
               <build>
-                <from>quay.io/extendedmind/node:node-7.5.0-1</from>
+                <from>quay.io/extendedmind/node:node-7.10.0-1</from>
                 <maintainer>timo.tiuraniemi@iki.fi</maintainer>
                 <tags>
                   <tag>latest</tag>
@@ -251,7 +252,7 @@
                   <port>3001</port>
                 </ports>
                 <volumes>
-                  <volume>/etc/nginx/sites-enabled</volume>
+                  <volume>/etc/nginx/sites-enabled/fiak-site</volume>
                 </volumes>
                 <assembly>
                   <mode>dir</mode>

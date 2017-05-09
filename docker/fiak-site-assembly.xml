@@ -7,7 +7,13 @@
       <outputDirectory>app/fiak-site</outputDirectory>
       <includes>
         <include>package.json</include>
-        <include>index.js</include>
+      </includes>
+    </fileSet>
+    <fileSet>
+      <directory>${project.basedir}/src/dist</directory>
+      <outputDirectory>app/fiak-site/dist</outputDirectory>
+      <includes>
+        <include>**/*.js</include>
       </includes>
     </fileSet>
     <fileSet>
@@ -19,12 +25,9 @@
       <outputDirectory>app/fiak-site/views</outputDirectory>
     </fileSet>
     <fileSet>
-      <directory>${project.basedir}/src/js</directory>
-      <outputDirectory>app/fiak-site/js</outputDirectory>
-    </fileSet>
-    <fileSet>
       <directory>${project.basedir}/docker</directory>
       <outputDirectory>app/fiak-site</outputDirectory>
+      <filtered>true</filtered>
       <includes>
         <include>fiak-site-config.json</include>
         <include>fiak-site-pm2.json</include>
@@ -32,7 +35,7 @@
     </fileSet>
     <fileSet>
       <directory>${project.basedir}/docker</directory>
-      <outputDirectory>etc/nginx/sites-enabled</outputDirectory>
+      <outputDirectory>etc/nginx/sites-enabled/fiak-site</outputDirectory>
       <includes>
         <include>nginx.filosofianakatemia.conf</include>
       </includes>
