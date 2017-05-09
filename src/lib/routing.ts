@@ -22,9 +22,8 @@ export class Routing {
     this.router.get("/kyselyt/motivoivin-esimies", this.motivoivinEsimies);
     this.router.get("/blogi", this.blogi);
     this.router.get("/blogi/:blogPath", this.blogiTeksti);
-    /*this.router.get("/blogi/sivu/:number", this.blogiSivu);
-    this.router.get("/blogi/lukutila/sivu/:number", this.blogiLukutila);
-    this.router.get("/esikatselu/:ownerUUID/:itemUUID/:code", this.esikatselu;
+    this.router.get("/esikatselu/:ownerUUID/:itemUUID/:previewCode", this.preview);
+      /*
     this.router.get("/ihmiset/emilia", this.emilia));
     this.router.get("/ihmiset/frank", this.frank);
     this.router.get("/ihmiset/iida", this.iida);
@@ -123,6 +122,26 @@ export class Routing {
     if (faBlogNote) {
       ctx.body = ctx.state.render.template("pages/blogiteksti",
           ctx.state.render.getBlogPostContext(faPublicItems, faBlogNote));
+    }
+  }
+
+  // Test URL:
+  // http://localhost:3001/esikatselu/55449eb6-2fb3-41d5-b806-b4e3be5692cc/c876628e-1d67-411a-84f9-5dfedbed8872/1
+  private async preview(ctx: Router.IRouterContext, next: () => Promise<any>) {
+    console.info("GET ", ctx.path);
+    const note = await ctx.state.backendClient.getPreviewItem(
+      ctx.params.ownerUUID, ctx.params.itemUUID, ctx.params.previewCode);
+
+    // Render page based on preview note keywords
+    const faPublicItems = await ctx.state.backendClient.getPublicItems("filosofian-akatemia");
+    if (note.keywords && note.keywords.length) {
+      for (const keyword of note.keywords) {
+        if (keyword.title.startsWith("blog")) {
+          ctx.body = ctx.state.render.template("pages/blogiteksti",
+              ctx.state.render.getBlogPostContext(faPublicItems, note));
+          break;
+        }
+      }
     }
   }
 

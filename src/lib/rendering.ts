@@ -89,8 +89,10 @@ export class Render {
         }
       }
     }
-    blog.published = publicNote.visibility.published;
-    blog.path = publicNote.visibility.path;
+    if (publicNote.visibility) {
+      blog.published = publicNote.visibility.published;
+      blog.path = publicNote.visibility.path;
+    }
     return blog;
   }
 
