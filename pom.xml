@@ -201,7 +201,7 @@
       <plugin>
         <groupId>io.fabric8</groupId>
         <artifactId>docker-maven-plugin</artifactId>
-        <version>0.20.0</version>
+        <version>0.21.0</version>
         <configuration>
           <sourceDirectory>docker</sourceDirectory>
           <images>
@@ -296,7 +296,7 @@
               </run>
             </image>
             <image>
-              <name>quay.io/extmd/sync-folder</name>
+              <name>quay.io/extendedmind/sync-folder</name>
               <alias>fiak-sync-folder</alias>
               <run>
                 <namingStrategy>alias</namingStrategy>
@@ -331,6 +331,27 @@
             <phase>post-integration-test</phase>
             <goals>
               <goal>stop</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <appendAssemblyId>true</appendAssemblyId>
+          <finalName>${project.artifactId}-${project.version}</finalName>
+          <descriptors>
+            <descriptor>config-assembly.xml</descriptor>
+          </descriptors>
+        </configuration>
+        <executions>
+          <execution>
+            <id>make-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
             </goals>
           </execution>
         </executions>
