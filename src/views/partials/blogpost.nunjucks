@@ -16,7 +16,7 @@
 {% endmacro %}
 
 <div class="medium-10 small-centered blog-post column infinite-item">
-  {% set excerptMode = not readMode %}
+  {% set excerptMode = not readMode and loop %}
   {% set readMode = true %}
   <div class="row left-aligned section-blog-post {{ "list-view" if listView }} {{ "read-mode" if f }} {{ "excerpt-mode" if excerptMode }}">
 
@@ -57,7 +57,7 @@
       {# Picture #}
       {% if blog.pictureData %}
         {% if blog.pictureData.caption and (not listView or readMode) %}
-        <div class="column blog-picture"  {{ "onClick=location.href='blogi/" + blog.path + "';return false;" if excerptMode }}>
+        <div class="column blog-picture"  {{ "onClick=location.href='/blogi/" + blog.path + "';return false;" if excerptMode }}>
           <div class="row">
             <div class="{{ "show-for-medium-up medium-4 columns" if listView and not readMode else "column" }} head-shot">
               {{ blog.pictureData.picture | safe }}
@@ -87,14 +87,14 @@
             {{ blog.lead | safe }}
           </p>
         {% else %}
-          <p class="lead {{ "emphasize" if (not listView or readMode) }}" {{ "onClick=location.href='blogi/" + blog.path + "';return false;" if excerptMode }}>
+          <p class="lead {{ "emphasize" if (not listView or readMode) }}" {{ "onClick=location.href='/blogi/" + blog.path + "';return false;" if excerptMode }}>
             {{ blog.lead | safe }}
           </p>
         {% endif %}
 
         {# Content #}
         {% if not (listView and not readMode) %}
-          <div class="body-text" {{ "onClick=location.href='blogi/" + blog.path + "';return false;" if excerptMode }}>
+          <div class="body-text" {{ "onClick=location.href='/blogi/" + blog.path + "';return false;" if excerptMode }}>
             {{ blog.content | safe }}
           </div>
         {% endif %}

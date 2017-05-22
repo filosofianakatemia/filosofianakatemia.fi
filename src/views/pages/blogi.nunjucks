@@ -48,7 +48,7 @@
 
   <div class="row">
     <div class="column posts-navigation">
-      <a class="posts-navigation-link infinite-more-link" href="?remaining={{ remaining }}">lataa lisää</a>
+      <a class="posts-navigation-link infinite-more-link" href="/blogi?remaining={{ remaining }}">lataa lisää</a>
     </div>
   </div>
   {% endif %}
