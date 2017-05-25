@@ -48,7 +48,7 @@
   <div class="row">
     <div id="org-circle" class="large-4 large-offset-1 columns">
       <div class="show-for-large-up"><br/></div>
-      <img src="static/{{ version }}/img/organisaatio_ympyra.png"></img>
+      <img src="static/{{ version }}/img/org_circle.png"></img>
       <br/><br/>
     </div>
     <div class="large-offset-1 large-5 columns end left-aligned">
