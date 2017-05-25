@@ -4,6 +4,25 @@
 /**********/
 /* BLOG */
 
+
+.blog-text .top-bar {
+  position: relative;
+  background-color: $color-highlighted-petrol;
+}
+
+.blog-text .top-bar.expanded .title-area {
+  background-color: $color-highlighted-petrol;
+}
+
+
+.blog-text .top-bar .icon-logo-fill-name:before {
+  color: #FFFFFF;
+}
+
+.blog-text .top-bar .toggle-topbar.menu-icon > a > span:after {
+  box-shadow: 0 0 0 1px #FFFFFF, 0 7px 0 1px #FFFFFF, 0 14px 0 1px #FFFFFF;
+}
+
 .blog-post {
   > .section-blog-post {
     max-width: 800px;
@@ -54,7 +73,7 @@
   }
   .lead {
     &.emphasize {
-      border-left: 6px solid $color-highlighted;
+      border-left: 6px solid $color-highlighted-petrol;
       padding-left: 20px;
       padding-bottom: 0;
       font-weight: 100;
@@ -75,7 +94,7 @@
 }
 
 blockquote:first-of-type {
-  background-color: $color-highlighted;
+  background-color: $color-highlighted-petrol;
   color: #FFFFFF;
   padding: 40px;
   margin-left: 0;
@@ -268,7 +287,7 @@ blockquote:first-of-type {
 
 /* MEDIUM */
 @media only screen and (min-width: 40.063em) {
-  #blog .hero .slogan {
+  .blog .hero .slogan {
     padding-top: 160px;
     padding-bottom: 105px;
   }

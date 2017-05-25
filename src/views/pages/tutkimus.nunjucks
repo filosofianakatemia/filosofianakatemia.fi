@@ -5,7 +5,7 @@
 {% block ogtitle %}{{ super() }} | Tutkimus{% endblock %}
 {% block ogurl %}{{ super() }}/tutkimus{% endblock %}
 {% block description %}Filosofian Akatemian valmennukset pohjautuvat tekem&auml;&auml;mme akateemiseen huippututkimukseen.{% endblock %}
-{% block bodyattrs %}id="research"{% endblock %}
+{% block bodyattrs %}class="research"{% endblock %}
 
 {% block topbar %}
 <ul class="title-area">

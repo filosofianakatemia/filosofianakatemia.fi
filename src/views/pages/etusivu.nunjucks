@@ -41,6 +41,14 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
 
 {% block mainattrs %}id="front-top"{% endblock %}
 {% block main %}
+<div class="section separate">
+  <div class="row">
+    <div class="medium-10 medium-offset-1 end columns ingress">
+      <h2>“Mikä ihmeen Filosofian Akatemia?”</h2>
+      <p>Olemme työelämän uudistajia. Filosofian Akatemia on erikoistunut siihen, mistä uusiutumiskyky syntyy. Autamme organisaatiota rakenteiden, toimintapojen ja johtamiskäytänteiden tasolla tukemaan itseohjautuvuutta ja jatkuvaa kehittämistä.</p>
+    </div>
+  </div>
+</div>
 <div class="section wrapper-embedded">
   <div id="references" class="row">
     <div class="medium-12 columns">
@@ -148,7 +156,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
         <div class="description">
           Ihmisten sis&auml;iseen motivaatioon ja innostukseen voi vaikuttaa. Filosofian Akatemian kehitt&auml;m&auml; Sis&auml;isen motivaation kehityspolku on maailman ensimm&auml;inen ty&ouml;kalu, jolla ihmisten sis&auml;ist&auml; motivaatiota voi systemaattisesti mitata ja johtaa. Motivoituneet, uutta luovat ihmiset ovat yritysten t&auml;rkein kilpailuvaltti tulevaisuudessa. Palveluidemme avulla saat vertailtavia tuloksia ja apua sis&auml;isen motivaation kasvattamiseen.
         </div>
-        <a href="palvelut#smk-top" class="link-cta">Lue lis&auml;&auml;<span class="icon-arrow-right"></span></a>
+        <a href="palvelut#main-top" class="link-cta">Lue lis&auml;&auml;<span class="icon-arrow-right"></span></a>
         <div class="show-for-large-up"><br/></div>
       </div>
     </div>

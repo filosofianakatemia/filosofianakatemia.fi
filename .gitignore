@@ -13,6 +13,7 @@ node/
 
 # Ignore generated sources
 src/data-devel.json
+src/data-devel-modified.json
 src/js/
 src/dist/
 src/public/

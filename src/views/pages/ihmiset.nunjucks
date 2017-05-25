@@ -5,7 +5,7 @@
 {% block ogtitle %}{{ super() }} | Ihmiset{% endblock %}
 {% block ogurl %}{{ super() }}/ihmiset{% endblock %}
 {% block description %}Me teemme t&ouml;it&auml; valtavalla innolla. Filosofian Akatemian ihmiset esitt&auml;ytyv&auml;t.{% endblock %}
-{% block bodyattrs %}id="people"{% endblock %}
+{% block bodyattrs %}class="people"{% endblock %}
 
 {% block topbar %}
 <ul class="title-area">
@@ -29,7 +29,7 @@
 {% block hero %}
 <div class="hero">
   <div class="slogan">Me olemme Filosofian Akatemia</div>
-  <div class="ingress">Ihmisten pit&auml;&auml; el&auml;&auml; hyv&auml;&auml; el&auml;m&auml;&auml;. Iso osa siit&auml; kuluu t&ouml;iss&auml;. Parhaimmillaan ty&ouml;nteko on mielek&auml;st&auml;, palkitsevaa ja merkityksellist&auml;. Filosofian Akatemia perustettiin meille unelmien työpaikaksi ja sitä tavoittelemme yhä joka päivä. Perehdymme jatkuvasti uusimpaan akateemiseen tutkimukseen ja edistämme sitä myös itse. Uutamme tutkimuksesta mullistavia ty&ouml;kaluja inhimillisen hyvinvoinnin vahvistamiseen ja urautuneen ajattelun murtamiseen. Teemme ty&ouml;t&auml; valtavalla innolla.</div>
+  <div class="ingress">Olemme veikeä yhdistelmä eri alojen ammattilaisia ja tutkijoita. Ymmärrä sekä ihmisiä että systeemejä. Tiedämme että laajin ymmärrys ja luovimmat ratkaisut löytyvät eri alojen rajapinnoilta. Uskallamme ajatella toisin ja sanoa sen ääneen.<br/><br/>Meitä yhdistää halu luoda maailmaa jossa valtaosa ihmisistä herää aamulla ja kokee merkitykselliseksi sen miten päivänsä viettävät. Olemme sydämeltämme hippejä varusteltuna insinöörin rautaisilla toteutustaidoilla.<br/><br/>Rakennamme sitä tulevaisuutta, jossa haluamme elää.</div>
   <a href="#thumbnails" class="scroll-down show-for-large-up">
     <span class="text-scroll-down">VIERIT&Auml; ALAS</span></br><span class="icon-arrow-down"></span>
   </a>

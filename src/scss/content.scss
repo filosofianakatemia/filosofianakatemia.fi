@@ -56,7 +56,19 @@
 }
 
 .underline {
-  border-bottom: 4px solid $color-highlighted;
+  border-bottom: 4px solid $color-highlighted-petrol;
+}
+
+.services .underline {
+  border-bottom-color: $color-highlighted-blue;
+}
+
+.research .underline {
+  border-bottom-color: $color-highlighted-green;
+}
+
+.people .underline {
+  border-bottom-color: $color-highlighted-orange;
 }
 
 .separator {
@@ -117,14 +129,14 @@
   }
 
   .reference-author{
-    color: $color-highlighted;
+    color: $color-highlighted-petrol;
   }
   .reference-author-wrapper {
     padding-bottom: 15px;
   }
 }
 
-/* MEDIUM */
+/* medium */
 @media only screen and (min-width: 40.063em){
   #references {
     img.author {
@@ -354,73 +366,46 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 
 /* SERVICES */
 
-#smk-quote {
-  padding-bottom: 30px;
-  .icon-smk-quote:before {
-    position: relative;
-    color: $color-highlighted;
-    font-size: 150px;
+#org-circle {
+  padding-top: 30px;
+  img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+    max-width: 400px;
   }
-}
-
-#vvv .icon-vvv:before {
-  position: relative;
-  color: #0C7C8B;
-  top: 30px;
-  font-size: 250px;
-}
-
-#smk .icon-smk-vertical:before{
-  position: relative;
-  color: #0C7C8B;
-  top: 30px;
-  font-size: 650px;
-}
-
-#smk .icon-smk-horizontal:before{
-  position: relative;
-  color: #0C7C8B;
-  top: 30px;
-  font-size: 250px;
 }
 
 /* LARGE */
 @media only screen and (min-width: 64.063em){
-  #smk-quote .icon-smk-quote:before {
-    top: 30px;
-    font-size: 23vw;
+  #org-circle {
+    img {
+      margin-left: auto;
+      margin-right: auto;
+      width: 400px;
+      max-width: inherit;
+    }
   }
-  #vvv .icon-vvv:before {
-    font-size: 450px;
+}
+
+/* LARGE PLUS */
+@media only screen and (min-width: 74.063em){
+  #org-circle {
+    img {
+      width: 410px;
+      margin-right: -100px;
+    }
   }
 }
 
 /* EXTRA LARGE */
 @media only screen and (min-width: 90.063em){
-  #smk-quote .icon-smk-quote:before {
-    top: 40px;
-    font-size: 360px;
+  #org-circle {
+    img {
+      width: 440px;
+      margin-right: -130px;
+    }
   }
-
-  #vvv .icon-vvv:before {
-    top: 40px;
-    font-size: 550px;
-  }
-}
-
-#smk-bottom .row .columns h3 {
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#smk-bottom .btn-contact {
-  margin-top: 20px;
-  margin-bottom: 0;
-}
-
-#smk-bottom #more {
-  margin-top: 40px;
 }
 
 /* RESEARCH */

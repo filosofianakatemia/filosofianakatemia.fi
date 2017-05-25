@@ -56,12 +56,51 @@ body {
 button:hover, button:focus,
 .button:hover, .button:focus,
 .top-bar-section ul > li.active > a {
-  background-color: #1F5B65;
+  background-color: $color-highlighted-petrol;
 }
 
 .icon-bar {
   background: transparent;
   .item a {
+    color: #FFFFFF;
+  }
+}
+
+.services {
+
+  button:hover, button:focus,
+  .button:hover, .button:focus,
+  .top-bar-section ul > li.active > a {
+    background-color: $color-highlighted-blue;
+  }
+
+  .icon-bar .item a {
+    color: #FFFFFF;
+  }
+}
+
+.research {
+
+  button:hover, button:focus,
+  .button:hover, .button:focus,
+  .top-bar-section ul > li.active > a {
+    background-color: $color-highlighted-green;
+  }
+
+  .icon-bar .item a {
+    color: #FFFFFF;
+  }
+}
+
+.people {
+
+  button:hover, button:focus,
+  .button:hover, .button:focus,
+  .top-bar-section ul > li.active > a {
+    background-color: $color-highlighted-orange;
+  }
+
+  .icon-bar .item a {
     color: #FFFFFF;
   }
 }

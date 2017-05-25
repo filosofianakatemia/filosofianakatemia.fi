@@ -22,11 +22,38 @@
 }
 
 .top-bar .toggle-topbar.menu-icon > a > span:after {
-  box-shadow: 0 0 0 1px $color-highlighted, 0 7px 0 1px $color-highlighted, 0 14px 0 1px $color-highlighted;
+  box-shadow: 0 0 0 1px $color-highlighted-petrol, 0 7px 0 1px $color-highlighted-petrol, 0 14px 0 1px $color-highlighted-petrol;
 }
 
 .top-bar .logo a{
-  color: $color-highlighted;
+  color: $color-highlighted-petrol;
+}
+
+.services {
+  .top-bar .toggle-topbar.menu-icon > a > span:after {
+    box-shadow: 0 0 0 1px $color-highlighted-blue, 0 7px 0 1px $color-highlighted-blue, 0 14px 0 1px $color-highlighted-blue;
+  }
+  .top-bar .logo a{
+    color: $color-highlighted-blue;
+  }
+}
+
+.research {
+  .top-bar .toggle-topbar.menu-icon > a > span:after {
+    box-shadow: 0 0 0 1px $color-highlighted-green, 0 7px 0 1px $color-highlighted-green, 0 14px 0 1px $color-highlighted-green;
+  }
+  .top-bar .logo a{
+    color: $color-highlighted-green;
+  }
+}
+
+.people {
+  .top-bar .toggle-topbar.menu-icon > a > span:after {
+    box-shadow: 0 0 0 1px $color-highlighted-orange, 0 7px 0 1px $color-highlighted-orange, 0 14px 0 1px $color-highlighted-orange;
+  }
+  .top-bar .logo a{
+    color: $color-highlighted-orange;
+  }
 }
 
 .top-bar .logo {
@@ -51,6 +78,22 @@
   .top-bar .logo a {
     color: #FFFFFF;
   }
+  .services {
+    .top-bar a, .top-bar .logo a {
+      color: #FFFFFF;
+    }
+  }
+  .research {
+    .top-bar a, .top-bar .logo a {
+      color: #FFFFFF;
+    }
+  }
+  .people {
+    .top-bar a, .top-bar .logo a {
+      color: #FFFFFF;
+    }
+  }
+
   .top-bar .logo {
     padding-left: 5vw;
   }
@@ -82,7 +125,6 @@
     margin-right: 5vw;
   }
 }
-
 
 /* MEDIUM */
 @media only screen and (min-width: 40.063em) {

@@ -138,32 +138,29 @@
 }
 
 #introduction .top-bar,
-.blog-text .top-bar,
 .people-details .top-bar {
   position: relative;
-  background-color: #1C7986;
+  background-color: $color-highlighted-orange;
 }
 
 #introduction .top-bar.expanded .title-area,
-.blog-text .top-bar.expanded .title-area,
 .people-details .top-bar.expanded .title-area {
-  background-color: #1C7986;
+  background-color: $color-highlighted-orange;
 }
 
+
 #introduction .top-bar .icon-logo-fill-name:before,
-.blog-text .top-bar .icon-logo-fill-name:before,
 .people-details .top-bar .icon-logo-fill-name:before{
   color: #FFFFFF;
 }
 
 #introduction .top-bar .toggle-topbar.menu-icon > a > span:after,
-.blog-text .top-bar .toggle-topbar.menu-icon > a > span:after,
 .people-details .top-bar .toggle-topbar.menu-icon > a > span:after{
   box-shadow: 0 0 0 1px #FFFFFF, 0 7px 0 1px #FFFFFF, 0 14px 0 1px #FFFFFF;
 }
 
 .people-details .breadcrumbs {
-  color: $color-highlighted;
+  color: $color-highlighted-orange;
 }
 
 .people-details .section-person >:first-child p:first-of-type {
@@ -188,13 +185,13 @@
     position: relative;
     top: 20px;
     font-size: 40px;
-    color: $color-highlighted;
+    color: $color-highlighted-orange;
   }
   .quote {
     font-weight: 100;
     font-size: 18px;
     font-style: italic;
-    color: $color-highlighted;
+    color: $color-highlighted-orange;
   }
   .separator {
     margin-left: 5px;
