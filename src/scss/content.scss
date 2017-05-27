@@ -37,6 +37,10 @@
   }
 }
 
+.section .ingress.sub {
+  font-size: 18px;
+}
+
 .embedded .description {
   margin-top: 40px;
   margin-bottom: 40px;
@@ -107,6 +111,9 @@
   .section .ingress {
     font-size: 28px;
   }
+  .section .ingress.sub {
+    font-size: 25px;
+  }
 }
 
 /* EXTRA LARGE */
@@ -115,6 +122,9 @@
     font-size: 36px;
     padding-left: 80px;
     padding-right: 80px;
+  }
+  .section .ingress.sub {
+    font-size: 30px;
   }
 }
 
@@ -544,3 +554,25 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   padding-left: 20px;
   padding-right: 20px;
 }
+
+.module {
+  background-image: url('../img/bg-circle.png');
+  background-attachment: center;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #FFFFFF;
+  height: 240px;
+  width: 240px;
+  margin: 20px;
+  display:table;
+  text-align: center;
+  span {
+    display:table-cell;
+    vertical-align:middle;
+    font-size: 20px;
+  }
+}
+

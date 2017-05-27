@@ -22,8 +22,6 @@
 </section>
 {% endblock %}
 
-
-
 {% block hero %}
 <div class="hero">
   <div class="row">
@@ -41,7 +39,7 @@
   </div>
   <div class="icon"><img src="/static/{{ version }}/img/simojo_icon.png"/></div>
   <div class="slogan">Sisaisen motivaation johtamisen valmennus esimiehille</div>
-  <div class="ingress">Sisäisen motivaation johtamisen valmennus vie esimiehet puolen vuoden mittaiselle kasvun ja kehittymisen matkalle. Haastamme esimiehet ajattelemaan asioita uusista näkökulmista, omaksumaan jatkuvan kehittymisen mind setin ja tukemaan esimiestyöllään tiimiläistensä kykyä toimia ja kukoistaa.</div>
+  <div class="ingress">Sisäisen motivaation johtamisen valmennus vie esimiehet puolen vuoden mittaiselle kasvun ja kehittymisen matkalle. Haastamme esimiehet ajattelemaan asioita uusista näkökulmista, omaksumaan jatkuvan kehittymisen mind setin ja tukemaan esimiestyöllään tiimiläistensä kykyä toimia ja kukoistaa.<br/><br/></div>
 </div>
 {% endblock %}
 
@@ -54,12 +52,13 @@
     </div>
     <div class="large-offset-1 large-5 columns end left-aligned">
       <h3>Valmennus pohjautuu Frank Martelan ja Karoliina Jarengon menestyskirjaan Draivi-voiko sisäistä motivaatiota johtaa?</h3>
-      <p>Sisäisen motivaation johtaminen on konkreettisia toimintatapoja, käytäntöjä ja kommunikaatiota, jotka tukevat ihmisen luontaista halua kokea autonomiaa, kyvykkyyttä ja merkityksellisyyttä. Tarjoamme valtavan määrän erilaisia työkaluja toteuttaa näitä ja sovellamme parhaalta kuulostavat teidän organisaationne arkeen. Valmennus haastaa esimiehet ajattelemaan omaa työtään ja johtamistaan uudella tavalla ja sparraa heitä viemään uuden ajattelun käytännön tasolle.
+      <p>Sisäisen motivaation johtaminen on konkreettisia toimintatapoja, käytäntöjä ja kommunikaatiota, jotka tukevat ihmisen luontaista halua kokea autonomiaa, kyvykkyyttä ja merkityksellisyyttä. Tarjoamme valtavan määrän erilaisia työkaluja toteuttaa näitä ja sovellamme parhaalta kuulostavat teidän organisaationne arkeen. Valmennus haastaa esimiehet ajattelemaan omaa työtään ja johtamistaan uudella tavalla ja sparraa heitä viemään uuden ajattelun käytännön tasolle.</p>
       <p><b>Isossa kuvassa kysymys on siitä, että siirrymme asioiden johtamisesta ihmisten johtamiseen.</b></p>
     </div>
   </div>
   <div class="row">
     <div class="large-offset-3 large-6 columns end">
+      <br/><br/>
       <h2 class="big">Valmennuksen lähipäivien teemat on jaoteltu sisäisen motivaation osa-alueiden mukaan.</h2>
       <br/><br/>
     </div>

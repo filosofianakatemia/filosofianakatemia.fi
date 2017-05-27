@@ -50,6 +50,7 @@
     padding-top: 8vh;
     img {
       max-height: 82px;
+      max-width: 120px;
     }
   }
   .slogan {
@@ -63,6 +64,10 @@
 
 .details.services .hero .slogan {
   color: $color-highlighted-blue;
+}
+
+#ajatteluhallinta .hero .icon {
+  padding-top: 12vh;
 }
 
 /* RETINA MOBILE */
@@ -247,7 +252,9 @@
   .hero {
     height: 95vh;
   }
-  .blog .hero {
+
+  .blog .hero,
+  .details .hero {
     height: auto;
   }
   .hero .slogan {

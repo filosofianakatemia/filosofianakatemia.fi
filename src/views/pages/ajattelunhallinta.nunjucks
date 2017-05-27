@@ -2,7 +2,7 @@
 {% set pageName = 'Ajattelunhallinta' %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogurl %}{{ super() }}/palvelut/ajattelunhallinta{% endblock %}
-{% block bodyattrs %}class="services"{% endblock %}
+{% block bodyattrs %}class="services details"{% endblock %}
 {% block topbar %}
 <ul class="title-area">
   <li class="name">
@@ -22,20 +22,123 @@
 </section>
 {% endblock %}
 
-{% block main %}
+{% block hero %}
+<div id="ajattelunhallinta" class="hero">
   <div class="row">
     <div class="medium-10 small-centered column">
-      <div class="left-aligned section-introduction">
+      <div class="center-aligned-small section-introduction">
         {# Breadcrumbs #}
         <div class="row breadcrumbs">
           <div class="column">
             <a href="/palvelut">Palvelut<span class="icon-arrow-right"></span></a>
-            <span class="font-bold">Ajattelunhallinta</span>
+            <span class="font-bold">Ajattelunhallinta – uuden työn taidot</span>
           </div>
         </div>
-        <h2>Tulossa</h2>
+      </div>
     </div>
   </div>
+  <div class="icon"><img src="/static/{{ version }}/img/ajattelunhallinta_icon.png"/></div>
+  <div class="slogan">Ajattelunhallinta –<br/>uuden työn taidot<br/><br/><br/></div>
+</div>
+{% endblock %}
+
+{% block main %}
+<div id="ajattelunhallinta-top" class="section separate">
+  <div class="row">
+    <div class="large-4 large-offset-2 columns center-aligned-small">
+      <h3>Tietotyön arvo syntyy ajattelusta.</h3>
+      <p>Älykkäiden työtapojen ja virtaviivaisen tehtävänhallinnan ensisijainen tavoite on lisätä tietotyöläisen tilaa ajatella.  Työtä on aina enemmän kuin mitä voi saada tehtyä. Tietotyöläisen täytyy kyetä priorisoimaan ja suunnittelemaan työnsä niin, että saa arvokkaimmat työt tehtyä ja vähiten arvokkaan jätettyä kokonaan tekemättä.</p>
+      <br/><br/>
+      <h3>Moderni tietotyö vaatii hyvät itsensä johtamisen taidot</h3>
+      <p>Työ muuttaa muotoaan. Siirtyminen uuteen työhön vaatii vahvempia itsensä johtamisen taitoja kuin koskaan aiemmin. Modernissa tietotyössä yksittäisen tietotyöläisen työnkuva on äärimmäisen monimuotoinen tai jopa määrittelemätön. Muuttuvat tilanteet edellyttävät jatkuvaa uudelleen priorisointia ja organisaatiotason tavoitteiden huomioimista omassa päätöksenteossa. Uudenlaiset kommunikaatiovälineet ja alustat tuovat paljon uusia mahdollisuuksia, mutta vain niille jotka osaavat niitä hyödyntää. Hallitsemattomat informaatiovirrat ja keskeytykset ovat vältettävissä viisailla toimintatavoilla.</p>
+      <div class="row show-for-medium-up">
+        <div class="small-offset-2 small-4 columns">
+          <br/><img src="/static/{{ version }}/img/blue_arrow.png"></img><br/>
+        </div>
+        <div class="small-4 end columns">
+          <br/><img src="/static/{{ version }}/img/blue_arrow.png"></img><br/>
+        </div>
+      </div>
+    </div>
+    <div class="large-4 columns end center-aligned-small">
+      <h3>Ajattelunhallinan valmennus pureutuu tietotyön olennaisimpiin haasteisiin</h3>
+      <p>Ajattelunhallinnan valmennusohjelmassa yhdistyy syvä asiantuntemus leanin periaatteista tietotyön kontekstissa, sekä ymmärrys ihmismielen toiminnasta. Valmennuksen osallistujat kehittävät omia työtapojaan virtaviivaisemmiksi ja tehokkaammiksi ja oppivat samalla kokeilemalla kehittämisen ja jatkuvan parantamisen toimintatavan.</p>
+      <br/><br/>
+      <h3>Työtapoja kehitetään systemaattisten kokeilujen kautta</h3>
+      <p>Tämän valmennuksen metodiikka perustuu vankkaan tutkimustietoon siitä, miten ihmismieli toimii ja kuinka pysyviä muutoksia saadaan aikaan. Ymmärrämme mikä tekee rutiinien muuttamisesta vaikeaa ja olemme suunnitelleet valmennuksen pedagogiikan pohjautuen uusimpaan tutkimustietoon rutiinien muuttamisen psykologiasta.</p>
+      <p>Valmennuksen ajan osallistujat kehittävät toimintaansa pienten kokeilujen kautta. Jokaisen tapaamisen päätteeksi osallistujat ottavat arkeensa uudenlaisen toimintatavan, ja kehittelevät sitä kohti parasta lopputulosta. Näin osallistujat sisäistävät kokeilemalla kehittämisen menetelmän ja voivat myöhemmin soveltaa sitä myös muissa konteksteissa. Jatkuvasta parantamisesta tulee luonnollinen tapa tehdä työtä.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <br/><br/>
+      <h2>Valmennusmoduulit</h2>
+      <br/><br/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="module small-offset-2 large-offset-3 large-2 columns">
+      <span>Suunnittelu, tavoitteenasettelu ja priorisointi</span>
+    </div>
+    <div class="module small-offset-2 large-offset-0 large-2 columns">
+      <span>Fyysisen ja digitaalisen ympäristön optimointi</span>
+    </div>
+    <div class="module small-offset-2 large-offset-0 large-2 columns end">
+      <span>Älykkäät työtavat</span>
+    </div>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="module small-offset-2 large-offset-3 large-2 columns">
+      <span>Tehtävänhallinta ja tehokas digitaalisten työkalujen käyttö</span>
+    </div>
+    <div class="module small-offset-2 large-offset-0 large-2 columns">
+      <span>Vireystason ylläpito ja palautuminen</span>
+    </div>
+    <div class="module small-offset-2 large-offset-0 large-2 columns end">
+      <span>Reflektio ja oman työn jatkuva parantaminen</span>
+    </div>
+  </div>
+</div>
+<div class="section wrapper-embedded">
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="embedded">
+        <h2>Vaikuttavuutta seurataan IMQ-Flow-mittauksella</h2>
+        <div class="row">
+          <div class="underline small-offset-5 small-2"></div>
+        </div>
+        <div class="description">
+          <p>IMQ-Flow on työn sujuvuutta, hallinnantunnetta, stressiä ja aikaansaamista kartoittava mittari. Valmennuksen alussa paikannetaan osallistujien yksilölliset työn sujuvuuden kipupisteet. Valmennuksen jälkeen mittaus toteutetaan uudelleen, jolloin saadaan tietoa yksilöllisestä kehityksestä ja valmennuksen kokonaisvaikuttavuudesta. IMQFlow mittarista on tarjolla myös lyhyempi pulssi jolloin kehitystä voidaan seurata reaaliajassa.</p>
+        </div>
+      </div>
+    </div>
+    <div class="large-6 columns">
+      <div class="embedded">
+        <h2>Valmennusprosessin hinta</h2>
+        <div class="row">
+          <div class="underline small-offset-5 small-2"></div>
+        </div>
+        <div class="description">
+          <p>Pro<br/><b>2 580 € / osallistuja</b></p>
+          <p>Intensiivi<br/><b>1 640 € / osallistuja</b></p>
+          <p>Ryhmäkoko 20 henkeä.</p>
+        </div>
+        <div class="show-for-large-up"><br/><br/></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section separate">
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <h2 class="big">Oletko kiinnostunut valmennusprosessista?</h2>
+      <br/><br/>
+      <a href="/#contact" class="button btn-contact">OTA YHTEYTT&Auml;</a>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
 

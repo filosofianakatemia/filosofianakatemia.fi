@@ -49,7 +49,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="large-offset-1 large-5 columns left-aligned large-right-padded">
+    <div class="large-offset-1 large-5 columns center-aligned-small large-right-padded">
       <h3>Päätyötämme on valmennus ja konsultointi</h3> 
       <p>Valmennuksemme tarjoavat ihmisille mieltä avartavan, psykologisesti turvallisen ja hieman hillittömän ilmapiirin, jossa ihmiset pystyvät paljastamaan uusia ajattelunpolkuja, ja ajattelemaan ajatuksia, joita he eivät muuten ajattelisi.</p>
       <p>Tärkeäksi työkaluksi kulttuurinmuutoksen mahdollistamisessa on noussut kehittämämme IMQ-mittari, jonka avulla voidaan kartoittaa organisaation sisäisen motivaation nykytila ja kipupisteet, ja räätälöidä valmennukset ja kehittämistoimenpiteet pureutumaan juuri oikeisiin teemoihin.</p>
@@ -66,7 +66,7 @@
       </div>
       <p id="trv-circles"><img src="static/{{ version }}/img/tiede_rakkaus_vallankumous.png"></img></p>
     </div>
-    <div class="large-5 end columns left-aligned large-left-padded">
+    <div class="large-5 end columns center-aligned-small large-left-padded">
       <div class="show-for-medium-up">
         <h3>Valmentamisen ja konsultoinnin ohella teemme sekä puhtaan akateemista että soveltavaa tutkimusta</h3>
         <p>Tiimissämme on muutaman tohtorin ohella useampi väitöskirjaansa valmisteleva valmentaja, ja osa meistä tekee osapäiväisesti töitä yliopistolle. Olemme mukana useissa tutkimushankkeissa, viimeisimpinä TEKESin rahoittamassa sisäisen motivaation johtamista tutkivassa Leading Passion – hankkeessa ja CoPassion Myötätunnon mullistava voima –hankkeessa. Näissä hankkeissa yhteistyökumppaneitamme ovat olleet kohdeyritysten ohella esimerkiksi Helsingin yliopisto, Aalto-yliopisto ja Haaga-Helia.</p>
