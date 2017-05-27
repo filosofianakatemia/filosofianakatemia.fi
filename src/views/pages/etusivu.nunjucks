@@ -178,6 +178,18 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
+                <a href="https://www.talentumshop.fi/draivi.html" target="_blank"><img class="cover" src="static/{{ version }}/img/books/itseohjautuvuus.jpg"/></a>
+              </div>
+              <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
+                <p><strong>Itseohjaituvuus – Miten organisoitua tulevaisuudessa?</strong></p>
+                <p>Toim. <a href="/ihmiset/karoliina">Karoliina Jarenko</a> ja <a href="/ihmiset/frank">Frank Martela</a><br/>Alma Talent 2017</p>
+                <p class="book-description">Itseohjautuvuus on elinehto yrityksille ja yhteisöille, jotka haluavat menestyä nopeasti muuttuvissa ja kilpailullisissa toimintaympäristöissä. Tähän kirjaan on koottu 21 asiantuntijan näkemykset kolmeentoista artikkeliin, jotka antavat sekä teoreettista pohjaa että selkeitä malleja itseohjautuvuuden edistämiseen. Kirjan luettuasi ymmärrät, mitä itseohjautuvuus on, miksi käynnissä oleva työnmurros tekee siitä keskeisen menestystekijän eri toimialoilla ja mitä voit tehdä vahvistaaksesi itseohjautuvuutta omassa organisaatiossasi.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="row center-aligned-small">
+              <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
                 <a href="https://www.talentumshop.fi/draivi.html" target="_blank"><img class="cover" src="static/{{ version }}/img/books/draivi.jpg"/></a>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
@@ -206,7 +218,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p><strong>Sisu – Tarinoita itsens&auml; ylitt&auml;misest&auml; ja hyv&auml;n tekemisest&auml;</strong></p>
-                <p><a href="/ihmiset/sonja">Sonja Str&ouml;msholm</a>, <a href="/ihmiset/emilia">Emilia Lahti</a>, <a href="/ihmiset/lauri">Lauri J&auml;rvilehto</a>, Meeri Koutaniemi<br/>PS-kustannus 2015</p>
+                <p>Sonja Str&ouml;msholm, <a href="/ihmiset/emilia">Emilia Lahti</a>, <a href="/ihmiset/lauri">Lauri J&auml;rvilehto</a>, Meeri Koutaniemi<br/>PS-kustannus 2015</p>
                 <p class="book-description">“Sisu – Tarinoita itsens&auml; ylitt&auml;misest&auml; ja hyv&auml;n tekemisest&auml;” on Filosofian Akatemian luotsaaman, Sisun juhlavuosi 2015 -projektin p&auml;&auml;teos. Kirjan 14 sisukasta p&auml;&auml;henkil&ouml;&auml; kertovat kirjassa sisutarinansa ja avaavat, miten ovat ylitt&auml;neet mahdottomiltakin tuntuvia esteit&auml; ja l&ouml;yt&auml;neet kutsumuksen, jonka toteuttaminen vaatii my&ouml;s sisua. Nykyajan sisu on voimavara, jossa itsens&auml; ylitt&auml;minen, hyv&auml;n tekeminen ja yhteis&ouml;llisyys kulkevat k&auml;si k&auml;dess&auml;. Kirjan inspiroivien tarinoiden avulla l&ouml;yd&auml;t oman sisusi ja rohkaistut k&auml;ytt&auml;m&auml;&auml;n sit&auml; entist&auml; monipuolisemmin! Sisu alkaa sielt&auml;, miss&auml; sinnikkyys loppuu.</p>
               </div>
             </div>
@@ -271,7 +283,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
               </div>
             </div>
           </div-->
-          <div class="swiper-slide">
+          <!--div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
                 <a href="http://www.adlibris.com/fi/kirja/monenkirjavia-kuvitelmia-9789513178239" target="_blank"><img class="cover" src="static/{{ version }}/img/books/monenkirjavia-kuvitelmia.jpg"/></a>
@@ -282,7 +294,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
                 <p class="book-description">Maailmaa voi muuttaa kahdella tavalla:muuttamalla asioita tai muuttamalla ajattelua. Todellisuus on se taustakangas, jolle maalaamme monenkirjavat kuvitelmamme. Lauri J&auml;rvilehto pohtii kirjassaan filosofiaan ja tieteelliseen tutkimukseen nojaten, miten tulkitsemme maailmaa ja kokemusta Kirja k&auml;sittelee todellisuuden ja tarinan rajapintoja, uskonnon ja tieteen kamppailua ja maailman tulevaisuuden n&auml;kymi&auml;.</p>
               </div>
             </div>
-          </div>
+          </div-->
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
