@@ -137,24 +137,20 @@
   }
 }
 
-#introduction .top-bar,
 .people-details .top-bar {
   position: relative;
   background-color: $color-highlighted-orange;
 }
 
-#introduction .top-bar.expanded .title-area,
 .people-details .top-bar.expanded .title-area {
   background-color: $color-highlighted-orange;
 }
 
 
-#introduction .top-bar .icon-logo-fill-name:before,
 .people-details .top-bar .icon-logo-fill-name:before{
   color: #FFFFFF;
 }
 
-#introduction .top-bar .toggle-topbar.menu-icon > a > span:after,
 .people-details .top-bar .toggle-topbar.menu-icon > a > span:after{
   box-shadow: 0 0 0 1px #FFFFFF, 0 7px 0 1px #FFFFFF, 0 14px 0 1px #FFFFFF;
 }
@@ -286,67 +282,6 @@
     }
     ul li a {
       margin-left: -20px;
-    }
-  }
-}
-
-/* INTRODUCTION */
-
-.section-introduction {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#introduction {
-  .wrapper-embedded {
-    .row {
-      &:first-child h1 {
-        margin-bottom: 0;
-      }
-      &:last-child .columns:last-child .embedded {
-        margin-bottom: 50px;
-      }
-    }
-  }
-  .embedded {
-    margin-bottom: 0;
-    margin-top: 25px;
-    .icon-pdf:before {
-      font-size: 30px;
-    }
-  }
-}
-
-@media only screen and (min-width: 40.063em) {
-  #introduction .embedded .icon-pdf:before {
-    font-size: 34px;
-  }
-}
-
-/* LARGE */
-@media only screen and (min-width: 64.063em){
-  #introduction .wrapper-embedded .row {
-    &:first-child h1 {
-      font-style: 52px;
-    }
-    &:last-child .columns:last-child .embedded {
-      margin-bottom: 100px;
-    }
-    .embedded .icon-pdf:before {
-      font-size: 40px;
-    }
-  }
-}
-
-/* EXTRA LARGE */
-@media only screen and (min-width: 90.063em){
-  #introduction .wrapper-embedded .row {
-    &:first-child h1 {
-      font-size: 65px;
-    }
-    &:last-child .columns:last-child .embedded {
-      margin-bottom: 150px;
     }
   }
 }

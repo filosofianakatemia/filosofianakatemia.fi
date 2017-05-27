@@ -2,7 +2,7 @@
 {% set pageName = 'Ajattelunhallinta' %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogurl %}{{ super() }}/palvelut/ajattelunhallinta{% endblock %}
-{% block bodyattrs %}id="introduction"{% endblock %}
+{% block bodyattrs %}class="services"{% endblock %}
 {% block topbar %}
 <ul class="title-area">
   <li class="name">

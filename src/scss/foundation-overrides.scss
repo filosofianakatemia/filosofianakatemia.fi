@@ -66,41 +66,48 @@ button:hover, button:focus,
   }
 }
 
-.services {
+a {
+  -webkit-tap-highlight-color: rgba($color-highlighted-petrol, $opacity-touch-color);
+}
 
+.services {
   button:hover, button:focus,
   .button:hover, .button:focus,
   .top-bar-section ul > li.active > a {
     background-color: $color-highlighted-blue;
   }
-
   .icon-bar .item a {
     color: #FFFFFF;
+  }
+  a {
+    -webkit-tap-highlight-color: rgba($color-highlighted-blue, $opacity-touch-color);
   }
 }
 
 .research {
-
   button:hover, button:focus,
   .button:hover, .button:focus,
   .top-bar-section ul > li.active > a {
     background-color: $color-highlighted-green;
   }
-
   .icon-bar .item a {
     color: #FFFFFF;
+  }
+  a {
+    -webkit-tap-highlight-color: rgba($color-highlighted-green, $opacity-touch-color);
   }
 }
 
 .people {
-
   button:hover, button:focus,
   .button:hover, .button:focus,
   .top-bar-section ul > li.active > a {
     background-color: $color-highlighted-orange;
   }
-
   .icon-bar .item a {
     color: #FFFFFF;
+  }
+  a {
+    -webkit-tap-highlight-color: rgba($color-highlighted-orange, $opacity-touch-color);
   }
 }

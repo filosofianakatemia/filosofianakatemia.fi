@@ -2,7 +2,7 @@
 {% set pageName = 'Sis&auml;isen motivaation johtaminen' %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogurl %}{{ super() }}/palvelut/sisaisen-motivaation-johtaminen{% endblock %}
-{% block bodyattrs %}id="introduction"{% endblock %}
+{% block bodyattrs %}class="services"{% endblock %}
 {% block topbar %}
 <ul class="title-area">
   <li class="name">
