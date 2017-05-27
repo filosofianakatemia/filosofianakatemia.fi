@@ -76,9 +76,13 @@ a {
   .top-bar-section ul > li.active > a {
     background-color: $color-highlighted-blue;
   }
+
+  button:hover, button:focus,
+  .button:hover, .button:focus,
   .icon-bar .item a {
     color: #FFFFFF;
   }
+
   a {
     -webkit-tap-highlight-color: rgba($color-highlighted-blue, $opacity-touch-color);
   }
@@ -90,6 +94,9 @@ a {
   .top-bar-section ul > li.active > a {
     background-color: $color-highlighted-green;
   }
+
+  button:hover, button:focus,
+  .button:hover, .button:focus,
   .icon-bar .item a {
     color: #FFFFFF;
   }
@@ -104,6 +111,9 @@ a {
   .top-bar-section ul > li.active > a {
     background-color: $color-highlighted-orange;
   }
+
+  button:hover, button:focus,
+  .button:hover, .button:focus,
   .icon-bar .item a {
     color: #FFFFFF;
   }

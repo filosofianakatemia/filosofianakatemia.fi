@@ -485,3 +485,62 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   }
 }
 
+/* DETAILS PAGES */
+
+.details .top-bar {
+  position: relative;
+}
+
+.details .top-bar,
+.details .top-bar.expanded .title-area {
+  background-color: $color-highlighted-petrol;
+}
+
+.people.details .top-bar,
+.people.details .top-bar.expanded .title-area {
+  background-color: $color-highlighted-orange;
+}
+
+.services.details .top-bar,
+.services.details .top-bar.expanded .title-area {
+  background-color: $color-highlighted-blue;
+}
+
+.research.details .top-bar,
+.research.details .top-bar.expanded .title-area {
+  background-color: $color-highlighted-blue;
+}
+
+.details .breadcrumbs {
+  color: $color-highlighted-petrol;
+}
+
+.details.people .breadcrumbs {
+  color: $color-highlighted-orange;
+}
+
+.details.services .breadcrumbs {
+  color: $color-highlighted-blue;
+}
+
+.details.research .breadcrumbs {
+  color: $color-highlighted-green;
+}
+
+.details .top-bar .icon-logo-fill-name:before{
+  color: #FFFFFF;
+}
+
+.details .top-bar .toggle-topbar.menu-icon > a > span:after{
+  box-shadow: 0 0 0 1px #FFFFFF, 0 7px 0 1px #FFFFFF, 0 14px 0 1px #FFFFFF;
+}
+
+#draivi-shadow, .vvv {
+  max-width: 500px;
+}
+
+.vvv img {
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}

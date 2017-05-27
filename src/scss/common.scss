@@ -163,6 +163,9 @@ h1 {
 h2 {
   font-size: $size-heading;
   line-height: 28px;
+  &.big {
+    font-size: ($size-heading + 3px);
+  }
 }
 
 h3 {
@@ -184,6 +187,9 @@ h4 {
   h2 {
     font-size: $size-heading__screen-large;
     line-height: 38px;
+    &.big {
+      font-size: ($size-heading__screen-large + 9px);
+    }
   }
   h3 {
     font-size: $size-heading-small__screen-large;
@@ -207,6 +213,9 @@ h4 {
   h2 {
     font-size: $size-heading__screen-extra-large;
     line-height: 46px;
+    &.big {
+      font-size: ($size-heading__screen-extra-large + 14px);
+    }
   }
 
   h3 {

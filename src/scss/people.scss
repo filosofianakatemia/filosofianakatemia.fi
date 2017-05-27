@@ -137,29 +137,7 @@
   }
 }
 
-.people-details .top-bar {
-  position: relative;
-  background-color: $color-highlighted-orange;
-}
-
-.people-details .top-bar.expanded .title-area {
-  background-color: $color-highlighted-orange;
-}
-
-
-.people-details .top-bar .icon-logo-fill-name:before{
-  color: #FFFFFF;
-}
-
-.people-details .top-bar .toggle-topbar.menu-icon > a > span:after{
-  box-shadow: 0 0 0 1px #FFFFFF, 0 7px 0 1px #FFFFFF, 0 14px 0 1px #FFFFFF;
-}
-
-.people-details .breadcrumbs {
-  color: $color-highlighted-orange;
-}
-
-.people-details .section-person >:first-child p:first-of-type {
+.details.people .section-person >:first-child p:first-of-type {
   font-weight: 100;
   font-size: 18px;
 }

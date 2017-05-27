@@ -40,6 +40,31 @@
   background-image: url('../img/bg-introduction-small.jpg');
 }
 
+.details .hero {
+  background-image: url('../img/bg-gray.png') !important;
+  background-repeat: repeat;
+  color: $color-text;
+  .icon {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8vh;
+    img {
+      max-height: 82px;
+    }
+  }
+  .slogan {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    color: $color-highlighted-petrol;
+  }
+}
+
+.details.services .hero .slogan {
+  color: $color-highlighted-blue;
+}
+
 /* RETINA MOBILE */
 @media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi){
   .hero {

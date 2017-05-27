@@ -2,7 +2,7 @@
 {% set pageName = 'Sis&auml;isen motivaation johtaminen' %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogurl %}{{ super() }}/palvelut/sisaisen-motivaation-johtaminen{% endblock %}
-{% block bodyattrs %}class="services"{% endblock %}
+{% block bodyattrs %}class="services details"{% endblock %}
 {% block topbar %}
 <ul class="title-area">
   <li class="name">
@@ -22,7 +22,10 @@
 </section>
 {% endblock %}
 
-{% block main %}
+
+
+{% block hero %}
+<div class="hero">
   <div class="row">
     <div class="medium-10 small-centered column">
       <div class="left-aligned section-introduction">
@@ -33,9 +36,141 @@
             <span class="font-bold">Sisäisen motivaation johtaminen</span>
           </div>
         </div>
-        <h2>Tulossa</h2>
+      </div>
     </div>
   </div>
+  <div class="icon"><img src="/static/{{ version }}/img/simojo_icon.png"/></div>
+  <div class="slogan">Sisaisen motivaation johtamisen valmennus esimiehille</div>
+  <div class="ingress">Sisäisen motivaation johtamisen valmennus vie esimiehet puolen vuoden mittaiselle kasvun ja kehittymisen matkalle. Haastamme esimiehet ajattelemaan asioita uusista näkökulmista, omaksumaan jatkuvan kehittymisen mind setin ja tukemaan esimiestyöllään tiimiläistensä kykyä toimia ja kukoistaa.</div>
+</div>
+{% endblock %}
+
+{% block main %}
+<div id="simojo-top" class="section separate">
+  <div class="row">
+    <div id="draivi-shadow" class="large-4 large-offset-1 columns">
+      <img src="/static/{{ version }}/img/books/draivi_shadow.jpg"></img>
+      <br/><br/>
+    </div>
+    <div class="large-offset-1 large-5 columns end left-aligned">
+      <h3>Valmennus pohjautuu Frank Martelan ja Karoliina Jarengon menestyskirjaan Draivi-voiko sisäistä motivaatiota johtaa?</h3>
+      <p>Sisäisen motivaation johtaminen on konkreettisia toimintatapoja, käytäntöjä ja kommunikaatiota, jotka tukevat ihmisen luontaista halua kokea autonomiaa, kyvykkyyttä ja merkityksellisyyttä. Tarjoamme valtavan määrän erilaisia työkaluja toteuttaa näitä ja sovellamme parhaalta kuulostavat teidän organisaationne arkeen. Valmennus haastaa esimiehet ajattelemaan omaa työtään ja johtamistaan uudella tavalla ja sparraa heitä viemään uuden ajattelun käytännön tasolle.
+      <p><b>Isossa kuvassa kysymys on siitä, että siirrymme asioiden johtamisesta ihmisten johtamiseen.</b></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <h2 class="big">Valmennuksen lähipäivien teemat on jaoteltu sisäisen motivaation osa-alueiden mukaan.</h2>
+      <br/><br/>
+    </div>
+  </div>
+  <div class="row">
+   <div class="large-offset-2 large-4 columns left-aligned">
+      <h3>Vapaus-päivänä keskitymme autonomian kokemuksen ja tekemisen innostavuuden vahvistamiseen.</h3>
+      <p><b>Vapauden johtamisen ydinkysymyksiä ovat muun muassa:</b>
+      <ul>
+        <li>Miten päästää työntekijöiden vahvuudet paremmin esiin?</li>
+        <li>Miten hyödyntää työntekijöiden kiinnostuksen kohteita enemmän työssä?</li>
+        <li>Miten antaa työntekijöiden valita vapaammin sitä tapaa, jolla he tekevät töitään?</li>
+        <li>Miten antaa työntekijöiden muokata omia työnkuviaan vastaamaan paremmin heidän sisäistä motivaatiotaan?</li>
+        <li>Miten nivoa työntekijöiden oppimisunelmat osaksi organisaation uusiutumisstrategiaa?</li>
+      </ul>
+    </div>
+    <div class="vvv large-4 end columns">
+      <img src="/static/{{ version }}/img/vvv_vapaus.png"></img>
+      <br/><br/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 large-4 large-push-6 columns left-aligned">
+      <h3>Virtaus-päivänä puhumme tavoitejohtamisesta, kasvun ja yhdessä kehittämisen prosesseista sekä hallinnan tunteen ylläpitämisestä.</h3>
+      <p><b>Virtauksen johtamisen ydinkysymyksiä ovat muun muassa:</b>
+      <ul>
+        <li>Miten siirtyä tehokkaasta toiminnasta vaikuttavaan toimintaan?</li>
+        <li>Miten onnistua käyttämään aika oikeisiin asioihin?</li>
+        <li>Miten asettaa merkityksellisiä tavoitteita?</li>
+        <li>Miten vahvistaa aikaansaamisen ja onnistumisen kokemuksia?</li>
+        <li>Miten lisätä hallinnantunnetta?</li>
+      </ul>
+    </div>
+    <div class="vvv small-12 large-offset-2 large-4 large-pull-4 end columns">
+      <img src="/static/{{ version }}/img/vvv_virtaus.png"></img>
+      <br/><br/>
+    </div>
+ </div>
+  <div class="row">
+   <div class="large-offset-2 large-4 columns left-aligned">
+      <h3>Vastuu-päivänä käsittelemme yhteisön voimaa, kommunikaatiota ja kehittymistä tukevan ilmapiirin johtamista.</h3>
+      <p><b>Vastuun johtamisen ydinkysymyksi ovat muun muassa:</b>
+      <ul>
+        <li>Miten vahvistaa yhteisöllisyyttä ja tiimihenkeä?</li>
+        <li>Mitä luottamus oikeastaan on ja miten sitä voi rakentaa?</li>
+        <li>Miten ymmärtää erilaisia ihmisiä ja hyödyntää heidän vahvuuksiaan?</li>
+        <li>Miten luoda kulttuuri, jossa yksilöt uskaltavat olla omia itsejään?</li>
+        <li>Miten vahvistaa merkityksellisyyden kokemusta työssä?</li>
+      </ul>
+    </div>
+    <div class="vvv large-4 end columns">
+      <img src="/static/{{ version }}/img/vvv_vastuu.png"></img>
+      <br/><br/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-offset-4 small-2 columns">
+      <br/><img src="/static/{{ version }}/img/blue_arrow.png"></img><br/>
+    </div>
+    <div class="small-2 end columns">
+      <br/><img src="/static/{{ version }}/img/blue_arrow.png"></img><br/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <br/><br/>
+      <h2>Jokaisen lähipäivän päätteeksi esimiehet sitoutuvat yhteen toimintatapamuutokseen, jonka toteutumista seurataan koko valmennuksen ajan.</h2>
+      <p>Lähipäivien lomassa tehdään välitehtäviä, reflektoidaan omaa toimintaa ja kokeillaan uusia toimintatapoja. Välitehtävät sisältävät video- ja lukumuotoista itseopiskelumateriaalia, jota sovelletaan omaan työhön. Paritapaamiset tarjoavat osallistujille vertaistukea kasvun polulla.</p>
+      <br/><br/>
+    </div>
+  </div>
+</div>
+<div class="section wrapper-embedded">
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="embedded">
+        <h2>SIMO360</h2>
+        <div class="row">
+          <div class="underline small-offset-5 small-2"></div>
+        </div>
+        <div class="description">
+          <p>Valmennuksen alussa ja lopussa toteutetaan SIMO360-palaute, joka on sisäisen motivaation johtamiseen keskittyvä 360 esimiesarvio. Se konkretisoi sisäisen motivaation johtamista käytännön tasolle, tarjoaa kullekin osallistujalle konkreettisia kehittymiskohteita ja toisaalta näyttää, missä asioissa hän on ennestäänkin toiminut sisäistä motivaatiota tukevalla tavalla.</p>
+          <p>Jälkilöylyt ovat päättäjäisbileet, joissa julkistetaan valmennusporukan työstä syntynyt sisäisen motivaation johtamisen teesikirja.</p>
+        </div>
+      </div>
+    </div>
+    <div class="large-6 columns">
+      <div class="embedded">
+        <h2>Valmennusprosessin hinta</h2>
+        <div class="row">
+          <div class="underline small-offset-5 small-2"></div>
+        </div>
+        <div class="description">
+          <p>360-palautteen kanssa<br/><b>3 360 € / osallistuja</b></p>
+          <p>Ilman 360-palautetta<br/><b>2 680 € / osallistuja</b></p>
+          <p>Ryhmäkoko 15-25 henkeä.</p>
+        </div>
+        <div class="show-for-large-up"><br/><br/></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section separate">
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <h2 class="big">Oletko kiinnostunut valmennusprosessista?</h2>
+      <br/><br/>
+      <a href="/#contact" class="button btn-contact">OTA YHTEYTT&Auml;</a>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
 
