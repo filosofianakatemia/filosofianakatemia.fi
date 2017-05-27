@@ -28,6 +28,17 @@
   text-align: right;
 }
 
+/* LARGE */
+@media only screen and (min-width: 64.063em){
+  .large-left-padded {
+    padding-left: 50px;
+  }
+
+  .large-right-padded {
+    padding-right: 50px;
+  }
+}
+
 .center-aligned, .center-aligned-small {
   text-align: center;
 }
@@ -241,6 +252,10 @@ a {
 
 .link-cta {
   font-weight: 700;
+}
+
+.link-cta.plain {
+  font-weight: 300;
 }
 
 .icon-arrow-right:before {

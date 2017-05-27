@@ -1,0 +1,109 @@
+{% extends "base.nunjucks" %}
+{% set pageName = 'Filosofian Akatemian esittely' %}
+{% block ogtype %}{{ super() }}{% endblock %}
+{% block ogurl %}{{ super() }}/esittely{% endblock %}
+{% block bodyattrs %}class="introduction"{% endblock %}
+{% block topbar %}
+<ul class="title-area">
+  <li class="name">
+    <div class="logo"><a href="/"><span class="icon-logo-fill-name"></span></a></div>
+  </li>
+  <li class="toggle-topbar menu-icon"><a href="/"><span></span></a></li>
+</ul>
+
+<section class="top-bar-section">
+  <ul class="right">
+    <li class="show-for-small-only"><a href="/">Etusivu</a></li>
+    <li><a href="/ihmiset">Ihmiset</a></li>
+    <li><a href="/palvelut">Palvelut</a></li>
+    <li><a href="/tutkimus">Tutkimus</a></li>
+    <li><a href="/blogi">Blogi</a></li>
+  </ul>
+</section>
+{% endblock %}
+
+{% block hero %}
+<div class="hero">
+  <div class="slogan">Työelämän muutosvoima</div>
+  <div class="ingress">Filosofian Akatemia on luova yhdistelmä innostavaa valmennus- ja konsultointiosaamista sekä syvää tieteellispohjaista ymmärrystä ihmistieteistä ja organisaatiotutkimuksesta. Tarkoituksemme on tehdä suomalaisesta työelämästä innostuneempaa, rohkeampaa ja dynaamisempaa.</div>
+  <a href="#main-top" class="scroll-down show-for-large-up">
+    <span class="text-scroll-down">VIERIT&Auml; ALAS</span></br><span class="icon-arrow-down"></span>
+  </a>
+</div>
+{% endblock %}
+
+{% block main %}
+<div id="introduction-top" class="section separate">
+  <div class="row">
+    <div class="medium-8 medium-offset-2 end columns">
+      <p>Yrityksen tarina sai alkunsa vuonna 2009 kun viisi filosofia ja yksi psykologi havahtuivat siihen, kuinka paljon tuoreella akateemisella tutkimuksella olisi annettavaa suomalaiselle työelämälle.</p><br/><br/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-8 medium-offset-2 end columns ingress emphasis">Syntyi ajatus kaventaa tutkimuksen ja käytännön välistä kuilua yhdistämällä monialainen tieteellinen tutkimus konsultointiin ja valmentamiseen.</div>
+  </div>
+  <div class="row">
+    <div class="medium-8 medium-offset-2 end columns">
+      <p>Sittemmin joukkoon on liittynyt asiantuntijoita kauppatieteilijöistä organisaatiomuotoilijoihin ja unelma on kasvanut. Uskomme maailmaan, jossa valtaosa ihmisistä rakastaa työtään. Uskomme suomalaisen liike-elämän kykyyn tuottaa hyvinvointia rohkeiden ja ketterien päätösten kautta.  Uskomme ihmisen kykyyn luoda yhä oikeudenmukaisempia ja hyvinvoivempia yhteiskuntia.</p>
+      <br/><br/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-offset-1 large-5 columns left-aligned large-right-padded">
+      <h3>Päätyötämme on valmennus ja konsultointi</h3> 
+      <p>Valmennuksemme tarjoavat ihmisille mieltä avartavan, psykologisesti turvallisen ja hieman hillittömän ilmapiirin, jossa ihmiset pystyvät paljastamaan uusia ajattelunpolkuja, ja ajattelemaan ajatuksia, joita he eivät muuten ajattelisi.</p>
+      <p>Tärkeäksi työkaluksi kulttuurinmuutoksen mahdollistamisessa on noussut kehittämämme IMQ-mittari, jonka avulla voidaan kartoittaa organisaation sisäisen motivaation nykytila ja kipupisteet, ja räätälöidä valmennukset ja kehittämistoimenpiteet pureutumaan juuri oikeisiin teemoihin.</p>
+      <div class="hide-for-medium-up">
+        <h3>Valmentamisen ja konsultoinnin ohella teemme sekä puhtaan akateemista että soveltavaa tutkimusta</h3>
+        <p>Tiimissämme on muutaman tohtorin ohella useampi väitöskirjaansa valmisteleva valmentaja, ja osa meistä tekee osapäiväisesti töitä yliopistolle. Olemme mukana useissa tutkimushankkeissa, viimeisimpinä TEKESin rahoittamassa sisäisen motivaation johtamista tutkivassa Leading Passion – hankkeessa ja CoPassion Myötätunnon mullistava voima –hankkeessa. Näissä hankkeissa yhteistyökumppaneitamme ovat olleet kohdeyritysten ohella esimerkiksi Helsingin yliopisto, Aalto-yliopisto ja Haaga-Helia.</p>
+        <p><b>Aktiivisen akateemisen työmme ansiosta meillä on aina ajantasaisin tieto työelämää koskevista tutkimustuloksista.</b></p>
+        <p>Valmennuksemme eivät kuitenkaan ole tieteellisiä referaatteja. Emme piiloudu akateemisuuden taakse. Puhumme kielellä jota ymmärtää. Tarkoituksemme on yksinkertaistaa monimutkaisia ilmiötä, jotta niitä on helppo soveltaa arkielämän tilanteisiin.</p>
+      </div>
+      <div class="show-for-medium-up">
+        <br/>
+        <h3>Jaamme osaamistamme myös kirjoittamisen kautta</h3>
+        <p>Olemme tuottaneet esimerkiksi raportin sisäisestä motivaatiosta Eduskunnan tulevaisuusvaliokunnalle ja valmentajamme ovat yksin ja yhdessä kirjoittaneet lukuisia kirjoja, kuten Tee itsestäsi mestariajattelija, Upeaa työtä, Tahdonvoiman käyttöohje, Kuningasjako – Onko verotus oikein?, Valonöörit – Sisäisen motivaation käsikirja ja Kehitä kokeillen. Kirjamme ovat keränneet kiitosta selkeydestään ja Karoliinan ja Frankin kirjoittama Draivi- Voiko sisäistä motivaatiota johtaa? -kirja (Talentum 2015) sai hiljattain Suomen Ekonomien vuoden bisneskirja -tunnustuspalkinnon.</p>
+      </div>
+      <p id="trv-circles"><img src="static/{{ version }}/img/tiede_rakkaus_vallankumous.png"></img></p>
+    </div>
+    <div class="large-5 end columns left-aligned large-left-padded">
+      <div class="show-for-medium-up">
+        <h3>Valmentamisen ja konsultoinnin ohella teemme sekä puhtaan akateemista että soveltavaa tutkimusta</h3>
+        <p>Tiimissämme on muutaman tohtorin ohella useampi väitöskirjaansa valmisteleva valmentaja, ja osa meistä tekee osapäiväisesti töitä yliopistolle. Olemme mukana useissa tutkimushankkeissa, viimeisimpinä TEKESin rahoittamassa sisäisen motivaation johtamista tutkivassa Leading Passion – hankkeessa ja CoPassion Myötätunnon mullistava voima –hankkeessa. Näissä hankkeissa yhteistyökumppaneitamme ovat olleet kohdeyritysten ohella esimerkiksi Helsingin yliopisto, Aalto-yliopisto ja Haaga-Helia.</p>
+        <p><b>Aktiivisen akateemisen työmme ansiosta meillä on aina ajantasaisin tieto työelämää koskevista tutkimustuloksista.</b></p>
+        <p>Valmennuksemme eivät kuitenkaan ole tieteellisiä referaatteja. Emme piiloudu akateemisuuden taakse. Puhumme kielellä jota ymmärtää. Tarkoituksemme on yksinkertaistaa monimutkaisia ilmiötä, jotta niitä on helppo soveltaa arkielämän tilanteisiin.</p>
+      </div>
+      <div class="hide-for-medium-up">
+        <h3>Jaamme osaamistamme myös kirjoittamisen kautta</h3>
+        <p>Olemme tuottaneet esimerkiksi raportin sisäisestä motivaatiosta Eduskunnan tulevaisuusvaliokunnalle ja valmentajamme ovat yksin ja yhdessä kirjoittaneet lukuisia kirjoja, kuten Tee itsestäsi mestariajattelija, Upeaa työtä, Tahdonvoiman käyttöohje, Kuningasjako – Onko verotus oikein?, Valonöörit – Sisäisen motivaation käsikirja ja Kehitä kokeillen. Kirjamme ovat keränneet kiitosta selkeydestään ja Karoliinan ja Frankin kirjoittama Draivi- Voiko sisäistä motivaatiota johtaa? -kirja (Talentum 2015) sai hiljattain Suomen Ekonomien vuoden bisneskirja -tunnustuspalkinnon.</p>
+      </div>
+      <div class="show-for-medium-up"><br/><br/></div>
+      <p><h3>Ennen kaikkea olemme rakastava kasvuyhteisö</h3></p>
+      <p>Tuemme toistemme ja meitä ympäröivien ihmisten ja yhteisöjen kasvua kohti kukoistusta. Haluamme tarjota itsellemme ja toisillemme ympäristön, jossa voi kehittyä lähes rajattomasti.</p>
+      <p><b>Emme tee työtä vain palkan vuoksi. Haluamme muuttaa maailmaa.</b></p>
+      <p>Haluamme, että tulevaisuus on innostavampi, rohkeampi ja rakkaudellisempi.</p>
+      <p>Elämme itse todeksi sitä mitä puhumme. Toimintaamme ohjaavat arvot: tiede, rakkaus ja vallankumous. Vaikka teemmekin bisnestä ja koitamme saada isoja juttuja aikaan maailmassa, tärkeintä on että tekemisessä säilyy ilo ja leikki. “Jos se ei innosta, sitä ei tehdä."</p>
+      <p>Filosofian Akatemia on poliittisesti sitoutumaton ja omistamme itse itsemme.</p>
+    </div>
+  </div> 
+</div>
+
+
+
+
+{% endblock %}
+
+{% block footer %}
+<div class="row hide-for-small-only">
+  <div class="medium-12 large-8 large-offset-2 end columns">
+    <ul class="icon-bar five-up">
+      <li class="item"><a href="/">Etusivu</a></li>
+      <li class="item"><a href="/ihmiset">Ihmiset</a></li>
+      <li class="item active"><a href="/palvelut">Palvelut</a></li>
+      <li class="item"><a href="/tutkimus">Tutkimus</a></li>
+      <li class="item"><a href="/blogi">Blogi</a></li>
+    </ul>
+  </div>
+</div>
+{% include 'partials/address.nunjucks' %}
+{% endblock %}

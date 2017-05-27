@@ -31,6 +31,10 @@
   font-weight: 100;
   font-size: 19px;
   padding-bottom: 20px;
+
+  &.emphasis {
+    color: $color-highlighted-petrol;
+  }
 }
 
 .embedded .description {
@@ -364,6 +368,41 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   max-width: 500px !important;
 }
 
+
+/* INTRODUCTION */
+
+#trv-circles {
+  padding-top: 30px;
+  img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+    max-width: 400px;
+  }
+}
+
+/* LARGE */
+@media only screen and (min-width: 64.063em){
+  #org-circle {
+    margin-left: auto;
+    margin-right: auto;
+    img {
+      width: 400px;
+      max-width: inherit;
+    }
+  }
+}
+
+/* LARGE PLUS */
+@media only screen and (min-width: 74.063em){
+  #org-circle {
+    img {
+      width: 410px;
+      margin-right: -100px;
+    }
+  }
+}
+
 /* SERVICES */
 
 #org-circle {
@@ -380,8 +419,6 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 @media only screen and (min-width: 64.063em){
   #org-circle {
     img {
-      margin-left: auto;
-      margin-right: auto;
       width: 400px;
       max-width: inherit;
     }

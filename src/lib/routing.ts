@@ -14,6 +14,7 @@ export class Routing {
               private backendInfo: Info) {
     // SETUP router
     this.router.get("/", this.index);
+    this.router.get("/esittely", this.esittely);
     this.router.get("/palvelut", this.palvelut);
     this.router.get("/palvelut/sisaisen-motivaation-johtaminen", this.sisaisenMotivaationJohtaminen);
     this.router.get("/palvelut/ajattelunhallinta", this.ajattelunhallinta);
@@ -63,6 +64,10 @@ export class Routing {
   private index(ctx: Router.IRouterContext): void {
     console.info("GET ", ctx.path);
     ctx.body = ctx.state.render.template("pages/etusivu");
+  }
+  private esittely(ctx: Router.IRouterContext): void {
+    console.info("GET ", ctx.path);
+    ctx.body = ctx.state.render.template("pages/esittely");
   }
   private palvelut(ctx: Router.IRouterContext): void {
     console.info("GET ", ctx.path);

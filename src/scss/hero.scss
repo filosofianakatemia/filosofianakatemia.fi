@@ -36,6 +36,10 @@
   background-image: url('../img/bg-blog-small.jpg');
 }
 
+.introduction .hero {
+  background-image: url('../img/bg-introduction-small.jpg');
+}
+
 /* RETINA MOBILE */
 @media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi){
   .hero {
@@ -57,6 +61,11 @@
   .blog .hero {
     background-image: url('../img/bg-blog-small@2x.jpg');
   }
+
+  .introduction .hero {
+    background-image: url('../img/bg-introduction-small@2x.jpg');
+  }
+
 }
 
 /* NON-RETINA NON-MOBILE */
@@ -81,6 +90,10 @@
     background-image: url('../img/bg-blog-large.jpg');
   }
 
+  .introduction .hero {
+    background-image: url('../img/bg-introduction-large.jpg');
+  }
+
 }
 
 /* RETINA OR REALLY WIDE AND NON-MOBILE */
@@ -103,6 +116,10 @@
 
   .blog .hero {
     background-image: url('../img/bg-blog-large@2x.jpg');
+  }
+
+  .introduction .hero {
+    background-image: url('../img/bg-introduction-large@2x.jpg');
   }
 }
 
