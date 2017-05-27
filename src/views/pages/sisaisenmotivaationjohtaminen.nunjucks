@@ -38,7 +38,7 @@
     </div>
   </div>
   <div class="icon"><img src="/static/{{ version }}/img/simojo_icon.png"/></div>
-  <div class="slogan">Sisaisen motivaation johtamisen valmennus esimiehille</div>
+  <div class="slogan">Sisäisen motivaation johtamisen valmennus esimiehille</div>
   <div class="ingress">Sisäisen motivaation johtamisen valmennus vie esimiehet puolen vuoden mittaiselle kasvun ja kehittymisen matkalle. Haastamme esimiehet ajattelemaan asioita uusista näkökulmista, omaksumaan jatkuvan kehittymisen mind setin ja tukemaan esimiestyöllään tiimiläistensä kykyä toimia ja kukoistaa.<br/><br/></div>
 </div>
 {% endblock %}
@@ -152,8 +152,8 @@
           <div class="underline small-offset-5 small-2"></div>
         </div>
         <div class="description">
-          <p>360-palautteen kanssa<br/><b>3 360 € / osallistuja</b></p>
-          <p>Ilman 360-palautetta<br/><b>2 680 € / osallistuja</b></p>
+          <p>360-palautteen kanssa<br/><b>2 840 € / osallistuja</b></p>
+          <p>Ilman 360-palautetta<br/><b>2 160 € / osallistuja</b></p>
           <p>Ryhmäkoko 15-25 henkeä.</p>
         </div>
         <div class="show-for-large-up"><br/><br/></div>
