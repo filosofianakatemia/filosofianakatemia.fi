@@ -29,7 +29,7 @@
 {% block hero %}
 <div class="hero">
   <div class="slogan">Uusiutumiskyky mittaa menestyksen</div>
-  <div class="ingress">Digitalisaation ja globalisaation yhteisvaikutus voidaan nähdä yhtenä työn ja talouden murrokseen suurimmin vaikuttavista muutosvoimista. Teknologian huiman kehittymisen johdosta meistä kukaan ei tiedä, mille bisnesmallimme tulee tulevaisuudessa perustumaan tai miten me töitämme teemme.<br/><br/><b>Olemme ennen näkemättömän johtamishaasteen edessä.</b></div>
+  <div class="ingress">Digitalisaation ja globalisaation yhteisvaikutus voidaan nähdä yhtenä työn ja talouden murrokseen suurimmin vaikuttavista muutosvoimista. Teknologian huiman kehittymisen johdosta meistä kukaan ei tiedä, mille bisnesmallimme tulee tulevaisuudessa perustumaan tai miten me töitämme teemme.<br/><br/><b>Olemme ennennäkemättömän johtamishaasteen edessä.</b></div>
   <a href="#main-top" class="scroll-down show-for-large-up">
     <span class="text-scroll-down">VIERIT&Auml; ALAS</span></br><span class="icon-arrow-down"></span>
   </a>

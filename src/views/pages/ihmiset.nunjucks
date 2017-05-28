@@ -29,7 +29,7 @@
 {% block hero %}
 <div class="hero">
   <div class="slogan">Me olemme Filosofian Akatemia</div>
-  <div class="ingress">Olemme veikeä yhdistelmä eri alojen ammattilaisia ja tutkijoita. Ymmärrämme sekä ihmisiä että systeemejä. Tiedämme että laajin ymmärrys ja luovimmat ratkaisut löytyvät eri alojen rajapinnoilta. Uskallamme ajatella toisin ja sanoa sen ääneen.<br/><br/>Meitä yhdistää halu luoda maailmaa jossa valtaosa ihmisistä herää aamulla ja kokee merkitykselliseksi sen miten päivänsä viettävät. Olemme sydämeltämme hippejä varusteltuna insinöörin rautaisilla toteutustaidoilla.<br/><br/>Rakennamme sitä tulevaisuutta, jossa haluamme elää.</div>
+  <div class="ingress">Olemme veikeä yhdistelmä eri alojen ammattilaisia ja tutkijoita. Ymmärrämme sekä ihmisiä että systeemejä. Tiedämme, että laajin ymmärrys ja luovimmat ratkaisut löytyvät eri alojen rajapinnoilta. Uskallamme ajatella toisin ja sanoa sen ääneen.<br/><br/>Meitä yhdistää halu luoda maailmaa, jossa valtaosa ihmisistä herää aamulla ja kokee merkitykselliseksi sen, miten päivänsä viettävät. Olemme sydämeltämme hippejä varusteltuna insinöörin rautaisilla toteutustaidoilla.<br/><br/>Rakennamme sitä tulevaisuutta, jossa haluamme elää.</div>
   <a href="#thumbnails" class="scroll-down show-for-large-up">
     <span class="text-scroll-down">VIERIT&Auml; ALAS</span></br><span class="icon-arrow-down"></span>
   </a>
