@@ -45,7 +45,7 @@
     "prepare": "npm run clean && typings install && npm run build && npm run copy:js && npm run copy:static",
     "clean": "rimraf dist && rimraf typings && rimraf public",
     "copy:js": "mkdir -p ./public/static/${project.version}/js  && cp ./node_modules/clipboard/dist/clipboard.min.js ./public/static/${project.version}/js/ && cp ./node_modules/waypoints/lib/jquery.waypoints.min.js ./public/static/${project.version}/js/ && cp ./node_modules/waypoints/lib/shortcuts/infinite.min.js ./public/static/${project.version}/js/ && cp ./node_modules/jquery/dist/jquery.min.js ./public/static/${project.version}/js/",
-    "copy:static": "mkdir -p ./public/static/${project.version} && cp -R ./static/* ./public/static/${project.version}/",
+    "copy:static": "mkdir -p ./public/static/${project.version} && cp -R ./static/* ./public/static/${project.version}/ && mkdir ./public/static/img && cp ./public/static/${project.version}/img/logo*.png ./public/static/img/",
     "build:ts": "tsc",
     "build:ts:watch": "tsc --watch",
     "build:scss": "node-sass --output-style compressed --source-map true scss --output public/static/${project.version}/css",
