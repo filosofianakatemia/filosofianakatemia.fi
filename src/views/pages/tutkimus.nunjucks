@@ -4,7 +4,7 @@
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogtitle %}{{ super() }} | Tutkimus{% endblock %}
 {% block ogurl %}{{ super() }}/tutkimus{% endblock %}
-{% block description %}Filosofian Akatemian valmennukset pohjautuvat tekem&auml;&auml;mme akateemiseen huippututkimukseen.{% endblock %}
+{% block description %}Filosofian Akatemian valmennukset pohjautuvat tekem&auml;&auml;mme akateemiseen tutkimukseen.{% endblock %}
 {% block bodyattrs %}class="research"{% endblock %}
 
 {% block topbar %}
@@ -41,8 +41,8 @@
 <div id="research-top" class="section separate">
   <div class="row">
     <div class="medium-10 medium-offset-1 end columns ingress">
-      <p>Akateemisesti meritoituneet tutkijamme kehitt&auml;v&auml;t tekem&auml;ns&auml; tutkimuksen pohjalta  johtamisen tueksi ty&ouml;kaluja, jotka lis&auml;&auml;v&auml;t ty&ouml;ntekij&ouml;iden sis&auml;ist&auml; motivaatiota eli vapautta, virtausta ja vastuuta. Tutkimusten mukaan n&auml;m&auml; ihmisen perustarpeet huomioiva ty&ouml;kulttuuri lis&auml;&auml; tuottavuutta.</p>
-      <p>Ty&ouml;el&auml;m&auml;n parantamiseen pyrkiv&auml;n tutkimuksen lis&auml;ksi teemme perustutkimusta, joka kumpuaa akateemisista intohimoistamme. Haluamme ymm&auml;rt&auml;&auml; paremmin ihmismielt&auml;. Tieteellisten julkaisujen lis&auml;ksi kirjoitamme kirjoja, joissa yleistajuistamme huippututkimusta ja sovellamme sit&auml; arjessa hy&ouml;dynnett&auml;viksi ty&ouml;kaluiksi.</p>
+      <p>Akateemisesti meritoituneet tutkijamme kehitt&auml;v&auml;t tekem&auml;ns&auml; tutkimuksen pohjalta johtamisen tueksi ty&ouml;kaluja, jotka lis&auml;&auml;v&auml;t ty&ouml;ntekij&ouml;iden sis&auml;ist&auml; motivaatiota eli vapautta, virtausta ja vastuuta. Tutkimusten mukaan n&auml;m&auml; ihmisen perustarpeet huomioiva ty&ouml;kulttuuri lis&auml;&auml; tuottavuutta.</p>
+      <p>Ty&ouml;el&auml;m&auml;n parantamiseen pyrkiv&auml;n tutkimuksen lis&auml;ksi teemme perustutkimusta, joka kumpuaa akateemisista intohimoistamme. Haluamme ymm&auml;rt&auml;&auml; paremmin ihmismielt&auml;. Tieteellisten julkaisujen lis&auml;ksi kirjoitamme kirjoja, joissa yleistajuistamme tutkimusta ja sovellamme sit&auml; arjessa hy&ouml;dynnett&auml;viksi ty&ouml;kaluiksi.</p>
     </div>
   </div>
 </div>

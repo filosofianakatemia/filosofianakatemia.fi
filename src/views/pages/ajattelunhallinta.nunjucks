@@ -46,7 +46,7 @@
 <div id="ajattelunhallinta-top" class="section separate">
   <div class="row">
     <div class="large-4 large-offset-2 columns center-aligned-small">
-      <h3>Tietotyön arvo syntyy ajattelusta.</h3>
+      <h3>Tietotyön arvo syntyy ajattelusta</h3>
       <p>Älykkäiden työtapojen ja virtaviivaisen tehtävänhallinnan ensisijainen tavoite on lisätä tietotyöläisen tilaa ajatella.  Työtä on aina enemmän kuin mitä voi saada tehtyä. Tietotyöläisen täytyy kyetä priorisoimaan ja suunnittelemaan työnsä niin, että saa arvokkaimmat työt tehtyä ja vähiten arvokkaan jätettyä kokonaan tekemättä.</p>
       <br/><br/>
       <h3>Moderni tietotyö vaatii hyvät itsensä johtamisen taidot</h3>
@@ -61,8 +61,8 @@
       </div>
     </div>
     <div class="large-4 columns end center-aligned-small">
-      <h3>Ajattelunhallinan valmennus pureutuu tietotyön olennaisimpiin haasteisiin</h3>
-      <p>Ajattelunhallinnan valmennusohjelmassa yhdistyy syvä asiantuntemus leanin periaatteista tietotyön kontekstissa, sekä ymmärrys ihmismielen toiminnasta. Valmennuksen osallistujat kehittävät omia työtapojaan virtaviivaisemmiksi ja tehokkaammiksi ja oppivat samalla kokeilemalla kehittämisen ja jatkuvan parantamisen toimintatavan.</p>
+      <h3>Ajattelunhallinnan valmennus pureutuu tietotyön olennaisimpiin haasteisiin</h3>
+      <p>Ajattelunhallinnan valmennusohjelmassa yhdistyvät Filosofian Akatemian syvä osaaminen ihmismielen toiminnasta sekä modernin tietotyön älykkäistä työtavoista. Valmennuksen osallistujat kehittävät omia työtapojaan virtaviivaisemmiksi ja tehokkaammiksi ja oppivat samalla kokeilemalla kehittämisen ja jatkuvan parantamisen toimintatavan.</p>
       <br/><br/>
       <h3>Työtapoja kehitetään systemaattisten kokeilujen kautta</h3>
       <p>Tämän valmennuksen metodiikka perustuu vankkaan tutkimustietoon siitä, miten ihmismieli toimii ja kuinka pysyviä muutoksia saadaan aikaan. Ymmärrämme mikä tekee rutiinien muuttamisesta vaikeaa ja olemme suunnitelleet valmennuksen pedagogiikan pohjautuen uusimpaan tutkimustietoon rutiinien muuttamisen psykologiasta.</p>
@@ -105,25 +105,29 @@
   <div class="row">
     <div class="large-6 columns">
       <div class="embedded">
-        <h2>Vaikuttavuutta seurataan IMQ-Flow-mittauksella</h2>
+        <h2>Vaikuttavuutta seurataan IMQ Flow -mittauksella</h2>
         <div class="row">
           <div class="underline small-offset-5 small-2"></div>
         </div>
         <div class="description">
-          <p>IMQ-Flow on työn sujuvuutta, hallinnantunnetta, stressiä ja aikaansaamista kartoittava mittari. Valmennuksen alussa paikannetaan osallistujien yksilölliset työn sujuvuuden kipupisteet. Valmennuksen jälkeen mittaus toteutetaan uudelleen, jolloin saadaan tietoa yksilöllisestä kehityksestä ja valmennuksen kokonaisvaikuttavuudesta. IMQFlow mittarista on tarjolla myös lyhyempi pulssi jolloin kehitystä voidaan seurata reaaliajassa.</p>
+          <p>IMQ Flow on työn sujuvuutta, hallinnantunnetta, stressiä ja aikaansaamista kartoittava mittari. Valmennuksen alussa paikannetaan osallistujien yksilölliset työn sujuvuuden kipupisteet. Valmennuksen jälkeen mittaus toteutetaan uudelleen, jolloin saadaan tietoa yksilöllisestä kehityksestä ja valmennuksen kokonaisvaikuttavuudesta. IMQ Flow -mittarista on tarjolla myös lyhyempi pulssi jolloin kehitystä voidaan seurata reaaliajassa.</p>
         </div>
       </div>
     </div>
     <div class="large-6 columns">
       <div class="embedded">
-        <h2>Valmennusprosessin hinta</h2>
+        <h2>Valmennusprosessin muoto</h2>
         <div class="row">
           <div class="underline small-offset-5 small-2"></div>
         </div>
-        <div class="description">
-          <p>Pro<br/><b>2 580 € / osallistuja</b></p>
-          <p>Intensiivi<br/><b>1 640 € / osallistuja</b></p>
-          <p>Ryhmäkoko 20 henkeä.</p>
+        <div class="description left-aligned">
+          <ul>
+            <li>3–6 kk kestävä prosessi</li>
+            <li>Vapaasti valittavissa oleva määrä sessioita</li>
+            <li>Systemaattinen ja jatkuva parannuskokeilujen tekeminen omassa työssä</li>
+            <li>Vaikuttavuuden seuranta alussa ja lopussa tehtävällä IMQ Flow -mittauksella</li>
+            <li>Jäsenyys Ajattelunhallinta-Slack-yhteisöön</li>
+          </ul>
         </div>
         <div class="show-for-large-up"><br/><br/></div>
       </div>
