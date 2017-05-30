@@ -134,12 +134,11 @@ export class Routing {
     console.info("GET ", ctx.path);
     const note = await ctx.state.backendClient.getPreviewItem(
       ctx.params.ownerUUID, ctx.params.itemUUID, ctx.params.previewCode);
-
     // Render page based on preview note keywords
     const faPublicItems = await ctx.state.backendClient.getPublicItems("filosofian-akatemia");
     if (note.keywords && note.keywords.length) {
       for (const keyword of note.keywords) {
-        if (keyword.title.startsWith("blog")) {
+        if (keyword.title.startsWith("blog") || (keyword.parentTitle && keyword.parentTitle.startsWith("blog"))) {
           ctx.body = ctx.state.render.template("pages/blogiteksti",
               ctx.state.render.getBlogPostContext(faPublicItems, note));
           break;
