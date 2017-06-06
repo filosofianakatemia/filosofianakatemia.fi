@@ -18,6 +18,7 @@ export class Routing {
     this.router.get("/palvelut", this.palvelut);
     this.router.get("/palvelut/sisaisen-motivaation-johtaminen", this.sisaisenMotivaationJohtaminen);
     this.router.get("/palvelut/ajattelunhallinta", this.ajattelunhallinta);
+    this.router.get("/palvelut/ajattelunhallinta/avoin", this.ajattelunhallintaAvoin);
     this.router.get("/ihmiset", this.ihmiset);
     this.router.get("/tutkimus", this.tutkimus);
     this.router.get("/kyselyt/motivoivin-esimies", this.motivoivinEsimies);
@@ -80,6 +81,10 @@ export class Routing {
   private ajattelunhallinta(ctx: Router.IRouterContext): void {
     console.info("GET ", ctx.path);
     ctx.body = ctx.state.render.template("pages/ajattelunhallinta");
+  }
+  private ajattelunhallintaAvoin(ctx: Router.IRouterContext): void {
+    console.info("GET ", ctx.path);
+    ctx.body = ctx.state.render.template("pages/ajattelunhallintaavoin");
   }
   private ihmiset(ctx: Router.IRouterContext): void {
     console.info("GET ", ctx.path);

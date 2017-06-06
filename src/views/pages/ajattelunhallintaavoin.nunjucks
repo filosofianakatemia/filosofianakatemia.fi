@@ -1,0 +1,152 @@
+{% extends "base.nunjucks" %}
+{% set pageName = 'Ajattelunhallinnan avoin valmennus' %}
+{% block ogtype %}{{ super() }}{% endblock %}
+{% block ogurl %}{{ super() }}/palvelut/ajattelunhallinta/avoin{% endblock %}
+{% block bodyattrs %}class="services details"{% endblock %}
+{% block topbar %}
+<ul class="title-area">
+  <li class="name">
+    <div class="logo"><a href="/"><span class="icon-logo-fill-name"></span></a></div>
+  </li>
+  <li class="toggle-topbar menu-icon"><a href="/"><span></span></a></li>
+</ul>
+
+<section class="top-bar-section">
+  <ul class="right">
+    <li class="show-for-small-only"><a href="/">Etusivu</a></li>
+    <li><a href="/ihmiset">Ihmiset</a></li>
+    <li class="active"><a href="/palvelut">Palvelut</a></li>
+    <li><a href="/tutkimus">Tutkimus</a></li>
+    <li><a href="/blogi">Blogi</a></li>
+  </ul>
+</section>
+{% endblock %}
+
+{% block hero %}
+<div id="ajattelunhallinta" class="hero">
+  <div class="row">
+    <div class="medium-10 small-centered column">
+      <div class="center-aligned-small section-introduction">
+        {# Breadcrumbs #}
+        <div class="row breadcrumbs">
+          <div class="column">
+            <a href="/palvelut">Palvelut<span class="icon-arrow-right"></span></a>
+            <a href="/palvelut/ajattelunhallinta">Ajattelunhallinta<span class="icon-arrow-right"></span></a>
+            <span class="font-bold">Avoin valmennus</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="icon"><img src="/static/{{ version }}/img/ajattelunhallinta_icon.png"/></div>
+  <div class="slogan">Ajattelunhallinnan avoin valmennus <br/>ke 14.6. klo 9–16</div>
+  <div class="ingress">Tuntuuko että sinulla on fokus on hukassa etkä oikein saa asioita aikaan? Tai saat asioita aikaan, mutta et oikein liiku sitä kohti mitä todellisuudessa haluaisit tehdä? Tämän valmennuksen tuloksena olet kirkastanut suuntasi ja tärkeimmät tavoitteesi ja oppinut tehokkaat priorisointi- ja suunnittelutaidot tavoitteidesi saavuttamiseksi.<br/><br/></div>
+</div>
+{% endblock %}
+
+{% block main %}
+<div id="ajattelunhallinta-top" class="section separate">
+  <div class="row">
+    <div class="large-4 large-offset-2 columns center-aligned-small">
+      <h2>Mikä?</h2>
+      <p>Tähän yhden päivän valmennukseen olemme tiivistäneet Filosofian Akatemian suosituimman <i>Ajattelunhallinta</i> -valmennuksen arvokkaimmat opit suunnitteluun ja tavoitteiden saavuttamiseen.</p>
+      <p>Valmennuksessa kirkastamme, mikä on sinulle henkilökohtaisesti tärkeää elämässäsi ja teemme konkreettisia päätöksiä mihin projekteihin haluat työssäsi ja elämässäsi ryhtyä. Teemme abstrakteista projekteista konkreettisia ja suunnittelemme niiden toteutuksen etenemisen. Opit aikaansaamisen tärkeimmät kulmakivet, jotta sinulla on taidot toteuttaa itsellesi mielekkäitä asioita.</p>
+    </div>
+    <div class="large-4 columns end center-aligned-small">
+      <h2>Sanottua</h2>
+      <p><i><b>"Mahtava yhdistelmä teoriaa ja käytännön harjoituksia. Sain täysin uudet prioriteetit, kun tarkastelimme asioita työn vaikuttavuus edellä."</b></i> – Katariina</p>
+      <p><i>"Sain oikeita AHAA-elämyksiä työni suunnittelusta ja tehtävänhallinnasta!"</i> – Erik</p>
+      <p><i>"Erittäin arvokasta. Tämä pitäisi saada osaksi yrityskulttuuriamme!"</i> – Johanna</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-4 large-offset-2 columns left-aligned">
+      <h2 class="center-aligned-small">Taustalla</h2>
+      <p>
+        <ul>
+          <li>David Allen (2015): <i>Getting things done</i></li>
+          <li>Fujita, Trope, Liberman, Levin-Sagi (2006): <i>Construal levels and self-control</i></li>
+          <li>Lauri Järvilehto (2012): <i>Tee itsestäsi mestariajattelija</i></li>
+        </ul>
+      </p>
+    </div>
+    <div class="large-4 columns end center-aligned-small">
+      <h2>8 vuoden kokemuksella</h2>
+      <p>Olemme Filosofian Akatemialla tutkineet ja valmentaneet älykkäitä työtapoja 8 vuotta. Valmennuksemme pohjautuvat tieteelliseen tutkimukseen ja maailman aikaansaavimpien ihmisten toimintatapoihin.</p>
+    </div>
+  </div>
+  <br/><br/>
+
+  <div class="row">
+    <div class="module small-offset-2 large-offset-3 large-2 columns">
+      <span>Omien arvojen kirkastaminen</span>
+    </div>
+    <div class="module small-offset-2 large-offset-0 large-2 columns">
+      <span>Projektien konkretisointi käytännön tasolle</span>
+    </div>
+    <div class="module small-offset-2 large-offset-0 large-2 columns end">
+      <span>Tehtävänhallinta-järjestelmän käyttöönotto</span>
+    </div>
+  </div>
+</div>
+<div class="section wrapper-embedded">
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="embedded">
+        <h2>Valmentajasi</h2>
+        <div class="row">
+          <div class="underline small-offset-5 small-2"></div>
+        </div>
+        <div class="description">
+          <p>Valmentajana toimii <a href="/ihmiset/villiam">Villiam Virkkunen (KTM, VTK)</a>. Hän on erikoistunut ajattelunhallintaan ja työn älykkääseen organisointiin. Hän uskoo, että ihmisen onnellisuus ja tyytyväisyys elämään on paljon kiinni siitä, kuinka hyvin hän kokee voivansa palvella yhteisöään ja ympärillä olevia ihmisiä. Siihen voimme itse ja yhdessä vaikuttaa.</p>
+          <p>
+            <a href="mailto:villiam.virkkunen@filosofianakatemia.fi">villiam.virkkunen@filosofianakatemia.fi</a><br/>
+            <a href="tel:+358440405450">+358 44 040 5450</a><br/>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="large-6 columns">
+      <div class="embedded">
+        <h2>Käytännön tiedot</h2>
+        <div class="row">
+          <div class="underline small-offset-5 small-2"></div>
+        </div>
+        <div class="description">
+          <p>Ajankohta:<br/><b>14.6.2017 kello 9-16</b></p>
+          <p>Sijainti:<br/><b>Runeberginkatu 49 A 13</b></p>
+          <p>Hinta:<br/><b>480 € + alv 24% / henkilö</b><br/>(Pyydä laskutustietoja työnantajaltasi.)
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="section separate">
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <h2 class="big">Heräsikö kiinnostuksesi?</h2>
+      <br/><br/>
+      <a href="https://filosofianakatemia.typeform.com/to/CWC6rj" class="button btn-contact">ILMOITTAUDU MUKAAN</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+<div class="row hide-for-small-only">
+  <div class="medium-12 large-8 large-offset-2 end columns">
+    <ul class="icon-bar five-up">
+      <li class="item"><a href="/">Etusivu</a></li>
+      <li class="item"><a href="/ihmiset">Ihmiset</a></li>
+      <li class="item active"><a href="/palvelut">Palvelut</a></li>
+      <li class="item"><a href="/tutkimus">Tutkimus</a></li>
+      <li class="item"><a href="/blogi">Blogi</a></li>
+    </ul>
+  </div>
+</div>
+{% include 'partials/address.nunjucks' %}
+{% endblock %}
