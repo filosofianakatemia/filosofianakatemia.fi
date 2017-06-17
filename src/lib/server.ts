@@ -37,6 +37,7 @@ export class Server {
     if (config.urlOrigin) this.urlOrigin = config.urlOrigin;
 
     this.app = new Koa();
+    this.app.proxy = true;
     this.router = new Router();
 
     // backend link
@@ -96,15 +97,19 @@ export class Server {
     // setup context for all routes
 
     this.app.use((ctx, next) => {
-      ctx.state.backendClient = this.utils;
-      ctx.state.render = render;
-      ctx.state.urlOrigin = this.urlOrigin;
-      ctx.state.debug = this.debug;
-      routing.getHelperMethods().forEach( (helperInfo) => {
-        ctx.state[helperInfo[0]] = helperInfo[1];
-      });
-      return next();
-    });
+      if (ctx.request.hostname.startsWith("www")){
+        ctx.redirect("https://filosofianakatemia.fi" + ctx.url);
+      } else {
+        ctx.state.backendClient = this.utils;
+        ctx.state.render = render;
+        ctx.state.urlOrigin = this.urlOrigin;
+        ctx.state.debug = this.debug;
+        routing.getHelperMethods().forEach( (helperInfo) => {
+          ctx.state[helperInfo[0]] = helperInfo[1];
+        });
+        return next();
+      }
+   });
 
     // add routes
     this.app.use(routing.getRoutes());
