@@ -64,7 +64,7 @@
         <h3>Jaamme osaamistamme myös kirjoittamisen kautta</h3>
         <p>Olemme tuottaneet esimerkiksi raportin sisäisestä motivaatiosta Eduskunnan tulevaisuusvaliokunnalle ja valmentajamme ovat yksin ja yhdessä kirjoittaneet lukuisia kirjoja, kuten Tee itsestäsi mestariajattelija, Upeaa työtä, Tahdonvoiman käyttöohje, Kuningasjako – Onko verotus oikein?, Valonöörit – Sisäisen motivaation käsikirja ja Kehitä kokeillen. Kirjamme ovat keränneet kiitosta selkeydestään ja Karoliinan ja Frankin kirjoittama Draivi- Voiko sisäistä motivaatiota johtaa? -kirja (Talentum 2015) sai hiljattain Suomen Ekonomien vuoden bisneskirja -tunnustuspalkinnon.</p>
       </div>
-      <p id="trv-circles"><img src="static/{{ version }}/img/tiede_rakkaus_vallankumous.png"></img></p>
+      <p id="trv-circles"><img src="/static/{{ version }}/img/tiede_rakkaus_vallankumous.png"></img></p>
     </div>
     <div class="large-5 end columns center-aligned-small large-left-padded">
       <div class="show-for-medium-up">

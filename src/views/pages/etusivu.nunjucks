@@ -58,7 +58,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="show-for-medium-up medium-3 medium-offset-2 large-offset-1 right-aligned columns">
-                <img class="author" src="static/{{ version }}/img/ref/varma-jyri.png"/>
+                <img class="author" src="/static/{{ version }}/img/ref/varma-jyri.png"/>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p>&#x201c;Hyv&auml;lt&auml; yhteisty&ouml;kumppanilta odottaa uusia ideoita, osaamista, yhdess&auml; tekemisen taitoa, luotettavuutta. Parhaimmat kumppanit ylitt&auml;v&auml;t odotukset. Kaiken t&auml;m&auml;n onnistumisen j&auml;lkeen miettii, miten arvokasta on ollut saada kohdata yhteisty&ouml;kumppani, joka innostaa, kannustaa, jakaa positiivisuutta, tekee ty&ouml;t&auml; syd&auml;mell&auml;&auml;n. Onneksi siit&auml; voi siirt&auml;&auml; osan itseen voimavaraksi kuin kivaksi kaveriksi k&auml;sipuoleen.  T&auml;llainen on mielest&auml;mme yhteisty&ouml;kumppani Filosofian Akatemia.&#x201d;</p>
@@ -67,10 +67,10 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
                     <span class="reference-author">Jyri Juusti</span>
                     <br/>Kehitysp&auml;&auml;llikk&ouml;,
                     <br/>Varma</div>
-                  <div class="small-6 show-for-medium-up right-aligned columns"><img class="logo large" src="static/{{ version }}/img/ref/varma-logo.png"/></div>
+                  <div class="small-6 show-for-medium-up right-aligned columns"><img class="logo large" src="/static/{{ version }}/img/ref/varma-logo.png"/></div>
                 </div>
                 <div class="row show-for-small-only">
-                  <div class="columns"><img class="logo" src="static/{{ version }}/img/ref/varma-logo.png"/></div>
+                  <div class="columns"><img class="logo" src="/static/{{ version }}/img/ref/varma-logo.png"/></div>
                 </div>
               </div>
             </div>
@@ -78,16 +78,16 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="show-for-medium-up medium-3 medium-offset-2 large-offset-1 right-aligned columns">
-                <img class="author" src="static/{{ version }}/img/ref/fondia-pirta.png"/>
+                <img class="author" src="/static/{{ version }}/img/ref/fondia-pirta.png"/>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p>&#x201c;Filosofian Akatemialla on raikas ja monipuolinen l&auml;hestymistapa johtamisen, organisaatiokulttuurin ja yritysten toimintatapojen kehitt&auml;miseen. Vapaus-virtaus-vastuu –viitekehyksen avulla on helppo l&auml;hte&auml; kehitt&auml;m&auml;&auml;n ty&ouml;yhteis&ouml;n toimintatapoja ja viritt&auml;&auml; keskusteluja organisaatioissa. Heid&auml;n tavassaan toimia yhdistyy sopivalla tavalla rento ote ja tieteellinen uskottavuus. Minulla on ollut ilo ty&ouml;skennell&auml; Filosofian Akatemian mahtavien tyyppien kanssa muutamassakin eri projektissa ja se on aina ollut antoisaa ja ajattelua uudistavaa.&#x201d;</p>
                 <div class="row reference-author-wrapper">
                   <div class="small-12 medium-6 columns"><span class="reference-author">Pirta Karlsson</span><br/>Head of HR,<br/>Fondia Oy</div>
-                  <div class="small-6 show-for-medium-up right-aligned columns"><img class="logo large" src="static/{{ version }}/img/ref/fondia-logo.jpg"/></div>
+                  <div class="small-6 show-for-medium-up right-aligned columns"><img class="logo large" src="/static/{{ version }}/img/ref/fondia-logo.jpg"/></div>
                 </div>
                 <div class="row show-for-small-only">
-                  <div class="columns"><img class="logo" src="static/{{ version }}/img/ref/fondia-logo.jpg"/><br/>&nbsp;</div>
+                  <div class="columns"><img class="logo" src="/static/{{ version }}/img/ref/fondia-logo.jpg"/><br/>&nbsp;</div>
                 </div>
               </div>
             </div>
@@ -95,16 +95,16 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="show-for-medium-up medium-3 medium-offset-2 large-offset-1 right-aligned columns">
-                <img class="author" src="static/{{ version }}/img/ref/ttl-jari.png"/>
+                <img class="author" src="/static/{{ version }}/img/ref/ttl-jari.png"/>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p>&#x201c;Idealismi ja pragmatismi, tutkimus ja k&auml;yt&auml;nt&ouml;, innostus ja aikaansaapuus! – Filosofian Akatemian loistoporukan ajattelussa ja toiminnassa kaikki n&auml;m&auml; ovat ihailtavassa liitossa. Mahtavaa ajatella, ett&auml; n&auml;ill&auml; leijonamielill&auml; on viel&auml; vuosikymmeni&auml; aikaa muuttaa maailma paremmaksi!&#x201d;</p>
                 <div class="row reference-author-wrapper">
                   <div class="small-12 medium-6 columns"><span class="reference-author">Jari Hakanen</span><br/>Tutkimusprofessori,<br/>Ty&ouml;terveyslaitos</div>
-                  <div class="small-6 show-for-medium-up right-aligned columns"><img class="logo large" src="static/{{ version }}/img/ref/ttl-logo.png"/></div>
+                  <div class="small-6 show-for-medium-up right-aligned columns"><img class="logo large" src="/static/{{ version }}/img/ref/ttl-logo.png"/></div>
                 </div>
                 <div class="row show-for-small-only">
-                  <div class="columns"><img class="logo large" src="static/{{ version }}/img/ref/ttl-logo.png"/></div>
+                  <div class="columns"><img class="logo large" src="/static/{{ version }}/img/ref/ttl-logo.png"/></div>
                 </div>
               </div>
             </div>
@@ -112,16 +112,16 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="show-for-medium-up medium-3 medium-offset-2 large-offset-1 right-aligned columns">
-                <img class="author" src="static/{{ version }}/img/ref/slush-julia.png"/>
+                <img class="author" src="/static/{{ version }}/img/ref/slush-julia.png"/>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p>&#x201c;Filosofian Akatemian k&auml;yt&auml;nn&ouml;nl&auml;heinen, innostava ja yhteiseen pohditaan kannustava valmennustyyli toimi Slush-organisaatiossa hyvin. Valmennuskokonaisuuden seurauksena koko Slushin inhimillisen kohtaamisen laatu, kokonaisvaltainen innostus ja vapaaehtoisorganisaation johtaminen saatiin nostettua uudelle tasolle. T&auml;m&auml;n vuoksi jatkamme laajaa valmennusyhteisty&ouml;t&auml;mme my&ouml;s vuonna 2016.&#x201d;</p>
                 <div class="row reference-author-wrapper">
                   <div class="small-12 medium-6 columns"><span class="reference-author">Julia H&auml;m&auml;l&auml;inen</span><br/>People Operations,<br/>Slush</div>
-                  <div class="small-6 show-for-medium-up right-aligned columns"><img class="logo large" src="static/{{ version }}/img/ref/slush-logo.png"/></div>
+                  <div class="small-6 show-for-medium-up right-aligned columns"><img class="logo large" src="/static/{{ version }}/img/ref/slush-logo.png"/></div>
                 </div>
                 <div class="row show-for-small-only">
-                  <div class="columns"><img class="logo large" src="static/{{ version }}/img/ref/slush-logo.png"/></div>
+                  <div class="columns"><img class="logo large" src="/static/{{ version }}/img/ref/slush-logo.png"/></div>
                 </div>
               </div>
             </div>
@@ -178,7 +178,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
-                <a href="https://www.talentumshop.fi/draivi.html" target="_blank"><img class="cover" src="static/{{ version }}/img/books/itseohjautuvuus.jpg"/></a>
+                <a href="https://www.talentumshop.fi/draivi.html" target="_blank"><img class="cover" src="/static/{{ version }}/img/books/itseohjautuvuus.jpg"/></a>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p><strong>Itseohjautuvuus – Miten organisoitua tulevaisuudessa?</strong></p>
@@ -190,7 +190,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
-                <a href="https://www.talentumshop.fi/draivi.html" target="_blank"><img class="cover" src="static/{{ version }}/img/books/draivi.jpg"/></a>
+                <a href="https://www.talentumshop.fi/draivi.html" target="_blank"><img class="cover" src="/static/{{ version }}/img/books/draivi.jpg"/></a>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p><strong>Draivi – Voiko sis&auml;ist&auml; motivaatiota johtaa?</strong></p>
@@ -202,7 +202,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
-                <a href="https://www.talentumshop.fi/kehita-kokeillen.html" target="_blank"><img class="cover" src="static/{{ version }}/img/books/kehita-kokeillen.jpg"/></a>
+                <a href="https://www.talentumshop.fi/kehita-kokeillen.html" target="_blank"><img class="cover" src="/static/{{ version }}/img/books/kehita-kokeillen.jpg"/></a>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p><strong>Kehit&auml; kokeillen – Organisaation k&auml;sikirja</strong></p>
@@ -214,7 +214,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
-                <a href="https://www.ps-kustannus.fi/Sonja-Str%C3%B6msholm/Sisu-Tarinoita-itsens%C3%A4-ylitt%C3%A4misest%C3%A4-ja-hyv%C3%A4n-tekemisest%C3%A4.html" target="_blank"><img class="cover" src="static/{{ version }}/img/books/sisu.jpg"/></a>
+                <a href="https://www.ps-kustannus.fi/Sonja-Str%C3%B6msholm/Sisu-Tarinoita-itsens%C3%A4-ylitt%C3%A4misest%C3%A4-ja-hyv%C3%A4n-tekemisest%C3%A4.html" target="_blank"><img class="cover" src="/static/{{ version }}/img/books/sisu.jpg"/></a>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p><strong>Sisu – Tarinoita itsens&auml; ylitt&auml;misest&auml; ja hyv&auml;n tekemisest&auml;</strong></p>
@@ -226,7 +226,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
-                <a href="http://www.gummerus.fi/fi/kirja/9789512099634/valonoorit/" target="_blank"><img class="cover" src="static/{{ version }}/img/books/valonoorit.jpg"/></a>
+                <a href="http://www.gummerus.fi/fi/kirja/9789512099634/valonoorit/" target="_blank"><img class="cover" src="/static/{{ version }}/img/books/valonoorit.jpg"/></a>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p><strong>Valon&ouml;&ouml;rit – Sis&auml;isen motivaation k&auml;sikirja</strong></p>
@@ -238,7 +238,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
-                <a href="https://www.ps-kustannus.fi/pospsy_kirja.html" target="_blank"><img class="cover" src="static/{{ version }}/img/books/positiivisen-psykologian-voima.jpg"/></a>
+                <a href="https://www.ps-kustannus.fi/pospsy_kirja.html" target="_blank"><img class="cover" src="/static/{{ version }}/img/books/positiivisen-psykologian-voima.jpg"/></a>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p><strong>Positiivisen psykologian voima</strong></p>
@@ -250,7 +250,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <!--div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
-                <a href="http://www.springer.com/gp/book/9783319181752" target="_blank"><img class="cover" src="static/{{ version }}/img/books/intuitive-thought.jpg"/></a>
+                <a href="http://www.springer.com/gp/book/9783319181752" target="_blank"><img class="cover" src="/static/{{ version }}/img/books/intuitive-thought.jpg"/></a>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p><strong>The Nature and Function of Intuitive Thought and Decision Making</strong></p>
@@ -262,7 +262,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
-                <a href="https://tahdonvoimankayttoohje.fi/" target="_blank"><img class="cover" src="static/{{ version }}/img/books/tahdonvoiman-kayttoohje.jpg"/></a>
+                <a href="https://tahdonvoimankayttoohje.fi/" target="_blank"><img class="cover" src="/static/{{ version }}/img/books/tahdonvoiman-kayttoohje.jpg"/></a>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p><strong>Tahdonvoiman k&auml;ytt&ouml;ohje</strong></p>
@@ -274,7 +274,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <!--div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
-                <a href="https://www.ps-kustannus.fi/Lauri-J%C3%A4rvilehto/Hauskan-oppimisen-vallankumous.html" target="_blank"><img class="cover small" src="static/{{ version }}/img/books/hauskan-oppimisen-vallankumous.jpg"/></a>
+                <a href="https://www.ps-kustannus.fi/Lauri-J%C3%A4rvilehto/Hauskan-oppimisen-vallankumous.html" target="_blank"><img class="cover small" src="/static/{{ version }}/img/books/hauskan-oppimisen-vallankumous.jpg"/></a>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p><strong>Hauskan oppimisen vallankumous</strong></p>
@@ -286,7 +286,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <!--div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
-                <a href="http://www.adlibris.com/fi/kirja/monenkirjavia-kuvitelmia-9789513178239" target="_blank"><img class="cover" src="static/{{ version }}/img/books/monenkirjavia-kuvitelmia.jpg"/></a>
+                <a href="http://www.adlibris.com/fi/kirja/monenkirjavia-kuvitelmia-9789513178239" target="_blank"><img class="cover" src="/static/{{ version }}/img/books/monenkirjavia-kuvitelmia.jpg"/></a>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p><strong>Monenkirjavia kuvitelmia</strong></p>
@@ -298,7 +298,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
-                <a href="https://upeaatyota.fi/" target="_blank"><img class="cover" src="static/{{ version }}/img/books/upeaa-tyota.jpg"/></a>
+                <a href="https://upeaatyota.fi/" target="_blank"><img class="cover" src="/static/{{ version }}/img/books/upeaa-tyota.jpg"/></a>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p><strong>Upeaa ty&ouml;t&auml; – N&auml;in teet itsellesi unelmiesi ty&ouml;paikan</strong></p>
@@ -310,7 +310,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
-                <a href="http://intokustannus.fi/kirja/kuningasjako/" target="_blank"><img class="cover" src="static/{{ version }}/img/books/kuningasjako.jpg"/></a>
+                <a href="http://intokustannus.fi/kirja/kuningasjako/" target="_blank"><img class="cover" src="/static/{{ version }}/img/books/kuningasjako.jpg"/></a>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p><strong>Kuningasjako – Miksi verotus on oikein</strong></p>
@@ -322,7 +322,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <!--div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
-                <a href="http://www.adlibris.com/fi/kirja/tee-itsestasi-mestariajattelija-9789513164843" target="_blank"><img class="cover small" src="static/{{ version }}/img/books/tee-itsestasi-mestariajattelija.jpg"/></a>
+                <a href="http://www.adlibris.com/fi/kirja/tee-itsestasi-mestariajattelija-9789513164843" target="_blank"><img class="cover small" src="/static/{{ version }}/img/books/tee-itsestasi-mestariajattelija.jpg"/></a>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p><strong>Tee itsest&auml;si mestariajattelija</strong></p>
@@ -353,7 +353,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
 
     {% if salesName == 'tytti' %}
     <div class="large-4 columns">
-      <img src="static/{{ version }}/img/tytti-circle.png"/>
+      <img src="/static/{{ version }}/img/tytti-circle.png"/>
       <h2>Tytti Kokko</h2>
       <div>
         Myyntipäällikkö<br/>
@@ -363,7 +363,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
     </div>
     {% elif salesName == 'maija' %}
     <div class="large-4 columns">
-      <img src="static/{{ version }}/img/maija-circle.png"/>
+      <img src="/static/{{ version }}/img/maija-circle.png"/>
       <h2>Maija Tiitinen</h2>
       <div>
         Myyntipäällikkö<br/>
@@ -373,7 +373,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
     </div>
     {% endif %}
     <div class="large-4 columns">
-      <img src="static/{{ version }}/img/address-circle.png"/>
+      <img src="/static/{{ version }}/img/address-circle.png"/>
       <h2>Filosofian Akatemia</h2>
       <div>
         Runeberginkatu 49 A 13<br/>
@@ -382,7 +382,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
       </div>
     </div>
      <div class="large-4 columns">
-      <img src="static/{{ version }}/img/karoliina-circle.png"/>
+      <img src="/static/{{ version }}/img/karoliina-circle.png"/>
       <h2>Karoliina Jarenko</h2>
       <div>
         Toimitusjohtaja<br/>

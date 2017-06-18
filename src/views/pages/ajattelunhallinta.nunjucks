@@ -50,20 +50,20 @@
       <p>Älykkäiden työtapojen ja virtaviivaisen tehtävänhallinnan ensisijainen tavoite on lisätä tietotyöläisen tilaa ajatella.  Työtä on aina enemmän kuin mitä voi saada tehtyä. Tietotyöläisen täytyy kyetä priorisoimaan ja suunnittelemaan työnsä niin, että saa arvokkaimmat työt tehtyä ja vähiten arvokkaan jätettyä kokonaan tekemättä.</p>
       <br/><br/>
       <h3>Moderni tietotyö vaatii hyvät itsensä johtamisen taidot</h3>
-      <p>Työ muuttaa muotoaan. Siirtyminen uuteen työhön vaatii vahvempia itsensä johtamisen taitoja kuin koskaan aiemmin. Modernissa tietotyössä yksittäisen tietotyöläisen työnkuva on äärimmäisen monimuotoinen tai jopa määrittelemätön. Muuttuvat tilanteet edellyttävät jatkuvaa uudelleen priorisointia ja organisaatiotason tavoitteiden huomioimista omassa päätöksenteossa. Uudenlaiset kommunikaatiovälineet ja alustat tuovat paljon uusia mahdollisuuksia, mutta vain niille jotka osaavat niitä hyödyntää. Hallitsemattomat informaatiovirrat ja keskeytykset ovat vältettävissä viisailla toimintatavoilla.</p>
+      <p>Työ muuttaa muotoaan. Siirtyminen uuteen työhön vaatii vahvempia itsensä johtamisen taitoja kuin koskaan aiemmin. Modernissa tietotyössä yksittäisen tietotyöläisen työnkuva on äärimmäisen monimuotoinen tai jopa määrittelemätön. Muuttuvat tilanteet edellyttävät jatkuvaa uudelleen priorisointia ja organisaatiotason tavoitteiden huomioimista omassa päätöksenteossa. Uudenlaiset kommunikaatiovälineet ja alustat tuovat paljon uusia mahdollisuuksia, mutta vain niille jotka osaavat niitä hyödyntää. Hallitsemattomat informaatiovirrat ja keskeytykset ovat vältettävissä viisailla toimintatavoilla.</p><br/>
       <div class="row show-for-medium-up">
-        <div class="small-offset-2 small-4 columns">
-          <br/><img src="/static/{{ version }}/img/blue_arrow.png"></img><br/>
+        <div class="small-offset-3 small-4 columns">
+          <br/><img class="arrow" src="/static/{{ version }}/img/blue_arrow.png"></img><br/>
         </div>
         <div class="small-4 end columns">
-          <br/><img src="/static/{{ version }}/img/blue_arrow.png"></img><br/>
+          <br/><img class="arrow" src="/static/{{ version }}/img/blue_arrow.png"></img><br/>
         </div>
       </div>
     </div>
     <div class="large-4 columns end center-aligned-small">
       <h3>Ajattelunhallinnan valmennus pureutuu tietotyön olennaisimpiin haasteisiin</h3>
       <p>Ajattelunhallinnan valmennusohjelmassa yhdistyvät Filosofian Akatemian syvä osaaminen ihmismielen toiminnasta sekä modernin tietotyön älykkäistä työtavoista. Valmennuksen osallistujat kehittävät omia työtapojaan virtaviivaisemmiksi ja tehokkaammiksi ja oppivat samalla kokeilemalla kehittämisen ja jatkuvan parantamisen toimintatavan.</p>
-      <br/><br/>
+      <br/>
       <h3>Työtapoja kehitetään systemaattisten kokeilujen kautta</h3>
       <p>Tämän valmennuksen metodiikka perustuu vankkaan tutkimustietoon siitä, miten ihmismieli toimii ja kuinka pysyviä muutoksia saadaan aikaan. Ymmärrämme mikä tekee rutiinien muuttamisesta vaikeaa ja olemme suunnitelleet valmennuksen pedagogiikan pohjautuen uusimpaan tutkimustietoon rutiinien muuttamisen psykologiasta.</p>
       <p>Valmennuksen ajan osallistujat kehittävät toimintaansa pienten kokeilujen kautta. Jokaisen tapaamisen päätteeksi osallistujat ottavat arkeensa uudenlaisen toimintatavan, ja kehittelevät sitä kohti parasta lopputulosta. Näin osallistujat sisäistävät kokeilemalla kehittämisen menetelmän ja voivat myöhemmin soveltaa sitä myös muissa konteksteissa. Jatkuvasta parantamisesta tulee luonnollinen tapa tehdä työtä.</p>
@@ -77,8 +77,8 @@
       <br/><br/>
     </div>
   </div>
-  <div class="row">
-    <div class="module small-offset-2 large-offset-3 large-2 columns">
+  <div class="row module-container">
+    <div class="module leftmost small-offset-2 large-2 columns">
       <span>Suunnittelu, tavoitteenasettelu ja priorisointi</span>
     </div>
     <div class="module small-offset-2 large-offset-0 large-2 columns">
@@ -90,7 +90,7 @@
   </div>
   <br/>
   <div class="row">
-    <div class="module small-offset-2 large-offset-3 large-2 columns">
+    <div class="module leftmost small-offset-2 large-2 columns">
       <span>Tehtävänhallinta ja tehokas digitaalisten työkalujen käyttö</span>
     </div>
     <div class="module small-offset-2 large-offset-0 large-2 columns">

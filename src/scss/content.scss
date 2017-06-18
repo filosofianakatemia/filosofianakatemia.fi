@@ -425,6 +425,11 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   }
 }
 
+img.arrow {
+  height: 60px;
+  text-align: right;
+}
+
 /* LARGE */
 @media only screen and (min-width: 64.063em){
   #org-circle {
@@ -576,3 +581,34 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   }
 }
 
+/* LARGE followed by slightly larger */
+@media only screen and (min-width: 64.063em){
+  .row > .module.leftmost {
+    margin-left: 14.5vw !important;
+  }
+}
+@media only screen and (min-width: 70em){
+  .row > .module.leftmost {
+    margin-left: 16.5vw !important;
+  }
+}
+@media only screen and (min-width: 75em){
+  .row > .module.leftmost {
+    margin-left: 18.5vw !important;
+  }
+}
+@media only screen and (min-width: 80em){
+  .row > .module.leftmost {
+    margin-left: 20.5vw !important;
+  }
+}
+@media only screen and (min-width: 85em){
+  .row > .module.leftmost {
+    margin-left: 22.5vw !important;
+  }
+}
+@media only screen and (min-width: 95em){
+  .row > .module.leftmost {
+    margin-left: 25vw !important;
+  }
+}
