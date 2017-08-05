@@ -296,18 +296,6 @@ export class People {
           description: "tytti-kokko-kuvaus",
         },
       },
-      {
-        id: "villiam",
-        name: "Villiam Virkkunen",
-        pictures: {
-          large: this.imagePathPrefix + "villiam-large.jpg",
-          thumbnail: this.imagePathPrefix + "villiam-thumbnail.png",
-        },
-        paths: {
-          page: "villiam-virkkunen",
-          description: "villiam-virkkunen-kuvaus",
-        },
-      },
     ];
   }
 }
