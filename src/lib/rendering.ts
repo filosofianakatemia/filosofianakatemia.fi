@@ -10,6 +10,7 @@ interface ContentExtract {
   content?: string;
   pictureData?: any;
   lead?: string;
+  description?: string;
   source?: string;
 }
 
@@ -19,6 +20,7 @@ interface BlogPost {
   content?: string;
   lessThanFourParagraphs: boolean;
   lead?: string;
+  description?: string;
   author?: any;
   pictureData?: any;
   published?: string;
@@ -73,6 +75,7 @@ export class Render {
       blog.lessThanFourParagraphs = true;
     }
     blog.lead = extractResult.lead;
+    blog.description = extractResult.description;
 
     if (extractResult.pictureData) {
       blog.pictureData = extractResult.pictureData;
@@ -159,6 +162,7 @@ export class Render {
       }
       const secondChildElement = bodyElement.children[1];  // Get the second child element.
       extractedHTML.lead = secondChildElement.innerHTML;
+      extractedHTML.description = secondChildElement.textContent;
 
       bodyElement.removeChild(firstChildElement);
       bodyElement.removeChild(secondChildElement);

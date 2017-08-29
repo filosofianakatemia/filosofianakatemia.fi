@@ -2,12 +2,17 @@
 {% block title %}{{ super() }} | Blogi | {{ blog.title }}{% endblock %}
 {% block ogtitle %}{{ blog.title }}{% endblock %}
 {% block ogtype %}article{% endblock %}
-{% block ogdescription %}{{ blog.lead }}{% endblock %}
+{% block ogdescription %}{{ blog.description }}{% endblock %}
 {% block ogurl %}https://filosofianakatemia.fi/blogi/{{ blog.path }}{% endblock %}
 {% if blog.pictureData %}
   {% block ogimages %}
   <meta property="og:image:url" content="{{ blog.pictureData.source }}" />
   <meta property="og:image:secure_url" content="{{ blog.pictureData.source }}" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ blog.pictureData.source }}" />
+  <meta name="twitter:title" content="{{ blog.title }}">
+  <meta name="twitter:description" content="{{ blog.description }}">
+  <meta name="twitter:site" content="@filosofianakate">
   {% endblock %}
 {% endif %}
 {% block bodyattrs %}class="blog-text"{% endblock %}
