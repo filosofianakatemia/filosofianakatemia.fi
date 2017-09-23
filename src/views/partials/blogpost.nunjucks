@@ -11,7 +11,7 @@
     </a>
   {% endif %}
 {% else %}
-  <span>{{ blog.published | d.M.yyyy }} | Vieraskyn&auml;</span>
+  <span>{{ blog.published | d.M.yyyy }}</span>
 {% endif %}
 {% endmacro %}
 

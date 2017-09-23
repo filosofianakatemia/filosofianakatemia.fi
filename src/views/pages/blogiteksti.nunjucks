@@ -41,7 +41,7 @@
   {% include 'partials/blogpost.nunjucks' %}
 </div>
 {% import 'partials/newsletter.nunjucks' as newsletter %}
-{{ newsletter.initialize('Haluatko kuulla lisää vankkaan tutkimukseen perustuvaa tietoa hyvinvoinnista ja tuloksen tekemisestä?') }}
+{{ newsletter.initialize() }}
 {% endblock %}
 
 {% block footer %}

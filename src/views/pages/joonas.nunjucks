@@ -8,5 +8,6 @@
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/joonas-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
-{% block personquote %}Joonas on loistava energisoimaan porukkaa ja olemaan l&auml;sn&auml;. H&auml;n ajattelee aina ihailtavalla tavalla, ett&auml; eteen tuleviin asioihin voi vaikuttaa ja muuttaa niit&auml; &ndash; ja sitten h&auml;n onnistuu siin&auml;.{% endblock %}
-{% block personquoteauthor %}Villiam Virkkunen{% endblock %}
+{% block personquote %}
+Joonaksella on käsittämätön ihmisen arvoa alleviivaava katse ja kyky olla läsnä toiselle juuri sellaisena kuin hän siinä hetkessä on. Joonaksen avoimuus ja sydämellisyys antaa muillekin luvan tuoda aidoimman version itsestään esiin. Joonaksen supervoima on syvän yhteyden löytäminen hyvin erilaisiin ihmisiin.{% endblock %}
+{% block personquoteauthor %}Iida Mäkikallio{% endblock %}
