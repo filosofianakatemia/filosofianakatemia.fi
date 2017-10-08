@@ -1,7 +1,7 @@
 {% extends "base.nunjucks" %}
 {% set pageName = 'Filosofian Akatemia | Sisäisen motivaation johtamisen valmennus esimiehille' %}
 {% set pageDescription = 'Filosofian Akatemian Sisäisen motivaation johtamisen valmennus vie esimiehet puolen vuoden mittaiselle kasvun ja kehittymisen matkalle.' %}
-{% set pageImage = 'https://filosofianakatemia.fi/static/' + version + '/img/bg-services-sismot.jpg' %}
+{% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-sismot.jpg' %}
 {% set pageUrl = 'https://filosofianakatemia.fi/palvelut/sisaisen-motivaation-johtaminen' %}
 {% block title %}{{ pageName }}{% endblock %}
 {% block ogtitle %}{{ pageName }}{% endblock %}
