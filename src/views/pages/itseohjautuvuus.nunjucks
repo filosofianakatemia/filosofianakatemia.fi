@@ -1,7 +1,22 @@
 {% extends "base.nunjucks" %}
-{% set pageName = 'Itseohjautuvuuden vahvistamisen kehitysprosessi' %}
+{% set pageName = 'Filosofian Akatemia | Itseohjautuvuuden vahvistamisen kehitysprosessi' %}
+{% set pageDescription = 'Itseohjautuvuutta tukevissa organisaatioissa tehdään enemmän innovaatioita, ollaan tyytyväisempiä ja sitoutuneempia työhön ja säästetään reippaasti turhaan byrokratiaan uppoavissa kustannuksissa.' %}
+{% set pageImage = 'https://filosofianakatemia.fi/static/' + version + '/img/bg-services-itseohjautuvuus.jpg' %}
+{% set pageUrl = 'https://filosofianakatemia.fi/palvelut/itseohjautuvuus' %}
+{% block title %}{{ pageName }}{% endblock %}
+{% block ogtitle %}{{ pageName }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
-{% block ogurl %}{{ super() }}/palvelut/itseohjautuvuus{% endblock %}
+{% block ogdescription %}{{ pageDescription }}{% endblock %}
+{% block ogurl %}{{ pageUrl }}{% endblock %}
+{% block ogimages %}
+<meta property="og:image:url" content="{{ pageImage }}" />
+<meta property="og:image:secure_url" content="{{ pageImage }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ pageImage }}" />
+<meta name="twitter:title" content="{{ pageName }}">
+<meta name="twitter:description" content="{{ pageDescription }}">
+<meta name="twitter:site" content="@filosofianakate">
+{% endblock %}
 {% block bodyattrs %}class="services details"{% endblock %}
 {% block topbar %}
 <ul class="title-area">

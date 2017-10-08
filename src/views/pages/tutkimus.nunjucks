@@ -135,8 +135,3 @@
 </div>
 {% include 'partials/address.nunjucks' %}
 {% endblock %}
-
-{% block scripts %}
-{% include 'partials/scrolling.nunjucks' %}
-{% endblock %}
-
