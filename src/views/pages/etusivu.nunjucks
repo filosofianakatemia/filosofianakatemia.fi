@@ -32,8 +32,8 @@
   <div class="ingress">Huomisen voittajaorganisaatiot toimivat kevyin rakentein, jalostavat jatkuvasti toimintaansa ja johtavat
 yhdessä luotuja tavoitteita kohti. Ketteryys ja uusiutuminen perustuvat itseohjautuviin, omaa työtään kehittäviin, sisäisesti motivoituneisiin ihmisiin.<br/><br/>
 Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
-  <a href="#contact" class="button btn-contact">OTA YHTEYTT&Auml;</a>
-  <a href="#front-top" class="scroll-down show-for-large-up">
+  <a href="/#contact" class="button btn-contact">OTA YHTEYTT&Auml;</a>
+  <a href="/#front-top" class="scroll-down show-for-large-up">
     <span class="text-scroll-down">VIERIT&Auml; ALAS</span></br><span class="icon-arrow-down"></span>
   </a>
 </div>
@@ -410,7 +410,6 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
 {% endblock %}
 
 {% block scripts %}
-{% include 'partials/scrolling.nunjucks' %}
 {% include 'partials/mailchimp.nunjucks' %}
 {% include 'partials/swiper.nunjucks' %}
 {% endblock %}
