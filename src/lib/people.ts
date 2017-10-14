@@ -169,7 +169,7 @@ export class People {
         name: "Maija Tiitinen",
         pictures: {
           large: this.imagePathPrefix + "maija-large.jpg",
-          thumbnail: this.imagePathPrefix + "maija-thumbnail.png",
+          thumbnail: this.imagePathPrefix + "maija-thumbnail.jpg",
         },
         paths: {
           page: "maija-tiitinen",
@@ -289,7 +289,7 @@ export class People {
         name: "Tytti Kokko",
         pictures: {
           large: this.imagePathPrefix + "tytti-large.jpg",
-          thumbnail: this.imagePathPrefix + "tytti-thumbnail.png",
+          thumbnail: this.imagePathPrefix + "tytti-thumbnail.jpg",
         },
         paths: {
           page: "tytti-kokko",
