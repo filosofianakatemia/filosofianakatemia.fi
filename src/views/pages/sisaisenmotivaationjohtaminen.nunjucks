@@ -1,9 +1,9 @@
 {% extends "base.nunjucks" %}
-{% set pageName = 'Filosofian Akatemia | Sisäisen motivaation johtamisen valmennus esimiehille' %}
+{% set pageName = 'Sisäisen motivaation johtamisen valmennus esimiehille' %}
 {% set pageDescription = 'Filosofian Akatemian Sisäisen motivaation johtamisen valmennus vie esimiehet puolen vuoden mittaiselle kasvun ja kehittymisen matkalle.' %}
 {% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-sismot.jpg' %}
 {% set pageUrl = 'https://filosofianakatemia.fi/palvelut/sisaisen-motivaation-johtaminen' %}
-{% block title %}{{ pageName }}{% endblock %}
+{% block title %}{{ pageName }} | {{ super() }}{% endblock %}
 {% block ogtitle %}{{ pageName }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogdescription %}{{ pageDescription }}{% endblock %}

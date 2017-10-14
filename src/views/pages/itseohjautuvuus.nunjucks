@@ -1,9 +1,9 @@
 {% extends "base.nunjucks" %}
-{% set pageName = 'Filosofian Akatemia | Itseohjautuvuuden vahvistamisen kehitysprosessi' %}
+{% set pageName = 'Itseohjautuvuuden vahvistamisen kehitysprosessi' %}
 {% set pageDescription = 'Itseohjautuvuutta tukevissa organisaatioissa tehdään enemmän innovaatioita, ollaan tyytyväisempiä ja sitoutuneempia työhön ja säästetään reippaasti turhaan byrokratiaan uppoavissa kustannuksissa.' %}
 {% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-itseohjautuvuus.jpg' %}
 {% set pageUrl = 'https://filosofianakatemia.fi/palvelut/itseohjautuvuus' %}
-{% block title %}{{ pageName }}{% endblock %}
+{% block title %}{{ pageName }} | {{ super() }}{% endblock %}
 {% block ogtitle %}{{ pageName }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogdescription %}{{ pageDescription }}{% endblock %}

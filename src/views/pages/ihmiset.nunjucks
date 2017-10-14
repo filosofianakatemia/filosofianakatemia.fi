@@ -1,8 +1,9 @@
 {% extends "base.nunjucks" %}
-{% set pageName = 'ihmiset' %}
-{% block title %}{{ super() }} | Ihmiset{% endblock %}
+{% set pageName = 'Ihmiset' %}
+{% block title %}{{ pageName }} | {{ super() }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
-{% block ogtitle %}{{ super() }} | Ihmiset{% endblock %}
+{% block ogtitle %}{{ pageName }}{% endblock %}
+{% block ogdescription %}Filosofian Akatemian ihmiset esittäytyvät{% endblock %}
 {% block ogurl %}{{ super() }}/ihmiset{% endblock %}
 {% block description %}Me teemme t&ouml;it&auml; valtavalla innolla. Filosofian Akatemian ihmiset esitt&auml;ytyv&auml;t.{% endblock %}
 {% block bodyattrs %}class="people"{% endblock %}

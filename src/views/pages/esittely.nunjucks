@@ -1,5 +1,8 @@
 {% extends "base.nunjucks" %}
 {% set pageName = 'Filosofian Akatemian esittely' %}
+{% block title %}{{ pageName }}{% endblock %}
+{% block ogtitle%}{{ pageName }}{% endblock %}
+{% block ogdescription%}Filosofian Akatemia on luova yhdistelmä innostavaa valmennus- ja konsultointiosaamista sekä syvää tieteellispohjaista ymmärrystä ihmistieteistä ja organisaatiotutkimuksesta. {% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogurl %}{{ super() }}/esittely{% endblock %}
 {% block bodyattrs %}class="introduction"{% endblock %}

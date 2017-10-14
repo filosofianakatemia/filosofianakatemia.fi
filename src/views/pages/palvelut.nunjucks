@@ -1,9 +1,10 @@
 {% extends "base.nunjucks" %}
-{% set pageName = 'palvelut' %}
-{% block title %}{{ super() }} | Palvelut{% endblock %}
+{% set pageName = 'Palvelut' %}
+{% block title %}{{ pageName }} | {{ super() }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
-{% block ogtitle %}{{ super() }} | Palvelut{% endblock %}
+{% block ogtitle %}{{ pageName }}{% endblock %}
 {% block ogurl %}{{ super() }}/palvelut{% endblock %}
+{% block ogdescription %}Filosofian Akatemian palvelut{% endblock %}
 {% block description %}Filosofian Akatemian palvelut{% endblock %}
 {% block bodyattrs %}class="services"{% endblock %}
 

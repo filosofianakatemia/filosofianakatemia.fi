@@ -1,9 +1,9 @@
 {% extends "base.nunjucks" %}
-{% set pageName = 'Filosofian Akatemia | Ajattelunhallinta – uuden työn taidot' %}
+{% set pageName = 'Ajattelunhallinta – uuden työn taidot' %}
 {% set pageDescription = 'Filosofian Akatemian Ajattelunhallinnan valmennus pureutuu tietotyön olennaisimpiin haasteisiin.' %}
 {% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-ajattelunhallinta.jpg' %}
 {% set pageUrl = 'https://filosofianakatemia.fi/palvelut/ajattelunhallinta' %}
-{% block title %}{{ pageName }}{% endblock %}
+{% block title %}{{ pageName }} | {{ super() }}{% endblock %}
 {% block ogtitle %}{{ pageName }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogdescription %}{{ pageDescription }}{% endblock %}

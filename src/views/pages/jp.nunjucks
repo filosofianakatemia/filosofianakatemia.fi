@@ -1,7 +1,8 @@
 {% extends "ihminen.nunjucks" %}
 {% set personName = 'Jukka-Pekka Salo' %}
-{% block title %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
-{% block ogtitle %}{{ super() }} | Ihmiset | {{ personName }}{% endblock %}
+{% block title %}{{ personName }} | {{ super() }}{% endblock %}
+{% block ogtitle %}{{ personName }}{% endblock %}
+{% block ogdescription %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
 {% block ogurl %}{{ super() }}/ihmiset/jp{% endblock %}
 {% block ogimages %}
 <meta property="og:image:url" content="https://filosofianakatemia.fi/static/{{ version }}/img/jp-small.jpg" />

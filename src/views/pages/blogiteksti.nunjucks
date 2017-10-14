@@ -1,5 +1,5 @@
 {% extends "base.nunjucks" %}
-{% block title %}{{ super() }} | Blogi | {{ blog.title }}{% endblock %}
+{% block title %}{{ blog.title }} | {{ super() }}{% endblock %}
 {% block ogtitle %}{{ blog.title }}{% endblock %}
 {% block ogtype %}article{% endblock %}
 {% block ogdescription %}{{ blog.description }}{% endblock %}

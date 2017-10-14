@@ -1,9 +1,10 @@
 {% extends "base.nunjucks" %}
-{% set pageName = 'blogi' %}
-{% block title %}{{ super() }} | Blogi{% endblock %}
+{% set pageName = 'Blogi' %}
+{% block title %}{{ pageName }} | {{ super() }} {% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogurl %}{{ super() }}/blogi{% endblock %}
-{% block ogtitle %}{{ super() }} | Blogi{% endblock %}
+{% block ogtitle %}{{ pageName }}{% endblock %}
+{% block ogdescription %}Filosofian Akatemian viikottain ilmestyvä blogi{% endblock %}
 {% block bodyattrs %}class="blog"{% endblock %}
 
 {% block topbar %}
