@@ -1,0 +1,183 @@
+{% extends "base.nunjucks" %}
+{% set pageName = 'Huipputiimien sirkusvalmennus' %}
+{% set pageDescription = 'Hyvien ja parhaiden tiimien eron salaisuus riippuu tutkitusti siitä, kuinka laadukasta tiimin jäsenten välinen vuorovaikutus on. Onnistunut vuorovaikutus perustuu luottamukseen, johon Sirkusvalmennuksessa pureudutaan kokemuksellisuuden ja teorian kautta.'%}
+{% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-sirkusvalmennus.jpg' %}
+{% set pageUrl = 'https://filosofianakatemia.fi/palvelut/sirkusvalmennus' %}
+{% block title %}{{ pageName }} | {{ super() }}{% endblock %}
+{% block ogtitle %}{{ pageName }}{% endblock %}
+{% block ogtype %}{{ super() }}{% endblock %}
+{% block ogdescription %}{{ pageDescription }}{% endblock %}
+{% block ogurl %}{{ pageUrl }}{% endblock %}
+{% block ogimages %}
+<meta property="og:image:url" content="{{ pageImage }}" />
+<meta property="og:image:secure_url" content="{{ pageImage }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ pageImage }}" />
+<meta name="twitter:title" content="{{ pageName }}">
+<meta name="twitter:description" content="{{ pageDescription }}">
+<meta name="twitter:site" content="@filosofianakate">
+{% endblock %}
+{% block bodyattrs %}class="services details"{% endblock %}
+{% block topbar %}
+<ul class="title-area">
+  <li class="name">
+    <div class="logo"><a href="/"><span class="icon-logo-fill-name"></span></a></div>
+  </li>
+  <li class="toggle-topbar menu-icon"><a href="/"><span></span></a></li>
+</ul>
+
+<section class="top-bar-section">
+  <ul class="right">
+    <li class="show-for-small-only"><a href="/">Etusivu</a></li>
+    <li><a href="/ihmiset">Ihmiset</a></li>
+    <li class="active"><a href="/palvelut">Palvelut</a></li>
+    <li><a href="/tutkimus">Tutkimus</a></li>
+    <li><a href="/blogi">Blogi</a></li>
+  </ul>
+</section>
+{% endblock %}
+
+{% block hero %}
+<div id="sirkusvalmennus" class="hero">
+  <div class="row">
+    <div class="medium-10 small-centered column">
+      <div class="center-aligned-small section-introduction">
+        {# Breadcrumbs #}
+        <div class="row breadcrumbs">
+          <div class="column">
+            <a href="/palvelut">Palvelut<span class="icon-arrow-right"></span></a>
+            <span class="font-bold">Huipputiimien sirkusvalmennus</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="icon"><img src="/static/{{ version }}/img/sirkusvalmennus_icon.png"/></div>
+  <div class="slogan">Huipputiimien sirkusvalmennus</div>
+  <div class="ingress">Sirkuskoulu Woltin ja Filosofian Akatemian järjestämässä elämyksellisessä Huipputiimi-sirkusvalmennuksessa nostat tiimisi uudelle tasolle.<br/><br/></div>
+</div>
+{% endblock %}
+
+{% block main %}
+<div id="sirkusvalmennus-top" class="section separate">
+  <div class="row">
+    <div class="circle-image large-4 large-offset-2 columns">
+      <img src="/static/{{ version }}/img/sirkusvalmennus-pyramidi.png"></img>
+      <br/><br/>
+    </div>
+    <div class="large-offset-1 large-4 columns end center-aligned-small">
+      <h2 class="big">Hyvästä parhaaksi</h2>
+      <p>Hyvien ja parhaiden tiimien eron salaisuus riippuu tutkitusti siitä, kuinka laadukasta tiimin jäsenten välinen vuorovaikutus on. Osaamisella on merkitystä vain jos tiimin jäsenet haluavat ja pystyvät tuomaan osaamisensa yhteiseksi hyödyksi. Innovaatioita syntyy vain jos ihmiset uskaltavat ilmaista vapaasti ajatuksiaan ja ideoitaan. Toiminta on tehokasta vain jos kommunikaatio sujuu ja toimitaan innostavassa hengessä.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <h2 class="big">Luottamuksen rakentaminen ja psykologisesti turvallisen ilmapiirin luominen ovat taitoja, joita voi kehittää.</h2>
+      <br class="show-for-large-up"/><br/>
+    </div>
+  </div>
+  <div class="row">
+   <div class="large-offset-2 large-4 columns left-aligned">
+      <p>Jongleerausta, kehonhallintaa, ihmispyramidien rakentamista ja yhteishengen syventämistä. Valmennuksessa osallistujat oppivat, miten luottamus näyttäytyy työn arjessa ja miten jokainen voi vaikuttaa avoimen ja innostavan työympäristön luomiseen. Osallistujat pääsevät oppimaan kokemuksellisesti mitä luottamus tarkoittaa ja miten riemastuttavaa on uskaltaa luottaa toisiin ja antaa yhteisen hengen kannatella. Leikin ja fyysisen harjoittelun tuloksena avautuu uusi mahdollisuus kokea työyhteisön voima ja luottamus.</p>
+    </div>
+    <div class="circle-image large-4 end columns">
+      <br class="hide-for-large-up"/><br class="hide-for-large-up"/>
+      <img src="/static/{{ version }}/img/sirkusvalmennus-frank.png"></img>
+      <br/><br/>
+    </div>
+  </div>
+   <div class="row">
+    <div class="circle-image large-4 large-offset-2 columns">
+      <div class="show-for-large-up">
+        <br/><br/>
+        <img src="/static/{{ version }}/img/sirkusvalmennus-maria.png"></img>
+        <br/><br/>
+      </div>
+    </div>
+    <div class="large-offset-1 large-4 columns end center-aligned-small">
+      <br class="show-for-large-up"/><br class="show-for-large-up"/>
+      <h2 class="big">Kenelle valmennus sopii?</h2>
+      <p>Valmennus on suunnattu työyhteisöille, joiden on tärkeää kokea hyvää yhteishenkeä ja kyetä käyttämään oma potentiaalinsa tiimeissä mahdollisimman täysimääräisesti. Valmennus sopii kaikenikäisille ja -kuntoisille eikä se edellytä aiempia taitoja kehonhallinnasta tai akrobatiasta.</p>
+      <p>
+        <b>Ryhmäkoko:</b> 10–20<br/>
+        <b>Kesto:</b> 6 tuntia
+      </p>
+    </div>
+  </div>
+</div>
+<div class="section wrapper-embedded">
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <br/><br/>
+      <h2 class="big">Valmentajat</h2>
+      <br/><br/>
+    </div>
+  </div>
+  <div class="row module-container">
+    <div class="circle-image large-offset-2 large-4 columns">
+      <img src="/static/{{ version }}/img/iida-circle.png"></img><br/>
+      <h3><a href="/ihmiset/iida">Iida Mäkikallio</a></h3>
+      <b>Filosofian Akatemia</b>
+      <br/><br/>
+    </div>
+    <div class="circle-image large-offset-1 large-4 columns end">
+      <img src="/static/{{ version }}/img/sirkusvalmennus-juha.png"></img></br>
+      <h3>Juha Ekorre</h3>
+      <b>sirkuskoulu Woltti</b>
+      <br/><br/>
+    </div>
+  </div>
+</div>
+
+<div class="section separate">
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <h2 class="big">Vietä vauhdikas tiimipäivä! Ota yhteyttä!</h2>
+      <br/><br/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="circle-image large-offset-2 large-4 columns">
+      <img src="/static/{{ version }}/img/maija-circle.png"/>
+      <h2>Maija Tiitinen</h2>
+      <div>
+        Myyntipäällikkö<br/>
+        <a href="tel:+358505769230">+358 50 576 9230</a><br/>
+        <a href="mailto:maija.tiitinen@filosofianakatemia.fi">maija.tiitinen@filosofianakatemia.fi</a>
+      </div>
+      <br/><br/>
+    </div>
+    <div class="circle-image large-offset-1 large-4 end columns">
+      <img src="/static/{{ version }}/img/iida-circle.png"/>
+      <h2>Iida Mäkikallio</h2>
+      <div>
+        Valmentaja<br/>
+        <a href="tel:+358440589772">+358 44 058 9772</a><br/>
+        <a href="mailto:iida.makikallio@filosofianakatemia.fi">iida.makikallio@filosofianakatemia.fi</a>
+      </div>
+      <br/><br/>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+{% endblock %}
+
+{% block footer %}
+<div class="row hide-for-small-only">
+  <div class="medium-12 large-8 large-offset-2 end columns">
+    <ul class="icon-bar five-up">
+      <li class="item"><a href="/">Etusivu</a></li>
+      <li class="item"><a href="/ihmiset">Ihmiset</a></li>
+      <li class="item active"><a href="/palvelut">Palvelut</a></li>
+      <li class="item"><a href="/tutkimus">Tutkimus</a></li>
+      <li class="item"><a href="/blogi">Blogi</a></li>
+    </ul>
+  </div>
+</div>
+{% include 'partials/address.nunjucks' %}
+{% endblock %}
