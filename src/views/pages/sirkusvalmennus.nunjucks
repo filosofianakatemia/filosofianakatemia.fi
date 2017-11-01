@@ -54,7 +54,7 @@
   </div>
   <div class="icon"><img src="/static/{{ version }}/img/sirkusvalmennus_icon.png"/></div>
   <div class="slogan">Huipputiimien sirkusvalmennus</div>
-  <div class="ingress">Sirkuskoulu Woltin ja Filosofian Akatemian järjestämässä elämyksellisessä Huipputiimi-sirkusvalmennuksessa nostat tiimisi uudelle tasolle.<br/><br/></div>
+  <div class="ingress">Sirkuskoulu Woltin ja Filosofian Akatemian järjestämässä elämyksellisessä Huipputiimien sirkusvalmennuksessa nostat tiimisi uudelle tasolle.<br/><br/></div>
 </div>
 {% endblock %}
 
@@ -77,7 +77,7 @@
     </div>
   </div>
   <div class="row">
-   <div class="large-offset-2 large-4 columns left-aligned">
+   <div class="large-offset-2 large-4 columns center-aligned-small">
       <p>Jongleerausta, kehonhallintaa, ihmispyramidien rakentamista ja yhteishengen syventämistä. Valmennuksessa osallistujat oppivat, miten luottamus näyttäytyy työn arjessa ja miten jokainen voi vaikuttaa avoimen ja innostavan työympäristön luomiseen. Osallistujat pääsevät oppimaan kokemuksellisesti mitä luottamus tarkoittaa ja miten riemastuttavaa on uskaltaa luottaa toisiin ja antaa yhteisen hengen kannatella. Leikin ja fyysisen harjoittelun tuloksena avautuu uusi mahdollisuus kokea työyhteisön voima ja luottamus.</p>
     </div>
     <div class="circle-image large-4 end columns">
