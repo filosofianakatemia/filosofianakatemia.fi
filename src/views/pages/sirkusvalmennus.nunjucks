@@ -54,7 +54,7 @@
   </div>
   <div class="icon"><img src="/static/{{ version }}/img/sirkusvalmennus_icon.png"/></div>
   <div class="slogan">Huipputiimien sirkusvalmennus</div>
-  <div class="ingress">Sirkuskoulu Woltin ja Filosofian Akatemian järjestämässä elämyksellisessä Huipputiimien sirkusvalmennuksessa nostat tiimisi uudelle tasolle.<br/><br/></div>
+  <div class="ingress">Sirkuskoulu Woltin ja Filosofian Akatemian järjestämässä elämyksellisessä valmennuksessa nostat tiimisi yhteistyön uudelle tasolle.</div>
 </div>
 {% endblock %}
 
@@ -66,8 +66,8 @@
       <br/><br/>
     </div>
     <div class="large-offset-1 large-4 columns end center-aligned-small">
-      <h2 class="big">Hyvästä parhaaksi</h2>
-      <p>Hyvien ja parhaiden tiimien eron salaisuus riippuu tutkitusti siitä, kuinka laadukasta tiimin jäsenten välinen vuorovaikutus on. Osaamisella on merkitystä vain jos tiimin jäsenet haluavat ja pystyvät tuomaan osaamisensa yhteiseksi hyödyksi. Innovaatioita syntyy vain jos ihmiset uskaltavat ilmaista vapaasti ajatuksiaan ja ideoitaan. Toiminta on tehokasta vain jos kommunikaatio sujuu ja toimitaan innostavassa hengessä.</p>
+      <h2 class="big">Psykologinen turva menestyksen kulmakivenä</h2>
+      <p>Hyvien ja parhaiden tiimien eron salaisuus riippuu tutkitusti siitä, kuinka laadukasta tiimin jäsenten välinen vuorovaikutus on. Osaamisella on merkitystä vain jos tiimin jäsenet haluavat ja pystyvät tuomaan osaamisensa yhteiseksi hyödyksi. Uudenlaisia ratkaisuja ei synny elleivät ihmiset uskalla ilmaista ajatuksiaan vapaasti ja heittää ilmoille puolikkaitakin oivalluksia. Ei ole innovointia ilman sitä tukevaa kulttuuria.</p>
     </div>
   </div>
   <div class="row">
@@ -78,7 +78,8 @@
   </div>
   <div class="row">
    <div class="large-offset-2 large-4 columns center-aligned-small">
-      <p>Jongleerausta, kehonhallintaa, ihmispyramidien rakentamista ja yhteishengen syventämistä. Valmennuksessa osallistujat oppivat, miten luottamus näyttäytyy työn arjessa ja miten jokainen voi vaikuttaa avoimen ja innostavan työympäristön luomiseen. Osallistujat pääsevät oppimaan kokemuksellisesti mitä luottamus tarkoittaa ja miten riemastuttavaa on uskaltaa luottaa toisiin ja antaa yhteisen hengen kannatella. Leikin ja fyysisen harjoittelun tuloksena avautuu uusi mahdollisuus kokea työyhteisön voima ja luottamus.</p>
+     <p>Valmennuksessa käsittelemme sitä, miksi psykologinen turva on tulevaisuuden työn keskiössä ja reflektoimme kokemuksellisen työskentelyn kautta omaa tapaamme olla yhteydessä muihin. Osallistujat oppivat, miten luottamus ja sen puute näyttäytyy työn arjessa ja miten jokainen voi vaikuttaa avoimen ja innostavan työympäristön luomiseen. Ymmärrystä syvennetään sirkustyöskentelyn kautta, jossa osallistujat kokevat miten riemastuttavaa on uskaltaa luottaa toisiin ja antaa yhteisen hengen kannatella. Fyysisen harjoittelun tuloksena avautuu uusi mahdollisuus kokea työyhteisön voima ja luottamus.</p><p>Sirkusvalmennus antaa ainutlaatuisen kokemuksellisen tavan oppia tunnetaitoja ja reflektoida omaa käyttäytymistä ja tunnekokemusta. 
+</p>
     </div>
     <div class="circle-image large-4 end columns">
       <br class="hide-for-large-up"/><br class="hide-for-large-up"/>
@@ -97,7 +98,7 @@
     <div class="large-offset-1 large-4 columns end center-aligned-small">
       <br class="show-for-large-up"/><br class="show-for-large-up"/>
       <h2 class="big">Kenelle valmennus sopii?</h2>
-      <p>Valmennus on suunnattu työyhteisöille, joiden on tärkeää kokea hyvää yhteishenkeä ja kyetä käyttämään oma potentiaalinsa tiimeissä mahdollisimman täysimääräisesti. Valmennus sopii kaikenikäisille ja -kuntoisille eikä se edellytä aiempia taitoja kehonhallinnasta tai akrobatiasta.</p>
+      <p>Valmennus on suunnattu työyhteisöille, jotka haluavat syventää yhteistyön saumattomuutta ja vahvistaa luottamusta tiimin sisällä. Valmennus ei edellytä aiempia taitoja kehonhallinnasta tai akrobatiasta.</p>
       <p>
         <b>Ryhmäkoko:</b> 10–20<br/>
         <b>Kesto:</b> 6 tuntia
@@ -132,7 +133,7 @@
 <div class="section separate">
   <div class="row">
     <div class="large-offset-3 large-6 columns end">
-      <h2 class="big">Vietä vauhdikas tiimipäivä! Ota yhteyttä!</h2>
+      <h2 class="big">Ota yhteyttä ja kuule lisää!</h2>
       <br/><br/>
     </div>
   </div>
