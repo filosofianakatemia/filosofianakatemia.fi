@@ -120,12 +120,12 @@
   <div class="row">
     <div class="large-6 columns">
       <div class="embedded">
-        <h2>Vaikuttavuutta seurataan IMQ Flow -mittauksella</h2>
+        <h2>Vaikuttavuutta seurataan Virtaus-mittarilla</h2>
         <div class="row">
           <div class="underline small-offset-5 small-2"></div>
         </div>
         <div class="description">
-          <p>IMQ Flow on työn sujuvuutta, hallinnantunnetta, stressiä ja aikaansaamista kartoittava mittari. Valmennuksen alussa paikannetaan osallistujien yksilölliset työn sujuvuuden kipupisteet. Valmennuksen jälkeen mittaus toteutetaan uudelleen, jolloin saadaan tietoa yksilöllisestä kehityksestä ja valmennuksen kokonaisvaikuttavuudesta. IMQ Flow -mittarista on tarjolla myös lyhyempi pulssi jolloin kehitystä voidaan seurata reaaliajassa.</p>
+          <p>Virtaus-mittari on Draivi-mittarin osa, joka kartoittaa työn sujuvuutta, hallinnantunnetta, stressiä ja aikaansaamista. Valmennuksen alussa paikannetaan osallistujien yksilölliset työn sujuvuuden kipupisteet. Valmennuksen jälkeen mittaus toteutetaan uudelleen, jolloin saadaan tietoa yksilöllisestä kehityksestä ja valmennuksen kokonaisvaikuttavuudesta. Virtaus-mittarista on tarjolla myös lyhyempi pulssi, jolloin kehitystä voidaan seurata reaaliajassa.</p>
         </div>
       </div>
     </div>
@@ -140,7 +140,7 @@
             <li>3–6 kk kestävä prosessi</li>
             <li>Vapaasti valittavissa oleva määrä sessioita</li>
             <li>Systemaattinen ja jatkuva parannuskokeilujen tekeminen omassa työssä</li>
-            <li>Vaikuttavuuden seuranta alussa ja lopussa tehtävällä IMQ Flow -mittauksella</li>
+            <li>Vaikuttavuuden seuranta alussa ja lopussa Virtaus-mittarilla</li>
             <li>Jäsenyys Ajattelunhallinta-Slack-yhteisöön</li>
           </ul>
         </div>
