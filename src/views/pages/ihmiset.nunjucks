@@ -93,35 +93,41 @@
       <h2><a>Miia Maijala</a></h2>
     </div>
   </div>
-  <div id="peter" class="large-4 columns end">
+  <div id="nick" class="large-4 columns end">
+    <div class="link-container" onClick="location.href='ihmiset/nick'">
+      <div class="picture"></div>
+      <h2><a>Nick Ahleskog</a></h2>
+    </div>
+  </div>
+</div>
+<div class="section row">
+  <div id="peter" class="large-4 columns">
     <div class="link-container" onClick="location.href='ihmiset/peter'">
       <div class="picture"></div>
       <h2><a>Peter Kentt&auml;</a></h2>
     </div>
   </div>
-</div>
-<div class="section row">
   <div id="reima" class="large-4 columns">
     <div class="link-container" onClick="location.href='ihmiset/reima'">
       <div class="picture"></div>
       <h2><a>Reima Launonen</a></h2>
     </div>
   </div>
-  <div id="sami" class="large-4 columns">
+  <div id="sami" class="large-4 columns end">
     <div class="link-container" onClick="location.href='ihmiset/sami'">
       <div class="picture"></div>
       <h2><a>Sami Paju</a></h2>
     </div>
   </div>
-  <div id="tapani" class="large-4 columns end">
+</div>
+<div class="section row">
+  <div id="tapani" class="large-4 columns">
     <div class="link-container" onClick="location.href='ihmiset/tapani'">
       <div class="picture"></div>
       <h2><a>Tapani Riekki</a></h2>
     </div>
   </div>
-</div>
-<div class="section row">
-  <div id="tuukka" class="large-offset-2 large-4 columns">
+  <div id="tuukka" class="large-4 columns">
     <div class="link-container" onClick="location.href='ihmiset/tuukka'">
       <div class="picture"></div>
       <h2><a>Tuukka Kostamo</a></h2>

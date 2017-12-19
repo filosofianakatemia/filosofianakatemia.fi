@@ -201,6 +201,18 @@ export class People {
         },
       },
       {
+        id: "nick",
+        name: "Nick Ahleskog",
+        pictures: {
+          large: this.imagePathPrefix + "nick-large.jpg",
+          thumbnail: this.imagePathPrefix + "nick-thumbnail.png",
+        },
+        paths: {
+          page: "nick-ahleskog",
+          description: "nick-ahleskog-kuvaus",
+        },
+      },
+      {
         id: "peter",
         name: "Peter Kenttä",
         pictures: {
