@@ -273,6 +273,18 @@ export class People {
         },
       },
       {
+        id: "tiina",
+        name: "Tiina Setälä",
+        pictures: {
+          large: this.imagePathPrefix + "tiina-large.jpg",
+          thumbnail: this.imagePathPrefix + "tiina-thumbnail.jpg",
+        },
+        paths: {
+          page: "tiina-setala",
+          description: "tiina-setala-kuvaus",
+        },
+      },
+      {
         id: "timo",
         name: "Timo Tiuraniemi",
         pictures: {

@@ -1,0 +1,13 @@
+{% extends "ihminen.nunjucks" %}
+{% set personName = 'Tiina Setälä'%}
+{% block title %}{{ personName }} | {{ super() }}{% endblock %}
+{% block ogtitle %}{{ personName }}{% endblock %}
+{% block ogdescription %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block ogurl %}{{ super() }}/ihmiset/tiina{% endblock %}
+{% block ogimages %}
+<meta property="og:image:url" content="https://filosofianakatemia.fi/static/{{ version }}/img/tiina-small.jpg" />
+<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/tiina-small.jpg" />
+{% endblock %}
+{% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block personquote %}Tiina on bisnesorientoitunut tekijänainen isolla T:llä. Draivinsa lisäksi hänellä on poikkeuksellinen kyky nostattaa myös ympärillään olevat ihmiset samaan lentoon kanssaan.{% endblock %}
+{% block personquoteauthor %}Karoliina Jarenko{% endblock %}
