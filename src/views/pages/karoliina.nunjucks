@@ -8,6 +8,6 @@
 <meta property="og:image:url" content="https://filosofianakatemia.fi/static/{{ version }}/img/karoliina-small.jpg" />
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/karoliina-small.jpg" />
 {% endblock %}
-{% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block description %}Varaa Karoliina Jarenko puhumaan. Karoliina (VTM) on Filosofian Akatemian toimitusjohtaja. Karoliinan eritysosaamisaluiseiin kuuluvat itseohjautuvuus, organisaation uusiutumiskyvykkyys ja sisäisen motivaation johtaminen.{% endblock %}
 {% block personquote %}Karoliinalla on ilmi&ouml;m&auml;inen kyky saada yhteys ihmisiin. H&auml;n n&auml;kee heti ihmisten vahvuudet, mit&auml; he tarvitsevat ja mik&auml; heit&auml; innostaa.{% endblock %}
 {% block personquoteauthor %}Timo Tiuraniemi{% endblock %}

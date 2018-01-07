@@ -8,6 +8,6 @@
 <meta property="og:image:url" content="https://filosofianakatemia.fi/static/{{ version }}/img/tapani-small.jpg" />
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/tapani-small.jpg" />
 {% endblock %}
-{% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block description %}Varaa Tapani Riekki puhumaan. Tapani (PsT) on psykologian tohtori ja valmentaja. Ajatteluun, päätöksentekoon ja sosiaaliseen neurotieteeseen erikoistunut Tapani mittaa ja analysoi aivoja sekä valmentaa ajattelunhallintaa.{% endblock %}
 {% block personquote %}Analyyttisell&auml; Tapanilla on porukan kovimmat tieteelliset meriitit. H&auml;n tekee Filosofian Akatemiassa tieteellist&auml; laadunvalvontaa ja varmistaa, ett&auml; johtop&auml;&auml;t&ouml;ksille todella l&ouml;ytyy tutkimuksesta pohja.{% endblock %}
 {% block personquoteauthor %}Frank Martela{% endblock %}

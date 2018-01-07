@@ -8,6 +8,6 @@
 <meta property="og:image:url" content="https://filosofianakatemia.fi/static/{{ version }}/img/reima-small.jpg" />
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/reima-small.jpg" />
 {% endblock %}
-{% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block description %}Varaa Reima Launonen puhumaan. Reima (VTM) on tutkijavalmentaja, joka valmentaa tiimityön ja vuorovaikutukseen liittyvistä teemoista. Reiman erityisosaamisalueeseen kuuluu muutoksessa eläminen ja innostuksen johtaminen.{% endblock %}
 {% block personquote %}Reima haluaa aina auttaa ja tukea muita. H&auml;n on uskomattoman kannustava ty&ouml;kaveri. Reima uskaltaa olla ryhm&auml;ss&auml; eri mielt&auml;, mutta jos h&auml;n havaitsee, ett&auml; se ei ole ryhm&auml;n kannalta antoisaa, h&auml;n osaa per&auml;&auml;nty&auml;. Se on ihailtava ja harvinainen ominaisuus ihmisess&auml;.{% endblock %}
 {% block personquoteauthor %}Peter Kentt&auml;{% endblock %}

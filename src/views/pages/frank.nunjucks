@@ -8,6 +8,6 @@
 <meta property="og:image:url" content="https://filosofianakatemia.fi/static/{{ version }}/img/frank-small.jpg" />
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/frank-small.jpg" />
 {% endblock %}
-{% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block description %}Varaa Frank Martela puhumaan. Frank (VTM, DI, FT) on Filosofian Akatemian tutkija-valmentaja ja tietokirjailija. Frank tutkii sisäistä motivaatiota, myötätuntoa ja hyvää elämää sekä itseohjautuvia organisaatioita.{% endblock %}
 {% block personquote %}Frank on tutkija, joka osaa ja uskaltaa ottaa osaa yhteiskunnalliseen keskusteluun kommentoimalla ajankohtaisia aiheita. Se on harvinaista. H&auml;n osaa taitavasti konkretisoida teoriaa yleistajuisesti.{% endblock %}
 {% block personquoteauthor %}Maria Ruotsalainen{% endblock %}
