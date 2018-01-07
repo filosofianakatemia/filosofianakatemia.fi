@@ -67,6 +67,7 @@
   </div>
   <div class="footer">
     {% block footer %}{% endblock %}
+    <p class="terms"><a href="https://www.google.com/intl/fi/policies/privacy/partners/">Tietosuoja ja käyttöehdot</a></p>
   </div>
 
   <script type='text/javascript' src='//code.jquery.com/jquery-2.2.4.min.js'></script>
