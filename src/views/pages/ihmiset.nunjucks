@@ -90,7 +90,7 @@
   <div id="miia" class="large-4 columns">
     <div class="link-container" onClick="location.href='ihmiset/miia'">
       <div class="picture"></div>
-      <h2><a>Miia Maijala</a></h2>
+      <h2><a>Miia Järvilehto</a></h2>
     </div>
   </div>
   <div id="nick" class="large-4 columns end">

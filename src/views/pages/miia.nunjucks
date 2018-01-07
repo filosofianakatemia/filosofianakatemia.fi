@@ -1,5 +1,5 @@
 {% extends "ihminen.nunjucks" %}
-{% set personName = 'Miia Maijala' %}
+{% set personName = 'Miia Järvilehto' %}
 {% block title %}{{ personName }} | {{ super() }}{% endblock %}
 {% block ogtitle %}{{ personName }}{% endblock %}
 {% block ogdescription %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}

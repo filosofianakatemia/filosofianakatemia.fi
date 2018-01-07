@@ -190,14 +190,14 @@ export class People {
       },
       {
         id: "miia",
-        name: "Miia Maijala",
+        name: "Miia Järvilehto",
         pictures: {
           large: this.imagePathPrefix + "miia-large.jpg",
           thumbnail: this.imagePathPrefix + "miia-thumbnail.png",
         },
         paths: {
-          page: "miia-maijala",
-          description: "miia-maijala-kuvaus",
+          page: "miia-jarvilehto",
+          description: "miia-jarvilehto-kuvaus",
         },
       },
       {
