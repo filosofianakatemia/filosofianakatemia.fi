@@ -1,9 +1,21 @@
 {% extends "base.nunjucks" %}
 {% set pageName = 'etusivu' %}
+{% set pageDescription = 'Filosofian Akatemia on luova yhdistelmä innostavaa valmennus- ja konsultointiosaamista sekä syvää tieteellispohjaista ymmärrystä ihmistieteistä ja organisaatiotutkimuksesta. Tarkoituksemme on tehdä suomalaisesta työelämästä innostuneempaa, rohkeampaa ja dynaamisempaa.' %}
+{% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-etusivu.jpg' %}
 {% set salesName = ['tytti', 'maija'] | random %}
 {% block title %}{{ super() }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogtitle %}{{ super() }}{% endblock %}
+{% block ogdescription %}{{ pageDescription }}{% endblock %}
+{% block ogimages %}
+<meta property="og:image:url" content="{{ pageImage }}" />
+<meta property="og:image:secure_url" content="{{ pageImage }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ pageImage }}" />
+<meta name="twitter:title" content="{{ pageName }}">
+<meta name="twitter:description" content="{{ pageDescription }}">
+<meta name="twitter:site" content="@filosofianakate">
+{% endblock %}
 {% block description %}Filosofian Akatemia on tutkimus-, valmennus- ja konsultointiyritys. Tarjoamme tieteeseen pohjautuvia ratkaisuja ty&ouml;hyvinvointiin ja tuottavuuteen.{% endblock %}
 {% block bodyattrs %}id="front"{% endblock %}
 
