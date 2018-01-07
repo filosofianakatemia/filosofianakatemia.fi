@@ -65,6 +65,9 @@
 }
 
 .blog-content {
+  .lead a, .body-text a {
+    font-weight: 500;
+  }
   .body-text {
     & > p {
       margin-top: 1.7em;
