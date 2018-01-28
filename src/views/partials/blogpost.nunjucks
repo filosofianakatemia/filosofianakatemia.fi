@@ -116,6 +116,28 @@
           </div>
         {% endif %}
 
+        {% if previousBlog !== undefined or nextBlog !== undefined %}
+          <div class="row">
+            <div class="columns small-12 end'">
+              <h4>Jatka lukemista</h4>
+            </div>
+          </div>
+          <div class="row blog-navigation">
+            {% if previousBlog !== undefined %}
+            <div class="columns small-6 {{ 'end' if nextBlog === undefined }}">
+              <span class="font-strong">Edellinen:</span><br/>
+              <a href="{{ previousBlog.url }}">{{ previousBlog.title }}</a>
+            </div>
+            {% endif %}
+            {% if nextBlog !== undefined %}
+            <div class="columns small-6 end">
+              <span class="font-strong">Seuraava:</span><br/>
+              <a href="{{ nextBlog.url }}">{{ nextBlog.title }}</a>
+            </div>
+            {% endif %}
+          </div>
+        {% endif %}
+
         {% if blog.published != undefined %}
           <div class="row some-row">
 
@@ -158,7 +180,6 @@
           </div>
         </div>
       {% endif %}
-
     </div>
     <div class="divider"></div>
     {% if not listView and  blog.published != undefined %}

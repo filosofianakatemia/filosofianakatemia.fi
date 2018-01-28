@@ -1,4 +1,4 @@
-import { ArraySlice, getSliceOfArrayWithRemaining, Info, Utils } from "extendedmind-siteutils";
+import { getSliceOfArrayWithRemaining, Info, Utils } from "extendedmind-siteutils";
 import * as Router from "koa-router";
 
 interface BlogContext {
@@ -138,9 +138,21 @@ export class Routing {
     const faBlogNote = faBlogs.find( (note) => {
       return note.visibility && note.visibility.path === ctx.params.blogPath;
     });
+
     if (faBlogNote) {
+      let previousFaBlogNote = undefined;
+      let nextFaBlogNote = undefined;
+      const faBlogIndex = faBlogs.indexOf(faBlogNote);
+      if (faBlogs.length > 1) {
+        if (faBlogIndex < (faBlogs.length - 1) ) {
+          previousFaBlogNote = faBlogs[faBlogIndex + 1];
+        }
+        if (faBlogIndex !== 0) {
+          nextFaBlogNote = faBlogs[faBlogIndex - 1];
+        }
+      }
       ctx.body = ctx.state.render.template("pages/blogiteksti",
-          ctx.state.render.getBlogPostContext(faPublicItems, faBlogNote));
+          ctx.state.render.getBlogPostContext(faPublicItems, faBlogNote, previousFaBlogNote, nextFaBlogNote));
     }
   }
 

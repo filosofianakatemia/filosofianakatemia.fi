@@ -65,7 +65,7 @@ export class Render {
   // Process entire note into a usable object
   public processBlogPost(publicNote: any): BlogPost {
     const blog: BlogPost = {
-      safeTitle: publicNote.title as string, title: publicNote.title.replace(/&shy;/g, "") as string,
+      safeTitle: publicNote.title as string, title: this.sanitizeTitle(publicNote.title),
       lessThanFourParagraphs: false,
     };
     const noteHtml = this.contentMarkdownParser.render(publicNote.content);
@@ -105,7 +105,7 @@ export class Render {
     return blog;
   }
 
-  public getBlogPostContext(faPublicItems, blogPost) {
+  public getBlogPostContext(faPublicItems, blogPost, previousBlogPost, nextBlogPost) {
     const blog = this.processBlogPost(blogPost);
     for (const keyword of blogPost.keywords) {
       if (this.people.isAuthorTag(keyword)) {
@@ -124,6 +124,8 @@ export class Render {
     }
     return {
       blog,
+      nextBlog: this.getBlogTitleAndLink(nextBlogPost),
+      previousBlog: this.getBlogTitleAndLink(previousBlogPost),
     };
   }
 
@@ -137,6 +139,19 @@ export class Render {
   }
 
   // HELPERS
+
+  private getBlogTitleAndLink(blogPost) {
+    if (blogPost) {
+      return {
+        title: this.sanitizeTitle(blogPost.title),
+        url: blogPost.visibility ? blogPost.visibility.path : undefined,
+      };
+    }
+  }
+
+  private sanitizeTitle(title: string): string {
+    return title.replace(/&shy;/g, "");
+  }
 
   private extractLeadAndPictureAndContentFromHtml(htmlText: string): ContentExtract {
     const extractedHTML: ContentExtract = {};

@@ -65,7 +65,7 @@
 }
 
 .blog-content {
-  .lead a, .body-text a {
+  .lead a, .body-text a, .blog-navigation a {
     font-weight: 500;
   }
   .body-text {
@@ -85,6 +85,10 @@
     &:not(.emphasize) {
       margin-top: 0;
     }
+  }
+
+  .blog-navigation {
+    padding-bottom: 40px;
   }
 }
 
