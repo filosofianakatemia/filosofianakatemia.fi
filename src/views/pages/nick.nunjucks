@@ -9,5 +9,5 @@
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/nick-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
-{% block personquote %}Nick on tuonut Filosofian Akatemiaan suuren annoksen kansainvälisyyttä, iloa sekä energiaa. Nickin kanssa ajatuksista ja ideoista siirrytään hyvin nopeasti toteutukseen. Väsymyksen ja epätoivon hetkinä, hänen positiivisuus, tarmo ja tuki, auttavat toisia pääsemään pois murheen alhosta, kohti toimivia ratkaisuja.{% endblock %}
+{% block personquote %}Nick on tuonut Filosofian Akatemiaan suuren annoksen kansainvälisyyttä, iloa sekä energiaa. Nickin kanssa ajatuksista ja ideoista siirrytään hyvin nopeasti toteutukseen. Väsymyksen ja epätoivon hetkinä hänen positiivisuus, tarmo ja tuki auttavat toisia pääsemään pois murheen alhosta kohti toimivia ratkaisuja.{% endblock %}
 {% block personquoteauthor %}Reima Launonen{% endblock %}
