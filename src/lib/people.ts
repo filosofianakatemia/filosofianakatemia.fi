@@ -249,18 +249,6 @@ export class People {
         },
       },
       {
-        id: "selina",
-        name: "Selina Bakir",
-        pictures: {
-          large: this.imagePathPrefix + "selina-large.jpg",
-          thumbnail: this.imagePathPrefix + "selina-thumbnail.png",
-        },
-        paths: {
-          page: "selina-bakir",
-          description: "selina-bakir-kuvaus",
-        },
-      },
-      {
         id: "tapani",
         name: "Tapani Riekki",
         pictures: {

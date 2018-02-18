@@ -3,7 +3,7 @@
 {% block title %}{{ personName }} | {{ super() }}{% endblock %}
 {% block ogtitle %}{{ personName }}{% endblock %}
 {% block ogdescription %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
-{% block ogurl %}{{ super() }}/ihmiset/selina{% endblock %}
+{% block ogurl %}{{ super() }}/ihmiset/nick{% endblock %}
 {% block ogimages %}
 <meta property="og:image:url" content="https://filosofianakatemia.fi/static/{{ version }}/img/nick-small.jpg" />
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/nick-small.jpg" />
