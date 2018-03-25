@@ -128,9 +128,9 @@
   }
 }
 
-/* REFERENCES */
+/* QUOTES */
 
-#references {
+#quotes {
   img.author {
     padding-top: 15px;
     width: 200px;
@@ -152,7 +152,7 @@
 
 /* medium */
 @media only screen and (min-width: 40.063em){
-  #references {
+  #quotes {
     img.author {
       width: 150px;
     }
@@ -413,6 +413,122 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   }
 }
 
+
+/* REFERENCES */
+
+.references {
+  .top-bar {
+    position: relative;
+    background-color: #FFFFFF;
+  }
+
+  img.reference-logo {
+    padding-top: 8vh;
+    width: 80vw;
+    max-width: 600px;
+  }
+
+  div.reference-person {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  p.reference-quote {
+    font-size: 20px;
+    color: $color-highlighted-red;
+  }
+
+  div[class^='banner'], div[class*=' banner'] {
+    background-repeat: no-repeat;
+    background-attachment: center;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 80vh;
+    max-height: 400px;
+
+    span, h1, h2, h3, h4 {
+      color: #FFFFFF;
+    }
+  }
+
+  .section.banner-clear-channel {
+    background-image: url('../img/bg-references-clearchannel-small.jpg');
+  }
+
+  .section.banner-postnord {
+    background-image: url('../img/bg-references-postnord-small.jpg');
+  }
+
+  .section.banner-barona {
+    background-image: url('../img/bg-references-barona-small.jpg');
+  }
+}
+
+/* MEDIUM */
+@media only screen and (min-width: 40.063em){
+  .references .top-bar {
+    background-color: $color-highlighted-red;
+  }
+}
+
+/* RETINA MOBILE */
+@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi){
+
+  // FIXME: change to @2x picture once we have them!
+  .references .section.banner-clear-channel {
+    background-image: url('../img/bg-references-clearchannel-small.jpg');
+  }
+
+  .references .section.banner-postnord {
+    background-image: url('../img/bg-references-postnord-small.jpg');
+  }
+
+  .references .section.banner-postnord {
+    background-image: url('../img/bg-references-barona-small.jpg');
+  }
+
+}
+
+/* NON-RETINA NON-MOBILE */
+@media only screen and (min-width: 40.063em) {
+  .references .section.banner-clear-channel {
+    background-image: url('../img/bg-references-clearchannel-large.jpg');
+  }
+
+  .references .section.banner-postnord {
+    background-image: url('../img/bg-references-postnord-large.jpg');
+  }
+
+  .references .section.banner-postnord {
+    background-image: url('../img/bg-references-barona-large.jpg');
+  }
+
+  .references p.reference-quote {
+    font-size: 30px;
+    color: $color-highlighted-red;
+  }
+
+}
+
+/* RETINA OR REALLY WIDE AND NON-MOBILE */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (min-width: 64.063em), only screen and (min-width: 1400px) {
+  .references .section.banner-clear-channel {
+    background-image: url('../img/bg-references-clearchannel-large@2x.jpg');
+  }
+
+  .references .section.banner-postnord {
+    background-image: url('../img/bg-references-postnord-large@2x.jpg');
+  }
+
+  .references .section.banner-barona {
+    background-image: url('../img/bg-references-barona-large@2x.jpg');
+  }
+
+}
+
 /* SERVICES */
 
 #org-circle {
@@ -521,6 +637,11 @@ img.arrow {
   background-color: $color-highlighted-blue;
 }
 
+.references.details .top-bar,
+.references.details .top-bar.expanded .title-area {
+  background-color: $color-highlighted-red;
+}
+
 .research.details .top-bar,
 .research.details .top-bar.expanded .title-area {
   background-color: $color-highlighted-blue;
@@ -536,6 +657,10 @@ img.arrow {
 
 .details.services .breadcrumbs {
   color: $color-highlighted-blue;
+}
+
+.details.references .breadcrumbs {
+  color: $color-highlighted-red;
 }
 
 .details.research .breadcrumbs {

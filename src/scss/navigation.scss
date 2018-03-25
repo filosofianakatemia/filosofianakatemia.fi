@@ -38,6 +38,15 @@
   }
 }
 
+.references {
+  .top-bar .toggle-topbar.menu-icon > a > span:after {
+    box-shadow: 0 0 0 1px $color-highlighted-red, 0 7px 0 1px $color-highlighted-red, 0 14px 0 1px $color-highlighted-red;
+  }
+  .top-bar .logo a{
+    color: $color-highlighted-red;
+  }
+}
+
 .research {
   .top-bar .toggle-topbar.menu-icon > a > span:after {
     box-shadow: 0 0 0 1px $color-highlighted-green, 0 7px 0 1px $color-highlighted-green, 0 14px 0 1px $color-highlighted-green;
@@ -79,6 +88,11 @@
     color: #FFFFFF;
   }
   .services {
+    .top-bar a, .top-bar .logo a {
+      color: #FFFFFF;
+    }
+  }
+  .references {
     .top-bar a, .top-bar .logo a {
       color: #FFFFFF;
     }

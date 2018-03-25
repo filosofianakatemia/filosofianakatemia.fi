@@ -1,0 +1,143 @@
+{% extends "base.nunjucks" %}
+{% set pageName = 'Referenssit' %}
+{% block title %}{{ pageName }} | {{ super() }}{% endblock %}
+{% block ogtype %}{{ super() }}{% endblock %}
+{% block ogtitle %}{{ pageName }}{% endblock %}
+{% block ogurl %}{{ super() }}/referenssit{% endblock %}
+{% block ogdescription %}Olemme auttaneet satoja organisaatioita vahvistamaan työntekijöidensä itseohjautuvuutta, sisäistä motivaatiota ja jatkuvaa kehittämistä. Tutustu asiakkaidemme onnistuneisiin kehityshankkeisiin.{% endblock %}
+{% block description %}Filosofian Akatemia Oy auttaa organisaatioita tukemaan työntekijöiden itseohjautuvuutta, sisäistä motivaatiota ja jatkuvaa kehittämistä. Tutustu asiakkaidemme onnistuneisiin kehityshankkeisiin.{% endblock %}
+{% block bodyattrs %}class="references"{% endblock %}
+
+{% block topbar %}
+<ul class="title-area">
+  <li class="name">
+    <div class="logo"><a href="/"><span class="icon-logo-fill-name"></span></a></div>
+  </li>
+  <li class="toggle-topbar menu-icon"><a href="/"><span></span></a></li>
+</ul>
+
+<section class="top-bar-section">
+  <ul class="right">
+    <li class="show-for-small-only"><a href="/">Etusivu</a></li>
+    <li><a href="/ihmiset">Ihmiset</a></li>
+    <li><a href="/palvelut">Palvelut</a></li>
+    <li class="active"><a onclick="app.menuActiveFeatureClicked('referenssit')">Referenssit</a></li>
+    <li><a href="/tutkimus">Tutkimus</a></li>
+    <li><a href="/blogi">Blogi</a></li>
+  </ul>
+</section>
+{% endblock %}
+
+{% block main %}
+<div id="references-top" class="section separate banner-clear-channel">
+  <div class="row">
+    <div class="medium-10 medium-offset-1 end columns ingress">
+      <img class="reference-logo" src="/static/{{ version }}/img/ref/clearchannel-logo.png"/>
+      <h4>Sisäisen motivaation yhteiskehittelyprosessi</h4>
+      <p></p>
+    </div>
+  </div>
+</div>
+<div class="section separate">
+  <div class="row">
+    <div class="large-4 large-offset-2 columns center-aligned-small">
+      <p>Filosofian Akatemia Oy:n ja Clear Channel Suomi Oy:n yhteistyö alkoi vuonna 2015 Leading Passion: How to Create a Culture of Engagement - tutkimushankkeen myötä. Yhteistyön tarkoituksena oli löytää keinot, joilla Clear Channelin työntekijöiden innostusta ja sisäistä motivaatiota voitaisiin vahvistaa jo valmiiksi hyvältä tasolta.</p>
+      <p>Aluksi yrityksessä suoritettiin Filosofian Akatemian Sisäisen motivaation Draivi-mittaus, jolla selvitettiin työntekijöiden sisäisen motivaation taso sekä siihen vaikuttavat tekijät. Mittauksen pohjalta työntekijöille järjestettiin kolme työpajaa, joissa pureuduttiin valmentajien johdolla mittauksessa esiin nousseisiin haastekohtiin ja pohdittiin pienryhmissä, miten haasteisiin vaikuttavia tekijöitä voidaan lähteä kehittämään. Työpajoihin osallistui työntekijöitä kaikilta osastoilta.</p>
+    </div>
+    <div class="large-4 columns end center-aligned-small">
+      <p>Työntekijöiltä syntyneet kehitysehdotukset käytiin läpi yrityksen johdon kanssa ja ehdotuksista valittiin ne, joita lähdetään jalkauttamaan työn arkeen. Jalkautus tapahtui työpajoihin osallistuneiden työntekijöiden toimesta ja kehitysehdotukset vietiin tehokkaasti käytäntöön.</p>
+      <p>Vuonna 2016 Clear Channelissa suoritettiin sisäisen motivaation jatkomittaus, joka osoitti, että tulokset olivat parantuneet jopa radikaalisti jo aiemmin hyvältä tasolta. Työntekijöiden autonomian eli vaikuttamisen kokemus, joka tutkitusti vaikuttaa keskeisesti työn imuun ja sisäiseen motivaatioon, oli noussut läpi organisaation keskimäärin 0,54 astetta (yli 0,2 nousu on merkitsevä).</p>
+    </div>
+  </div>
+</div>
+<div class="section wrapper-embedded">
+  <div class="row reference-person">
+    <div class="medium-10 medium-offset-1 end columns">
+      <img src="/static/{{ version }}/img/ref/timo-tammi.png"/><br/>
+      <p class="reference-quote">&ldquo;Sitoutumista vaativa mutta palkitseva matka.&rdquo;</p>
+      <p><b>Timo Tammi</b><br/>Toimitusjohtaja</p>
+    </div>
+  </div>
+</div>
+
+<div class="section separate banner-postnord">
+  <div class="row">
+    <div class="medium-10 medium-offset-1 end columns ingress">
+      <img class="reference-logo" src="/static/{{ version }}/img/ref/postnord-logo.png"/>
+      <h4>Kehittämisosaamisen kasvattaminen ja asiakaskokemuksen parantaminen</h4>
+      <p></p>
+    </div>
+  </div>
+</div>
+<div class="section separate">
+  <div class="row">
+    <div class="large-4 large-offset-2 columns center-aligned-small">
+      <p>PostNord Oy valitsi Filosofian Akatemia Oy:n pääyhteistyökumppanikseen toteuttamaan yhtiön sisäistä Talent-ohjelmaa. Ohjelman tarkoituksena oli sekä tarjota yksilöille kehittymismahdollisuuksia että luoda ryhmä talon sisäisiä muutosagentteja. Yhteistyön tärkeimpiä tavoitteita olivat osallistujien kehitysosaamisen kasvattaminen sekä yrityksen asiakaskokemuksen parantaminen.</p>
+      <p>Yhteistyö Talent-ohjelmassa koostui kahden viikon välein pidetyistä työpajoista vuoden 2017 ajan. Ensimmäisellä jaksolla työpajojen aiheita olivat mm. kehitysmetodit, asiakasymmärrys, ongelmien tunnistaminen, ratkaisujen ideointi, kokeilut, iteratiivinen kehittäminen ja opitun reflektointi. Työpajoissa hahmotettiin muun muassa, mitä asiakaskokemus PostNordin kontekstissa tarkoittaa, mitkä tekijät siihen vaikuttavat, mitkä ovat oleellisimmat kehityskohteet ja millä konkreettisilla kokeiluilla asiakaskokemusta lähdetään parantamaan.</p>
+    </div>
+    <div class="large-4 columns end center-aligned-small">
+      <p>Toisella jaksolla huomio siirtyi osallistujien oman työn kehittämiseen. Alkutilanteen kartoittamiseksi ja kehityskohteiden paikantamiseksi osallistujille suoritettiin ennen työpajojen alkua Filosofian Akatemia Oy:n Virtaus-mittaus. Työpajoissa kehitettiin kokeiluja osallistujien työtapojen ja -välineiden parantamiseen, ja aiheina käsiteltiin mm. toiminnan muuttamisen psykologiaa, työn imua, tehtävänhallintaa, työn suunnittelun metodeja, keskittymistä tukevia työtapoja ja työympäristön muokkausta.</p>
+      <p>Työpajojen jälkeen suoritetussa seurantamittauksessa kävi ilmi, että osallistujien työtavat ja -käytännöt sekä työn sujuvuus olivat ohjelman aikana kehittyneet merkittävästi positiivisempaan suuntaan, ja koettu kiire ja ylikuormitus työssä olivat vähentyneet lähtötasosta huomattavasti.</p>
+      <p>Filosofian Akatemia jatkaa PostNordin valmennusyhteistyökumppanina vuonna 2018.</p>
+    </div>
+  </div>
+</div>
+<div class="section wrapper-embedded">
+  <div class="row reference-person">
+    <div class="medium-8 medium-offset-2 end columns">
+      <img src="/static/{{ version }}/img/ref/sini-simonen.png"/><br/>
+      <p class="reference-quote">&ldquo;Olemme olleet yhteistyöhön erittäin tyytyväisiä. Jo Talent-ohjelman aikana lähdimme toteuttamaan kokeiluja asiakaskokemuksen parantamiseksi käytännössä, ja kokeilut jatkuvat edelleen. Osallistujat ovat hehkuttaneet myös valmentaja Sami Pajun tapaa vetää tilaisuuksia asiantuntevalla, kehittävällä ja innostavalla tavalla.&rdquo;</p>
+      <p><b>Sini Simonen</b><br/>HR Manager</p>
+    </div>
+  </div>
+</div>
+
+<div class="section separate banner-barona">
+  <div class="row">
+    <div class="medium-8 medium-offset-2 end columns ingress">
+      <img class="reference-logo" src="/static/{{ version }}/img/ref/barona-logo.png"/>
+      <h4>Rohkeiden yritysten esimiesvalmennukset</h4>
+      <p></p>
+    </div>
+  </div>
+</div>
+<div class="section separate">
+  <div class="row">
+    <div class="large-4 large-offset-2 columns center-aligned-small">
+      <p>Barona Group on viime vuosina kasvanut voimakkaasti mm. kunnianhimoisten tavoitteiden, avoimen kommunikaatiokulttuurin ja matalan organisaatiohierarkiansa ansiosta. Konsernin tavoitteena oli uusi johtamisfilosofia, joka ohjaisi olemassa olevaa esimiestyötä vastaamaan entistä paremmin voimakkaasti kasvavan konsernin haasteita sekä toimialan tulevia muutoksia.</p>
+      <p>Baronan ja Filosofian Akatemia Oy:n näkemys uudesta johtamisfilosofiasta oli yhtenäinen: keskeistä Baronan menestyksen kannalta on sisäisesti motivoiva ja rohkea esimiestyö. Se tarkoittaa esimiesten rohkeutta ajatella isosti sekä uskallusta vaatia ihmisiltä omistautumista ja itsensä toteuttamista työssä. Rohkeutta puhua vaikeistakin asioista ja luoda turvallinen ilmapiiri, jossa ihmiset uskaltavat ylittää itsensä.</p>
+      <p>Rohkean, sisäisesti motivoivan esimiestyön kehittämisen lisäksi yhteistyön tavoitteena oli yhtenäistää ajattelua Barona Groupin sisällä. Valmennusten perustana toimi sisäisen motivaation viitekehyksen lisäksi Baronalla juuri valmistunut parasta mahdollista työyhteisöä kuvaava sarja teesejä. Yhteisen ajattelun ja dialogin seurauksena syntyi sisäisen motivaation johtamisen valmennuskokonaisuus nimeltä Rohkeiden yritysten esimiesvalmennus.</p>
+    </div>
+    <div class="large-4 columns end center-aligned-small">
+      <p><i>&ldquo;Olemme olleet todella tyytyväisiä yhteistyöhön ja Filosofian Akatemia jatkaa konsernin esimiesvalmennusten kumppanina edelleen vuonna 2018.&rdquo;</i><br/></br>&ndash; Marita Paajaste, henkilöstöjohtaja</p>
+      <p><br/><i>&ldquo;Suosittelen Filosofian Akatemian järjestämää esimiesvalmennusta lämpimästi kaikille esimiehille. Erityisesti sellaisille, jotka tykkäävät lähteä rohkeasti mukaan kehittämään itseään esimiehenä soveltamalla saatua teoriaa käytäntöön. Minulle valmennus osui loistavaan saumaan: oli tärkeää saada vahvistusta omille ajatuksilleni mutta toisaalta valmennuksessa heränneiden ideoiden myötä saada kehittää itseä esimiehenä. Mukavasti, turvallisesti ja kokeilevasti.</i><br/><br/>&ndash; Riitta Rainio</b><br/>Baronalainen esimies</p>
+    </div>
+  </div>
+</div>
+<div class="section wrapper-embedded">
+  <div class="row reference-person">
+    <div class="medium-8 medium-offset-2 end columns">
+      <img src="/static/{{ version }}/img/ref/riitta-rainio.png"/><br/>
+      <p class="reference-quote">&ldquo;Parasta on, kun valmennuksessa saadut opit ovat jääneet elämään vahvasti osaksi arkea. Ja näiden myötä esimiestyö on tuntunut entistä mielenkiintoisemmalta ja myös merkityksellisemmältä.&rdquo;</p>
+      <p><b>Riitta Rainio</b><br/>Baronalainen esimies</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+<div class="row hide-for-small-only">
+  <div class="medium-12 large-8 large-offset-2 end columns">
+    <ul class="icon-bar five-up">
+      <li class="item"><a href="/">Etusivu</a></li>
+      <li class="item"><a href="/ihmiset">Ihmiset</a></li>
+      <li class="item"><a href="/palvelut">Palvelut</a></li>
+      <li class="item active"><a href="/referenssit" onclick="return false;">Referenssit</a></li>
+      <li class="item"><a href="/tutkimus">Tutkimus</a></li>
+      <li class="item"><a href="/blogi">Blogi</a></li>
+    </ul>
+  </div>
+</div>
+{% include 'partials/address.nunjucks' %}
+{% endblock %}

@@ -88,6 +88,24 @@ a {
   }
 }
 
+.references {
+  button:hover, button:focus,
+  .button:hover, .button:focus,
+  .top-bar-section ul > li.active > a {
+    background-color: $color-highlighted-red;
+  }
+
+  button:hover, button:focus,
+  .button:hover, .button:focus,
+  .icon-bar .item a {
+    color: #FFFFFF;
+  }
+
+  a {
+    -webkit-tap-highlight-color: rgba($color-highlighted-red, $opacity-touch-color);
+  }
+}
+
 .research {
   button:hover, button:focus,
   .button:hover, .button:focus,
