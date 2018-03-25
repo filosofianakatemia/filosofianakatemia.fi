@@ -1,10 +1,12 @@
 {% extends "base.nunjucks" %}
 {% set pageName = 'Blogi' %}
+{% set pageDescription = 'Haluatko lukea työelämän murroksesta ja siitä, miten organisaatiot menestyvät muutoksessa? Tutustu blogiimme.'%}
 {% block title %}{{ pageName }} | {{ super() }} {% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogurl %}{{ super() }}/blogi{% endblock %}
 {% block ogtitle %}{{ pageName }}{% endblock %}
-{% block ogdescription %}Filosofian Akatemian viikottain ilmestyvä blogi{% endblock %}
+{% block description %}{{ pageDescription }}{% endblock %}
+{% block ogdescription %}{{ pageDescription }}{% endblock %}
 {% block bodyattrs %}class="blog"{% endblock %}
 
 {% block topbar %}

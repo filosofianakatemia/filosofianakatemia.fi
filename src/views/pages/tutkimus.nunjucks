@@ -1,12 +1,13 @@
 {% extends "base.nunjucks" %}
 {% set pageName = 'Tutkimus' %}
+{% set pageDescription = 'Ihmismieltä ymmärtää vain tutkimalla. Filosofian Akatemia Oy:n tutkimushankkeet pureutuvat siihen, mistä innostus ja sisäinen motivaatio syntyvät. Tutkimustietoa soveltamalla kehitämme organisaatioille työkaluja kilpailukyvyn vahvistamiseen.'%}
 {% block title %}{{ pageName }} | {{ super() }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogtitle %}{{ pageName }}{% endblock %}
 {% block ogurl %}{{ super() }}/tutkimus{% endblock %}
-{% block description %}Filosofian Akatemian valmennukset pohjautuvat tekem&auml;&auml;mme akateemiseen tutkimukseen.{% endblock %}
+{% block description %}{{ pageDescription }}{% endblock %}
+{% block ogdescription %}{{ pageDescription }}{% endblock %}
 {% block bodyattrs %}class="research"{% endblock %}
-
 {% block topbar %}
 <ul class="title-area">
   <li class="name">
