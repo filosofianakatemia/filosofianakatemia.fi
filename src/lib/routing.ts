@@ -31,7 +31,6 @@ export class Routing {
     this.router.get("/ihmiset/emilia", this.person);
     this.router.get("/ihmiset/frank", this.person);
     this.router.get("/ihmiset/iida", this.person);
-    this.router.get("/ihmiset/joonas", this.person);
     this.router.get("/ihmiset/jp", this.person);
     this.router.get("/ihmiset/karoliina", this.person);
     this.router.get("/ihmiset/lauri", this.person);

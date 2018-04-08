@@ -117,18 +117,6 @@ export class People {
         },
       },
       {
-        id: "joonas",
-        name: "Joonas Pesonen",
-        pictures: {
-          large: this.imagePathPrefix + "joonas-large.jpg",
-          thumbnail: this.imagePathPrefix + "joonas-thumbnail.png",
-        },
-        paths: {
-          page: "joonas-pesonen",
-          description: "joonas-pesonen-kuvaus",
-        },
-      },
-      {
         id: "jp",
         name: "Jukka-Pekka Salo",
         pictures: {
