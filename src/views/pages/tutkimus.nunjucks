@@ -1,13 +1,24 @@
 {% extends "base.nunjucks" %}
 {% set pageName = 'Tutkimus' %}
 {% set pageDescription = 'Ihmismieltä ymmärtää vain tutkimalla. Filosofian Akatemia Oy:n tutkimushankkeet pureutuvat siihen, mistä innostus ja sisäinen motivaatio syntyvät. Tutkimustietoa soveltamalla kehitämme organisaatioille työkaluja kilpailukyvyn vahvistamiseen.'%}
+{% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-tutkimus.jpg' %}
 {% block title %}{{ pageName }} | {{ super() }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
-{% block ogtitle %}{{ pageName }}{% endblock %}
 {% block ogurl %}{{ super() }}/tutkimus{% endblock %}
+{% block ogtitle %}{{ pageName }}{% endblock %}
 {% block description %}{{ pageDescription }}{% endblock %}
 {% block ogdescription %}{{ pageDescription }}{% endblock %}
+{% block ogimages %}
+<meta property="og:image:url" content="{{ pageImage }}" />
+<meta property="og:image:secure_url" content="{{ pageImage }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ pageImage }}" />
+<meta name="twitter:title" content="{{ pageName }}">
+<meta name="twitter:description" content="{{ pageDescription }}">
+<meta name="twitter:site" content="@filosofianakate">
+{% endblock %}
 {% block bodyattrs %}class="research"{% endblock %}
+
 {% block topbar %}
 <ul class="title-area">
   <li class="name">
@@ -50,7 +61,7 @@
 
 <div id="projects" class="section wrapper-embedded">
   <div class="row">
-    <h1>Meneill&auml;&auml;n olevia tutkimushankkeita</h1>
+    <h1>Tutkimushankkeita</h1>
   </div>
   <div class="row">
     <div class="medium-10 medium-offset-1 end columns">
@@ -88,9 +99,6 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <h1>Toteutetut hankkeet</h1>
   </div>
   <div class="row">
     <div class="medium-10 medium-offset-1 end columns">

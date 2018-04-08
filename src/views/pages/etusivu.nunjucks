@@ -5,8 +5,10 @@
 {% set salesName = ['tytti', 'maija'] | random %}
 {% block title %}{{ super() }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
+{% block ogurl %}{{ super() }}{% endblock %}
 {% block ogtitle %}{{ super() }}{% endblock %}
 {% block ogdescription %}{{ pageDescription }}{% endblock %}
+{% block description %}{{ pageDescription }}{% endblock %}
 {% block ogimages %}
 <meta property="og:image:url" content="{{ pageImage }}" />
 <meta property="og:image:secure_url" content="{{ pageImage }}" />
@@ -16,7 +18,6 @@
 <meta name="twitter:description" content="{{ pageDescription }}">
 <meta name="twitter:site" content="@filosofianakate">
 {% endblock %}
-{% block description %}{{ pageDescription }}{% endblock %}
 {% block bodyattrs %}id="front"{% endblock %}
 
 {% block topbar %}
