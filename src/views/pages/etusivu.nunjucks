@@ -190,7 +190,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
-                <a href="https://www.talentumshop.fi/draivi.html" target="_blank"><img class="cover" src="/static/{{ version }}/img/books/itseohjautuvuus.jpg"/></a>
+                <a href="https://shop.almatalent.fi/itseohjautuvuus.html" target="_blank"><img class="cover" src="/static/{{ version }}/img/books/itseohjautuvuus.jpg"/></a>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p><strong>Itseohjautuvuus – Miten organisoitua tulevaisuudessa?</strong></p>
@@ -202,7 +202,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
-                <a href="https://www.talentumshop.fi/draivi.html" target="_blank"><img class="cover" src="/static/{{ version }}/img/books/draivi.jpg"/></a>
+                <a href="https://shop.almatalent.fi/draivi.html" target="_blank"><img class="cover" src="/static/{{ version }}/img/books/draivi.jpg"/></a>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p><strong>Draivi – Voiko sis&auml;ist&auml; motivaatiota johtaa?</strong></p>
@@ -214,7 +214,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
-                <a href="https://www.talentumshop.fi/kehita-kokeillen.html" target="_blank"><img class="cover" src="/static/{{ version }}/img/books/kehita-kokeillen.jpg"/></a>
+                <a href="https://shop.almatalent.fi/kehita-kokeillen.html" target="_blank"><img class="cover" src="/static/{{ version }}/img/books/kehita-kokeillen.jpg"/></a>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p><strong>Kehit&auml; kokeillen – Organisaation k&auml;sikirja</strong></p>
@@ -310,7 +310,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
           <div class="swiper-slide">
             <div class="row center-aligned-small">
               <div class="medium-3 medium-offset-2 large-offset-1 right-aligned-medium-up columns">
-                <a href="https://upeaatyota.fi/" target="_blank"><img class="cover" src="/static/{{ version }}/img/books/upeaa-tyota.jpg"/></a>
+                <a href="https://www.adlibris.com/fi/kirja/upeaa-tyota-9789513170585" target="_blank"><img class="cover" src="/static/{{ version }}/img/books/upeaa-tyota.jpg"/></a>
               </div>
               <div class="small-10 small-offset-1 medium-5 medium-offset-0 large-6 end columns">
                 <p><strong>Upeaa ty&ouml;t&auml; – N&auml;in teet itsellesi unelmiesi ty&ouml;paikan</strong></p>
