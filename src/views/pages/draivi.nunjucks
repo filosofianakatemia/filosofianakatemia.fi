@@ -1,0 +1,180 @@
+{% extends "base.nunjucks" %}
+{% set pageName = 'Draivi-mittaus' %}
+{% set pageDescription = 'Sisäistä motivaatiota kokevat työntekijät ovat kehittämishaluisempia, toimivat itseohjautuvammin ja palvelevat asiakkaita paremmin. Draivi-mittauksella selvitetään, mitä toimintatapoja kehittämällä voitte vahvistaa työntekijöidenne sisäistä motivaatiota.' %}
+{% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-draivi.jpg' %}
+{% set pageUrl = 'https://filosofianakatemia.fi/palvelut/draivi' %}
+{% block title %}{{ pageName }} | {{ super() }}{% endblock %}
+{% block ogtitle %}{{ pageName }}{% endblock %}
+{% block ogtype %}{{ super() }}{% endblock %}
+{% block ogdescription %}{{ pageDescription }}{% endblock %}
+{% block ogurl %}{{ pageUrl }}{% endblock %}
+{% block ogimages %}
+<meta property="og:image:url" content="{{ pageImage }}" />
+<meta property="og:image:secure_url" content="{{ pageImage }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ pageImage }}" />
+<meta name="twitter:title" content="{{ pageName }}">
+<meta name="twitter:description" content="{{ pageDescription }}">
+<meta name="twitter:site" content="@filosofianakate">
+{% endblock %}
+{% block bodyattrs %}class="services details"{% endblock %}
+{% block topbar %}
+<ul class="title-area">
+  <li class="name">
+    <div class="logo"><a href="/"><span class="icon-logo-fill-name"></span></a></div>
+  </li>
+  <li class="toggle-topbar menu-icon"><a href="/"><span></span></a></li>
+</ul>
+
+<section class="top-bar-section">
+  <ul class="right">
+    <li class="show-for-small-only"><a href="/">Etusivu</a></li>
+    <li><a href="/ihmiset">Ihmiset</a></li>
+    <li class="active"><a href="/palvelut">Palvelut</a></li>
+    <li><a href="/tutkimus">Tutkimus</a></li>
+    <li><a href="/blogi">Blogi</a></li>
+  </ul>
+</section>
+{% endblock %}
+
+{% block hero %}
+<div id="draivi" class="hero">
+  <div class="row">
+    <div class="medium-10 small-centered column">
+      <div class="center-aligned-small section-introduction">
+        {# Breadcrumbs #}
+        <div class="row breadcrumbs">
+          <div class="column">
+            <a href="/palvelut">Palvelut<span class="icon-arrow-right"></span></a>
+            <span class="font-bold">Draivi-mittaus</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="icon"><img src="/static/{{ version }}/img/simojo_icon.png"/></div>
+  <div class="slogan">Draivin mittaaminen</div>
+  <div class="ingress">Draivi-mittari on Filosofian Akatemia Oy:n kehittämä työkalu, jonka avulla selvitetään organisaation sisäisen motivaation ja työn imun tila.<br/><br/></div>
+</div>
+{% endblock %}
+
+{% block main %}
+<div id="draivi-top" class="section">
+  <div class="row">
+    <div class="large-4 large-offset-2 columns center-aligned-small">
+      <h3>Draivi on uusiutumiskyvyn edellytys</h3>
+      <p>Työn imua ja sisäistä motivaatiota kokevat työntekijät ovat luovempia ja kehittämishaluisempia, oppivat syvemmin, toimivat itseohjautuvammin ja palvelevat asiakkaita paremmin. Siksi tulevaisuudessa menestyvät vain organisaatiot, jotka osaavat menestyksekkäästi johtaa henkilöstönsä draivia. </p>
+      <p></p><br/>
+      <div class="row show-for-medium-up">
+        <div class="small-offset-3 small-4 columns">
+          <br/><img class="arrow" src="/static/{{ version }}/img/blue_arrow.png"></img><br/>
+        </div>
+        <div class="small-4 end columns">
+          <br/><img class="arrow" src="/static/{{ version }}/img/blue_arrow.png"></img><br/>
+        </div>
+      </div>
+    </div>
+    <div class="large-4 columns end center-aligned-small">
+      <h3>Draivia voi mitata ja vahvistaa</h3>
+      <p>Draivin mittaaminen ja vahvistaminen perustuvat ymmärrykseen ihmisen motivaatiosta. Mittarin kysymykset käsittelevät sisäisen motivaation kolmea pääosa-aluetta: vapautta, virtausta ja vastuuta. Arjen konkreettisella tasolla liikkuvat kysymykset antavat suoraa tietoa  siitä, mikä toimii hyvin ja mitä kannattaa kehittää sisäisen motivaation tukemiseksi ja työn imun vahvistamiseksi. Vapauden, virtauksen ja vastuun teemat kukin jakaantuvat viiteen osatekijään. Nämä 15 osatekijää selittävät tutkimustemme mukaan 67 % työn imun ja sisäisen motivaation vaihtelusta. Tutkimustulos kertoo, että arjen toimintatapoja kehittämällä voidaan vaikuttaa suoraan työntekijöiden draiviin.</p>
+      <p></p><br/>
+    </div>
+  </div>
+  <div class="row module-container">
+    <div class="module leftmost small-offset-2 large-2 columns">
+      <span>Vapaus</span>
+    </div>
+    <div class="module small-offset-2 large-offset-0 large-2 columns">
+      <span>Virtaus</span>
+    </div>
+    <div class="module small-offset-2 large-offset-0 large-2 columns end">
+      <span>Vastuu</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <br/><br/>
+      <h2 class="big">Miksi Draivi-mittaus?</h2>
+      <br/><br/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-4 large-offset-2 columns center-aligned-small">
+      <h3>1. Mittaa passiivisen työhyvinvoinnin sijaan aktiivista työhyvinvointia</h3>
+      <p>Aktiivisella työhyvinvoinnilla tarkoitetaan innostusta työstä itsestään ja työn imua. Työstään nauttiva työntekijä voi paremmin ja on myös tuottavimmillaan. Aktiivinen työhyvinvointi tutkitusti ennustaa tuloksellisuutta paremmin kuin passiivinen työhyvinvointi.</p>
+      <h3>2. Tarkkuus ja konkretia</h3>
+      <p>Draivi-mittari on suunniteltu kehittämistyökaluksi: kysymykset koskevat arjessa konkreettisia tilanteita, joiden kautta kehityskohteiden tunnistaminen on helppoa.</p>
+    </div>
+    <div class="large-4 columns end center-aligned-small">
+      <h3>3. Perustuu validoituun teoriaan ihmisen motivaatiosta</h3>
+      <p>Draivin taustalla on tutkituin ja validoiduin teoria ihmisen motivaatiosta ja siihen vaikuttavista elementeistä.</p>
+      <h3>4. Normitettu</h3>
+      <p>Draivi-mittarin tuloksia verrataan Filosofian Akatemian keräämään normiaineistoon. Näin saadaan selville, millä tasolla sisäinen motivaatio on mitattavassa organisaatiossa suhteessa muihin suomalaisiin yrityksiin.</p>
+      <h3>5. Asiantuntijan analysoima</h3>
+      <p>Tulokset analysoi aina Filosofian Akatemian analyytikko, joka etsii datasta strategisesti relevantit yhteydet ja kehityskohteet. Voimme myös analysoida tuloksia ristiin muun datanne kanssa.</p>
+      <p></p><br/>
+      <p></p><br/>
+    </div>
+  </div>
+
+</div>
+<div class="section wrapper-embedded">
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="embedded">
+        <h2>Draivista sanottua</h2>
+        <div class="row">
+          <div class="underline small-offset-5 small-2"></div>
+        </div>
+        <div class="description">
+          <p><i>&ldquo;Henkilöstömme näkemysten mittaaminen luotettavalla mittarilla antaa meille varmuuden siitä, että kehitystoimenpiteemme kohdistuvat oikein.&rdquo;</i></p><p>Aimo Virtanen – Henkilöstöjohtaja, Caverion Suomi Oy</p>
+          <br/>
+          <p><i>&ldquo;Draivi-mittauksella pääsee ihmisen pään sisään.&rdquo;</i></p><p>Kimmo Kedonpää – Toimitusjohtaja, Pipelife Finland Oy</p>
+        </div>
+      </div>
+    </div>
+    <div class="large-6 columns">
+      <div class="embedded">
+        <h2>Mittausprosessi</h2>
+        <div class="row">
+          <div class="underline small-offset-5 small-2"></div>
+        </div>
+        <div class="description left-aligned">
+          <ul>
+            <li>Mittauksen räätälöinti tarpeidenne mukaan</li>
+            <li>Mittauksen toteutus sähköisenä kyselynä (40-100 kysymystä), vastausaika 10-20 min</li>
+            <li>Tulosten analysointi</li>
+            <li>Tulosten raportointi kasvotusten + kattava kirjallinen raportti sisältäen kehitysehdotukset</li>
+          </ul>
+        </div>
+        <div class="show-for-large-up"><br/><br/><br/></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section separate">
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <h2 class="big">Oletko kiinnostunut selvittämään, mitä asioita kehittämällä voitte vahvistaa työntekijöidenne draivia?</h2>
+      <br/><br/>
+      <a href="/#contact" class="button btn-contact">OTA YHTEYTT&Auml;</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+<div class="row hide-for-small-only">
+  <div class="medium-12 large-8 large-offset-2 end columns">
+    <ul class="icon-bar five-up">
+      <li class="item"><a href="/">Etusivu</a></li>
+      <li class="item"><a href="/ihmiset">Ihmiset</a></li>
+      <li class="item active"><a href="/palvelut">Palvelut</a></li>
+      <li class="item"><a href="/tutkimus">Tutkimus</a></li>
+      <li class="item"><a href="/blogi">Blogi</a></li>
+    </ul>
+  </div>
+</div>
+{% include 'partials/address.nunjucks' %}
+{% endblock %}

@@ -21,6 +21,7 @@ export class Routing {
     this.router.get("/palvelut/ajattelunhallinta", this.ajattelunhallinta);
     this.router.get("/palvelut/ajattelunhallinta/avoin", this.ajattelunhallintaAvoin);
     this.router.get("/palvelut/sirkusvalmennus", this.sirkusvalmennus);
+    this.router.get("/palvelut/draivi", this.draivi);
     this.router.get("/referenssit", this.referenssit);
     this.router.get("/ihmiset", this.ihmiset);
     this.router.get("/tutkimus", this.tutkimus);
@@ -98,6 +99,10 @@ export class Routing {
   private sirkusvalmennus(ctx: Router.IRouterContext): void {
     console.info("GET ", ctx.path);
     ctx.body = ctx.state.render.template("pages/sirkusvalmennus");
+  }
+  private draivi(ctx: Router.IRouterContext): void {
+    console.info("GET ", ctx.path);
+    ctx.body = ctx.state.render.template("pages/draivi");
   }
   private referenssit(ctx: Router.IRouterContext): void {
     console.info("GET ", ctx.path);

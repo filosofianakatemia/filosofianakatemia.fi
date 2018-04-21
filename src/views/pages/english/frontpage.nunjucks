@@ -3,10 +3,11 @@
 {% set pageName = 'Filosofian Akatemia Oy' %}
 {% set pageDescription = 'Filosofian Akatemia Oy is a coaching, consulting and research company focused on rethinking the future of work. We aid your organization to meet and exceed the demands of the constantly changing market environment.'%}
 {% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-english-front.jpg' %}
+{% set pageUrl = 'https://filosofianakatemia.fi/en' %}
 {% set salesName = ['tytti', 'tiina'] | random %}
 {% block title %}{{ super() }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
-{% block ogurl %}{{ super() }}{% endblock %}
+{% block ogurl %}{{ pageUrl }}{% endblock %}
 {% block ogtitle %}{{ super() }}{% endblock %}
 {% block ogdescription %}{{ pageDescription }}{% endblock %}
 {% block description %}{{ pageDescription }}{% endblock %}
