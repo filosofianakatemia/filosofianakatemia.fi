@@ -15,8 +15,10 @@
     <li class="show-for-small-only"><a href="/">Etusivu</a></li>
     <li class="active"><a href="/ihmiset">Ihmiset</a></li>
     <li><a href="/palvelut">Palvelut</a></li>
+    <li><a href="/referenssit">Referenssit</a></li>
     <li><a href="/tutkimus">Tutkimus</a></li>
     <li><a href="/blogi">Blogi</a></li>
+    <li><a href="/en">In English</a></li>
   </ul>
 </section>
 {% endblock %}

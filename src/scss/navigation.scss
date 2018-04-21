@@ -76,6 +76,12 @@
 
 /* MEDIUM */
 @media only screen and (min-width: 40.063em){
+
+  .top-bar .logo span:before {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
   .top-bar{
     background-color: transparent;
     padding-top: 25px;
@@ -127,8 +133,8 @@
   }
 
   .top-bar > .top-bar-section li {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: -8px;
+    margin-right: -8px;
   }
 
   .top-bar > .top-bar-section li:last-child {
@@ -136,12 +142,23 @@
   }
 
   .top-bar > .top-bar-section > ul {
-    margin-right: 5vw;
+    margin-right: 2vw;
   }
 }
 
-/* MEDIUM */
-@media only screen and (min-width: 40.063em) {
+/* MEDIUM BIG */
+@media only screen and (min-width: 53.063em) {
+
+  .top-bar .logo span:before {
+    font-size: 35px;
+    line-height: inherit;
+  }
+
+  .top-bar > .top-bar-section li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
   .top-bar ul.right {
     padding-top: 4px;
   }
@@ -150,16 +167,16 @@
   }
 }
 
-/* MEDIUM ONLY */
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+/* MEDIUM BIG ONLY */
+@media only screen and (min-width: 53.063em) and (max-width: 64em) {
   .top-bar > .top-bar-section li a {
     padding-right: 4px !important;
     padding-left: 4px !important;
   }
 }
 
-/* LARGE */
-@media only screen and (min-width: 64.063em){
+/* LARGE BIG */
+@media only screen and (min-width: 72.063em){
   .top-bar{
     padding-top: 45px;
   }
