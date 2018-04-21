@@ -198,12 +198,14 @@
 {% block footer %}
 <div class="row hide-for-small-only">
   <div class="medium-12 large-8 large-offset-2 end columns">
-    <ul class="icon-bar five-up">
+    <ul class="icon-bar seven-up">
       <li class="item"><a href="/">Etusivu</a></li>
       <li class="item"><a href="/ihmiset">Ihmiset</a></li>
       <li class="item active"><a href="/palvelut">Palvelut</a></li>
+      <li class="item"><a href="/referenssit">Referenssit</a></li>
       <li class="item"><a href="/tutkimus">Tutkimus</a></li>
       <li class="item"><a href="/blogi">Blogi</a></li>
+      <li class="item"><a href="/en">In English</a></li>
     </ul>
   </div>
 </div>
