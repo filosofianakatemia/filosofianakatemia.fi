@@ -1,6 +1,6 @@
 {% extends "base.nunjucks" %}
-{% set pageName = 'Ajattelunhallinta – uuden työn taidot' %}
-{% set pageDescription = 'Filosofian Akatemian Ajattelunhallinnan valmennus pureutuu tietotyön olennaisimpiin haasteisiin.' %}
+{% set pageName = 'Ajattelunhallinta ja uuden työn taidot -valmennus' %}
+{% set pageDescription = 'Moderni tietotyö vaatii vahvat itsensä johtamisen taidot. Ajattelunhallinnan valmennuksessa kehitetään omia työtapoja virtaviivaisemmiksi ja tehokkaammiksi sekä opitaan samalla kokeilemalla kehittämisen ja jatkuvan parantamisen toimintatapoja.' %}
 {% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-ajattelunhallinta.jpg' %}
 {% set pageUrl = 'https://filosofianakatemia.fi/palvelut/ajattelunhallinta' %}
 {% block title %}{{ pageName }} | {{ super() }}{% endblock %}

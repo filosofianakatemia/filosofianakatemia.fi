@@ -1,6 +1,6 @@
 {% extends "base.nunjucks" %}
 {% set pageName = 'Huipputiimien sirkusvalmennus' %}
-{% set pageDescription = 'Hyvien ja parhaiden tiimien eron salaisuus riippuu tutkitusti siitä, kuinka laadukasta tiimin jäsenten välinen vuorovaikutus on. Onnistunut vuorovaikutus perustuu luottamukseen, johon Sirkusvalmennuksessa pureudutaan kokemuksellisuuden ja teorian kautta.'%}
+{% set pageDescription = 'Hyvien ja parhaiden tiimien ero syntyy tutkitusti siitä, kuinka laadukasta tiimin jäsenten välinen vuorovaikutus on. Sirkuskoulu Woltin ja Filosofian Akatemia Oy:n elämyksellisessä valmennuksessa kehitetään tiimin yhteistyötä kokemuksellisuuden ja teorian kautta.'%}
 {% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-sirkusvalmennus.jpg' %}
 {% set pageUrl = 'https://filosofianakatemia.fi/palvelut/sirkusvalmennus' %}
 {% block title %}{{ pageName }} | {{ super() }}{% endblock %}

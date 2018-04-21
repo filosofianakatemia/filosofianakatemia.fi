@@ -1,6 +1,6 @@
 {% extends "base.nunjucks" %}
-{% set pageName = 'Sisäisen motivaation johtamisen valmennus esimiehille' %}
-{% set pageDescription = 'Filosofian Akatemian Sisäisen motivaation johtamisen valmennus vie esimiehet puolen vuoden mittaiselle kasvun ja kehittymisen matkalle.' %}
+{% set pageName = 'Sisäisen motivaation johtamisen valmennus' %}
+{% set pageDescription = 'Draivin eli sisäisen motivaation johtamisen valmennus vie esimiehet puolen vuoden mittaiselle kasvun ja kehittymisen matkalle. Valmennus haastaa esimiehet ajattelemaan omaa työtään ja johtamistaan uudella tavalla ja sparraa heitä viemään uuden ajattelun käytännön tasolle.' %}
 {% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-sismot.jpg' %}
 {% set pageUrl = 'https://filosofianakatemia.fi/palvelut/sisaisen-motivaation-johtaminen' %}
 {% block title %}{{ pageName }} | {{ super() }}{% endblock %}
