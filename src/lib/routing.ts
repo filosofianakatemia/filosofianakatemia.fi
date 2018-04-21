@@ -13,7 +13,7 @@ export class Routing {
   constructor(private backendClient: Utils,
               private backendInfo: Info) {
     // SETUP router
-    this.router.get("/", this.index);
+    this.router.get("/", this.etusivu);
     this.router.get("/esittely", this.esittely);
     this.router.get("/palvelut", this.palvelut);
     this.router.get("/palvelut/itseohjautuvuus", this.itseohjautuvuus);
@@ -46,6 +46,9 @@ export class Routing {
     this.router.get("/ihmiset/timo", this.person);
     this.router.get("/ihmiset/tuukka", this.person);
     this.router.get("/ihmiset/tytti", this.person);
+
+    // academyofphilosophy.com
+    this.router.get("/en", this.englishFrontPage);
   }
 
   // PUBLIC
@@ -64,7 +67,7 @@ export class Routing {
 
   // ROUTES
 
-  private index(ctx: Router.IRouterContext): void {
+  private etusivu(ctx: Router.IRouterContext): void {
     console.info("GET ", ctx.path);
     ctx.body = ctx.state.render.template("pages/etusivu");
   }
@@ -117,6 +120,14 @@ export class Routing {
     } else {
       ctx.redirect(questionnaire2Url);
     }
+  }
+
+  // academyofphilosophy,com routes
+
+  private englishFrontPage(ctx: Router.IRouterContext): void {
+    console.info("GET ", ctx.path);
+    console.info(ctx.request);
+    ctx.body = ctx.state.render.template("pages/english/frontpage");
   }
 
   private async blogi(ctx: Router.IRouterContext, next: () => Promise<any>): Promise<any> {

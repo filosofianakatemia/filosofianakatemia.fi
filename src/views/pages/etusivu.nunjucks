@@ -1,5 +1,5 @@
 {% extends "base.nunjucks" %}
-{% set pageName = 'etusivu' %}
+{% set pageName = 'Filosofian Akatemia Oy' %}
 {% set pageDescription = 'Filosofian Akatemia Oy on työelämän uudistaja. Autamme organisaatiotasi menestymään nopeasti muuttuvassa toimintaympäristössä.'%}
 {% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-etusivu.jpg' %}
 {% set salesName = ['tytti', 'maija'] | random %}

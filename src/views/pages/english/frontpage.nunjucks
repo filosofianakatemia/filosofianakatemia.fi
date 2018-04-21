@@ -1,0 +1,143 @@
+{% extends "base.nunjucks" %}
+{% set pageName = 'Academy of Philosophy' %}
+{% set pageDescription = 'Academy of Philosophy'%}
+{% set pageImage = 'https://academyofphilosophy.com/tiedostot/some-etusivu.jpg' %}
+{% set salesName = ['tytti', 'maija'] | random %}
+{% block title %}{{ super() }}{% endblock %}
+{% block ogtype %}{{ super() }}{% endblock %}
+{% block ogurl %}{{ super() }}{% endblock %}
+{% block ogtitle %}{{ super() }}{% endblock %}
+{% block ogdescription %}{{ pageDescription }}{% endblock %}
+{% block description %}{{ pageDescription }}{% endblock %}
+{% block ogimages %}
+<meta property="og:image:url" content="{{ pageImage }}" />
+<meta property="og:image:secure_url" content="{{ pageImage }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ pageImage }}" />
+<meta name="twitter:title" content="{{ pageName }}">
+<meta name="twitter:description" content="{{ pageDescription }}">
+<meta name="twitter:site" content="@filosofianakate">
+{% endblock %}
+{% block bodyattrs %}id="front"{% endblock %}
+
+{% block topbar %}
+<ul class="title-area">
+  <li class="name">
+    <div class="logo"><a href="/" onclick="return false;"><span class="icon-logo-fill-name"></span></a></div>
+  </li>
+  <li class="toggle-topbar menu-icon"><a href="/" onclick="return false;"><span></span></a></li>
+</ul>
+
+<section class="top-bar-section">
+  <ul class="right">
+    <li><a href="/">Suomeksi</a></li>
+  </ul>
+</section>
+{% endblock %}
+
+{% block hero %}
+<div class="hero">
+  <div class="slogan"><span class="font-bold">Rethinking Work</span></div>
+  <div class="ingress">We envision a world in which the vast majority of people enjoy and find meaning in what they do daily.<br/><br/>We know this is possible.</div>
+  <a href="/en/#contact" class="button btn-contact">CONTACT US</a>
+  <a href="/en/#front-top" class="scroll-down show-for-large-up">
+    <span class="text-scroll-down">SCROLL DOWN</span></br><span class="icon-arrow-down"></span>
+  </a>
+</div>
+{% endblock %}
+
+{% block mainattrs %}id="front-top"{% endblock %}
+{% block main %}
+<div id="front-top" class="section separate">
+  <div class="row">
+    <div class="medium-10 medium-offset-1 end columns ingress">
+      <p>Filosofian Akatemia Oy is a coaching, consulting and research company focused on rethinking the future of work. We combine our strong background in academic research with vast experience in coaching, facilitation and participatory methods.</p>
+      <p>We aid your organization in remodeling<br/><b>organizational structure, practices and working culture</b><br/> to meet and exceed the demands of the constantly changing market environment.</p>
+    </div>
+  </div>
+</div>
+<div class="section wrapper-embedded separate">
+  <div class="row">
+    <p><b>OUR APPROACH</b></p><br/>
+    <h1>Nordic Minimalist Leadership</h1>
+    <div class="medium-8 medium-offset-2 end columns ingress">
+      <p>Nordic companies have a strong cultural advantage in solving two critical challenges that are especially emblematic to our time.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-8 medium-offset-2 left-aligned end columns">
+      <div class="description">
+        <p>The first challenge is the constantly increasing competition for top performers. Due to rapidly increasing globalization, competition of the best talent is not just local. A finnish data-analyst from Helsinki receives job offers from Silicon Valley to Barcelona. The world has gotten smaller, workforce is mobile and companies are competing for the best talent harder than ever before. Salary is undoubtedly one factor in attracting the best talent, but <b>the clearly differentiating factor between companies is their ability to provide the expert with an environment where they believe they can best actualize their own interests and talents and grow limitlessly</b>.</p>
+        <p>The second challenge concerns the nature of future work: in a rapidly changing market environment, companies with rigid hierarchical structures are unable to react rapidly enough to emerging weak signals and incipient changes. When highly competent customer servants, experts and specialists in various fields are required to seek affirmation from an authority for every decision, this not only slows down the organizational processes and diminishes customer satisfaction, but stifles innovation and employee motivation.</p>
+        <p><b>If we want to strengthen employee engagement and self-directedness as well as organizational agility, we need to rethink organizational structures and leadership.</b></p>
+        <p>This is why we believe a company culture centered around strengthening employee self-directedness is a significant competitive advantage especially in dynamic knowledge-work and customer service industries. Furthermore, with the growing effects of digitalization and automation on working life, this means aspects of most industries in the near future. 
+Companies that revolve around supporting employee self-directedness are based on low or virtually non-existent hierarchy, high autonomy of employees, informational transparency and a high trust in employees’ ability to make decisions without a need for heavy control and approval systems.</p>
+        <p>One central cultural barrier for the revolution of self-organizing companies is status hierarchy that is often buried deep in organizational culture. When the void between executives and employees is deep, there is no ground on which self-direction to emerge. The very fundamentals of self-directed action requires the ability to make independent decisions and the ability to voice differing opinions to anyone in any function of the organization.</p>
+        <p>This is where us here in Finland and the Nordic countries have a competitive edge: International value studies show that, in regards to strengthening autonomy and dismantling unnecessary hierarchy, we are already there where the rest of the world is still headed. We live it.</p>
+        <p>We call this <b>Nordic Minimalist Leadership</b>.</p>
+        <p>With this concept we wish to convey the uniqueness of the nordic cultural backdrop on which organizations wanting to strengthen self-directedness can be born. Nordic Minimalist Leadership is the key to both a thriving organizational culture and agile, flexible processes and organizational structures.</p>
+      </div>
+    </div>
+  </div>
+</div> 
+<div id="contact" class="section">
+  <div id="contact-heading" class="row">
+    <div class="small-12 columns">
+      <h1>Contact Us</h1>
+    </div>
+  </div>
+  <div id="contact-people" class="row">
+
+    {% if salesName == 'tytti' %}
+    <div class="large-4 columns">
+      <img src="/static/{{ version }}/img/tytti-circle.png"/>
+      <h2>Tytti Kokko</h2>
+      <div>
+        Head of Sales<br/>
+        <a href="tel:+358505752441">+358 50 575 2441</a><br/>
+        <a href="mailto:tytti.kokko@filosofianakatemia.fi">tytti.kokko@filosofianakatemia.fi</a>
+      </div>
+    </div>
+    {% elif salesName == 'maija' %}
+    <div class="large-4 columns">
+      <img src="/static/{{ version }}/img/maija-circle.png"/>
+      <h2>Maija Tiitinen</h2>
+      <div>
+        COO<br/>
+        <a href="tel:+358505769230">+358 50 576 9230</a><br/>
+        <a href="mailto:maija.tiitinen@filosofianakatemia.fi">maija.tiitinen@filosofianakatemia.fi</a>
+      </div>
+    </div>
+    {% endif %}
+    <div class="large-4 columns">
+      <img src="/static/{{ version }}/img/address-circle.png"/>
+      <h2>Filosofian Akatemia</h2>
+      <div>
+        Mannerheimintie 5 C, 2krs.<br/>
+        00100 Helsinki<br/>
+        <a href="mailto:info@filosofianakatemia.fi">info@filosofianakatemia.fi</a>
+      </div>
+    </div>
+     <div class="large-4 columns">
+      <img src="/static/{{ version }}/img/karoliina-circle.png"/>
+      <h2>Karoliina Jarenko</h2>
+      <div>
+        CEO<br/>
+        <a href="tel:+358505758487">+358 50 575 8487</a><br/>
+        <a href="mailto:karoliina.jarenko@filosofianakatemia.fi">karoliina.jarenko@filosofianakatemia.fi</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% include 'partials/address.nunjucks' %}
+{% endblock %}
+
+{% block privacyAndTerms %}
+<a href="https://policies.google.com/privacy/partners">Privacy and Terms</a>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
