@@ -3,7 +3,7 @@
 {% set pageName = 'Filosofian Akatemia Oy' %}
 {% set pageDescription = 'Filosofian Akatemia Oy is a coaching, consulting and research company focused on rethinking the future of work. We aid your organization to meet and exceed the demands of the constantly changing market environment.'%}
 {% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-english-front.jpg' %}
-{% set salesName = ['tytti', 'maija'] | random %}
+{% set salesName = ['tytti', 'tiina'] | random %}
 {% block title %}{{ super() }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogurl %}{{ super() }}{% endblock %}
@@ -99,14 +99,14 @@ Companies that revolve around supporting employee self-directedness are based on
         <a href="mailto:tytti.kokko@filosofianakatemia.fi">tytti.kokko@filosofianakatemia.fi</a>
       </div>
     </div>
-    {% elif salesName == 'maija' %}
+    {% elif salesName == 'tiina' %}
     <div class="large-4 columns">
-      <img src="/static/{{ version }}/img/maija-circle.png"/>
-      <h2>Maija Tiitinen</h2>
+      <img src="/static/{{ version }}/img/tiina-circle.png"/>
+      <h2>Tiina Setälä</h2>
       <div>
-        COO<br/>
-        <a href="tel:+358505769230">+358 50 576 9230</a><br/>
-        <a href="mailto:maija.tiitinen@filosofianakatemia.fi">maija.tiitinen@filosofianakatemia.fi</a>
+        Head of Sales<br/>
+        <a href="tel:+358415110620">+358 41 511 0620</a><br/>
+        <a href="mailto:tiina.setala@filosofianakatemia.fi">tiina.setala@filosofianakatemia.fi</a>
       </div>
     </div>
     {% endif %}
@@ -119,13 +119,13 @@ Companies that revolve around supporting employee self-directedness are based on
         <a href="mailto:info@filosofianakatemia.fi">info@filosofianakatemia.fi</a>
       </div>
     </div>
-     <div class="large-4 columns">
-      <img src="/static/{{ version }}/img/karoliina-circle.png"/>
-      <h2>Karoliina Jarenko</h2>
+    <div class="large-4 columns">
+      <img src="/static/{{ version }}/img/maija-circle.png"/>
+      <h2>Maija Tiitinen</h2>
       <div>
-        CEO<br/>
-        <a href="tel:+358505758487">+358 50 575 8487</a><br/>
-        <a href="mailto:karoliina.jarenko@filosofianakatemia.fi">karoliina.jarenko@filosofianakatemia.fi</a>
+        COO<br/>
+        <a href="tel:+358505769230">+358 50 576 9230</a><br/>
+        <a href="mailto:maija.tiitinen@filosofianakatemia.fi">maija.tiitinen@filosofianakatemia.fi</a>
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 {% extends "base.nunjucks" %}
 {% set pageName = 'Palvelut' %}
-{% set pageDescription = 'Filosofian Akatemia Oy on työelämän uudistaja. Autamme organisaatiotasi menestymään nopeasti muuttuvassa toimintaympäristössä.'%}
+{% set pageDescription = 'Autamme organisaatioita kehittämään uusiutumiskykyä ja tukemaan jatkuvaa kehittämistä. Tarjoamme räätälöityjä kulttuurinmuutosprosesseja sekä eri mittaisia valmennuskokonaisuuksia johdolle, esimiehille ja työntekijöille.'%}
 {% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-palvelut.jpg' %}
 {% block title %}{{ pageName }} | {{ super() }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
@@ -115,7 +115,7 @@
   <div class="row">
     <div class="large-6 columns">
       <div class="embedded">
-        <h2>Jalostaminen: Ajattelunhallinta ja uuden työn taidot</h2>
+        <h2>Jalostaminen: Ajattelunhallinta ja uuden työn taidot -valmennus</h2>
         <div class="row">
           <div class="underline small-offset-5 small-2"></div>
         </div>
