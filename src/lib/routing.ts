@@ -122,7 +122,7 @@ export class Routing {
     }
   }
 
-  // academyofphilosophy,com routes
+  // English routes
 
   private englishFrontPage(ctx: Router.IRouterContext): void {
     console.info("GET ", ctx.path);

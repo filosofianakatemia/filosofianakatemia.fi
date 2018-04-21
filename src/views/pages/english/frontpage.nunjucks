@@ -1,7 +1,8 @@
 {% extends "base.nunjucks" %}
-{% set pageName = 'Academy of Philosophy' %}
-{% set pageDescription = 'Academy of Philosophy'%}
-{% set pageImage = 'https://academyofphilosophy.com/tiedostot/some-etusivu.jpg' %}
+{% block language %}en{% endblock %}
+{% set pageName = 'Filosofian Akatemia Oy' %}
+{% set pageDescription = 'Filosofian Akatemia Oy is a coaching, consulting and research company focused on rethinking the future of work. We aid your organization to meet and exceed the demands of the constantly changing market environment.'%}
+{% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-english-front.jpg' %}
 {% set salesName = ['tytti', 'maija'] | random %}
 {% block title %}{{ super() }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
