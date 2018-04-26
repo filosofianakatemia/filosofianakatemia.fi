@@ -117,7 +117,7 @@
   <div class="row">
     <div class="large-6 columns">
       <div class="embedded">
-        <h2>Jalostaminen: Ajattelunhallinta ja uuden työn taidot -valmennus</h2>
+        <h2>Ajattelunhallinta ja uuden työn taidot -valmennus</h2>
         <div class="row">
           <div class="underline small-offset-5 small-2"></div>
         </div>
@@ -134,7 +134,7 @@
         </div>
         <div class="description">Draivi-mittauksella selvitetään organisaationne sisäisen motivaation tila sekä kaivetaan esille seikat, joita kehittämällä nostatte henkilöstönne draivin seuraavalle asteelle.</div>
         <a href="/palvelut/draivi" class="link-cta">Lue lisää Draivi-mittauksesta<span class="icon-arrow-right"></span></a>
-        <div class="show-for-medium-up"><br/><br/><br/><br/></div>
+        <div class="show-for-medium-up"><br/><br/></div>
       </div>
     </div>
   </div>
@@ -147,9 +147,21 @@
         </div>
         <div class="description">Tässä tiimeille suunnatussa valmennuksessa osallistujat pääsevät oppimaan kokemuksellisesti, mitä luottamus tarkoittaa ja miten riemastuttavaa on uskaltaa luottaa toisiin ja antaa yhteisen hengen kannatella.</div>
         <a href="/palvelut/sirkusvalmennus" class="link-cta">Lue lisää Huipputiimien sirkusvalmennuksesta<span class="icon-arrow-right"></span></a>
+        <div class="show-for-medium-up"><br/></div>
       </div>
     </div>
+
     <div class="large-6 columns">
+      <div class="embedded">
+        <h2>Rohkea innovaatioympäristö -valmennus</h2>
+        <div class="row">
+          <div class="underline small-offset-5 small-2"></div>
+        </div>
+        <div class="description">Valmennuskokonaisuus käsittelee innovaatioiden fasilitoimista sekä oivallusloikkia mahdollistavan tunneilmaston johtamista. Valmennuskonsepti on kehitysvaiheessa, ja etsimme kumppaneita pilottiversion toteuttamiseen.</div>
+        <a href="/#contact" class="link-cta">Ota yhteyttä<span class="icon-arrow-right"></span></a>
+      </div>
+    </div>
+    <!--div class="large-6 columns">
       <div class="embedded">
         <h2>Mielensävalottajat</h2>
         <div class="row">
@@ -158,7 +170,7 @@
         <div class="description">Mielensävalottajat on henkisen kasvun polulla matkaajien yhteisö, joka on rakentunut samannimisen verkkovalmennuksen ympärille. Mielensävalottajat on paikka avartaa ajattelua, laajentaa sydäntä ja elää hiukan enemmän.</div>
         <a href="https://mielensavalottajat.fi" target="_blank" class="link-cta">Mielensavalottajat.fi<span class="icon-arrow-right"></span></a>
       </div>
-    </div>
+    </div-->
   </div>
 </div>
 <div class="section separate">
