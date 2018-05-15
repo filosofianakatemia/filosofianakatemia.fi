@@ -193,7 +193,7 @@ export class People {
         name: "Nick Ahleskog",
         pictures: {
           large: this.imagePathPrefix + "nick-large.jpg",
-          thumbnail: this.imagePathPrefix + "nick-thumbnail.png",
+          thumbnail: this.imagePathPrefix + "nick-thumbnail.jpg",
         },
         paths: {
           page: "nick-ahleskog",
