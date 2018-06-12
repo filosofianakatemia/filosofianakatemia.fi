@@ -35,7 +35,8 @@
   </developers>
 
   <properties>
-    <node.version>v7.10.0</node.version>
+    <node.version>v10.4.0</node.version>
+    <npm.version>6.1.0</npm.version>
     <docker.skip>true</docker.skip>
     <extendedmind.api.url>https://ext.md/api</extendedmind.api.url>
   </properties>
@@ -67,6 +68,7 @@
             </goals>
             <configuration>
               <nodeVersion>${node.version}</nodeVersion>
+              <npmVersion>${npm.version}</npmVersion>
             </configuration>
           </execution>
           <execution>
@@ -209,7 +211,7 @@
               <name>quay.io/fiak/site-static</name>
               <alias>fiak-site-static</alias>
               <build>
-                <from>quay.io/extendedmind/data-volume:dv-3.5-1</from>
+                <from>quay.io/extendedmind/data-volume:dv-3.7</from>
                 <maintainer>timo.tiuraniemi@iki.fi</maintainer>
                 <tags>
                   <tag>latest</tag>
@@ -242,7 +244,7 @@
               <name>quay.io/fiak/site</name>
               <alias>fiak-site</alias>
               <build>
-                <from>quay.io/extendedmind/node:node-7.10.0-1</from>
+                <from>quay.io/extendedmind/node:node-10.4.0-3</from>
                 <maintainer>timo.tiuraniemi@iki.fi</maintainer>
                 <tags>
                   <tag>latest</tag>
@@ -275,7 +277,7 @@
               </run>
             </image>
             <image>
-              <name>quay.io/extendedmind/nginx:nginx-1.13.0-1</name>
+              <name>quay.io/extendedmind/nginx:nginx-1.15.0</name>
               <alias>nginx</alias>
               <run>
                 <namingStrategy>alias</namingStrategy>
@@ -359,6 +361,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-clean-plugin</artifactId>
+        <version>3.1.0</version>
         <configuration>
           <filesets>
             <fileset>
