@@ -298,7 +298,7 @@
               </run>
             </image>
             <image>
-              <name>quay.io/extendedmind/sync-folder:1.9.14</name>
+              <name>quay.io/extendedmind/sync-folder:1.9.17</name>
               <alias>fiak-sync-folder</alias>
               <run>
                 <namingStrategy>alias</namingStrategy>
