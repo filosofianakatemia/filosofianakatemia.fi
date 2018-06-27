@@ -1,4 +1,4 @@
-{% macro byline() %}
+{% macro byline(blog) %}
 {% if blog.published == undefined %}
   <span>ESIKATSELU</span>
 {% elif blog.author %}
@@ -24,7 +24,7 @@
       {# Byline (date & author) #}
       <div class="{{ "show-for-medium-up" if listView and not readMode }} row byline">
         <div class="column">
-          {{ byline() }}
+          {{ byline(blog) }}
         </div>
       </div>
     {% else %}
@@ -32,7 +32,7 @@
       <div class="row breadcrumbs">
         <div class="column">
           <a href="/blogi">Blogi<span class="icon-arrow-right"></span></a>
-          {{ byline() }}
+          {{ byline(blog) }}
         </div>
       </div>
     {% endif %}
