@@ -1,0 +1,13 @@
+{% extends "ihminen.nunjucks" %}
+{% set personName = 'Eero Lahtinen' %}
+{% block title %}{{ personName }} | {{ super() }}{% endblock %}
+{% block ogtitle %}{{ personName }}{% endblock %}
+{% block ogdescription %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block ogurl %}{{ super() }}/ihmiset/eero{% endblock %}
+{% block ogimages %}
+<meta property="og:image:url" content="https://filosofianakatemia.fi/static/{{ version }}/img/eero-small.jpg" />
+<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/eero-small.jpg" />
+{% endblock %}
+{% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block personquote %}{% endblock %}
+{% block personquoteauthor %}{% endblock %}

@@ -81,15 +81,15 @@ export class People {
   private initializePeople(): void {
     this.people = [
       {
-        id: "emilia",
-        name: "Emilia Lahti",
+        id: "eero",
+        name: "Eero Lahtinen",
         pictures: {
-          large: this.imagePathPrefix + "emilia-large.jpg",
-          thumbnail: this.imagePathPrefix + "emilia-thumbnail.png",
+          large: this.imagePathPrefix + "eero-large.jpg",
+          thumbnail: this.imagePathPrefix + "eero-thumbnail.jpg",
         },
         paths: {
-          page: "emilia-lahti",
-          description: "emilia-lahti-kuvaus",
+          page: "eero-lahtinen",
+          description: "eero-lahtinen-kuvaus",
         },
       },
       {
