@@ -9,5 +9,5 @@
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/eero-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
-{% block personquote %}{% endblock %}
-{% block personquoteauthor %}{% endblock %}
+{% block personquote %}Eero lähestyy organisaatioita elävinä organismeina, jossa kaikki systeemin osat ovat jatkuvassa vuorovaikutuksessa toisiinsa. Hänen nauravainen ja lämmin persoonansa saa ihmiset avautumaan muutokselle.{% endblock %}
+{% block personquoteauthor %}Nick Ahleskog{% endblock %}
