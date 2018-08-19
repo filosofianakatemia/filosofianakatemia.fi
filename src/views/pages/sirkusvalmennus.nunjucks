@@ -135,30 +135,9 @@
 <div class="section separate">
   <div class="row">
     <div class="large-offset-3 large-6 columns end">
-      <h2 class="big">Ota yhteyttä ja kuule lisää!</h2>
+      <h2 class="big">Haluatko kehittää huipputiimin ja samalla tarjota tiimiläisillesi hauskan ja uudenlaisen oppimiskokemuksen?</h2>
       <br/><br/>
-    </div>
-  </div>
-  <div class="row">
-    <div class="circle-image large-offset-2 large-4 columns">
-      <img src="/static/{{ version }}/img/maija-circle.png"/>
-      <h2>Maija Tiitinen</h2>
-      <div>
-        Myyntipäällikkö<br/>
-        <a href="tel:+358505769230">+358 50 576 9230</a><br/>
-        <a href="mailto:maija.tiitinen@filosofianakatemia.fi">maija.tiitinen@filosofianakatemia.fi</a>
-      </div>
-      <br/><br/>
-    </div>
-    <div class="circle-image large-offset-1 large-4 end columns">
-      <img src="/static/{{ version }}/img/iida-circle.png"/>
-      <h2>Iida Mäkikallio</h2>
-      <div>
-        Valmentaja<br/>
-        <a href="tel:+358440589772">+358 44 058 9772</a><br/>
-        <a href="mailto:iida.makikallio@filosofianakatemia.fi">iida.makikallio@filosofianakatemia.fi</a>
-      </div>
-      <br/><br/>
+      <a href="/#contact" class="button btn-contact">OTA YHTEYTT&Auml;</a>
     </div>
   </div>
 </div>
