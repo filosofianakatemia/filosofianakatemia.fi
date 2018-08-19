@@ -67,6 +67,14 @@
     </div>
   </div>
   <div class="row">
+    <div class="medium-8 medium-offset-2 end columns">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" id="ytplayer" type="text/html" width="640" height="390" src="//www.youtube.com/embed/8gYkWR4yB24?start=5&rel=0&modestbranding=1" frameborder="0" allowfullscreen="1"></iframe>
+      </div>
+      <br/><br/>
+    </div>
+  </div>
+  <div class="row">
     <div class="large-offset-1 large-5 columns center-aligned-small large-right-padded">
       <h3>Päätyötämme on valmennus ja konsultointi</h3> 
       <p>Valmennuksemme tarjoavat ihmisille mieltä avartavan, psykologisesti turvallisen ja hieman hillittömän ilmapiirin, jossa ihmiset pystyvät paljastamaan uusia ajattelunpolkuja, ja ajattelemaan ajatuksia, joita he eivät muuten ajattelisi.</p>
