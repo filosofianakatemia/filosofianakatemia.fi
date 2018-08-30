@@ -29,6 +29,7 @@ export class Routing {
     this.router.get("/blogi", this.blogi);
     this.router.get("/blogi/:blogPath", this.blogiTeksti);
     this.router.get("/esikatselu/:ownerUUID/:itemUUID/:previewCode", this.preview);
+    this.router.get("/ihmiset/alex", this.person);
     this.router.get("/ihmiset/eero", this.person);
     this.router.get("/ihmiset/frank", this.person);
     this.router.get("/ihmiset/iida", this.person);

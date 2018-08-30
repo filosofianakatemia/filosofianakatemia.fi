@@ -1,0 +1,13 @@
+{% extends "ihminen.nunjucks" %}
+{% set personName = 'Alex Descargues' %}
+{% block title %}{{ personName }} | {{ super() }}{% endblock %}
+{% block ogtitle %}{{ personName }}{% endblock %}
+{% block ogdescription %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block ogurl %}{{ super() }}/ihmiset/alex{% endblock %}
+{% block ogimages %}
+<meta property="og:image:url" content="https://filosofianakatemia.fi/static/{{ version }}/img/alex-small.jpg" />
+<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/alex-small.jpg" />
+{% endblock %}
+{% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block personquote %}Alex on yhteisömme korvaamaton tuki ja turva, jonka erityisosaamista on ninjana taklata päivittäisiä työnteon esteitä ja luoda kodikasta fiilistä toimistolle. Hän on todellinen renesanssimies, joka taitaa niin tekniset asiat, hyvät musavinkit kuin tunneilmaston johtamisen.{% endblock %}
+{% block personquoteauthor %}Miia Järvilehto{% endblock %}
