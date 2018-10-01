@@ -4,7 +4,6 @@
 {% set pageDescription = 'Filosofian Akatemia Oy is a coaching, consulting and research company focused on rethinking the future of work. We aid your organization to meet and exceed the demands of the constantly changing market environment.'%}
 {% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-english-front.jpg' %}
 {% set pageUrl = 'https://filosofianakatemia.fi/en' %}
-{% set salesName = ['tytti', 'tiina'] | random %}
 {% block title %}{{ super() }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogurl %}{{ pageUrl }}{% endblock %}
@@ -89,8 +88,6 @@ Companies that revolve around supporting employee self-directedness are based on
     </div>
   </div>
   <div id="contact-people" class="row">
-
-    {% if salesName == 'tytti' %}
     <div class="large-4 columns">
       <img src="/static/{{ version }}/img/tytti-circle.png"/>
       <h2>Tytti Kokko</h2>
@@ -100,17 +97,6 @@ Companies that revolve around supporting employee self-directedness are based on
         <a href="mailto:tytti.kokko@filosofianakatemia.fi">tytti.kokko@filosofianakatemia.fi</a>
       </div>
     </div>
-    {% elif salesName == 'tiina' %}
-    <div class="large-4 columns">
-      <img src="/static/{{ version }}/img/tiina-circle.png"/>
-      <h2>Tiina Setälä</h2>
-      <div>
-        Head of Sales<br/>
-        <a href="tel:+358415110620">+358 41 511 0620</a><br/>
-        <a href="mailto:tiina.setala@filosofianakatemia.fi">tiina.setala@filosofianakatemia.fi</a>
-      </div>
-    </div>
-    {% endif %}
     <div class="large-4 columns">
       <img src="/static/{{ version }}/img/address-circle.png"/>
       <h2>Filosofian Akatemia</h2>

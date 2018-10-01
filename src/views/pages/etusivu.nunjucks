@@ -2,7 +2,6 @@
 {% set pageName = 'Filosofian Akatemia Oy' %}
 {% set pageDescription = 'Filosofian Akatemia Oy on työelämän uudistaja. Autamme organisaatiotasi menestymään nopeasti muuttuvassa toimintaympäristössä.'%}
 {% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-etusivu.jpg' %}
-{% set salesName = ['tytti', 'tiina'] | random %}
 {% block title %}{{ super() }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogurl %}{{ super() }}{% endblock %}
@@ -365,8 +364,6 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
     </div>
   </div>
   <div id="contact-people" class="row">
-
-    {% if salesName == 'tytti' %}
     <div class="large-4 columns">
       <img src="/static/{{ version }}/img/tytti-circle.png"/>
       <h2>Tytti Kokko</h2>
@@ -376,17 +373,6 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
         <a href="mailto:tytti.kokko@filosofianakatemia.fi">tytti.kokko@filosofianakatemia.fi</a>
       </div>
     </div>
-    {% elif salesName == 'tiina' %}
-    <div class="large-4 columns">
-      <img src="/static/{{ version }}/img/tiina-circle.png"/>
-      <h2>Tiina Setälä</h2>
-      <div>
-        Myyntipäällikkö<br/>
-        <a href="tel:+358415110620">+358 41 511 0620</a><br/>
-        <a href="mailto:tiina.setala@filosofianakatemia.fi">tiina.setala@filosofianakatemia.fi</a>
-      </div>
-    </div>
-    {% endif %}
     <div class="large-4 columns">
       <img src="/static/{{ version }}/img/address-circle.png"/>
       <h2>Filosofian Akatemia</h2>
