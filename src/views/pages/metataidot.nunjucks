@@ -1,0 +1,168 @@
+{% extends "base.nunjucks" %}
+{% set pageName = 'Yhteisöllisten metataitojen valmennukset' %}
+{% set pageDescription = 'Itseohjautuvuus vaatii työntekijöiltä uusia taitoja. Yhteisöllisten metataitojen valmennukset antavat tiimille eväät toimia tehokkaasti ja tavoitteellisesti ilman esimiestä tai esimiehen ottaessa valmentavamman roolin.' %}
+{% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-metataidot.jpg' %}
+{% set pageUrl = 'https://filosofianakatemia.fi/palvelut/metataidot' %}
+{% block title %}{{ pageName }} | {{ super() }}{% endblock %}
+{% block ogtitle %}{{ pageName }}{% endblock %}
+{% block ogtype %}{{ super() }}{% endblock %}
+{% block ogdescription %}{{ pageDescription }}{% endblock %}
+{% block ogurl %}{{ pageUrl }}{% endblock %}
+{% block ogimages %}
+<meta property="og:image:url" content="{{ pageImage }}" />
+<meta property="og:image:secure_url" content="{{ pageImage }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ pageImage }}" />
+<meta name="twitter:title" content="{{ pageName }}">
+<meta name="twitter:description" content="{{ pageDescription }}">
+<meta name="twitter:site" content="@filosofianakate">
+{% endblock %}
+{% block bodyattrs %}class="services details"{% endblock %}
+{% block topbar %}
+<ul class="title-area">
+  <li class="name">
+    <div class="logo"><a href="/"><span class="icon-logo-fill-name"></span></a></div>
+  </li>
+  <li class="toggle-topbar menu-icon"><a href="/"><span></span></a></li>
+</ul>
+
+<section class="top-bar-section">
+  <ul class="right">
+    <li class="show-for-small-only"><a href="/">Etusivu</a></li>
+    <li><a href="/ihmiset">Ihmiset</a></li>
+    <li class="active"><a href="/palvelut">Palvelut</a></li>
+    <li><a href="/referenssit">Referenssit</a></li>
+    <li><a href="/tutkimus">Tutkimus</a></li>
+    <li><a href="/blogi">Blogi</a></li>
+    <li><a href="/en">In English</a></li>
+  </ul>
+</section>
+{% endblock %}
+
+{% block hero %}
+<div id="metataidot" class="hero">
+  <div class="row">
+    <div class="medium-10 small-centered column">
+      <div class="center-aligned-small section-introduction">
+        {# Breadcrumbs #}
+        <div class="row breadcrumbs">
+          <div class="column">
+            <a href="/palvelut">Palvelut<span class="icon-arrow-right"></span></a>
+            <span class="font-bold">Yhteisöllisten metataitojen valmennukset</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="icon"><img src="/static/{{ version }}/img/ajattelunhallinta_icon.png"/></div>
+  <div class="slogan">Yhteisölliset metataidot</div>
+  <div class="ingress">Itseohjautuvuus vaatii työntekijöiltä paljon uusia taitoja. Itsensä johtamisen taitojen lisäksi tarvitaan yhteisen työn tekemisen taitoja eli niin kutsuttuja ”yhteisöllisiä metataitoja”. Perinteisesti esimies on vastannut työn organisoinnista, roolituksista ja tavoitteiden asettamisesta. Itseohjautuvassa tiimissä työntekijät hoitavat nämä asiat itse – joko ilman esimiestä tai coachaavan esimiehen avustuksella.<br/><br/></div>
+</div>
+{% endblock %}
+
+{% block main %}
+<div id="metataidot-top" class="section separate">
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <h2>Kuusi toimivan tiimityön edellytystä</h2>
+      <p>Paikansimme kuusi asiaa, jotka tiimin täytyy ottaa haltuun, jotta se voisi toimia fiksusti. Loimme jokaisesta valmennuksen, jonka aikana tiimi omaksuu tarvittavat taidot ja luo itselleen pelisäännöt kyseiseen teemaan liittyen. Valmennukset toimivat itsenäisesti tai sarjana. Valmennukset on suunniteltu tilanteeseen, jossa halutaan kasvattaa tiimiläisten autonomiaa ja itseohjautuvuutta. Ne sopivat sekä tiimeille, joissa on esimies että tiimeillä, joista halutaan poistaa esimies.</p>
+      <p>Valmennusten kesto on 2,5h.</p>
+      <br/><br/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-4 large-offset-2 columns center-aligned-small">
+      <h3>Tavoitteiden asettaminen ja joukko-ohjautuminen</h3>
+      <p>Yksinkertaista mutta ehdottoman tärkeää: tiimin on osattava määritellä tekemisensä tarkoitus ja päämäärä. Tiimin pitää osata asettaa tavoitteita ja seurata niiden toteutumista. Isommat tavoitteet pitää osata pilkkoa pienemmiksi, ja yhteiset tavoitteet jokaisen omiksi tavoitteiksi. Asioilla tulee olla omistaja ja omistajan tehtävät pitää muistaa määritellä. Tavoitteiden välisten prioriteettien tulee olla kirkkaat.</p>
+      <p>Tavoiteorientoitunut työkulttuuri pitää energian yllä ja varmistaa, että ihmiset ”itseohjautuvat” oikeaan suuntaan.</p>
+      <br/>
+      <h3>Päätöksenteon periaatteet</h3>
+      <p>Oli esimies sitten poistumassa tai vain vaihtamassa valmentavampaan otteeseen, on tärkeää julkilausua, kuka päättää mistäkin ja mistä asioista nyt saa päättää itse tai kaverin kanssa. Mitkä ovat päätöksenteon uudet pelisäännöt?</p>
+      <p>Tämä valmennus konkretisoi todella hyvin muutosta ja sen psykologiset vaikutukset ovat suuremmat, kuin sen tekninen ilmiasu antaa ymmärtää. Valmennuksessa siirretään konkreettisesti päätösvaltaa esimieheltä tiimiläisille ja otetaan aimo harppaus itseohjautuvampaan suuntaan.</p>
+      <br/>
+      <h3>Osaaminen, roolitus ja oppimisunelmat</h3>
+      <p>Ihmisten osaamisella on merkitystä vain, jos se tunnistetaan ja sitä osataan hyödyntää.</p>
+      <p>Tämä valmennus auttaa tiimiä kartoittamaan ihmisten osaamisen ja vahvuudet. Se tekee tiimin jäsenten osaamisen kaikille näkyväksi, ja ohjaa tiimin kirkastamaan kunkin roolin tiimissä tavalla, jolla ihminen pääsee maksimaalisesti hyödyntämään kyvykkyyttään.</p>
+      <p>Nykyisessä työelämässä ei kuitenkaan riitä, että keskitymme vain olemassa olevaan osaamiseen. Tärkeää on myös miettiä, mihin suuntaan kukin tiimin jäsen haluaa omaa osaamistaan kehittää, ja miten tiimi pystyy tukemaan tuon kehityspolun toteutumista työn kehittyessä.</p>
+      <p>Valmennus auttaa tiimiä tulemaan parhaaksi versioksi itsestään. Se myös vahvistaa yhteisöllisyyttä ja luottamusta ja sopii siten erinomaisesti myös tiimipäivien ohjelmaksi.</p>
+      <br/>
+    </div>
+    <div class="large-4 columns end center-aligned-small">
+      <h3>Fiksut kokouskäytännöt ja yhdessä ajattelemisen taito</h3>
+      <p>Kokoustaminen on työelämän yleisimpiä työkaluja, mutta sitä ei silti opeteta juuri missään. Kuitenkin huonojen kokousten vaikutukset ovat valtavat. Ne latistavat osallistujansa, heikentävät draivia ja haaskaavat kaikkien aikaa.</p>
+      <p>Hyville kokouksille on olemassa malleja, ja eri tarkoituksen omaaville kokouksille on omat mallinsa. Tässä valmennuksessa osallistujat oppivat tunnistamaan, minkä tyyppisestä kokouksesta on kulloinkin kysymys, ja millä tavalla agenda kannattaa muotoilla ja kokous toteuttaa, jotta se saavuttaisi tavoitteensa.</p>
+      <p>Valmennus antaa tiimille myös valmiudet pitää kokouksia ilman esimiestä. Tiimi oppii jakamaan puheenvuoroja tasaisesti, seuraamaan dialogin etenemistä ja johtamaan tietoisesti kokouksen ilmapiiriä tarkoituksenmukaiseen suuntaan.</p>
+      <br/>
+      <h3>Kokeilut ja kehittämiskulttuuri</h3>
+      <p>Dynaamisissa organisaatioissa kaikki osallistuvat oman ja yhteisen työnsä jatkuvaan kehittämiseen. Osa kehittämisestä tapahtuu toki lennossa, mutta suurimmassa osassa työyhteisöjä iso osa ideoista jää ilmaan ja toteutus puuttumaan, ellei siihen luoda prosessia.</p>
+      <p>Tässä valmennuksessa opiskellaan kokeilemalla kehittämisen perusteet ja rakennetaan käytänteet eri tasoisten kehitysideoiden käsittelylle. Valmennuksen jälkeen yhdessäkehittäminen ei enää ole vain sanahelinää. Siitä tulee tekemisen tapa.</p>
+      <br/>
+      <h3>Luottamus ja psykologinen turva</h3>
+      <p>Psykologisesti turvallisen ilmapiirin on todettu olevan edellytys sekä ihmisten itseohjautuvuudelle että työn kehittämiselle.</p>
+      <p>Tässä valmennuksessa perustellaan tietoisen tunneilmaston johtamisen merkitys ja skannataan oman työyhteisön tunneilmaston tila. Työkaluna käytämme tiivistä psykologista turvallisuutta ja luottamusta kartoittavaa kyselyä ja siitä keskustelemista. Lopuksi työyhteisö johdatellaan konkretisoimaan syntyneet kehitystoimenpiteet tunneilmastonsa parantamiseksi.</p>
+      <br/>
+    </div>
+  </div>
+
+</div>
+<div class="section wrapper-embedded">
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <br/><br/>
+      <h2>Valmennukset</h2>
+      <br/><br/>
+    </div>
+  </div>
+  <div class="row module-container">
+    <div class="module leftmost small-offset-2 large-2 columns">
+      <span>Tavoitteiden asettaminen ja joukko-ohjautuminen</span>
+    </div>
+    <div class="module small-offset-2 large-offset-0 large-2 columns">
+      <span>Päätöksenteon periaatteet</span>
+    </div>
+    <div class="module small-offset-2 large-offset-0 large-2 columns end">
+      <span>Osaaminen, roolitus ja oppimisunelmat</span>
+    </div>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="module leftmost small-offset-2 large-2 columns">
+      <span>Fiksut kokouskäytännöt ja yhdessä ajattelemisen taito</span>
+    </div>
+    <div class="module small-offset-2 large-offset-0 large-2 columns">
+      <span>Kokeilut ja kehittämiskulttuuri</span>
+    </div>
+    <div class="module small-offset-2 large-offset-0 large-2 columns end">
+      <span>Luottamus ja psykologinen turva</span>
+    </div>
+  </div>
+  <br/><br/>
+</div>
+<div class="section separate">
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <h2 class="big">Oletko kiinnostunut valmennuksista?</h2>
+      <br/><br/>
+      <a href="/#contact" class="button btn-contact">OTA YHTEYTT&Auml;</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+<div class="row hide-for-small-only">
+  <div class="medium-12 large-8 large-offset-2 end columns">
+    <ul class="icon-bar seven-up">
+      <li class="item"><a href="/">Etusivu</a></li>
+      <li class="item"><a href="/ihmiset">Ihmiset</a></li>
+      <li class="item active"><a href="/palvelut">Palvelut</a></li>
+      <li class="item"><a href="/referenssit">Referenssit</a></li>
+      <li class="item"><a href="/tutkimus">Tutkimus</a></li>
+      <li class="item"><a href="/blogi">Blogi</a></li>
+      <li class="item"><a href="/en">In English</a></li>
+    </ul>
+  </div>
+</div>
+{% include 'partials/address.nunjucks' %}
+{% endblock %}
