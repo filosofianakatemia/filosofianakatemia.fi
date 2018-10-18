@@ -81,7 +81,8 @@
       <br/><br class="show-for-medium-up"/>
       <h3>Yhteisölliset metataidot mahdollistavat joukko-ohjaistumisen</h3>
       <p>Itseohjautuvuus ei tietenkään tarkoita sitä, että ihmiset tekisivät yksin mitä huvittaa. Itseohjautuvat ihmiset johtavat työtään yhdessä. Se edellyttää hyviä kommunikaatiotaitoja, selkeitä viestinnän periaatteita ja sitovia pelisääntöjä. Yhteisten tavoitteiden saavuttaminen edellyttää myös priorisointitaitoja ja älykästä delegointia. Osaamisen jakaminen ja yhdessä kehittäminen vaativat luottamusta ja kykyä johtaa yhteistä tunneilmastoa.</p>
-      <br/><br class="show-for-medium-up"/>
+      <p><a href="/palvelut/metataidot" class="font-strong">Lue lisää yhteisöllisten metataitojen valmennuksistamme.</a></p>
+      <br/><br class="show-for-medium-up"/><br class="show-for-medium-up"/>
       <div class="row show-for-medium-up">
         <div class="small-offset-3 small-4 columns">
           <br/><img class="arrow" src="/static/{{ version }}/img/blue_arrow.png"></img><br/>
@@ -97,9 +98,11 @@
       <br/>
       <h3>Esimies on muutoksen avainhahmo</h3>
       <p>Itseohjautuvuuden tukeminen vaatii esimieheltä aivan erilaista otetta kuin kontrolloiva esimiestyö. Fasilitointitaidot, motivaation johtaminen ja valmentaminen ovat osaamisen keskiössä. Muutosvaiheessa esimiehellä on myös tärkeä rooli auttaa tiimiläisiään kasvamaan itseohjautuvampaan suuntaan. Joissain organisaatioissa esimiehen rooli voi muuttua merkittävästikin, joissain ei.</p>
+      <p><a href="/palvelut/sisaisen-motivaation-johtaminen" class="font-strong">Lue lisää esimiesvalmennuksestamme.</a></p>
       <br/>
       <h3>Itseohjautuvuus vaatii hyviä itsensä johtamisen taitoja</h3>
       <p>Itseohjautuvan asiantuntijan on osattava asettaa omalle työlleen kirkkaita tavoitteita, priorisoitava tekemistä ja saavutettava päämäärät ilman kaitsentaa. Aivotyöläiset johtavat viretasoaan ja osaavat aikatauluttaa työtään sen mukaan. Tekemisen draivi kumpuaa omien vahvuuksien ja oppimisunelmien tuntemisesta ja oman elämän ohjaamisesta näiden mukaan.</p>
+      <p><a href="/palvelut/ajattelunhallinta" class="font-strong">Lue lisää oman työn johtamisen valmennuksestamme.</a></p>
     </div>
   </div>
   <div class="row">
@@ -116,18 +119,18 @@
     <div class="module small-offset-2 large-offset-0 large-2 columns">
       <span>Toiminnalliset rakenteet</span>
     </div>
-    <div class="module small-offset-2 large-offset-0 large-2 columns end">
+    <a href="/palvelut/metataidot" class="module small-offset-2 large-offset-0 large-2 columns end">
       <span>Yhteisölliset metataidot</span>
-    </div>
+    </a>
   </div>
   <br/>
   <div class="row">
-    <div class="module leftmost small-offset-2 large-2 columns">
+    <a href="/palvelut/sisaisen-motivaation-johtaminen" class="module leftmost small-offset-2 large-2 columns">
       <span>Uudet esimiestaidot</span>
-    </div>
-    <div class="module small-offset-2 large-offset-0 large-2 columns">
-      <span>Itsensäjohtamisen taidot</span>
-    </div>
+    </a>
+    <a href="/palvelut/ajattelunhallinta" class="module small-offset-2 large-offset-0 large-2 columns">
+      <span>Itsensä johtamisen taidot</span>
+    </a>
     <div class="module small-offset-2 large-offset-0 large-2 columns end">
       <span>Seuranta</span>
     </div>
