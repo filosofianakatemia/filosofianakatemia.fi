@@ -335,6 +335,24 @@
 
 #contact-people {
   margin-bottom: 40px;
+  #address {
+    padding-top: 30px;
+    strong {
+      color: $color-highlighted-petrol;
+    }
+    .address-circle {
+      width: 100px;
+      padding-top: 20px;
+      padding-bottom: 15px;
+    }
+  }
+  a {
+    font-weight: 400;
+  }
+  a.phone-number {
+    font-weight: inherit;
+    color: inherit;
+  }
 }
 
 /* NON-MOBILE */
