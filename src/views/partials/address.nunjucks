@@ -5,7 +5,7 @@
     <div class="address">
       <h5>Filosofian Akatemia Oy</h5>
       <a href="mailto:info@filosofianakatemia.fi">info@filosofianakatemia.fi</a><br/>
-      <a href="https://www.facebook.com/filosofianakatemia"><img class="some-logo" src="/static/{{ version }}/img/facebook-logo-white.png"/></a>
+      <a href="https://www.facebook.com/filosofianakatemia"><img class="some-logo" src="/static/{{ version }}/img/fb-logo-white.png"/></a>
       <a href="https://twitter.com/filosofianakate"><img class="some-logo" src="/static/{{ version }}/img/twitter-logo-white.png"/></a>
       <br class="show-for-medium-down"/>
       <br class="show-for-medium-down"/>
