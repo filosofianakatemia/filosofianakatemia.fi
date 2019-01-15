@@ -213,6 +213,18 @@ export class People {
         },
       },
       {
+        id: "pekka",
+        name: "Pekka Enroth",
+        pictures: {
+          large: this.imagePathPrefix + "pekka-large.jpg",
+          thumbnail: this.imagePathPrefix + "pekka-thumbnail.jpg",
+        },
+        paths: {
+          page: "pekka-enroth",
+          description: "pekka-enroth-kuvaus",
+        },
+      },
+      {
         id: "peter",
         name: "Peter Kenttä",
         pictures: {

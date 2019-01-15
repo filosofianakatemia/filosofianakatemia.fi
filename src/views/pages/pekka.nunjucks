@@ -1,0 +1,13 @@
+{% extends "ihminen.nunjucks" %}
+{% set personName = 'Pekka Enroth' %}
+{% block title %}{{ personName }} | {{ super() }}{% endblock %}
+{% block ogtitle %}{{ personName }}{% endblock %}
+{% block ogdescription %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block ogurl %}{{ super() }}/ihmiset/pekka{% endblock %}
+{% block ogimages %}
+<meta property="og:image:url" content="https://filosofianakatemia.fi/static/{{ version }}/img/pekka-small.jpg" />
+<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/pekka-small.jpg" />
+{% endblock %}
+{% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block personquote %}Pekalla on ilmiömäinen kyky tunnistaa ja kyseenalaistaa käytänteitä, joita muut pitävät itsestäänselvyyksinä, sekä toisaalta kehittää niitä toimivammiksi. Pekan lämmin ja helposti lähestyttävä persoona sulattaa sydämiä missä ikinä hän kulkeekin.{% endblock %}
+{% block personquoteauthor %}Liisa Arponen{% endblock %}
