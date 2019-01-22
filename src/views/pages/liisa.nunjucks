@@ -1,0 +1,13 @@
+{% extends "ihminen.nunjucks" %}
+{% set personName = 'Liisa Arponen' %}
+{% block title %}{{ personName }} | {{ super() }}{% endblock %}
+{% block ogtitle %}{{ personName }}{% endblock %}
+{% block ogdescription %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block ogurl %}{{ super() }}/ihmiset/liisa{% endblock %}
+{% block ogimages %}
+<meta property="og:image:url" content="https://filosofianakatemia.fi/static/{{ version }}/img/liisa-small.jpg" />
+<meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/liisa-small.jpg" />
+{% endblock %}
+{% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
+{% block personquote %}Liisan lämpö ja into energisoivat yhteisöä, ja hänen kykynsä omaksua uutta ja löytää asioista oleellinen on vertaansa vailla. Asiakkaamme arvostavat suuresti Liisan tarkkanäköisyyttä ja tarmokkuutta asettua heidän asemaansa ja kyvykkyyttä etsiä yhdessä paras mahdollinen ratkaisu.{% endblock %}
+{% block personquoteauthor %}Eero Lahtinen{% endblock %}

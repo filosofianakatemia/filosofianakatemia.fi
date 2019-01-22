@@ -165,6 +165,18 @@ export class People {
         },
       },
       {
+        id: "liisa",
+        name: "Liisa Arponen",
+        pictures: {
+          large: this.imagePathPrefix + "liisa-large.jpg",
+          thumbnail: this.imagePathPrefix + "liisa-thumbnail.jpg",
+        },
+        paths: {
+          page: "liisa-arponen",
+          description: "liisa-arponen-kuvaus",
+        },
+      },
+      {
         id: "maija",
         name: "Maija Tiitinen",
         pictures: {
