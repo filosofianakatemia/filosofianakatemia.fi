@@ -94,71 +94,39 @@
   <div class="row">
     <div class="large-6 columns">
       <div class="embedded">
-        <h2>Itseohjautuvuuden vahvistamisen kehitysprosessi</h2>
-        <div class="row">
-          <div class="underline small-offset-5 small-2"></div>
-        </div>
-        <div class="description">Itseohjautuvuuden vahvistamisen kehitysprosessi on teille räätälöity kokonaisuus. Kehittämistoimenpiteet suunnitellaan tarpeidenne mukaan ja prosessin etenemistä seurataan arviointityökalulla.</div>
-        <a href="/palvelut/itseohjautuvuus" class="link-cta">Lue lisää Itseohjautuvuuden vahvistamisen kehitysprosessista<span class="icon-arrow-right"></span></a>
+        {% include 'partials/promos/palvelut/itseohjautuvuus.nunjucks' %}
         <div class="show-for-medium-up"><br/><br/></div>
       </div>
     </div>
     <div class="large-6 columns">
       <div class="embedded">
-        <h2>Yhteisöllisten metataitojen valmennukset</h2>
-        <div class="row">
-          <div class="underline small-offset-5 small-2"></div>
-        </div>
-        <div class="description">Itseohjautuvuus vaatii työntekijöiltä paljon uusia taitoja. Itsensä johtamisen taitojen lisäksi tarvitaan yhteisen työn tekemisen taitoja eli nk. ”yhteisöllisiä metataitoja”. Loimme kuusi valmennusta, joiden avulla tiimi oppii toimimaan tehokkaasti joko ilman esimiestä tai coachaavan esimiehen avustuksella.</div>
-        <a href="/palvelut/metataidot" class="link-cta">Lue lisää Yhteisöllisten metataitojen valmennuksista<span class="icon-arrow-right"></span></a>
+        {% include 'partials/promos/palvelut/metataidot.nunjucks' %}
       </div>
     </div>
   </div>
   <div class="row">
     <div class="large-6 columns">
       <div class="embedded">
-        <h2>Ajattelunhallinta ja uuden työn taidot -valmennus</h2>
-        <div class="row">
-          <div class="underline small-offset-5 small-2"></div>
-        </div>
-        <div class="description">Tämä valmennus on suunnattu tietotyöntekijöille. Valmennus kehittää tehtävänhallinnan ja itsensä johtamisen taitoja ja opettaa kokeilemalla kehittämisen metodiikan oman toiminnan jatkuvaan kehittämiseen.
-        </div>
-        <a href="/palvelut/ajattelunhallinta" class="link-cta">Lue lisää Ajattelunhallinnan valmennuksesta<span class="icon-arrow-right"></span></a>
+        {% include 'partials/promos/palvelut/ajattelunhallinta.nunjucks' %}
         <div class="show-for-medium-up"><br/></div>
       </div>
     </div>
     <div class="large-6 columns">
       <div class="embedded">
-        <h2>Sisäisen motivaation johtamisen valmennus</h2>
-        <div class="row">
-          <div class="underline small-offset-5 small-2"></div>
-        </div>
-        <div class="description">Valmennus antaa esimiehille työkalut sisäisen motivaation johtamiseen. Se vie osallistujat johtajana kasvamisen polulle, jonka jälkeen he uskaltavat antaa ihmisilleen enemmän vapautta, vaatia kovempia tuloksia ja tarjota voimakkaamman merkityksen kokemuksen työn arjessa.</div>
-        <a href="/palvelut/sisaisen-motivaation-johtaminen" class="link-cta">Lue lisää Sisäisen motivaation valmennuksesta<span class="icon-arrow-right"></span></a>
+        {% include 'partials/promos/palvelut/sisaisen-motivaation-johtaminen.nunjucks' %}
       </div>
     </div>
   </div>
   <div class="row">
     <div class="large-6 columns">
       <div class="embedded">
-        <h2>Draivi-mittaus</h2>
-        <div class="row">
-          <div class="underline small-offset-5 small-2"></div>
-        </div>
-        <div class="description">Draivi-mittauksella selvitetään organisaationne sisäisen motivaation tila sekä kaivetaan esille seikat, joita kehittämällä nostatte henkilöstönne draivin seuraavalle asteelle.</div>
-        <a href="/palvelut/draivi" class="link-cta">Lue lisää Draivi-mittauksesta<span class="icon-arrow-right"></span></a>
-        <div class="show-for-medium-up"><br/><br/></div>
+        {% include 'partials/promos/palvelut/draivi.nunjucks' %}
+        <div class="show-for-medium-up"><br/></div>
       </div>
     </div>
     <div class="large-6 columns">
       <div class="embedded">
-        <h2>Huipputiimien sirkusvalmennus</h2>
-        <div class="row">
-          <div class="underline small-offset-5 small-2"></div>
-        </div>
-        <div class="description">Tässä tiimeille suunnatussa valmennuksessa osallistujat pääsevät oppimaan kokemuksellisesti, mitä luottamus tarkoittaa ja miten riemastuttavaa on uskaltaa luottaa toisiin ja antaa yhteisen hengen kannatella.</div>
-        <a href="/palvelut/sirkusvalmennus" class="link-cta">Lue lisää Huipputiimien sirkusvalmennuksesta<span class="icon-arrow-right"></span></a>
-        <div class="show-for-medium-up"><br/></div>
+        {% include 'partials/promos/palvelut/sirkusvalmennus.nunjucks' %}
       </div>
     </div>
 

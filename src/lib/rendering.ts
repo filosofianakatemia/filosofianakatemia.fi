@@ -107,6 +107,10 @@ export class Render {
 
   public getBlogPostContext(faPublicItems, blogPost, previousBlogPost, nextBlogPost) {
     const blog = this.processBlogPost(blogPost);
+    let promoTitle =  "Tutustu valmennuksiimme";
+    let leftPromo = "partials/promos/palvelut/itseohjautuvuus.nunjucks";
+    let rightPromo = "partials/promos/palvelut/sisaisen-motivaation-johtaminen.nunjucks";
+    let padLeft = true;
     for (const keyword of blogPost.keywords) {
       if (this.people.isAuthorTag(keyword)) {
         // Get the introduction of the author.
@@ -120,12 +124,25 @@ export class Render {
           blog.author.pictureSource = this.people.getAuthorThumbnailPath(keyword.title);
         }
         break;
+      } else if (keyword.parentTitle === "nostot" && keyword.description && keyword.description.length) {
+        const descriptionLines = keyword.description.split(/\r?\n/);
+        if (descriptionLines.length >= 2) {
+          promoTitle = "Aiheeseen liittyviä valmennuksia";
+          leftPromo = "partials/promos" + descriptionLines[0] + ".nunjucks";
+          rightPromo = "partials/promos" + descriptionLines[1] + ".nunjucks";
+          padLeft = false;
+        }
       }
     }
+
     return {
       blog,
       nextBlog: this.getBlogTitleAndLink(nextBlogPost),
       previousBlog: this.getBlogTitleAndLink(previousBlogPost),
+      promoTitle,
+      leftPromo,
+      rightPromo,
+      padLeft,
     };
   }
 

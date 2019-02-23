@@ -42,6 +42,32 @@
 <div class="section row">
   {% include 'partials/blogpost.nunjucks' %}
 </div>
+
+<div id="services" class="section wrapper-embedded">
+  <div class="row">
+    <div class="medium-10 medium-offset-1 end columns">
+      <br/><br/>
+      <h2 class="big">{{ promoTitle }}</h2>
+      <br/><br/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="embedded">
+        {% include leftPromo %}
+        {% if padLeft %}
+        <div class="show-for-medium-up"><br/><br/></div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="large-6 columns">
+      <div class="embedded">
+        {% include rightPromo %}
+      </div>
+    </div>
+  </div>
+</div>
+
 {% import 'partials/newsletter.nunjucks' as newsletter %}
 {{ newsletter.initialize() }}
 {% endblock %}
