@@ -68,6 +68,8 @@
   </div>
 </div>
 
+<a id="contact-fab" href="/#contact" class="fab button btn-contact">OTA YHTEYTTÄ</a>
+
 {% import 'partials/newsletter.nunjucks' as newsletter %}
 {{ newsletter.initialize() }}
 {% endblock %}
@@ -89,9 +91,14 @@
 {% include 'partials/address.nunjucks' %}
 {% endblock %}
 
+
 {% block scripts %}
 <script>
   app.getShareCount('{{ blog.path }}');
+
+  $("#contact-fab").hide();
+  // Show the div in 10s
+  $("#contact-fab").delay(10000).fadeIn(500);
 </script>
 {% include 'partials/mailchimp.nunjucks' %}
 {% endblock %}
