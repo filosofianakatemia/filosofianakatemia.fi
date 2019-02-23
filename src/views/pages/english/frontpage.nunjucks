@@ -3,6 +3,7 @@
 {% set pageName = 'Filosofian Akatemia Oy' %}
 {% set pageDescription = 'Filosofian Akatemia Oy is a coaching, consulting and research company focused on rethinking the future of work. We aid your organization to meet and exceed the demands of the constantly changing market environment.'%}
 {% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-english-front.jpg' %}
+{% set salesName = ['tytti', 'liisa'] | random %}
 {% set pageUrl = 'https://filosofianakatemia.fi/en' %}
 {% block title %}{{ super() }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
@@ -88,22 +89,38 @@ Companies that revolve around supporting employee self-directedness are based on
     </div>
   </div>
   <div id="contact-people" class="row">
+    {% if salesName == 'tytti' %}
     <div class="large-4 columns">
       <img src="/static/{{ version }}/img/tytti-circle.png"/>
       <h2>Tytti Kokko</h2>
       <div>
-        Head of Sales<br/>
-        <a href="tel:+358505752441">+358 50 575 2441</a><br/>
+        Customer Relations Manager<br/>
+        <a class="phone-number" href="tel:+358505752441">+358 50 575 2441</a><br/>
         <a href="mailto:tytti.kokko@filosofianakatemia.fi">tytti.kokko@filosofianakatemia.fi</a>
       </div>
     </div>
+    {% elif salesName == 'liisa' %}
     <div class="large-4 columns">
-      <img src="/static/{{ version }}/img/address-circle.png"/>
-      <h2>Filosofian Akatemia</h2>
+      <img src="/static/{{ version }}/img/liisa-circle.png"/>
+      <h2>Liisa Arponen</h2>
+      <div>
+        Customer Relations Manager<br/>
+        <a class="phone-number" href="tel:+358442305727">+358 44 230 5727</a><br/>
+        <a href="mailto:liisa.arponen@filosofianakatemia.fi">liisa.arponen@filosofianakatemia.fi</a>
+      </div>
+    </div>
+    {% endif %}
+    <div id="address" class="large-4 columns">
+      <a href="mailto:info@filosofianakatemia.fi">Filosofian Akatemia Oy</a><br/>
+      <a href="https://www.google.com/maps/place/Mannerheimintie+5C,+00100+Helsinki/@60.1695578,24.937424,17z/data=!3m1!4b1!4m5!3m4!1s0x46920bcc8b5ed09d:0x3430958181ec8a1d!8m2!3d60.1695551!4d24.9396127"><img class="address-circle" src="/static/{{ version }}/img/address-helsinki-circle.png"/></a>
       <div>
         Mannerheimintie 5 C, 2krs.<br/>
         00100 Helsinki<br/>
-        <a href="mailto:info@filosofianakatemia.fi">info@filosofianakatemia.fi</a>
+      </div>
+      <a href="https://www.google.com/maps/place/Nummikatu+18-20,+90100+Oulu/@65.0094311,25.460309,17z/data=!3m1!4b1!4m5!3m4!1s0x468032baaec5fdf7:0x84377faf526d7bce!8m2!3d65.0094288!4d25.4624977"><img class="address-circle" src="/static/{{ version }}/img/address-oulu-circle.png"/></a>
+      <div>
+        Nummikatu 18-20 B<br/>
+        90100 Oulu<br/>
       </div>
     </div>
     <div class="large-4 columns">
@@ -120,19 +137,6 @@ Companies that revolve around supporting employee self-directedness are based on
 {% endblock %}
 
 {% block footer %}
-<div class="row hide-for-small-only">
-  <div class="medium-12 large-8 large-offset-2 end columns">
-    <ul class="icon-bar seven-up">
-      <li class="item"><a href="/">Etusivu</a></li>
-      <li class="item"><a href="/ihmiset">Ihmiset</a></li>
-      <li class="item"><a href="/palvelut">Palvelut</a></li>
-      <li class="item"><a href="/referenssit">Referenssit</a></li>
-      <li class="item"><a href="/tutkimus">Tutkimus</a></li>
-      <li class="item"><a href="/blogi">Blogi</a></li>
-      <li class="item active"><a href="/en">In English</a></li>
-    </ul>
-  </div>
-</div>
 {% include 'partials/address.nunjucks' %}
 {% endblock %}
 
