@@ -1,6 +1,6 @@
 {% extends "base.nunjucks" %}
 {% set pageName = 'Tutkimus' %}
-{% set pageDescription = 'Ihmismieltä ymmärtää vain tutkimalla. Filosofian Akatemia Oy:n tutkimushankkeet pureutuvat siihen, mistä innostus ja sisäinen motivaatio syntyvät. Tutkimustietoa soveltamalla kehitämme organisaatioille työkaluja kilpailukyvyn vahvistamiseen.'%}
+{% set pageDescription = 'Ihmismieltä ymmärtää vain tutkimalla. Filosofian Akatemia Oy:n tutkimushankkeet pureutuvat laaja-alaisesti elämän peruskysymyksiin ja organisaatioiden kehittämiseen. Tutkimustietoa soveltamalla kehitämme organisaatioille työkaluja kilpailukyvyn vahvistamiseen.'%}
 {% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-tutkimus.jpg' %}
 {% block title %}{{ pageName }} | {{ super() }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
@@ -43,8 +43,7 @@
 {% block hero %}
 <div class="hero">
   <div class="slogan">Ihmismielt&auml; ymm&auml;rt&auml;&auml; vain tutkimalla</div>
-  <div class="ingress">Filosofian Akatemian tutkimushankkeet pureutuvat laaja-alaisesti el&auml;m&auml;n peruskysymyksiin: mit&auml; on hyv&auml; el&auml;m&auml;, ent&auml; mielek&auml;s ty&ouml;? Tutkimme ihmisten hyvinvointia ja kehit&auml;mme konkreettisia ratkaisuja ty&ouml;el&auml;m&auml;n tarpeisiin.</div>
-
+  <div class="ingress">Filosofian Akatemian tutkimushankkeet pureutuvat laaja-alaisesti elämän peruskysymyksiin ja organisaatioiden kehittämiseen: mitä on hyvä elämä ja mielekäs työ, ja miten organisaatiot säilyvät kilpailukykyisinä nopeasti muuttuvassa toimintaympäristössä? Tutkimme ihmisten hyvinvointia ja organisaatioiden käytänteitä ja kehitämme konkreettisia ratkaisuja työelämän tarpeisiin.</div>
   <a href="#research-top" class="scroll-down show-for-large-up">
     <span class="text-scroll-down">VIERIT&Auml; ALAS</span></br><span class="icon-arrow-down"></span>
   </a>
@@ -55,8 +54,8 @@
 <div id="research-top" class="section separate">
   <div class="row">
     <div class="medium-10 medium-offset-1 end columns ingress">
-      <p>Akateemisesti meritoituneet tutkijamme kehitt&auml;v&auml;t tekem&auml;ns&auml; tutkimuksen pohjalta johtamisen tueksi ty&ouml;kaluja, jotka lis&auml;&auml;v&auml;t ty&ouml;ntekij&ouml;iden sis&auml;ist&auml; motivaatiota eli vapautta, virtausta ja vastuuta. Tutkimusten mukaan n&auml;m&auml; ihmisen perustarpeet huomioiva ty&ouml;kulttuuri lis&auml;&auml; tuottavuutta.</p>
-      <p>Ty&ouml;el&auml;m&auml;n parantamiseen pyrkiv&auml;n tutkimuksen lis&auml;ksi teemme perustutkimusta, joka kumpuaa akateemisista intohimoistamme. Haluamme ymm&auml;rt&auml;&auml; paremmin ihmismielt&auml;. Tieteellisten julkaisujen lis&auml;ksi kirjoitamme kirjoja, joissa yleistajuistamme tutkimusta ja sovellamme sit&auml; arjessa hy&ouml;dynnett&auml;viksi ty&ouml;kaluiksi.</p>
+      <p>Akateemisesti meritoituneet tutkijamme kehittävät tekemänsä tutkimuksen pohjalta työkaluja, joilla vahvistetaan itseohjautuvuutta, sisäistä motivaatiota ja muutoskyvykkyyttä organisaatioissa.</p>
+      <p>Työelämän parantamiseen pyrkivän tutkimuksen lisäksi teemme perustutkimusta, joka kumpuaa akateemisista intohimoistamme. Haluamme ymmärtää paremmin ihmismieltä. Tieteellisten julkaisujen lisäksi kirjoitamme kirjoja, joissa yleistajuistamme tutkimusta ja sovellamme sitä arjessa hyödynnettäviksi työkaluiksi.</p>
     </div>
   </div>
 </div>
