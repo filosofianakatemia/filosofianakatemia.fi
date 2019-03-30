@@ -20,6 +20,7 @@ export class Routing {
     this.router.get("/palvelut/sisaisen-motivaation-johtaminen", this.sisaisenMotivaationJohtaminen);
     this.router.get("/palvelut/ajattelunhallinta", this.ajattelunhallinta);
     this.router.get("/palvelut/ajattelunhallinta/avoin", this.ajattelunhallintaAvoin);
+    this.router.get("/palvelut/tunnealy/koulutus", this.tunnealykoulutus);
     this.router.get("/palvelut/sirkusvalmennus", this.sirkusvalmennus);
     this.router.get("/palvelut/draivi", this.draivi);
     this.router.get("/palvelut/metataidot", this.metataidot);
@@ -98,6 +99,10 @@ export class Routing {
   private ajattelunhallintaAvoin(ctx: Router.IRouterContext): void {
     console.info("GET ", ctx.path);
     ctx.redirect("/palvelut/ajattelunhallinta");
+  }
+  private tunnealykoulutus(ctx: Router.IRouterContext): void {
+    console.info("GET ", ctx.path);
+    ctx.body = ctx.state.render.template("pages/tunnealykoulutus");
   }
   private sirkusvalmennus(ctx: Router.IRouterContext): void {
     console.info("GET ", ctx.path);

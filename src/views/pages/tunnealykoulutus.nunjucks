@@ -1,0 +1,162 @@
+{% extends "base.nunjucks" %}
+{% set pageName = 'Avoin tunneälykoulutus esimiehille' %}
+{% set someDescription = 'Päivän mittainen tunneälykoulutus 12.6.2019. Koulutuksessa kehität henkilökohtaisia tunnetaitojasi sekä opit johtamaan tiimisi tunneilmastoa ja käsittelemään haastavia tilanteita rakentavasti. Varmista paikkasi nyt!'%}
+{% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-tunnealykoulutus.jpg' %}
+{% set pageUrl = 'https://filosofianakatemia.fi/palvelut/sirkusvalmennus' %}
+{% block title %}{{ pageName }} | {{ super() }}{% endblock %}
+{% block ogtitle %}{{ pageName }} | Ilmoittaudu nyt!{% endblock %}
+{% block ogtype %}{{ super() }}{% endblock %}
+{% block ogdescription %}{{ someDescription }}{% endblock %}
+{% block description %}Tunneälykoulutuksessa esimiehet kehittävät henkilökohtaisia tunnetaitojaan ja oppivat johtamaan tiiminsä tunneilmastoa sekä käsittelemään haastavia tilanteita.{% endblock %}
+{% block ogurl %}{{ pageUrl }}{% endblock %}
+{% block ogimages %}
+<meta property="og:image:url" content="{{ pageImage }}" />
+<meta property="og:image:secure_url" content="{{ pageImage }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ pageImage }}" />
+<meta name="twitter:title" content="{{ pageName }} | Ilmoittaudu nyt!">
+<meta name="twitter:description" content="{{ someDescription }}">
+<meta name="twitter:site" content="@filosofianakate">
+{% endblock %}
+{% block bodyattrs %}class="services details"{% endblock %}
+{% block topbar %}
+<ul class="title-area">
+  <li class="name">
+    <div class="logo"><a href="/"><span class="icon-logo-fill-name"></span></a></div>
+  </li>
+  <li class="toggle-topbar menu-icon"><a href="/"><span></span></a></li>
+</ul>
+
+<section class="top-bar-section">
+  <ul class="right">
+    <li class="show-for-small-only"><a href="/">Etusivu</a></li>
+    <li><a href="/ihmiset">Ihmiset</a></li>
+    <li class="active"><a href="/palvelut">Palvelut</a></li>
+    <li><a href="/referenssit">Referenssit</a></li>
+    <li><a href="/tutkimus">Tutkimus</a></li>
+    <li><a href="/blogi">Blogi</a></li>
+    <li><a href="/en">In English</a></li>
+  </ul>
+</section>
+{% endblock %}
+
+{% block hero %}
+<div id="tunnealykoulutus" class="hero">
+  <div class="row">
+    <div class="medium-10 small-centered column">
+      <div class="center-aligned-small section-introduction">
+        {# Breadcrumbs #}
+        <div class="row breadcrumbs">
+          <div class="column">
+            <a href="/palvelut">Palvelut<span class="icon-arrow-right"></span></a>
+            <span class="font-bold">Tunneälykoulutus esimiehille</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="icon"><img src="/static/{{ version }}/img/simojo_icon.png"/></div>
+  <div class="slogan">Avoin tunneälykoulutus esimiehille 12.6.2019</div>
+  <div class="ingress">Tunneälykoulutuksessa esimiehet kehittävät henkilökohtaisia tunnetaitojaan ja saavat välineitä johtaa tiiminsä tunneilmastoa ja käsitellä haastavia, potentiaalisesti tunnelatautuneita, tilanteita rakentavasti.</div>
+  <br class="show-for-large-up"/><br/>
+</div>
+{% endblock %}
+
+{% block main %}
+<div id="tunnealykoulutus-top" class="section separate">
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <h2 class="big">Tunneäly on avain asiantuntijatiimin suorituskyvyn johtamiseen</h2>
+      <p>Tunneälykkyydellä tarkoitetaan yksilön kykyä tunnistaa, erotella ja säädellä omia ja toisten ihmisten tunteita sekä käyttää tunnepitoista informaatiota hyödyksi sosiaalisissa konteksteissa toimimiseen.</p>
+      <p>Innostavan ja avoimen ilmapiirin johtaminen tai haastavien, tunnelatautuneiden tilanteiden käsittely rakentavasti ei ole mahdollista, ellei esimiehellä itsellään ole ensin kykyä tiedostaa omaa ajatteluaan, tunteitaan ja käyttäytymistään. Tällä koulutuksella on siksi kaksi päätavoitetta: 1. vahvistaa osallistujien henkilökohtaisia tunnetaitoja: omien ajatusten ja tunteiden tiedostamista, säätelyä ja rakentavaa käsittelyä, sekä 2. lisätä esimiehen kyvykkyyttä johtaa tiiminsä tunneilmastoa ja käsitellä haastavia, potentiaalisesti tunnelatautuneita, tilanteita rakentavasti.</p>
+      <br class="show-for-large-up"/><br class="show-for-large-up"/><br/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="circle-image large-4 large-offset-2 columns">
+      <br/>
+      <img src="/static/{{ version }}/img/tunnealykoulutus-top.jpg"></img>
+      <br/>
+    </div>
+    <div class="large-offset-1 large-4 columns end left-aligned">
+      <h2 class="big">Koulutuspäivän sisältö</h2>
+      <p>Klo 9.00:<br/> <b>Henkilökohtaiset tunnetaidot: Tunnetietoisuus ja itsesäätely</b></p>
+      <p><ul>
+        <li>itsellesi tyypillisten tunteiden käsittelytapojen tunnistaminen</li>
+        <li>tiedostaminen: miten nykyinen tapasi käsitellä tunteita ja haastavia ajatuksia vaikuttaa sinuun itseesi ja ympäristöösi</li>
+        <li>välineitä tunteiden ja haastavien ajatusten kohtaamiseen rakentavalla tavalla</li>
+      </ul></p>
+      <p>Klo 12-13 Lounastauko</p>
+    </div>
+  </div>
+  <div class="row"><br class="show-for-large-up"/><br class="show-for-large-up"/><br/></div>
+  <div class="row">
+    <div class="large-offset-2 large-4 columns left-aligned">
+      <p>Klo 13.00<br/><b>Syventävät ihmissuhdetaidot: Tunteiden johtaminen ja haastavat keskustelut</b></p>
+      <p>
+        <ul>
+          <li>toisen tunnekokemuksen tavoittaminen</li>
+          <li>yhteyden kokemisen ja empatian esteiden paikantaminen</li>
+          <li>työkaluja haastavien keskustelujen käymiseen tiimiläisten kanssa (esim. puuttuminen sopimattomaan käytökseen, kehityskeskustelut, jatkuvat poissaolot, koeajan purku jne.)</li>
+        </ul>
+      </p>
+      <p>Hinta: 760 € + alv. 24% /hlö, sisältää lounaan ja kahvitarjoilun.</p>
+    </div>
+    <div class="circle-image large-4 end columns">
+      <br class="hide-for-large-up"/><br class="hide-for-large-up"/>
+      <img src="/static/{{ version }}/img/tunnealykoulutus-bottom.jpg"></img>
+      <br/><br/>
+    </div>
+  </div>
+</div>
+<div class="section wrapper-embedded">
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <br/><br/>
+      <h2 class="big">Valmentajasi</h2>
+      <br/><br/>
+    </div>
+  </div>
+  <div class="row module-container">
+    <div class="circle-image large-offset-2 large-4 columns">
+      <img src="/static/{{ version }}/img/iida-circle.png"></img><br/>
+      <br/><br/>
+    </div>
+    <div class="large-offset-1 large-4 columns end center-aligned-small">
+      <p class="font-large"><a href="/ihmiset/iida"><b>Iida Mäkikallio</b></a> on henkilökohtaiseen kasvuun ja ihmissuhdedynamiikkoihin erikoistunut psykologi. Iida on valmentanut useiden vuosien ajan tunnetaitoja ja sisäisen motivaation johtamista lukuisten eri alojen yritysten johdolle ja työntekijöille. Hän on myös suosittu puhuja, joka tunnetaan innostavuudestaan ja helposti lähestyttävästä tavastaan puhua haastavista ja ajatuksia herättävistä teemoista.</p>
+      <br/><br/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <p>"Iida’s training on emotional intelligence opened a "door of awareness" for myself and for the people around me, helping me to understand the main patterns through which we handle our emotions and providing me with ways to recognize them in daily interactions, eventually allowing me to adapt my behavior or communication to reach a better level of mutual understanding / collaboration at work and in life.”<br/><br/><span class="font-strong">&ndash;Nicolas Aubry, CTO Schibsted Media Group, Tori.fi</span>
+      <br class="show-for-large-up"/><br/><br/></p>
+    </div>
+  </div>
+</div>
+
+<div class="section separate">
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <a href="https://filosofianakatemia.typeform.com/to/vs7dOV" target="_blank" class="button btn-contact">VARAA PAIKKASI TÄSTÄ</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="row hide-for-small-only">
+  <div class="medium-12 large-8 large-offset-2 end columns">
+    <ul class="icon-bar seven-up">
+      <li class="item"><a href="/">Etusivu</a></li>
+      <li class="item"><a href="/ihmiset">Ihmiset</a></li>
+      <li class="item active"><a href="/palvelut">Palvelut</a></li>
+      <li class="item"><a href="/referenssit">Referenssit</a></li>
+      <li class="item"><a href="/tutkimus">Tutkimus</a></li>
+      <li class="item"><a href="/blogi">Blogi</a></li>
+      <li class="item"><a href="/en">In English</a></li>
+    </ul>
+  </div>
+</div>
+{% include 'partials/address.nunjucks' %}
+{% endblock %}
