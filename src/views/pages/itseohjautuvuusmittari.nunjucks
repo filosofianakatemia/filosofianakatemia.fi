@@ -1,0 +1,124 @@
+{% extends "base.nunjucks" %}
+{% set pageName = 'Itseohjautuvuusmittari' %}
+{% set someDescription = 'Uuden sukupolven työkalu edelläkävijäorganisaatioille.'%}
+{% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-itseohjautuvuusmittari.jpg' %}
+{% set pageUrl = 'https://filosofianakatemia.fi/palvelut/itseohjautuvuusmittari' %}
+{% block title %}{{ pageName }} | {{ super() }}{% endblock %}
+{% block ogtitle %}{{ pageName }} | Filosofian Akatemia Oy{% endblock %}
+{% block ogtype %}{{ super() }}{% endblock %}
+{% block ogdescription %}{{ someDescription }}{% endblock %}
+{% block description %}Uuden sukupolven työkalu edelläkävijäorganisaatioille. Mittauksella selvitämme kehityskohteenne ja seuraamme kehitystänne matkalla kohti itseohjautuvuutta.{% endblock %}
+{% block ogurl %}{{ pageUrl }}{% endblock %}
+{% block ogimages %}
+<meta property="og:image:url" content="{{ pageImage }}" />
+<meta property="og:image:secure_url" content="{{ pageImage }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ pageImage }}" />
+<meta name="twitter:title" content="{{ pageName }}">
+<meta name="twitter:description" content="{{ someDescription }}">
+<meta name="twitter:site" content="@filosofianakate">
+{% endblock %}
+{% block bodyattrs %}class="services details"{% endblock %}
+{% block topbar %}
+<ul class="title-area">
+  <li class="name">
+    <div class="logo"><a href="/"><span class="icon-logo-fill-name"></span></a></div>
+  </li>
+  <li class="toggle-topbar menu-icon"><a href="/"><span></span></a></li>
+</ul>
+
+<section class="top-bar-section">
+  <ul class="right">
+    <li class="show-for-small-only"><a href="/">Etusivu</a></li>
+    <li><a href="/ihmiset">Ihmiset</a></li>
+    <li class="active"><a href="/palvelut">Palvelut</a></li>
+    <li><a href="/referenssit">Referenssit</a></li>
+    <li><a href="/tutkimus">Tutkimus</a></li>
+    <li><a href="/blogi">Blogi</a></li>
+    <li><a href="/en">In English</a></li>
+  </ul>
+</section>
+{% endblock %}
+
+{% block hero %}
+<div id="itseohjautuvuusmittari" class="hero">
+  <div class="row">
+    <div class="medium-10 small-centered column">
+      <div class="center-aligned-small section-introduction">
+        {# Breadcrumbs #}
+        <div class="row breadcrumbs">
+          <div class="column">
+            <a href="/palvelut">Palvelut<span class="icon-arrow-right"></span></a>
+            <span class="font-bold">Itseohjautuvuusmittari</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="icon"><img src="/static/{{ version }}/img/simojo_icon.png"/></div>
+  <div class="slogan">Itseohjautuvuusmittari</div>
+  <div class="ingress">Itseohjautuvuus tulee ryminällä suomalaiseen työelämään - oletko sinä, ja onko sinun organisaatiosi, valmis?</div>
+  <br class="show-for-large-up"/><br/>
+</div>
+{% endblock %}
+
+{% block main %}
+<div id="itseohjautuvuusmittari-top" class="section separate">
+  <div class="row">
+    <div class="large-4 large-offset-2 columns center-aligned-small">
+      <p>Syitä itseohjautuvuuden lisäämiselle voi olla monia: ketterämmät toimintatavat, työhyvinvoinnin lisääminen, työntekijöiden sisäisen motivaation vahvistaminen tai vaikka innovaatiokyvykkyyden kehittäminen. Voi kuitenkin olla vaikeaa tietää, mistä lähteä liikkeelle. </p>
+      <p><b>Filosofian Akatemia Oy:n kehittämä tutkimukseen pohjautuva itseohjautuvuusmittari antaa valmiudet itseohjautuvuuden vahvistamiselle.</b></p>
+    </div>
+    <div class="large-4 columns end center-aligned-small">
+      <p>Kevyempi testi antaa työntekijälle tietoa siitä, missä määrin työnantajaorganisaatio tukee itseohjautuvaa työskentelyä.</p>
+      <p>Laajemmalla mittauksella kartoitamme kokonaisvaltaisesti organisaation ja sen yksiköiden ja tiimien nykytilan sekä seuraamme valittujen kehityskohteiden kehittymistä.</p>
+    </div>
+  </div>
+</div>
+<div id="itseohjautuvuusmittari-bottom" class="section wrapper-embedded">
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="embedded">
+        <h2>Testaa, kuinka itseohjautuvia sinä ja tiimisi olette</h2>
+        <div class="row">
+          <div class="underline small-offset-5 small-2"></div>
+        </div>
+        <div class="description">
+          <p>Onko työpaikallasi moderni työkulttuuri? Onko sinulla mahdollisuus itseohjautuvaan työskentelyyn? Filosofian Akatemia Oy:n kehittämä, tutkimukseen pohjautuva maksuton testi auttaa sinua ymmärtämään, mistä itseohjautuvuudessa on kyse ja missä määrin sinun työnantajaorganisaatiosi tukee itseohjautuvaa työskentelyä.<br/><br/></p>
+          <p><a href="http://typeform.com" class="link-cta">Tee tästä maksuton testi<span class="icon-arrow-right"></span></a><br/><br/></p>
+          <p class="font-small">Kun olet ilmoittanut sähköpostiosoitteesi, saat postilaatikkoosi linkin kyselyyn. Sähköpostia käytetään ainoastaan henkilökohtaisten tulosten lähettämistä varten.</p>
+        </div>
+      </div>
+    </div>
+    <div class="large-6 columns">
+      <div class="embedded">
+        <h2>Mittaa organisaatiosi itseohjautuvuus ja seuraa kehitystä</h2>
+        <div class="row">
+          <div class="underline small-offset-5 small-2"></div>
+        </div>
+        <div class="description">
+          <p>Mittarimme toimii uuden sukupolven kyselyalustalla. Se analysoi tulokset organisaatiotason lisäksi yksikkö- ja tiimitasolla, reaaliaikaisesti ja automaattisesti. Tiimit saavat omat tuloksensa heti vastaamisen jälkeen, mikä siirtää kehitystyön valtaa ja vastuuta tiimeihin. Seurantamittaukset piirtävät kuvan kehityksestä ja kirittävät uudistumaan.<br/><br/></p>
+          <a href="/#contact" class="button btn-contact">OTA YHTEYTTÄ JA KUULE LISÄÄ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="row hide-for-small-only">
+  <div class="medium-12 large-8 large-offset-2 end columns">
+    <ul class="icon-bar seven-up">
+      <li class="item"><a href="/">Etusivu</a></li>
+      <li class="item"><a href="/ihmiset">Ihmiset</a></li>
+      <li class="item active"><a href="/palvelut">Palvelut</a></li>
+      <li class="item"><a href="/referenssit">Referenssit</a></li>
+      <li class="item"><a href="/tutkimus">Tutkimus</a></li>
+      <li class="item"><a href="/blogi">Blogi</a></li>
+      <li class="item"><a href="/en">In English</a></li>
+    </ul>
+  </div>
+</div>
+{% include 'partials/address.nunjucks' %}
+{% endblock %}

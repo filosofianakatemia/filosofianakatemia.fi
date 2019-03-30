@@ -2,7 +2,7 @@
 {% set pageName = 'Avoin tunneälykoulutus esimiehille' %}
 {% set someDescription = 'Päivän mittainen tunneälykoulutus 12.6.2019. Koulutuksessa kehität henkilökohtaisia tunnetaitojasi sekä opit johtamaan tiimisi tunneilmastoa ja käsittelemään haastavia tilanteita rakentavasti. Varmista paikkasi nyt!'%}
 {% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-tunnealykoulutus.jpg' %}
-{% set pageUrl = 'https://filosofianakatemia.fi/palvelut/sirkusvalmennus' %}
+{% set pageUrl = 'https://filosofianakatemia.fi/palvelut/tunnealy/koulutus' %}
 {% block title %}{{ pageName }} | {{ super() }}{% endblock %}
 {% block ogtitle %}{{ pageName }} | Ilmoittaudu nyt!{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
