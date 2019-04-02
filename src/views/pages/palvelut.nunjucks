@@ -126,7 +126,7 @@
     </div>
     <div class="large-6 columns">
       <div class="embedded">
-        {% include 'partials/promos/palvelut/sirkusvalmennus.nunjucks' %}
+        {% include 'partials/promos/palvelut/tunnealykoulutus.nunjucks' %}
       </div>
     </div>
 
