@@ -72,6 +72,26 @@
       <br class="show-for-large-up"/><br class="show-for-large-up"/><br/>
     </div>
   </div>
+</div>
+
+<div class="section wrapper-embedded">
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <p class="font-large"><br class="show-for-large-up"/><br/>"Iida’s training on emotional intelligence opened a "door of awareness" for myself and for the people around me, helping me to understand the main patterns through which we handle our emotions and providing me with ways to recognize them in daily interactions, eventually allowing me to adapt my behavior or communication to reach a better level of mutual understanding / collaboration at work and in life.”<br/><br/><span class="font-strong">&ndash;Nicolas Aubry, CTO Schibsted Media Group, Tori.fi</span>
+      <br class="show-for-large-up"/><br/><br/></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-offset-3 large-6 columns end">
+      <h2 class="big">Kiinnostuitko?</h2>
+      <br/>
+      <a href="https://filosofianakatemia.typeform.com/to/GTCWcQ" target="_blank" class="button btn-contact">ILMOITTAUDU MUKAAN</a>
+      <br class="show-for-large-up"/><br/><br/></p>
+    </div>
+  </div>
+</div>
+
+<div id="tunnealykoulutus-middle" class="section separate">
   <div class="row">
     <div class="circle-image large-4 large-offset-2 columns">
       <br/>
@@ -102,13 +122,14 @@
       </p>
       <p>Hinta: 760 € + alv. 24% /hlö, sisältää lounaan ja kahvitarjoilun.</p>
     </div>
-    <div class="circle-image large-4 end columns">
+    <div id="bottom-picture-wrapper"class="circle-image large-4 end columns">
       <br class="hide-for-large-up"/><br class="hide-for-large-up"/>
       <img src="/static/{{ version }}/img/tunnealykoulutus-bottom.jpg"></img>
       <br/><br/>
     </div>
   </div>
 </div>
+
 <div class="section wrapper-embedded">
   <div class="row">
     <div class="large-offset-3 large-6 columns end">
@@ -127,18 +148,14 @@
       <br/><br/>
     </div>
   </div>
-  <div class="row">
-    <div class="large-offset-3 large-6 columns end">
-      <p>"Iida’s training on emotional intelligence opened a "door of awareness" for myself and for the people around me, helping me to understand the main patterns through which we handle our emotions and providing me with ways to recognize them in daily interactions, eventually allowing me to adapt my behavior or communication to reach a better level of mutual understanding / collaboration at work and in life.”<br/><br/><span class="font-strong">&ndash;Nicolas Aubry, CTO Schibsted Media Group, Tori.fi</span>
-      <br class="show-for-large-up"/><br/><br/></p>
-    </div>
-  </div>
 </div>
 
 <div class="section separate">
   <div class="row">
     <div class="large-offset-3 large-6 columns end">
-      <a href="https://filosofianakatemia.typeform.com/to/GTCWcQ" target="_blank" class="button btn-contact">VARAA PAIKKASI TÄSTÄ</a>
+      <h2 class="big">Nosta tunneälysi seuraavalle tasolle</h2>
+      <br/><br/>
+      <a href="https://filosofianakatemia.typeform.com/to/GTCWcQ" target="_blank" class="button btn-contact">VARAA PAIKKASI NYT</a>
     </div>
   </div>
 </div>

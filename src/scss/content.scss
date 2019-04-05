@@ -717,6 +717,13 @@ img.arrow {
   }
 }
 
+// LARGE fix
+@media only screen and (min-width: 64.063em){
+  #tunnealykoulutus-middle #bottom-picture-wrapper {
+    margin-left: 3vw;
+  }
+}
+
 .module {
   background-image: url('../img/bg-circle.png');
   background-attachment: center;
