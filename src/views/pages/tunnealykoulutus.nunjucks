@@ -1,6 +1,6 @@
 {% extends "base.nunjucks" %}
 {% set pageName = 'Avoin tunneälykoulutus esimiehille' %}
-{% set someDescription = 'Päivän mittainen tunneälykoulutus 12.6.2019. Koulutuksessa kehität henkilökohtaisia tunnetaitojasi sekä opit johtamaan tiimisi tunneilmastoa ja käsittelemään haastavia tilanteita rakentavasti. Varmista paikkasi nyt!'%}
+{% set someDescription = 'Päivän mittaisessa koulutuksessa kehität henkilökohtaisia tunnetaitojasi, sekä opit johtamaan tiimisi tunneilmastoa ja käsittelemään haastavia tilanteita rakentavasti. Varmista paikkasi nyt!'%}
 {% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-tunnealykoulutus.jpg' %}
 {% set pageUrl = 'https://filosofianakatemia.fi/palvelut/tunnealy/koulutus' %}
 {% block title %}{{ pageName }} | {{ super() }}{% endblock %}
@@ -56,8 +56,8 @@
     </div>
   </div>
   <div class="icon"><img src="/static/{{ version }}/img/simojo_icon.png"/></div>
-  <div class="slogan">Avoin tunneälykoulutus esimiehille 12.6.2019</div>
-  <div class="ingress">Tunneälykoulutuksessa esimiehet kehittävät henkilökohtaisia tunnetaitojaan ja saavat välineitä johtaa tiiminsä tunneilmastoa ja käsitellä haastavia, potentiaalisesti tunnelatautuneita, tilanteita rakentavasti.</div>
+  <div class="slogan">Avoin tunneälykoulutus esimiehille</div>
+  <div class="ingress">Tunneälykoulutuksessa esimiehet kehittävät henkilökohtaisia tunnetaitojaan ja saavat välineitä johtaa tiiminsä tunneilmastoa ja käsitellä haastavia, potentiaalisesti tunnelatautuneita, tilanteita rakentavasti. Koulutus järjestetään kahtena vaihtoehtoisena päivänä 12.6 ja 26.9, joista voit valita sinulle sopivamman.</div>
   <br class="show-for-large-up"/><br/>
 </div>
 {% endblock %}
