@@ -57,7 +57,7 @@
   </div>
   <div class="icon"><img src="/static/{{ version }}/img/simojo_icon.png"/></div>
   <div class="slogan">Avoin tunneälykoulutus esimiehille</div>
-  <div class="ingress">Tunneälykoulutuksessa esimiehet kehittävät henkilökohtaisia tunnetaitojaan ja saavat välineitä johtaa tiiminsä tunneilmastoa ja käsitellä haastavia, potentiaalisesti tunnelatautuneita, tilanteita rakentavasti. Koulutus järjestetään kahtena vaihtoehtoisena päivänä 12.6 ja 26.9, joista voit valita sinulle sopivamman.</div>
+  <div class="ingress">Tunneälykoulutuksessa esimiehet kehittävät henkilökohtaisia tunnetaitojaan ja saavat välineitä johtaa tiiminsä tunneilmastoa ja käsitellä haastavia, potentiaalisesti tunnelatautuneita, tilanteita rakentavasti. Koulutus järjestetään kahtena vaihtoehtoisena päivänä 12.6. ja 26.9., joista voit valita sinulle sopivamman.</div>
   <br class="show-for-large-up"/><br/>
 </div>
 {% endblock %}
@@ -120,7 +120,7 @@
           <li>työkaluja haastavien keskustelujen käymiseen tiimiläisten kanssa (esim. puuttuminen sopimattomaan käytökseen, kehityskeskustelut, jatkuvat poissaolot, koeajan purku jne.)</li>
         </ul>
       </p>
-      <p>Hinta: 760 € + alv. 24% /hlö, sisältää lounaan ja kahvitarjoilun.</p>
+      <p>Hinta: 750 € + alv. 24% /hlö, sisältää lounaan ja kahvitarjoilun.</p>
     </div>
     <div id="bottom-picture-wrapper"class="circle-image large-4 end columns">
       <br class="hide-for-large-up"/><br class="hide-for-large-up"/>
