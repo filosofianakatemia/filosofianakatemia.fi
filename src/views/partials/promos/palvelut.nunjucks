@@ -1,11 +1,11 @@
 <div>
-  <h2>Mittaa yrityksesi<br/>sis&auml;inen motivaatio</h2>
+  <h2>Miksi Filosofian Akatemia?</h2>
   <div class="row">
     <div class="underline small-offset-5 small-2"></div>
   </div>
-  <div class="description">
-    Ihmisten innostukseen voi vaikuttaa. Filosofian Akatemian kehitt&auml;m&auml;t Sis&auml;isen motivaation johtamisen valmennusprosessi ja sisäisen motivaation Draivi-mittari ovat ty&ouml;kaluja, joiden avulla ihmisten motivaatiota voi systemaattisesti johtaa ja mitata. Motivoituneet, uutta luovat ihmiset ovat yritysten t&auml;rkein kilpailuvaltti tulevaisuudessa. Palveluidemme avulla saat vertailtavia tuloksia ja apua sis&auml;isen motivaation kasvattamiseen.
-  </div>
-  <a href="palvelut" class="link-cta">Lue lis&auml;&auml; palveluistamme<span class="icon-arrow-right"></span></a>
+  <div class="description">Filosofian Akatemia Oy on ainutlaatuinen yhdistelmä innovatiivisten organisaatioiden ja ihmisten sisäisen motivaation johtamisen osaamista. Olemme tutkimus-, valmennus- ja konsultointiorganisaatio, joka auttaa organisaatiotasi säilymään kilpailukykyisenä. Ymmärrämme, minkälaiset rakenteet, toimintatavat ja johtamiskäytänteet tukevat itseohjautuvuutta, jatkuvaa kehittämistä ja muutoskyvykkyyttä. Palveluihimme kuuluvat mm. esimiesvalmennukset, kehittämistyöpajat, mittaukset, puheenvuorot ja johtoryhmien konsultointi.</div>
+  <a href="/palvelut" class="link-cta">Lue lis&auml;&auml; palveluistamme<span class="icon-arrow-right"></span>
+  <br class="show-for-large-up"/>
+  </a>
 </div>
 

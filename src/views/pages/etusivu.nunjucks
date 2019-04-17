@@ -153,12 +153,26 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
   <div class="row">
     <div class="large-6 columns">
       <div class="embedded">
+        {% include 'partials/promos/palvelut.nunjucks' %}
+        <div class="show-for-large-up"><br/></div>
+      </div>
+    </div>
+    <div class="large-6 columns">
+      <div class="embedded">
+        {% include 'partials/promos/palvelut/itseohjautuvuusmittari.nunjucks' %}
+        <div class="show-for-large-up"><br/></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="embedded">
         {% include 'partials/promos/tutkimus.nunjucks' %}
       </div>
     </div>
     <div class="large-6 columns">
       <div class="embedded">
-        {% include 'partials/promos/palvelut.nunjucks' %}
+        {% include 'partials/promos/referenssit.nunjucks' %}
         <div class="show-for-large-up"><br/></div>
       </div>
     </div>
