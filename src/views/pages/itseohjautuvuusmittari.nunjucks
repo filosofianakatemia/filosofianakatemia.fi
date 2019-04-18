@@ -56,7 +56,7 @@
     </div>
   </div>
   <div class="icon"><img src="/static/{{ version }}/img/simojo_icon.png"/></div>
-  <div class="slogan">Itseohjautuvuusmittari</div>
+  <div class="slogan">Itseohjautuvuus&shy;mittari</div>
   <div class="ingress">Itseohjautuvuus tulee ryminällä suomalaiseen työelämään - oletko sinä, ja onko sinun organisaatiosi, valmis?</div>
   <br class="show-for-large-up"/><br/>
 </div>
