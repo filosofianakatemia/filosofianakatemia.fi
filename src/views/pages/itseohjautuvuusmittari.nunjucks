@@ -76,7 +76,7 @@
   </div>
 </div>
 <div id="itseohjautuvuusmittari-bottom" class="section wrapper-embedded">
-  <div class="row">
+  <div id="testi" class="row">
     <div class="large-6 columns">
       <div class="embedded">
         <h2>Testaa, kuinka itseohjautuvia sinä ja tiimisi olette</h2>
@@ -84,9 +84,8 @@
           <div class="underline small-offset-5 small-2"></div>
         </div>
         <div class="description">
-          <p>Onko työpaikallasi moderni työkulttuuri? Onko sinulla mahdollisuus itseohjautuvaan työskentelyyn? Filosofian Akatemia Oy:n kehittämä, tutkimukseen pohjautuva maksuton testi auttaa sinua ymmärtämään, mistä itseohjautuvuudessa on kyse ja missä määrin sinun työnantajaorganisaatiosi tukee itseohjautuvaa työskentelyä.<br/><br/></p>
-          <p><a href="https://filosofianakatemia.typeform.com/to/gdcxno" class="link-cta">Tee tästä maksuton testi<span class="icon-arrow-right"></span></a><br/><br/></p>
-          <p class="font-small">Kun olet ilmoittanut sähköpostiosoitteesi, saat postilaatikkoosi linkin kyselyyn. Sähköpostia käytetään ainoastaan henkilökohtaisten tulosten lähettämistä varten.</p>
+          <p>Onko työpaikallasi moderni työkulttuuri? Onko sinulla mahdollisuus itseohjautuvaan työskentelyyn? Filosofian Akatemia Oy:n kehittämä, tutkimukseen pohjautuva maksuton testi auttaa sinua ymmärtämään, mistä itseohjautuvuudessa on kyse ja missä määrin sinun työnantajaorganisaatiosi tukee itseohjautuvaa työskentelyä. Vastattuasi kyselyyn saat sähköpostilla tuloksesi suhteutettuna muihin vastaajiin.</p>
+          <p><br/><a href="https://filosofianakatemia.typeform.com/to/gdcxno" class="link-cta">Tee tästä maksuton testi<span class="icon-arrow-right"></span></a><br/><br/><br class="show-for-large-up"/></p>
         </div>
       </div>
     </div>
