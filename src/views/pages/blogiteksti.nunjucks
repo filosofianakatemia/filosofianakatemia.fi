@@ -94,8 +94,6 @@
 
 {% block scripts %}
 <script>
-  app.getShareCount('{{ blog.path }}');
-
   $("#contact-fab").hide();
   // Show the div in 10s
   $("#contact-fab").delay(10000).fadeIn(500);

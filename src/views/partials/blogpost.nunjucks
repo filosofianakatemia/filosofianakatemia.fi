@@ -160,12 +160,6 @@
             {# Social media #}
             <div class="{{ "show-for-medium-up" if listView }} medium-8 large-8 columns">
               <div class="{{ "medium-right" if listView}} some-share">
-                {% if not listView %}
-                  <div class="total-shares">
-                    <span id="total-shares_count" class="total-shares_count"></span>
-                    <span class="total-shares_text">jakoa</span>
-                  </div>
-                {% endif %}
                 <a href class="some-share_link" onclick="app.facebookShareBlog(event, '{{ blog.lead }}', '{{ blog.path }}', '{{ blog.title }}', '{{ blog.pictureData.source }}');return false;">
                   <span  class="icon-facebook"></span>
                 </a>
