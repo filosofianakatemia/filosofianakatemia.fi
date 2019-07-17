@@ -54,19 +54,19 @@
 {% block main %}
 <div class="section row">
   <div id="alex" class="large-4 columns">
-    <div class="link-container" onClick="location.href='ihmiset/alex'">
+    <div class="link-container" onClick="location.href='/ihmiset/alex'">
       <div class="picture"></div>
       <h2><a>Alex Descargues</a></h2>
     </div>
   </div>
   <div id="eero" class="large-4 columns">
-    <div class="link-container" onClick="location.href='ihmiset/eero'">
+    <div class="link-container" onClick="location.href='/ihmiset/eero'">
       <div class="picture"></div>
       <h2><a>Eero Lahtinen</a></h2>
     </div>
   </div>
   <div id="frank" class="large-4 columns end">
-    <div class="link-container" onClick="location.href='ihmiset/frank'">
+    <div class="link-container" onClick="location.href='/ihmiset/frank'">
       <div class="picture"></div>
       <h2><a>Frank Martela</a></h2>
     </div>
@@ -74,20 +74,20 @@
 </div>
 <div class="section row">
   <div id="iida" class="large-4 columns">
-    <div class="link-container" onClick="location.href='ihmiset/iida'">
+    <div class="link-container" onClick="location.href='/ihmiset/iida'">
       <div class="picture"></div>
       <h2><a>Iida M&auml;kikallio</a></h2>
     </div>
   </div>
   <div id="karoliina" class="large-4 columns">
-    <div class="link-container" onClick="location.href='ihmiset/karoliina'">
+    <div class="link-container" onClick="location.href='/ihmiset/karoliina'">
       <div class="picture"></div>
       <h2><a>Karoliina Jarenko</a></h2>
       <h4><a>Toimitusjohtaja</a></h4>
     </div>
   </div>
   <div id="lauri" class="large-4 columns end">
-    <div class="link-container" onClick="location.href='ihmiset/lauri'">
+    <div class="link-container" onClick="location.href='/ihmiset/lauri'">
       <div class="picture"></div>
       <h2><a>Lauri J&auml;rvilehto</a></h2>
     </div>
@@ -95,19 +95,19 @@
 </div>
 <div class="section row">
   <div id="liisa" class="large-4 columns">
-    <div class="link-container" onClick="location.href='ihmiset/liisa'">
+    <div class="link-container" onClick="location.href='/ihmiset/liisa'">
       <div class="picture"></div>
       <h2><a>Liisa Arponen</a></h2>
     </div>
   </div>
   <div id="maija" class="large-4 columns">
-    <div class="link-container" onClick="location.href='ihmiset/maija'">
+    <div class="link-container" onClick="location.href='/ihmiset/maija'">
       <div class="picture"></div>
       <h2><a>Maija Tiitinen</a></h2>
     </div>
   </div>
   <div id="miia" class="large-4 columns end">
-    <div class="link-container" onClick="location.href='ihmiset/miia'">
+    <div class="link-container" onClick="location.href='/ihmiset/miia'">
       <div class="picture"></div>
       <h2><a>Miia Järvilehto</a></h2>
     </div>
@@ -115,54 +115,47 @@
 </div>
 <div class="section row">
   <div id="nick" class="large-4 columns">
-    <div class="link-container" onClick="location.href='ihmiset/nick'">
+    <div class="link-container" onClick="location.href='/ihmiset/nick'">
       <div class="picture"></div>
       <h2><a>Nick Ahleskog</a></h2>
     </div>
   </div>
-  <div id="pekka" class="large-4 columns">
-    <div class="link-container" onClick="location.href='ihmiset/pekka'">
-      <div class="picture"></div>
-      <h2><a>Pekka Enroth</a></h2>
-    </div>
-  </div>
-  <div id="peter" class="large-4 columns end">
-    <div class="link-container" onClick="location.href='ihmiset/peter'">
+  <div id="peter" class="large-4 columns">
+    <div class="link-container" onClick="location.href='/ihmiset/peter'">
       <div class="picture"></div>
       <h2><a>Peter Kentt&auml;</a></h2>
     </div>
   </div>
-</div>
-<div class="section row">
-  <div id="reima" class="large-4 columns">
-    <div class="link-container" onClick="location.href='ihmiset/reima'">
+  <div id="reima" class="large-4 columns end">
+    <div class="link-container" onClick="location.href='/ihmiset/reima'">
       <div class="picture"></div>
       <h2><a>Reima Launonen</a></h2>
     </div>
   </div>
+</div>
+<div class="section row">
   <div id="sami" class="large-4 columns">
-    <div class="link-container" onClick="location.href='ihmiset/sami'">
+    <div class="link-container" onClick="location.href='/ihmiset/sami'">
       <div class="picture"></div>
       <h2><a>Sami Paju</a></h2>
     </div>
   </div>
-  <div id="tapani" class="large-4 columns end">
-    <div class="link-container" onClick="location.href='ihmiset/tapani'">
+  <div id="tapani" class="large-4 columns">
+    <div class="link-container" onClick="location.href='/ihmiset/tapani'">
       <div class="picture"></div>
       <h2><a>Tapani Riekki</a></h2>
     </div>
   </div>
-
-</div>
-<div class="section row">
-  <div id="tuukka" class="large-4 large-offset-2 columns">
-    <div class="link-container" onClick="location.href='ihmiset/tuukka'">
+  <div id="tuukka" class="large-4 columns end">
+    <div class="link-container" onClick="location.href='/ihmiset/tuukka'">
       <div class="picture"></div>
       <h2><a>Tuukka Kostamo</a></h2>
     </div>
   </div>
-  <div id="tytti" class="large-4 columns end">
-    <div class="link-container" onClick="location.href='ihmiset/tytti'">
+</div>
+<div class="section row">
+  <div id="tytti" class="large-offset-4 large-4 columns end">
+    <div class="link-container" onClick="location.href='/ihmiset/tytti'">
       <div class="picture"></div>
       <h2><a>Tytti Kokko</a></h2>
     </div>
@@ -173,19 +166,19 @@
 </div>
 <div class="section row">
   <div id="jp" class="large-4 columns">
-    <div class="link-container" onClick="location.href='ihmiset/jp'">
+    <div class="link-container" onClick="location.href='/ihmiset/jp'">
       <div class="picture"></div>
       <h2><a>Jukka-Pekka Salo</a></h2>
     </div>
   </div>
   <div id="maria" class="large-4 columns">
-    <div class="link-container" onClick="location.href='ihmiset/maria'">
+    <div class="link-container" onClick="location.href='/ihmiset/maria'">
       <div class="picture"></div>
       <h2><a>Maria Ruotsalainen</a></h2>
     </div>
   </div>
   <div id="timo" class="large-4 columns end">
-    <div class="link-container" onClick="location.href='ihmiset/timo'">
+    <div class="link-container" onClick="location.href='/ihmiset/timo'">
       <div class="picture"></div>
       <h2><a>Timo Tiuraniemi</a></h2>
     </div>
