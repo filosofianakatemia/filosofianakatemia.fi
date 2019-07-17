@@ -57,7 +57,7 @@
   </div>
   <div class="icon"><img src="/static/{{ version }}/img/simojo_icon.png"/></div>
   <div class="slogan">Avoin tunneälykoulutus esimiehille</div>
-  <div class="ingress">Tunneälykoulutuksessa esimiehet kehittävät henkilökohtaisia tunnetaitojaan ja saavat välineitä johtaa tiiminsä tunneilmastoa ja käsitellä haastavia, potentiaalisesti tunnelatautuneita, tilanteita rakentavasti. Koulutus järjestetään kahtena vaihtoehtoisena päivänä 12.6. ja 26.9., joista voit valita sinulle sopivamman.</div>
+  <div class="ingress">Tunneälykoulutuksessa esimiehet kehittävät henkilökohtaisia tunnetaitojaan ja saavat välineitä johtaa tiiminsä tunneilmastoa ja käsitellä haastavia, potentiaalisesti tunnelatautuneita, tilanteita rakentavasti. Koulutus järjestetään 26.9., ilmoittautuminen auki nyt!</div>
   <br class="show-for-large-up"/><br/>
 </div>
 {% endblock %}
