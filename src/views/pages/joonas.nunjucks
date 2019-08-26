@@ -9,5 +9,5 @@
 <meta property="og:image:secure_url" content="https://filosofianakatemia.fi/static/{{ version }}/img/joonas-small.jpg" />
 {% endblock %}
 {% block description %}Filosofian Akatemian {{ personName }} esitt&auml;ytyy.{% endblock %}
-{% block personquote %}{% endblock %}
-{% block personquoteauthor %}{% endblock %}
+{% block personquote %}Joonas pyrkii ymmärtämään laajasti jokaista aihetta, johon hän tarttuu. Hänen analyyttinen, rauhallinen ja lämmin olemuksensa luo ympärilleen luottamuksen ilmapiirin, jossa me kaikki pääsemme kukoistamaan parhaina mahdollisina versioina itsestämme.{% endblock %}
+{% block personquoteauthor %}Maija Tiitinen{% endblock %}
