@@ -36,6 +36,7 @@ export class Routing {
     this.router.get("/ihmiset/eero", this.person);
     this.router.get("/ihmiset/frank", this.person);
     this.router.get("/ihmiset/iida", this.person);
+    this.router.get("/ihmiset/joonas", this.person);
     this.router.get("/ihmiset/jp", this.person);
     this.router.get("/ihmiset/karoliina", this.person);
     this.router.get("/ihmiset/lauri", this.person);
@@ -45,9 +46,11 @@ export class Routing {
     this.router.get("/ihmiset/miia", this.person);
     this.router.get("/ihmiset/nick", this.person);
     this.router.get("/ihmiset/peter", this.person);
+    this.router.get("/ihmiset/petsku", this.person);
     this.router.get("/ihmiset/reima", this.person);
     this.router.get("/ihmiset/sami", this.person);
     this.router.get("/ihmiset/tapani", this.person);
+    this.router.get("/ihmiset/tiina", this.person);
     this.router.get("/ihmiset/timo", this.person);
     this.router.get("/ihmiset/tuukka", this.person);
     this.router.get("/ihmiset/tytti", this.person);

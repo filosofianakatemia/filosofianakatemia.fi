@@ -2,7 +2,7 @@
 {% set pageName = 'Filosofian Akatemia Oy' %}
 {% set pageDescription = 'Filosofian Akatemia Oy on työelämän uudistaja. Autamme organisaatiotasi menestymään nopeasti muuttuvassa toimintaympäristössä.'%}
 {% set pageImage = 'https://filosofianakatemia.fi/tiedostot/some-etusivu.jpg' %}
-{% set salesName = ['tytti', 'liisa'] | random %}
+{% set salesName = ['tytti', 'liisa', 'tiina'] | random %}
 {% block title %}{{ super() }}{% endblock %}
 {% block ogtype %}{{ super() }}{% endblock %}
 {% block ogurl %}{{ super() }}{% endblock %}
@@ -383,6 +383,16 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
         Asiakkuuspäällikkö<br/>
         <a class="phone-number" href="tel:+358442305727">+358 44 230 5727</a><br/>
         <a href="mailto:liisa.arponen@filosofianakatemia.fi">liisa.arponen@filosofianakatemia.fi</a>
+      </div>
+    </div>
+    {% elif salesName == 'tiina' %}
+    <div class="large-4 columns">
+      <img src="/static/{{ version }}/img/tiina-circle.png"/>
+      <h2>Tiina Aakala-Vuorela</h2>
+      <div>
+        Asiakkuuspäällikkö<br/>
+        <a class="phone-number" href="tel:+358405313007">+358 40 531 3007</a><br/>
+        <a href="mailto:tiina.aakala-vuorela@filosofianakatemia.fi">tiina.aakala-vuorela@filosofianakatemia.fi</a>
       </div>
     </div>
     {% endif %}

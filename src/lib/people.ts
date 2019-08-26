@@ -129,6 +129,18 @@ export class People {
         },
       },
       {
+        id: "joonas",
+        name: "Joonas Kiminki",
+        pictures: {
+          large: this.imagePathPrefix + "joonas-large.jpg",
+          thumbnail: this.imagePathPrefix + "joonas-thumbnail.jpg",
+        },
+        paths: {
+          page: "joonas-kiminki",
+          description: "joonas-kiminki-kuvaus",
+        },
+      },
+      {
         id: "jp",
         name: "Jukka-Pekka Salo",
         pictures: {
@@ -225,6 +237,18 @@ export class People {
         },
       },
       {
+        id: "petsku",
+        name: "Peter Jung",
+        pictures: {
+          large: this.imagePathPrefix + "petsku-large.jpg",
+          thumbnail: this.imagePathPrefix + "petsku-thumbnail.jpg",
+        },
+        paths: {
+          page: "peter-jung",
+          description: "peter-jung-kuvaus",
+        },
+      },
+      {
         id: "peter",
         name: "Peter Kenttä",
         pictures: {
@@ -270,6 +294,18 @@ export class People {
         paths: {
           page: "tapani-riekki",
           description: "tapani-riekki-kuvaus",
+        },
+      },
+      {
+        id: "tiina",
+        name: "tiina-aakala-vuorela",
+        pictures: {
+          large: this.imagePathPrefix + "tiina-large.jpg",
+          thumbnail: this.imagePathPrefix + "tiina-thumbnail.jpg",
+        },
+        paths: {
+          page: "tiina-aakala-vuorela",
+          description: "tiina-aakala-vuorela-kuvaus",
         },
       },
       {
