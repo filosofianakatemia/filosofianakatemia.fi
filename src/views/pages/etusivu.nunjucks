@@ -392,7 +392,7 @@ Ihmisiin, jotka <b>muotoilevat tulevaisuuden</b>.</div>
       <div>
         Asiakkuuspäällikkö<br/>
         <a class="phone-number" href="tel:+358405313007">+358 40 531 3007</a><br/>
-        <a href="mailto:tiina.aakala-vuorela@filosofianakatemia.fi">tiina.aakala-vuorela@filosofianakatemia.fi</a>
+        <a href="mailto:tiina.aakala@filosofianakatemia.fi">tiina.aakala@filosofianakatemia.fi</a>
       </div>
     </div>
     {% endif %}
